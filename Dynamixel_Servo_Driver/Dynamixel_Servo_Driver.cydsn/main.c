@@ -11,7 +11,9 @@
  * Note: This only writes basic movement instructions to the Dynamixel
  *       It does not read the status messages sent by the servos.  
  *       To do that, a tri-state buffer will need to be implemented.
+ * 
  *
+ * 
  * ========================================
 */
 #include <project.h>
