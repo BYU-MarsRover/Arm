@@ -269,6 +269,7 @@
 <Unloaded />
 <OpenDocs>
 <name v=".\Dynamixel_Servo_Driver.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\Dynamixel_Servo_Driver.cydsn\main.c" />
 </OpenDocs>
 <config v="" />
 <AutoUpdate v="true" />
