@@ -43,7 +43,7 @@ void baseAzimuth()
 }
 
 //control the shoulder
-void baseAzimuth()
+void shoulder()
 {
     //take instruction from data_array
     //smooth input
@@ -52,7 +52,7 @@ void baseAzimuth()
 }
 
 //control the elbow
-void baseAzimuth()
+void elbow()
 {
     //take instruction from data_array
     //smooth input
@@ -61,7 +61,7 @@ void baseAzimuth()
 }
 
 //control the tilting motion of the wrist
-void baseAzimuth()
+void wristTilt()
 {
     //take instruction from data_array
     //smooth input
@@ -70,7 +70,7 @@ void baseAzimuth()
 }
 
 //control the rotating motion of the wrist
-void baseAzimuth()
+void wristRotate()
 {
     //take instruction from data_array
     //smooth input
