@@ -40,8 +40,11 @@ void baseAzimuth()
     //take instruction from data_array
     //smooth input
     //actuate the turret using PWM
+    
+    
 }
 
+enum shldr_states {shldr_start, shldr_init, shldr_fdbk, shldr_exe} shldr_state;
 //control the shoulder
 void shoulder()
 {
@@ -49,6 +52,43 @@ void shoulder()
     //smooth input
     //actuate the shoulder using PWM
     //get feedback
+    
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    switch(shldr_state)
+    {//switch staatement for state transitions
+		case shldr_start: //start
+			//next state will be init
+            shldr_state = shldr_init;
+            break;
+        
+		case shldr_init: //initialize
+			//next state will be feedback
+            shldr_state = shldr_fdbk;
+            break;
+        
+		case shldr_fdbk://feedback
+			//if position ok relative to average
+				//execute
+			//else if not ok
+				//report problem
+            break;
+		case shldr_exe://execute
+			//next state will be report
+            shldr_state = shldr_fdbk;
+            break;
+    }
+			
+	//switch statement for state actions
+		//start
+			//break
+		//initialize
+			//create smoothing array
+		//feedback
+			//read feedback
+		//execute
+			//add the shifted value from main to back of smoothing array
+			//calculate average of value in array
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 }
 
 //control the elbow
