@@ -28,6 +28,19 @@ CY_ISR(timer_isr)
 //Funtion declarations/definitions
 //TODO do we need to make a header for good practice?
 
+//---------------------------------------------------
+//    Function stubs for the header
+//---------------------------------------------------
+void fill_data_array();
+void baseAzimuth();
+void shoulder();
+void elbow();
+void wristTilt();
+void wristRotate();
+void send_feedback();
+//--------------------------------------------------- END Function Stubs
+
+
 //to be used for parsing reading/parsing the data from the wiznet
 void fill_data_array() //maybe take param: uint8* array
 {
@@ -100,22 +113,100 @@ void elbow()
     //get feedback
 }
 
+enum wristTilt_states {tilt_init = 0, tilt_start, tilt_control, tilt_feedback} wristTilt_state;
 //control the tilting motion of the wrist
 void wristTilt()
 {
+    // Overview
     //take instruction from data_array
     //smooth input
     //actuate the tilting using UART
     //get feedback
+
+    //-------------------------- 
+    // Dynamixel Servo specific
+    // TODO: Set the torque - Requires building an array with bit representation
+    // TODO: Set the desired position
+
+    //--------------------------
+    // State machine
+        // Transistion
+    switch(wristTilt_state)
+    {
+        case tilt_init:
+            wristTilt_state = tilt_start;
+            break;
+        case tilt_start:
+            wristTilt_state = tilt_control;
+            break;
+        case tilt_control:
+            break;
+        case tilt_feedback:
+            break;
+    }
+        // Action
+    switch(wristTilt_state)
+    {
+        case tilt_init:
+            wristTilt_state = tilt_start;
+            break;
+        case tilt_start:
+            // Set the torque - this is a one time thing
+            // Set the speed - I think this is a one time thing
+            break;
+        case tilt_control:
+            break;
+        case tilt_feedback:
+            break;
+    }
 }
 
+enum wristRotate_states {rotate_init = 0, rotate_start, rotate_control, rotate_feedback} wristRotate_state;
 //control the rotating motion of the wrist
 void wristRotate()
 {
+    // Overview
     //take instruction from data_array
     //smooth input
-    //actuate the turret using UART
+    //actuate the tilting using UART
     //get feedback
+
+    //-------------------------- 
+    // Dynamixel Servo specific
+    // TODO: Set the torque - Requires building an array with bit representation
+    // TOD: Set the desired position
+
+    //--------------------------
+    // State machine
+        // Transistion
+    switch(wristRotate_state)
+    {
+        case rotate_init:
+            wristRotate_state = rotate_start;
+            break;
+        case rotate_start:
+            wristRotate_state = rotate_control;
+            break;
+        case rotate_control:
+            break;
+        case rotate_feedback:
+            break;
+    }
+        // Action
+    switch(wristRotate_state)
+    {
+        case rotate_init:
+            wristRotate_state = rotate_start;
+            break;
+        case rotate_start:
+            // Set the torque - this is a one time thing
+            // Set the speed - I think this is a one time thing
+            break;
+        case rotate_control:
+            break;
+        case rotate_feedback:
+            break;
+    }
 }
 
 void send_feedback()
