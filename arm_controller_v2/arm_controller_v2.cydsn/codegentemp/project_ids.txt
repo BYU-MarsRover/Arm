@@ -1,0 +1,5 @@
+C:\Users\Jae Lee\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.cydsn\arm_controller_v2.cyprj|31b92e42-5696-41d8-a8ad-34d26ae2ab98
+C:\Program Files (x86)\Cypress\PSoC Creator\3.1\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|9c4716e4-ea7b-435e-83af-b594edf0b9f8
+C:\Program Files (x86)\Cypress\PSoC Creator\3.1\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|b751a242-7537-4bbc-a798-da5f99540e80
+C:\Program Files (x86)\Cypress\PSoC Creator\3.1\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|e43ab283-04f7-43b8-9895-7e5a6381c301
+C:\Program Files (x86)\Cypress\PSoC Creator\3.1\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|07065f5c-fa2f-42a8-a6d0-17df2fe83433
