@@ -106,6 +106,24 @@
 <VisibleNodeIds>
 <v>arm_controller</v>
 <v>arm_controller\arm_controller</v>
+<v>arm_controller\arm_controller\DP8051</v>
+<v>arm_controller\arm_controller\DP8051\DP8051_Keil_951</v>
+<v>arm_controller\arm_controller\DP8051\DP8051_Keil_951\Debug</v>
+<v>arm_controller\arm_controller\DP8051\DP8051_Keil_951\Debug\Listing Files</v>
+<v>arm_controller\arm_controller\DP8051\DP8051_Keil_951\Debug\Listing Files\CyBootAsmKeil.lst</v>
+<v>arm_controller\arm_controller\DP8051\DP8051_Keil_951\Debug\Listing Files\CyDmac.lst</v>
+<v>arm_controller\arm_controller\DP8051\DP8051_Keil_951\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>arm_controller\arm_controller\DP8051\DP8051_Keil_951\Debug\Listing Files\CyFlash.lst</v>
+<v>arm_controller\arm_controller\DP8051\DP8051_Keil_951\Debug\Listing Files\CyLib.lst</v>
+<v>arm_controller\arm_controller\DP8051\DP8051_Keil_951\Debug\Listing Files\cymem.lst</v>
+<v>arm_controller\arm_controller\DP8051\DP8051_Keil_951\Debug\Listing Files\cyPm.lst</v>
+<v>arm_controller\arm_controller\DP8051\DP8051_Keil_951\Debug\Listing Files\CySpc.lst</v>
+<v>arm_controller\arm_controller\DP8051\DP8051_Keil_951\Debug\Listing Files\cyutils.lst</v>
+<v>arm_controller\arm_controller\DP8051\DP8051_Keil_951\Debug\Listing Files\KeilStart.lst</v>
+<v>arm_controller\arm_controller\DP8051\DP8051_Keil_951\Debug\Listing Files\main.lst</v>
+<v>arm_controller\arm_controller\DP8051\DP8051_Keil_951\Debug\arm_controller.elf</v>
+<v>arm_controller\arm_controller\DP8051\DP8051_Keil_951\Debug\arm_controller.hex</v>
+<v>arm_controller\arm_controller\DP8051\DP8051_Keil_951\Debug\arm_controller.map</v>
 <v>arm_controller\arm_controller\arm_controller.rpt</v>
 <v>arm_controller\arm_controller\arm_controller_timing.html</v>
 </VisibleNodeIds>
@@ -137,7 +155,10 @@
 </userData>
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
-<OpenDocs />
+<OpenDocs>
+<name v=".\arm_controller.cydsn\main.c" />
+<name v=".\arm_controller.cydsn\TopDesign\TopDesign.cysch" />
+</OpenDocs>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
