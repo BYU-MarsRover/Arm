@@ -376,7 +376,7 @@ void servo()
 //New servo design
 //enum servo_states {s_start,s_pressed,s_wait} servo_state;
 //void servo()
-//{
+//{ //TODO: initialize array with neutral values
 //    switch(servo_state){ //actions
 //        case s_start:
 //            break;
