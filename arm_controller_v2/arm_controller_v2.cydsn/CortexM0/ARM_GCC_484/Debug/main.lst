@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccl4ljik.s 			page 1
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccH3w0kW.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -18,17 +18,24 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccl4ljik.s 			page 1
   15              	.Ltext0:
   16              		.cfi_sections	.debug_frame
   17              		.comm	data_array,28,4
-  18              		.comm	feedback_count,2,2
-  19              		.comm	timerFlag,1,1
-  20              		.section	.text.timer_isr,"ax",%progbits
-  21              		.align	2
-  22              		.global	timer_isr
-  23              		.code	16
-  24              		.thumb_func
-  25              		.type	timer_isr, %function
-  26              	timer_isr:
-  27              	.LFB33:
-  28              		.file 1 ".\\main.c"
+  18              		.comm	servo_array,40,4
+  19              		.comm	feedback_count,2,2
+  20              		.comm	timerFlag,1,1
+  21              		.global	serv_avg_count
+  22              		.bss
+  23              		.type	serv_avg_count, %object
+  24              		.size	serv_avg_count, 1
+  25              	serv_avg_count:
+  26 0000 00       		.space	1
+  27              		.section	.text.timer_isr,"ax",%progbits
+  28              		.align	2
+  29              		.global	timer_isr
+  30              		.code	16
+  31              		.thumb_func
+  32              		.type	timer_isr, %function
+  33              	timer_isr:
+  34              	.LFB33:
+  35              		.file 1 ".\\main.c"
    1:.\main.c      **** /* ========================================
    2:.\main.c      ****  *created by Samuel Bury Jan. 31, 2015
    3:.\main.c      ****  *last modified date: Jan. 31, 2015
@@ -39,2607 +46,2724 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccl4ljik.s 			page 1
    8:.\main.c      **** //TODO should this be global or should we declare it in main and pass a
    9:.\main.c      **** //////pointer to each function?
   10:.\main.c      **** uint16 data_array[14]; //stores the parsed instructions from the wiznet
-  11:.\main.c      **** uint16 feedback_count;
-  12:.\main.c      **** uint8 timerFlag;
-  13:.\main.c      **** 
-  14:.\main.c      **** //this ISR will be used to set our timeFlag according to our timer component
-  15:.\main.c      **** ///set to the time of the longest path for our code
-  16:.\main.c      **** //TODO test how long it takes code to run before really implementing this
-  17:.\main.c      **** 
-  18:.\main.c      **** 
-  19:.\main.c      **** CY_ISR(timer_isr)
-  20:.\main.c      **** {
-  29              		.loc 1 20 0
-  30              		.cfi_startproc
-  31 0000 80B5     		push	{r7, lr}
-  32              		.cfi_def_cfa_offset 8
-  33              		.cfi_offset 7, -8
-  34              		.cfi_offset 14, -4
-  35 0002 82B0     		sub	sp, sp, #8
-  36              		.cfi_def_cfa_offset 16
-  37 0004 00AF     		add	r7, sp, #0
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccl4ljik.s 			page 2
+  11:.\main.c      **** uint16 servo_array[20];
+  12:.\main.c      **** uint16 feedback_count;
+  13:.\main.c      **** uint8 timerFlag;
+  14:.\main.c      **** uint8 serv_avg_count = 0;
+  15:.\main.c      **** 
+  16:.\main.c      **** //this ISR will be used to set our timeFlag according to our timer component
+  17:.\main.c      **** ///set to the time of the longest path for our code
+  18:.\main.c      **** //TODO test how long it takes code to run before really implementing this
+  19:.\main.c      **** 
+  20:.\main.c      **** 
+  21:.\main.c      **** CY_ISR(timer_isr)
+  22:.\main.c      **** {
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccH3w0kW.s 			page 2
 
 
-  38              		.cfi_def_cfa_register 7
-  21:.\main.c      ****     uint32 isr_var = Timer_1_GetInterruptSourceMasked();
-  39              		.loc 1 21 0
-  40 0006 FFF7FEFF 		bl	Timer_1_GetInterruptSourceMasked
-  41 000a 031C     		mov	r3, r0
-  42 000c 7B60     		str	r3, [r7, #4]
-  22:.\main.c      ****     timerFlag = 1;
-  43              		.loc 1 22 0
-  44 000e 054B     		ldr	r3, .L2
-  45 0010 0122     		mov	r2, #1
-  46 0012 1A70     		strb	r2, [r3]
-  23:.\main.c      ****     Timer_1_ClearInterrupt(isr_var);
-  47              		.loc 1 23 0
-  48 0014 7B68     		ldr	r3, [r7, #4]
-  49 0016 181C     		mov	r0, r3
-  50 0018 FFF7FEFF 		bl	Timer_1_ClearInterrupt
-  24:.\main.c      **** }
-  51              		.loc 1 24 0
-  52 001c BD46     		mov	sp, r7
-  53 001e 02B0     		add	sp, sp, #8
-  54              		@ sp needed
-  55 0020 80BD     		pop	{r7, pc}
-  56              	.L3:
-  57 0022 C046     		.align	2
-  58              	.L2:
-  59 0024 00000000 		.word	timerFlag
-  60              		.cfi_endproc
-  61              	.LFE33:
-  62              		.size	timer_isr, .-timer_isr
-  63              		.section	.text.fill_data_array,"ax",%progbits
-  64              		.align	2
-  65              		.global	fill_data_array
-  66              		.code	16
-  67              		.thumb_func
-  68              		.type	fill_data_array, %function
-  69              	fill_data_array:
-  70              	.LFB34:
-  25:.\main.c      **** 
-  26:.\main.c      **** 
-  27:.\main.c      **** //Funtion declarations/definitions
-  28:.\main.c      **** //TODO do we need to make a header for good practice?
-  29:.\main.c      **** 
-  30:.\main.c      **** //---------------------------------------------------
-  31:.\main.c      **** //    Function stubs for the header
+  36              		.loc 1 22 0
+  37              		.cfi_startproc
+  38 0000 80B5     		push	{r7, lr}
+  39              		.cfi_def_cfa_offset 8
+  40              		.cfi_offset 7, -8
+  41              		.cfi_offset 14, -4
+  42 0002 82B0     		sub	sp, sp, #8
+  43              		.cfi_def_cfa_offset 16
+  44 0004 00AF     		add	r7, sp, #0
+  45              		.cfi_def_cfa_register 7
+  23:.\main.c      ****     uint32 isr_var = Timer_1_GetInterruptSourceMasked();
+  46              		.loc 1 23 0
+  47 0006 FFF7FEFF 		bl	Timer_1_GetInterruptSourceMasked
+  48 000a 031C     		mov	r3, r0
+  49 000c 7B60     		str	r3, [r7, #4]
+  24:.\main.c      ****     timerFlag = 1;
+  50              		.loc 1 24 0
+  51 000e 054B     		ldr	r3, .L2
+  52 0010 0122     		mov	r2, #1
+  53 0012 1A70     		strb	r2, [r3]
+  25:.\main.c      ****     Timer_1_ClearInterrupt(isr_var);
+  54              		.loc 1 25 0
+  55 0014 7B68     		ldr	r3, [r7, #4]
+  56 0016 181C     		mov	r0, r3
+  57 0018 FFF7FEFF 		bl	Timer_1_ClearInterrupt
+  26:.\main.c      **** }
+  58              		.loc 1 26 0
+  59 001c BD46     		mov	sp, r7
+  60 001e 02B0     		add	sp, sp, #8
+  61              		@ sp needed
+  62 0020 80BD     		pop	{r7, pc}
+  63              	.L3:
+  64 0022 C046     		.align	2
+  65              	.L2:
+  66 0024 00000000 		.word	timerFlag
+  67              		.cfi_endproc
+  68              	.LFE33:
+  69              		.size	timer_isr, .-timer_isr
+  70              		.section	.text.fill_data_array,"ax",%progbits
+  71              		.align	2
+  72              		.global	fill_data_array
+  73              		.code	16
+  74              		.thumb_func
+  75              		.type	fill_data_array, %function
+  76              	fill_data_array:
+  77              	.LFB34:
+  27:.\main.c      **** 
+  28:.\main.c      **** 
+  29:.\main.c      **** //Funtion declarations/definitions
+  30:.\main.c      **** //TODO do we need to make a header for good practice?
+  31:.\main.c      **** 
   32:.\main.c      **** //---------------------------------------------------
-  33:.\main.c      **** void fill_data_array();
-  34:.\main.c      **** void baseAzimuth();
-  35:.\main.c      **** void shoulder();
-  36:.\main.c      **** void elbow();
-  37:.\main.c      **** void wristTilt();
-  38:.\main.c      **** void wristRotate();
-  39:.\main.c      **** void send_feedback();
-  40:.\main.c      **** //--------------------------------------------------- END Function Stubs
-  41:.\main.c      **** 
-  42:.\main.c      **** 
-  43:.\main.c      **** //to be used for parsing reading/parsing the data from the wiznet
-  44:.\main.c      **** void fill_data_array() //maybe take param: uint8* array
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccl4ljik.s 			page 3
+  33:.\main.c      **** //    Function stubs for the header
+  34:.\main.c      **** //---------------------------------------------------
+  35:.\main.c      **** void fill_data_array();
+  36:.\main.c      **** void baseAzimuth();
+  37:.\main.c      **** void shoulder();
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccH3w0kW.s 			page 3
 
 
-  45:.\main.c      **** {
-  71              		.loc 1 45 0
-  72              		.cfi_startproc
-  73 0000 80B5     		push	{r7, lr}
-  74              		.cfi_def_cfa_offset 8
-  75              		.cfi_offset 7, -8
-  76              		.cfi_offset 14, -4
-  77 0002 82B0     		sub	sp, sp, #8
-  78              		.cfi_def_cfa_offset 16
-  79 0004 00AF     		add	r7, sp, #0
-  80              		.cfi_def_cfa_register 7
-  46:.\main.c      ****     //read one byte at a time
-  47:.\main.c      ****     uint8 c = UART_1_UartGetChar();
-  81              		.loc 1 47 0
-  82 0006 FFF7FEFF 		bl	UART_1_UartGetChar
-  83 000a 021C     		mov	r2, r0
-  84 000c FB1D     		add	r3, r7, #7
-  85 000e 1A70     		strb	r2, [r3]
-  48:.\main.c      ****     
-  49:.\main.c      **** 
-  50:.\main.c      ****     if(c == 'q'){
-  86              		.loc 1 50 0
-  87 0010 FB1D     		add	r3, r7, #7
-  88 0012 1B78     		ldrb	r3, [r3]
-  89 0014 712B     		cmp	r3, #113
-  90 0016 04D1     		bne	.L5
-  51:.\main.c      ****         data_array[1] = 2000;
-  91              		.loc 1 51 0
-  92 0018 354B     		ldr	r3, .L18
-  93 001a FA22     		mov	r2, #250
-  94 001c D200     		lsl	r2, r2, #3
-  95 001e 5A80     		strh	r2, [r3, #2]
-  96 0020 62E0     		b	.L4
-  97              	.L5:
-  52:.\main.c      ****     }
-  53:.\main.c      ****     else if(c == 'w'){
+  38:.\main.c      **** void elbow();
+  39:.\main.c      **** void wristTilt();
+  40:.\main.c      **** void wristRotate();
+  41:.\main.c      **** void send_feedback();
+  42:.\main.c      **** //--------------------------------------------------- END Function Stubs
+  43:.\main.c      **** 
+  44:.\main.c      **** 
+  45:.\main.c      **** //to be used for parsing reading/parsing the data from the wiznet
+  46:.\main.c      **** void fill_data_array() //maybe take param: uint8* array
+  47:.\main.c      **** {
+  78              		.loc 1 47 0
+  79              		.cfi_startproc
+  80 0000 80B5     		push	{r7, lr}
+  81              		.cfi_def_cfa_offset 8
+  82              		.cfi_offset 7, -8
+  83              		.cfi_offset 14, -4
+  84 0002 82B0     		sub	sp, sp, #8
+  85              		.cfi_def_cfa_offset 16
+  86 0004 00AF     		add	r7, sp, #0
+  87              		.cfi_def_cfa_register 7
+  48:.\main.c      ****     //read one byte at a time
+  49:.\main.c      ****     uint8 c = UART_1_UartGetChar();
+  88              		.loc 1 49 0
+  89 0006 FFF7FEFF 		bl	UART_1_UartGetChar
+  90 000a 021C     		mov	r2, r0
+  91 000c FB1D     		add	r3, r7, #7
+  92 000e 1A70     		strb	r2, [r3]
+  50:.\main.c      ****     
+  51:.\main.c      **** 
+  52:.\main.c      ****     if(c == 'q'){
+  93              		.loc 1 52 0
+  94 0010 FB1D     		add	r3, r7, #7
+  95 0012 1B78     		ldrb	r3, [r3]
+  96 0014 712B     		cmp	r3, #113
+  97 0016 04D1     		bne	.L5
+  53:.\main.c      ****         data_array[1] = 2000;
   98              		.loc 1 53 0
-  99 0022 FB1D     		add	r3, r7, #7
- 100 0024 1B78     		ldrb	r3, [r3]
- 101 0026 772B     		cmp	r3, #119
- 102 0028 03D1     		bne	.L7
-  54:.\main.c      ****         data_array[1] = 1750;
- 103              		.loc 1 54 0
- 104 002a 314B     		ldr	r3, .L18
- 105 002c 314A     		ldr	r2, .L18+4
- 106 002e 5A80     		strh	r2, [r3, #2]
- 107 0030 5AE0     		b	.L4
- 108              	.L7:
-  55:.\main.c      ****     }
-  56:.\main.c      ****     else if(c == 'e'){
- 109              		.loc 1 56 0
- 110 0032 FB1D     		add	r3, r7, #7
- 111 0034 1B78     		ldrb	r3, [r3]
- 112 0036 652B     		cmp	r3, #101
- 113 0038 03D1     		bne	.L8
-  57:.\main.c      ****         data_array[1] = 1500;
- 114              		.loc 1 57 0
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccl4ljik.s 			page 4
+  99 0018 354B     		ldr	r3, .L18
+ 100 001a FA22     		mov	r2, #250
+ 101 001c D200     		lsl	r2, r2, #3
+ 102 001e 5A80     		strh	r2, [r3, #2]
+ 103 0020 62E0     		b	.L4
+ 104              	.L5:
+  54:.\main.c      ****     }
+  55:.\main.c      ****     else if(c == 'w'){
+ 105              		.loc 1 55 0
+ 106 0022 FB1D     		add	r3, r7, #7
+ 107 0024 1B78     		ldrb	r3, [r3]
+ 108 0026 772B     		cmp	r3, #119
+ 109 0028 03D1     		bne	.L7
+  56:.\main.c      ****         data_array[1] = 1750;
+ 110              		.loc 1 56 0
+ 111 002a 314B     		ldr	r3, .L18
+ 112 002c 314A     		ldr	r2, .L18+4
+ 113 002e 5A80     		strh	r2, [r3, #2]
+ 114 0030 5AE0     		b	.L4
+ 115              	.L7:
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccH3w0kW.s 			page 4
 
 
- 115 003a 2D4B     		ldr	r3, .L18
- 116 003c 2E4A     		ldr	r2, .L18+8
- 117 003e 5A80     		strh	r2, [r3, #2]
- 118 0040 52E0     		b	.L4
- 119              	.L8:
-  58:.\main.c      ****     }
-  59:.\main.c      ****     else if(c == 'r'){
- 120              		.loc 1 59 0
- 121 0042 FB1D     		add	r3, r7, #7
- 122 0044 1B78     		ldrb	r3, [r3]
- 123 0046 722B     		cmp	r3, #114
- 124 0048 03D1     		bne	.L9
-  60:.\main.c      ****         data_array[1] = 1250;
- 125              		.loc 1 60 0
- 126 004a 294B     		ldr	r3, .L18
- 127 004c 2B4A     		ldr	r2, .L18+12
- 128 004e 5A80     		strh	r2, [r3, #2]
- 129 0050 4AE0     		b	.L4
- 130              	.L9:
-  61:.\main.c      ****     }
-  62:.\main.c      ****     else if(c == 't'){
- 131              		.loc 1 62 0
- 132 0052 FB1D     		add	r3, r7, #7
- 133 0054 1B78     		ldrb	r3, [r3]
- 134 0056 742B     		cmp	r3, #116
- 135 0058 04D1     		bne	.L10
-  63:.\main.c      ****         data_array[1] = 1000;
- 136              		.loc 1 63 0
- 137 005a 254B     		ldr	r3, .L18
- 138 005c FA22     		mov	r2, #250
- 139 005e 9200     		lsl	r2, r2, #2
- 140 0060 5A80     		strh	r2, [r3, #2]
- 141 0062 41E0     		b	.L4
- 142              	.L10:
-  64:.\main.c      ****     }    
-  65:.\main.c      ****     else if(c == '1'){
+  57:.\main.c      ****     }
+  58:.\main.c      ****     else if(c == 'e'){
+ 116              		.loc 1 58 0
+ 117 0032 FB1D     		add	r3, r7, #7
+ 118 0034 1B78     		ldrb	r3, [r3]
+ 119 0036 652B     		cmp	r3, #101
+ 120 0038 03D1     		bne	.L8
+  59:.\main.c      ****         data_array[1] = 1500;
+ 121              		.loc 1 59 0
+ 122 003a 2D4B     		ldr	r3, .L18
+ 123 003c 2E4A     		ldr	r2, .L18+8
+ 124 003e 5A80     		strh	r2, [r3, #2]
+ 125 0040 52E0     		b	.L4
+ 126              	.L8:
+  60:.\main.c      ****     }
+  61:.\main.c      ****     else if(c == 'r'){
+ 127              		.loc 1 61 0
+ 128 0042 FB1D     		add	r3, r7, #7
+ 129 0044 1B78     		ldrb	r3, [r3]
+ 130 0046 722B     		cmp	r3, #114
+ 131 0048 03D1     		bne	.L9
+  62:.\main.c      ****         data_array[1] = 1250;
+ 132              		.loc 1 62 0
+ 133 004a 294B     		ldr	r3, .L18
+ 134 004c 2B4A     		ldr	r2, .L18+12
+ 135 004e 5A80     		strh	r2, [r3, #2]
+ 136 0050 4AE0     		b	.L4
+ 137              	.L9:
+  63:.\main.c      ****     }
+  64:.\main.c      ****     else if(c == 't'){
+ 138              		.loc 1 64 0
+ 139 0052 FB1D     		add	r3, r7, #7
+ 140 0054 1B78     		ldrb	r3, [r3]
+ 141 0056 742B     		cmp	r3, #116
+ 142 0058 04D1     		bne	.L10
+  65:.\main.c      ****         data_array[1] = 1000;
  143              		.loc 1 65 0
- 144 0064 FB1D     		add	r3, r7, #7
- 145 0066 1B78     		ldrb	r3, [r3]
- 146 0068 312B     		cmp	r3, #49
- 147 006a 04D1     		bne	.L11
-  66:.\main.c      ****         data_array[2] = 1000;
- 148              		.loc 1 66 0
- 149 006c 204B     		ldr	r3, .L18
- 150 006e FA22     		mov	r2, #250
- 151 0070 9200     		lsl	r2, r2, #2
- 152 0072 9A80     		strh	r2, [r3, #4]
- 153 0074 38E0     		b	.L4
- 154              	.L11:
-  67:.\main.c      ****     }
-  68:.\main.c      ****     else if(c == '2'){
+ 144 005a 254B     		ldr	r3, .L18
+ 145 005c FA22     		mov	r2, #250
+ 146 005e 9200     		lsl	r2, r2, #2
+ 147 0060 5A80     		strh	r2, [r3, #2]
+ 148 0062 41E0     		b	.L4
+ 149              	.L10:
+  66:.\main.c      ****     }    
+  67:.\main.c      ****     else if(c == '1'){
+ 150              		.loc 1 67 0
+ 151 0064 FB1D     		add	r3, r7, #7
+ 152 0066 1B78     		ldrb	r3, [r3]
+ 153 0068 312B     		cmp	r3, #49
+ 154 006a 04D1     		bne	.L11
+  68:.\main.c      ****         data_array[2] = 1000;
  155              		.loc 1 68 0
- 156 0076 FB1D     		add	r3, r7, #7
- 157 0078 1B78     		ldrb	r3, [r3]
- 158 007a 322B     		cmp	r3, #50
- 159 007c 03D1     		bne	.L12
-  69:.\main.c      ****         data_array[2] = 5000;
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccl4ljik.s 			page 5
+ 156 006c 204B     		ldr	r3, .L18
+ 157 006e FA22     		mov	r2, #250
+ 158 0070 9200     		lsl	r2, r2, #2
+ 159 0072 9A80     		strh	r2, [r3, #4]
+ 160 0074 38E0     		b	.L4
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccH3w0kW.s 			page 5
 
 
- 160              		.loc 1 69 0
- 161 007e 1C4B     		ldr	r3, .L18
- 162 0080 1F4A     		ldr	r2, .L18+16
- 163 0082 9A80     		strh	r2, [r3, #4]
- 164 0084 30E0     		b	.L4
- 165              	.L12:
-  70:.\main.c      ****     }
-  71:.\main.c      ****     else if(c == '3'){
- 166              		.loc 1 71 0
- 167 0086 FB1D     		add	r3, r7, #7
- 168 0088 1B78     		ldrb	r3, [r3]
- 169 008a 332B     		cmp	r3, #51
- 170 008c 03D1     		bne	.L13
-  72:.\main.c      ****         data_array[2] = 10000;
- 171              		.loc 1 72 0
- 172 008e 184B     		ldr	r3, .L18
- 173 0090 1C4A     		ldr	r2, .L18+20
- 174 0092 9A80     		strh	r2, [r3, #4]
- 175 0094 28E0     		b	.L4
- 176              	.L13:
-  73:.\main.c      ****     }
-  74:.\main.c      ****     else if(c == '4'){
- 177              		.loc 1 74 0
- 178 0096 FB1D     		add	r3, r7, #7
- 179 0098 1B78     		ldrb	r3, [r3]
- 180 009a 342B     		cmp	r3, #52
- 181 009c 03D1     		bne	.L14
-  75:.\main.c      ****         data_array[2] = 15000;
- 182              		.loc 1 75 0
- 183 009e 144B     		ldr	r3, .L18
- 184 00a0 194A     		ldr	r2, .L18+24
- 185 00a2 9A80     		strh	r2, [r3, #4]
- 186 00a4 20E0     		b	.L4
- 187              	.L14:
-  76:.\main.c      ****     }
-  77:.\main.c      ****     else if(c == '5'){
- 188              		.loc 1 77 0
- 189 00a6 FB1D     		add	r3, r7, #7
- 190 00a8 1B78     		ldrb	r3, [r3]
- 191 00aa 352B     		cmp	r3, #53
- 192 00ac 03D1     		bne	.L15
-  78:.\main.c      ****         data_array[2] =19000;
- 193              		.loc 1 78 0
- 194 00ae 104B     		ldr	r3, .L18
- 195 00b0 164A     		ldr	r2, .L18+28
- 196 00b2 9A80     		strh	r2, [r3, #4]
- 197 00b4 18E0     		b	.L4
- 198              	.L15:
-  79:.\main.c      ****     }    
-  80:.\main.c      ****     else if(c == 'j'){
- 199              		.loc 1 80 0
- 200 00b6 FB1D     		add	r3, r7, #7
- 201 00b8 1B78     		ldrb	r3, [r3]
- 202 00ba 6A2B     		cmp	r3, #106
- 203 00bc 04D1     		bne	.L16
-  81:.\main.c      ****         data_array[3] = 1000;
- 204              		.loc 1 81 0
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccl4ljik.s 			page 6
+ 161              	.L11:
+  69:.\main.c      ****     }
+  70:.\main.c      ****     else if(c == '2'){
+ 162              		.loc 1 70 0
+ 163 0076 FB1D     		add	r3, r7, #7
+ 164 0078 1B78     		ldrb	r3, [r3]
+ 165 007a 322B     		cmp	r3, #50
+ 166 007c 03D1     		bne	.L12
+  71:.\main.c      ****         data_array[2] = 5000;
+ 167              		.loc 1 71 0
+ 168 007e 1C4B     		ldr	r3, .L18
+ 169 0080 1F4A     		ldr	r2, .L18+16
+ 170 0082 9A80     		strh	r2, [r3, #4]
+ 171 0084 30E0     		b	.L4
+ 172              	.L12:
+  72:.\main.c      ****     }
+  73:.\main.c      ****     else if(c == '3'){
+ 173              		.loc 1 73 0
+ 174 0086 FB1D     		add	r3, r7, #7
+ 175 0088 1B78     		ldrb	r3, [r3]
+ 176 008a 332B     		cmp	r3, #51
+ 177 008c 03D1     		bne	.L13
+  74:.\main.c      ****         data_array[2] = 10000;
+ 178              		.loc 1 74 0
+ 179 008e 184B     		ldr	r3, .L18
+ 180 0090 1C4A     		ldr	r2, .L18+20
+ 181 0092 9A80     		strh	r2, [r3, #4]
+ 182 0094 28E0     		b	.L4
+ 183              	.L13:
+  75:.\main.c      ****     }
+  76:.\main.c      ****     else if(c == '4'){
+ 184              		.loc 1 76 0
+ 185 0096 FB1D     		add	r3, r7, #7
+ 186 0098 1B78     		ldrb	r3, [r3]
+ 187 009a 342B     		cmp	r3, #52
+ 188 009c 03D1     		bne	.L14
+  77:.\main.c      ****         data_array[2] = 15000;
+ 189              		.loc 1 77 0
+ 190 009e 144B     		ldr	r3, .L18
+ 191 00a0 194A     		ldr	r2, .L18+24
+ 192 00a2 9A80     		strh	r2, [r3, #4]
+ 193 00a4 20E0     		b	.L4
+ 194              	.L14:
+  78:.\main.c      ****     }
+  79:.\main.c      ****     else if(c == '5'){
+ 195              		.loc 1 79 0
+ 196 00a6 FB1D     		add	r3, r7, #7
+ 197 00a8 1B78     		ldrb	r3, [r3]
+ 198 00aa 352B     		cmp	r3, #53
+ 199 00ac 03D1     		bne	.L15
+  80:.\main.c      ****         data_array[2] =19000;
+ 200              		.loc 1 80 0
+ 201 00ae 104B     		ldr	r3, .L18
+ 202 00b0 164A     		ldr	r2, .L18+28
+ 203 00b2 9A80     		strh	r2, [r3, #4]
+ 204 00b4 18E0     		b	.L4
+ 205              	.L15:
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccH3w0kW.s 			page 6
 
 
- 205 00be 0C4B     		ldr	r3, .L18
- 206 00c0 FA22     		mov	r2, #250
- 207 00c2 9200     		lsl	r2, r2, #2
- 208 00c4 DA80     		strh	r2, [r3, #6]
- 209 00c6 0FE0     		b	.L4
- 210              	.L16:
-  82:.\main.c      ****     }
-  83:.\main.c      ****     else if(c == 'k'){
+  81:.\main.c      ****     }    
+  82:.\main.c      ****     else if(c == 'j'){
+ 206              		.loc 1 82 0
+ 207 00b6 FB1D     		add	r3, r7, #7
+ 208 00b8 1B78     		ldrb	r3, [r3]
+ 209 00ba 6A2B     		cmp	r3, #106
+ 210 00bc 04D1     		bne	.L16
+  83:.\main.c      ****         data_array[3] = 1000;
  211              		.loc 1 83 0
- 212 00c8 FB1D     		add	r3, r7, #7
- 213 00ca 1B78     		ldrb	r3, [r3]
- 214 00cc 6B2B     		cmp	r3, #107
- 215 00ce 03D1     		bne	.L17
-  84:.\main.c      ****         data_array[3] = 1500;
- 216              		.loc 1 84 0
- 217 00d0 074B     		ldr	r3, .L18
- 218 00d2 094A     		ldr	r2, .L18+8
- 219 00d4 DA80     		strh	r2, [r3, #6]
- 220 00d6 07E0     		b	.L4
- 221              	.L17:
-  85:.\main.c      ****     }
-  86:.\main.c      ****     else if(c == 'l'){
- 222              		.loc 1 86 0
- 223 00d8 FB1D     		add	r3, r7, #7
- 224 00da 1B78     		ldrb	r3, [r3]
- 225 00dc 6C2B     		cmp	r3, #108
- 226 00de 03D1     		bne	.L4
-  87:.\main.c      ****         data_array[3] =2000;
- 227              		.loc 1 87 0
- 228 00e0 034B     		ldr	r3, .L18
- 229 00e2 FA22     		mov	r2, #250
- 230 00e4 D200     		lsl	r2, r2, #3
- 231 00e6 DA80     		strh	r2, [r3, #6]
- 232              	.L4:
-  88:.\main.c      ****     }    
-  89:.\main.c      **** 
-  90:.\main.c      **** }
- 233              		.loc 1 90 0
- 234 00e8 BD46     		mov	sp, r7
- 235 00ea 02B0     		add	sp, sp, #8
- 236              		@ sp needed
- 237 00ec 80BD     		pop	{r7, pc}
- 238              	.L19:
- 239 00ee C046     		.align	2
- 240              	.L18:
- 241 00f0 00000000 		.word	data_array
- 242 00f4 D6060000 		.word	1750
- 243 00f8 DC050000 		.word	1500
- 244 00fc E2040000 		.word	1250
- 245 0100 88130000 		.word	5000
- 246 0104 10270000 		.word	10000
- 247 0108 983A0000 		.word	15000
- 248 010c 384A0000 		.word	19000
- 249              		.cfi_endproc
- 250              	.LFE34:
- 251              		.size	fill_data_array, .-fill_data_array
- 252              		.section	.text.baseAzimuth,"ax",%progbits
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccl4ljik.s 			page 7
-
-
- 253              		.align	2
- 254              		.global	baseAzimuth
- 255              		.code	16
- 256              		.thumb_func
- 257              		.type	baseAzimuth, %function
- 258              	baseAzimuth:
- 259              	.LFB35:
+ 212 00be 0C4B     		ldr	r3, .L18
+ 213 00c0 FA22     		mov	r2, #250
+ 214 00c2 9200     		lsl	r2, r2, #2
+ 215 00c4 DA80     		strh	r2, [r3, #6]
+ 216 00c6 0FE0     		b	.L4
+ 217              	.L16:
+  84:.\main.c      ****     }
+  85:.\main.c      ****     else if(c == 'k'){
+ 218              		.loc 1 85 0
+ 219 00c8 FB1D     		add	r3, r7, #7
+ 220 00ca 1B78     		ldrb	r3, [r3]
+ 221 00cc 6B2B     		cmp	r3, #107
+ 222 00ce 03D1     		bne	.L17
+  86:.\main.c      ****         data_array[3] = 1500;
+ 223              		.loc 1 86 0
+ 224 00d0 074B     		ldr	r3, .L18
+ 225 00d2 094A     		ldr	r2, .L18+8
+ 226 00d4 DA80     		strh	r2, [r3, #6]
+ 227 00d6 07E0     		b	.L4
+ 228              	.L17:
+  87:.\main.c      ****     }
+  88:.\main.c      ****     else if(c == 'l'){
+ 229              		.loc 1 88 0
+ 230 00d8 FB1D     		add	r3, r7, #7
+ 231 00da 1B78     		ldrb	r3, [r3]
+ 232 00dc 6C2B     		cmp	r3, #108
+ 233 00de 03D1     		bne	.L4
+  89:.\main.c      ****         data_array[3] =2000;
+ 234              		.loc 1 89 0
+ 235 00e0 034B     		ldr	r3, .L18
+ 236 00e2 FA22     		mov	r2, #250
+ 237 00e4 D200     		lsl	r2, r2, #3
+ 238 00e6 DA80     		strh	r2, [r3, #6]
+ 239              	.L4:
+  90:.\main.c      ****     }    
   91:.\main.c      **** 
-  92:.\main.c      **** //control the turret
-  93:.\main.c      **** void baseAzimuth()
-  94:.\main.c      **** {
- 260              		.loc 1 94 0
- 261              		.cfi_startproc
- 262 0000 80B5     		push	{r7, lr}
- 263              		.cfi_def_cfa_offset 8
- 264              		.cfi_offset 7, -8
- 265              		.cfi_offset 14, -4
- 266 0002 00AF     		add	r7, sp, #0
- 267              		.cfi_def_cfa_register 7
-  95:.\main.c      ****     //take instruction from data_array
-  96:.\main.c      ****     //smooth input
-  97:.\main.c      ****     //actuate the turret using PWM
-  98:.\main.c      ****     
-  99:.\main.c      ****     
- 100:.\main.c      **** }
- 268              		.loc 1 100 0
- 269 0004 BD46     		mov	sp, r7
- 270              		@ sp needed
- 271 0006 80BD     		pop	{r7, pc}
- 272              		.cfi_endproc
- 273              	.LFE35:
- 274              		.size	baseAzimuth, .-baseAzimuth
- 275              		.comm	shldr_state,1,1
- 276              		.section	.text.shoulder,"ax",%progbits
- 277              		.align	2
- 278              		.global	shoulder
- 279              		.code	16
- 280              		.thumb_func
- 281              		.type	shoulder, %function
- 282              	shoulder:
- 283              	.LFB36:
- 101:.\main.c      **** 
- 102:.\main.c      **** enum shldr_states {shldr_start, shldr_init, shldr_fdbk, shldr_exe} shldr_state;
- 103:.\main.c      **** //control the shoulder
- 104:.\main.c      **** void shoulder()
- 105:.\main.c      **** {
- 284              		.loc 1 105 0
- 285              		.cfi_startproc
- 286 0000 80B5     		push	{r7, lr}
- 287              		.cfi_def_cfa_offset 8
- 288              		.cfi_offset 7, -8
- 289              		.cfi_offset 14, -4
- 290 0002 00AF     		add	r7, sp, #0
- 291              		.cfi_def_cfa_register 7
- 106:.\main.c      ****     //take instruction from data_array
- 107:.\main.c      ****     //smooth input
- 108:.\main.c      ****     //actuate the shoulder using PWM
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccl4ljik.s 			page 8
+  92:.\main.c      **** }
+ 240              		.loc 1 92 0
+ 241 00e8 BD46     		mov	sp, r7
+ 242 00ea 02B0     		add	sp, sp, #8
+ 243              		@ sp needed
+ 244 00ec 80BD     		pop	{r7, pc}
+ 245              	.L19:
+ 246 00ee C046     		.align	2
+ 247              	.L18:
+ 248 00f0 00000000 		.word	data_array
+ 249 00f4 D6060000 		.word	1750
+ 250 00f8 DC050000 		.word	1500
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccH3w0kW.s 			page 7
 
 
- 109:.\main.c      ****     //get feedback
- 110:.\main.c      ****     
- 111:.\main.c      ****     /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
- 112:.\main.c      ****     switch(shldr_state)
- 292              		.loc 1 112 0
- 293 0004 0E4B     		ldr	r3, .L29
- 294 0006 1B78     		ldrb	r3, [r3]
- 295 0008 012B     		cmp	r3, #1
- 296 000a 0CD0     		beq	.L23
- 297 000c 02DC     		bgt	.L24
- 298 000e 002B     		cmp	r3, #0
- 299 0010 05D0     		beq	.L25
- 300 0012 12E0     		b	.L21
- 301              	.L24:
- 302 0014 022B     		cmp	r3, #2
- 303 0016 0FD0     		beq	.L28
- 304 0018 032B     		cmp	r3, #3
- 305 001a 08D0     		beq	.L27
- 306 001c 0DE0     		b	.L21
- 307              	.L25:
- 113:.\main.c      ****     {//switch staatement for state transitions
- 114:.\main.c      **** 		case shldr_start: //start
- 115:.\main.c      **** 			//next state will be init
- 116:.\main.c      ****             shldr_state = shldr_init;
- 308              		.loc 1 116 0
- 309 001e 084B     		ldr	r3, .L29
- 310 0020 0122     		mov	r2, #1
- 311 0022 1A70     		strb	r2, [r3]
- 117:.\main.c      ****             break;
- 312              		.loc 1 117 0
- 313 0024 09E0     		b	.L21
- 314              	.L23:
- 118:.\main.c      ****         
- 119:.\main.c      **** 		case shldr_init: //initialize
- 120:.\main.c      **** 			//next state will be feedback
- 121:.\main.c      ****             shldr_state = shldr_fdbk;
- 315              		.loc 1 121 0
- 316 0026 064B     		ldr	r3, .L29
- 317 0028 0222     		mov	r2, #2
- 318 002a 1A70     		strb	r2, [r3]
- 122:.\main.c      ****             break;
- 319              		.loc 1 122 0
- 320 002c 05E0     		b	.L21
- 321              	.L27:
- 123:.\main.c      ****         
- 124:.\main.c      **** 		case shldr_fdbk://feedback
- 125:.\main.c      **** 			//if position ok relative to average
- 126:.\main.c      **** 				//execute
- 127:.\main.c      **** 			//else if not ok
- 128:.\main.c      **** 				//report problem
- 129:.\main.c      ****             break;
- 130:.\main.c      **** 		case shldr_exe://execute
- 131:.\main.c      **** 			//next state will be report
- 132:.\main.c      ****             shldr_state = shldr_fdbk;
- 322              		.loc 1 132 0
- 323 002e 044B     		ldr	r3, .L29
- 324 0030 0222     		mov	r2, #2
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccl4ljik.s 			page 9
+ 251 00fc E2040000 		.word	1250
+ 252 0100 88130000 		.word	5000
+ 253 0104 10270000 		.word	10000
+ 254 0108 983A0000 		.word	15000
+ 255 010c 384A0000 		.word	19000
+ 256              		.cfi_endproc
+ 257              	.LFE34:
+ 258              		.size	fill_data_array, .-fill_data_array
+ 259              		.section	.text.baseAzimuth,"ax",%progbits
+ 260              		.align	2
+ 261              		.global	baseAzimuth
+ 262              		.code	16
+ 263              		.thumb_func
+ 264              		.type	baseAzimuth, %function
+ 265              	baseAzimuth:
+ 266              	.LFB35:
+  93:.\main.c      **** 
+  94:.\main.c      **** //control the turret
+  95:.\main.c      **** void baseAzimuth()
+  96:.\main.c      **** {
+ 267              		.loc 1 96 0
+ 268              		.cfi_startproc
+ 269 0000 80B5     		push	{r7, lr}
+ 270              		.cfi_def_cfa_offset 8
+ 271              		.cfi_offset 7, -8
+ 272              		.cfi_offset 14, -4
+ 273 0002 00AF     		add	r7, sp, #0
+ 274              		.cfi_def_cfa_register 7
+  97:.\main.c      ****     //take instruction from data_array
+  98:.\main.c      ****     //smooth input
+  99:.\main.c      ****     //actuate the turret using PWM
+ 100:.\main.c      ****     
+ 101:.\main.c      ****     
+ 102:.\main.c      **** }
+ 275              		.loc 1 102 0
+ 276 0004 BD46     		mov	sp, r7
+ 277              		@ sp needed
+ 278 0006 80BD     		pop	{r7, pc}
+ 279              		.cfi_endproc
+ 280              	.LFE35:
+ 281              		.size	baseAzimuth, .-baseAzimuth
+ 282              		.comm	shldr_state,1,1
+ 283              		.section	.text.shoulder,"ax",%progbits
+ 284              		.align	2
+ 285              		.global	shoulder
+ 286              		.code	16
+ 287              		.thumb_func
+ 288              		.type	shoulder, %function
+ 289              	shoulder:
+ 290              	.LFB36:
+ 103:.\main.c      **** 
+ 104:.\main.c      **** enum shldr_states {shldr_start, shldr_init, shldr_fdbk, shldr_exe} shldr_state;
+ 105:.\main.c      **** //control the shoulder
+ 106:.\main.c      **** void shoulder()
+ 107:.\main.c      **** {
+ 291              		.loc 1 107 0
+ 292              		.cfi_startproc
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccH3w0kW.s 			page 8
 
 
- 325 0032 1A70     		strb	r2, [r3]
- 133:.\main.c      ****             break;
- 326              		.loc 1 133 0
- 327 0034 C046     		mov	r8, r8
- 328 0036 00E0     		b	.L21
- 329              	.L28:
- 129:.\main.c      ****             break;
- 330              		.loc 1 129 0
- 331 0038 C046     		mov	r8, r8
- 332              	.L21:
- 134:.\main.c      ****     }
- 135:.\main.c      **** 			
- 136:.\main.c      **** 	//switch statement for state actions
- 137:.\main.c      **** 		//start
- 138:.\main.c      **** 			//break
- 139:.\main.c      **** 		//initialize
- 140:.\main.c      **** 			//create smoothing array
- 141:.\main.c      **** 		//feedback
- 142:.\main.c      **** 			//read feedback
- 143:.\main.c      **** 		//execute
- 144:.\main.c      **** 			//add the shifted value from main to back of smoothing array
- 145:.\main.c      **** 			//calculate average of value in array
- 146:.\main.c      ****     /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
- 147:.\main.c      **** }
- 333              		.loc 1 147 0
- 334 003a BD46     		mov	sp, r7
- 335              		@ sp needed
- 336 003c 80BD     		pop	{r7, pc}
- 337              	.L30:
- 338 003e C046     		.align	2
- 339              	.L29:
- 340 0040 00000000 		.word	shldr_state
- 341              		.cfi_endproc
- 342              	.LFE36:
- 343              		.size	shoulder, .-shoulder
- 344              		.section	.text.elbow,"ax",%progbits
- 345              		.align	2
- 346              		.global	elbow
- 347              		.code	16
- 348              		.thumb_func
- 349              		.type	elbow, %function
- 350              	elbow:
- 351              	.LFB37:
- 148:.\main.c      **** 
- 149:.\main.c      **** //control the elbow
- 150:.\main.c      **** void elbow()
- 151:.\main.c      **** {
- 352              		.loc 1 151 0
- 353              		.cfi_startproc
- 354 0000 80B5     		push	{r7, lr}
- 355              		.cfi_def_cfa_offset 8
- 356              		.cfi_offset 7, -8
- 357              		.cfi_offset 14, -4
- 358 0002 00AF     		add	r7, sp, #0
- 359              		.cfi_def_cfa_register 7
- 152:.\main.c      ****     //take instruction from data_array
- 153:.\main.c      ****     //smooth input
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccl4ljik.s 			page 10
+ 293 0000 80B5     		push	{r7, lr}
+ 294              		.cfi_def_cfa_offset 8
+ 295              		.cfi_offset 7, -8
+ 296              		.cfi_offset 14, -4
+ 297 0002 00AF     		add	r7, sp, #0
+ 298              		.cfi_def_cfa_register 7
+ 108:.\main.c      ****     //take instruction from data_array
+ 109:.\main.c      ****     //smooth input
+ 110:.\main.c      ****     //actuate the shoulder using PWM
+ 111:.\main.c      ****     //get feedback
+ 112:.\main.c      ****     
+ 113:.\main.c      ****     /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+ 114:.\main.c      ****     //switch statement for state actions
+ 115:.\main.c      **** 		//start
+ 116:.\main.c      **** 			//break
+ 117:.\main.c      **** 		//initialize
+ 118:.\main.c      **** 			//create smoothing array
+ 119:.\main.c      **** 		//feedback
+ 120:.\main.c      **** 			//read feedback
+ 121:.\main.c      **** 		//execute
+ 122:.\main.c      **** 			//add the shifted value from main to back of smoothing array
+ 123:.\main.c      **** 			//calculate average of value in array
+ 124:.\main.c      ****     
+ 125:.\main.c      ****     switch(shldr_state)
+ 299              		.loc 1 125 0
+ 300 0004 0E4B     		ldr	r3, .L29
+ 301 0006 1B78     		ldrb	r3, [r3]
+ 302 0008 012B     		cmp	r3, #1
+ 303 000a 0CD0     		beq	.L23
+ 304 000c 02DC     		bgt	.L24
+ 305 000e 002B     		cmp	r3, #0
+ 306 0010 05D0     		beq	.L25
+ 307 0012 12E0     		b	.L21
+ 308              	.L24:
+ 309 0014 022B     		cmp	r3, #2
+ 310 0016 0FD0     		beq	.L28
+ 311 0018 032B     		cmp	r3, #3
+ 312 001a 08D0     		beq	.L27
+ 313 001c 0DE0     		b	.L21
+ 314              	.L25:
+ 126:.\main.c      ****     {//switch staatement for state transitions
+ 127:.\main.c      **** 		case shldr_start: //start
+ 128:.\main.c      **** 			//next state will be init
+ 129:.\main.c      ****             shldr_state = shldr_init;
+ 315              		.loc 1 129 0
+ 316 001e 084B     		ldr	r3, .L29
+ 317 0020 0122     		mov	r2, #1
+ 318 0022 1A70     		strb	r2, [r3]
+ 130:.\main.c      ****             break;
+ 319              		.loc 1 130 0
+ 320 0024 09E0     		b	.L21
+ 321              	.L23:
+ 131:.\main.c      ****         
+ 132:.\main.c      **** 		case shldr_init: //initialize
+ 133:.\main.c      **** 			//next state will be feedback
+ 134:.\main.c      ****             shldr_state = shldr_fdbk;
+ 322              		.loc 1 134 0
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccH3w0kW.s 			page 9
 
 
- 154:.\main.c      ****     //actuate the elbow using PWM
- 155:.\main.c      ****     //get feedback
- 156:.\main.c      **** }
- 360              		.loc 1 156 0
- 361 0004 BD46     		mov	sp, r7
- 362              		@ sp needed
- 363 0006 80BD     		pop	{r7, pc}
- 364              		.cfi_endproc
- 365              	.LFE37:
- 366              		.size	elbow, .-elbow
- 367              		.comm	wristTilt_state,1,1
- 368              		.section	.text.wristTilt,"ax",%progbits
- 369              		.align	2
- 370              		.global	wristTilt
- 371              		.code	16
- 372              		.thumb_func
- 373              		.type	wristTilt, %function
- 374              	wristTilt:
- 375              	.LFB38:
- 157:.\main.c      **** 
- 158:.\main.c      **** enum wristTilt_states {tilt_init = 0, tilt_start, tilt_control, tilt_feedback} wristTilt_state;
- 159:.\main.c      **** //control the tilting motion of the wrist
- 160:.\main.c      **** void wristTilt()
- 161:.\main.c      **** {
- 376              		.loc 1 161 0
- 377              		.cfi_startproc
- 378 0000 80B5     		push	{r7, lr}
- 379              		.cfi_def_cfa_offset 8
- 380              		.cfi_offset 7, -8
- 381              		.cfi_offset 14, -4
- 382 0002 00AF     		add	r7, sp, #0
- 383              		.cfi_def_cfa_register 7
- 162:.\main.c      ****     // Overview
- 163:.\main.c      ****     //take instruction from data_array
- 164:.\main.c      ****     //smooth input
- 165:.\main.c      ****     //actuate the tilting using UART
- 166:.\main.c      ****     //get feedback
- 167:.\main.c      **** 
- 168:.\main.c      ****     //-------------------------- 
- 169:.\main.c      ****     // Dynamixel Servo specific
- 170:.\main.c      ****     // TODO: Set the torque - Requires building an array with bit representation
- 171:.\main.c      ****     // TODO: Set the desired position
- 172:.\main.c      **** 
- 173:.\main.c      ****     //--------------------------
- 174:.\main.c      ****     // State machine
- 175:.\main.c      ****         // Transistion
- 176:.\main.c      ****     switch(wristTilt_state)
- 384              		.loc 1 176 0
- 385 0004 0F4B     		ldr	r3, .L48
- 386 0006 1B78     		ldrb	r3, [r3]
- 387 0008 012B     		cmp	r3, #1
- 388 000a 06D0     		beq	.L34
- 389 000c 09DC     		bgt	.L45
- 390 000e 002B     		cmp	r3, #0
- 391 0010 08D1     		bne	.L33
- 177:.\main.c      ****     {
- 178:.\main.c      ****         case tilt_init:
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccl4ljik.s 			page 11
+ 323 0026 064B     		ldr	r3, .L29
+ 324 0028 0222     		mov	r2, #2
+ 325 002a 1A70     		strb	r2, [r3]
+ 135:.\main.c      ****             break;
+ 326              		.loc 1 135 0
+ 327 002c 05E0     		b	.L21
+ 328              	.L27:
+ 136:.\main.c      ****         
+ 137:.\main.c      **** 		case shldr_fdbk://feedback
+ 138:.\main.c      **** 			//if position ok relative to average
+ 139:.\main.c      **** 				//execute
+ 140:.\main.c      **** 			//else if not ok
+ 141:.\main.c      **** 				//report problem
+ 142:.\main.c      ****             break;
+ 143:.\main.c      **** 		case shldr_exe://execute
+ 144:.\main.c      **** 			//next state will be report
+ 145:.\main.c      ****             shldr_state = shldr_fdbk;
+ 329              		.loc 1 145 0
+ 330 002e 044B     		ldr	r3, .L29
+ 331 0030 0222     		mov	r2, #2
+ 332 0032 1A70     		strb	r2, [r3]
+ 146:.\main.c      ****             break;
+ 333              		.loc 1 146 0
+ 334 0034 C046     		mov	r8, r8
+ 335 0036 00E0     		b	.L21
+ 336              	.L28:
+ 142:.\main.c      ****             break;
+ 337              		.loc 1 142 0
+ 338 0038 C046     		mov	r8, r8
+ 339              	.L21:
+ 147:.\main.c      ****     }
+ 148:.\main.c      ****     /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+ 149:.\main.c      **** }
+ 340              		.loc 1 149 0
+ 341 003a BD46     		mov	sp, r7
+ 342              		@ sp needed
+ 343 003c 80BD     		pop	{r7, pc}
+ 344              	.L30:
+ 345 003e C046     		.align	2
+ 346              	.L29:
+ 347 0040 00000000 		.word	shldr_state
+ 348              		.cfi_endproc
+ 349              	.LFE36:
+ 350              		.size	shoulder, .-shoulder
+ 351              		.section	.text.elbow,"ax",%progbits
+ 352              		.align	2
+ 353              		.global	elbow
+ 354              		.code	16
+ 355              		.thumb_func
+ 356              		.type	elbow, %function
+ 357              	elbow:
+ 358              	.LFB37:
+ 150:.\main.c      **** 
+ 151:.\main.c      **** //control the elbow
+ 152:.\main.c      **** void elbow()
+ 153:.\main.c      **** {
+ 359              		.loc 1 153 0
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccH3w0kW.s 			page 10
 
 
- 179:.\main.c      ****             wristTilt_state = tilt_start;
- 392              		.loc 1 179 0
- 393 0012 0C4B     		ldr	r3, .L48
- 394 0014 0122     		mov	r2, #1
- 395 0016 1A70     		strb	r2, [r3]
- 180:.\main.c      ****             break;
- 396              		.loc 1 180 0
- 397 0018 04E0     		b	.L33
- 398              	.L34:
- 181:.\main.c      ****         case tilt_start:
- 182:.\main.c      ****             wristTilt_state = tilt_control;
+ 360              		.cfi_startproc
+ 361 0000 80B5     		push	{r7, lr}
+ 362              		.cfi_def_cfa_offset 8
+ 363              		.cfi_offset 7, -8
+ 364              		.cfi_offset 14, -4
+ 365 0002 00AF     		add	r7, sp, #0
+ 366              		.cfi_def_cfa_register 7
+ 154:.\main.c      ****     //take instruction from data_array
+ 155:.\main.c      ****     //smooth input
+ 156:.\main.c      ****     //actuate the elbow using PWM
+ 157:.\main.c      ****     //get feedback
+ 158:.\main.c      **** }
+ 367              		.loc 1 158 0
+ 368 0004 BD46     		mov	sp, r7
+ 369              		@ sp needed
+ 370 0006 80BD     		pop	{r7, pc}
+ 371              		.cfi_endproc
+ 372              	.LFE37:
+ 373              		.size	elbow, .-elbow
+ 374              		.comm	wristTilt_state,1,1
+ 375              		.section	.text.wristTilt,"ax",%progbits
+ 376              		.align	2
+ 377              		.global	wristTilt
+ 378              		.code	16
+ 379              		.thumb_func
+ 380              		.type	wristTilt, %function
+ 381              	wristTilt:
+ 382              	.LFB38:
+ 159:.\main.c      **** 
+ 160:.\main.c      **** enum wristTilt_states {tilt_init = 0, tilt_start, tilt_control, tilt_feedback} wristTilt_state;
+ 161:.\main.c      **** //control the tilting motion of the wrist
+ 162:.\main.c      **** void wristTilt()
+ 163:.\main.c      **** {
+ 383              		.loc 1 163 0
+ 384              		.cfi_startproc
+ 385 0000 80B5     		push	{r7, lr}
+ 386              		.cfi_def_cfa_offset 8
+ 387              		.cfi_offset 7, -8
+ 388              		.cfi_offset 14, -4
+ 389 0002 00AF     		add	r7, sp, #0
+ 390              		.cfi_def_cfa_register 7
+ 164:.\main.c      ****     // Overview
+ 165:.\main.c      ****     //take instruction from data_array
+ 166:.\main.c      ****     //smooth input
+ 167:.\main.c      ****     //actuate the tilting using UART
+ 168:.\main.c      ****     //get feedback
+ 169:.\main.c      **** 
+ 170:.\main.c      ****     //-------------------------- 
+ 171:.\main.c      ****     // Dynamixel Servo specific
+ 172:.\main.c      ****     // TODO: Set the torque - Requires building an array with bit representation
+ 173:.\main.c      ****     // TODO: Set the desired position
+ 174:.\main.c      **** 
+ 175:.\main.c      ****     //--------------------------
+ 176:.\main.c      ****     // State machine
+ 177:.\main.c      ****     
+ 178:.\main.c      ****         // Action
+ 179:.\main.c      ****     switch(wristTilt_state)
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccH3w0kW.s 			page 11
+
+
+ 391              		.loc 1 179 0
+ 392 0004 0F4B     		ldr	r3, .L48
+ 393 0006 1B78     		ldrb	r3, [r3]
+ 394 0008 012B     		cmp	r3, #1
+ 395 000a 06D0     		beq	.L45
+ 396 000c 07DC     		bgt	.L46
+ 397 000e 002B     		cmp	r3, #0
+ 398 0010 06D1     		bne	.L33
+ 180:.\main.c      ****     {
+ 181:.\main.c      ****         case tilt_init:
+ 182:.\main.c      ****             wristTilt_state = tilt_start;
  399              		.loc 1 182 0
- 400 001a 0A4B     		ldr	r3, .L48
- 401 001c 0222     		mov	r2, #2
- 402 001e 1A70     		strb	r2, [r3]
+ 400 0012 0C4B     		ldr	r3, .L48
+ 401 0014 0122     		mov	r2, #1
+ 402 0016 1A70     		strb	r2, [r3]
  183:.\main.c      ****             break;
  403              		.loc 1 183 0
- 404 0020 00E0     		b	.L33
+ 404 0018 02E0     		b	.L33
  405              	.L45:
- 184:.\main.c      ****         case tilt_control:
- 185:.\main.c      ****             break;
- 406              		.loc 1 185 0
- 407 0022 C046     		mov	r8, r8
- 408              	.L33:
- 186:.\main.c      ****         case tilt_feedback:
+ 184:.\main.c      ****         case tilt_start:
+ 185:.\main.c      ****             // Set the torque - this is a one time thing
+ 186:.\main.c      ****             // Set the speed - I think this is a one time thing
  187:.\main.c      ****             break;
- 188:.\main.c      ****     }
- 189:.\main.c      ****         // Action
- 190:.\main.c      ****     switch(wristTilt_state)
- 409              		.loc 1 190 0
- 410 0024 074B     		ldr	r3, .L48
- 411 0026 1B78     		ldrb	r3, [r3]
- 412 0028 012B     		cmp	r3, #1
- 413 002a 06D0     		beq	.L46
- 414 002c 07DC     		bgt	.L47
- 415 002e 002B     		cmp	r3, #0
- 416 0030 06D1     		bne	.L32
- 191:.\main.c      ****     {
- 192:.\main.c      ****         case tilt_init:
- 193:.\main.c      ****             wristTilt_state = tilt_start;
- 417              		.loc 1 193 0
- 418 0032 044B     		ldr	r3, .L48
- 419 0034 0122     		mov	r2, #1
- 420 0036 1A70     		strb	r2, [r3]
- 194:.\main.c      ****             break;
- 421              		.loc 1 194 0
- 422 0038 02E0     		b	.L32
- 423              	.L46:
- 195:.\main.c      ****         case tilt_start:
- 196:.\main.c      ****             // Set the torque - this is a one time thing
- 197:.\main.c      ****             // Set the speed - I think this is a one time thing
+ 406              		.loc 1 187 0
+ 407 001a C046     		mov	r8, r8
+ 408 001c 00E0     		b	.L33
+ 409              	.L46:
+ 188:.\main.c      ****         case tilt_control:
+ 189:.\main.c      ****             break;
+ 410              		.loc 1 189 0
+ 411 001e C046     		mov	r8, r8
+ 412              	.L33:
+ 190:.\main.c      ****         case tilt_feedback:
+ 191:.\main.c      ****             break;
+ 192:.\main.c      ****     }
+ 193:.\main.c      ****         // Transistion
+ 194:.\main.c      ****     switch(wristTilt_state)
+ 413              		.loc 1 194 0
+ 414 0020 084B     		ldr	r3, .L48
+ 415 0022 1B78     		ldrb	r3, [r3]
+ 416 0024 012B     		cmp	r3, #1
+ 417 0026 06D0     		beq	.L40
+ 418 0028 09DC     		bgt	.L47
+ 419 002a 002B     		cmp	r3, #0
+ 420 002c 08D1     		bne	.L32
+ 195:.\main.c      ****     {
+ 196:.\main.c      ****         case tilt_init:
+ 197:.\main.c      ****             wristTilt_state = tilt_start;
+ 421              		.loc 1 197 0
+ 422 002e 054B     		ldr	r3, .L48
+ 423 0030 0122     		mov	r2, #1
+ 424 0032 1A70     		strb	r2, [r3]
  198:.\main.c      ****             break;
- 424              		.loc 1 198 0
- 425 003a C046     		mov	r8, r8
- 426 003c 00E0     		b	.L32
- 427              	.L47:
- 199:.\main.c      ****         case tilt_control:
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccl4ljik.s 			page 12
+ 425              		.loc 1 198 0
+ 426 0034 04E0     		b	.L32
+ 427              	.L40:
+ 199:.\main.c      ****         case tilt_start:
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccH3w0kW.s 			page 12
 
 
- 200:.\main.c      ****             break;
+ 200:.\main.c      ****             wristTilt_state = tilt_control;
  428              		.loc 1 200 0
- 429 003e C046     		mov	r8, r8
- 430              	.L32:
- 201:.\main.c      ****         case tilt_feedback:
- 202:.\main.c      ****             break;
- 203:.\main.c      ****     }
- 204:.\main.c      **** }
- 431              		.loc 1 204 0
- 432 0040 BD46     		mov	sp, r7
- 433              		@ sp needed
- 434 0042 80BD     		pop	{r7, pc}
- 435              	.L49:
- 436              		.align	2
- 437              	.L48:
- 438 0044 00000000 		.word	wristTilt_state
- 439              		.cfi_endproc
- 440              	.LFE38:
- 441              		.size	wristTilt, .-wristTilt
- 442              		.comm	wristRotate_state,1,1
- 443              		.section	.text.wristRotate,"ax",%progbits
- 444              		.align	2
- 445              		.global	wristRotate
- 446              		.code	16
- 447              		.thumb_func
- 448              		.type	wristRotate, %function
- 449              	wristRotate:
- 450              	.LFB39:
- 205:.\main.c      **** 
- 206:.\main.c      **** enum wristRotate_states {rotate_init = 0, rotate_start, rotate_control, rotate_feedback} wristRotat
- 207:.\main.c      **** //control the rotating motion of the wrist
- 208:.\main.c      **** void wristRotate()
- 209:.\main.c      **** {
- 451              		.loc 1 209 0
- 452              		.cfi_startproc
- 453 0000 80B5     		push	{r7, lr}
- 454              		.cfi_def_cfa_offset 8
- 455              		.cfi_offset 7, -8
- 456              		.cfi_offset 14, -4
- 457 0002 00AF     		add	r7, sp, #0
- 458              		.cfi_def_cfa_register 7
- 210:.\main.c      ****     // Overview
- 211:.\main.c      ****     //take instruction from data_array
- 212:.\main.c      ****     //smooth input
- 213:.\main.c      ****     //actuate the tilting using UART
- 214:.\main.c      ****     //get feedback
- 215:.\main.c      **** 
- 216:.\main.c      ****     //-------------------------- 
- 217:.\main.c      ****     // Dynamixel Servo specific
- 218:.\main.c      ****     // TODO: Set the torque - Requires building an array with bit representation
- 219:.\main.c      ****     // TOD: Set the desired position
- 220:.\main.c      **** 
- 221:.\main.c      ****     //--------------------------
- 222:.\main.c      ****     // State machine
- 223:.\main.c      ****         // Transistion
- 224:.\main.c      ****     switch(wristRotate_state)
- 459              		.loc 1 224 0
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccl4ljik.s 			page 13
+ 429 0036 034B     		ldr	r3, .L48
+ 430 0038 0222     		mov	r2, #2
+ 431 003a 1A70     		strb	r2, [r3]
+ 201:.\main.c      ****             break;
+ 432              		.loc 1 201 0
+ 433 003c 00E0     		b	.L32
+ 434              	.L47:
+ 202:.\main.c      ****         case tilt_control:
+ 203:.\main.c      ****             break;
+ 435              		.loc 1 203 0
+ 436 003e C046     		mov	r8, r8
+ 437              	.L32:
+ 204:.\main.c      ****         case tilt_feedback:
+ 205:.\main.c      ****             break;
+ 206:.\main.c      ****     }
+ 207:.\main.c      **** }
+ 438              		.loc 1 207 0
+ 439 0040 BD46     		mov	sp, r7
+ 440              		@ sp needed
+ 441 0042 80BD     		pop	{r7, pc}
+ 442              	.L49:
+ 443              		.align	2
+ 444              	.L48:
+ 445 0044 00000000 		.word	wristTilt_state
+ 446              		.cfi_endproc
+ 447              	.LFE38:
+ 448              		.size	wristTilt, .-wristTilt
+ 449              		.comm	wristRotate_state,1,1
+ 450              		.section	.text.wristRotate,"ax",%progbits
+ 451              		.align	2
+ 452              		.global	wristRotate
+ 453              		.code	16
+ 454              		.thumb_func
+ 455              		.type	wristRotate, %function
+ 456              	wristRotate:
+ 457              	.LFB39:
+ 208:.\main.c      **** 
+ 209:.\main.c      **** enum wristRotate_states {rotate_init = 0, rotate_start, rotate_control, rotate_feedback} wristRotat
+ 210:.\main.c      **** //control the rotating motion of the wrist
+ 211:.\main.c      **** void wristRotate()
+ 212:.\main.c      **** {
+ 458              		.loc 1 212 0
+ 459              		.cfi_startproc
+ 460 0000 80B5     		push	{r7, lr}
+ 461              		.cfi_def_cfa_offset 8
+ 462              		.cfi_offset 7, -8
+ 463              		.cfi_offset 14, -4
+ 464 0002 00AF     		add	r7, sp, #0
+ 465              		.cfi_def_cfa_register 7
+ 213:.\main.c      ****     //Overview
+ 214:.\main.c      ****     //take instruction from data_array
+ 215:.\main.c      ****     //smooth input
+ 216:.\main.c      ****     //actuate the tilting using UART
+ 217:.\main.c      ****     //get feedback
+ 218:.\main.c      **** 
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccH3w0kW.s 			page 13
 
 
- 460 0004 0F4B     		ldr	r3, .L66
- 461 0006 1B78     		ldrb	r3, [r3]
- 462 0008 012B     		cmp	r3, #1
- 463 000a 06D0     		beq	.L52
- 464 000c 09DC     		bgt	.L63
- 465 000e 002B     		cmp	r3, #0
- 466 0010 08D1     		bne	.L51
- 225:.\main.c      ****     {
- 226:.\main.c      ****         case rotate_init:
- 227:.\main.c      ****             wristRotate_state = rotate_start;
- 467              		.loc 1 227 0
- 468 0012 0C4B     		ldr	r3, .L66
- 469 0014 0122     		mov	r2, #1
- 470 0016 1A70     		strb	r2, [r3]
- 228:.\main.c      ****             break;
- 471              		.loc 1 228 0
- 472 0018 04E0     		b	.L51
- 473              	.L52:
- 229:.\main.c      ****         case rotate_start:
- 230:.\main.c      ****             wristRotate_state = rotate_control;
- 474              		.loc 1 230 0
- 475 001a 0A4B     		ldr	r3, .L66
- 476 001c 0222     		mov	r2, #2
- 477 001e 1A70     		strb	r2, [r3]
- 231:.\main.c      ****             break;
- 478              		.loc 1 231 0
- 479 0020 00E0     		b	.L51
+ 219:.\main.c      ****     //-------------------------- 
+ 220:.\main.c      ****     // Dynamixel Servo specific
+ 221:.\main.c      ****     // TODO: Set the torque - Requires building an array with bit representation
+ 222:.\main.c      ****     // TODO: Set the desired position
+ 223:.\main.c      **** 
+ 224:.\main.c      ****     //--------------------------
+ 225:.\main.c      ****     // State machine
+ 226:.\main.c      ****     
+ 227:.\main.c      ****         // Action
+ 228:.\main.c      ****     switch(wristRotate_state)
+ 466              		.loc 1 228 0
+ 467 0004 0F4B     		ldr	r3, .L66
+ 468 0006 1B78     		ldrb	r3, [r3]
+ 469 0008 012B     		cmp	r3, #1
+ 470 000a 06D0     		beq	.L63
+ 471 000c 07DC     		bgt	.L64
+ 472 000e 002B     		cmp	r3, #0
+ 473 0010 06D1     		bne	.L51
+ 229:.\main.c      ****     {
+ 230:.\main.c      ****         case rotate_init:
+ 231:.\main.c      ****             wristRotate_state = rotate_start;
+ 474              		.loc 1 231 0
+ 475 0012 0C4B     		ldr	r3, .L66
+ 476 0014 0122     		mov	r2, #1
+ 477 0016 1A70     		strb	r2, [r3]
+ 232:.\main.c      ****             break;
+ 478              		.loc 1 232 0
+ 479 0018 02E0     		b	.L51
  480              	.L63:
- 232:.\main.c      ****         case rotate_control:
- 233:.\main.c      ****             break;
- 481              		.loc 1 233 0
- 482 0022 C046     		mov	r8, r8
- 483              	.L51:
- 234:.\main.c      ****         case rotate_feedback:
- 235:.\main.c      ****             break;
- 236:.\main.c      ****     }
- 237:.\main.c      ****         // Action
- 238:.\main.c      ****     switch(wristRotate_state)
- 484              		.loc 1 238 0
- 485 0024 074B     		ldr	r3, .L66
- 486 0026 1B78     		ldrb	r3, [r3]
- 487 0028 012B     		cmp	r3, #1
- 488 002a 06D0     		beq	.L64
- 489 002c 07DC     		bgt	.L65
- 490 002e 002B     		cmp	r3, #0
- 491 0030 06D1     		bne	.L50
- 239:.\main.c      ****     {
- 240:.\main.c      ****         case rotate_init:
- 241:.\main.c      ****             wristRotate_state = rotate_start;
- 492              		.loc 1 241 0
- 493 0032 044B     		ldr	r3, .L66
- 494 0034 0122     		mov	r2, #1
- 495 0036 1A70     		strb	r2, [r3]
- 242:.\main.c      ****             break;
- 496              		.loc 1 242 0
- 497 0038 02E0     		b	.L50
- 498              	.L64:
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccl4ljik.s 			page 14
+ 233:.\main.c      ****         case rotate_start:
+ 234:.\main.c      ****             // Set the torque - this is a one time thing
+ 235:.\main.c      ****             // Set the speed - I think this is a one time thing
+ 236:.\main.c      ****             break;
+ 481              		.loc 1 236 0
+ 482 001a C046     		mov	r8, r8
+ 483 001c 00E0     		b	.L51
+ 484              	.L64:
+ 237:.\main.c      ****         case rotate_control:
+ 238:.\main.c      ****             break;
+ 485              		.loc 1 238 0
+ 486 001e C046     		mov	r8, r8
+ 487              	.L51:
+ 239:.\main.c      ****         case rotate_feedback:
+ 240:.\main.c      ****             break;
+ 241:.\main.c      ****     }
+ 242:.\main.c      ****         // Transistion
+ 243:.\main.c      ****     switch(wristRotate_state)
+ 488              		.loc 1 243 0
+ 489 0020 084B     		ldr	r3, .L66
+ 490 0022 1B78     		ldrb	r3, [r3]
+ 491 0024 012B     		cmp	r3, #1
+ 492 0026 06D0     		beq	.L58
+ 493 0028 09DC     		bgt	.L65
+ 494 002a 002B     		cmp	r3, #0
+ 495 002c 08D1     		bne	.L50
+ 244:.\main.c      ****     {
+ 245:.\main.c      ****         case rotate_init:
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccH3w0kW.s 			page 14
 
 
- 243:.\main.c      ****         case rotate_start:
- 244:.\main.c      ****             // Set the torque - this is a one time thing
- 245:.\main.c      ****             // Set the speed - I think this is a one time thing
- 246:.\main.c      ****             break;
- 499              		.loc 1 246 0
- 500 003a C046     		mov	r8, r8
- 501 003c 00E0     		b	.L50
- 502              	.L65:
- 247:.\main.c      ****         case rotate_control:
- 248:.\main.c      ****             break;
- 503              		.loc 1 248 0
- 504 003e C046     		mov	r8, r8
- 505              	.L50:
- 249:.\main.c      ****         case rotate_feedback:
+ 246:.\main.c      ****             wristRotate_state = rotate_start;
+ 496              		.loc 1 246 0
+ 497 002e 054B     		ldr	r3, .L66
+ 498 0030 0122     		mov	r2, #1
+ 499 0032 1A70     		strb	r2, [r3]
+ 247:.\main.c      ****             break;
+ 500              		.loc 1 247 0
+ 501 0034 04E0     		b	.L50
+ 502              	.L58:
+ 248:.\main.c      ****         case rotate_start:
+ 249:.\main.c      ****             wristRotate_state = rotate_control;
+ 503              		.loc 1 249 0
+ 504 0036 034B     		ldr	r3, .L66
+ 505 0038 0222     		mov	r2, #2
+ 506 003a 1A70     		strb	r2, [r3]
  250:.\main.c      ****             break;
- 251:.\main.c      ****     }
- 252:.\main.c      **** }
- 506              		.loc 1 252 0
- 507 0040 BD46     		mov	sp, r7
- 508              		@ sp needed
- 509 0042 80BD     		pop	{r7, pc}
- 510              	.L67:
- 511              		.align	2
- 512              	.L66:
- 513 0044 00000000 		.word	wristRotate_state
- 514              		.cfi_endproc
- 515              	.LFE39:
- 516              		.size	wristRotate, .-wristRotate
- 517              		.section	.text.send_feedback,"ax",%progbits
+ 507              		.loc 1 250 0
+ 508 003c 00E0     		b	.L50
+ 509              	.L65:
+ 251:.\main.c      ****         case rotate_control:
+ 252:.\main.c      ****             break;
+ 510              		.loc 1 252 0
+ 511 003e C046     		mov	r8, r8
+ 512              	.L50:
+ 253:.\main.c      ****         case rotate_feedback:
+ 254:.\main.c      ****             break;
+ 255:.\main.c      ****     }
+ 256:.\main.c      **** }
+ 513              		.loc 1 256 0
+ 514 0040 BD46     		mov	sp, r7
+ 515              		@ sp needed
+ 516 0042 80BD     		pop	{r7, pc}
+ 517              	.L67:
  518              		.align	2
- 519              		.global	send_feedback
- 520              		.code	16
- 521              		.thumb_func
- 522              		.type	send_feedback, %function
- 523              	send_feedback:
- 524              	.LFB40:
- 253:.\main.c      **** 
- 254:.\main.c      **** void send_feedback()
- 255:.\main.c      **** {
- 525              		.loc 1 255 0
- 526              		.cfi_startproc
- 527 0000 80B5     		push	{r7, lr}
- 528              		.cfi_def_cfa_offset 8
- 529              		.cfi_offset 7, -8
- 530              		.cfi_offset 14, -4
- 531 0002 00AF     		add	r7, sp, #0
- 532              		.cfi_def_cfa_register 7
- 256:.\main.c      ****     //compile all of the most recent feedback variables into a packet
- 257:.\main.c      ****     //necessary feedback variables: system state, dynamixel read write errors, PID errors
- 258:.\main.c      ****     //TODO define system state
- 259:.\main.c      ****     //send packet via serial to wiznet
- 260:.\main.c      **** }
- 533              		.loc 1 260 0
- 534 0004 BD46     		mov	sp, r7
- 535              		@ sp needed
- 536 0006 80BD     		pop	{r7, pc}
- 537              		.cfi_endproc
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccl4ljik.s 			page 15
+ 519              	.L66:
+ 520 0044 00000000 		.word	wristRotate_state
+ 521              		.cfi_endproc
+ 522              	.LFE39:
+ 523              		.size	wristRotate, .-wristRotate
+ 524              		.section	.text.send_feedback,"ax",%progbits
+ 525              		.align	2
+ 526              		.global	send_feedback
+ 527              		.code	16
+ 528              		.thumb_func
+ 529              		.type	send_feedback, %function
+ 530              	send_feedback:
+ 531              	.LFB40:
+ 257:.\main.c      **** 
+ 258:.\main.c      **** void send_feedback()
+ 259:.\main.c      **** {
+ 532              		.loc 1 259 0
+ 533              		.cfi_startproc
+ 534 0000 80B5     		push	{r7, lr}
+ 535              		.cfi_def_cfa_offset 8
+ 536              		.cfi_offset 7, -8
+ 537              		.cfi_offset 14, -4
+ 538 0002 00AF     		add	r7, sp, #0
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccH3w0kW.s 			page 15
 
 
- 538              	.LFE40:
- 539              		.size	send_feedback, .-send_feedback
- 540              		.comm	servo_state,1,1
- 541              		.comm	led_state,1,1
- 542              		.section	.text.led,"ax",%progbits
- 543              		.align	2
- 544              		.global	led
- 545              		.code	16
- 546              		.thumb_func
- 547              		.type	led, %function
- 548              	led:
- 549              	.LFB41:
- 261:.\main.c      **** 
- 262:.\main.c      **** enum servo_states {s_start,s_different,s_wait} servo_state;
- 263:.\main.c      **** enum led_states {l_start,l_different,l_wait} led_state;
- 264:.\main.c      **** void led(){
- 550              		.loc 1 264 0
- 551              		.cfi_startproc
- 552 0000 80B5     		push	{r7, lr}
- 553              		.cfi_def_cfa_offset 8
- 554              		.cfi_offset 7, -8
- 555              		.cfi_offset 14, -4
- 556 0002 82B0     		sub	sp, sp, #8
- 557              		.cfi_def_cfa_offset 16
- 558 0004 00AF     		add	r7, sp, #0
- 559              		.cfi_def_cfa_register 7
- 265:.\main.c      ****     uint16 old = 0;
- 560              		.loc 1 265 0
- 561 0006 BB1D     		add	r3, r7, #6
- 562 0008 0022     		mov	r2, #0
- 563 000a 1A80     		strh	r2, [r3]
- 266:.\main.c      ****     switch(led_state){
- 564              		.loc 1 266 0
- 565 000c 1C4B     		ldr	r3, .L83
- 566 000e 1B78     		ldrb	r3, [r3]
- 567 0010 012B     		cmp	r3, #1
- 568 0012 09D1     		bne	.L82
- 267:.\main.c      ****         case l_start:
- 268:.\main.c      ****             break;
- 269:.\main.c      ****         
- 270:.\main.c      ****         case l_different:
- 271:.\main.c      ****             PWM_1_WriteCompare1(data_array[1]);
- 569              		.loc 1 271 0
- 570 0014 1B4B     		ldr	r3, .L83+4
- 571 0016 5B88     		ldrh	r3, [r3, #2]
- 572 0018 181C     		mov	r0, r3
- 573 001a FFF7FEFF 		bl	PWM_1_WriteCompare1
- 272:.\main.c      ****             old = data_array[1];
- 574              		.loc 1 272 0
- 575 001e BB1D     		add	r3, r7, #6
- 576 0020 184A     		ldr	r2, .L83+4
- 577 0022 5288     		ldrh	r2, [r2, #2]
- 578 0024 1A80     		strh	r2, [r3]
+ 539              		.cfi_def_cfa_register 7
+ 260:.\main.c      ****     //compile all of the most recent feedback variables into a packet
+ 261:.\main.c      ****     //necessary feedback variables: system state, dynamixel read write errors, PID errors
+ 262:.\main.c      ****     //TODO define system state
+ 263:.\main.c      ****     //send packet via serial to wiznet
+ 264:.\main.c      **** }
+ 540              		.loc 1 264 0
+ 541 0004 BD46     		mov	sp, r7
+ 542              		@ sp needed
+ 543 0006 80BD     		pop	{r7, pc}
+ 544              		.cfi_endproc
+ 545              	.LFE40:
+ 546              		.size	send_feedback, .-send_feedback
+ 547              		.comm	led_state,1,1
+ 548              		.section	.text.led,"ax",%progbits
+ 549              		.align	2
+ 550              		.global	led
+ 551              		.code	16
+ 552              		.thumb_func
+ 553              		.type	led, %function
+ 554              	led:
+ 555              	.LFB41:
+ 265:.\main.c      **** 
+ 266:.\main.c      **** enum led_states {l_start,l_different,l_wait} led_state;
+ 267:.\main.c      **** void led()
+ 268:.\main.c      **** {
+ 556              		.loc 1 268 0
+ 557              		.cfi_startproc
+ 558 0000 80B5     		push	{r7, lr}
+ 559              		.cfi_def_cfa_offset 8
+ 560              		.cfi_offset 7, -8
+ 561              		.cfi_offset 14, -4
+ 562 0002 82B0     		sub	sp, sp, #8
+ 563              		.cfi_def_cfa_offset 16
+ 564 0004 00AF     		add	r7, sp, #0
+ 565              		.cfi_def_cfa_register 7
+ 269:.\main.c      ****     uint16 old = 0;
+ 566              		.loc 1 269 0
+ 567 0006 BB1D     		add	r3, r7, #6
+ 568 0008 0022     		mov	r2, #0
+ 569 000a 1A80     		strh	r2, [r3]
+ 270:.\main.c      ****     switch(led_state)
+ 570              		.loc 1 270 0
+ 571 000c 1C4B     		ldr	r3, .L83
+ 572 000e 1B78     		ldrb	r3, [r3]
+ 573 0010 012B     		cmp	r3, #1
+ 574 0012 09D1     		bne	.L82
+ 271:.\main.c      ****     {
+ 272:.\main.c      ****         case l_start:
  273:.\main.c      ****             break;
- 579              		.loc 1 273 0
- 580 0026 00E0     		b	.L70
- 581              	.L82:
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccl4ljik.s 			page 16
+ 274:.\main.c      ****         
+ 275:.\main.c      ****         case l_different:
+ 276:.\main.c      ****             PWM_1_WriteCompare1(data_array[1]);
+ 575              		.loc 1 276 0
+ 576 0014 1B4B     		ldr	r3, .L83+4
+ 577 0016 5B88     		ldrh	r3, [r3, #2]
+ 578 0018 181C     		mov	r0, r3
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccH3w0kW.s 			page 16
 
 
- 274:.\main.c      ****             
- 275:.\main.c      ****         case l_wait:
- 276:.\main.c      ****             break;
- 582              		.loc 1 276 0
- 583 0028 C046     		mov	r8, r8
- 584              	.L70:
- 277:.\main.c      ****     }
- 278:.\main.c      ****     
- 279:.\main.c      ****     switch(led_state){
- 585              		.loc 1 279 0
- 586 002a 154B     		ldr	r3, .L83
- 587 002c 1B78     		ldrb	r3, [r3]
- 588 002e 012B     		cmp	r3, #1
- 589 0030 07D0     		beq	.L75
- 590 0032 022B     		cmp	r3, #2
- 591 0034 13D0     		beq	.L76
- 592 0036 002B     		cmp	r3, #0
- 593 0038 1FD1     		bne	.L69
- 280:.\main.c      ****         case l_start:
- 281:.\main.c      ****             led_state = l_wait;
- 594              		.loc 1 281 0
- 595 003a 114B     		ldr	r3, .L83
- 596 003c 0222     		mov	r2, #2
- 597 003e 1A70     		strb	r2, [r3]
- 282:.\main.c      ****             break;
- 598              		.loc 1 282 0
- 599 0040 1BE0     		b	.L69
- 600              	.L75:
- 283:.\main.c      ****         
- 284:.\main.c      ****         case l_different:
- 285:.\main.c      ****             if(data_array[1] != old)
- 601              		.loc 1 285 0
- 602 0042 104B     		ldr	r3, .L83+4
- 603 0044 5B88     		ldrh	r3, [r3, #2]
- 604 0046 BA1D     		add	r2, r7, #6
- 605 0048 1288     		ldrh	r2, [r2]
- 606 004a 9A42     		cmp	r2, r3
- 607 004c 03D0     		beq	.L78
- 286:.\main.c      ****             {
- 287:.\main.c      ****                 led_state = l_different;
- 608              		.loc 1 287 0
- 609 004e 0C4B     		ldr	r3, .L83
- 610 0050 0122     		mov	r2, #1
- 611 0052 1A70     		strb	r2, [r3]
- 288:.\main.c      ****             }
- 289:.\main.c      ****             else
- 290:.\main.c      ****             {
- 291:.\main.c      ****                 led_state = l_wait;
- 292:.\main.c      ****             }
- 293:.\main.c      ****             break;
- 612              		.loc 1 293 0
- 613 0054 11E0     		b	.L69
- 614              	.L78:
- 291:.\main.c      ****                 led_state = l_wait;
- 615              		.loc 1 291 0
- 616 0056 0A4B     		ldr	r3, .L83
- 617 0058 0222     		mov	r2, #2
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccl4ljik.s 			page 17
+ 579 001a FFF7FEFF 		bl	PWM_1_WriteCompare1
+ 277:.\main.c      ****             old = data_array[1];
+ 580              		.loc 1 277 0
+ 581 001e BB1D     		add	r3, r7, #6
+ 582 0020 184A     		ldr	r2, .L83+4
+ 583 0022 5288     		ldrh	r2, [r2, #2]
+ 584 0024 1A80     		strh	r2, [r3]
+ 278:.\main.c      ****             break;
+ 585              		.loc 1 278 0
+ 586 0026 00E0     		b	.L70
+ 587              	.L82:
+ 279:.\main.c      ****             
+ 280:.\main.c      ****         case l_wait:
+ 281:.\main.c      ****             break;
+ 588              		.loc 1 281 0
+ 589 0028 C046     		mov	r8, r8
+ 590              	.L70:
+ 282:.\main.c      ****     }
+ 283:.\main.c      ****     
+ 284:.\main.c      ****     switch(led_state)
+ 591              		.loc 1 284 0
+ 592 002a 154B     		ldr	r3, .L83
+ 593 002c 1B78     		ldrb	r3, [r3]
+ 594 002e 012B     		cmp	r3, #1
+ 595 0030 07D0     		beq	.L75
+ 596 0032 022B     		cmp	r3, #2
+ 597 0034 13D0     		beq	.L76
+ 598 0036 002B     		cmp	r3, #0
+ 599 0038 1FD1     		bne	.L69
+ 285:.\main.c      ****     {
+ 286:.\main.c      ****         case l_start:
+ 287:.\main.c      ****             led_state = l_wait;
+ 600              		.loc 1 287 0
+ 601 003a 114B     		ldr	r3, .L83
+ 602 003c 0222     		mov	r2, #2
+ 603 003e 1A70     		strb	r2, [r3]
+ 288:.\main.c      ****             break;
+ 604              		.loc 1 288 0
+ 605 0040 1BE0     		b	.L69
+ 606              	.L75:
+ 289:.\main.c      ****         
+ 290:.\main.c      ****         case l_different:
+ 291:.\main.c      ****             if(data_array[1] != old)
+ 607              		.loc 1 291 0
+ 608 0042 104B     		ldr	r3, .L83+4
+ 609 0044 5B88     		ldrh	r3, [r3, #2]
+ 610 0046 BA1D     		add	r2, r7, #6
+ 611 0048 1288     		ldrh	r2, [r2]
+ 612 004a 9A42     		cmp	r2, r3
+ 613 004c 03D0     		beq	.L78
+ 292:.\main.c      ****             {
+ 293:.\main.c      ****                 led_state = l_different;
+ 614              		.loc 1 293 0
+ 615 004e 0C4B     		ldr	r3, .L83
+ 616 0050 0122     		mov	r2, #1
+ 617 0052 1A70     		strb	r2, [r3]
+ 294:.\main.c      ****             }
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccH3w0kW.s 			page 17
 
 
- 618 005a 1A70     		strb	r2, [r3]
- 619              		.loc 1 293 0
- 620 005c 0DE0     		b	.L69
- 621              	.L76:
- 294:.\main.c      ****             
- 295:.\main.c      ****         case l_wait:
- 296:.\main.c      ****             if(data_array[1] != old)
- 622              		.loc 1 296 0
- 623 005e 094B     		ldr	r3, .L83+4
- 624 0060 5B88     		ldrh	r3, [r3, #2]
- 625 0062 BA1D     		add	r2, r7, #6
- 626 0064 1288     		ldrh	r2, [r2]
- 627 0066 9A42     		cmp	r2, r3
- 628 0068 03D0     		beq	.L80
- 297:.\main.c      ****             {
- 298:.\main.c      ****                 led_state = l_different;
- 629              		.loc 1 298 0
- 630 006a 054B     		ldr	r3, .L83
- 631 006c 0122     		mov	r2, #1
- 632 006e 1A70     		strb	r2, [r3]
- 633 0070 02E0     		b	.L81
- 634              	.L80:
- 299:.\main.c      ****             }
- 300:.\main.c      ****             else
- 301:.\main.c      ****             {
- 302:.\main.c      ****                 led_state = l_wait;
- 635              		.loc 1 302 0
- 636 0072 034B     		ldr	r3, .L83
- 637 0074 0222     		mov	r2, #2
- 638 0076 1A70     		strb	r2, [r3]
- 639              	.L81:
- 303:.\main.c      ****             }
- 304:.\main.c      ****             break;
- 640              		.loc 1 304 0
- 641 0078 C046     		mov	r8, r8
- 642              	.L69:
- 305:.\main.c      ****     }
- 306:.\main.c      **** }
- 643              		.loc 1 306 0
- 644 007a BD46     		mov	sp, r7
- 645 007c 02B0     		add	sp, sp, #8
- 646              		@ sp needed
- 647 007e 80BD     		pop	{r7, pc}
- 648              	.L84:
- 649              		.align	2
- 650              	.L83:
- 651 0080 00000000 		.word	led_state
- 652 0084 00000000 		.word	data_array
- 653              		.cfi_endproc
- 654              	.LFE41:
- 655              		.size	led, .-led
- 656              		.section	.text.servo,"ax",%progbits
- 657              		.align	2
- 658              		.global	servo
- 659              		.code	16
- 660              		.thumb_func
- 661              		.type	servo, %function
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccl4ljik.s 			page 18
+ 295:.\main.c      ****             else
+ 296:.\main.c      ****             {
+ 297:.\main.c      ****                 led_state = l_wait;
+ 298:.\main.c      ****             }
+ 299:.\main.c      ****             break;
+ 618              		.loc 1 299 0
+ 619 0054 11E0     		b	.L69
+ 620              	.L78:
+ 297:.\main.c      ****                 led_state = l_wait;
+ 621              		.loc 1 297 0
+ 622 0056 0A4B     		ldr	r3, .L83
+ 623 0058 0222     		mov	r2, #2
+ 624 005a 1A70     		strb	r2, [r3]
+ 625              		.loc 1 299 0
+ 626 005c 0DE0     		b	.L69
+ 627              	.L76:
+ 300:.\main.c      ****             
+ 301:.\main.c      ****         case l_wait:
+ 302:.\main.c      ****             if(data_array[1] != old)
+ 628              		.loc 1 302 0
+ 629 005e 094B     		ldr	r3, .L83+4
+ 630 0060 5B88     		ldrh	r3, [r3, #2]
+ 631 0062 BA1D     		add	r2, r7, #6
+ 632 0064 1288     		ldrh	r2, [r2]
+ 633 0066 9A42     		cmp	r2, r3
+ 634 0068 03D0     		beq	.L80
+ 303:.\main.c      ****             {
+ 304:.\main.c      ****                 led_state = l_different;
+ 635              		.loc 1 304 0
+ 636 006a 054B     		ldr	r3, .L83
+ 637 006c 0122     		mov	r2, #1
+ 638 006e 1A70     		strb	r2, [r3]
+ 639 0070 02E0     		b	.L81
+ 640              	.L80:
+ 305:.\main.c      ****             }
+ 306:.\main.c      ****             else
+ 307:.\main.c      ****             {
+ 308:.\main.c      ****                 led_state = l_wait;
+ 641              		.loc 1 308 0
+ 642 0072 034B     		ldr	r3, .L83
+ 643 0074 0222     		mov	r2, #2
+ 644 0076 1A70     		strb	r2, [r3]
+ 645              	.L81:
+ 309:.\main.c      ****             }
+ 310:.\main.c      ****             break;
+ 646              		.loc 1 310 0
+ 647 0078 C046     		mov	r8, r8
+ 648              	.L69:
+ 311:.\main.c      ****     }
+ 312:.\main.c      **** }
+ 649              		.loc 1 312 0
+ 650 007a BD46     		mov	sp, r7
+ 651 007c 02B0     		add	sp, sp, #8
+ 652              		@ sp needed
+ 653 007e 80BD     		pop	{r7, pc}
+ 654              	.L84:
+ 655              		.align	2
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccH3w0kW.s 			page 18
 
 
- 662              	servo:
- 663              	.LFB42:
- 307:.\main.c      **** void servo(){
- 664              		.loc 1 307 0
- 665              		.cfi_startproc
- 666 0000 80B5     		push	{r7, lr}
- 667              		.cfi_def_cfa_offset 8
- 668              		.cfi_offset 7, -8
- 669              		.cfi_offset 14, -4
- 670 0002 82B0     		sub	sp, sp, #8
- 671              		.cfi_def_cfa_offset 16
- 672 0004 00AF     		add	r7, sp, #0
- 673              		.cfi_def_cfa_register 7
- 308:.\main.c      ****     uint16 old = 0;
- 674              		.loc 1 308 0
- 675 0006 BB1D     		add	r3, r7, #6
- 676 0008 0022     		mov	r2, #0
- 677 000a 1A80     		strh	r2, [r3]
- 309:.\main.c      ****     switch(servo_state){
- 678              		.loc 1 309 0
- 679 000c 1C4B     		ldr	r3, .L99
- 680 000e 1B78     		ldrb	r3, [r3]
- 681 0010 012B     		cmp	r3, #1
- 682 0012 09D1     		bne	.L98
- 310:.\main.c      ****         case s_start:
- 311:.\main.c      ****             break;
- 312:.\main.c      ****         
- 313:.\main.c      ****         case s_different:
- 314:.\main.c      ****             PWM_1_WriteCompare2(data_array[2]);
- 683              		.loc 1 314 0
- 684 0014 1B4B     		ldr	r3, .L99+4
- 685 0016 9B88     		ldrh	r3, [r3, #4]
- 686 0018 181C     		mov	r0, r3
- 687 001a FFF7FEFF 		bl	PWM_1_WriteCompare2
- 315:.\main.c      ****             old = data_array[2];
- 688              		.loc 1 315 0
- 689 001e BB1D     		add	r3, r7, #6
- 690 0020 184A     		ldr	r2, .L99+4
- 691 0022 9288     		ldrh	r2, [r2, #4]
- 692 0024 1A80     		strh	r2, [r3]
- 316:.\main.c      ****             break;
- 693              		.loc 1 316 0
- 694 0026 00E0     		b	.L86
- 695              	.L98:
- 317:.\main.c      ****             
- 318:.\main.c      ****         case s_wait:
- 319:.\main.c      ****             break;
- 696              		.loc 1 319 0
- 697 0028 C046     		mov	r8, r8
- 698              	.L86:
- 320:.\main.c      ****     }
- 321:.\main.c      ****     
- 322:.\main.c      ****     switch(servo_state){
- 699              		.loc 1 322 0
- 700 002a 154B     		ldr	r3, .L99
- 701 002c 1B78     		ldrb	r3, [r3]
- 702 002e 012B     		cmp	r3, #1
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccl4ljik.s 			page 19
+ 656              	.L83:
+ 657 0080 00000000 		.word	led_state
+ 658 0084 00000000 		.word	data_array
+ 659              		.cfi_endproc
+ 660              	.LFE41:
+ 661              		.size	led, .-led
+ 662              		.comm	servo_state,1,1
+ 663              		.section	.text.servo,"ax",%progbits
+ 664              		.align	2
+ 665              		.global	servo
+ 666              		.code	16
+ 667              		.thumb_func
+ 668              		.type	servo, %function
+ 669              	servo:
+ 670              	.LFB42:
+ 313:.\main.c      **** 
+ 314:.\main.c      **** //Average function to be used in smoothing our input
+ 315:.\main.c      **** //uint16 average(uint16* array, uint8 num_items)
+ 316:.\main.c      **** //{
+ 317:.\main.c      **** //    uint32 sum = 0;
+ 318:.\main.c      **** //    uint16 avg = 0;
+ 319:.\main.c      **** //    
+ 320:.\main.c      **** //    for(uint8 i = 0; i < num_items; i++)
+ 321:.\main.c      **** //    {
+ 322:.\main.c      **** //        sum += array[i];
+ 323:.\main.c      **** //    }
+ 324:.\main.c      **** //    
+ 325:.\main.c      **** //    avg = sum/num_items;
+ 326:.\main.c      **** //    
+ 327:.\main.c      **** //    return avg;
+ 328:.\main.c      **** //}
+ 329:.\main.c      **** 
+ 330:.\main.c      **** enum servo_states {s_start,s_different,s_wait} servo_state;
+ 331:.\main.c      **** void servo()
+ 332:.\main.c      **** {
+ 671              		.loc 1 332 0
+ 672              		.cfi_startproc
+ 673 0000 80B5     		push	{r7, lr}
+ 674              		.cfi_def_cfa_offset 8
+ 675              		.cfi_offset 7, -8
+ 676              		.cfi_offset 14, -4
+ 677 0002 82B0     		sub	sp, sp, #8
+ 678              		.cfi_def_cfa_offset 16
+ 679 0004 00AF     		add	r7, sp, #0
+ 680              		.cfi_def_cfa_register 7
+ 333:.\main.c      ****     uint16 old = 0;
+ 681              		.loc 1 333 0
+ 682 0006 BB1D     		add	r3, r7, #6
+ 683 0008 0022     		mov	r2, #0
+ 684 000a 1A80     		strh	r2, [r3]
+ 334:.\main.c      ****     switch(servo_state){
+ 685              		.loc 1 334 0
+ 686 000c 1C4B     		ldr	r3, .L99
+ 687 000e 1B78     		ldrb	r3, [r3]
+ 688 0010 012B     		cmp	r3, #1
+ 689 0012 09D1     		bne	.L98
+ 335:.\main.c      ****         case s_start:
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccH3w0kW.s 			page 19
 
 
- 703 0030 07D0     		beq	.L91
- 704 0032 022B     		cmp	r3, #2
- 705 0034 13D0     		beq	.L92
- 706 0036 002B     		cmp	r3, #0
- 707 0038 1FD1     		bne	.L85
- 323:.\main.c      ****         case s_start:
- 324:.\main.c      ****             servo_state = s_wait;
- 708              		.loc 1 324 0
- 709 003a 114B     		ldr	r3, .L99
- 710 003c 0222     		mov	r2, #2
- 711 003e 1A70     		strb	r2, [r3]
- 325:.\main.c      ****             break;
- 712              		.loc 1 325 0
- 713 0040 1BE0     		b	.L85
- 714              	.L91:
- 326:.\main.c      ****         
- 327:.\main.c      ****         case s_different:
- 328:.\main.c      ****             if(data_array[2] != old)
- 715              		.loc 1 328 0
- 716 0042 104B     		ldr	r3, .L99+4
- 717 0044 9B88     		ldrh	r3, [r3, #4]
- 718 0046 BA1D     		add	r2, r7, #6
- 719 0048 1288     		ldrh	r2, [r2]
- 720 004a 9A42     		cmp	r2, r3
- 721 004c 03D0     		beq	.L94
- 329:.\main.c      ****             {
- 330:.\main.c      ****                 servo_state = s_different;
- 722              		.loc 1 330 0
- 723 004e 0C4B     		ldr	r3, .L99
- 724 0050 0122     		mov	r2, #1
- 725 0052 1A70     		strb	r2, [r3]
- 331:.\main.c      ****             }
- 332:.\main.c      ****             else
- 333:.\main.c      ****             {
- 334:.\main.c      ****                 servo_state = s_wait;
- 335:.\main.c      ****             }
  336:.\main.c      ****             break;
- 726              		.loc 1 336 0
- 727 0054 11E0     		b	.L85
- 728              	.L94:
- 334:.\main.c      ****                 servo_state = s_wait;
- 729              		.loc 1 334 0
- 730 0056 0A4B     		ldr	r3, .L99
- 731 0058 0222     		mov	r2, #2
- 732 005a 1A70     		strb	r2, [r3]
- 733              		.loc 1 336 0
- 734 005c 0DE0     		b	.L85
- 735              	.L92:
- 337:.\main.c      ****             
- 338:.\main.c      ****         case s_wait:
- 339:.\main.c      ****             if(data_array[2] != old)
- 736              		.loc 1 339 0
- 737 005e 094B     		ldr	r3, .L99+4
- 738 0060 9B88     		ldrh	r3, [r3, #4]
- 739 0062 BA1D     		add	r2, r7, #6
- 740 0064 1288     		ldrh	r2, [r2]
- 741 0066 9A42     		cmp	r2, r3
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccl4ljik.s 			page 20
+ 337:.\main.c      ****         
+ 338:.\main.c      ****         case s_different:
+ 339:.\main.c      ****             PWM_1_WriteCompare2(data_array[2]);
+ 690              		.loc 1 339 0
+ 691 0014 1B4B     		ldr	r3, .L99+4
+ 692 0016 9B88     		ldrh	r3, [r3, #4]
+ 693 0018 181C     		mov	r0, r3
+ 694 001a FFF7FEFF 		bl	PWM_1_WriteCompare2
+ 340:.\main.c      ****             old = data_array[2];
+ 695              		.loc 1 340 0
+ 696 001e BB1D     		add	r3, r7, #6
+ 697 0020 184A     		ldr	r2, .L99+4
+ 698 0022 9288     		ldrh	r2, [r2, #4]
+ 699 0024 1A80     		strh	r2, [r3]
+ 341:.\main.c      ****             break;
+ 700              		.loc 1 341 0
+ 701 0026 00E0     		b	.L86
+ 702              	.L98:
+ 342:.\main.c      ****             
+ 343:.\main.c      ****         case s_wait:
+ 344:.\main.c      ****             break;
+ 703              		.loc 1 344 0
+ 704 0028 C046     		mov	r8, r8
+ 705              	.L86:
+ 345:.\main.c      ****     }
+ 346:.\main.c      ****     
+ 347:.\main.c      ****     switch(servo_state){
+ 706              		.loc 1 347 0
+ 707 002a 154B     		ldr	r3, .L99
+ 708 002c 1B78     		ldrb	r3, [r3]
+ 709 002e 012B     		cmp	r3, #1
+ 710 0030 07D0     		beq	.L91
+ 711 0032 022B     		cmp	r3, #2
+ 712 0034 13D0     		beq	.L92
+ 713 0036 002B     		cmp	r3, #0
+ 714 0038 1FD1     		bne	.L85
+ 348:.\main.c      ****         case s_start:
+ 349:.\main.c      ****             servo_state = s_wait;
+ 715              		.loc 1 349 0
+ 716 003a 114B     		ldr	r3, .L99
+ 717 003c 0222     		mov	r2, #2
+ 718 003e 1A70     		strb	r2, [r3]
+ 350:.\main.c      ****             break;
+ 719              		.loc 1 350 0
+ 720 0040 1BE0     		b	.L85
+ 721              	.L91:
+ 351:.\main.c      ****         
+ 352:.\main.c      ****         case s_different:
+ 353:.\main.c      ****             if(data_array[2] != old)
+ 722              		.loc 1 353 0
+ 723 0042 104B     		ldr	r3, .L99+4
+ 724 0044 9B88     		ldrh	r3, [r3, #4]
+ 725 0046 BA1D     		add	r2, r7, #6
+ 726 0048 1288     		ldrh	r2, [r2]
+ 727 004a 9A42     		cmp	r2, r3
+ 728 004c 03D0     		beq	.L94
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccH3w0kW.s 			page 20
 
 
- 742 0068 03D0     		beq	.L96
- 340:.\main.c      ****             {
- 341:.\main.c      ****                 servo_state = s_different;
- 743              		.loc 1 341 0
- 744 006a 054B     		ldr	r3, .L99
- 745 006c 0122     		mov	r2, #1
- 746 006e 1A70     		strb	r2, [r3]
- 747 0070 02E0     		b	.L97
- 748              	.L96:
- 342:.\main.c      ****             }
- 343:.\main.c      ****             else
- 344:.\main.c      ****             {
- 345:.\main.c      ****                 servo_state = s_wait;
- 749              		.loc 1 345 0
- 750 0072 034B     		ldr	r3, .L99
- 751 0074 0222     		mov	r2, #2
- 752 0076 1A70     		strb	r2, [r3]
- 753              	.L97:
- 346:.\main.c      ****             }
- 347:.\main.c      ****             break;
- 754              		.loc 1 347 0
- 755 0078 C046     		mov	r8, r8
- 756              	.L85:
- 348:.\main.c      ****     }    
- 349:.\main.c      **** }
- 757              		.loc 1 349 0
- 758 007a BD46     		mov	sp, r7
- 759 007c 02B0     		add	sp, sp, #8
- 760              		@ sp needed
- 761 007e 80BD     		pop	{r7, pc}
- 762              	.L100:
- 763              		.align	2
- 764              	.L99:
- 765 0080 00000000 		.word	servo_state
- 766 0084 00000000 		.word	data_array
- 767              		.cfi_endproc
- 768              	.LFE42:
- 769              		.size	servo, .-servo
- 770              		.comm	motor_state,1,1
- 771              		.section	.text.motor,"ax",%progbits
- 772              		.align	2
- 773              		.global	motor
- 774              		.code	16
- 775              		.thumb_func
- 776              		.type	motor, %function
- 777              	motor:
- 778              	.LFB43:
- 350:.\main.c      **** enum motor_states {m_start,m_different,m_wait} motor_state;
- 351:.\main.c      **** void motor(){
- 779              		.loc 1 351 0
- 780              		.cfi_startproc
- 781 0000 80B5     		push	{r7, lr}
- 782              		.cfi_def_cfa_offset 8
- 783              		.cfi_offset 7, -8
- 784              		.cfi_offset 14, -4
- 785 0002 82B0     		sub	sp, sp, #8
- 786              		.cfi_def_cfa_offset 16
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccl4ljik.s 			page 21
+ 354:.\main.c      ****             {
+ 355:.\main.c      ****                 servo_state = s_different;
+ 729              		.loc 1 355 0
+ 730 004e 0C4B     		ldr	r3, .L99
+ 731 0050 0122     		mov	r2, #1
+ 732 0052 1A70     		strb	r2, [r3]
+ 356:.\main.c      ****             }
+ 357:.\main.c      ****             else
+ 358:.\main.c      ****             {
+ 359:.\main.c      ****                 servo_state = s_wait;
+ 360:.\main.c      ****             }
+ 361:.\main.c      ****             break;
+ 733              		.loc 1 361 0
+ 734 0054 11E0     		b	.L85
+ 735              	.L94:
+ 359:.\main.c      ****                 servo_state = s_wait;
+ 736              		.loc 1 359 0
+ 737 0056 0A4B     		ldr	r3, .L99
+ 738 0058 0222     		mov	r2, #2
+ 739 005a 1A70     		strb	r2, [r3]
+ 740              		.loc 1 361 0
+ 741 005c 0DE0     		b	.L85
+ 742              	.L92:
+ 362:.\main.c      ****             
+ 363:.\main.c      ****         case s_wait:
+ 364:.\main.c      ****             if(data_array[2] != old)
+ 743              		.loc 1 364 0
+ 744 005e 094B     		ldr	r3, .L99+4
+ 745 0060 9B88     		ldrh	r3, [r3, #4]
+ 746 0062 BA1D     		add	r2, r7, #6
+ 747 0064 1288     		ldrh	r2, [r2]
+ 748 0066 9A42     		cmp	r2, r3
+ 749 0068 03D0     		beq	.L96
+ 365:.\main.c      ****             {
+ 366:.\main.c      ****                 servo_state = s_different;
+ 750              		.loc 1 366 0
+ 751 006a 054B     		ldr	r3, .L99
+ 752 006c 0122     		mov	r2, #1
+ 753 006e 1A70     		strb	r2, [r3]
+ 754 0070 02E0     		b	.L97
+ 755              	.L96:
+ 367:.\main.c      ****             }
+ 368:.\main.c      ****             else
+ 369:.\main.c      ****             {
+ 370:.\main.c      ****                 servo_state = s_wait;
+ 756              		.loc 1 370 0
+ 757 0072 034B     		ldr	r3, .L99
+ 758 0074 0222     		mov	r2, #2
+ 759 0076 1A70     		strb	r2, [r3]
+ 760              	.L97:
+ 371:.\main.c      ****             }
+ 372:.\main.c      ****             break;
+ 761              		.loc 1 372 0
+ 762 0078 C046     		mov	r8, r8
+ 763              	.L85:
+ 373:.\main.c      ****     }    
+ 374:.\main.c      **** }
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccH3w0kW.s 			page 21
 
 
- 787 0004 00AF     		add	r7, sp, #0
- 788              		.cfi_def_cfa_register 7
- 352:.\main.c      ****     uint16 old = 0;
- 789              		.loc 1 352 0
- 790 0006 BB1D     		add	r3, r7, #6
- 791 0008 0022     		mov	r2, #0
- 792 000a 1A80     		strh	r2, [r3]
- 353:.\main.c      ****     switch(motor_state){
- 793              		.loc 1 353 0
- 794 000c 1D4B     		ldr	r3, .L115
- 795 000e 1B78     		ldrb	r3, [r3]
- 796 0010 012B     		cmp	r3, #1
- 797 0012 0AD1     		bne	.L114
- 354:.\main.c      ****         case m_start:
- 355:.\main.c      ****             break;
- 356:.\main.c      ****         
- 357:.\main.c      ****         case m_different:
- 358:.\main.c      ****             PWM_2_WriteCompare1(data_array[1]);
- 798              		.loc 1 358 0
- 799 0014 1C4B     		ldr	r3, .L115+4
- 800 0016 5B88     		ldrh	r3, [r3, #2]
- 801 0018 DBB2     		uxtb	r3, r3
- 802 001a 181C     		mov	r0, r3
- 803 001c FFF7FEFF 		bl	PWM_2_WriteCompare1
- 359:.\main.c      ****             old = data_array[3];
- 804              		.loc 1 359 0
- 805 0020 BB1D     		add	r3, r7, #6
- 806 0022 194A     		ldr	r2, .L115+4
- 807 0024 D288     		ldrh	r2, [r2, #6]
- 808 0026 1A80     		strh	r2, [r3]
- 360:.\main.c      ****             break;
- 809              		.loc 1 360 0
- 810 0028 00E0     		b	.L102
- 811              	.L114:
- 361:.\main.c      ****             
- 362:.\main.c      ****         case m_wait:
- 363:.\main.c      ****             break;
- 812              		.loc 1 363 0
- 813 002a C046     		mov	r8, r8
- 814              	.L102:
- 364:.\main.c      ****     }
- 365:.\main.c      ****     
- 366:.\main.c      ****     switch(motor_state){
- 815              		.loc 1 366 0
- 816 002c 154B     		ldr	r3, .L115
- 817 002e 1B78     		ldrb	r3, [r3]
- 818 0030 012B     		cmp	r3, #1
- 819 0032 07D0     		beq	.L107
- 820 0034 022B     		cmp	r3, #2
- 821 0036 13D0     		beq	.L108
- 822 0038 002B     		cmp	r3, #0
- 823 003a 1FD1     		bne	.L101
- 367:.\main.c      ****         case m_start:
- 368:.\main.c      ****             motor_state = m_wait;
- 824              		.loc 1 368 0
- 825 003c 114B     		ldr	r3, .L115
- 826 003e 0222     		mov	r2, #2
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccl4ljik.s 			page 22
+ 764              		.loc 1 374 0
+ 765 007a BD46     		mov	sp, r7
+ 766 007c 02B0     		add	sp, sp, #8
+ 767              		@ sp needed
+ 768 007e 80BD     		pop	{r7, pc}
+ 769              	.L100:
+ 770              		.align	2
+ 771              	.L99:
+ 772 0080 00000000 		.word	servo_state
+ 773 0084 00000000 		.word	data_array
+ 774              		.cfi_endproc
+ 775              	.LFE42:
+ 776              		.size	servo, .-servo
+ 777              		.comm	motor_state,1,1
+ 778              		.section	.text.motor,"ax",%progbits
+ 779              		.align	2
+ 780              		.global	motor
+ 781              		.code	16
+ 782              		.thumb_func
+ 783              		.type	motor, %function
+ 784              	motor:
+ 785              	.LFB43:
+ 375:.\main.c      **** 
+ 376:.\main.c      **** //New servo design
+ 377:.\main.c      **** //enum servo_states {s_start,s_pressed,s_wait} servo_state;
+ 378:.\main.c      **** //void servo()
+ 379:.\main.c      **** //{
+ 380:.\main.c      **** //    switch(servo_state){ //actions
+ 381:.\main.c      **** //        case s_start:
+ 382:.\main.c      **** //            break;
+ 383:.\main.c      **** //        
+ 384:.\main.c      **** //        case s_pressed:
+ 385:.\main.c      **** //            servo_array[serv_avg_count] = data_array[2];
+ 386:.\main.c      **** //            PWM_1_WriteCompare2(average(servo_array, 20));
+ 387:.\main.c      **** //            break;
+ 388:.\main.c      **** //            
+ 389:.\main.c      **** //        case s_wait:
+ 390:.\main.c      **** //            break;
+ 391:.\main.c      **** //    }
+ 392:.\main.c      **** //    
+ 393:.\main.c      **** //    switch(servo_state){ //transitions
+ 394:.\main.c      **** //        case s_start:
+ 395:.\main.c      **** //            servo_state = s_wait;
+ 396:.\main.c      **** //            break;
+ 397:.\main.c      **** //        
+ 398:.\main.c      **** //        case s_pressed:
+ 399:.\main.c      **** //            //TODO: Find Bool for whether or not a key is being pressed
+ 400:.\main.c      **** //            break;
+ 401:.\main.c      **** //            
+ 402:.\main.c      **** //        case s_wait:
+ 403:.\main.c      **** //            //TODO: Find Bool for whether or not a key is being pressed
+ 404:.\main.c      **** //            break;
+ 405:.\main.c      **** //    }    
+ 406:.\main.c      **** //}
+ 407:.\main.c      **** 
+ 408:.\main.c      **** enum motor_states {m_start,m_different,m_wait} motor_state;
+ 409:.\main.c      **** void motor(){
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccH3w0kW.s 			page 22
 
 
- 827 0040 1A70     		strb	r2, [r3]
- 369:.\main.c      ****             break;
- 828              		.loc 1 369 0
- 829 0042 1BE0     		b	.L101
- 830              	.L107:
- 370:.\main.c      ****         
- 371:.\main.c      ****         case m_different:
- 372:.\main.c      ****             if(data_array[3] != old)
- 831              		.loc 1 372 0
- 832 0044 104B     		ldr	r3, .L115+4
- 833 0046 DB88     		ldrh	r3, [r3, #6]
- 834 0048 BA1D     		add	r2, r7, #6
- 835 004a 1288     		ldrh	r2, [r2]
- 836 004c 9A42     		cmp	r2, r3
- 837 004e 03D0     		beq	.L110
- 373:.\main.c      ****             {
- 374:.\main.c      ****                 motor_state = m_different;
- 838              		.loc 1 374 0
- 839 0050 0C4B     		ldr	r3, .L115
- 840 0052 0122     		mov	r2, #1
- 841 0054 1A70     		strb	r2, [r3]
- 375:.\main.c      ****             }
- 376:.\main.c      ****             else
- 377:.\main.c      ****             {
- 378:.\main.c      ****                 motor_state = m_wait;
- 379:.\main.c      ****             }
- 380:.\main.c      ****             break;
- 842              		.loc 1 380 0
- 843 0056 11E0     		b	.L101
- 844              	.L110:
- 378:.\main.c      ****                 motor_state = m_wait;
- 845              		.loc 1 378 0
- 846 0058 0A4B     		ldr	r3, .L115
- 847 005a 0222     		mov	r2, #2
- 848 005c 1A70     		strb	r2, [r3]
- 849              		.loc 1 380 0
- 850 005e 0DE0     		b	.L101
- 851              	.L108:
- 381:.\main.c      ****             
- 382:.\main.c      ****         case m_wait:
- 383:.\main.c      ****             if(data_array[3] != old)
- 852              		.loc 1 383 0
- 853 0060 094B     		ldr	r3, .L115+4
- 854 0062 DB88     		ldrh	r3, [r3, #6]
- 855 0064 BA1D     		add	r2, r7, #6
- 856 0066 1288     		ldrh	r2, [r2]
- 857 0068 9A42     		cmp	r2, r3
- 858 006a 03D0     		beq	.L112
- 384:.\main.c      ****             {
- 385:.\main.c      ****                 motor_state = m_different;
- 859              		.loc 1 385 0
- 860 006c 054B     		ldr	r3, .L115
- 861 006e 0122     		mov	r2, #1
- 862 0070 1A70     		strb	r2, [r3]
- 863 0072 02E0     		b	.L113
- 864              	.L112:
- 386:.\main.c      ****             }
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccl4ljik.s 			page 23
-
-
- 387:.\main.c      ****             else
- 388:.\main.c      ****             {
- 389:.\main.c      ****                 motor_state = m_wait;
- 865              		.loc 1 389 0
- 866 0074 034B     		ldr	r3, .L115
- 867 0076 0222     		mov	r2, #2
- 868 0078 1A70     		strb	r2, [r3]
- 869              	.L113:
- 390:.\main.c      ****             }
- 391:.\main.c      ****             break;
- 870              		.loc 1 391 0
- 871 007a C046     		mov	r8, r8
- 872              	.L101:
- 392:.\main.c      ****     }
- 393:.\main.c      **** }
- 873              		.loc 1 393 0
- 874 007c BD46     		mov	sp, r7
- 875 007e 02B0     		add	sp, sp, #8
- 876              		@ sp needed
- 877 0080 80BD     		pop	{r7, pc}
- 878              	.L116:
- 879 0082 C046     		.align	2
- 880              	.L115:
- 881 0084 00000000 		.word	motor_state
- 882 0088 00000000 		.word	data_array
- 883              		.cfi_endproc
- 884              	.LFE43:
- 885              		.size	motor, .-motor
- 886              		.section	.text.main,"ax",%progbits
- 887              		.align	2
- 888              		.global	main
- 889              		.code	16
- 890              		.thumb_func
- 891              		.type	main, %function
- 892              	main:
- 893              	.LFB44:
- 394:.\main.c      **** int main()
- 395:.\main.c      **** {
- 894              		.loc 1 395 0
- 895              		.cfi_startproc
- 896 0000 80B5     		push	{r7, lr}
- 897              		.cfi_def_cfa_offset 8
- 898              		.cfi_offset 7, -8
- 899              		.cfi_offset 14, -4
- 900 0002 00AF     		add	r7, sp, #0
- 901              		.cfi_def_cfa_register 7
- 396:.\main.c      ****     CyGlobalIntEnable;
- 902              		.loc 1 396 0
- 903              	@ 396 ".\main.c" 1
- 904 0004 62B6     		CPSIE   i
- 905              	@ 0 "" 2
- 397:.\main.c      ****     
- 398:.\main.c      ****     //start all of our components
- 399:.\main.c      ****     Clock_pwm_Start();
- 906              		.loc 1 399 0
- 907              		.code	16
- 908 0006 FFF7FEFF 		bl	Clock_pwm_Start
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccl4ljik.s 			page 24
-
-
- 400:.\main.c      ****     Clock_counter_Start();
- 909              		.loc 1 400 0
- 910 000a FFF7FEFF 		bl	Clock_counter_Start
- 401:.\main.c      ****     PWM_1_Start();
- 911              		.loc 1 401 0
- 912 000e FFF7FEFF 		bl	PWM_1_Start
- 402:.\main.c      ****     PWM_2_Start();
- 913              		.loc 1 402 0
- 914 0012 FFF7FEFF 		bl	PWM_2_Start
- 403:.\main.c      ****     Timer_1_Start();
- 915              		.loc 1 403 0
- 916 0016 FFF7FEFF 		bl	Timer_1_Start
- 404:.\main.c      ****     UART_1_Start();
- 917              		.loc 1 404 0
- 918 001a FFF7FEFF 		bl	UART_1_Start
- 405:.\main.c      ****     
- 406:.\main.c      ****     isr_1_StartEx(timer_isr);
- 919              		.loc 1 406 0
- 920 001e 094B     		ldr	r3, .L120
- 921 0020 181C     		mov	r0, r3
- 922 0022 FFF7FEFF 		bl	isr_1_StartEx
- 923              	.L119:
- 407:.\main.c      ****     
- 408:.\main.c      ****     
- 409:.\main.c      ****     for(;;)
- 410:.\main.c      ****     {
- 411:.\main.c      ****         //check addresses
- 412:.\main.c      ****         //TODO get the address bytes from Steve
- 413:.\main.c      ****         
+ 786              		.loc 1 409 0
+ 787              		.cfi_startproc
+ 788 0000 80B5     		push	{r7, lr}
+ 789              		.cfi_def_cfa_offset 8
+ 790              		.cfi_offset 7, -8
+ 791              		.cfi_offset 14, -4
+ 792 0002 82B0     		sub	sp, sp, #8
+ 793              		.cfi_def_cfa_offset 16
+ 794 0004 00AF     		add	r7, sp, #0
+ 795              		.cfi_def_cfa_register 7
+ 410:.\main.c      ****     uint16 old = 0;
+ 796              		.loc 1 410 0
+ 797 0006 BB1D     		add	r3, r7, #6
+ 798 0008 0022     		mov	r2, #0
+ 799 000a 1A80     		strh	r2, [r3]
+ 411:.\main.c      ****     switch(motor_state){ //state actions
+ 800              		.loc 1 411 0
+ 801 000c 1D4B     		ldr	r3, .L115
+ 802 000e 1B78     		ldrb	r3, [r3]
+ 803 0010 012B     		cmp	r3, #1
+ 804 0012 0AD1     		bne	.L114
+ 412:.\main.c      ****         case m_start:
+ 413:.\main.c      ****             break;
  414:.\main.c      ****         
- 415:.\main.c      ****         fill_data_array(); //potentially take input &data_array
- 924              		.loc 1 415 0
- 925 0026 FFF7FEFF 		bl	fill_data_array
- 416:.\main.c      **** //        baseAzimuth();
- 417:.\main.c      **** //        shoulder();
- 418:.\main.c      **** //        elbow();
- 419:.\main.c      **** //        wristTilt();
- 420:.\main.c      **** //        wristRotate();
- 421:.\main.c      **** 
- 422:.\main.c      ****         led();
- 926              		.loc 1 422 0
- 927 002a FFF7FEFF 		bl	led
- 423:.\main.c      ****         servo();
- 928              		.loc 1 423 0
- 929 002e FFF7FEFF 		bl	servo
- 424:.\main.c      ****         
- 425:.\main.c      ****         
- 426:.\main.c      ****         while(!timerFlag) //this while loop will periodize our code to the time of longest path
- 930              		.loc 1 426 0
- 931 0032 C046     		mov	r8, r8
- 932              	.L118:
- 933              		.loc 1 426 0 is_stmt 0 discriminator 1
- 934 0034 044B     		ldr	r3, .L120+4
- 935 0036 1B78     		ldrb	r3, [r3]
- 936 0038 002B     		cmp	r3, #0
- 937 003a FBD0     		beq	.L118
- 427:.\main.c      ****         {
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccl4ljik.s 			page 25
+ 415:.\main.c      ****         case m_different:
+ 416:.\main.c      ****             PWM_2_WriteCompare1(data_array[1]);
+ 805              		.loc 1 416 0
+ 806 0014 1C4B     		ldr	r3, .L115+4
+ 807 0016 5B88     		ldrh	r3, [r3, #2]
+ 808 0018 DBB2     		uxtb	r3, r3
+ 809 001a 181C     		mov	r0, r3
+ 810 001c FFF7FEFF 		bl	PWM_2_WriteCompare1
+ 417:.\main.c      ****             old = data_array[3];
+ 811              		.loc 1 417 0
+ 812 0020 BB1D     		add	r3, r7, #6
+ 813 0022 194A     		ldr	r2, .L115+4
+ 814 0024 D288     		ldrh	r2, [r2, #6]
+ 815 0026 1A80     		strh	r2, [r3]
+ 418:.\main.c      ****             break;
+ 816              		.loc 1 418 0
+ 817 0028 00E0     		b	.L102
+ 818              	.L114:
+ 419:.\main.c      ****             
+ 420:.\main.c      ****         case m_wait:
+ 421:.\main.c      ****             break;
+ 819              		.loc 1 421 0
+ 820 002a C046     		mov	r8, r8
+ 821              	.L102:
+ 422:.\main.c      ****     }
+ 423:.\main.c      ****     
+ 424:.\main.c      ****     switch(motor_state){ //state transitions
+ 822              		.loc 1 424 0
+ 823 002c 154B     		ldr	r3, .L115
+ 824 002e 1B78     		ldrb	r3, [r3]
+ 825 0030 012B     		cmp	r3, #1
+ 826 0032 07D0     		beq	.L107
+ 827 0034 022B     		cmp	r3, #2
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccH3w0kW.s 			page 23
 
 
- 428:.\main.c      **** //            //Potential solution to how we will want to send feedback
- 429:.\main.c      **** //            feedback_count++;
- 430:.\main.c      **** //            if(feedback_count == feedback_interval) //sends feeback to base station every 50th
- 431:.\main.c      **** //            {                                        //time through the full set of instructions
- 432:.\main.c      **** //                send_feedback();
- 433:.\main.c      **** //            }
- 434:.\main.c      ****         }
- 435:.\main.c      ****         timerFlag = 0;
- 938              		.loc 1 435 0 is_stmt 1
- 939 003c 024B     		ldr	r3, .L120+4
- 940 003e 0022     		mov	r2, #0
- 941 0040 1A70     		strb	r2, [r3]
- 436:.\main.c      ****         
- 437:.\main.c      ****     }
- 942              		.loc 1 437 0
- 943 0042 F0E7     		b	.L119
- 944              	.L121:
- 945              		.align	2
- 946              	.L120:
- 947 0044 00000000 		.word	timer_isr
- 948 0048 00000000 		.word	timerFlag
- 949              		.cfi_endproc
- 950              	.LFE44:
- 951              		.size	main, .-main
- 952              		.text
- 953              	.Letext0:
- 954              		.file 2 ".\\Generated_Source\\PSoC4/cytypes.h"
- 955              		.section	.debug_info,"",%progbits
- 956              	.Ldebug_info0:
- 957 0000 54030000 		.4byte	0x354
- 958 0004 0400     		.2byte	0x4
- 959 0006 00000000 		.4byte	.Ldebug_abbrev0
- 960 000a 04       		.byte	0x4
- 961 000b 01       		.uleb128 0x1
- 962 000c 2C020000 		.4byte	.LASF62
- 963 0010 01       		.byte	0x1
- 964 0011 95000000 		.4byte	.LASF63
- 965 0015 4B010000 		.4byte	.LASF64
- 966 0019 00000000 		.4byte	.Ldebug_ranges0+0
- 967 001d 00000000 		.4byte	0
- 968 0021 00000000 		.4byte	.Ldebug_line0
- 969 0025 02       		.uleb128 0x2
- 970 0026 01       		.byte	0x1
- 971 0027 06       		.byte	0x6
- 972 0028 72000000 		.4byte	.LASF0
- 973 002c 02       		.uleb128 0x2
- 974 002d 01       		.byte	0x1
- 975 002e 08       		.byte	0x8
- 976 002f A8020000 		.4byte	.LASF1
- 977 0033 02       		.uleb128 0x2
- 978 0034 02       		.byte	0x2
- 979 0035 05       		.byte	0x5
- 980 0036 C9020000 		.4byte	.LASF2
- 981 003a 02       		.uleb128 0x2
- 982 003b 02       		.byte	0x2
- 983 003c 07       		.byte	0x7
- 984 003d 38010000 		.4byte	.LASF3
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccl4ljik.s 			page 26
+ 828 0036 13D0     		beq	.L108
+ 829 0038 002B     		cmp	r3, #0
+ 830 003a 1FD1     		bne	.L101
+ 425:.\main.c      ****         case m_start:
+ 426:.\main.c      ****             motor_state = m_wait;
+ 831              		.loc 1 426 0
+ 832 003c 114B     		ldr	r3, .L115
+ 833 003e 0222     		mov	r2, #2
+ 834 0040 1A70     		strb	r2, [r3]
+ 427:.\main.c      ****             break;
+ 835              		.loc 1 427 0
+ 836 0042 1BE0     		b	.L101
+ 837              	.L107:
+ 428:.\main.c      ****         
+ 429:.\main.c      ****         case m_different:
+ 430:.\main.c      ****             if(data_array[3] != old)
+ 838              		.loc 1 430 0
+ 839 0044 104B     		ldr	r3, .L115+4
+ 840 0046 DB88     		ldrh	r3, [r3, #6]
+ 841 0048 BA1D     		add	r2, r7, #6
+ 842 004a 1288     		ldrh	r2, [r2]
+ 843 004c 9A42     		cmp	r2, r3
+ 844 004e 03D0     		beq	.L110
+ 431:.\main.c      ****             {
+ 432:.\main.c      ****                 motor_state = m_different;
+ 845              		.loc 1 432 0
+ 846 0050 0C4B     		ldr	r3, .L115
+ 847 0052 0122     		mov	r2, #1
+ 848 0054 1A70     		strb	r2, [r3]
+ 433:.\main.c      ****             }
+ 434:.\main.c      ****             else
+ 435:.\main.c      ****             {
+ 436:.\main.c      ****                 motor_state = m_wait;
+ 437:.\main.c      ****             }
+ 438:.\main.c      ****             break;
+ 849              		.loc 1 438 0
+ 850 0056 11E0     		b	.L101
+ 851              	.L110:
+ 436:.\main.c      ****                 motor_state = m_wait;
+ 852              		.loc 1 436 0
+ 853 0058 0A4B     		ldr	r3, .L115
+ 854 005a 0222     		mov	r2, #2
+ 855 005c 1A70     		strb	r2, [r3]
+ 856              		.loc 1 438 0
+ 857 005e 0DE0     		b	.L101
+ 858              	.L108:
+ 439:.\main.c      ****             
+ 440:.\main.c      ****         case m_wait:
+ 441:.\main.c      ****             if(data_array[3] != old)
+ 859              		.loc 1 441 0
+ 860 0060 094B     		ldr	r3, .L115+4
+ 861 0062 DB88     		ldrh	r3, [r3, #6]
+ 862 0064 BA1D     		add	r2, r7, #6
+ 863 0066 1288     		ldrh	r2, [r2]
+ 864 0068 9A42     		cmp	r2, r3
+ 865 006a 03D0     		beq	.L112
+ 442:.\main.c      ****             {
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccH3w0kW.s 			page 24
 
 
- 985 0041 02       		.uleb128 0x2
- 986 0042 04       		.byte	0x4
- 987 0043 05       		.byte	0x5
- 988 0044 9E000000 		.4byte	.LASF4
- 989 0048 02       		.uleb128 0x2
- 990 0049 04       		.byte	0x4
- 991 004a 07       		.byte	0x7
- 992 004b 1E010000 		.4byte	.LASF5
- 993 004f 02       		.uleb128 0x2
- 994 0050 08       		.byte	0x8
- 995 0051 05       		.byte	0x5
- 996 0052 64000000 		.4byte	.LASF6
- 997 0056 02       		.uleb128 0x2
- 998 0057 08       		.byte	0x8
- 999 0058 07       		.byte	0x7
- 1000 0059 46000000 		.4byte	.LASF7
- 1001 005d 03       		.uleb128 0x3
- 1002 005e 04       		.byte	0x4
- 1003 005f 05       		.byte	0x5
- 1004 0060 696E7400 		.ascii	"int\000"
- 1005 0064 02       		.uleb128 0x2
- 1006 0065 04       		.byte	0x4
- 1007 0066 07       		.byte	0x7
- 1008 0067 11010000 		.4byte	.LASF8
- 1009 006b 04       		.uleb128 0x4
- 1010 006c A7000000 		.4byte	.LASF9
- 1011 0070 02       		.byte	0x2
- 1012 0071 A1       		.byte	0xa1
- 1013 0072 2C000000 		.4byte	0x2c
- 1014 0076 04       		.uleb128 0x4
- 1015 0077 00000000 		.4byte	.LASF10
- 1016 007b 02       		.byte	0x2
- 1017 007c A2       		.byte	0xa2
- 1018 007d 3A000000 		.4byte	0x3a
- 1019 0081 04       		.uleb128 0x4
- 1020 0082 F6000000 		.4byte	.LASF11
- 1021 0086 02       		.byte	0x2
- 1022 0087 A3       		.byte	0xa3
- 1023 0088 48000000 		.4byte	0x48
- 1024 008c 02       		.uleb128 0x2
- 1025 008d 04       		.byte	0x4
- 1026 008e 04       		.byte	0x4
- 1027 008f 12020000 		.4byte	.LASF12
- 1028 0093 02       		.uleb128 0x2
- 1029 0094 08       		.byte	0x8
- 1030 0095 04       		.byte	0x4
- 1031 0096 B9000000 		.4byte	.LASF13
- 1032 009a 02       		.uleb128 0x2
- 1033 009b 01       		.byte	0x1
- 1034 009c 08       		.byte	0x8
- 1035 009d 17030000 		.4byte	.LASF14
- 1036 00a1 02       		.uleb128 0x2
- 1037 00a2 04       		.byte	0x4
- 1038 00a3 07       		.byte	0x7
- 1039 00a4 DD010000 		.4byte	.LASF15
- 1040 00a8 05       		.uleb128 0x5
- 1041 00a9 FE020000 		.4byte	.LASF20
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccl4ljik.s 			page 27
+ 443:.\main.c      ****                 motor_state = m_different;
+ 866              		.loc 1 443 0
+ 867 006c 054B     		ldr	r3, .L115
+ 868 006e 0122     		mov	r2, #1
+ 869 0070 1A70     		strb	r2, [r3]
+ 870 0072 02E0     		b	.L113
+ 871              	.L112:
+ 444:.\main.c      ****             }
+ 445:.\main.c      ****             else
+ 446:.\main.c      ****             {
+ 447:.\main.c      ****                 motor_state = m_wait;
+ 872              		.loc 1 447 0
+ 873 0074 034B     		ldr	r3, .L115
+ 874 0076 0222     		mov	r2, #2
+ 875 0078 1A70     		strb	r2, [r3]
+ 876              	.L113:
+ 448:.\main.c      ****             }
+ 449:.\main.c      ****             break;
+ 877              		.loc 1 449 0
+ 878 007a C046     		mov	r8, r8
+ 879              	.L101:
+ 450:.\main.c      ****     }
+ 451:.\main.c      **** }
+ 880              		.loc 1 451 0
+ 881 007c BD46     		mov	sp, r7
+ 882 007e 02B0     		add	sp, sp, #8
+ 883              		@ sp needed
+ 884 0080 80BD     		pop	{r7, pc}
+ 885              	.L116:
+ 886 0082 C046     		.align	2
+ 887              	.L115:
+ 888 0084 00000000 		.word	motor_state
+ 889 0088 00000000 		.word	data_array
+ 890              		.cfi_endproc
+ 891              	.LFE43:
+ 892              		.size	motor, .-motor
+ 893              		.section	.text.main,"ax",%progbits
+ 894              		.align	2
+ 895              		.global	main
+ 896              		.code	16
+ 897              		.thumb_func
+ 898              		.type	main, %function
+ 899              	main:
+ 900              	.LFB44:
+ 452:.\main.c      **** int main()
+ 453:.\main.c      **** {
+ 901              		.loc 1 453 0
+ 902              		.cfi_startproc
+ 903 0000 80B5     		push	{r7, lr}
+ 904              		.cfi_def_cfa_offset 8
+ 905              		.cfi_offset 7, -8
+ 906              		.cfi_offset 14, -4
+ 907 0002 00AF     		add	r7, sp, #0
+ 908              		.cfi_def_cfa_register 7
+ 454:.\main.c      ****     CyGlobalIntEnable;
+ 909              		.loc 1 454 0
+ 910              	@ 454 ".\main.c" 1
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccH3w0kW.s 			page 25
 
 
- 1042 00ad 01       		.byte	0x1
- 1043 00ae 01       		.byte	0x1
- 1044 00af 66       		.byte	0x66
- 1045 00b0 CD000000 		.4byte	0xcd
- 1046 00b4 06       		.uleb128 0x6
- 1047 00b5 E6010000 		.4byte	.LASF16
- 1048 00b9 00       		.sleb128 0
- 1049 00ba 06       		.uleb128 0x6
- 1050 00bb 2F000000 		.4byte	.LASF17
- 1051 00bf 01       		.sleb128 1
- 1052 00c0 06       		.uleb128 0x6
- 1053 00c1 EB000000 		.4byte	.LASF18
- 1054 00c5 02       		.sleb128 2
- 1055 00c6 06       		.uleb128 0x6
- 1056 00c7 EC020000 		.4byte	.LASF19
- 1057 00cb 03       		.sleb128 3
- 1058 00cc 00       		.byte	0
- 1059 00cd 05       		.uleb128 0x5
- 1060 00ce 1C030000 		.4byte	.LASF21
- 1061 00d2 01       		.byte	0x1
- 1062 00d3 01       		.byte	0x1
- 1063 00d4 9E       		.byte	0x9e
- 1064 00d5 F2000000 		.4byte	0xf2
- 1065 00d9 06       		.uleb128 0x6
- 1066 00da A8010000 		.4byte	.LASF22
- 1067 00de 00       		.sleb128 0
- 1068 00df 06       		.uleb128 0x6
- 1069 00e0 F2010000 		.4byte	.LASF23
- 1070 00e4 01       		.sleb128 1
- 1071 00e5 06       		.uleb128 0x6
- 1072 00e6 7E000000 		.4byte	.LASF24
- 1073 00ea 02       		.sleb128 2
- 1074 00eb 06       		.uleb128 0x6
- 1075 00ec 18020000 		.4byte	.LASF25
- 1076 00f0 03       		.sleb128 3
- 1077 00f1 00       		.byte	0
- 1078 00f2 05       		.uleb128 0x5
- 1079 00f3 4E030000 		.4byte	.LASF26
- 1080 00f7 01       		.byte	0x1
- 1081 00f8 01       		.byte	0x1
- 1082 00f9 CE       		.byte	0xce
- 1083 00fa 17010000 		.4byte	0x117
- 1084 00fe 06       		.uleb128 0x6
- 1085 00ff 23000000 		.4byte	.LASF27
- 1086 0103 00       		.sleb128 0
- 1087 0104 06       		.uleb128 0x6
- 1088 0105 07000000 		.4byte	.LASF28
- 1089 0109 01       		.sleb128 1
- 1090 010a 06       		.uleb128 0x6
- 1091 010b CE010000 		.4byte	.LASF29
- 1092 010f 02       		.sleb128 2
- 1093 0110 06       		.uleb128 0x6
- 1094 0111 3E030000 		.4byte	.LASF30
- 1095 0115 03       		.sleb128 3
- 1096 0116 00       		.byte	0
- 1097 0117 07       		.uleb128 0x7
- 1098 0118 DF020000 		.4byte	.LASF31
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccl4ljik.s 			page 28
+ 911 0004 62B6     		CPSIE   i
+ 912              	@ 0 "" 2
+ 455:.\main.c      ****     
+ 456:.\main.c      ****     //start all of our components
+ 457:.\main.c      ****     Clock_pwm_Start();
+ 913              		.loc 1 457 0
+ 914              		.code	16
+ 915 0006 FFF7FEFF 		bl	Clock_pwm_Start
+ 458:.\main.c      ****     Clock_counter_Start();
+ 916              		.loc 1 458 0
+ 917 000a FFF7FEFF 		bl	Clock_counter_Start
+ 459:.\main.c      ****     PWM_1_Start();
+ 918              		.loc 1 459 0
+ 919 000e FFF7FEFF 		bl	PWM_1_Start
+ 460:.\main.c      ****     PWM_2_Start();
+ 920              		.loc 1 460 0
+ 921 0012 FFF7FEFF 		bl	PWM_2_Start
+ 461:.\main.c      ****     Timer_1_Start();
+ 922              		.loc 1 461 0
+ 923 0016 FFF7FEFF 		bl	Timer_1_Start
+ 462:.\main.c      ****     UART_1_Start();
+ 924              		.loc 1 462 0
+ 925 001a FFF7FEFF 		bl	UART_1_Start
+ 463:.\main.c      ****     
+ 464:.\main.c      ****     isr_1_StartEx(timer_isr);
+ 926              		.loc 1 464 0
+ 927 001e 094B     		ldr	r3, .L120
+ 928 0020 181C     		mov	r0, r3
+ 929 0022 FFF7FEFF 		bl	isr_1_StartEx
+ 930              	.L119:
+ 465:.\main.c      ****     
+ 466:.\main.c      ****     
+ 467:.\main.c      ****     for(;;)
+ 468:.\main.c      ****     {
+ 469:.\main.c      ****         //check addresses
+ 470:.\main.c      ****         //TODO get the address bytes from Steve
+ 471:.\main.c      ****         
+ 472:.\main.c      ****         
+ 473:.\main.c      ****         fill_data_array(); //potentially take input &data_array
+ 931              		.loc 1 473 0
+ 932 0026 FFF7FEFF 		bl	fill_data_array
+ 474:.\main.c      **** //        baseAzimuth();
+ 475:.\main.c      **** //        shoulder();
+ 476:.\main.c      **** //        elbow();
+ 477:.\main.c      **** //        wristTilt();
+ 478:.\main.c      **** //        wristRotate();
+ 479:.\main.c      **** 
+ 480:.\main.c      ****         led();
+ 933              		.loc 1 480 0
+ 934 002a FFF7FEFF 		bl	led
+ 481:.\main.c      ****         servo();
+ 935              		.loc 1 481 0
+ 936 002e FFF7FEFF 		bl	servo
+ 482:.\main.c      ****         
+ 483:.\main.c      ****         
+ 484:.\main.c      ****         while(!timerFlag) //this while loop will periodize our code to the time of longest path
+ 937              		.loc 1 484 0
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccH3w0kW.s 			page 26
 
 
- 1099 011c 01       		.byte	0x1
- 1100 011d 01       		.byte	0x1
- 1101 011e 0601     		.2byte	0x106
- 1102 0120 37010000 		.4byte	0x137
- 1103 0124 06       		.uleb128 0x6
- 1104 0125 9F030000 		.4byte	.LASF32
- 1105 0129 00       		.sleb128 0
- 1106 012a 06       		.uleb128 0x6
- 1107 012b D3020000 		.4byte	.LASF33
- 1108 012f 01       		.sleb128 1
- 1109 0130 06       		.uleb128 0x6
- 1110 0131 5D000000 		.4byte	.LASF34
- 1111 0135 02       		.sleb128 2
- 1112 0136 00       		.byte	0
- 1113 0137 07       		.uleb128 0x7
- 1114 0138 FD010000 		.4byte	.LASF35
- 1115 013c 01       		.byte	0x1
- 1116 013d 01       		.byte	0x1
- 1117 013e 0701     		.2byte	0x107
- 1118 0140 57010000 		.4byte	0x157
- 1119 0144 06       		.uleb128 0x6
- 1120 0145 30010000 		.4byte	.LASF36
- 1121 0149 00       		.sleb128 0
- 1122 014a 06       		.uleb128 0x6
- 1123 014b C2010000 		.4byte	.LASF37
- 1124 014f 01       		.sleb128 1
- 1125 0150 06       		.uleb128 0x6
- 1126 0151 C2020000 		.4byte	.LASF38
- 1127 0155 02       		.sleb128 2
- 1128 0156 00       		.byte	0
- 1129 0157 07       		.uleb128 0x7
- 1130 0158 DE000000 		.4byte	.LASF39
- 1131 015c 01       		.byte	0x1
- 1132 015d 01       		.byte	0x1
- 1133 015e 5E01     		.2byte	0x15e
- 1134 0160 77010000 		.4byte	0x177
- 1135 0164 06       		.uleb128 0x6
- 1136 0165 71030000 		.4byte	.LASF40
- 1137 0169 00       		.sleb128 0
- 1138 016a 06       		.uleb128 0x6
- 1139 016b AD000000 		.4byte	.LASF41
- 1140 016f 01       		.sleb128 1
- 1141 0170 06       		.uleb128 0x6
- 1142 0171 37030000 		.4byte	.LASF42
- 1143 0175 02       		.sleb128 2
- 1144 0176 00       		.byte	0
- 1145 0177 08       		.uleb128 0x8
- 1146 0178 8B000000 		.4byte	.LASF65
- 1147 017c 01       		.byte	0x1
- 1148 017d 13       		.byte	0x13
- 1149 017e 00000000 		.4byte	.LFB33
- 1150 0182 28000000 		.4byte	.LFE33-.LFB33
- 1151 0186 01       		.uleb128 0x1
- 1152 0187 9C       		.byte	0x9c
- 1153 0188 9B010000 		.4byte	0x19b
- 1154 018c 09       		.uleb128 0x9
- 1155 018d F6020000 		.4byte	.LASF43
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccl4ljik.s 			page 29
+ 938 0032 C046     		mov	r8, r8
+ 939              	.L118:
+ 940              		.loc 1 484 0 is_stmt 0 discriminator 1
+ 941 0034 044B     		ldr	r3, .L120+4
+ 942 0036 1B78     		ldrb	r3, [r3]
+ 943 0038 002B     		cmp	r3, #0
+ 944 003a FBD0     		beq	.L118
+ 485:.\main.c      ****         {
+ 486:.\main.c      **** //            //Potential solution to how we will want to send feedback
+ 487:.\main.c      **** //            feedback_count++;
+ 488:.\main.c      **** //            if(feedback_count == feedback_interval) //sends feeback to base station every 50th
+ 489:.\main.c      **** //            {                                        //time through the full set of instructions
+ 490:.\main.c      **** //                send_feedback();
+ 491:.\main.c      **** //            }
+ 492:.\main.c      ****         }
+ 493:.\main.c      ****         timerFlag = 0;
+ 945              		.loc 1 493 0 is_stmt 1
+ 946 003c 024B     		ldr	r3, .L120+4
+ 947 003e 0022     		mov	r2, #0
+ 948 0040 1A70     		strb	r2, [r3]
+ 494:.\main.c      ****         
+ 495:.\main.c      ****     }
+ 949              		.loc 1 495 0
+ 950 0042 F0E7     		b	.L119
+ 951              	.L121:
+ 952              		.align	2
+ 953              	.L120:
+ 954 0044 00000000 		.word	timer_isr
+ 955 0048 00000000 		.word	timerFlag
+ 956              		.cfi_endproc
+ 957              	.LFE44:
+ 958              		.size	main, .-main
+ 959              		.text
+ 960              	.Letext0:
+ 961              		.file 2 ".\\Generated_Source\\PSoC4/cytypes.h"
+ 962              		.section	.debug_info,"",%progbits
+ 963              	.Ldebug_info0:
+ 964 0000 87030000 		.4byte	0x387
+ 965 0004 0400     		.2byte	0x4
+ 966 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 967 000a 04       		.byte	0x4
+ 968 000b 01       		.uleb128 0x1
+ 969 000c 2C020000 		.4byte	.LASF64
+ 970 0010 01       		.byte	0x1
+ 971 0011 95000000 		.4byte	.LASF65
+ 972 0015 4B010000 		.4byte	.LASF66
+ 973 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 974 001d 00000000 		.4byte	0
+ 975 0021 00000000 		.4byte	.Ldebug_line0
+ 976 0025 02       		.uleb128 0x2
+ 977 0026 01       		.byte	0x1
+ 978 0027 06       		.byte	0x6
+ 979 0028 72000000 		.4byte	.LASF0
+ 980 002c 02       		.uleb128 0x2
+ 981 002d 01       		.byte	0x1
+ 982 002e 08       		.byte	0x8
+ 983 002f B4020000 		.4byte	.LASF1
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccH3w0kW.s 			page 27
 
 
- 1156 0191 01       		.byte	0x1
- 1157 0192 15       		.byte	0x15
- 1158 0193 81000000 		.4byte	0x81
- 1159 0197 02       		.uleb128 0x2
- 1160 0198 91       		.byte	0x91
- 1161 0199 74       		.sleb128 -12
- 1162 019a 00       		.byte	0
- 1163 019b 0A       		.uleb128 0xa
- 1164 019c 61030000 		.4byte	.LASF50
- 1165 01a0 01       		.byte	0x1
- 1166 01a1 2C       		.byte	0x2c
- 1167 01a2 00000000 		.4byte	.LFB34
- 1168 01a6 10010000 		.4byte	.LFE34-.LFB34
- 1169 01aa 01       		.uleb128 0x1
- 1170 01ab 9C       		.byte	0x9c
- 1171 01ac BD010000 		.4byte	0x1bd
- 1172 01b0 0B       		.uleb128 0xb
- 1173 01b1 6300     		.ascii	"c\000"
- 1174 01b3 01       		.byte	0x1
- 1175 01b4 2F       		.byte	0x2f
- 1176 01b5 6B000000 		.4byte	0x6b
- 1177 01b9 02       		.uleb128 0x2
- 1178 01ba 91       		.byte	0x91
- 1179 01bb 77       		.sleb128 -9
- 1180 01bc 00       		.byte	0
- 1181 01bd 0C       		.uleb128 0xc
- 1182 01be 3A000000 		.4byte	.LASF44
- 1183 01c2 01       		.byte	0x1
- 1184 01c3 5D       		.byte	0x5d
- 1185 01c4 00000000 		.4byte	.LFB35
- 1186 01c8 08000000 		.4byte	.LFE35-.LFB35
- 1187 01cc 01       		.uleb128 0x1
- 1188 01cd 9C       		.byte	0x9c
- 1189 01ce 0C       		.uleb128 0xc
- 1190 01cf 1A000000 		.4byte	.LASF45
- 1191 01d3 01       		.byte	0x1
- 1192 01d4 68       		.byte	0x68
- 1193 01d5 00000000 		.4byte	.LFB36
- 1194 01d9 44000000 		.4byte	.LFE36-.LFB36
- 1195 01dd 01       		.uleb128 0x1
- 1196 01de 9C       		.byte	0x9c
- 1197 01df 0C       		.uleb128 0xc
- 1198 01e0 FD000000 		.4byte	.LASF46
- 1199 01e4 01       		.byte	0x1
- 1200 01e5 96       		.byte	0x96
- 1201 01e6 00000000 		.4byte	.LFB37
- 1202 01ea 08000000 		.4byte	.LFE37-.LFB37
- 1203 01ee 01       		.uleb128 0x1
- 1204 01ef 9C       		.byte	0x9c
- 1205 01f0 0C       		.uleb128 0xc
- 1206 01f1 08020000 		.4byte	.LASF47
- 1207 01f5 01       		.byte	0x1
- 1208 01f6 A0       		.byte	0xa0
- 1209 01f7 00000000 		.4byte	.LFB38
- 1210 01fb 48000000 		.4byte	.LFE38-.LFB38
- 1211 01ff 01       		.uleb128 0x1
- 1212 0200 9C       		.byte	0x9c
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccl4ljik.s 			page 30
+ 984 0033 02       		.uleb128 0x2
+ 985 0034 02       		.byte	0x2
+ 986 0035 05       		.byte	0x5
+ 987 0036 D5020000 		.4byte	.LASF2
+ 988 003a 02       		.uleb128 0x2
+ 989 003b 02       		.byte	0x2
+ 990 003c 07       		.byte	0x7
+ 991 003d 38010000 		.4byte	.LASF3
+ 992 0041 02       		.uleb128 0x2
+ 993 0042 04       		.byte	0x4
+ 994 0043 05       		.byte	0x5
+ 995 0044 9E000000 		.4byte	.LASF4
+ 996 0048 02       		.uleb128 0x2
+ 997 0049 04       		.byte	0x4
+ 998 004a 07       		.byte	0x7
+ 999 004b 1E010000 		.4byte	.LASF5
+ 1000 004f 02       		.uleb128 0x2
+ 1001 0050 08       		.byte	0x8
+ 1002 0051 05       		.byte	0x5
+ 1003 0052 64000000 		.4byte	.LASF6
+ 1004 0056 02       		.uleb128 0x2
+ 1005 0057 08       		.byte	0x8
+ 1006 0058 07       		.byte	0x7
+ 1007 0059 46000000 		.4byte	.LASF7
+ 1008 005d 03       		.uleb128 0x3
+ 1009 005e 04       		.byte	0x4
+ 1010 005f 05       		.byte	0x5
+ 1011 0060 696E7400 		.ascii	"int\000"
+ 1012 0064 02       		.uleb128 0x2
+ 1013 0065 04       		.byte	0x4
+ 1014 0066 07       		.byte	0x7
+ 1015 0067 11010000 		.4byte	.LASF8
+ 1016 006b 04       		.uleb128 0x4
+ 1017 006c A7000000 		.4byte	.LASF9
+ 1018 0070 02       		.byte	0x2
+ 1019 0071 A1       		.byte	0xa1
+ 1020 0072 2C000000 		.4byte	0x2c
+ 1021 0076 04       		.uleb128 0x4
+ 1022 0077 00000000 		.4byte	.LASF10
+ 1023 007b 02       		.byte	0x2
+ 1024 007c A2       		.byte	0xa2
+ 1025 007d 3A000000 		.4byte	0x3a
+ 1026 0081 04       		.uleb128 0x4
+ 1027 0082 F6000000 		.4byte	.LASF11
+ 1028 0086 02       		.byte	0x2
+ 1029 0087 A3       		.byte	0xa3
+ 1030 0088 48000000 		.4byte	0x48
+ 1031 008c 02       		.uleb128 0x2
+ 1032 008d 04       		.byte	0x4
+ 1033 008e 04       		.byte	0x4
+ 1034 008f 12020000 		.4byte	.LASF12
+ 1035 0093 02       		.uleb128 0x2
+ 1036 0094 08       		.byte	0x8
+ 1037 0095 04       		.byte	0x4
+ 1038 0096 B9000000 		.4byte	.LASF13
+ 1039 009a 02       		.uleb128 0x2
+ 1040 009b 01       		.byte	0x1
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccH3w0kW.s 			page 28
 
 
- 1213 0201 0C       		.uleb128 0xc
- 1214 0202 79030000 		.4byte	.LASF48
- 1215 0206 01       		.byte	0x1
- 1216 0207 D0       		.byte	0xd0
- 1217 0208 00000000 		.4byte	.LFB39
- 1218 020c 48000000 		.4byte	.LFE39-.LFB39
- 1219 0210 01       		.uleb128 0x1
- 1220 0211 9C       		.byte	0x9c
- 1221 0212 0C       		.uleb128 0xc
- 1222 0213 03010000 		.4byte	.LASF49
- 1223 0217 01       		.byte	0x1
- 1224 0218 FE       		.byte	0xfe
- 1225 0219 00000000 		.4byte	.LFB40
- 1226 021d 08000000 		.4byte	.LFE40-.LFB40
- 1227 0221 01       		.uleb128 0x1
- 1228 0222 9C       		.byte	0x9c
- 1229 0223 0D       		.uleb128 0xd
- 1230 0224 6C656400 		.ascii	"led\000"
- 1231 0228 01       		.byte	0x1
- 1232 0229 0801     		.2byte	0x108
- 1233 022b 00000000 		.4byte	.LFB41
- 1234 022f 88000000 		.4byte	.LFE41-.LFB41
- 1235 0233 01       		.uleb128 0x1
- 1236 0234 9C       		.byte	0x9c
- 1237 0235 49020000 		.4byte	0x249
- 1238 0239 0E       		.uleb128 0xe
- 1239 023a 6F6C6400 		.ascii	"old\000"
- 1240 023e 01       		.byte	0x1
- 1241 023f 0901     		.2byte	0x109
- 1242 0241 76000000 		.4byte	0x76
- 1243 0245 02       		.uleb128 0x2
- 1244 0246 91       		.byte	0x91
- 1245 0247 76       		.sleb128 -10
- 1246 0248 00       		.byte	0
- 1247 0249 0F       		.uleb128 0xf
- 1248 024a 14000000 		.4byte	.LASF51
- 1249 024e 01       		.byte	0x1
- 1250 024f 3301     		.2byte	0x133
- 1251 0251 00000000 		.4byte	.LFB42
- 1252 0255 88000000 		.4byte	.LFE42-.LFB42
- 1253 0259 01       		.uleb128 0x1
- 1254 025a 9C       		.byte	0x9c
- 1255 025b 6F020000 		.4byte	0x26f
- 1256 025f 0E       		.uleb128 0xe
- 1257 0260 6F6C6400 		.ascii	"old\000"
- 1258 0264 01       		.byte	0x1
- 1259 0265 3401     		.2byte	0x134
- 1260 0267 76000000 		.4byte	0x76
- 1261 026b 02       		.uleb128 0x2
- 1262 026c 91       		.byte	0x91
- 1263 026d 76       		.sleb128 -10
- 1264 026e 00       		.byte	0
- 1265 026f 0F       		.uleb128 0xf
- 1266 0270 26020000 		.4byte	.LASF52
- 1267 0274 01       		.byte	0x1
- 1268 0275 5F01     		.2byte	0x15f
- 1269 0277 00000000 		.4byte	.LFB43
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccl4ljik.s 			page 31
+ 1041 009c 08       		.byte	0x8
+ 1042 009d 23030000 		.4byte	.LASF14
+ 1043 00a1 02       		.uleb128 0x2
+ 1044 00a2 04       		.byte	0x4
+ 1045 00a3 07       		.byte	0x7
+ 1046 00a4 DD010000 		.4byte	.LASF15
+ 1047 00a8 05       		.uleb128 0x5
+ 1048 00a9 0A030000 		.4byte	.LASF20
+ 1049 00ad 01       		.byte	0x1
+ 1050 00ae 01       		.byte	0x1
+ 1051 00af 68       		.byte	0x68
+ 1052 00b0 CD000000 		.4byte	0xcd
+ 1053 00b4 06       		.uleb128 0x6
+ 1054 00b5 E6010000 		.4byte	.LASF16
+ 1055 00b9 00       		.sleb128 0
+ 1056 00ba 06       		.uleb128 0x6
+ 1057 00bb 2F000000 		.4byte	.LASF17
+ 1058 00bf 01       		.sleb128 1
+ 1059 00c0 06       		.uleb128 0x6
+ 1060 00c1 EB000000 		.4byte	.LASF18
+ 1061 00c5 02       		.sleb128 2
+ 1062 00c6 06       		.uleb128 0x6
+ 1063 00c7 F8020000 		.4byte	.LASF19
+ 1064 00cb 03       		.sleb128 3
+ 1065 00cc 00       		.byte	0
+ 1066 00cd 05       		.uleb128 0x5
+ 1067 00ce 28030000 		.4byte	.LASF21
+ 1068 00d2 01       		.byte	0x1
+ 1069 00d3 01       		.byte	0x1
+ 1070 00d4 A0       		.byte	0xa0
+ 1071 00d5 F2000000 		.4byte	0xf2
+ 1072 00d9 06       		.uleb128 0x6
+ 1073 00da A8010000 		.4byte	.LASF22
+ 1074 00de 00       		.sleb128 0
+ 1075 00df 06       		.uleb128 0x6
+ 1076 00e0 F2010000 		.4byte	.LASF23
+ 1077 00e4 01       		.sleb128 1
+ 1078 00e5 06       		.uleb128 0x6
+ 1079 00e6 7E000000 		.4byte	.LASF24
+ 1080 00ea 02       		.sleb128 2
+ 1081 00eb 06       		.uleb128 0x6
+ 1082 00ec 18020000 		.4byte	.LASF25
+ 1083 00f0 03       		.sleb128 3
+ 1084 00f1 00       		.byte	0
+ 1085 00f2 05       		.uleb128 0x5
+ 1086 00f3 5A030000 		.4byte	.LASF26
+ 1087 00f7 01       		.byte	0x1
+ 1088 00f8 01       		.byte	0x1
+ 1089 00f9 D1       		.byte	0xd1
+ 1090 00fa 17010000 		.4byte	0x117
+ 1091 00fe 06       		.uleb128 0x6
+ 1092 00ff 23000000 		.4byte	.LASF27
+ 1093 0103 00       		.sleb128 0
+ 1094 0104 06       		.uleb128 0x6
+ 1095 0105 07000000 		.4byte	.LASF28
+ 1096 0109 01       		.sleb128 1
+ 1097 010a 06       		.uleb128 0x6
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccH3w0kW.s 			page 29
 
 
- 1270 027b 8C000000 		.4byte	.LFE43-.LFB43
- 1271 027f 01       		.uleb128 0x1
- 1272 0280 9C       		.byte	0x9c
- 1273 0281 95020000 		.4byte	0x295
- 1274 0285 0E       		.uleb128 0xe
- 1275 0286 6F6C6400 		.ascii	"old\000"
- 1276 028a 01       		.byte	0x1
- 1277 028b 6001     		.2byte	0x160
- 1278 028d 76000000 		.4byte	0x76
- 1279 0291 02       		.uleb128 0x2
- 1280 0292 91       		.byte	0x91
- 1281 0293 76       		.sleb128 -10
- 1282 0294 00       		.byte	0
- 1283 0295 10       		.uleb128 0x10
- 1284 0296 90030000 		.4byte	.LASF66
- 1285 029a 01       		.byte	0x1
- 1286 029b 8A01     		.2byte	0x18a
- 1287 029d 5D000000 		.4byte	0x5d
- 1288 02a1 00000000 		.4byte	.LFB44
- 1289 02a5 4C000000 		.4byte	.LFE44-.LFB44
- 1290 02a9 01       		.uleb128 0x1
- 1291 02aa 9C       		.byte	0x9c
- 1292 02ab 11       		.uleb128 0x11
- 1293 02ac 76000000 		.4byte	0x76
- 1294 02b0 BB020000 		.4byte	0x2bb
- 1295 02b4 12       		.uleb128 0x12
- 1296 02b5 A1000000 		.4byte	0xa1
- 1297 02b9 0D       		.byte	0xd
- 1298 02ba 00       		.byte	0
- 1299 02bb 13       		.uleb128 0x13
- 1300 02bc 85030000 		.4byte	.LASF53
- 1301 02c0 01       		.byte	0x1
- 1302 02c1 0A       		.byte	0xa
- 1303 02c2 AB020000 		.4byte	0x2ab
- 1304 02c6 05       		.uleb128 0x5
- 1305 02c7 03       		.byte	0x3
- 1306 02c8 00000000 		.4byte	data_array
- 1307 02cc 13       		.uleb128 0x13
- 1308 02cd A7030000 		.4byte	.LASF54
- 1309 02d1 01       		.byte	0x1
- 1310 02d2 0B       		.byte	0xb
- 1311 02d3 76000000 		.4byte	0x76
- 1312 02d7 05       		.uleb128 0x5
- 1313 02d8 03       		.byte	0x3
- 1314 02d9 00000000 		.4byte	feedback_count
- 1315 02dd 13       		.uleb128 0x13
- 1316 02de 95030000 		.4byte	.LASF55
- 1317 02e2 01       		.byte	0x1
- 1318 02e3 0C       		.byte	0xc
- 1319 02e4 6B000000 		.4byte	0x6b
- 1320 02e8 05       		.uleb128 0x5
- 1321 02e9 03       		.byte	0x3
- 1322 02ea 00000000 		.4byte	timerFlag
- 1323 02ee 13       		.uleb128 0x13
- 1324 02ef 0B030000 		.4byte	.LASF56
- 1325 02f3 01       		.byte	0x1
- 1326 02f4 66       		.byte	0x66
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccl4ljik.s 			page 32
+ 1098 010b CE010000 		.4byte	.LASF29
+ 1099 010f 02       		.sleb128 2
+ 1100 0110 06       		.uleb128 0x6
+ 1101 0111 4A030000 		.4byte	.LASF30
+ 1102 0115 03       		.sleb128 3
+ 1103 0116 00       		.byte	0
+ 1104 0117 07       		.uleb128 0x7
+ 1105 0118 FD010000 		.4byte	.LASF31
+ 1106 011c 01       		.byte	0x1
+ 1107 011d 01       		.byte	0x1
+ 1108 011e 0A01     		.2byte	0x10a
+ 1109 0120 37010000 		.4byte	0x137
+ 1110 0124 06       		.uleb128 0x6
+ 1111 0125 30010000 		.4byte	.LASF32
+ 1112 0129 00       		.sleb128 0
+ 1113 012a 06       		.uleb128 0x6
+ 1114 012b C2010000 		.4byte	.LASF33
+ 1115 012f 01       		.sleb128 1
+ 1116 0130 06       		.uleb128 0x6
+ 1117 0131 CE020000 		.4byte	.LASF34
+ 1118 0135 02       		.sleb128 2
+ 1119 0136 00       		.byte	0
+ 1120 0137 07       		.uleb128 0x7
+ 1121 0138 EB020000 		.4byte	.LASF35
+ 1122 013c 01       		.byte	0x1
+ 1123 013d 01       		.byte	0x1
+ 1124 013e 4A01     		.2byte	0x14a
+ 1125 0140 57010000 		.4byte	0x157
+ 1126 0144 06       		.uleb128 0x6
+ 1127 0145 BA030000 		.4byte	.LASF36
+ 1128 0149 00       		.sleb128 0
+ 1129 014a 06       		.uleb128 0x6
+ 1130 014b DF020000 		.4byte	.LASF37
+ 1131 014f 01       		.sleb128 1
+ 1132 0150 06       		.uleb128 0x6
+ 1133 0151 5D000000 		.4byte	.LASF38
+ 1134 0155 02       		.sleb128 2
+ 1135 0156 00       		.byte	0
+ 1136 0157 07       		.uleb128 0x7
+ 1137 0158 DE000000 		.4byte	.LASF39
+ 1138 015c 01       		.byte	0x1
+ 1139 015d 01       		.byte	0x1
+ 1140 015e 9801     		.2byte	0x198
+ 1141 0160 77010000 		.4byte	0x177
+ 1142 0164 06       		.uleb128 0x6
+ 1143 0165 7D030000 		.4byte	.LASF40
+ 1144 0169 00       		.sleb128 0
+ 1145 016a 06       		.uleb128 0x6
+ 1146 016b AD000000 		.4byte	.LASF41
+ 1147 016f 01       		.sleb128 1
+ 1148 0170 06       		.uleb128 0x6
+ 1149 0171 43030000 		.4byte	.LASF42
+ 1150 0175 02       		.sleb128 2
+ 1151 0176 00       		.byte	0
+ 1152 0177 08       		.uleb128 0x8
+ 1153 0178 8B000000 		.4byte	.LASF67
+ 1154 017c 01       		.byte	0x1
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccH3w0kW.s 			page 30
 
 
- 1327 02f5 A8000000 		.4byte	0xa8
- 1328 02f9 05       		.uleb128 0x5
- 1329 02fa 03       		.byte	0x3
- 1330 02fb 00000000 		.4byte	shldr_state
- 1331 02ff 13       		.uleb128 0x13
- 1332 0300 B2010000 		.4byte	.LASF57
- 1333 0304 01       		.byte	0x1
- 1334 0305 9E       		.byte	0x9e
- 1335 0306 CD000000 		.4byte	0xcd
- 1336 030a 05       		.uleb128 0x5
- 1337 030b 03       		.byte	0x3
- 1338 030c 00000000 		.4byte	wristTilt_state
- 1339 0310 13       		.uleb128 0x13
- 1340 0311 CC000000 		.4byte	.LASF58
- 1341 0315 01       		.byte	0x1
- 1342 0316 CE       		.byte	0xce
- 1343 0317 F2000000 		.4byte	0xf2
- 1344 031b 05       		.uleb128 0x5
- 1345 031c 03       		.byte	0x3
- 1346 031d 00000000 		.4byte	wristRotate_state
- 1347 0321 14       		.uleb128 0x14
- 1348 0322 C0000000 		.4byte	.LASF59
- 1349 0326 01       		.byte	0x1
- 1350 0327 0601     		.2byte	0x106
- 1351 0329 17010000 		.4byte	0x117
- 1352 032d 05       		.uleb128 0x5
- 1353 032e 03       		.byte	0x3
- 1354 032f 00000000 		.4byte	servo_state
- 1355 0333 14       		.uleb128 0x14
- 1356 0334 2D030000 		.4byte	.LASF60
- 1357 0338 01       		.byte	0x1
- 1358 0339 0701     		.2byte	0x107
- 1359 033b 37010000 		.4byte	0x137
- 1360 033f 05       		.uleb128 0x5
- 1361 0340 03       		.byte	0x3
- 1362 0341 00000000 		.4byte	led_state
- 1363 0345 14       		.uleb128 0x14
- 1364 0346 B6020000 		.4byte	.LASF61
- 1365 034a 01       		.byte	0x1
- 1366 034b 5E01     		.2byte	0x15e
- 1367 034d 57010000 		.4byte	0x157
- 1368 0351 05       		.uleb128 0x5
- 1369 0352 03       		.byte	0x3
- 1370 0353 00000000 		.4byte	motor_state
- 1371 0357 00       		.byte	0
- 1372              		.section	.debug_abbrev,"",%progbits
- 1373              	.Ldebug_abbrev0:
- 1374 0000 01       		.uleb128 0x1
- 1375 0001 11       		.uleb128 0x11
- 1376 0002 01       		.byte	0x1
- 1377 0003 25       		.uleb128 0x25
- 1378 0004 0E       		.uleb128 0xe
- 1379 0005 13       		.uleb128 0x13
- 1380 0006 0B       		.uleb128 0xb
- 1381 0007 03       		.uleb128 0x3
- 1382 0008 0E       		.uleb128 0xe
- 1383 0009 1B       		.uleb128 0x1b
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccl4ljik.s 			page 33
+ 1155 017d 15       		.byte	0x15
+ 1156 017e 00000000 		.4byte	.LFB33
+ 1157 0182 28000000 		.4byte	.LFE33-.LFB33
+ 1158 0186 01       		.uleb128 0x1
+ 1159 0187 9C       		.byte	0x9c
+ 1160 0188 9B010000 		.4byte	0x19b
+ 1161 018c 09       		.uleb128 0x9
+ 1162 018d 02030000 		.4byte	.LASF43
+ 1163 0191 01       		.byte	0x1
+ 1164 0192 17       		.byte	0x17
+ 1165 0193 81000000 		.4byte	0x81
+ 1166 0197 02       		.uleb128 0x2
+ 1167 0198 91       		.byte	0x91
+ 1168 0199 74       		.sleb128 -12
+ 1169 019a 00       		.byte	0
+ 1170 019b 0A       		.uleb128 0xa
+ 1171 019c 6D030000 		.4byte	.LASF50
+ 1172 01a0 01       		.byte	0x1
+ 1173 01a1 2E       		.byte	0x2e
+ 1174 01a2 00000000 		.4byte	.LFB34
+ 1175 01a6 10010000 		.4byte	.LFE34-.LFB34
+ 1176 01aa 01       		.uleb128 0x1
+ 1177 01ab 9C       		.byte	0x9c
+ 1178 01ac BD010000 		.4byte	0x1bd
+ 1179 01b0 0B       		.uleb128 0xb
+ 1180 01b1 6300     		.ascii	"c\000"
+ 1181 01b3 01       		.byte	0x1
+ 1182 01b4 31       		.byte	0x31
+ 1183 01b5 6B000000 		.4byte	0x6b
+ 1184 01b9 02       		.uleb128 0x2
+ 1185 01ba 91       		.byte	0x91
+ 1186 01bb 77       		.sleb128 -9
+ 1187 01bc 00       		.byte	0
+ 1188 01bd 0C       		.uleb128 0xc
+ 1189 01be 3A000000 		.4byte	.LASF44
+ 1190 01c2 01       		.byte	0x1
+ 1191 01c3 5F       		.byte	0x5f
+ 1192 01c4 00000000 		.4byte	.LFB35
+ 1193 01c8 08000000 		.4byte	.LFE35-.LFB35
+ 1194 01cc 01       		.uleb128 0x1
+ 1195 01cd 9C       		.byte	0x9c
+ 1196 01ce 0C       		.uleb128 0xc
+ 1197 01cf 1A000000 		.4byte	.LASF45
+ 1198 01d3 01       		.byte	0x1
+ 1199 01d4 6A       		.byte	0x6a
+ 1200 01d5 00000000 		.4byte	.LFB36
+ 1201 01d9 44000000 		.4byte	.LFE36-.LFB36
+ 1202 01dd 01       		.uleb128 0x1
+ 1203 01de 9C       		.byte	0x9c
+ 1204 01df 0C       		.uleb128 0xc
+ 1205 01e0 FD000000 		.4byte	.LASF46
+ 1206 01e4 01       		.byte	0x1
+ 1207 01e5 98       		.byte	0x98
+ 1208 01e6 00000000 		.4byte	.LFB37
+ 1209 01ea 08000000 		.4byte	.LFE37-.LFB37
+ 1210 01ee 01       		.uleb128 0x1
+ 1211 01ef 9C       		.byte	0x9c
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccH3w0kW.s 			page 31
 
 
- 1384 000a 0E       		.uleb128 0xe
- 1385 000b 55       		.uleb128 0x55
- 1386 000c 17       		.uleb128 0x17
- 1387 000d 11       		.uleb128 0x11
- 1388 000e 01       		.uleb128 0x1
- 1389 000f 10       		.uleb128 0x10
- 1390 0010 17       		.uleb128 0x17
- 1391 0011 00       		.byte	0
- 1392 0012 00       		.byte	0
- 1393 0013 02       		.uleb128 0x2
- 1394 0014 24       		.uleb128 0x24
- 1395 0015 00       		.byte	0
- 1396 0016 0B       		.uleb128 0xb
- 1397 0017 0B       		.uleb128 0xb
- 1398 0018 3E       		.uleb128 0x3e
- 1399 0019 0B       		.uleb128 0xb
- 1400 001a 03       		.uleb128 0x3
- 1401 001b 0E       		.uleb128 0xe
- 1402 001c 00       		.byte	0
- 1403 001d 00       		.byte	0
- 1404 001e 03       		.uleb128 0x3
- 1405 001f 24       		.uleb128 0x24
- 1406 0020 00       		.byte	0
- 1407 0021 0B       		.uleb128 0xb
- 1408 0022 0B       		.uleb128 0xb
- 1409 0023 3E       		.uleb128 0x3e
- 1410 0024 0B       		.uleb128 0xb
- 1411 0025 03       		.uleb128 0x3
- 1412 0026 08       		.uleb128 0x8
- 1413 0027 00       		.byte	0
- 1414 0028 00       		.byte	0
- 1415 0029 04       		.uleb128 0x4
- 1416 002a 16       		.uleb128 0x16
- 1417 002b 00       		.byte	0
- 1418 002c 03       		.uleb128 0x3
- 1419 002d 0E       		.uleb128 0xe
- 1420 002e 3A       		.uleb128 0x3a
- 1421 002f 0B       		.uleb128 0xb
- 1422 0030 3B       		.uleb128 0x3b
- 1423 0031 0B       		.uleb128 0xb
- 1424 0032 49       		.uleb128 0x49
- 1425 0033 13       		.uleb128 0x13
- 1426 0034 00       		.byte	0
- 1427 0035 00       		.byte	0
- 1428 0036 05       		.uleb128 0x5
- 1429 0037 04       		.uleb128 0x4
- 1430 0038 01       		.byte	0x1
- 1431 0039 03       		.uleb128 0x3
- 1432 003a 0E       		.uleb128 0xe
- 1433 003b 0B       		.uleb128 0xb
- 1434 003c 0B       		.uleb128 0xb
- 1435 003d 3A       		.uleb128 0x3a
- 1436 003e 0B       		.uleb128 0xb
- 1437 003f 3B       		.uleb128 0x3b
- 1438 0040 0B       		.uleb128 0xb
- 1439 0041 01       		.uleb128 0x1
- 1440 0042 13       		.uleb128 0x13
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccl4ljik.s 			page 34
+ 1212 01f0 0C       		.uleb128 0xc
+ 1213 01f1 08020000 		.4byte	.LASF47
+ 1214 01f5 01       		.byte	0x1
+ 1215 01f6 A2       		.byte	0xa2
+ 1216 01f7 00000000 		.4byte	.LFB38
+ 1217 01fb 48000000 		.4byte	.LFE38-.LFB38
+ 1218 01ff 01       		.uleb128 0x1
+ 1219 0200 9C       		.byte	0x9c
+ 1220 0201 0C       		.uleb128 0xc
+ 1221 0202 94030000 		.4byte	.LASF48
+ 1222 0206 01       		.byte	0x1
+ 1223 0207 D3       		.byte	0xd3
+ 1224 0208 00000000 		.4byte	.LFB39
+ 1225 020c 48000000 		.4byte	.LFE39-.LFB39
+ 1226 0210 01       		.uleb128 0x1
+ 1227 0211 9C       		.byte	0x9c
+ 1228 0212 0D       		.uleb128 0xd
+ 1229 0213 03010000 		.4byte	.LASF49
+ 1230 0217 01       		.byte	0x1
+ 1231 0218 0201     		.2byte	0x102
+ 1232 021a 00000000 		.4byte	.LFB40
+ 1233 021e 08000000 		.4byte	.LFE40-.LFB40
+ 1234 0222 01       		.uleb128 0x1
+ 1235 0223 9C       		.byte	0x9c
+ 1236 0224 0E       		.uleb128 0xe
+ 1237 0225 6C656400 		.ascii	"led\000"
+ 1238 0229 01       		.byte	0x1
+ 1239 022a 0B01     		.2byte	0x10b
+ 1240 022c 00000000 		.4byte	.LFB41
+ 1241 0230 88000000 		.4byte	.LFE41-.LFB41
+ 1242 0234 01       		.uleb128 0x1
+ 1243 0235 9C       		.byte	0x9c
+ 1244 0236 4A020000 		.4byte	0x24a
+ 1245 023a 0F       		.uleb128 0xf
+ 1246 023b 6F6C6400 		.ascii	"old\000"
+ 1247 023f 01       		.byte	0x1
+ 1248 0240 0D01     		.2byte	0x10d
+ 1249 0242 76000000 		.4byte	0x76
+ 1250 0246 02       		.uleb128 0x2
+ 1251 0247 91       		.byte	0x91
+ 1252 0248 76       		.sleb128 -10
+ 1253 0249 00       		.byte	0
+ 1254 024a 10       		.uleb128 0x10
+ 1255 024b 14000000 		.4byte	.LASF51
+ 1256 024f 01       		.byte	0x1
+ 1257 0250 4B01     		.2byte	0x14b
+ 1258 0252 00000000 		.4byte	.LFB42
+ 1259 0256 88000000 		.4byte	.LFE42-.LFB42
+ 1260 025a 01       		.uleb128 0x1
+ 1261 025b 9C       		.byte	0x9c
+ 1262 025c 70020000 		.4byte	0x270
+ 1263 0260 0F       		.uleb128 0xf
+ 1264 0261 6F6C6400 		.ascii	"old\000"
+ 1265 0265 01       		.byte	0x1
+ 1266 0266 4D01     		.2byte	0x14d
+ 1267 0268 76000000 		.4byte	0x76
+ 1268 026c 02       		.uleb128 0x2
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccH3w0kW.s 			page 32
 
 
- 1441 0043 00       		.byte	0
- 1442 0044 00       		.byte	0
- 1443 0045 06       		.uleb128 0x6
- 1444 0046 28       		.uleb128 0x28
- 1445 0047 00       		.byte	0
- 1446 0048 03       		.uleb128 0x3
- 1447 0049 0E       		.uleb128 0xe
- 1448 004a 1C       		.uleb128 0x1c
- 1449 004b 0D       		.uleb128 0xd
- 1450 004c 00       		.byte	0
- 1451 004d 00       		.byte	0
- 1452 004e 07       		.uleb128 0x7
- 1453 004f 04       		.uleb128 0x4
- 1454 0050 01       		.byte	0x1
- 1455 0051 03       		.uleb128 0x3
- 1456 0052 0E       		.uleb128 0xe
- 1457 0053 0B       		.uleb128 0xb
- 1458 0054 0B       		.uleb128 0xb
- 1459 0055 3A       		.uleb128 0x3a
- 1460 0056 0B       		.uleb128 0xb
- 1461 0057 3B       		.uleb128 0x3b
- 1462 0058 05       		.uleb128 0x5
- 1463 0059 01       		.uleb128 0x1
- 1464 005a 13       		.uleb128 0x13
- 1465 005b 00       		.byte	0
- 1466 005c 00       		.byte	0
- 1467 005d 08       		.uleb128 0x8
- 1468 005e 2E       		.uleb128 0x2e
- 1469 005f 01       		.byte	0x1
- 1470 0060 3F       		.uleb128 0x3f
- 1471 0061 19       		.uleb128 0x19
- 1472 0062 03       		.uleb128 0x3
- 1473 0063 0E       		.uleb128 0xe
- 1474 0064 3A       		.uleb128 0x3a
- 1475 0065 0B       		.uleb128 0xb
- 1476 0066 3B       		.uleb128 0x3b
- 1477 0067 0B       		.uleb128 0xb
- 1478 0068 27       		.uleb128 0x27
- 1479 0069 19       		.uleb128 0x19
- 1480 006a 11       		.uleb128 0x11
- 1481 006b 01       		.uleb128 0x1
- 1482 006c 12       		.uleb128 0x12
- 1483 006d 06       		.uleb128 0x6
- 1484 006e 40       		.uleb128 0x40
- 1485 006f 18       		.uleb128 0x18
- 1486 0070 9642     		.uleb128 0x2116
- 1487 0072 19       		.uleb128 0x19
- 1488 0073 01       		.uleb128 0x1
- 1489 0074 13       		.uleb128 0x13
- 1490 0075 00       		.byte	0
- 1491 0076 00       		.byte	0
- 1492 0077 09       		.uleb128 0x9
- 1493 0078 34       		.uleb128 0x34
- 1494 0079 00       		.byte	0
- 1495 007a 03       		.uleb128 0x3
- 1496 007b 0E       		.uleb128 0xe
- 1497 007c 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccl4ljik.s 			page 35
+ 1269 026d 91       		.byte	0x91
+ 1270 026e 76       		.sleb128 -10
+ 1271 026f 00       		.byte	0
+ 1272 0270 10       		.uleb128 0x10
+ 1273 0271 26020000 		.4byte	.LASF52
+ 1274 0275 01       		.byte	0x1
+ 1275 0276 9901     		.2byte	0x199
+ 1276 0278 00000000 		.4byte	.LFB43
+ 1277 027c 8C000000 		.4byte	.LFE43-.LFB43
+ 1278 0280 01       		.uleb128 0x1
+ 1279 0281 9C       		.byte	0x9c
+ 1280 0282 96020000 		.4byte	0x296
+ 1281 0286 0F       		.uleb128 0xf
+ 1282 0287 6F6C6400 		.ascii	"old\000"
+ 1283 028b 01       		.byte	0x1
+ 1284 028c 9A01     		.2byte	0x19a
+ 1285 028e 76000000 		.4byte	0x76
+ 1286 0292 02       		.uleb128 0x2
+ 1287 0293 91       		.byte	0x91
+ 1288 0294 76       		.sleb128 -10
+ 1289 0295 00       		.byte	0
+ 1290 0296 11       		.uleb128 0x11
+ 1291 0297 AB030000 		.4byte	.LASF68
+ 1292 029b 01       		.byte	0x1
+ 1293 029c C401     		.2byte	0x1c4
+ 1294 029e 5D000000 		.4byte	0x5d
+ 1295 02a2 00000000 		.4byte	.LFB44
+ 1296 02a6 4C000000 		.4byte	.LFE44-.LFB44
+ 1297 02aa 01       		.uleb128 0x1
+ 1298 02ab 9C       		.byte	0x9c
+ 1299 02ac 12       		.uleb128 0x12
+ 1300 02ad 76000000 		.4byte	0x76
+ 1301 02b1 BC020000 		.4byte	0x2bc
+ 1302 02b5 13       		.uleb128 0x13
+ 1303 02b6 A1000000 		.4byte	0xa1
+ 1304 02ba 0D       		.byte	0xd
+ 1305 02bb 00       		.byte	0
+ 1306 02bc 14       		.uleb128 0x14
+ 1307 02bd A0030000 		.4byte	.LASF53
+ 1308 02c1 01       		.byte	0x1
+ 1309 02c2 0A       		.byte	0xa
+ 1310 02c3 AC020000 		.4byte	0x2ac
+ 1311 02c7 05       		.uleb128 0x5
+ 1312 02c8 03       		.byte	0x3
+ 1313 02c9 00000000 		.4byte	data_array
+ 1314 02cd 12       		.uleb128 0x12
+ 1315 02ce 76000000 		.4byte	0x76
+ 1316 02d2 DD020000 		.4byte	0x2dd
+ 1317 02d6 13       		.uleb128 0x13
+ 1318 02d7 A1000000 		.4byte	0xa1
+ 1319 02db 13       		.byte	0x13
+ 1320 02dc 00       		.byte	0
+ 1321 02dd 14       		.uleb128 0x14
+ 1322 02de A8020000 		.4byte	.LASF54
+ 1323 02e2 01       		.byte	0x1
+ 1324 02e3 0B       		.byte	0xb
+ 1325 02e4 CD020000 		.4byte	0x2cd
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccH3w0kW.s 			page 33
 
 
- 1498 007d 0B       		.uleb128 0xb
- 1499 007e 3B       		.uleb128 0x3b
- 1500 007f 0B       		.uleb128 0xb
- 1501 0080 49       		.uleb128 0x49
- 1502 0081 13       		.uleb128 0x13
- 1503 0082 02       		.uleb128 0x2
- 1504 0083 18       		.uleb128 0x18
- 1505 0084 00       		.byte	0
- 1506 0085 00       		.byte	0
- 1507 0086 0A       		.uleb128 0xa
- 1508 0087 2E       		.uleb128 0x2e
- 1509 0088 01       		.byte	0x1
- 1510 0089 3F       		.uleb128 0x3f
- 1511 008a 19       		.uleb128 0x19
- 1512 008b 03       		.uleb128 0x3
- 1513 008c 0E       		.uleb128 0xe
- 1514 008d 3A       		.uleb128 0x3a
- 1515 008e 0B       		.uleb128 0xb
- 1516 008f 3B       		.uleb128 0x3b
- 1517 0090 0B       		.uleb128 0xb
- 1518 0091 11       		.uleb128 0x11
- 1519 0092 01       		.uleb128 0x1
- 1520 0093 12       		.uleb128 0x12
- 1521 0094 06       		.uleb128 0x6
- 1522 0095 40       		.uleb128 0x40
- 1523 0096 18       		.uleb128 0x18
- 1524 0097 9642     		.uleb128 0x2116
- 1525 0099 19       		.uleb128 0x19
- 1526 009a 01       		.uleb128 0x1
- 1527 009b 13       		.uleb128 0x13
- 1528 009c 00       		.byte	0
- 1529 009d 00       		.byte	0
- 1530 009e 0B       		.uleb128 0xb
- 1531 009f 34       		.uleb128 0x34
- 1532 00a0 00       		.byte	0
- 1533 00a1 03       		.uleb128 0x3
- 1534 00a2 08       		.uleb128 0x8
- 1535 00a3 3A       		.uleb128 0x3a
- 1536 00a4 0B       		.uleb128 0xb
- 1537 00a5 3B       		.uleb128 0x3b
- 1538 00a6 0B       		.uleb128 0xb
- 1539 00a7 49       		.uleb128 0x49
- 1540 00a8 13       		.uleb128 0x13
- 1541 00a9 02       		.uleb128 0x2
- 1542 00aa 18       		.uleb128 0x18
- 1543 00ab 00       		.byte	0
- 1544 00ac 00       		.byte	0
- 1545 00ad 0C       		.uleb128 0xc
- 1546 00ae 2E       		.uleb128 0x2e
- 1547 00af 00       		.byte	0
- 1548 00b0 3F       		.uleb128 0x3f
- 1549 00b1 19       		.uleb128 0x19
- 1550 00b2 03       		.uleb128 0x3
- 1551 00b3 0E       		.uleb128 0xe
- 1552 00b4 3A       		.uleb128 0x3a
- 1553 00b5 0B       		.uleb128 0xb
- 1554 00b6 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccl4ljik.s 			page 36
+ 1326 02e8 05       		.uleb128 0x5
+ 1327 02e9 03       		.byte	0x3
+ 1328 02ea 00000000 		.4byte	servo_array
+ 1329 02ee 14       		.uleb128 0x14
+ 1330 02ef C2030000 		.4byte	.LASF55
+ 1331 02f3 01       		.byte	0x1
+ 1332 02f4 0C       		.byte	0xc
+ 1333 02f5 76000000 		.4byte	0x76
+ 1334 02f9 05       		.uleb128 0x5
+ 1335 02fa 03       		.byte	0x3
+ 1336 02fb 00000000 		.4byte	feedback_count
+ 1337 02ff 14       		.uleb128 0x14
+ 1338 0300 B0030000 		.4byte	.LASF56
+ 1339 0304 01       		.byte	0x1
+ 1340 0305 0D       		.byte	0xd
+ 1341 0306 6B000000 		.4byte	0x6b
+ 1342 030a 05       		.uleb128 0x5
+ 1343 030b 03       		.byte	0x3
+ 1344 030c 00000000 		.4byte	timerFlag
+ 1345 0310 14       		.uleb128 0x14
+ 1346 0311 85030000 		.4byte	.LASF57
+ 1347 0315 01       		.byte	0x1
+ 1348 0316 0E       		.byte	0xe
+ 1349 0317 6B000000 		.4byte	0x6b
+ 1350 031b 05       		.uleb128 0x5
+ 1351 031c 03       		.byte	0x3
+ 1352 031d 00000000 		.4byte	serv_avg_count
+ 1353 0321 14       		.uleb128 0x14
+ 1354 0322 17030000 		.4byte	.LASF58
+ 1355 0326 01       		.byte	0x1
+ 1356 0327 68       		.byte	0x68
+ 1357 0328 A8000000 		.4byte	0xa8
+ 1358 032c 05       		.uleb128 0x5
+ 1359 032d 03       		.byte	0x3
+ 1360 032e 00000000 		.4byte	shldr_state
+ 1361 0332 14       		.uleb128 0x14
+ 1362 0333 B2010000 		.4byte	.LASF59
+ 1363 0337 01       		.byte	0x1
+ 1364 0338 A0       		.byte	0xa0
+ 1365 0339 CD000000 		.4byte	0xcd
+ 1366 033d 05       		.uleb128 0x5
+ 1367 033e 03       		.byte	0x3
+ 1368 033f 00000000 		.4byte	wristTilt_state
+ 1369 0343 14       		.uleb128 0x14
+ 1370 0344 CC000000 		.4byte	.LASF60
+ 1371 0348 01       		.byte	0x1
+ 1372 0349 D1       		.byte	0xd1
+ 1373 034a F2000000 		.4byte	0xf2
+ 1374 034e 05       		.uleb128 0x5
+ 1375 034f 03       		.byte	0x3
+ 1376 0350 00000000 		.4byte	wristRotate_state
+ 1377 0354 15       		.uleb128 0x15
+ 1378 0355 39030000 		.4byte	.LASF61
+ 1379 0359 01       		.byte	0x1
+ 1380 035a 0A01     		.2byte	0x10a
+ 1381 035c 17010000 		.4byte	0x117
+ 1382 0360 05       		.uleb128 0x5
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccH3w0kW.s 			page 34
 
 
- 1555 00b7 0B       		.uleb128 0xb
- 1556 00b8 11       		.uleb128 0x11
- 1557 00b9 01       		.uleb128 0x1
- 1558 00ba 12       		.uleb128 0x12
- 1559 00bb 06       		.uleb128 0x6
- 1560 00bc 40       		.uleb128 0x40
- 1561 00bd 18       		.uleb128 0x18
- 1562 00be 9742     		.uleb128 0x2117
- 1563 00c0 19       		.uleb128 0x19
- 1564 00c1 00       		.byte	0
- 1565 00c2 00       		.byte	0
- 1566 00c3 0D       		.uleb128 0xd
- 1567 00c4 2E       		.uleb128 0x2e
- 1568 00c5 01       		.byte	0x1
- 1569 00c6 3F       		.uleb128 0x3f
- 1570 00c7 19       		.uleb128 0x19
- 1571 00c8 03       		.uleb128 0x3
- 1572 00c9 08       		.uleb128 0x8
- 1573 00ca 3A       		.uleb128 0x3a
- 1574 00cb 0B       		.uleb128 0xb
- 1575 00cc 3B       		.uleb128 0x3b
- 1576 00cd 05       		.uleb128 0x5
- 1577 00ce 11       		.uleb128 0x11
- 1578 00cf 01       		.uleb128 0x1
- 1579 00d0 12       		.uleb128 0x12
- 1580 00d1 06       		.uleb128 0x6
- 1581 00d2 40       		.uleb128 0x40
- 1582 00d3 18       		.uleb128 0x18
- 1583 00d4 9642     		.uleb128 0x2116
- 1584 00d6 19       		.uleb128 0x19
- 1585 00d7 01       		.uleb128 0x1
- 1586 00d8 13       		.uleb128 0x13
- 1587 00d9 00       		.byte	0
- 1588 00da 00       		.byte	0
- 1589 00db 0E       		.uleb128 0xe
- 1590 00dc 34       		.uleb128 0x34
- 1591 00dd 00       		.byte	0
- 1592 00de 03       		.uleb128 0x3
- 1593 00df 08       		.uleb128 0x8
- 1594 00e0 3A       		.uleb128 0x3a
- 1595 00e1 0B       		.uleb128 0xb
- 1596 00e2 3B       		.uleb128 0x3b
- 1597 00e3 05       		.uleb128 0x5
- 1598 00e4 49       		.uleb128 0x49
- 1599 00e5 13       		.uleb128 0x13
- 1600 00e6 02       		.uleb128 0x2
- 1601 00e7 18       		.uleb128 0x18
- 1602 00e8 00       		.byte	0
- 1603 00e9 00       		.byte	0
- 1604 00ea 0F       		.uleb128 0xf
- 1605 00eb 2E       		.uleb128 0x2e
- 1606 00ec 01       		.byte	0x1
- 1607 00ed 3F       		.uleb128 0x3f
- 1608 00ee 19       		.uleb128 0x19
- 1609 00ef 03       		.uleb128 0x3
- 1610 00f0 0E       		.uleb128 0xe
- 1611 00f1 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccl4ljik.s 			page 37
+ 1383 0361 03       		.byte	0x3
+ 1384 0362 00000000 		.4byte	led_state
+ 1385 0366 15       		.uleb128 0x15
+ 1386 0367 C0000000 		.4byte	.LASF62
+ 1387 036b 01       		.byte	0x1
+ 1388 036c 4A01     		.2byte	0x14a
+ 1389 036e 37010000 		.4byte	0x137
+ 1390 0372 05       		.uleb128 0x5
+ 1391 0373 03       		.byte	0x3
+ 1392 0374 00000000 		.4byte	servo_state
+ 1393 0378 15       		.uleb128 0x15
+ 1394 0379 C2020000 		.4byte	.LASF63
+ 1395 037d 01       		.byte	0x1
+ 1396 037e 9801     		.2byte	0x198
+ 1397 0380 57010000 		.4byte	0x157
+ 1398 0384 05       		.uleb128 0x5
+ 1399 0385 03       		.byte	0x3
+ 1400 0386 00000000 		.4byte	motor_state
+ 1401 038a 00       		.byte	0
+ 1402              		.section	.debug_abbrev,"",%progbits
+ 1403              	.Ldebug_abbrev0:
+ 1404 0000 01       		.uleb128 0x1
+ 1405 0001 11       		.uleb128 0x11
+ 1406 0002 01       		.byte	0x1
+ 1407 0003 25       		.uleb128 0x25
+ 1408 0004 0E       		.uleb128 0xe
+ 1409 0005 13       		.uleb128 0x13
+ 1410 0006 0B       		.uleb128 0xb
+ 1411 0007 03       		.uleb128 0x3
+ 1412 0008 0E       		.uleb128 0xe
+ 1413 0009 1B       		.uleb128 0x1b
+ 1414 000a 0E       		.uleb128 0xe
+ 1415 000b 55       		.uleb128 0x55
+ 1416 000c 17       		.uleb128 0x17
+ 1417 000d 11       		.uleb128 0x11
+ 1418 000e 01       		.uleb128 0x1
+ 1419 000f 10       		.uleb128 0x10
+ 1420 0010 17       		.uleb128 0x17
+ 1421 0011 00       		.byte	0
+ 1422 0012 00       		.byte	0
+ 1423 0013 02       		.uleb128 0x2
+ 1424 0014 24       		.uleb128 0x24
+ 1425 0015 00       		.byte	0
+ 1426 0016 0B       		.uleb128 0xb
+ 1427 0017 0B       		.uleb128 0xb
+ 1428 0018 3E       		.uleb128 0x3e
+ 1429 0019 0B       		.uleb128 0xb
+ 1430 001a 03       		.uleb128 0x3
+ 1431 001b 0E       		.uleb128 0xe
+ 1432 001c 00       		.byte	0
+ 1433 001d 00       		.byte	0
+ 1434 001e 03       		.uleb128 0x3
+ 1435 001f 24       		.uleb128 0x24
+ 1436 0020 00       		.byte	0
+ 1437 0021 0B       		.uleb128 0xb
+ 1438 0022 0B       		.uleb128 0xb
+ 1439 0023 3E       		.uleb128 0x3e
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccH3w0kW.s 			page 35
 
 
- 1612 00f2 0B       		.uleb128 0xb
- 1613 00f3 3B       		.uleb128 0x3b
- 1614 00f4 05       		.uleb128 0x5
- 1615 00f5 11       		.uleb128 0x11
- 1616 00f6 01       		.uleb128 0x1
- 1617 00f7 12       		.uleb128 0x12
- 1618 00f8 06       		.uleb128 0x6
- 1619 00f9 40       		.uleb128 0x40
- 1620 00fa 18       		.uleb128 0x18
- 1621 00fb 9642     		.uleb128 0x2116
- 1622 00fd 19       		.uleb128 0x19
- 1623 00fe 01       		.uleb128 0x1
- 1624 00ff 13       		.uleb128 0x13
- 1625 0100 00       		.byte	0
- 1626 0101 00       		.byte	0
- 1627 0102 10       		.uleb128 0x10
- 1628 0103 2E       		.uleb128 0x2e
- 1629 0104 00       		.byte	0
- 1630 0105 3F       		.uleb128 0x3f
- 1631 0106 19       		.uleb128 0x19
- 1632 0107 03       		.uleb128 0x3
- 1633 0108 0E       		.uleb128 0xe
- 1634 0109 3A       		.uleb128 0x3a
- 1635 010a 0B       		.uleb128 0xb
- 1636 010b 3B       		.uleb128 0x3b
- 1637 010c 05       		.uleb128 0x5
- 1638 010d 49       		.uleb128 0x49
- 1639 010e 13       		.uleb128 0x13
- 1640 010f 11       		.uleb128 0x11
- 1641 0110 01       		.uleb128 0x1
- 1642 0111 12       		.uleb128 0x12
- 1643 0112 06       		.uleb128 0x6
- 1644 0113 40       		.uleb128 0x40
- 1645 0114 18       		.uleb128 0x18
- 1646 0115 9642     		.uleb128 0x2116
- 1647 0117 19       		.uleb128 0x19
- 1648 0118 00       		.byte	0
- 1649 0119 00       		.byte	0
- 1650 011a 11       		.uleb128 0x11
- 1651 011b 01       		.uleb128 0x1
- 1652 011c 01       		.byte	0x1
- 1653 011d 49       		.uleb128 0x49
- 1654 011e 13       		.uleb128 0x13
- 1655 011f 01       		.uleb128 0x1
- 1656 0120 13       		.uleb128 0x13
- 1657 0121 00       		.byte	0
- 1658 0122 00       		.byte	0
- 1659 0123 12       		.uleb128 0x12
- 1660 0124 21       		.uleb128 0x21
- 1661 0125 00       		.byte	0
- 1662 0126 49       		.uleb128 0x49
- 1663 0127 13       		.uleb128 0x13
- 1664 0128 2F       		.uleb128 0x2f
- 1665 0129 0B       		.uleb128 0xb
- 1666 012a 00       		.byte	0
- 1667 012b 00       		.byte	0
- 1668 012c 13       		.uleb128 0x13
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccl4ljik.s 			page 38
+ 1440 0024 0B       		.uleb128 0xb
+ 1441 0025 03       		.uleb128 0x3
+ 1442 0026 08       		.uleb128 0x8
+ 1443 0027 00       		.byte	0
+ 1444 0028 00       		.byte	0
+ 1445 0029 04       		.uleb128 0x4
+ 1446 002a 16       		.uleb128 0x16
+ 1447 002b 00       		.byte	0
+ 1448 002c 03       		.uleb128 0x3
+ 1449 002d 0E       		.uleb128 0xe
+ 1450 002e 3A       		.uleb128 0x3a
+ 1451 002f 0B       		.uleb128 0xb
+ 1452 0030 3B       		.uleb128 0x3b
+ 1453 0031 0B       		.uleb128 0xb
+ 1454 0032 49       		.uleb128 0x49
+ 1455 0033 13       		.uleb128 0x13
+ 1456 0034 00       		.byte	0
+ 1457 0035 00       		.byte	0
+ 1458 0036 05       		.uleb128 0x5
+ 1459 0037 04       		.uleb128 0x4
+ 1460 0038 01       		.byte	0x1
+ 1461 0039 03       		.uleb128 0x3
+ 1462 003a 0E       		.uleb128 0xe
+ 1463 003b 0B       		.uleb128 0xb
+ 1464 003c 0B       		.uleb128 0xb
+ 1465 003d 3A       		.uleb128 0x3a
+ 1466 003e 0B       		.uleb128 0xb
+ 1467 003f 3B       		.uleb128 0x3b
+ 1468 0040 0B       		.uleb128 0xb
+ 1469 0041 01       		.uleb128 0x1
+ 1470 0042 13       		.uleb128 0x13
+ 1471 0043 00       		.byte	0
+ 1472 0044 00       		.byte	0
+ 1473 0045 06       		.uleb128 0x6
+ 1474 0046 28       		.uleb128 0x28
+ 1475 0047 00       		.byte	0
+ 1476 0048 03       		.uleb128 0x3
+ 1477 0049 0E       		.uleb128 0xe
+ 1478 004a 1C       		.uleb128 0x1c
+ 1479 004b 0D       		.uleb128 0xd
+ 1480 004c 00       		.byte	0
+ 1481 004d 00       		.byte	0
+ 1482 004e 07       		.uleb128 0x7
+ 1483 004f 04       		.uleb128 0x4
+ 1484 0050 01       		.byte	0x1
+ 1485 0051 03       		.uleb128 0x3
+ 1486 0052 0E       		.uleb128 0xe
+ 1487 0053 0B       		.uleb128 0xb
+ 1488 0054 0B       		.uleb128 0xb
+ 1489 0055 3A       		.uleb128 0x3a
+ 1490 0056 0B       		.uleb128 0xb
+ 1491 0057 3B       		.uleb128 0x3b
+ 1492 0058 05       		.uleb128 0x5
+ 1493 0059 01       		.uleb128 0x1
+ 1494 005a 13       		.uleb128 0x13
+ 1495 005b 00       		.byte	0
+ 1496 005c 00       		.byte	0
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccH3w0kW.s 			page 36
 
 
- 1669 012d 34       		.uleb128 0x34
- 1670 012e 00       		.byte	0
- 1671 012f 03       		.uleb128 0x3
- 1672 0130 0E       		.uleb128 0xe
- 1673 0131 3A       		.uleb128 0x3a
- 1674 0132 0B       		.uleb128 0xb
- 1675 0133 3B       		.uleb128 0x3b
- 1676 0134 0B       		.uleb128 0xb
- 1677 0135 49       		.uleb128 0x49
- 1678 0136 13       		.uleb128 0x13
- 1679 0137 3F       		.uleb128 0x3f
- 1680 0138 19       		.uleb128 0x19
- 1681 0139 02       		.uleb128 0x2
- 1682 013a 18       		.uleb128 0x18
- 1683 013b 00       		.byte	0
- 1684 013c 00       		.byte	0
- 1685 013d 14       		.uleb128 0x14
- 1686 013e 34       		.uleb128 0x34
- 1687 013f 00       		.byte	0
- 1688 0140 03       		.uleb128 0x3
- 1689 0141 0E       		.uleb128 0xe
- 1690 0142 3A       		.uleb128 0x3a
- 1691 0143 0B       		.uleb128 0xb
- 1692 0144 3B       		.uleb128 0x3b
- 1693 0145 05       		.uleb128 0x5
- 1694 0146 49       		.uleb128 0x49
- 1695 0147 13       		.uleb128 0x13
- 1696 0148 3F       		.uleb128 0x3f
- 1697 0149 19       		.uleb128 0x19
- 1698 014a 02       		.uleb128 0x2
- 1699 014b 18       		.uleb128 0x18
- 1700 014c 00       		.byte	0
- 1701 014d 00       		.byte	0
- 1702 014e 00       		.byte	0
- 1703              		.section	.debug_aranges,"",%progbits
- 1704 0000 74000000 		.4byte	0x74
- 1705 0004 0200     		.2byte	0x2
- 1706 0006 00000000 		.4byte	.Ldebug_info0
- 1707 000a 04       		.byte	0x4
- 1708 000b 00       		.byte	0
- 1709 000c 0000     		.2byte	0
- 1710 000e 0000     		.2byte	0
- 1711 0010 00000000 		.4byte	.LFB33
- 1712 0014 28000000 		.4byte	.LFE33-.LFB33
- 1713 0018 00000000 		.4byte	.LFB34
- 1714 001c 10010000 		.4byte	.LFE34-.LFB34
- 1715 0020 00000000 		.4byte	.LFB35
- 1716 0024 08000000 		.4byte	.LFE35-.LFB35
- 1717 0028 00000000 		.4byte	.LFB36
- 1718 002c 44000000 		.4byte	.LFE36-.LFB36
- 1719 0030 00000000 		.4byte	.LFB37
- 1720 0034 08000000 		.4byte	.LFE37-.LFB37
- 1721 0038 00000000 		.4byte	.LFB38
- 1722 003c 48000000 		.4byte	.LFE38-.LFB38
- 1723 0040 00000000 		.4byte	.LFB39
- 1724 0044 48000000 		.4byte	.LFE39-.LFB39
- 1725 0048 00000000 		.4byte	.LFB40
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccl4ljik.s 			page 39
+ 1497 005d 08       		.uleb128 0x8
+ 1498 005e 2E       		.uleb128 0x2e
+ 1499 005f 01       		.byte	0x1
+ 1500 0060 3F       		.uleb128 0x3f
+ 1501 0061 19       		.uleb128 0x19
+ 1502 0062 03       		.uleb128 0x3
+ 1503 0063 0E       		.uleb128 0xe
+ 1504 0064 3A       		.uleb128 0x3a
+ 1505 0065 0B       		.uleb128 0xb
+ 1506 0066 3B       		.uleb128 0x3b
+ 1507 0067 0B       		.uleb128 0xb
+ 1508 0068 27       		.uleb128 0x27
+ 1509 0069 19       		.uleb128 0x19
+ 1510 006a 11       		.uleb128 0x11
+ 1511 006b 01       		.uleb128 0x1
+ 1512 006c 12       		.uleb128 0x12
+ 1513 006d 06       		.uleb128 0x6
+ 1514 006e 40       		.uleb128 0x40
+ 1515 006f 18       		.uleb128 0x18
+ 1516 0070 9642     		.uleb128 0x2116
+ 1517 0072 19       		.uleb128 0x19
+ 1518 0073 01       		.uleb128 0x1
+ 1519 0074 13       		.uleb128 0x13
+ 1520 0075 00       		.byte	0
+ 1521 0076 00       		.byte	0
+ 1522 0077 09       		.uleb128 0x9
+ 1523 0078 34       		.uleb128 0x34
+ 1524 0079 00       		.byte	0
+ 1525 007a 03       		.uleb128 0x3
+ 1526 007b 0E       		.uleb128 0xe
+ 1527 007c 3A       		.uleb128 0x3a
+ 1528 007d 0B       		.uleb128 0xb
+ 1529 007e 3B       		.uleb128 0x3b
+ 1530 007f 0B       		.uleb128 0xb
+ 1531 0080 49       		.uleb128 0x49
+ 1532 0081 13       		.uleb128 0x13
+ 1533 0082 02       		.uleb128 0x2
+ 1534 0083 18       		.uleb128 0x18
+ 1535 0084 00       		.byte	0
+ 1536 0085 00       		.byte	0
+ 1537 0086 0A       		.uleb128 0xa
+ 1538 0087 2E       		.uleb128 0x2e
+ 1539 0088 01       		.byte	0x1
+ 1540 0089 3F       		.uleb128 0x3f
+ 1541 008a 19       		.uleb128 0x19
+ 1542 008b 03       		.uleb128 0x3
+ 1543 008c 0E       		.uleb128 0xe
+ 1544 008d 3A       		.uleb128 0x3a
+ 1545 008e 0B       		.uleb128 0xb
+ 1546 008f 3B       		.uleb128 0x3b
+ 1547 0090 0B       		.uleb128 0xb
+ 1548 0091 11       		.uleb128 0x11
+ 1549 0092 01       		.uleb128 0x1
+ 1550 0093 12       		.uleb128 0x12
+ 1551 0094 06       		.uleb128 0x6
+ 1552 0095 40       		.uleb128 0x40
+ 1553 0096 18       		.uleb128 0x18
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccH3w0kW.s 			page 37
 
 
- 1726 004c 08000000 		.4byte	.LFE40-.LFB40
- 1727 0050 00000000 		.4byte	.LFB41
- 1728 0054 88000000 		.4byte	.LFE41-.LFB41
- 1729 0058 00000000 		.4byte	.LFB42
- 1730 005c 88000000 		.4byte	.LFE42-.LFB42
- 1731 0060 00000000 		.4byte	.LFB43
- 1732 0064 8C000000 		.4byte	.LFE43-.LFB43
- 1733 0068 00000000 		.4byte	.LFB44
- 1734 006c 4C000000 		.4byte	.LFE44-.LFB44
- 1735 0070 00000000 		.4byte	0
- 1736 0074 00000000 		.4byte	0
- 1737              		.section	.debug_ranges,"",%progbits
- 1738              	.Ldebug_ranges0:
- 1739 0000 00000000 		.4byte	.LFB33
- 1740 0004 28000000 		.4byte	.LFE33
- 1741 0008 00000000 		.4byte	.LFB34
- 1742 000c 10010000 		.4byte	.LFE34
- 1743 0010 00000000 		.4byte	.LFB35
- 1744 0014 08000000 		.4byte	.LFE35
- 1745 0018 00000000 		.4byte	.LFB36
- 1746 001c 44000000 		.4byte	.LFE36
- 1747 0020 00000000 		.4byte	.LFB37
- 1748 0024 08000000 		.4byte	.LFE37
- 1749 0028 00000000 		.4byte	.LFB38
- 1750 002c 48000000 		.4byte	.LFE38
- 1751 0030 00000000 		.4byte	.LFB39
- 1752 0034 48000000 		.4byte	.LFE39
- 1753 0038 00000000 		.4byte	.LFB40
- 1754 003c 08000000 		.4byte	.LFE40
- 1755 0040 00000000 		.4byte	.LFB41
- 1756 0044 88000000 		.4byte	.LFE41
- 1757 0048 00000000 		.4byte	.LFB42
- 1758 004c 88000000 		.4byte	.LFE42
- 1759 0050 00000000 		.4byte	.LFB43
- 1760 0054 8C000000 		.4byte	.LFE43
- 1761 0058 00000000 		.4byte	.LFB44
- 1762 005c 4C000000 		.4byte	.LFE44
- 1763 0060 00000000 		.4byte	0
- 1764 0064 00000000 		.4byte	0
- 1765              		.section	.debug_line,"",%progbits
- 1766              	.Ldebug_line0:
- 1767 0000 A7010000 		.section	.debug_str,"MS",%progbits,1
- 1767      02004500 
- 1767      00000201 
- 1767      FB0E0D00 
- 1767      01010101 
- 1768              	.LASF10:
- 1769 0000 75696E74 		.ascii	"uint16\000"
- 1769      313600
- 1770              	.LASF28:
- 1771 0007 726F7461 		.ascii	"rotate_start\000"
- 1771      74655F73 
- 1771      74617274 
- 1771      00
- 1772              	.LASF51:
- 1773 0014 73657276 		.ascii	"servo\000"
- 1773      6F00
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccl4ljik.s 			page 40
+ 1554 0097 9642     		.uleb128 0x2116
+ 1555 0099 19       		.uleb128 0x19
+ 1556 009a 01       		.uleb128 0x1
+ 1557 009b 13       		.uleb128 0x13
+ 1558 009c 00       		.byte	0
+ 1559 009d 00       		.byte	0
+ 1560 009e 0B       		.uleb128 0xb
+ 1561 009f 34       		.uleb128 0x34
+ 1562 00a0 00       		.byte	0
+ 1563 00a1 03       		.uleb128 0x3
+ 1564 00a2 08       		.uleb128 0x8
+ 1565 00a3 3A       		.uleb128 0x3a
+ 1566 00a4 0B       		.uleb128 0xb
+ 1567 00a5 3B       		.uleb128 0x3b
+ 1568 00a6 0B       		.uleb128 0xb
+ 1569 00a7 49       		.uleb128 0x49
+ 1570 00a8 13       		.uleb128 0x13
+ 1571 00a9 02       		.uleb128 0x2
+ 1572 00aa 18       		.uleb128 0x18
+ 1573 00ab 00       		.byte	0
+ 1574 00ac 00       		.byte	0
+ 1575 00ad 0C       		.uleb128 0xc
+ 1576 00ae 2E       		.uleb128 0x2e
+ 1577 00af 00       		.byte	0
+ 1578 00b0 3F       		.uleb128 0x3f
+ 1579 00b1 19       		.uleb128 0x19
+ 1580 00b2 03       		.uleb128 0x3
+ 1581 00b3 0E       		.uleb128 0xe
+ 1582 00b4 3A       		.uleb128 0x3a
+ 1583 00b5 0B       		.uleb128 0xb
+ 1584 00b6 3B       		.uleb128 0x3b
+ 1585 00b7 0B       		.uleb128 0xb
+ 1586 00b8 11       		.uleb128 0x11
+ 1587 00b9 01       		.uleb128 0x1
+ 1588 00ba 12       		.uleb128 0x12
+ 1589 00bb 06       		.uleb128 0x6
+ 1590 00bc 40       		.uleb128 0x40
+ 1591 00bd 18       		.uleb128 0x18
+ 1592 00be 9742     		.uleb128 0x2117
+ 1593 00c0 19       		.uleb128 0x19
+ 1594 00c1 00       		.byte	0
+ 1595 00c2 00       		.byte	0
+ 1596 00c3 0D       		.uleb128 0xd
+ 1597 00c4 2E       		.uleb128 0x2e
+ 1598 00c5 00       		.byte	0
+ 1599 00c6 3F       		.uleb128 0x3f
+ 1600 00c7 19       		.uleb128 0x19
+ 1601 00c8 03       		.uleb128 0x3
+ 1602 00c9 0E       		.uleb128 0xe
+ 1603 00ca 3A       		.uleb128 0x3a
+ 1604 00cb 0B       		.uleb128 0xb
+ 1605 00cc 3B       		.uleb128 0x3b
+ 1606 00cd 05       		.uleb128 0x5
+ 1607 00ce 11       		.uleb128 0x11
+ 1608 00cf 01       		.uleb128 0x1
+ 1609 00d0 12       		.uleb128 0x12
+ 1610 00d1 06       		.uleb128 0x6
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccH3w0kW.s 			page 38
 
 
- 1774              	.LASF45:
- 1775 001a 73686F75 		.ascii	"shoulder\000"
- 1775      6C646572 
- 1775      00
- 1776              	.LASF27:
- 1777 0023 726F7461 		.ascii	"rotate_init\000"
- 1777      74655F69 
- 1777      6E697400 
- 1778              	.LASF17:
- 1779 002f 73686C64 		.ascii	"shldr_init\000"
- 1779      725F696E 
- 1779      697400
- 1780              	.LASF44:
- 1781 003a 62617365 		.ascii	"baseAzimuth\000"
- 1781      417A696D 
- 1781      75746800 
- 1782              	.LASF7:
- 1783 0046 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1783      206C6F6E 
- 1783      6720756E 
- 1783      7369676E 
- 1783      65642069 
- 1784              	.LASF34:
- 1785 005d 735F7761 		.ascii	"s_wait\000"
- 1785      697400
- 1786              	.LASF6:
- 1787 0064 6C6F6E67 		.ascii	"long long int\000"
- 1787      206C6F6E 
- 1787      6720696E 
- 1787      7400
- 1788              	.LASF0:
- 1789 0072 7369676E 		.ascii	"signed char\000"
- 1789      65642063 
- 1789      68617200 
- 1790              	.LASF24:
- 1791 007e 74696C74 		.ascii	"tilt_control\000"
- 1791      5F636F6E 
- 1791      74726F6C 
- 1791      00
- 1792              	.LASF65:
- 1793 008b 74696D65 		.ascii	"timer_isr\000"
- 1793      725F6973 
- 1793      7200
- 1794              	.LASF63:
- 1795 0095 2E5C6D61 		.ascii	".\\main.c\000"
- 1795      696E2E63 
- 1795      00
- 1796              	.LASF4:
- 1797 009e 6C6F6E67 		.ascii	"long int\000"
- 1797      20696E74 
- 1797      00
- 1798              	.LASF9:
- 1799 00a7 75696E74 		.ascii	"uint8\000"
- 1799      3800
- 1800              	.LASF41:
- 1801 00ad 6D5F6469 		.ascii	"m_different\000"
- 1801      66666572 
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccl4ljik.s 			page 41
+ 1611 00d2 40       		.uleb128 0x40
+ 1612 00d3 18       		.uleb128 0x18
+ 1613 00d4 9742     		.uleb128 0x2117
+ 1614 00d6 19       		.uleb128 0x19
+ 1615 00d7 00       		.byte	0
+ 1616 00d8 00       		.byte	0
+ 1617 00d9 0E       		.uleb128 0xe
+ 1618 00da 2E       		.uleb128 0x2e
+ 1619 00db 01       		.byte	0x1
+ 1620 00dc 3F       		.uleb128 0x3f
+ 1621 00dd 19       		.uleb128 0x19
+ 1622 00de 03       		.uleb128 0x3
+ 1623 00df 08       		.uleb128 0x8
+ 1624 00e0 3A       		.uleb128 0x3a
+ 1625 00e1 0B       		.uleb128 0xb
+ 1626 00e2 3B       		.uleb128 0x3b
+ 1627 00e3 05       		.uleb128 0x5
+ 1628 00e4 11       		.uleb128 0x11
+ 1629 00e5 01       		.uleb128 0x1
+ 1630 00e6 12       		.uleb128 0x12
+ 1631 00e7 06       		.uleb128 0x6
+ 1632 00e8 40       		.uleb128 0x40
+ 1633 00e9 18       		.uleb128 0x18
+ 1634 00ea 9642     		.uleb128 0x2116
+ 1635 00ec 19       		.uleb128 0x19
+ 1636 00ed 01       		.uleb128 0x1
+ 1637 00ee 13       		.uleb128 0x13
+ 1638 00ef 00       		.byte	0
+ 1639 00f0 00       		.byte	0
+ 1640 00f1 0F       		.uleb128 0xf
+ 1641 00f2 34       		.uleb128 0x34
+ 1642 00f3 00       		.byte	0
+ 1643 00f4 03       		.uleb128 0x3
+ 1644 00f5 08       		.uleb128 0x8
+ 1645 00f6 3A       		.uleb128 0x3a
+ 1646 00f7 0B       		.uleb128 0xb
+ 1647 00f8 3B       		.uleb128 0x3b
+ 1648 00f9 05       		.uleb128 0x5
+ 1649 00fa 49       		.uleb128 0x49
+ 1650 00fb 13       		.uleb128 0x13
+ 1651 00fc 02       		.uleb128 0x2
+ 1652 00fd 18       		.uleb128 0x18
+ 1653 00fe 00       		.byte	0
+ 1654 00ff 00       		.byte	0
+ 1655 0100 10       		.uleb128 0x10
+ 1656 0101 2E       		.uleb128 0x2e
+ 1657 0102 01       		.byte	0x1
+ 1658 0103 3F       		.uleb128 0x3f
+ 1659 0104 19       		.uleb128 0x19
+ 1660 0105 03       		.uleb128 0x3
+ 1661 0106 0E       		.uleb128 0xe
+ 1662 0107 3A       		.uleb128 0x3a
+ 1663 0108 0B       		.uleb128 0xb
+ 1664 0109 3B       		.uleb128 0x3b
+ 1665 010a 05       		.uleb128 0x5
+ 1666 010b 11       		.uleb128 0x11
+ 1667 010c 01       		.uleb128 0x1
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccH3w0kW.s 			page 39
 
 
- 1801      656E7400 
- 1802              	.LASF13:
- 1803 00b9 646F7562 		.ascii	"double\000"
- 1803      6C6500
- 1804              	.LASF59:
- 1805 00c0 73657276 		.ascii	"servo_state\000"
- 1805      6F5F7374 
- 1805      61746500 
- 1806              	.LASF58:
- 1807 00cc 77726973 		.ascii	"wristRotate_state\000"
- 1807      74526F74 
- 1807      6174655F 
- 1807      73746174 
- 1807      6500
- 1808              	.LASF39:
- 1809 00de 6D6F746F 		.ascii	"motor_states\000"
- 1809      725F7374 
- 1809      61746573 
- 1809      00
- 1810              	.LASF18:
- 1811 00eb 73686C64 		.ascii	"shldr_fdbk\000"
- 1811      725F6664 
- 1811      626B00
- 1812              	.LASF11:
- 1813 00f6 75696E74 		.ascii	"uint32\000"
- 1813      333200
- 1814              	.LASF46:
- 1815 00fd 656C626F 		.ascii	"elbow\000"
- 1815      7700
- 1816              	.LASF49:
- 1817 0103 73656E64 		.ascii	"send_feedback\000"
- 1817      5F666565 
- 1817      64626163 
- 1817      6B00
- 1818              	.LASF8:
- 1819 0111 756E7369 		.ascii	"unsigned int\000"
- 1819      676E6564 
- 1819      20696E74 
- 1819      00
- 1820              	.LASF5:
- 1821 011e 6C6F6E67 		.ascii	"long unsigned int\000"
- 1821      20756E73 
- 1821      69676E65 
- 1821      6420696E 
- 1821      7400
- 1822              	.LASF36:
- 1823 0130 6C5F7374 		.ascii	"l_start\000"
- 1823      61727400 
- 1824              	.LASF3:
- 1825 0138 73686F72 		.ascii	"short unsigned int\000"
- 1825      7420756E 
- 1825      7369676E 
- 1825      65642069 
- 1825      6E7400
- 1826              	.LASF64:
- 1827 014b 433A5C55 		.ascii	"C:\\Users\\Samuel\\Documents\\GitHub\\BYU-MarsRover"
- 1827      73657273 
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccl4ljik.s 			page 42
+ 1668 010d 12       		.uleb128 0x12
+ 1669 010e 06       		.uleb128 0x6
+ 1670 010f 40       		.uleb128 0x40
+ 1671 0110 18       		.uleb128 0x18
+ 1672 0111 9642     		.uleb128 0x2116
+ 1673 0113 19       		.uleb128 0x19
+ 1674 0114 01       		.uleb128 0x1
+ 1675 0115 13       		.uleb128 0x13
+ 1676 0116 00       		.byte	0
+ 1677 0117 00       		.byte	0
+ 1678 0118 11       		.uleb128 0x11
+ 1679 0119 2E       		.uleb128 0x2e
+ 1680 011a 00       		.byte	0
+ 1681 011b 3F       		.uleb128 0x3f
+ 1682 011c 19       		.uleb128 0x19
+ 1683 011d 03       		.uleb128 0x3
+ 1684 011e 0E       		.uleb128 0xe
+ 1685 011f 3A       		.uleb128 0x3a
+ 1686 0120 0B       		.uleb128 0xb
+ 1687 0121 3B       		.uleb128 0x3b
+ 1688 0122 05       		.uleb128 0x5
+ 1689 0123 49       		.uleb128 0x49
+ 1690 0124 13       		.uleb128 0x13
+ 1691 0125 11       		.uleb128 0x11
+ 1692 0126 01       		.uleb128 0x1
+ 1693 0127 12       		.uleb128 0x12
+ 1694 0128 06       		.uleb128 0x6
+ 1695 0129 40       		.uleb128 0x40
+ 1696 012a 18       		.uleb128 0x18
+ 1697 012b 9642     		.uleb128 0x2116
+ 1698 012d 19       		.uleb128 0x19
+ 1699 012e 00       		.byte	0
+ 1700 012f 00       		.byte	0
+ 1701 0130 12       		.uleb128 0x12
+ 1702 0131 01       		.uleb128 0x1
+ 1703 0132 01       		.byte	0x1
+ 1704 0133 49       		.uleb128 0x49
+ 1705 0134 13       		.uleb128 0x13
+ 1706 0135 01       		.uleb128 0x1
+ 1707 0136 13       		.uleb128 0x13
+ 1708 0137 00       		.byte	0
+ 1709 0138 00       		.byte	0
+ 1710 0139 13       		.uleb128 0x13
+ 1711 013a 21       		.uleb128 0x21
+ 1712 013b 00       		.byte	0
+ 1713 013c 49       		.uleb128 0x49
+ 1714 013d 13       		.uleb128 0x13
+ 1715 013e 2F       		.uleb128 0x2f
+ 1716 013f 0B       		.uleb128 0xb
+ 1717 0140 00       		.byte	0
+ 1718 0141 00       		.byte	0
+ 1719 0142 14       		.uleb128 0x14
+ 1720 0143 34       		.uleb128 0x34
+ 1721 0144 00       		.byte	0
+ 1722 0145 03       		.uleb128 0x3
+ 1723 0146 0E       		.uleb128 0xe
+ 1724 0147 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccH3w0kW.s 			page 40
 
 
- 1827      5C53616D 
- 1827      75656C5C 
- 1827      446F6375 
- 1828 0179 5C41726D 		.ascii	"\\Arm\\arm_controller_v2\\arm_controller_v2.cydsn\000"
- 1828      5C61726D 
- 1828      5F636F6E 
- 1828      74726F6C 
- 1828      6C65725F 
- 1829              	.LASF22:
- 1830 01a8 74696C74 		.ascii	"tilt_init\000"
- 1830      5F696E69 
- 1830      7400
- 1831              	.LASF57:
- 1832 01b2 77726973 		.ascii	"wristTilt_state\000"
- 1832      7454696C 
- 1832      745F7374 
- 1832      61746500 
- 1833              	.LASF37:
- 1834 01c2 6C5F6469 		.ascii	"l_different\000"
- 1834      66666572 
- 1834      656E7400 
- 1835              	.LASF29:
- 1836 01ce 726F7461 		.ascii	"rotate_control\000"
- 1836      74655F63 
- 1836      6F6E7472 
- 1836      6F6C00
- 1837              	.LASF15:
- 1838 01dd 73697A65 		.ascii	"sizetype\000"
- 1838      74797065 
- 1838      00
- 1839              	.LASF16:
- 1840 01e6 73686C64 		.ascii	"shldr_start\000"
- 1840      725F7374 
- 1840      61727400 
- 1841              	.LASF23:
- 1842 01f2 74696C74 		.ascii	"tilt_start\000"
- 1842      5F737461 
- 1842      727400
- 1843              	.LASF35:
- 1844 01fd 6C65645F 		.ascii	"led_states\000"
- 1844      73746174 
- 1844      657300
- 1845              	.LASF47:
- 1846 0208 77726973 		.ascii	"wristTilt\000"
- 1846      7454696C 
- 1846      7400
- 1847              	.LASF12:
- 1848 0212 666C6F61 		.ascii	"float\000"
- 1848      7400
- 1849              	.LASF25:
- 1850 0218 74696C74 		.ascii	"tilt_feedback\000"
- 1850      5F666565 
- 1850      64626163 
- 1850      6B00
- 1851              	.LASF52:
- 1852 0226 6D6F746F 		.ascii	"motor\000"
- 1852      7200
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccl4ljik.s 			page 43
+ 1725 0148 0B       		.uleb128 0xb
+ 1726 0149 3B       		.uleb128 0x3b
+ 1727 014a 0B       		.uleb128 0xb
+ 1728 014b 49       		.uleb128 0x49
+ 1729 014c 13       		.uleb128 0x13
+ 1730 014d 3F       		.uleb128 0x3f
+ 1731 014e 19       		.uleb128 0x19
+ 1732 014f 02       		.uleb128 0x2
+ 1733 0150 18       		.uleb128 0x18
+ 1734 0151 00       		.byte	0
+ 1735 0152 00       		.byte	0
+ 1736 0153 15       		.uleb128 0x15
+ 1737 0154 34       		.uleb128 0x34
+ 1738 0155 00       		.byte	0
+ 1739 0156 03       		.uleb128 0x3
+ 1740 0157 0E       		.uleb128 0xe
+ 1741 0158 3A       		.uleb128 0x3a
+ 1742 0159 0B       		.uleb128 0xb
+ 1743 015a 3B       		.uleb128 0x3b
+ 1744 015b 05       		.uleb128 0x5
+ 1745 015c 49       		.uleb128 0x49
+ 1746 015d 13       		.uleb128 0x13
+ 1747 015e 3F       		.uleb128 0x3f
+ 1748 015f 19       		.uleb128 0x19
+ 1749 0160 02       		.uleb128 0x2
+ 1750 0161 18       		.uleb128 0x18
+ 1751 0162 00       		.byte	0
+ 1752 0163 00       		.byte	0
+ 1753 0164 00       		.byte	0
+ 1754              		.section	.debug_aranges,"",%progbits
+ 1755 0000 74000000 		.4byte	0x74
+ 1756 0004 0200     		.2byte	0x2
+ 1757 0006 00000000 		.4byte	.Ldebug_info0
+ 1758 000a 04       		.byte	0x4
+ 1759 000b 00       		.byte	0
+ 1760 000c 0000     		.2byte	0
+ 1761 000e 0000     		.2byte	0
+ 1762 0010 00000000 		.4byte	.LFB33
+ 1763 0014 28000000 		.4byte	.LFE33-.LFB33
+ 1764 0018 00000000 		.4byte	.LFB34
+ 1765 001c 10010000 		.4byte	.LFE34-.LFB34
+ 1766 0020 00000000 		.4byte	.LFB35
+ 1767 0024 08000000 		.4byte	.LFE35-.LFB35
+ 1768 0028 00000000 		.4byte	.LFB36
+ 1769 002c 44000000 		.4byte	.LFE36-.LFB36
+ 1770 0030 00000000 		.4byte	.LFB37
+ 1771 0034 08000000 		.4byte	.LFE37-.LFB37
+ 1772 0038 00000000 		.4byte	.LFB38
+ 1773 003c 48000000 		.4byte	.LFE38-.LFB38
+ 1774 0040 00000000 		.4byte	.LFB39
+ 1775 0044 48000000 		.4byte	.LFE39-.LFB39
+ 1776 0048 00000000 		.4byte	.LFB40
+ 1777 004c 08000000 		.4byte	.LFE40-.LFB40
+ 1778 0050 00000000 		.4byte	.LFB41
+ 1779 0054 88000000 		.4byte	.LFE41-.LFB41
+ 1780 0058 00000000 		.4byte	.LFB42
+ 1781 005c 88000000 		.4byte	.LFE42-.LFB42
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccH3w0kW.s 			page 41
 
 
- 1853              	.LASF62:
- 1854 022c 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
- 1854      4320342E 
- 1854      382E3420 
- 1854      32303134 
- 1854      30353236 
- 1855 025f 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m0 -mthumb -g -O"
- 1855      20726576 
- 1855      6973696F 
- 1855      6E203231 
- 1855      31333538 
- 1856 0292 30202D66 		.ascii	"0 -ffunction-sections\000"
- 1856      66756E63 
- 1856      74696F6E 
- 1856      2D736563 
- 1856      74696F6E 
- 1857              	.LASF1:
- 1858 02a8 756E7369 		.ascii	"unsigned char\000"
- 1858      676E6564 
- 1858      20636861 
- 1858      7200
- 1859              	.LASF61:
- 1860 02b6 6D6F746F 		.ascii	"motor_state\000"
+ 1782 0060 00000000 		.4byte	.LFB43
+ 1783 0064 8C000000 		.4byte	.LFE43-.LFB43
+ 1784 0068 00000000 		.4byte	.LFB44
+ 1785 006c 4C000000 		.4byte	.LFE44-.LFB44
+ 1786 0070 00000000 		.4byte	0
+ 1787 0074 00000000 		.4byte	0
+ 1788              		.section	.debug_ranges,"",%progbits
+ 1789              	.Ldebug_ranges0:
+ 1790 0000 00000000 		.4byte	.LFB33
+ 1791 0004 28000000 		.4byte	.LFE33
+ 1792 0008 00000000 		.4byte	.LFB34
+ 1793 000c 10010000 		.4byte	.LFE34
+ 1794 0010 00000000 		.4byte	.LFB35
+ 1795 0014 08000000 		.4byte	.LFE35
+ 1796 0018 00000000 		.4byte	.LFB36
+ 1797 001c 44000000 		.4byte	.LFE36
+ 1798 0020 00000000 		.4byte	.LFB37
+ 1799 0024 08000000 		.4byte	.LFE37
+ 1800 0028 00000000 		.4byte	.LFB38
+ 1801 002c 48000000 		.4byte	.LFE38
+ 1802 0030 00000000 		.4byte	.LFB39
+ 1803 0034 48000000 		.4byte	.LFE39
+ 1804 0038 00000000 		.4byte	.LFB40
+ 1805 003c 08000000 		.4byte	.LFE40
+ 1806 0040 00000000 		.4byte	.LFB41
+ 1807 0044 88000000 		.4byte	.LFE41
+ 1808 0048 00000000 		.4byte	.LFB42
+ 1809 004c 88000000 		.4byte	.LFE42
+ 1810 0050 00000000 		.4byte	.LFB43
+ 1811 0054 8C000000 		.4byte	.LFE43
+ 1812 0058 00000000 		.4byte	.LFB44
+ 1813 005c 4C000000 		.4byte	.LFE44
+ 1814 0060 00000000 		.4byte	0
+ 1815 0064 00000000 		.4byte	0
+ 1816              		.section	.debug_line,"",%progbits
+ 1817              	.Ldebug_line0:
+ 1818 0000 A7010000 		.section	.debug_str,"MS",%progbits,1
+ 1818      02004500 
+ 1818      00000201 
+ 1818      FB0E0D00 
+ 1818      01010101 
+ 1819              	.LASF10:
+ 1820 0000 75696E74 		.ascii	"uint16\000"
+ 1820      313600
+ 1821              	.LASF28:
+ 1822 0007 726F7461 		.ascii	"rotate_start\000"
+ 1822      74655F73 
+ 1822      74617274 
+ 1822      00
+ 1823              	.LASF51:
+ 1824 0014 73657276 		.ascii	"servo\000"
+ 1824      6F00
+ 1825              	.LASF45:
+ 1826 001a 73686F75 		.ascii	"shoulder\000"
+ 1826      6C646572 
+ 1826      00
+ 1827              	.LASF27:
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccH3w0kW.s 			page 42
+
+
+ 1828 0023 726F7461 		.ascii	"rotate_init\000"
+ 1828      74655F69 
+ 1828      6E697400 
+ 1829              	.LASF17:
+ 1830 002f 73686C64 		.ascii	"shldr_init\000"
+ 1830      725F696E 
+ 1830      697400
+ 1831              	.LASF44:
+ 1832 003a 62617365 		.ascii	"baseAzimuth\000"
+ 1832      417A696D 
+ 1832      75746800 
+ 1833              	.LASF7:
+ 1834 0046 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1834      206C6F6E 
+ 1834      6720756E 
+ 1834      7369676E 
+ 1834      65642069 
+ 1835              	.LASF38:
+ 1836 005d 735F7761 		.ascii	"s_wait\000"
+ 1836      697400
+ 1837              	.LASF6:
+ 1838 0064 6C6F6E67 		.ascii	"long long int\000"
+ 1838      206C6F6E 
+ 1838      6720696E 
+ 1838      7400
+ 1839              	.LASF0:
+ 1840 0072 7369676E 		.ascii	"signed char\000"
+ 1840      65642063 
+ 1840      68617200 
+ 1841              	.LASF24:
+ 1842 007e 74696C74 		.ascii	"tilt_control\000"
+ 1842      5F636F6E 
+ 1842      74726F6C 
+ 1842      00
+ 1843              	.LASF67:
+ 1844 008b 74696D65 		.ascii	"timer_isr\000"
+ 1844      725F6973 
+ 1844      7200
+ 1845              	.LASF65:
+ 1846 0095 2E5C6D61 		.ascii	".\\main.c\000"
+ 1846      696E2E63 
+ 1846      00
+ 1847              	.LASF4:
+ 1848 009e 6C6F6E67 		.ascii	"long int\000"
+ 1848      20696E74 
+ 1848      00
+ 1849              	.LASF9:
+ 1850 00a7 75696E74 		.ascii	"uint8\000"
+ 1850      3800
+ 1851              	.LASF41:
+ 1852 00ad 6D5F6469 		.ascii	"m_different\000"
+ 1852      66666572 
+ 1852      656E7400 
+ 1853              	.LASF13:
+ 1854 00b9 646F7562 		.ascii	"double\000"
+ 1854      6C6500
+ 1855              	.LASF62:
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccH3w0kW.s 			page 43
+
+
+ 1856 00c0 73657276 		.ascii	"servo_state\000"
+ 1856      6F5F7374 
+ 1856      61746500 
+ 1857              	.LASF60:
+ 1858 00cc 77726973 		.ascii	"wristRotate_state\000"
+ 1858      74526F74 
+ 1858      6174655F 
+ 1858      73746174 
+ 1858      6500
+ 1859              	.LASF39:
+ 1860 00de 6D6F746F 		.ascii	"motor_states\000"
  1860      725F7374 
- 1860      61746500 
- 1861              	.LASF38:
- 1862 02c2 6C5F7761 		.ascii	"l_wait\000"
- 1862      697400
- 1863              	.LASF2:
- 1864 02c9 73686F72 		.ascii	"short int\000"
- 1864      7420696E 
- 1864      7400
- 1865              	.LASF33:
- 1866 02d3 735F6469 		.ascii	"s_different\000"
- 1866      66666572 
- 1866      656E7400 
- 1867              	.LASF31:
- 1868 02df 73657276 		.ascii	"servo_states\000"
- 1868      6F5F7374 
- 1868      61746573 
- 1868      00
- 1869              	.LASF19:
- 1870 02ec 73686C64 		.ascii	"shldr_exe\000"
- 1870      725F6578 
- 1870      6500
- 1871              	.LASF43:
- 1872 02f6 6973725F 		.ascii	"isr_var\000"
- 1872      76617200 
- 1873              	.LASF20:
- 1874 02fe 73686C64 		.ascii	"shldr_states\000"
- 1874      725F7374 
- 1874      61746573 
- 1874      00
- 1875              	.LASF56:
- 1876 030b 73686C64 		.ascii	"shldr_state\000"
- 1876      725F7374 
- 1876      61746500 
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccl4ljik.s 			page 44
+ 1860      61746573 
+ 1860      00
+ 1861              	.LASF18:
+ 1862 00eb 73686C64 		.ascii	"shldr_fdbk\000"
+ 1862      725F6664 
+ 1862      626B00
+ 1863              	.LASF11:
+ 1864 00f6 75696E74 		.ascii	"uint32\000"
+ 1864      333200
+ 1865              	.LASF46:
+ 1866 00fd 656C626F 		.ascii	"elbow\000"
+ 1866      7700
+ 1867              	.LASF49:
+ 1868 0103 73656E64 		.ascii	"send_feedback\000"
+ 1868      5F666565 
+ 1868      64626163 
+ 1868      6B00
+ 1869              	.LASF8:
+ 1870 0111 756E7369 		.ascii	"unsigned int\000"
+ 1870      676E6564 
+ 1870      20696E74 
+ 1870      00
+ 1871              	.LASF5:
+ 1872 011e 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1872      20756E73 
+ 1872      69676E65 
+ 1872      6420696E 
+ 1872      7400
+ 1873              	.LASF32:
+ 1874 0130 6C5F7374 		.ascii	"l_start\000"
+ 1874      61727400 
+ 1875              	.LASF3:
+ 1876 0138 73686F72 		.ascii	"short unsigned int\000"
+ 1876      7420756E 
+ 1876      7369676E 
+ 1876      65642069 
+ 1876      6E7400
+ 1877              	.LASF66:
+ 1878 014b 433A5C55 		.ascii	"C:\\Users\\Samuel\\Documents\\GitHub\\BYU-MarsRover"
+ 1878      73657273 
+ 1878      5C53616D 
+ 1878      75656C5C 
+ 1878      446F6375 
+ 1879 0179 5C41726D 		.ascii	"\\Arm\\arm_controller_v2\\arm_controller_v2.cydsn\000"
+ 1879      5C61726D 
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccH3w0kW.s 			page 44
 
 
- 1877              	.LASF14:
- 1878 0317 63686172 		.ascii	"char\000"
- 1878      00
- 1879              	.LASF21:
- 1880 031c 77726973 		.ascii	"wristTilt_states\000"
- 1880      7454696C 
- 1880      745F7374 
- 1880      61746573 
- 1880      00
- 1881              	.LASF60:
- 1882 032d 6C65645F 		.ascii	"led_state\000"
- 1882      73746174 
- 1882      6500
- 1883              	.LASF42:
- 1884 0337 6D5F7761 		.ascii	"m_wait\000"
- 1884      697400
- 1885              	.LASF30:
- 1886 033e 726F7461 		.ascii	"rotate_feedback\000"
- 1886      74655F66 
- 1886      65656462 
- 1886      61636B00 
- 1887              	.LASF26:
- 1888 034e 77726973 		.ascii	"wristRotate_states\000"
- 1888      74526F74 
- 1888      6174655F 
- 1888      73746174 
- 1888      657300
- 1889              	.LASF50:
- 1890 0361 66696C6C 		.ascii	"fill_data_array\000"
- 1890      5F646174 
- 1890      615F6172 
- 1890      72617900 
- 1891              	.LASF40:
- 1892 0371 6D5F7374 		.ascii	"m_start\000"
- 1892      61727400 
- 1893              	.LASF48:
- 1894 0379 77726973 		.ascii	"wristRotate\000"
- 1894      74526F74 
- 1894      61746500 
- 1895              	.LASF53:
- 1896 0385 64617461 		.ascii	"data_array\000"
- 1896      5F617272 
- 1896      617900
- 1897              	.LASF66:
- 1898 0390 6D61696E 		.ascii	"main\000"
- 1898      00
- 1899              	.LASF55:
- 1900 0395 74696D65 		.ascii	"timerFlag\000"
- 1900      72466C61 
- 1900      6700
- 1901              	.LASF32:
- 1902 039f 735F7374 		.ascii	"s_start\000"
- 1902      61727400 
- 1903              	.LASF54:
- 1904 03a7 66656564 		.ascii	"feedback_count\000"
- 1904      6261636B 
- 1904      5F636F75 
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccl4ljik.s 			page 45
+ 1879      5F636F6E 
+ 1879      74726F6C 
+ 1879      6C65725F 
+ 1880              	.LASF22:
+ 1881 01a8 74696C74 		.ascii	"tilt_init\000"
+ 1881      5F696E69 
+ 1881      7400
+ 1882              	.LASF59:
+ 1883 01b2 77726973 		.ascii	"wristTilt_state\000"
+ 1883      7454696C 
+ 1883      745F7374 
+ 1883      61746500 
+ 1884              	.LASF33:
+ 1885 01c2 6C5F6469 		.ascii	"l_different\000"
+ 1885      66666572 
+ 1885      656E7400 
+ 1886              	.LASF29:
+ 1887 01ce 726F7461 		.ascii	"rotate_control\000"
+ 1887      74655F63 
+ 1887      6F6E7472 
+ 1887      6F6C00
+ 1888              	.LASF15:
+ 1889 01dd 73697A65 		.ascii	"sizetype\000"
+ 1889      74797065 
+ 1889      00
+ 1890              	.LASF16:
+ 1891 01e6 73686C64 		.ascii	"shldr_start\000"
+ 1891      725F7374 
+ 1891      61727400 
+ 1892              	.LASF23:
+ 1893 01f2 74696C74 		.ascii	"tilt_start\000"
+ 1893      5F737461 
+ 1893      727400
+ 1894              	.LASF31:
+ 1895 01fd 6C65645F 		.ascii	"led_states\000"
+ 1895      73746174 
+ 1895      657300
+ 1896              	.LASF47:
+ 1897 0208 77726973 		.ascii	"wristTilt\000"
+ 1897      7454696C 
+ 1897      7400
+ 1898              	.LASF12:
+ 1899 0212 666C6F61 		.ascii	"float\000"
+ 1899      7400
+ 1900              	.LASF25:
+ 1901 0218 74696C74 		.ascii	"tilt_feedback\000"
+ 1901      5F666565 
+ 1901      64626163 
+ 1901      6B00
+ 1902              	.LASF52:
+ 1903 0226 6D6F746F 		.ascii	"motor\000"
+ 1903      7200
+ 1904              	.LASF64:
+ 1905 022c 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
+ 1905      4320342E 
+ 1905      382E3420 
+ 1905      32303134 
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccH3w0kW.s 			page 45
 
 
- 1904      6E7400
- 1905              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.4 20140526 (release) [ARM/embedded-4_8-br
+ 1905      30353236 
+ 1906 025f 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m0 -mthumb -g -O"
+ 1906      20726576 
+ 1906      6973696F 
+ 1906      6E203231 
+ 1906      31333538 
+ 1907 0292 30202D66 		.ascii	"0 -ffunction-sections\000"
+ 1907      66756E63 
+ 1907      74696F6E 
+ 1907      2D736563 
+ 1907      74696F6E 
+ 1908              	.LASF54:
+ 1909 02a8 73657276 		.ascii	"servo_array\000"
+ 1909      6F5F6172 
+ 1909      72617900 
+ 1910              	.LASF1:
+ 1911 02b4 756E7369 		.ascii	"unsigned char\000"
+ 1911      676E6564 
+ 1911      20636861 
+ 1911      7200
+ 1912              	.LASF63:
+ 1913 02c2 6D6F746F 		.ascii	"motor_state\000"
+ 1913      725F7374 
+ 1913      61746500 
+ 1914              	.LASF34:
+ 1915 02ce 6C5F7761 		.ascii	"l_wait\000"
+ 1915      697400
+ 1916              	.LASF2:
+ 1917 02d5 73686F72 		.ascii	"short int\000"
+ 1917      7420696E 
+ 1917      7400
+ 1918              	.LASF37:
+ 1919 02df 735F6469 		.ascii	"s_different\000"
+ 1919      66666572 
+ 1919      656E7400 
+ 1920              	.LASF35:
+ 1921 02eb 73657276 		.ascii	"servo_states\000"
+ 1921      6F5F7374 
+ 1921      61746573 
+ 1921      00
+ 1922              	.LASF19:
+ 1923 02f8 73686C64 		.ascii	"shldr_exe\000"
+ 1923      725F6578 
+ 1923      6500
+ 1924              	.LASF43:
+ 1925 0302 6973725F 		.ascii	"isr_var\000"
+ 1925      76617200 
+ 1926              	.LASF20:
+ 1927 030a 73686C64 		.ascii	"shldr_states\000"
+ 1927      725F7374 
+ 1927      61746573 
+ 1927      00
+ 1928              	.LASF58:
+ 1929 0317 73686C64 		.ascii	"shldr_state\000"
+ 1929      725F7374 
+ 1929      61746500 
+ 1930              	.LASF14:
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccH3w0kW.s 			page 46
+
+
+ 1931 0323 63686172 		.ascii	"char\000"
+ 1931      00
+ 1932              	.LASF21:
+ 1933 0328 77726973 		.ascii	"wristTilt_states\000"
+ 1933      7454696C 
+ 1933      745F7374 
+ 1933      61746573 
+ 1933      00
+ 1934              	.LASF61:
+ 1935 0339 6C65645F 		.ascii	"led_state\000"
+ 1935      73746174 
+ 1935      6500
+ 1936              	.LASF42:
+ 1937 0343 6D5F7761 		.ascii	"m_wait\000"
+ 1937      697400
+ 1938              	.LASF30:
+ 1939 034a 726F7461 		.ascii	"rotate_feedback\000"
+ 1939      74655F66 
+ 1939      65656462 
+ 1939      61636B00 
+ 1940              	.LASF26:
+ 1941 035a 77726973 		.ascii	"wristRotate_states\000"
+ 1941      74526F74 
+ 1941      6174655F 
+ 1941      73746174 
+ 1941      657300
+ 1942              	.LASF50:
+ 1943 036d 66696C6C 		.ascii	"fill_data_array\000"
+ 1943      5F646174 
+ 1943      615F6172 
+ 1943      72617900 
+ 1944              	.LASF40:
+ 1945 037d 6D5F7374 		.ascii	"m_start\000"
+ 1945      61727400 
+ 1946              	.LASF57:
+ 1947 0385 73657276 		.ascii	"serv_avg_count\000"
+ 1947      5F617667 
+ 1947      5F636F75 
+ 1947      6E7400
+ 1948              	.LASF48:
+ 1949 0394 77726973 		.ascii	"wristRotate\000"
+ 1949      74526F74 
+ 1949      61746500 
+ 1950              	.LASF53:
+ 1951 03a0 64617461 		.ascii	"data_array\000"
+ 1951      5F617272 
+ 1951      617900
+ 1952              	.LASF68:
+ 1953 03ab 6D61696E 		.ascii	"main\000"
+ 1953      00
+ 1954              	.LASF56:
+ 1955 03b0 74696D65 		.ascii	"timerFlag\000"
+ 1955      72466C61 
+ 1955      6700
+ 1956              	.LASF36:
+ 1957 03ba 735F7374 		.ascii	"s_start\000"
+ 1957      61727400 
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccH3w0kW.s 			page 47
+
+
+ 1958              	.LASF55:
+ 1959 03c2 66656564 		.ascii	"feedback_count\000"
+ 1959      6261636B 
+ 1959      5F636F75 
+ 1959      6E7400
+ 1960              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.4 20140526 (release) [ARM/embedded-4_8-br

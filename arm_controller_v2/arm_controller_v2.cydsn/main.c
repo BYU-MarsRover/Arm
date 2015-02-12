@@ -8,9 +8,10 @@
 //TODO should this be global or should we declare it in main and pass a
 //////pointer to each function?
 uint16 data_array[14]; //stores the parsed instructions from the wiznet
-uint16 elbow_array[20];
+uint16 servo_array[20];
 uint16 feedback_count;
 uint8 timerFlag;
+uint8 serv_avg_count = 0;
 
 //this ISR will be used to set our timeFlag according to our timer component
 ///set to the time of the longest path for our code
@@ -262,11 +263,12 @@ void send_feedback()
     //send packet via serial to wiznet
 }
 
-enum servo_states {s_start,s_different,s_wait} servo_state;
 enum led_states {l_start,l_different,l_wait} led_state;
-void led(){
+void led()
+{
     uint16 old = 0;
-    switch(led_state){
+    switch(led_state)
+    {
         case l_start:
             break;
         
@@ -279,7 +281,8 @@ void led(){
             break;
     }
     
-    switch(led_state){
+    switch(led_state)
+    {
         case l_start:
             led_state = l_wait;
             break;
@@ -307,7 +310,26 @@ void led(){
             break;
     }
 }
-void servo(){
+
+//Average function to be used in smoothing our input
+//uint16 average(uint16* array, uint8 num_items)
+//{
+//    uint32 sum = 0;
+//    uint16 avg = 0;
+//    
+//    for(uint8 i = 0; i < num_items; i++)
+//    {
+//        sum += array[i];
+//    }
+//    
+//    avg = sum/num_items;
+//    
+//    return avg;
+//}
+
+enum servo_states {s_start,s_different,s_wait} servo_state;
+void servo()
+{
     uint16 old = 0;
     switch(servo_state){
         case s_start:
@@ -350,6 +372,39 @@ void servo(){
             break;
     }    
 }
+
+//New servo design
+//enum servo_states {s_start,s_pressed,s_wait} servo_state;
+//void servo()
+//{
+//    switch(servo_state){ //actions
+//        case s_start:
+//            break;
+//        
+//        case s_pressed:
+//            servo_array[serv_avg_count] = data_array[2];
+//            PWM_1_WriteCompare2(average(servo_array, 20));
+//            break;
+//            
+//        case s_wait:
+//            break;
+//    }
+//    
+//    switch(servo_state){ //transitions
+//        case s_start:
+//            servo_state = s_wait;
+//            break;
+//        
+//        case s_pressed:
+//            //TODO: Find Bool for whether or not a key is being pressed
+//            break;
+//            
+//        case s_wait:
+//            //TODO: Find Bool for whether or not a key is being pressed
+//            break;
+//    }    
+//}
+
 enum motor_states {m_start,m_different,m_wait} motor_state;
 void motor(){
     uint16 old = 0;

@@ -46,6 +46,7 @@ c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4
 Allocating common symbols
 Common symbol       size              file
 
+servo_array         0x28              .\CortexM0\ARM_GCC_484\Debug\main.o
 led_state           0x1               .\CortexM0\ARM_GCC_484\Debug\main.o
 servo_state         0x1               .\CortexM0\ARM_GCC_484\Debug\main.o
 data_array          0x1c              .\CortexM0\ARM_GCC_484\Debug\main.o
@@ -69,7 +70,7 @@ Discarded input sections
  .ARM.exidx     0x00000000        0x8 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m/crt0.o
  .text          0x00000000        0x0 .\CortexM0\ARM_GCC_484\Debug\main.o
  .data          0x00000000        0x0 .\CortexM0\ARM_GCC_484\Debug\main.o
- .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_484\Debug\main.o
+ .bss           0x00000000        0x1 .\CortexM0\ARM_GCC_484\Debug\main.o
  .text.baseAzimuth
                 0x00000000        0x8 .\CortexM0\ARM_GCC_484\Debug\main.o
  .text.shoulder
@@ -500,7 +501,7 @@ END GROUP
                 0x00000080                CY_FLASH_ROW_SIZE = 0x80
                 0x00000001                CY_APPL_NUM = 0x1
                 0x00000040                CY_METADATA_SIZE = 0x40
-                0x20000140                PROVIDE (__cy_heap_start, _end)
+                0x20000168                PROVIDE (__cy_heap_start, _end)
                 0x00000001                PROVIDE (__cy_region_num, ((__cy_regions_end - __cy_regions) / 0x10))
                 0x20001000                PROVIDE (__cy_stack, (ORIGIN (ram) + 0x1000))
                 0x20000c00                PROVIDE (__cy_heap_end, (__cy_stack - 0x400))
@@ -784,7 +785,7 @@ END GROUP
                 0x00002048        0x4 LONG 0x2058 __cy_region_init_ram
                 0x0000204c        0x4 LONG 0x200000d0 __cy_region_start_data
                 0x00002050        0x4 LONG 0x18 __cy_region_init_size_ram
-                0x00002054        0x4 LONG 0x58 __cy_region_zero_size_ram
+                0x00002054        0x4 LONG 0x80 __cy_region_zero_size_ram
                 0x00002058                __cy_regions_end = .
                 0x00002058                . = ALIGN (0x8)
                 0x00002058                _etext = .
@@ -827,7 +828,7 @@ END GROUP
 .igot.plt       0x200000e8        0x0 load address 0x00002070
  .igot.plt      0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtbegin.o
 
-.bss            0x200000e8       0x58 load address 0x00002070
+.bss            0x200000e8       0x80 load address 0x00002070
                 0x200000e8                PROVIDE (__bss_start__, .)
  *(.shbss)
  *(.bss .bss.* .gnu.linkonce.b.*)
@@ -844,32 +845,33 @@ END GROUP
                 0x20000110                PWM_2_initVar
  *(COMMON)
  *fill*         0x20000111        0x3 
- COMMON         0x20000114       0x27 .\CortexM0\ARM_GCC_484\Debug\main.o
-                0x20000114                led_state
-                0x20000115                servo_state
-                0x20000118                data_array
-                0x20000134                wristTilt_state
-                0x20000135                motor_state
-                0x20000136                feedback_count
-                0x20000138                timerFlag
-                0x20000139                shldr_state
-                0x2000013a                wristRotate_state
-                0x20000140                . = ALIGN (0x8)
- *fill*         0x2000013b        0x5 
+ COMMON         0x20000114       0x4f .\CortexM0\ARM_GCC_484\Debug\main.o
+                0x20000114                servo_array
+                0x2000013c                led_state
+                0x2000013d                servo_state
+                0x20000140                data_array
+                0x2000015c                wristTilt_state
+                0x2000015d                motor_state
+                0x2000015e                feedback_count
+                0x20000160                timerFlag
+                0x20000161                shldr_state
+                0x20000162                wristRotate_state
+                0x20000168                . = ALIGN (0x8)
+ *fill*         0x20000163        0x5 
  *(.ram.b)
-                0x20000140                _end = .
-                0x20000140                __end = .
-                0x20000140                PROVIDE (end, .)
-                0x20000140                PROVIDE (__bss_end__, .)
+                0x20000168                _end = .
+                0x20000168                __end = .
+                0x20000168                PROVIDE (end, .)
+                0x20000168                PROVIDE (__bss_end__, .)
                 0x00002058                __cy_region_init_ram = LOADADDR (.data)
                 0x00000018                __cy_region_init_size_ram = (_edata - ADDR (.data))
-                0x00000058                __cy_region_zero_size_ram = (_end - _edata)
+                0x00000080                __cy_region_zero_size_ram = (_end - _edata)
 
-.heap           0x20000140       0x80 load address 0x00002070
-                0x20000140                . = _end
-                0x200001c0                . = (. + 0x80)
- *fill*         0x20000140       0x80 
-                0x200001c0                __cy_heap_limit = .
+.heap           0x20000168       0x80 load address 0x00002070
+                0x20000168                . = _end
+                0x200001e8                . = (. + 0x80)
+ *fill*         0x20000168       0x80 
+                0x200001e8                __cy_heap_limit = .
 
 .stack          0x20000c00      0x400
                 0x20000c00                __cy_stack_limit = .
@@ -966,43 +968,43 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x3109
+.debug_info     0x00000000     0x313c
  *(.debug_info .gnu.linkonce.wi.*)
- .debug_info    0x00000000      0x358 .\CortexM0\ARM_GCC_484\Debug\main.o
- .debug_info    0x00000358      0x14d .\CortexM0\ARM_GCC_484\Debug\cybootloader.o
- .debug_info    0x000004a5       0xb1 .\CortexM0\ARM_GCC_484\Debug\cymetadata.o
- .debug_info    0x00000556      0x310 .\CortexM0\ARM_GCC_484\Debug\Cm0Start.o
- .debug_info    0x00000866      0x442 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.a(cyfitter_cfg.o)
- .debug_info    0x00000ca8      0x14d .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.a(Clock_counter.o)
- .debug_info    0x00000df5      0x14d .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.a(Clock_pwm.o)
- .debug_info    0x00000f42      0x241 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.a(isr_1.o)
- .debug_info    0x00001183      0x2da .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.a(PWM_1.o)
- .debug_info    0x0000145d      0x6f0 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.a(Timer_1.o)
- .debug_info    0x00001b4d       0xad .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.a(CyBootAsmGnu.o)
- .debug_info    0x00001bfa      0xc5b .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.a(CyLib.o)
- .debug_info    0x00002855      0x1eb .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.a(UART_1.o)
- .debug_info    0x00002a40      0x1fe .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.a(UART_1_UART.o)
- .debug_info    0x00002c3e      0x2be .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.a(PWM_2.o)
- .debug_info    0x00002efc      0x20d .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.a(UART_1_SPI_UART.o)
+ .debug_info    0x00000000      0x38b .\CortexM0\ARM_GCC_484\Debug\main.o
+ .debug_info    0x0000038b      0x14d .\CortexM0\ARM_GCC_484\Debug\cybootloader.o
+ .debug_info    0x000004d8       0xb1 .\CortexM0\ARM_GCC_484\Debug\cymetadata.o
+ .debug_info    0x00000589      0x310 .\CortexM0\ARM_GCC_484\Debug\Cm0Start.o
+ .debug_info    0x00000899      0x442 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.a(cyfitter_cfg.o)
+ .debug_info    0x00000cdb      0x14d .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.a(Clock_counter.o)
+ .debug_info    0x00000e28      0x14d .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.a(Clock_pwm.o)
+ .debug_info    0x00000f75      0x241 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.a(isr_1.o)
+ .debug_info    0x000011b6      0x2da .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.a(PWM_1.o)
+ .debug_info    0x00001490      0x6f0 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.a(Timer_1.o)
+ .debug_info    0x00001b80       0xad .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.a(CyBootAsmGnu.o)
+ .debug_info    0x00001c2d      0xc5b .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.a(CyLib.o)
+ .debug_info    0x00002888      0x1eb .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.a(UART_1.o)
+ .debug_info    0x00002a73      0x1fe .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.a(UART_1_UART.o)
+ .debug_info    0x00002c71      0x2be .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.a(PWM_2.o)
+ .debug_info    0x00002f2f      0x20d .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.a(UART_1_SPI_UART.o)
 
-.debug_abbrev   0x00000000     0x1155
+.debug_abbrev   0x00000000     0x116b
  *(.debug_abbrev)
- .debug_abbrev  0x00000000      0x14f .\CortexM0\ARM_GCC_484\Debug\main.o
- .debug_abbrev  0x0000014f       0x77 .\CortexM0\ARM_GCC_484\Debug\cybootloader.o
- .debug_abbrev  0x000001c6       0x5d .\CortexM0\ARM_GCC_484\Debug\cymetadata.o
- .debug_abbrev  0x00000223      0x1c5 .\CortexM0\ARM_GCC_484\Debug\Cm0Start.o
- .debug_abbrev  0x000003e8      0x18a .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.a(cyfitter_cfg.o)
- .debug_abbrev  0x00000572       0xb5 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.a(Clock_counter.o)
- .debug_abbrev  0x00000627       0xb5 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.a(Clock_pwm.o)
- .debug_abbrev  0x000006dc      0x168 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.a(isr_1.o)
- .debug_abbrev  0x00000844      0x13b .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.a(PWM_1.o)
- .debug_abbrev  0x0000097f      0x109 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.a(Timer_1.o)
- .debug_abbrev  0x00000a88       0x14 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.a(CyBootAsmGnu.o)
- .debug_abbrev  0x00000a9c      0x207 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.a(CyLib.o)
- .debug_abbrev  0x00000ca3      0x122 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.a(UART_1.o)
- .debug_abbrev  0x00000dc5       0xf9 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.a(UART_1_UART.o)
- .debug_abbrev  0x00000ebe      0x13b .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.a(PWM_2.o)
- .debug_abbrev  0x00000ff9      0x15c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.a(UART_1_SPI_UART.o)
+ .debug_abbrev  0x00000000      0x165 .\CortexM0\ARM_GCC_484\Debug\main.o
+ .debug_abbrev  0x00000165       0x77 .\CortexM0\ARM_GCC_484\Debug\cybootloader.o
+ .debug_abbrev  0x000001dc       0x5d .\CortexM0\ARM_GCC_484\Debug\cymetadata.o
+ .debug_abbrev  0x00000239      0x1c5 .\CortexM0\ARM_GCC_484\Debug\Cm0Start.o
+ .debug_abbrev  0x000003fe      0x18a .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.a(cyfitter_cfg.o)
+ .debug_abbrev  0x00000588       0xb5 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.a(Clock_counter.o)
+ .debug_abbrev  0x0000063d       0xb5 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.a(Clock_pwm.o)
+ .debug_abbrev  0x000006f2      0x168 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.a(isr_1.o)
+ .debug_abbrev  0x0000085a      0x13b .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.a(PWM_1.o)
+ .debug_abbrev  0x00000995      0x109 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.a(Timer_1.o)
+ .debug_abbrev  0x00000a9e       0x14 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.a(CyBootAsmGnu.o)
+ .debug_abbrev  0x00000ab2      0x207 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.a(CyLib.o)
+ .debug_abbrev  0x00000cb9      0x122 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.a(UART_1.o)
+ .debug_abbrev  0x00000ddb       0xf9 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.a(UART_1_UART.o)
+ .debug_abbrev  0x00000ed4      0x13b .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.a(PWM_2.o)
+ .debug_abbrev  0x0000100f      0x15c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.a(UART_1_SPI_UART.o)
 
 .debug_line     0x00000000     0x1a01
  *(.debug_line)
@@ -1046,37 +1048,37 @@ END GROUP
  .debug_frame   0x00001bd0       0x28 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-memcpy-stub.o)
  .debug_frame   0x00001bf8       0x20 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-memset.o)
 
-.debug_str      0x00000000     0x1b96
+.debug_str      0x00000000     0x1bb1
  *(.debug_str)
- .debug_str     0x00000000      0x372 .\CortexM0\ARM_GCC_484\Debug\main.o
-                                0x3b6 (size before relaxing)
- .debug_str     0x00000372       0x7a .\CortexM0\ARM_GCC_484\Debug\cybootloader.o
+ .debug_str     0x00000000      0x38d .\CortexM0\ARM_GCC_484\Debug\main.o
+                                0x3d1 (size before relaxing)
+ .debug_str     0x0000038d       0x7a .\CortexM0\ARM_GCC_484\Debug\cybootloader.o
                                 0x1f8 (size before relaxing)
- .debug_str     0x000003ec       0x37 .\CortexM0\ARM_GCC_484\Debug\cymetadata.o
+ .debug_str     0x00000407       0x37 .\CortexM0\ARM_GCC_484\Debug\cymetadata.o
                                 0x1b5 (size before relaxing)
- .debug_str     0x00000423      0x139 .\CortexM0\ARM_GCC_484\Debug\Cm0Start.o
+ .debug_str     0x0000043e      0x139 .\CortexM0\ARM_GCC_484\Debug\Cm0Start.o
                                 0x2d6 (size before relaxing)
- .debug_str     0x0000055c      0x199 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.a(cyfitter_cfg.o)
+ .debug_str     0x00000577      0x199 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.a(cyfitter_cfg.o)
                                 0x361 (size before relaxing)
- .debug_str     0x000006f5       0xef .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.a(Clock_counter.o)
+ .debug_str     0x00000710       0xef .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.a(Clock_counter.o)
                                 0x278 (size before relaxing)
- .debug_str     0x000007e4       0xaf .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.a(Clock_pwm.o)
+ .debug_str     0x000007ff       0xaf .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.a(Clock_pwm.o)
                                 0x260 (size before relaxing)
- .debug_str     0x00000893      0x100 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.a(isr_1.o)
+ .debug_str     0x000008ae      0x100 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.a(isr_1.o)
                                 0x2bc (size before relaxing)
- .debug_str     0x00000993      0x1c7 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.a(PWM_1.o)
+ .debug_str     0x000009ae      0x1c7 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.a(PWM_1.o)
                                 0x359 (size before relaxing)
- .debug_str     0x00000b5a      0x437 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.a(Timer_1.o)
+ .debug_str     0x00000b75      0x437 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.a(Timer_1.o)
                                 0x5d7 (size before relaxing)
- .debug_str     0x00000f91      0x700 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.a(CyLib.o)
+ .debug_str     0x00000fac      0x700 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.a(CyLib.o)
                                 0x8e0 (size before relaxing)
- .debug_str     0x00001691      0x131 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.a(UART_1.o)
+ .debug_str     0x000016ac      0x131 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.a(UART_1.o)
                                 0x2c9 (size before relaxing)
- .debug_str     0x000017c2      0x10e .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.a(UART_1_UART.o)
+ .debug_str     0x000017dd      0x10e .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.a(UART_1_UART.o)
                                 0x29b (size before relaxing)
- .debug_str     0x000018d0      0x190 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.a(PWM_2.o)
+ .debug_str     0x000018eb      0x190 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.a(PWM_2.o)
                                 0x34c (size before relaxing)
- .debug_str     0x00001a60      0x136 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.a(UART_1_SPI_UART.o)
+ .debug_str     0x00001a7b      0x136 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.a(UART_1_SPI_UART.o)
                                 0x2e1 (size before relaxing)
 
 .debug_loc
