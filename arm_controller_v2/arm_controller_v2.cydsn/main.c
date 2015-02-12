@@ -7,7 +7,8 @@
 //Initializations of global variables
 //TODO should this be global or should we declare it in main and pass a
 //////pointer to each function?
-uint8 data_array[14]; //stores the parsed instructions from the wiznet
+uint16 data_array[14]; //stores the parsed instructions from the wiznet
+uint16 elbow_array[20];
 uint16 feedback_count;
 uint8 timerFlag;
 
@@ -48,36 +49,45 @@ void fill_data_array() //maybe take param: uint8* array
     
 
     if(c == 'q'){
-        data_array[1] = 189;
+        data_array[1] = 2000;
     }
     else if(c == 'w'){
-        data_array[1] = 186;
+        data_array[1] = 1750;
     }
     else if(c == 'e'){
-        data_array[1] = 184;
+        data_array[1] = 1500;
     }
     else if(c == 'r'){
-        data_array[1] = 182;
+        data_array[1] = 1250;
     }
     else if(c == 't'){
-        data_array[1] = 179;
+        data_array[1] = 1000;
     }    
     else if(c == '1'){
-        data_array[2] = 10;
+        data_array[2] = 1000;
     }
     else if(c == '2'){
-        data_array[2] = 50;
+        data_array[2] = 5000;
     }
     else if(c == '3'){
-        data_array[2] = 100;
+        data_array[2] = 10000;
     }
     else if(c == '4'){
-        data_array[2] = 150;
+        data_array[2] = 15000;
     }
     else if(c == '5'){
-        data_array[2] =199;
+        data_array[2] =19000;
     }    
-    
+    else if(c == 'j'){
+        data_array[3] = 1000;
+    }
+    else if(c == 'k'){
+        data_array[3] = 1500;
+    }
+    else if(c == 'l'){
+        data_array[3] =2000;
+    }    
+
 }
 
 //control the turret
@@ -99,7 +109,18 @@ void shoulder()
     //actuate the shoulder using PWM
     //get feedback
     
-    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    //switch statement for state actions
+		//start
+			//break
+		//initialize
+			//create smoothing array
+		//feedback
+			//read feedback
+		//execute
+			//add the shifted value from main to back of smoothing array
+			//calculate average of value in array
+    
     switch(shldr_state)
     {//switch staatement for state transitions
 		case shldr_start: //start
@@ -123,18 +144,7 @@ void shoulder()
             shldr_state = shldr_fdbk;
             break;
     }
-			
-	//switch statement for state actions
-		//start
-			//break
-		//initialize
-			//create smoothing array
-		//feedback
-			//read feedback
-		//execute
-			//add the shifted value from main to back of smoothing array
-			//calculate average of value in array
-    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 }
 
 //control the elbow
@@ -163,6 +173,22 @@ void wristTilt()
 
     //--------------------------
     // State machine
+    
+        // Action
+    switch(wristTilt_state)
+    {
+        case tilt_init:
+            wristTilt_state = tilt_start;
+            break;
+        case tilt_start:
+            // Set the torque - this is a one time thing
+            // Set the speed - I think this is a one time thing
+            break;
+        case tilt_control:
+            break;
+        case tilt_feedback:
+            break;
+    }
         // Transistion
     switch(wristTilt_state)
     {
@@ -177,28 +203,13 @@ void wristTilt()
         case tilt_feedback:
             break;
     }
-        // Action
-    switch(wristTilt_state)
-    {
-        case tilt_init:
-            wristTilt_state = tilt_start;
-            break;
-        case tilt_start:
-            // Set the torque - this is a one time thing
-            // Set the speed - I think this is a one time thing
-            break;
-        case tilt_control:
-            break;
-        case tilt_feedback:
-            break;
-    }
 }
 
 enum wristRotate_states {rotate_init = 0, rotate_start, rotate_control, rotate_feedback} wristRotate_state;
 //control the rotating motion of the wrist
 void wristRotate()
 {
-    // Overview
+    //Overview
     //take instruction from data_array
     //smooth input
     //actuate the tilting using UART
@@ -207,24 +218,11 @@ void wristRotate()
     //-------------------------- 
     // Dynamixel Servo specific
     // TODO: Set the torque - Requires building an array with bit representation
-    // TOD: Set the desired position
+    // TODO: Set the desired position
 
     //--------------------------
     // State machine
-        // Transistion
-    switch(wristRotate_state)
-    {
-        case rotate_init:
-            wristRotate_state = rotate_start;
-            break;
-        case rotate_start:
-            wristRotate_state = rotate_control;
-            break;
-        case rotate_control:
-            break;
-        case rotate_feedback:
-            break;
-    }
+    
         // Action
     switch(wristRotate_state)
     {
@@ -234,6 +232,20 @@ void wristRotate()
         case rotate_start:
             // Set the torque - this is a one time thing
             // Set the speed - I think this is a one time thing
+            break;
+        case rotate_control:
+            break;
+        case rotate_feedback:
+            break;
+    }
+        // Transistion
+    switch(wristRotate_state)
+    {
+        case rotate_init:
+            wristRotate_state = rotate_start;
+            break;
+        case rotate_start:
+            wristRotate_state = rotate_control;
             break;
         case rotate_control:
             break;
@@ -253,7 +265,7 @@ void send_feedback()
 enum servo_states {s_start,s_different,s_wait} servo_state;
 enum led_states {l_start,l_different,l_wait} led_state;
 void led(){
-    uint8 old = 0;
+    uint16 old = 0;
     switch(led_state){
         case l_start:
             break;
@@ -296,7 +308,7 @@ void led(){
     }
 }
 void servo(){
-    uint8 old = 0;
+    uint16 old = 0;
     switch(servo_state){
         case s_start:
             break;
@@ -338,7 +350,50 @@ void servo(){
             break;
     }    
 }
-
+enum motor_states {m_start,m_different,m_wait} motor_state;
+void motor(){
+    uint16 old = 0;
+    switch(motor_state){ //state actions
+        case m_start:
+            break;
+        
+        case m_different:
+            PWM_2_WriteCompare1(data_array[1]);
+            old = data_array[3];
+            break;
+            
+        case m_wait:
+            break;
+    }
+    
+    switch(motor_state){ //state transitions
+        case m_start:
+            motor_state = m_wait;
+            break;
+        
+        case m_different:
+            if(data_array[3] != old)
+            {
+                motor_state = m_different;
+            }
+            else
+            {
+                motor_state = m_wait;
+            }
+            break;
+            
+        case m_wait:
+            if(data_array[3] != old)
+            {
+                motor_state = m_different;
+            }
+            else
+            {
+                motor_state = m_wait;
+            }
+            break;
+    }
+}
 int main()
 {
     CyGlobalIntEnable;
@@ -347,6 +402,7 @@ int main()
     Clock_pwm_Start();
     Clock_counter_Start();
     PWM_1_Start();
+    PWM_2_Start();
     Timer_1_Start();
     UART_1_Start();
     

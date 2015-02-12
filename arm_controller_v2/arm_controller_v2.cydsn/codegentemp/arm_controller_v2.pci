@@ -1,5 +1,5 @@
 # arm_controller_v2
-# 2015-02-05 23:08:45Z
+# 2015-02-11 23:36:12Z
 
 # IO_2@[IOP=(3)][IoId=(2)] is reserved: SWDDebugEnabled
 dont_use_io iocell 3 2
@@ -7,4 +7,5 @@ dont_use_io iocell 3 2
 dont_use_io iocell 3 3
 set_location "ClockGenBlock" m0s8clockgenblockcell -1 -1 0
 set_io "led(0)" iocell 3 6
+set_io "motor_driver(0)" iocell 3 5
 set_io "servo(0)" iocell 3 7

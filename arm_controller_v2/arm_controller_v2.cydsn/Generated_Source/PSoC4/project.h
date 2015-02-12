@@ -34,6 +34,9 @@
 #include <UART_1_SPI_UART_PVT.h>
 #include <UART_1_PVT.h>
 #include <UART_1_BOOT.h>
+#include <PWM_2.h>
+#include <motor_driver.h>
+#include <motor_driver_aliases.h>
 #include <UART_1_SCBCLK.h>
 #include <UART_1_tx.h>
 #include <UART_1_tx_aliases.h>
