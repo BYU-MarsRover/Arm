@@ -8,10 +8,14 @@
 //TODO should this be global or should we declare it in main and pass a
 //////pointer to each function?
 uint16 data_array[14]; //stores the parsed instructions from the wiznet
-uint16 servo_array[20];
+const uint8 SERV_ARR_SIZE = 20;
+uint8 serv_arr_csize;
+uint16 servo_array[SERV_ARR_SIZE];
 uint16 feedback_count;
 uint8 timerFlag;
 uint8 serv_avg_count = 0;
+uint8 wiznet;
+uint8 new_pack;
 
 //this ISR will be used to set our timeFlag according to our timer component
 ///set to the time of the longest path for our code
@@ -39,12 +43,18 @@ void elbow();
 void wristTilt();
 void wristRotate();
 void send_feedback();
+
+void servo();
+void led();
+void fill_data_array1();
+
 //--------------------------------------------------- END Function Stubs
 
 
 //to be used for parsing reading/parsing the data from the wiznet
 void fill_data_array() //maybe take param: uint8* array
 {
+    
     //read one byte at a time
     uint8 c = UART_1_UartGetChar();
     
@@ -91,14 +101,17 @@ void fill_data_array() //maybe take param: uint8* array
 
 }
 
+void fill_data_array1()
+{
+    
+}
+
 //control the turret
 void baseAzimuth()
 {
     //take instruction from data_array
     //smooth input
     //actuate the turret using PWM
-    
-    
 }
 
 enum shldr_states {shldr_start, shldr_init, shldr_fdbk, shldr_exe} shldr_state;
@@ -312,20 +325,20 @@ void led()
 }
 
 //Average function to be used in smoothing our input
-//uint16 average(uint16* array, uint8 num_items)
-//{
-//    uint32 sum = 0;
-//    uint16 avg = 0;
-//    
-//    for(uint8 i = 0; i < num_items; i++)
-//    {
-//        sum += array[i];
-//    }
-//    
-//    avg = sum/num_items;
-//    
-//    return avg;
-//}
+uint16 average(uint16* array, uint8 num_items)
+{
+    uint32 sum = 0;
+    uint16 avg = 0;
+    
+    for(uint8 i = 0; i < num_items; i++)
+    {
+        sum += array[i];
+    }
+    
+    avg = sum/num_items;
+    
+    return avg;
+}
 
 enum servo_states {s_start,s_different,s_wait} servo_state;
 void servo()
@@ -374,36 +387,45 @@ void servo()
 }
 
 //New servo design
-//enum servo_states {s_start,s_pressed,s_wait} servo_state;
-//void servo()
-//{ //TODO: initialize array with neutral values
-//    switch(servo_state){ //actions
-//        case s_start:
-//            break;
-//        
-//        case s_pressed:
-//            servo_array[serv_avg_count] = data_array[2];
-//            PWM_1_WriteCompare2(average(servo_array, 20));
-//            break;
-//            
-//        case s_wait:
-//            break;
-//    }
-//    
-//    switch(servo_state){ //transitions
-//        case s_start:
-//            servo_state = s_wait;
-//            break;
-//        
-//        case s_pressed:
-//            //TODO: Find Bool for whether or not a key is being pressed
-//            break;
-//            
-//        case s_wait:
-//            //TODO: Find Bool for whether or not a key is being pressed
-//            break;
-//    }    
-//}
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+enum servo1_states {s1_start,s1_init,s1_execute,s1_wait} servo1_state;
+void servo1()
+{ 
+    uint8 i;
+    uint16 avg;
+    switch(servo1_state){ //actions
+        case s_start:
+            break;
+
+        case s1_init:
+            for(i = 0; i < 20; i++)
+              {
+                servo_array[i] = 1500;
+              }
+              break;
+
+        case s1_execute:
+            avg = average(servo_array, 20);
+            servo_array[serv_avg_count] = data_array[2];
+            PWM_1_WriteCompare2(avg);
+            break;
+    }
+    
+    switch(servo1_state){ //transitions
+        case s1_start:
+            servo1_state = s1_wait;
+            break;
+        
+        case s1_init:
+            servo1_state = s1_execute;
+            break;
+        
+        case s1_execute:
+            servo1_state = s1_execute;
+            break;
+    }    
+}
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 enum motor_states {m_start,m_different,m_wait} motor_state;
 void motor(){
@@ -469,8 +491,12 @@ int main()
         //check addresses
         //TODO get the address bytes from Steve
         
-        
-        fill_data_array(); //potentially take input &data_array
+        if(wiznet)
+        {
+            new_pack = 1;
+            fill_data_array(); //potentially take input &data_array
+        }
+        else
 //        baseAzimuth();
 //        shoulder();
 //        elbow();
