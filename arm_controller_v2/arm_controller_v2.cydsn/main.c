@@ -8,20 +8,20 @@
 //TODO should this be global or should we declare it in main and pass a
 //////pointer to each function?
 uint16 data_array[14]; //stores the parsed instructions from the wiznet
-const uint8 SERV_ARR_SIZE = 20;
-uint8 serv_arr_csize;
-uint16 servo_array[SERV_ARR_SIZE];
-uint16 feedback_count;
-uint8 timerFlag;
-uint8 serv_avg_count = 0;
 uint8 wiznet;
 uint8 new_pack;
+
+#define SERV_ARR_SIZE 20
+uint8 serv_arr_cspot;
+uint16 servo_array[SERV_ARR_SIZE];
+uint8 serv_avg_count = 0;
+
+uint16 feedback_count;
+uint8 timerFlag; //used in the timer_isr
 
 //this ISR will be used to set our timeFlag according to our timer component
 ///set to the time of the longest path for our code
 //TODO test how long it takes code to run before really implementing this
-
-
 CY_ISR(timer_isr)
 {
     uint32 isr_var = Timer_1_GetInterruptSourceMasked();
@@ -327,10 +327,11 @@ void led()
 //Average function to be used in smoothing our input
 uint16 average(uint16* array, uint8 num_items)
 {
+    uint8 i;
     uint32 sum = 0;
     uint16 avg = 0;
     
-    for(uint8 i = 0; i < num_items; i++)
+    for(i = 0; i < num_items; i++)
     {
         sum += array[i];
     }
@@ -393,21 +394,37 @@ void servo1()
 { 
     uint8 i;
     uint16 avg;
+    uint16 command;
+    
     switch(servo1_state){ //actions
         case s_start:
             break;
 
         case s1_init:
-            for(i = 0; i < 20; i++)
-              {
+            for(i = 0; i < SERV_ARR_SIZE; i++)
+            {
                 servo_array[i] = 1500;
-              }
-              break;
+            }
+            serv_arr_cspot = 0;
+            break;
 
         case s1_execute:
+            command = ((data_array[2]/2) << 8 | data_array[3]) + 1500;
+            servo_array[serv_arr_cspot] = command;
+            if(serv_arr_cspot < (SERV_ARR_SIZE - 1))
+            {
+                serv_arr_cspot++;
+            }
+            else
+            {
+                serv_arr_cspot = 0;
+            }
             avg = average(servo_array, 20);
             servo_array[serv_avg_count] = data_array[2];
             PWM_1_WriteCompare2(avg);
+            break;
+            
+        case s1_wait:
             break;
     }
     
@@ -421,7 +438,25 @@ void servo1()
             break;
         
         case s1_execute:
-            servo1_state = s1_execute;
+            if(new_pack)
+            {
+                servo1_state = s1_execute;
+            }
+            else
+            {
+                servo1_state = s1_wait;
+            }
+            break;
+        
+        case s1_wait:
+            if(new_pack)
+            {
+                servo1_state = s1_execute;
+            }
+            else
+            {
+                servo1_state = s1_wait; 
+            }
             break;
     }    
 }
@@ -478,8 +513,10 @@ int main()
     //start all of our components
     Clock_pwm_Start();
     Clock_counter_Start();
+    
     PWM_1_Start();
     PWM_2_Start();
+    
     Timer_1_Start();
     UART_1_Start();
     
@@ -491,12 +528,12 @@ int main()
         //check addresses
         //TODO get the address bytes from Steve
         
-        if(wiznet)
+        if(WIZ_INT_Read())
         {
-            new_pack = 1;
             fill_data_array(); //potentially take input &data_array
+            new_pack = 1;
         }
-        else
+        
 //        baseAzimuth();
 //        shoulder();
 //        elbow();
@@ -504,7 +541,8 @@ int main()
 //        wristRotate();
 
         led();
-        servo();
+        servo1();
+//        servo();
         
         
         while(!timerFlag) //this while loop will periodize our code to the time of longest path
