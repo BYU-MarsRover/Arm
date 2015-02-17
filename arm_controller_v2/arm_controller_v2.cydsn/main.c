@@ -3,6 +3,7 @@
  *last modified date: Jan. 31, 2015
 */
 #include <project.h>
+#include <time.h>
 
 //Initializations of global variables
 //TODO should this be global or should we declare it in main and pass a
@@ -10,6 +11,8 @@
 uint16 data_array[14]; //stores the parsed instructions from the wiznet
 uint8 wiznet;
 uint8 new_pack;
+
+int test_array[10];
 
 #define SERV_ARR_SIZE 20
 uint8 serv_arr_cspot;
@@ -522,7 +525,8 @@ int main()
     
     isr_1_StartEx(timer_isr);
     
-    
+    srand((unsigned) time(&t));
+    int counter_five = 0;
     for(;;)
     {
         //check addresses
@@ -554,8 +558,15 @@ int main()
 //                send_feedback();
 //            }
         }
+        counter++;
+        if(counter == 5){
+            for(int i = 0; i < 10; i++){
+                int random_number = rand()%2001 - 1000;
+                test_array[i] = random_number;
+            }
+            counter = 0;
+        }
         timerFlag = 0;
-        
     }
 }
 
