@@ -4,6 +4,7 @@
 */
 #include <project.h>
 #include <time.h>
+#include <stdlib.h>
 
 //Initializations of global variables
 //TODO should this be global or should we declare it in main and pass a
@@ -12,7 +13,9 @@ uint16 data_array[14]; //stores the parsed instructions from the wiznet
 uint8 wiznet;
 uint8 new_pack;
 
-int test_array[10];
+#define TEST_ARRAY_SIZE 10
+
+int16 test_array[TEST_ARRAY_SIZE];
 
 #define SERV_ARR_SIZE 20
 uint8 serv_arr_cspot;
@@ -59,7 +62,7 @@ void fill_data_array() //maybe take param: uint8* array
 {
     
     //read one byte at a time
-    uint8 c = UART_1_UartGetChar();
+    uint8 c = 0; //UART_1_UartGetChar();
     
 
     if(c == 'q'){
@@ -106,7 +109,11 @@ void fill_data_array() //maybe take param: uint8* array
 
 void fill_data_array1()
 {
-    
+    uint8 i = 0;
+    for(i = 0; i < TEST_ARRAY_SIZE; i++)
+    {
+        data_array[i] = test_array[i];
+    }
 }
 
 //control the turret
@@ -412,7 +419,7 @@ void servo1()
             break;
 
         case s1_execute:
-            command = ((data_array[2]/2) << 8 | data_array[3]) + 1500;
+            command = (((data_array[2] << 8) | data_array[3])/2) + 1500;
             servo_array[serv_arr_cspot] = command;
             if(serv_arr_cspot < (SERV_ARR_SIZE - 1))
             {
@@ -423,8 +430,9 @@ void servo1()
                 serv_arr_cspot = 0;
             }
             avg = average(servo_array, 20);
-            servo_array[serv_avg_count] = data_array[2];
+            //servo_array[serv_avg_count] = data_array[2];
             PWM_1_WriteCompare2(avg);
+            new_pack = 0;
             break;
             
         case s1_wait:
@@ -433,11 +441,11 @@ void servo1()
     
     switch(servo1_state){ //transitions
         case s1_start:
-            servo1_state = s1_wait;
+            servo1_state = s1_init;
             break;
         
         case s1_init:
-            servo1_state = s1_execute;
+            servo1_state = s1_wait;
             break;
         
         case s1_execute:
@@ -465,63 +473,66 @@ void servo1()
 }
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-enum motor_states {m_start,m_different,m_wait} motor_state;
-void motor(){
-    uint16 old = 0;
-    switch(motor_state){ //state actions
-        case m_start:
-            break;
-        
-        case m_different:
-            PWM_2_WriteCompare1(data_array[1]);
-            old = data_array[3];
-            break;
-            
-        case m_wait:
-            break;
-    }
-    
-    switch(motor_state){ //state transitions
-        case m_start:
-            motor_state = m_wait;
-            break;
-        
-        case m_different:
-            if(data_array[3] != old)
-            {
-                motor_state = m_different;
-            }
-            else
-            {
-                motor_state = m_wait;
-            }
-            break;
-            
-        case m_wait:
-            if(data_array[3] != old)
-            {
-                motor_state = m_different;
-            }
-            else
-            {
-                motor_state = m_wait;
-            }
-            break;
-    }
-}
+//enum motor_states {m_start,m_different,m_wait} motor_state;
+//void motor(){
+//    uint16 old = 0;
+//    switch(motor_state){ //state actions
+//        case m_start:
+//            break;
+//        
+//        case m_different:
+//            PWM_2_WriteCompare1(data_array[1]);
+//            old = data_array[3];
+//            break;
+//            
+//        case m_wait:
+//            break;
+//    }
+//    
+//    switch(motor_state){ //state transitions
+//        case m_start:
+//            motor_state = m_wait;
+//            break;
+//        
+//        case m_different:
+//            if(data_array[3] != old)
+//            {
+//                motor_state = m_different;
+//            }
+//            else
+//            {
+//                motor_state = m_wait;
+//            }
+//            break;
+//            
+//        case m_wait:
+//            if(data_array[3] != old)
+//            {
+//                motor_state = m_different;
+//            }
+//            else
+//            {
+//                motor_state = m_wait;
+//            }
+//            break;
+//    }
+//}
+
 int main()
 {
     CyGlobalIntEnable;
     
+    time_t t;
+    uint8 counter;
     //start all of our components
     Clock_pwm_Start();
     Clock_counter_Start();
     
     PWM_1_Start();
-    PWM_2_Start();
+    //PWM_2_Start();
     
     Timer_1_Start();
-    UART_1_Start();
+    //UART_1_Start();
     
     isr_1_StartEx(timer_isr);
     
@@ -532,9 +543,9 @@ int main()
         //check addresses
         //TODO get the address bytes from Steve
         
-        if(WIZ_INT_Read())
+        if(1) //WIZ_INT_Read()
         {
-            fill_data_array(); //potentially take input &data_array
+            fill_data_array1(); //potentially take input &data_array
             new_pack = 1;
         }
         
@@ -559,10 +570,13 @@ int main()
 //            }
         }
         counter++;
-        if(counter == 5){
-            for(int i = 0; i < 10; i++){
-                int random_number = rand()%2001 - 1000;
-                test_array[i] = random_number;
+        if(counter == 100)
+        {
+            for(int i = 0; i < 10; (i+2))
+            {
+                int16 random_number = rand()%2001 - 1000;
+                test_array[i] = random_number >> 8;
+                test_array[i+1] = random_number & 0x00FF;
             }
             counter = 0;
         }
