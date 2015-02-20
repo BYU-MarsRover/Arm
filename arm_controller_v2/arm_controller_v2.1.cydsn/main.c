@@ -5,22 +5,24 @@
 #include <project.h>
 #include <time.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 //Initializations of global variables
 //TODO should this be global or should we declare it in main and pass a
 //////pointer to each function?
-uint16 data_array[14]; //stores the parsed instructions from the wiznet
-uint8 wiznet;
-uint8 new_pack;
+#define DATA_ARRAY_SIZE 14
+uint16 data_array[DATA_ARRAY_SIZE]; //stores the parsed instructions from the wiznet
+
+uint8 wiznet; //bool indicating wiznet interupt high or low
+uint8 new_pack; //bool indicating a new pack of instructions to carry out
 
 #define TEST_ARRAY_SIZE 10
-
 int16 test_array[TEST_ARRAY_SIZE];
 
 #define SERV_ARR_SIZE 20
 uint8 serv_arr_cspot;
 uint16 servo_array[SERV_ARR_SIZE];
-uint8 serv_avg_count = 0;
+//uint8 serv_avg_count = 0;
 
 uint16 feedback_count;
 uint8 timerFlag; //used in the timer_isr
@@ -51,6 +53,8 @@ void wristRotate();
 void send_feedback();
 
 void servo();
+void servo1();
+
 void led();
 void fill_data_array1();
 
@@ -429,7 +433,7 @@ void servo1()
             {
                 serv_arr_cspot = 0;
             }
-            avg = average(servo_array, 20);
+            avg = average(servo_array, SERV_ARR_SIZE);
             //servo_array[serv_avg_count] = data_array[2];
             PWM_1_WriteCompare2(avg);
             new_pack = 0;
@@ -473,8 +477,8 @@ void servo1()
 }
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-//enum motor_states {m_start,m_different,m_wait} motor_state;
-//void motor(){
+enum motor_states {m_start,m_different,m_wait} motor_state;
+void motor(){
 //    uint16 old = 0;
 //    switch(motor_state){ //state actions
 //        case m_start:
@@ -516,14 +520,16 @@ void servo1()
 //            }
 //            break;
 //    }
-//}
+}
 
 int main()
 {
     CyGlobalIntEnable;
     
+    //Define variables
     time_t t;
     uint8 counter;
+    
     //start all of our components
     Clock_pwm_Start();
     Clock_counter_Start();
@@ -538,12 +544,13 @@ int main()
     
     srand((unsigned) time(&t));
     int counter_five = 0;
+    
     for(;;)
     {
         //check addresses
         //TODO get the address bytes from Steve
         
-        if(1) //WIZ_INT_Read()
+        if(wiznet) //WIZ_INT_Read()
         {
             fill_data_array1(); //potentially take input &data_array
             new_pack = 1;
@@ -555,7 +562,7 @@ int main()
 //        wristTilt();
 //        wristRotate();
 
-        led();
+//        led();
         servo1();
 //        servo();
         
@@ -579,6 +586,7 @@ int main()
                 test_array[i+1] = random_number & 0x00FF;
             }
             counter = 0;
+            wiznet = 1;
         }
         timerFlag = 0;
     }

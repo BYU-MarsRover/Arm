@@ -2,7 +2,7 @@
 --	Conversion of arm_controller_v2.1.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Wed Feb 18 23:04:36 2015
+--	Fri Feb 20 15:41:01 2015
 --
 
 USE cypress.cypress.all;
@@ -778,7 +778,7 @@ Clock_pwm:cy_clock_v1_0
 		divisor=>0,
 		period=>"1000000000",
 		is_direct=>'0',
-		is_digital=>'0')
+		is_digital=>'1')
 	PORT MAP(clock_out=>Net_376,
 		dig_domain_out=>open);
 isr_1:cy_isr_v1_0
@@ -1355,7 +1355,7 @@ SCLK:cy_psoc3_pins_v1_10
 		divisor=>0,
 		period=>"500000000",
 		is_direct=>'0',
-		is_digital=>'0')
+		is_digital=>'1')
 	PORT MAP(clock_out=>\SPIM:Net_276\,
 		dig_domain_out=>open);
 \SPIM:BSPIM:ClkEn\:cy_psoc3_udb_clock_enable_v1_0

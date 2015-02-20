@@ -1,6 +1,6 @@
 // ======================================================================
 // arm_controller_v2.1.v generated from TopDesign.cysch
-// 02/18/2015 at 23:04
+// 02/20/2015 at 15:40
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -368,7 +368,7 @@ module SPI_Master_v2_40_2 (
 		  .divisor(0),
 		  .period("500000000"),
 		  .is_direct(0),
-		  .is_digital(0))
+		  .is_digital(1))
 		IntClock
 		 (.clock_out(Net_239));
 
@@ -463,7 +463,7 @@ module top ;
 		  .divisor(0),
 		  .period("1000000000"),
 		  .is_direct(0),
-		  .is_digital(0))
+		  .is_digital(1))
 		Clock_pwm
 		 (.clock_out(Net_376));
 
