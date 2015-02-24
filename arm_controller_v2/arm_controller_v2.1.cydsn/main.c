@@ -16,6 +16,9 @@ uint16 data_array[DATA_ARRAY_SIZE]; //stores the parsed instructions from the wi
 uint8 wiznet; //bool indicating wiznet interupt high or low
 uint8 new_pack; //bool indicating a new pack of instructions to carry out
 
+#define NUM_OF_SM 2
+uint8 fin_exec; //counts
+
 #define TEST_ARRAY_SIZE 10
 int16 test_array[TEST_ARRAY_SIZE];
 
@@ -23,6 +26,10 @@ int16 test_array[TEST_ARRAY_SIZE];
 uint8 serv_arr_cspot;
 uint16 servo_array[SERV_ARR_SIZE];
 //uint8 serv_avg_count = 0;
+
+#define LED_ARR_SIZE 20
+uint8 led_arr_cspot;
+uint16 led_array[LED_ARR_SIZE];
 
 uint16 feedback_count;
 uint8 timerFlag; //used in the timer_isr
@@ -56,6 +63,8 @@ void servo();
 void servo1();
 
 void led();
+void led1();
+
 void fill_data_array1();
 
 //--------------------------------------------------- END Function Stubs
@@ -411,7 +420,7 @@ void servo1()
     uint16 command;
     
     switch(servo1_state){ //actions
-        case s_start:
+        case s1_start:
             break;
 
         case s1_init:
@@ -436,7 +445,8 @@ void servo1()
             avg = average(servo_array, SERV_ARR_SIZE);
             //servo_array[serv_avg_count] = data_array[2];
             PWM_1_WriteCompare2(avg);
-            new_pack = 0;
+            //new_pack = 0;
+            fin_exec++;
             break;
             
         case s1_wait:
@@ -476,6 +486,109 @@ void servo1()
     }    
 }
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+uint16 led_adjust(uint16 raw)
+{
+    uint16 new_val;
+    if(raw <= 1250)
+    {
+        new_val = 1000;
+    }
+    else if(raw <= 1500)
+    {
+        new_val = 5000;
+    }
+    else if(raw <= 1750)
+    {
+        new_val = 10000;
+    }
+    else if(raw <= 2000)
+    {
+        new_val = 15000;
+    }
+    else
+    {
+        new_val = 0;
+    }
+    return new_val;
+}
+
+//New led design
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+enum led1_states {l1_start,l1_init,l1_execute,l1_wait} led1_state;
+void led1()
+{ 
+    uint8 i;
+    uint16 avg;
+    uint16 command;
+    
+    switch(led1_state){ //actions
+        case l1_start:
+            break;
+
+        case l1_init:
+            for(i = 0; i < LED_ARR_SIZE; i++)
+            {
+                led_array[i] = 1500;
+            }
+            led_arr_cspot = 0;
+            break;
+
+        case l1_execute:
+            command = (((data_array[4] << 8) | data_array[5])/2) + 1500;
+            led_array[led_arr_cspot] = command;
+            if(led_arr_cspot < (LED_ARR_SIZE - 1))
+            {
+                led_arr_cspot++;
+            }
+            else
+            {
+                led_arr_cspot = 0;
+            }
+            avg = average(led_array, LED_ARR_SIZE);
+            
+            PWM_1_WriteCompare1(led_adjust(avg));
+            fin_exec++;
+            break;
+            
+        case l1_wait:
+            break;
+    }
+    
+    switch(led1_state){ //transitions
+        case l1_start:
+            led1_state = l1_init;
+            break;
+        
+        case l1_init:
+            led1_state = l1_wait;
+            break;
+        
+        case l1_execute:
+            if(new_pack)
+            {
+                led1_state = l1_execute;
+            }
+            else
+            {
+                led1_state = l1_wait;
+            }
+            break;
+        
+        case l1_wait:
+            if(new_pack)
+            {
+                led1_state = l1_execute;
+            }
+            else
+            {
+                led1_state = l1_wait; 
+            }
+            break;
+    }    
+}
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 
 enum motor_states {m_start,m_different,m_wait} motor_state;
 void motor(){
@@ -554,6 +667,7 @@ int main()
         {
             fill_data_array1(); //potentially take input &data_array
             new_pack = 1;
+            fin_exec = 0;
         }
         
 //        baseAzimuth();
@@ -562,9 +676,14 @@ int main()
 //        wristTilt();
 //        wristRotate();
 
+        led1();
 //        led();
         servo1();
 //        servo();
+        if(fin_exec == NUM_OF_SM)
+        {
+            new_pack = 0;
+        }
         
         
         while(!timerFlag) //this while loop will periodize our code to the time of longest path
