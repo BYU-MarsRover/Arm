@@ -1,6 +1,6 @@
 /*******************************************************************************
 * File Name: Timer_2.h
-* Version 1.10
+* Version 2.0
 *
 * Description:
 *  This file provides constants and parameter values for the Timer_2
@@ -19,6 +19,8 @@
 #if !defined(CY_TCPWM_Timer_2_H)
 #define CY_TCPWM_Timer_2_H
 
+
+#include "CyLib.h"
 #include "cytypes.h"
 #include "cyfitter.h"
 
@@ -45,6 +47,7 @@ extern uint8  Timer_2_initVar;
 ****************************************/
 
 #define Timer_2_CY_TCPWM_V2                    (CYIPBLOCK_m0s8tcpwm_VERSION == 2u)
+#define Timer_2_CY_TCPWM_4000                  (CY_PSOC4_4000)
 
 /* TCPWM Configuration */
 #define Timer_2_CONFIG                         (1lu)
@@ -262,12 +265,25 @@ extern uint8  Timer_2_initVar;
 #define Timer_2_PWM_MODE_RIGHT                 (Timer_2_CC_MATCH_SET          |   \
                                                          Timer_2_OVERLOW_NO_CHANGE     |   \
                                                          Timer_2_UNDERFLOW_CLEAR)
-#define Timer_2_PWM_MODE_CENTER                (Timer_2_CC_MATCH_INVERT       |   \
-                                                         Timer_2_OVERLOW_NO_CHANGE     |   \
-                                                         Timer_2_UNDERFLOW_CLEAR)
-#define Timer_2_PWM_MODE_ASYM                  (Timer_2_CC_MATCH_NO_CHANGE    |   \
+#define Timer_2_PWM_MODE_ASYM                  (Timer_2_CC_MATCH_INVERT       |   \
                                                          Timer_2_OVERLOW_SET           |   \
-                                                         Timer_2_UNDERFLOW_CLEAR )
+                                                         Timer_2_UNDERFLOW_CLEAR)
+
+#if (Timer_2_CY_TCPWM_V2)
+    #if(Timer_2_CY_TCPWM_4000)
+        #define Timer_2_PWM_MODE_CENTER                (Timer_2_CC_MATCH_INVERT       |   \
+                                                                 Timer_2_OVERLOW_NO_CHANGE     |   \
+                                                                 Timer_2_UNDERFLOW_CLEAR)
+    #else
+        #define Timer_2_PWM_MODE_CENTER                (Timer_2_CC_MATCH_INVERT       |   \
+                                                                 Timer_2_OVERLOW_SET           |   \
+                                                                 Timer_2_UNDERFLOW_CLEAR)
+    #endif /* (Timer_2_CY_TCPWM_4000) */
+#else
+    #define Timer_2_PWM_MODE_CENTER                (Timer_2_CC_MATCH_INVERT       |   \
+                                                             Timer_2_OVERLOW_NO_CHANGE     |   \
+                                                             Timer_2_UNDERFLOW_CLEAR)
+#endif /* (Timer_2_CY_TCPWM_NEW) */
 
 /* Command operations without condition */
 #define Timer_2_CMD_CAPTURE                    (0u)
@@ -458,7 +474,69 @@ void   Timer_2_Wakeup(void);
 *    Initial Constants
 ***************************************/
 
+#define Timer_2_CTRL_QUAD_BASE_CONFIG                                                          \
+        (((uint32)(Timer_2_QUAD_ENCODING_MODES     << Timer_2_QUAD_MODE_SHIFT))       |\
+         ((uint32)(Timer_2_CONFIG                  << Timer_2_MODE_SHIFT)))
+
+#define Timer_2_CTRL_PWM_BASE_CONFIG                                                           \
+        (((uint32)(Timer_2_PWM_STOP_EVENT          << Timer_2_PWM_STOP_KILL_SHIFT))   |\
+         ((uint32)(Timer_2_PWM_OUT_INVERT          << Timer_2_INV_OUT_SHIFT))         |\
+         ((uint32)(Timer_2_PWM_OUT_N_INVERT        << Timer_2_INV_COMPL_OUT_SHIFT))   |\
+         ((uint32)(Timer_2_PWM_MODE                << Timer_2_MODE_SHIFT)))
+
+#define Timer_2_CTRL_PWM_RUN_MODE                                                              \
+            ((uint32)(Timer_2_PWM_RUN_MODE         << Timer_2_ONESHOT_SHIFT))
+            
+#define Timer_2_CTRL_PWM_ALIGN                                                                 \
+            ((uint32)(Timer_2_PWM_ALIGN            << Timer_2_UPDOWN_SHIFT))
+
+#define Timer_2_CTRL_PWM_KILL_EVENT                                                            \
+             ((uint32)(Timer_2_PWM_KILL_EVENT      << Timer_2_PWM_SYNC_KILL_SHIFT))
+
+#define Timer_2_CTRL_PWM_DEAD_TIME_CYCLE                                                       \
+            ((uint32)(Timer_2_PWM_DEAD_TIME_CYCLE  << Timer_2_PRESCALER_SHIFT))
+
+#define Timer_2_CTRL_PWM_PRESCALER                                                             \
+            ((uint32)(Timer_2_PWM_PRESCALER        << Timer_2_PRESCALER_SHIFT))
+
+#define Timer_2_CTRL_TIMER_BASE_CONFIG                                                         \
+        (((uint32)(Timer_2_TC_PRESCALER            << Timer_2_PRESCALER_SHIFT))       |\
+         ((uint32)(Timer_2_TC_COUNTER_MODE         << Timer_2_UPDOWN_SHIFT))          |\
+         ((uint32)(Timer_2_TC_RUN_MODE             << Timer_2_ONESHOT_SHIFT))         |\
+         ((uint32)(Timer_2_TC_COMP_CAP_MODE        << Timer_2_MODE_SHIFT)))
+        
+#define Timer_2_QUAD_SIGNALS_MODES                                                             \
+        (((uint32)(Timer_2_QUAD_PHIA_SIGNAL_MODE   << Timer_2_COUNT_SHIFT))           |\
+         ((uint32)(Timer_2_QUAD_INDEX_SIGNAL_MODE  << Timer_2_RELOAD_SHIFT))          |\
+         ((uint32)(Timer_2_QUAD_STOP_SIGNAL_MODE   << Timer_2_STOP_SHIFT))            |\
+         ((uint32)(Timer_2_QUAD_PHIB_SIGNAL_MODE   << Timer_2_START_SHIFT)))
+
+#define Timer_2_PWM_SIGNALS_MODES                                                              \
+        (((uint32)(Timer_2_PWM_SWITCH_SIGNAL_MODE  << Timer_2_CAPTURE_SHIFT))         |\
+         ((uint32)(Timer_2_PWM_COUNT_SIGNAL_MODE   << Timer_2_COUNT_SHIFT))           |\
+         ((uint32)(Timer_2_PWM_RELOAD_SIGNAL_MODE  << Timer_2_RELOAD_SHIFT))          |\
+         ((uint32)(Timer_2_PWM_STOP_SIGNAL_MODE    << Timer_2_STOP_SHIFT))            |\
+         ((uint32)(Timer_2_PWM_START_SIGNAL_MODE   << Timer_2_START_SHIFT)))
+
+#define Timer_2_TIMER_SIGNALS_MODES                                                            \
+        (((uint32)(Timer_2_TC_CAPTURE_SIGNAL_MODE  << Timer_2_CAPTURE_SHIFT))         |\
+         ((uint32)(Timer_2_TC_COUNT_SIGNAL_MODE    << Timer_2_COUNT_SHIFT))           |\
+         ((uint32)(Timer_2_TC_RELOAD_SIGNAL_MODE   << Timer_2_RELOAD_SHIFT))          |\
+         ((uint32)(Timer_2_TC_STOP_SIGNAL_MODE     << Timer_2_STOP_SHIFT))            |\
+         ((uint32)(Timer_2_TC_START_SIGNAL_MODE    << Timer_2_START_SHIFT)))
+        
+#define Timer_2_TIMER_UPDOWN_CNT_USED                                                          \
+                ((Timer_2__COUNT_UPDOWN0 == Timer_2_TC_COUNTER_MODE)                  ||\
+                 (Timer_2__COUNT_UPDOWN1 == Timer_2_TC_COUNTER_MODE))
+
+#define Timer_2_PWM_UPDOWN_CNT_USED                                                            \
+                ((Timer_2__CENTER == Timer_2_PWM_ALIGN)                               ||\
+                 (Timer_2__ASYMMETRIC == Timer_2_PWM_ALIGN))               
+        
 #define Timer_2_PWM_PR_INIT_VALUE              (1u)
+#define Timer_2_QUAD_PERIOD_INIT_VALUE         (0x8000u)
+
+
 
 #endif /* End CY_TCPWM_Timer_2_H */
 

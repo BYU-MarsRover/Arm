@@ -1,6 +1,6 @@
 /*******************************************************************************
 * File Name: Channel_2.h  
-* Version 2.0
+* Version 2.10
 *
 * Description:
 *  This file containts Control Register function prototypes and register defines
@@ -40,17 +40,15 @@ uint8   Channel_2_ClearInterrupt(void) ;
 /* Drive Modes */
 #define Channel_2_DRIVE_MODE_BITS        (3)
 #define Channel_2_DRIVE_MODE_IND_MASK    (0xFFFFFFFFu >> (32 - Channel_2_DRIVE_MODE_BITS))
-#define Channel_2_DRIVE_MODE_SHIFT       (0x00u)
-#define Channel_2_DRIVE_MODE_MASK        (0x07u << Channel_2_DRIVE_MODE_SHIFT)
 
-#define Channel_2_DM_ALG_HIZ         (0x00u << Channel_2_DRIVE_MODE_SHIFT)
-#define Channel_2_DM_DIG_HIZ         (0x01u << Channel_2_DRIVE_MODE_SHIFT)
-#define Channel_2_DM_RES_UP          (0x02u << Channel_2_DRIVE_MODE_SHIFT)
-#define Channel_2_DM_RES_DWN         (0x03u << Channel_2_DRIVE_MODE_SHIFT)
-#define Channel_2_DM_OD_LO           (0x04u << Channel_2_DRIVE_MODE_SHIFT)
-#define Channel_2_DM_OD_HI           (0x05u << Channel_2_DRIVE_MODE_SHIFT)
-#define Channel_2_DM_STRONG          (0x06u << Channel_2_DRIVE_MODE_SHIFT)
-#define Channel_2_DM_RES_UPDWN       (0x07u << Channel_2_DRIVE_MODE_SHIFT)
+#define Channel_2_DM_ALG_HIZ         (0x00u)
+#define Channel_2_DM_DIG_HIZ         (0x01u)
+#define Channel_2_DM_RES_UP          (0x02u)
+#define Channel_2_DM_RES_DWN         (0x03u)
+#define Channel_2_DM_OD_LO           (0x04u)
+#define Channel_2_DM_OD_HI           (0x05u)
+#define Channel_2_DM_STRONG          (0x06u)
+#define Channel_2_DM_RES_UPDWN       (0x07u)
 
 /* Digital Port Constants */
 #define Channel_2_MASK               Channel_2__MASK
@@ -78,6 +76,16 @@ uint8   Channel_2_ClearInterrupt(void) ;
     #define Channel_2_INTSTAT                (* (reg32 *) Channel_2__INTSTAT)
 
 #endif /* Interrupt Registers */
+
+
+/***************************************
+* The following code is DEPRECATED and 
+* must not be used.
+***************************************/
+
+#define Channel_2_DRIVE_MODE_SHIFT       (0x00u)
+#define Channel_2_DRIVE_MODE_MASK        (0x07u << Channel_2_DRIVE_MODE_SHIFT)
+
 
 #endif /* End Pins Channel_2_H */
 

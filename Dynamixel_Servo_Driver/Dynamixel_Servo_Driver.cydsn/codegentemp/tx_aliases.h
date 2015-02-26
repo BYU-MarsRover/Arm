@@ -1,9 +1,10 @@
 /*******************************************************************************
 * File Name: tx.h  
-* Version 2.0
+* Version 2.10
 *
 * Description:
-*  This file containts Control Register function prototypes and register defines
+*  This file contains the Alias definitions for Per-Pin APIs in cypins.h. 
+*  Information on using these APIs can be found in the System Reference Guide.
 *
 * Note:
 *
@@ -19,12 +20,18 @@
 
 #include "cytypes.h"
 #include "cyfitter.h"
+#include "cypins.h"
 
 
 /***************************************
 *              Constants        
 ***************************************/
-#define tx_0		tx__0__PC
+#define tx_0		(tx__0__PC)
+#define tx_0_PS		(tx__0__PS)
+#define tx_0_PC		(tx__0__PC)
+#define tx_0_DR		(tx__0__DR)
+#define tx_0_SHIFT	(tx__0__SHIFT)
+
 
 #endif /* End Pins tx_ALIASES_H */
 

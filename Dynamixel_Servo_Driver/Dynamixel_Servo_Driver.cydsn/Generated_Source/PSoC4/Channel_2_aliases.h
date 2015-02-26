@@ -1,9 +1,10 @@
 /*******************************************************************************
 * File Name: Channel_2.h  
-* Version 2.0
+* Version 2.10
 *
 * Description:
-*  This file containts Control Register function prototypes and register defines
+*  This file contains the Alias definitions for Per-Pin APIs in cypins.h. 
+*  Information on using these APIs can be found in the System Reference Guide.
 *
 * Note:
 *
@@ -19,12 +20,18 @@
 
 #include "cytypes.h"
 #include "cyfitter.h"
+#include "cypins.h"
 
 
 /***************************************
 *              Constants        
 ***************************************/
-#define Channel_2_0		Channel_2__0__PC
+#define Channel_2_0		(Channel_2__0__PC)
+#define Channel_2_0_PS		(Channel_2__0__PS)
+#define Channel_2_0_PC		(Channel_2__0__PC)
+#define Channel_2_0_DR		(Channel_2__0__DR)
+#define Channel_2_0_SHIFT	(Channel_2__0__SHIFT)
+
 
 #endif /* End Pins Channel_2_ALIASES_H */
 

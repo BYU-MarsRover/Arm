@@ -444,7 +444,8 @@ void servo1()
             }
             avg = average(servo_array, SERV_ARR_SIZE);
             //servo_array[serv_avg_count] = data_array[2];
-            PWM_1_WriteCompare2(avg);
+            //PWM_1_WriteCompare2(avg);
+            PWM_3_WriteCompare(avg);
             //new_pack = 0;
             fin_exec++;
             break;
@@ -547,7 +548,8 @@ void led1()
             }
             avg = average(led_array, LED_ARR_SIZE);
             
-            PWM_1_WriteCompare1(led_adjust(avg));
+            //PWM_1_WriteCompare1(led_adjust(avg));
+            PWM_2_WriteCompare(avg);
             fin_exec++;
             break;
             
@@ -637,6 +639,7 @@ void motor(){
 
 int main()
 {
+    
     CyGlobalIntEnable;
     
     //Define variables
@@ -647,7 +650,13 @@ int main()
     Clock_pwm_Start();
     Clock_counter_Start();
     
-    PWM_1_Start();
+    //PWM_1_Start();
+    PWM_2_Start();
+    
+    PWM_2_WriteCompare(1500);
+    CyDelay(10000);
+    
+    PWM_3_Start();
     //PWM_2_Start();
     
     Timer_1_Start();

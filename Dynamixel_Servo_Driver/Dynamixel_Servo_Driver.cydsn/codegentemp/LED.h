@@ -1,6 +1,6 @@
 /*******************************************************************************
 * File Name: LED.h  
-* Version 2.0
+* Version 2.10
 *
 * Description:
 *  This file containts Control Register function prototypes and register defines
@@ -40,17 +40,15 @@ uint8   LED_ClearInterrupt(void) ;
 /* Drive Modes */
 #define LED_DRIVE_MODE_BITS        (3)
 #define LED_DRIVE_MODE_IND_MASK    (0xFFFFFFFFu >> (32 - LED_DRIVE_MODE_BITS))
-#define LED_DRIVE_MODE_SHIFT       (0x00u)
-#define LED_DRIVE_MODE_MASK        (0x07u << LED_DRIVE_MODE_SHIFT)
 
-#define LED_DM_ALG_HIZ         (0x00u << LED_DRIVE_MODE_SHIFT)
-#define LED_DM_DIG_HIZ         (0x01u << LED_DRIVE_MODE_SHIFT)
-#define LED_DM_RES_UP          (0x02u << LED_DRIVE_MODE_SHIFT)
-#define LED_DM_RES_DWN         (0x03u << LED_DRIVE_MODE_SHIFT)
-#define LED_DM_OD_LO           (0x04u << LED_DRIVE_MODE_SHIFT)
-#define LED_DM_OD_HI           (0x05u << LED_DRIVE_MODE_SHIFT)
-#define LED_DM_STRONG          (0x06u << LED_DRIVE_MODE_SHIFT)
-#define LED_DM_RES_UPDWN       (0x07u << LED_DRIVE_MODE_SHIFT)
+#define LED_DM_ALG_HIZ         (0x00u)
+#define LED_DM_DIG_HIZ         (0x01u)
+#define LED_DM_RES_UP          (0x02u)
+#define LED_DM_RES_DWN         (0x03u)
+#define LED_DM_OD_LO           (0x04u)
+#define LED_DM_OD_HI           (0x05u)
+#define LED_DM_STRONG          (0x06u)
+#define LED_DM_RES_UPDWN       (0x07u)
 
 /* Digital Port Constants */
 #define LED_MASK               LED__MASK
@@ -78,6 +76,16 @@ uint8   LED_ClearInterrupt(void) ;
     #define LED_INTSTAT                (* (reg32 *) LED__INTSTAT)
 
 #endif /* Interrupt Registers */
+
+
+/***************************************
+* The following code is DEPRECATED and 
+* must not be used.
+***************************************/
+
+#define LED_DRIVE_MODE_SHIFT       (0x00u)
+#define LED_DRIVE_MODE_MASK        (0x07u << LED_DRIVE_MODE_SHIFT)
+
 
 #endif /* End Pins LED_H */
 

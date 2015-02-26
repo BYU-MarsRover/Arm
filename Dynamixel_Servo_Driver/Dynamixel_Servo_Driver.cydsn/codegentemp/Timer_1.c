@@ -1,6 +1,6 @@
 /*******************************************************************************
 * File Name: Timer_1.c
-* Version 1.10
+* Version 2.0
 *
 * Description:
 *  This file provides the source code to the API for the Timer_1
@@ -17,7 +17,6 @@
 *******************************************************************************/
 
 #include "Timer_1.h"
-#include "CyLib.h"
 
 uint8 Timer_1_initVar = 0u;
 
@@ -41,95 +40,31 @@ void Timer_1_Init(void)
 
     /* Set values from customizer to CTRL */
     #if (Timer_1__QUAD == Timer_1_CONFIG)
-        Timer_1_CONTROL_REG =
-        (((uint32)(Timer_1_QUAD_ENCODING_MODES     << Timer_1_QUAD_MODE_SHIFT))       |
-         ((uint32)(Timer_1_CONFIG                  << Timer_1_MODE_SHIFT)));
-    #endif  /* (Timer_1__QUAD == Timer_1_CONFIG) */
+        Timer_1_CONTROL_REG = Timer_1_CTRL_QUAD_BASE_CONFIG;
+        
+        /* Set values from customizer to CTRL1 */
+        Timer_1_TRIG_CONTROL1_REG  = Timer_1_QUAD_SIGNALS_MODES;
 
-    #if (Timer_1__PWM_SEL == Timer_1_CONFIG)
-        Timer_1_CONTROL_REG =
-        (((uint32)(Timer_1_PWM_STOP_EVENT          << Timer_1_PWM_STOP_KILL_SHIFT))    |
-         ((uint32)(Timer_1_PWM_OUT_INVERT          << Timer_1_INV_OUT_SHIFT))         |
-         ((uint32)(Timer_1_PWM_OUT_N_INVERT        << Timer_1_INV_COMPL_OUT_SHIFT))     |
-         ((uint32)(Timer_1_PWM_MODE                << Timer_1_MODE_SHIFT)));
-
-        #if (Timer_1__PWM_PR == Timer_1_PWM_MODE)
-            Timer_1_CONTROL_REG |=
-            ((uint32)(Timer_1_PWM_RUN_MODE         << Timer_1_ONESHOT_SHIFT));
-
-            Timer_1_WriteCounter(Timer_1_PWM_PR_INIT_VALUE);
-        #else
-            Timer_1_CONTROL_REG |=
-            (((uint32)(Timer_1_PWM_ALIGN           << Timer_1_UPDOWN_SHIFT))          |
-             ((uint32)(Timer_1_PWM_KILL_EVENT      << Timer_1_PWM_SYNC_KILL_SHIFT)));
-        #endif  /* (Timer_1__PWM_PR == Timer_1_PWM_MODE) */
-
-        #if (Timer_1__PWM_DT == Timer_1_PWM_MODE)
-            Timer_1_CONTROL_REG |=
-            ((uint32)(Timer_1_PWM_DEAD_TIME_CYCLE  << Timer_1_PRESCALER_SHIFT));
-        #endif  /* (Timer_1__PWM_DT == Timer_1_PWM_MODE) */
-
-        #if (Timer_1__PWM == Timer_1_PWM_MODE)
-            Timer_1_CONTROL_REG |=
-            ((uint32)Timer_1_PWM_PRESCALER         << Timer_1_PRESCALER_SHIFT);
-        #endif  /* (Timer_1__PWM == Timer_1_PWM_MODE) */
-    #endif  /* (Timer_1__PWM_SEL == Timer_1_CONFIG) */
-
-    #if (Timer_1__TIMER == Timer_1_CONFIG)
-        Timer_1_CONTROL_REG =
-        (((uint32)(Timer_1_TC_PRESCALER            << Timer_1_PRESCALER_SHIFT))   |
-         ((uint32)(Timer_1_TC_COUNTER_MODE         << Timer_1_UPDOWN_SHIFT))      |
-         ((uint32)(Timer_1_TC_RUN_MODE             << Timer_1_ONESHOT_SHIFT))     |
-         ((uint32)(Timer_1_TC_COMP_CAP_MODE        << Timer_1_MODE_SHIFT)));
-    #endif  /* (Timer_1__TIMER == Timer_1_CONFIG) */
-
-    /* Set values from customizer to CTRL1 */
-    #if (Timer_1__QUAD == Timer_1_CONFIG)
-        Timer_1_TRIG_CONTROL1_REG  =
-        (((uint32)(Timer_1_QUAD_PHIA_SIGNAL_MODE   << Timer_1_COUNT_SHIFT))       |
-         ((uint32)(Timer_1_QUAD_INDEX_SIGNAL_MODE  << Timer_1_RELOAD_SHIFT))      |
-         ((uint32)(Timer_1_QUAD_STOP_SIGNAL_MODE   << Timer_1_STOP_SHIFT))        |
-         ((uint32)(Timer_1_QUAD_PHIB_SIGNAL_MODE   << Timer_1_START_SHIFT)));
-    #endif  /* (Timer_1__QUAD == Timer_1_CONFIG) */
-
-    #if (Timer_1__PWM_SEL == Timer_1_CONFIG)
-        Timer_1_TRIG_CONTROL1_REG  =
-        (((uint32)(Timer_1_PWM_SWITCH_SIGNAL_MODE  << Timer_1_CAPTURE_SHIFT))     |
-         ((uint32)(Timer_1_PWM_COUNT_SIGNAL_MODE   << Timer_1_COUNT_SHIFT))       |
-         ((uint32)(Timer_1_PWM_RELOAD_SIGNAL_MODE  << Timer_1_RELOAD_SHIFT))      |
-         ((uint32)(Timer_1_PWM_STOP_SIGNAL_MODE    << Timer_1_STOP_SHIFT))        |
-         ((uint32)(Timer_1_PWM_START_SIGNAL_MODE   << Timer_1_START_SHIFT)));
-    #endif  /* (Timer_1__PWM_SEL == Timer_1_CONFIG) */
-
-    #if (Timer_1__TIMER == Timer_1_CONFIG)
-        Timer_1_TRIG_CONTROL1_REG  =
-        (((uint32)(Timer_1_TC_CAPTURE_SIGNAL_MODE  << Timer_1_CAPTURE_SHIFT))     |
-         ((uint32)(Timer_1_TC_COUNT_SIGNAL_MODE    << Timer_1_COUNT_SHIFT))       |
-         ((uint32)(Timer_1_TC_RELOAD_SIGNAL_MODE   << Timer_1_RELOAD_SHIFT))      |
-         ((uint32)(Timer_1_TC_STOP_SIGNAL_MODE     << Timer_1_STOP_SHIFT))        |
-         ((uint32)(Timer_1_TC_START_SIGNAL_MODE    << Timer_1_START_SHIFT)));
-    #endif  /* (Timer_1__TIMER == Timer_1_CONFIG) */
-
-    /* Set values from customizer to INTR */
-    #if (Timer_1__QUAD == Timer_1_CONFIG)
+        /* Set values from customizer to INTR */
         Timer_1_SetInterruptMode(Timer_1_QUAD_INTERRUPT_MASK);
+        
+         /* Set other values */
+        Timer_1_SetCounterMode(Timer_1_COUNT_DOWN);
+        Timer_1_WritePeriod(Timer_1_QUAD_PERIOD_INIT_VALUE);
+        Timer_1_WriteCounter(Timer_1_QUAD_PERIOD_INIT_VALUE);
     #endif  /* (Timer_1__QUAD == Timer_1_CONFIG) */
 
-    #if (Timer_1__PWM_SEL == Timer_1_CONFIG)
-        Timer_1_SetInterruptMode(Timer_1_PWM_INTERRUPT_MASK);
-    #endif  /* (Timer_1__PWM_SEL == Timer_1_CONFIG) */
-
     #if (Timer_1__TIMER == Timer_1_CONFIG)
+        Timer_1_CONTROL_REG = Timer_1_CTRL_TIMER_BASE_CONFIG;
+        
+        /* Set values from customizer to CTRL1 */
+        Timer_1_TRIG_CONTROL1_REG  = Timer_1_TIMER_SIGNALS_MODES;
+    
+        /* Set values from customizer to INTR */
         Timer_1_SetInterruptMode(Timer_1_TC_INTERRUPT_MASK);
-    #endif  /* (Timer_1__TIMER == Timer_1_CONFIG) */
-
-    /* Set other values from customizer */
-    #if (Timer_1__TIMER == Timer_1_CONFIG)
+        
+        /* Set other values from customizer */
         Timer_1_WritePeriod(Timer_1_TC_PERIOD_VALUE );
-
-        #if (Timer_1__COUNT_DOWN == Timer_1_TC_COUNTER_MODE)
-            Timer_1_WriteCounter(Timer_1_TC_PERIOD_VALUE );
-        #endif  /* (Timer_1__COUNT_DOWN == Timer_1_TC_COUNTER_MODE) */
 
         #if (Timer_1__COMPARE == Timer_1_TC_COMP_CAP_MODE)
             Timer_1_WriteCompare(Timer_1_TC_COMPARE_VALUE);
@@ -139,21 +74,49 @@ void Timer_1_Init(void)
                 Timer_1_WriteCompareBuf(Timer_1_TC_COMPARE_BUF_VALUE);
             #endif  /* (1u == Timer_1_TC_COMPARE_SWAP) */
         #endif  /* (Timer_1__COMPARE == Timer_1_TC_COMP_CAP_MODE) */
+
+        /* Initialize counter value */
+        #if (Timer_1_CY_TCPWM_V2 && Timer_1_TIMER_UPDOWN_CNT_USED && !Timer_1_CY_TCPWM_4000)
+            Timer_1_WriteCounter(1u);
+        #elif(Timer_1__COUNT_DOWN == Timer_1_TC_COUNTER_MODE)
+            Timer_1_WriteCounter(Timer_1_TC_PERIOD_VALUE);
+        #else
+            Timer_1_WriteCounter(0u);
+        #endif /* (Timer_1_CY_TCPWM_V2 && Timer_1_TIMER_UPDOWN_CNT_USED && !Timer_1_CY_TCPWM_4000) */
     #endif  /* (Timer_1__TIMER == Timer_1_CONFIG) */
 
     #if (Timer_1__PWM_SEL == Timer_1_CONFIG)
-        Timer_1_WritePeriod(Timer_1_PWM_PERIOD_VALUE );
-        Timer_1_WriteCompare(Timer_1_PWM_COMPARE_VALUE);
+        Timer_1_CONTROL_REG = Timer_1_CTRL_PWM_BASE_CONFIG;
 
-        #if (1u == Timer_1_PWM_COMPARE_SWAP)
-            Timer_1_SetCompareSwap(1u);
-            Timer_1_WriteCompareBuf(Timer_1_PWM_COMPARE_BUF_VALUE);
-        #endif  /* (1u == Timer_1_PWM_COMPARE_SWAP) */
+        #if (Timer_1__PWM_PR == Timer_1_PWM_MODE)
+            Timer_1_CONTROL_REG |= Timer_1_CTRL_PWM_RUN_MODE;
+            Timer_1_WriteCounter(Timer_1_PWM_PR_INIT_VALUE);
+        #else
+            Timer_1_CONTROL_REG |= Timer_1_CTRL_PWM_ALIGN | Timer_1_CTRL_PWM_KILL_EVENT;
+            
+            /* Initialize counter value */
+            #if (Timer_1_CY_TCPWM_V2 && Timer_1_PWM_UPDOWN_CNT_USED && !Timer_1_CY_TCPWM_4000)
+                Timer_1_WriteCounter(1u);
+            #elif (Timer_1__RIGHT == Timer_1_PWM_ALIGN)
+                Timer_1_WriteCounter(Timer_1_PWM_PERIOD_VALUE);
+            #else 
+                Timer_1_WriteCounter(0u);
+            #endif  /* (Timer_1_CY_TCPWM_V2 && Timer_1_PWM_UPDOWN_CNT_USED && !Timer_1_CY_TCPWM_4000) */
+        #endif  /* (Timer_1__PWM_PR == Timer_1_PWM_MODE) */
 
-        #if (1u == Timer_1_PWM_PERIOD_SWAP)
-            Timer_1_SetPeriodSwap(1u);
-            Timer_1_WritePeriodBuf(Timer_1_PWM_PERIOD_BUF_VALUE);
-        #endif  /* (1u == Timer_1_PWM_PERIOD_SWAP) */
+        #if (Timer_1__PWM_DT == Timer_1_PWM_MODE)
+            Timer_1_CONTROL_REG |= Timer_1_CTRL_PWM_DEAD_TIME_CYCLE;
+        #endif  /* (Timer_1__PWM_DT == Timer_1_PWM_MODE) */
+
+        #if (Timer_1__PWM == Timer_1_PWM_MODE)
+            Timer_1_CONTROL_REG |= Timer_1_CTRL_PWM_PRESCALER;
+        #endif  /* (Timer_1__PWM == Timer_1_PWM_MODE) */
+
+        /* Set values from customizer to CTRL1 */
+        Timer_1_TRIG_CONTROL1_REG  = Timer_1_PWM_SIGNALS_MODES;
+    
+        /* Set values from customizer to INTR */
+        Timer_1_SetInterruptMode(Timer_1_PWM_INTERRUPT_MASK);
 
         /* Set values from customizer to CTRL2 */
         #if (Timer_1__PWM_PR == Timer_1_PWM_MODE)
@@ -167,7 +130,6 @@ void Timer_1_Init(void)
             #endif  /* ( Timer_1_PWM_LEFT == Timer_1_PWM_ALIGN) */
 
             #if (Timer_1__RIGHT == Timer_1_PWM_ALIGN)
-                Timer_1_WriteCounter(Timer_1_PWM_PERIOD_VALUE);
                 Timer_1_TRIG_CONTROL2_REG = Timer_1_PWM_MODE_RIGHT;
             #endif  /* ( Timer_1_PWM_RIGHT == Timer_1_PWM_ALIGN) */
 
@@ -179,7 +141,22 @@ void Timer_1_Init(void)
                 Timer_1_TRIG_CONTROL2_REG = Timer_1_PWM_MODE_ASYM;
             #endif  /* (Timer_1__ASYMMETRIC == Timer_1_PWM_ALIGN) */
         #endif  /* (Timer_1__PWM_PR == Timer_1_PWM_MODE) */
+
+        /* Set other values from customizer */
+        Timer_1_WritePeriod(Timer_1_PWM_PERIOD_VALUE );
+        Timer_1_WriteCompare(Timer_1_PWM_COMPARE_VALUE);
+
+        #if (1u == Timer_1_PWM_COMPARE_SWAP)
+            Timer_1_SetCompareSwap(1u);
+            Timer_1_WriteCompareBuf(Timer_1_PWM_COMPARE_BUF_VALUE);
+        #endif  /* (1u == Timer_1_PWM_COMPARE_SWAP) */
+
+        #if (1u == Timer_1_PWM_PERIOD_SWAP)
+            Timer_1_SetPeriodSwap(1u);
+            Timer_1_WritePeriodBuf(Timer_1_PWM_PERIOD_BUF_VALUE);
+        #endif  /* (1u == Timer_1_PWM_PERIOD_SWAP) */
     #endif  /* (Timer_1__PWM_SEL == Timer_1_CONFIG) */
+    
 }
 
 
@@ -857,28 +834,29 @@ void Timer_1_SetPeriodSwap(uint32 swapEnable)
 *******************************************************************************/
 void Timer_1_WriteCompare(uint32 compare)
 {
-    #if (Timer_1_CY_TCPWM_V2)
+    #if (Timer_1_CY_TCPWM_4000)
         uint32 currentMode;
-    #endif /* (Timer_1_CY_TCPWM_V2) */
+    #endif /* (Timer_1_CY_TCPWM_4000) */
 
-    #if (Timer_1_CY_TCPWM_V2)
+    #if (Timer_1_CY_TCPWM_4000)
         currentMode = ((Timer_1_CONTROL_REG & Timer_1_UPDOWN_MASK) >> Timer_1_UPDOWN_SHIFT);
 
-        if (Timer_1__COUNT_DOWN == currentMode)
+        if (((uint32)Timer_1__COUNT_DOWN == currentMode) && (0xFFFFu != compare))
         {
-            Timer_1_COMP_CAP_REG = ((compare + 1u) & Timer_1_16BIT_MASK);
+            compare++;
         }
-        else if (Timer_1__COUNT_UP == currentMode)
+        else if (((uint32)Timer_1__COUNT_UP == currentMode) && (0u != compare))
         {
-            Timer_1_COMP_CAP_REG = ((compare - 1u) & Timer_1_16BIT_MASK);
+            compare--;
         }
         else
         {
-            Timer_1_COMP_CAP_REG = (compare & Timer_1_16BIT_MASK);
         }
-    #else
-        Timer_1_COMP_CAP_REG = (compare & Timer_1_16BIT_MASK);
-    #endif /* (Timer_1_CY_TCPWM_V2) */
+        
+    
+    #endif /* (Timer_1_CY_TCPWM_4000) */
+    
+    Timer_1_COMP_CAP_REG = (compare & Timer_1_16BIT_MASK);
 }
 
 
@@ -899,30 +877,32 @@ void Timer_1_WriteCompare(uint32 compare)
 *******************************************************************************/
 uint32 Timer_1_ReadCompare(void)
 {
-    #if (Timer_1_CY_TCPWM_V2)
+    #if (Timer_1_CY_TCPWM_4000)
         uint32 currentMode;
         uint32 regVal;
-    #endif /* (Timer_1_CY_TCPWM_V2) */
+    #endif /* (Timer_1_CY_TCPWM_4000) */
 
-    #if (Timer_1_CY_TCPWM_V2)
+    #if (Timer_1_CY_TCPWM_4000)
         currentMode = ((Timer_1_CONTROL_REG & Timer_1_UPDOWN_MASK) >> Timer_1_UPDOWN_SHIFT);
-
-        if (Timer_1__COUNT_DOWN == currentMode)
+        
+        regVal = Timer_1_COMP_CAP_REG;
+        
+        if (((uint32)Timer_1__COUNT_DOWN == currentMode) && (0u != regVal))
         {
-            regVal = ((Timer_1_COMP_CAP_REG - 1u) & Timer_1_16BIT_MASK);
+            regVal--;
         }
-        else if (Timer_1__COUNT_UP == currentMode)
+        else if (((uint32)Timer_1__COUNT_UP == currentMode) && (0xFFFFu != regVal))
         {
-            regVal = ((Timer_1_COMP_CAP_REG + 1u) & Timer_1_16BIT_MASK);
+            regVal++;
         }
         else
         {
-            regVal = (Timer_1_COMP_CAP_REG & Timer_1_16BIT_MASK);
         }
-        return (regVal);
+
+        return (regVal & Timer_1_16BIT_MASK);
     #else
         return (Timer_1_COMP_CAP_REG & Timer_1_16BIT_MASK);
-    #endif /* (Timer_1_CY_TCPWM_V2) */
+    #endif /* (Timer_1_CY_TCPWM_4000) */
 }
 
 
@@ -943,28 +923,27 @@ uint32 Timer_1_ReadCompare(void)
 *******************************************************************************/
 void Timer_1_WriteCompareBuf(uint32 compareBuf)
 {
-    #if (Timer_1_CY_TCPWM_V2)
+    #if (Timer_1_CY_TCPWM_4000)
         uint32 currentMode;
-    #endif /* (Timer_1_CY_TCPWM_V2) */
+    #endif /* (Timer_1_CY_TCPWM_4000) */
 
-    #if (Timer_1_CY_TCPWM_V2)
+    #if (Timer_1_CY_TCPWM_4000)
         currentMode = ((Timer_1_CONTROL_REG & Timer_1_UPDOWN_MASK) >> Timer_1_UPDOWN_SHIFT);
 
-        if (Timer_1__COUNT_DOWN == currentMode)
+        if (((uint32)Timer_1__COUNT_DOWN == currentMode) && (0xFFFFu != compareBuf))
         {
-            Timer_1_COMP_CAP_BUF_REG = ((compareBuf + 1u) & Timer_1_16BIT_MASK);
+            compareBuf++;
         }
-        else if (Timer_1__COUNT_UP == currentMode)
+        else if (((uint32)Timer_1__COUNT_UP == currentMode) && (0u != compareBuf))
         {
-            Timer_1_COMP_CAP_BUF_REG = ((compareBuf - 1u) & Timer_1_16BIT_MASK);
+            compareBuf --;
         }
         else
         {
-            Timer_1_COMP_CAP_BUF_REG = (compareBuf & Timer_1_16BIT_MASK);
         }
-    #else
-        Timer_1_COMP_CAP_BUF_REG = (compareBuf & Timer_1_16BIT_MASK);
-    #endif /* (Timer_1_CY_TCPWM_V2) */
+    #endif /* (Timer_1_CY_TCPWM_4000) */
+    
+    Timer_1_COMP_CAP_BUF_REG = (compareBuf & Timer_1_16BIT_MASK);
 }
 
 
@@ -985,30 +964,32 @@ void Timer_1_WriteCompareBuf(uint32 compareBuf)
 *******************************************************************************/
 uint32 Timer_1_ReadCompareBuf(void)
 {
-    #if (Timer_1_CY_TCPWM_V2)
+    #if (Timer_1_CY_TCPWM_4000)
         uint32 currentMode;
         uint32 regVal;
-    #endif /* (Timer_1_CY_TCPWM_V2) */
+    #endif /* (Timer_1_CY_TCPWM_4000) */
 
-    #if (Timer_1_CY_TCPWM_V2)
+    #if (Timer_1_CY_TCPWM_4000)
         currentMode = ((Timer_1_CONTROL_REG & Timer_1_UPDOWN_MASK) >> Timer_1_UPDOWN_SHIFT);
 
-        if (Timer_1__COUNT_DOWN == currentMode)
+        regVal = Timer_1_COMP_CAP_BUF_REG;
+        
+        if (((uint32)Timer_1__COUNT_DOWN == currentMode) && (0u != regVal))
         {
-            regVal = ((Timer_1_COMP_CAP_BUF_REG - 1u) & Timer_1_16BIT_MASK);
+            regVal--;
         }
-        else if (Timer_1__COUNT_UP == currentMode)
+        else if (((uint32)Timer_1__COUNT_UP == currentMode) && (0xFFFFu != regVal))
         {
-            regVal = ((Timer_1_COMP_CAP_BUF_REG + 1u) & Timer_1_16BIT_MASK);
+            regVal++;
         }
         else
         {
-            regVal = (Timer_1_COMP_CAP_BUF_REG & Timer_1_16BIT_MASK);
         }
-        return (regVal);
+
+        return (regVal & Timer_1_16BIT_MASK);
     #else
         return (Timer_1_COMP_CAP_BUF_REG & Timer_1_16BIT_MASK);
-    #endif /* (Timer_1_CY_TCPWM_V2) */
+    #endif /* (Timer_1_CY_TCPWM_4000) */
 }
 
 
