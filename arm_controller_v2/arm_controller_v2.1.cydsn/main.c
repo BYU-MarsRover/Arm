@@ -22,14 +22,13 @@ uint8 fin_exec; //counts
 #define TEST_ARRAY_SIZE 10
 int16 test_array[TEST_ARRAY_SIZE];
 
-#define SERV_ARR_SIZE 20
-uint8 serv_arr_cspot;
-uint16 servo_array[SERV_ARR_SIZE];
-//uint8 serv_avg_count = 0;
+#define ELBW_ARR_SIZE 20
+uint8 elbw_arr_cspot;
+uint16 elbow_array[ELBW_ARR_SIZE];
 
-#define LED_ARR_SIZE 20
-uint8 led_arr_cspot;
-uint16 led_array[LED_ARR_SIZE];
+#define BA_ARR_SIZE 20
+uint8 BA_arr_cspot;
+uint16 baseAz_array[BA_ARR_SIZE];
 
 uint16 feedback_count;
 uint8 timerFlag; //used in the timer_isr
@@ -58,83 +57,17 @@ void elbow();
 void wristTilt();
 void wristRotate();
 void send_feedback();
-
-void servo();
-void servo1();
-
-void led();
-void led1();
-
-void fill_data_array1();
-
 //--------------------------------------------------- END Function Stubs
 
 
 //to be used for parsing reading/parsing the data from the wiznet
-void fill_data_array() //maybe take param: uint8* array
-{
-    
-    //read one byte at a time
-    uint8 c = 0; //UART_1_UartGetChar();
-    
-
-    if(c == 'q'){
-        data_array[1] = 2000;
-    }
-    else if(c == 'w'){
-        data_array[1] = 1750;
-    }
-    else if(c == 'e'){
-        data_array[1] = 1500;
-    }
-    else if(c == 'r'){
-        data_array[1] = 1250;
-    }
-    else if(c == 't'){
-        data_array[1] = 1000;
-    }    
-    else if(c == '1'){
-        data_array[2] = 1000;
-    }
-    else if(c == '2'){
-        data_array[2] = 5000;
-    }
-    else if(c == '3'){
-        data_array[2] = 10000;
-    }
-    else if(c == '4'){
-        data_array[2] = 15000;
-    }
-    else if(c == '5'){
-        data_array[2] =19000;
-    }    
-    else if(c == 'j'){
-        data_array[3] = 1000;
-    }
-    else if(c == 'k'){
-        data_array[3] = 1500;
-    }
-    else if(c == 'l'){
-        data_array[3] =2000;
-    }    
-
-}
-
-void fill_data_array1()
+void fill_data_array()
 {
     uint8 i = 0;
     for(i = 0; i < TEST_ARRAY_SIZE; i++)
     {
         data_array[i] = test_array[i];
     }
-}
-
-//control the turret
-void baseAzimuth()
-{
-    //take instruction from data_array
-    //smooth input
-    //actuate the turret using PWM
 }
 
 enum shldr_states {shldr_start, shldr_init, shldr_fdbk, shldr_exe} shldr_state;
@@ -182,15 +115,6 @@ void shoulder()
             break;
     }
     /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-}
-
-//control the elbow
-void elbow()
-{
-    //take instruction from data_array
-    //smooth input
-    //actuate the elbow using PWM
-    //get feedback
 }
 
 enum wristTilt_states {tilt_init = 0, tilt_start, tilt_control, tilt_feedback} wristTilt_state;
@@ -299,53 +223,6 @@ void send_feedback()
     //send packet via serial to wiznet
 }
 
-enum led_states {l_start,l_different,l_wait} led_state;
-void led()
-{
-    uint16 old = 0;
-    switch(led_state)
-    {
-        case l_start:
-            break;
-        
-        case l_different:
-            PWM_1_WriteCompare1(data_array[1]);
-            old = data_array[1];
-            break;
-            
-        case l_wait:
-            break;
-    }
-    
-    switch(led_state)
-    {
-        case l_start:
-            led_state = l_wait;
-            break;
-        
-        case l_different:
-            if(data_array[1] != old)
-            {
-                led_state = l_different;
-            }
-            else
-            {
-                led_state = l_wait;
-            }
-            break;
-            
-        case l_wait:
-            if(data_array[1] != old)
-            {
-                led_state = l_different;
-            }
-            else
-            {
-                led_state = l_wait;
-            }
-            break;
-    }
-}
 
 //Average function to be used in smoothing our input
 uint16 average(uint16* array, uint8 num_items)
@@ -364,282 +241,164 @@ uint16 average(uint16* array, uint8 num_items)
     return avg;
 }
 
-enum servo_states {s_start,s_different,s_wait} servo_state;
-void servo()
-{
-    uint16 old = 0;
-    switch(servo_state){
-        case s_start:
-            break;
-        
-        case s_different:
-            PWM_1_WriteCompare2(data_array[2]);
-            old = data_array[2];
-            break;
-            
-        case s_wait:
-            break;
-    }
-    
-    switch(servo_state){
-        case s_start:
-            servo_state = s_wait;
-            break;
-        
-        case s_different:
-            if(data_array[2] != old)
-            {
-                servo_state = s_different;
-            }
-            else
-            {
-                servo_state = s_wait;
-            }
-            break;
-            
-        case s_wait:
-            if(data_array[2] != old)
-            {
-                servo_state = s_different;
-            }
-            else
-            {
-                servo_state = s_wait;
-            }
-            break;
-    }    
-}
 
-//New servo design
+//control the elbow
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-enum servo1_states {s1_start,s1_init,s1_execute,s1_wait} servo1_state;
-void servo1()
+enum elbow_states {elbw_start,elbw_init,elbw_execute,elbw_wait} elbow_state;
+void elbow()
 { 
+    //take instruction from data_array
+    //smooth input
+    //actuate the elbow using PWM
+    //get feedback
     uint8 i;
     uint16 avg;
     uint16 command;
     
-    switch(servo1_state){ //actions
-        case s1_start:
+    switch(elbow_state){ //actions
+        case elbw_start:
             break;
 
-        case s1_init:
-            for(i = 0; i < SERV_ARR_SIZE; i++)
+        case elbw_init:
+            for(i = 0; i < ELBW_ARR_SIZE; i++)
             {
-                servo_array[i] = 1500;
+                elbow_array[i] = 1500;
             }
-            serv_arr_cspot = 0;
+            elbw_arr_cspot = 0;
             break;
 
-        case s1_execute:
+        case elbw_execute:
             command = (((data_array[2] << 8) | data_array[3])/2) + 1500;
-            servo_array[serv_arr_cspot] = command;
-            if(serv_arr_cspot < (SERV_ARR_SIZE - 1))
+            elbow_array[elbw_arr_cspot] = command;
+            if(elbw_arr_cspot < (ELBW_ARR_SIZE - 1))
             {
-                serv_arr_cspot++;
+                elbw_arr_cspot++;
             }
             else
             {
-                serv_arr_cspot = 0;
+                elbw_arr_cspot = 0;
             }
-            avg = average(servo_array, SERV_ARR_SIZE);
-            //servo_array[serv_avg_count] = data_array[2];
-            //PWM_1_WriteCompare2(avg);
+            avg = average(elbow_array, ELBW_ARR_SIZE);
             PWM_3_WriteCompare(avg);
-            //new_pack = 0;
             fin_exec++;
             break;
             
-        case s1_wait:
+        case elbw_wait:
             break;
     }
     
-    switch(servo1_state){ //transitions
-        case s1_start:
-            servo1_state = s1_init;
+    switch(elbow_state){ //transitions
+        case elbw_start:
+            elbow_state = elbw_init;
             break;
         
-        case s1_init:
-            servo1_state = s1_wait;
+        case elbw_init:
+            elbow_state = elbw_wait;
             break;
         
-        case s1_execute:
+        case elbw_execute:
             if(new_pack)
             {
-                servo1_state = s1_execute;
+                elbow_state = elbw_execute;
             }
             else
             {
-                servo1_state = s1_wait;
+                elbow_state = elbw_wait;
             }
             break;
         
-        case s1_wait:
+        case elbw_wait:
             if(new_pack)
             {
-                servo1_state = s1_execute;
+                elbow_state = elbw_execute;
             }
             else
             {
-                servo1_state = s1_wait; 
+                elbow_state = elbw_wait; 
             }
             break;
     }    
 }
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-uint16 led_adjust(uint16 raw)
-{
-    uint16 new_val;
-    if(raw <= 1250)
-    {
-        new_val = 1000;
-    }
-    else if(raw <= 1500)
-    {
-        new_val = 5000;
-    }
-    else if(raw <= 1750)
-    {
-        new_val = 10000;
-    }
-    else if(raw <= 2000)
-    {
-        new_val = 15000;
-    }
-    else
-    {
-        new_val = 0;
-    }
-    return new_val;
-}
-
-//New led design
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-enum led1_states {l1_start,l1_init,l1_execute,l1_wait} led1_state;
-void led1()
+//control the turret
+enum baseAzimuth_states {BA_start,BA_init,BA_execute,BA_wait} baseAzimuth_state;
+void baseAzimuth()
 { 
+    //take instruction from data_array
+    //smooth input
+    //actuate the turret using PWM
     uint8 i;
     uint16 avg;
     uint16 command;
     
-    switch(led1_state){ //actions
-        case l1_start:
+    switch(baseAzimuth_state){ //actions
+        case BA_start:
             break;
 
-        case l1_init:
-            for(i = 0; i < LED_ARR_SIZE; i++)
+        case BA_init:
+            for(i = 0; i < BA_ARR_SIZE; i++)
             {
-                led_array[i] = 1500;
+                baseAz_array[i] = 1500;
             }
-            led_arr_cspot = 0;
+            BA_arr_cspot = 0;
             break;
 
-        case l1_execute:
+        case BA_execute:
             command = (((data_array[4] << 8) | data_array[5])/2) + 1500;
-            led_array[led_arr_cspot] = command;
-            if(led_arr_cspot < (LED_ARR_SIZE - 1))
+            baseAz_array[BA_arr_cspot] = command;
+            if(BA_arr_cspot < (BA_ARR_SIZE - 1))
             {
-                led_arr_cspot++;
+                BA_arr_cspot++;
             }
             else
             {
-                led_arr_cspot = 0;
+                BA_arr_cspot = 0;
             }
-            avg = average(led_array, LED_ARR_SIZE);
+            avg = average(baseAz_array, BA_ARR_SIZE);
             
-            //PWM_1_WriteCompare1(led_adjust(avg));
             PWM_2_WriteCompare(avg);
             fin_exec++;
             break;
             
-        case l1_wait:
+        case BA_wait:
             break;
     }
     
-    switch(led1_state){ //transitions
-        case l1_start:
-            led1_state = l1_init;
+    switch(baseAzimuth_state){ //transitions
+        case BA_start:
+            baseAzimuth_state = BA_init;
             break;
         
-        case l1_init:
-            led1_state = l1_wait;
+        case BA_init:
+            baseAzimuth_state = BA_wait;
             break;
         
-        case l1_execute:
+        case BA_execute:
             if(new_pack)
             {
-                led1_state = l1_execute;
+                baseAzimuth_state = BA_execute;
             }
             else
             {
-                led1_state = l1_wait;
+                baseAzimuth_state = BA_wait;
             }
             break;
         
-        case l1_wait:
+        case BA_wait:
             if(new_pack)
             {
-                led1_state = l1_execute;
+                baseAzimuth_state = BA_execute;
             }
             else
             {
-                led1_state = l1_wait; 
+                baseAzimuth_state = BA_wait; 
             }
             break;
     }    
 }
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-enum motor_states {m_start,m_different,m_wait} motor_state;
-void motor(){
-//    uint16 old = 0;
-//    switch(motor_state){ //state actions
-//        case m_start:
-//            break;
-//        
-//        case m_different:
-//            PWM_2_WriteCompare1(data_array[1]);
-//            old = data_array[3];
-//            break;
-//            
-//        case m_wait:
-//            break;
-//    }
-//    
-//    switch(motor_state){ //state transitions
-//        case m_start:
-//            motor_state = m_wait;
-//            break;
-//        
-//        case m_different:
-//            if(data_array[3] != old)
-//            {
-//                motor_state = m_different;
-//            }
-//            else
-//            {
-//                motor_state = m_wait;
-//            }
-//            break;
-//            
-//        case m_wait:
-//            if(data_array[3] != old)
-//            {
-//                motor_state = m_different;
-//            }
-//            else
-//            {
-//                motor_state = m_wait;
-//            }
-//            break;
-//    }
-}
 
 int main()
-{
-    
+{  
     CyGlobalIntEnable;
     
     //Define variables
@@ -653,19 +412,17 @@ int main()
     //PWM_1_Start();
     PWM_2_Start();
     
-    PWM_2_WriteCompare(1500);
+    PWM_2_WriteCompare(1500); //Initialize our motor drivers
     CyDelay(10000);
     
     PWM_3_Start();
-    //PWM_2_Start();
     
     Timer_1_Start();
-    //UART_1_Start();
     
     isr_1_StartEx(timer_isr);
     
+    //helpers for generating random arrays
     srand((unsigned) time(&t));
-    int counter_five = 0;
     
     for(;;)
     {
@@ -674,37 +431,27 @@ int main()
         
         if(wiznet) //WIZ_INT_Read()
         {
-            fill_data_array1(); //potentially take input &data_array
+            fill_data_array();
             new_pack = 1;
             fin_exec = 0;
         }
         
-//        baseAzimuth();
+        baseAzimuth();
 //        shoulder();
-//        elbow();
+        elbow();
 //        wristTilt();
 //        wristRotate();
 
-        led1();
-//        led();
-        servo1();
-//        servo();
         if(fin_exec == NUM_OF_SM)
         {
             new_pack = 0;
         }
         
+        while(!timerFlag){} //this while loop will periodize our code to the time of longest path
+        timerFlag = 0;
         
-        while(!timerFlag) //this while loop will periodize our code to the time of longest path
-        {
-//            //Potential solution to how we will want to send feedback
-//            feedback_count++;
-//            if(feedback_count == feedback_interval) //sends feeback to base station every 50th
-//            {                                        //time through the full set of instructions
-//                send_feedback();
-//            }
-        }
         counter++;
+        
         if(counter == 100)
         {
             for(int i = 0; i < 10; (i+=2))
@@ -716,7 +463,13 @@ int main()
             counter = 0;
             wiznet = 1;
         }
-        timerFlag = 0;
+        
+//            //Potential solution to how we will want to send feedback
+//            feedback_count++;
+//            if(feedback_count == feedback_interval) //sends feeback to base station every 50th
+//            {                                        //time through the full set of instructions
+//                send_feedback();
+//            }
     }
 }
 

@@ -1,5 +1,5 @@
 # arm_controller_v2.1
-# 2015-02-26 15:12:13Z
+# 2015-03-04 05:52:32Z
 
 # IO_2@[IOP=(3)][IoId=(2)] is reserved: SWDDebugEnabled
 dont_use_io iocell 3 2
@@ -13,5 +13,5 @@ set_io "WIZ_INT(0)" iocell 0 0
 set_io "WIZ_RDY(0)" iocell 0 1
 set_io "WIZ_RST(0)" iocell 0 2
 set_io "WIZ_SS(0)" iocell 0 3
-set_io "led(0)" iocell 1 2
-set_io "servo(0)" iocell 1 0
+set_io "baseAzimuth(0)" iocell 1 2
+set_io "elbow(0)" iocell 1 0
