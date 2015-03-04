@@ -1,0 +1,10 @@
+--------------- Build Started: 03/04/2015 10:34:57 Project: arm_controller_v2.1, Configuration: ARM GCC 4.8.4 Debug ---------------
+cydsfit.exe -.appdatapath "C:\Users\johnsonjacob\AppData\Local\Cypress Semiconductor\PSoC Creator\3.1" -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -p Z:\OneDrive\Tech\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\arm_controller_v2.1.cyprj -d CY8C4245AXI-483 -s Z:\OneDrive\Tech\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\Generated_Source\PSoC4 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
+Elaborating Design...
+ADD: pft.M0086: error: Error in component: Bootloadable_1. The referenced Bootloader is invalid. Verify the Bootloader dependency is correct in the Dependencies tab of Configure dialog, then build project. Invalid bootloader hex file. Unable to read the hex file (C:\Users\Samuel\Documents\PSoC_Workspaces\UART_Bootloader.hex). The path does not exist.
+ * Z:\OneDrive\Tech\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\TopDesign\TopDesign.cysch (Instance:Bootloadable_1)
+ADD: pft.M0086: error: Error in component: Bootloadable_1. The referenced Bootloader is invalid. Verify the Bootloader dependency is correct in the Dependencies tab of Configure dialog, then build project. Invalid bootloader elf file. Unable to read the elf file (C:\Users\Samuel\Documents\PSoC_Workspaces\UART_Bootloader.elf). The path does not exist.
+ * Z:\OneDrive\Tech\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\TopDesign\TopDesign.cysch (Instance:Bootloadable_1)
+Elaboration client 'CyDesigner.PSoC.P3Fit.Common.DesignWideResources.CyBootloaderDataMonitor, cyp3fit, Version=3.1.0.1722, Culture=neutral, PublicKeyToken=null.CyBootloaderDataMonitor' failed with exception The directory name C:\Users\Samuel\Documents\PSoC_Workspaces is invalid.
+Error: cdf.M0005: CyDsFit aborted due to errors, please address all errors and rerun CyDsFit. (App=cydsfit)
+--------------- Build Failed: 03/04/2015 10:35:04 ---------------

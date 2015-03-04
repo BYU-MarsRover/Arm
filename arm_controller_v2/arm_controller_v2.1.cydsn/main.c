@@ -10,6 +10,12 @@
 //Initializations of global variables
 //TODO should this be global or should we declare it in main and pass a
 //////pointer to each function?
+#define ELBOW_UPPER_BOUND 64000
+#define ELBOW_LOWER_BOUND 0
+#define SHOULDER_UPPER_BOUND 64000
+#define SHOULDER_LOWER_BOUND 0
+#define SHOULDER_POT 0
+#define ELBOW_POT 1
 #define DATA_ARRAY_SIZE 14
 uint16 data_array[DATA_ARRAY_SIZE]; //stores the parsed instructions from the wiznet
 
@@ -57,9 +63,13 @@ void elbow();
 void wristTilt();
 void wristRotate();
 void send_feedback();
+uint16 potFeedback();
 //--------------------------------------------------- END Function Stubs
 
-
+uint16 potFeedback(uint32 channel){
+    uint16 feedback = ADC_GetResult16(channel);
+    return feedback;
+}
 //to be used for parsing reading/parsing the data from the wiznet
 void fill_data_array()
 {
@@ -279,8 +289,38 @@ void elbow()
                 elbw_arr_cspot = 0;
             }
             avg = average(elbow_array, ELBW_ARR_SIZE);
-            PWM_3_WriteCompare(avg);
-            fin_exec++;
+           
+            uint16 feedback = potFeedback(ELBOW_POT);
+            
+            if(feedback <= ELBOW_LOWER_BOUND)
+            {
+                if (avg < 1500)
+                {
+                    PWM_3_WriteCompare(1500);
+                }
+                else
+                {
+                    PWM_3_WriteCompare(avg);
+                }
+               
+                fin_exec++;
+            }
+            else if (feedback >= ELBOW_UPPER_BOUND)
+            {
+                if(avg > 1500)
+                {
+                    PWM_3_WriteCompare(1500);
+                }
+                else
+                {
+                    PWM_3_WriteCompare(avg);
+                }
+            }
+            else
+            {
+                PWM_3_WriteCompare(avg);
+            }
+          
             break;
             
         case elbw_wait:
@@ -419,7 +459,14 @@ int main()
     
     Timer_1_Start();
     
+    ADC_Start();
+    ADC_StartConvert();
+    
     isr_1_StartEx(timer_isr);
+    
+    
+    
+    
     
     //helpers for generating random arrays
     srand((unsigned) time(&t));

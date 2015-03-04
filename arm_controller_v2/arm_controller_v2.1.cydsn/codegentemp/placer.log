@@ -6,7 +6,7 @@
 
 #Build Date:         Oct 23 2014 13:00:08
 
-#File Generated:     Mar 3 2015 22:52:33
+#File Generated:     Mar 4 2015 11:12:00
 
 #Purpose:            
 
@@ -55,7 +55,7 @@ Design Statistics after Packing
 Device Utilization Summary after Packing
     Macrocells                  :	13/32
     UDBS                        :	3/4
-    IOs                         :	9/36
+    IOs                         :	11/36
 
 
 D2088: Phase 3, elapsed time : 0.0 (sec)
@@ -76,7 +76,9 @@ analysis after routing.
 ######################################################################
                      Clock Summary 
 ======================================================================
-Number of clocks: 11
+Number of clocks: 13
+Clock: ADC_intClock         | Frequency: N/A       | Target:   1.0 MHz
+Clock: ADC_intClock(FFB)    | Frequency: N/A       | Target:   1.0 MHz
 Clock: Clock_counter        | Frequency: N/A       | Target:   1.0 MHz
 Clock: Clock_counter(FFB)   | Frequency: N/A       | Target:   1.0 MHz
 Clock: Clock_pwm            | Frequency: N/A       | Target:   1.0 MHz
@@ -99,7 +101,9 @@ Phase 7
 ######################################################################
                      Clock Summary 
 ======================================================================
-Number of clocks: 11
+Number of clocks: 13
+Clock: ADC_intClock         | Frequency: N/A       | Target:   1.0 MHz
+Clock: ADC_intClock(FFB)    | Frequency: N/A       | Target:   1.0 MHz
 Clock: Clock_counter        | Frequency: N/A       | Target:   1.0 MHz
 Clock: Clock_counter(FFB)   | Frequency: N/A       | Target:   1.0 MHz
 Clock: Clock_pwm            | Frequency: N/A       | Target:   1.0 MHz
@@ -115,7 +119,7 @@ Clock: SPIM_IntClock        | Frequency:  61.0 MHz | Target:   2.0 MHz
 ======================================================================
                      End of Clock Summary
 ######################################################################
-D2088: Phase 7, elapsed time : 0.2 (sec)
+D2088: Phase 7, elapsed time : 0.1 (sec)
 
 Final Design Statistics
     Number of Combinational MCs 	:	4
@@ -125,11 +129,11 @@ Final Design Statistics
     Number of Status            	:	2
     Number of SyncCells         	:	0
     Number of count7cells       	:	1
-    Number of IOs       	:	9
+    Number of IOs       	:	11
 
 Device Utilization Summary
     Macrocells                  :	13/32
-    IOs                         :	9/36
+    IOs                         :	11/36
 
 
 
@@ -145,7 +149,9 @@ analysis after routing.
 ######################################################################
                      Clock Summary 
 ======================================================================
-Number of clocks: 11
+Number of clocks: 13
+Clock: ADC_intClock         | Frequency: N/A       | Target:   1.0 MHz
+Clock: ADC_intClock(FFB)    | Frequency: N/A       | Target:   1.0 MHz
 Clock: Clock_counter        | Frequency: N/A       | Target:   1.0 MHz
 Clock: Clock_counter(FFB)   | Frequency: N/A       | Target:   1.0 MHz
 Clock: Clock_pwm            | Frequency: N/A       | Target:   1.0 MHz
@@ -156,7 +162,7 @@ Clock: CyIMO                | Frequency: N/A       | Target:  24.0 MHz
 Clock: CyLFCLK              | Frequency: N/A       | Target:   0.0 MHz
 Clock: CyRouted1            | Frequency: N/A       | Target:  24.0 MHz
 Clock: CySYSCLK             | Frequency: N/A       | Target:  24.0 MHz
-Clock: SPIM_IntClock        | Frequency:  61.0 MHz | Target:   2.2 MHz
+Clock: SPIM_IntClock        | Frequency:  63.3 MHz | Target:   2.2 MHz
 
 ======================================================================
                      End of Clock Summary
@@ -167,5 +173,5 @@ D2088: Phase 8, elapsed time : 0.0 (sec)
 
 D2054: Placement of the design completed successfully
 
-I2076: Total run-time: 1.2 sec.
+I2076: Total run-time: 0.5 sec.
 
