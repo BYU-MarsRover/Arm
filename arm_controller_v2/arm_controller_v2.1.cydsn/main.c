@@ -10,8 +10,8 @@
 //Initializations of global variables
 //TODO should this be global or should we declare it in main and pass a
 //////pointer to each function?
-#define ELBOW_UPPER_BOUND 64000
-#define ELBOW_LOWER_BOUND 0
+#define ELBOW_UPPER_BOUND 1000
+#define ELBOW_LOWER_BOUND 100
 #define SHOULDER_UPPER_BOUND 64000
 #define SHOULDER_LOWER_BOUND 0
 #define SHOULDER_POT 0
@@ -31,6 +31,10 @@ int16 test_array[TEST_ARRAY_SIZE];
 #define ELBW_ARR_SIZE 20
 uint8 elbw_arr_cspot;
 uint16 elbow_array[ELBW_ARR_SIZE];
+
+#define SHLDR_ARR_SIZE 20
+uint8 shldr_arr_cspot;
+uint16 shoulder_array[SHLDR_ARR_SIZE];
 
 #define BA_ARR_SIZE 20
 uint8 BA_arr_cspot;
@@ -66,6 +70,37 @@ void send_feedback();
 uint16 potFeedback();
 //--------------------------------------------------- END Function Stubs
 
+// function to convert int to string
+void reverse(char s[])
+ {
+     int i, j;
+     char c;
+ 
+     for (i = 0, j = strlen(s)-1; i<j; i++, j--) {
+         c = s[i];
+         s[i] = s[j];
+         s[j] = c;
+     }
+ }
+/* itoa:  convert n to characters in s */
+ void itoa(int n, char s[])
+ {
+     int i, sign;
+ 
+     if ((sign = n) < 0)  /* record sign */
+         n = -n;          /* make n positive */
+     i = 0;
+     do {       /* generate digits in reverse order */
+         s[i++] = n % 10 + '0';   /* get next digit */
+     } while ((n /= 10) > 0);     /* delete it */
+     if (sign < 0)
+         s[i++] = '-';
+     s[i] = '\0';
+     reverse(s);
+ }
+
+
+
 uint16 potFeedback(uint32 channel){
     uint16 feedback = ADC_GetResult16(channel);
     return feedback;
@@ -80,52 +115,7 @@ void fill_data_array()
     }
 }
 
-enum shldr_states {shldr_start, shldr_init, shldr_fdbk, shldr_exe} shldr_state;
-//control the shoulder
-void shoulder()
-{
-    //take instruction from data_array
-    //smooth input
-    //actuate the shoulder using PWM
-    //get feedback
-    
-    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-    //switch statement for state actions
-		//start
-			//break
-		//initialize
-			//create smoothing array
-		//feedback
-			//read feedback
-		//execute
-			//add the shifted value from main to back of smoothing array
-			//calculate average of value in array
-    
-    switch(shldr_state)
-    {//switch staatement for state transitions
-		case shldr_start: //start
-			//next state will be init
-            shldr_state = shldr_init;
-            break;
-        
-		case shldr_init: //initialize
-			//next state will be feedback
-            shldr_state = shldr_fdbk;
-            break;
-        
-		case shldr_fdbk://feedback
-			//if position ok relative to average
-				//execute
-			//else if not ok
-				//report problem
-            break;
-		case shldr_exe://execute
-			//next state will be report
-            shldr_state = shldr_fdbk;
-            break;
-    }
-    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-}
+
 
 enum wristTilt_states {tilt_init = 0, tilt_start, tilt_control, tilt_feedback} wristTilt_state;
 //control the tilting motion of the wrist
@@ -291,6 +281,13 @@ void elbow()
             avg = average(elbow_array, ELBW_ARR_SIZE);
            
             uint16 feedback = potFeedback(ELBOW_POT);
+            //TODO make sure reading from correct pots
+            char buffer[20];
+            
+            itoa(avg, buffer);
+            
+            UART_1_UartPutString(buffer);      
+            UART_1_UartPutString("\r\n");      
             
             if(feedback <= ELBOW_LOWER_BOUND)
             {
@@ -355,6 +352,114 @@ void elbow()
             else
             {
                 elbow_state = elbw_wait; 
+            }
+            break;
+    }    
+}
+
+//control the shoulder
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+enum shoulder_states {shldr_start,shldr_init,shldr_execute,shldr_wait} shoulder_state;
+void shoulder()
+{ 
+    //take instruction from data_array
+    //smooth input
+    //actuate the shoulder using PWM
+    //get feedback
+    uint8 i;
+    uint16 avg;
+    uint16 command;
+    
+    switch(shoulder_state){ //actions
+        case shldr_start:
+            break;
+
+        case shldr_init:
+            for(i = 0; i < SHLDR_ARR_SIZE; i++)
+            {
+                shoulder_array[i] = 1500;
+            }
+            shldr_arr_cspot = 0;
+            break;
+
+        case shldr_execute:
+            command = (((data_array[2] << 8) | data_array[3])/2) + 1500;
+            shoulder_array[shldr_arr_cspot] = command;
+            if(shldr_arr_cspot < (SHLDR_ARR_SIZE - 1))
+            {
+                shldr_arr_cspot++;
+            }
+            else
+            {
+                shldr_arr_cspot = 0;
+            }
+            avg = average(shoulder_array, SHLDR_ARR_SIZE);
+           
+            uint16 feedback = potFeedback(SHOULDER_POT);
+            
+            if(feedback <= SHOULDER_LOWER_BOUND)
+            {
+                if (avg < 1500)
+                {
+                    PWM_1_WriteCompare(1500);
+                }
+                else
+                {
+                    PWM_1_WriteCompare(avg);
+                }
+               
+                fin_exec++;
+            }
+            else if (feedback >= SHOULDER_UPPER_BOUND)
+            {
+                if(avg > 1500)
+                {
+                    PWM_1_WriteCompare(1500);
+                }
+                else
+                {
+                    PWM_1_WriteCompare(avg);
+                }
+            }
+            else
+            {
+                PWM_1_WriteCompare(avg);
+            }
+          
+            break;
+            
+        case shldr_wait:
+            break;
+    }
+    
+    switch(shoulder_state){ //transitions
+        case shldr_start:
+            shoulder_state = shldr_init;
+            break;
+        
+        case shldr_init:
+            shoulder_state = shldr_wait;
+            break;
+        
+        case shldr_execute:
+            if(new_pack)
+            {
+                shoulder_state = shldr_execute;
+            }
+            else
+            {
+                shoulder_state = shldr_wait;
+            }
+            break;
+        
+        case shldr_wait:
+            if(new_pack)
+            {
+                shoulder_state = shldr_execute;
+            }
+            else
+            {
+                shoulder_state = shldr_wait; 
             }
             break;
     }    
@@ -449,14 +554,15 @@ int main()
     Clock_pwm_Start();
     Clock_counter_Start();
     
-    //PWM_1_Start();
+    UART_1_Start();
+    
+    PWM_1_Start();
     PWM_2_Start();
-    
-    PWM_2_WriteCompare(1500); //Initialize our motor drivers
-    CyDelay(10000);
-    
     PWM_3_Start();
     
+    PWM_3_WriteCompare(1500); //Initialize our motor drivers
+    CyDelay(10000);
+   
     Timer_1_Start();
     
     ADC_Start();
@@ -464,13 +570,14 @@ int main()
     
     isr_1_StartEx(timer_isr);
     
+//    uint8 second_counter = 0;
     
     
     
     
     //helpers for generating random arrays
     srand((unsigned) time(&t));
-    
+    int direction = 0;
     for(;;)
     {
         //check addresses
@@ -499,13 +606,38 @@ int main()
         
         counter++;
         
-        if(counter == 100)
+        if(counter == 20)
         {
-            for(int i = 0; i < 10; (i+=2))
+            uint16 feedback1 = ADC_GetResult16(2);
+            int16 forward = 1000;
+            int16 backward = -1000;
+            for(int i = 0; i < TEST_ARRAY_SIZE; (i+=2))
             {
-                int16 random_number = rand()%2001 - 1000;
-                test_array[i] = random_number >> 8;
-                test_array[i+1] = random_number & 0x00FF;
+//                int16 random_number = rand()%2001 - 1000;
+//                test_array[i] = random_number >> 8;
+//                test_array[i+1] = random_number & 0x00FF;
+//                if((second_counter%2) == 0)
+//                {
+//                    test_array[i] = ;
+//                }
+                if (feedback1 > 500)
+                {
+                    test_array[i] = forward >> 8;
+                    test_array[i+1] = forward & 0x00FF;
+                }
+                else if (feedback1 < 500)
+                {
+                    test_array[i] = backward >> 8;
+                    test_array[i+1] = backward & 0x00FF;
+                }
+                else
+                {
+                    test_array[i] = 0;
+                    test_array[i+1] = 0;
+                }
+                
+                
+                 
             }
             counter = 0;
             wiznet = 1;
