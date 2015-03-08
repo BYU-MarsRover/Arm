@@ -17,7 +17,6 @@
 <ExpandedNodeIds>
 <v>Dynamixel_Servo_Driver</v>
 <v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\TopDesign.cysch</v>
 <v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\Dynamixel_Servo_Driver.cydwr</v>
 <v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\Header Files</v>
 <v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\Source Files</v>
@@ -105,9 +104,6 @@
 <v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\Generated_Source\PSoC4\project.h</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
-<v>Dynamixel_Servo_Driver</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\TopDesign.cysch</v>
 <v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\Dynamixel_Servo_Driver.cydwr</v>
 <v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\Header Files</v>
 <v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\Source Files</v>
@@ -137,6 +133,9 @@
 <v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\Generated_Source\PSoC4\cy_boot\core_cm0_psoc4.h</v>
 <v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\Generated_Source\PSoC4\cy_boot\core_cmFunc.h</v>
 <v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\Generated_Source\PSoC4\cy_boot\core_cmInstr.h</v>
+<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\Generated_Source\PSoC4\cy_boot\CyBootAsmGnu.s</v>
+<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\Generated_Source\PSoC4\cy_boot\CyBootAsmIar.s</v>
+<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\Generated_Source\PSoC4\cy_boot\CyBootAsmRv.s</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
@@ -158,38 +157,6 @@
 <v>Dynamixel_Servo_Driver</v>
 <v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver</v>
 <v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0\ARM_GCC_473</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0\ARM_GCC_473\Debug</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0\ARM_GCC_473\Debug\Listing Files</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0\ARM_GCC_473\Debug\Listing Files\Channel_1.lst</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0\ARM_GCC_473\Debug\Listing Files\Channel_2.lst</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0\ARM_GCC_473\Debug\Listing Files\Clock_4.lst</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0\ARM_GCC_473\Debug\Listing Files\Clock_5.lst</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0\ARM_GCC_473\Debug\Listing Files\Cm0Start.lst</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0\ARM_GCC_473\Debug\Listing Files\CyBootAsmGnu.lst</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0\ARM_GCC_473\Debug\Listing Files\cyfitter_cfg.lst</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0\ARM_GCC_473\Debug\Listing Files\CyFlash.lst</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0\ARM_GCC_473\Debug\Listing Files\CyLib.lst</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0\ARM_GCC_473\Debug\Listing Files\cymetadata.lst</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0\ARM_GCC_473\Debug\Listing Files\cyPm.lst</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0\ARM_GCC_473\Debug\Listing Files\cyutils.lst</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0\ARM_GCC_473\Debug\Listing Files\ISR.lst</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0\ARM_GCC_473\Debug\Listing Files\ISR_1.lst</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0\ARM_GCC_473\Debug\Listing Files\LED.lst</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0\ARM_GCC_473\Debug\Listing Files\main.lst</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0\ARM_GCC_473\Debug\Listing Files\Timer_1.lst</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0\ARM_GCC_473\Debug\Listing Files\Timer_1_PM.lst</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0\ARM_GCC_473\Debug\Listing Files\Timer_2.lst</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0\ARM_GCC_473\Debug\Listing Files\Timer_2_PM.lst</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0\ARM_GCC_473\Debug\Listing Files\tx.lst</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0\ARM_GCC_473\Debug\Listing Files\UART_1.lst</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0\ARM_GCC_473\Debug\Listing Files\UART_1_BOOT.lst</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0\ARM_GCC_473\Debug\Listing Files\UART_1_INT.lst</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0\ARM_GCC_473\Debug\Listing Files\UART_1_IntClock.lst</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0\ARM_GCC_473\Debug\Listing Files\UART_1_PM.lst</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0\ARM_GCC_473\Debug\Dynamixel_Servo_Driver.elf</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0\ARM_GCC_473\Debug\Dynamixel_Servo_Driver.hex</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0\ARM_GCC_473\Debug\Dynamixel_Servo_Driver.map</v>
 <v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\Dynamixel_Servo_Driver.rpt</v>
 <v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\Dynamixel_Servo_Driver_timing.html</v>
 </ExpandedNodeIds>
@@ -197,35 +164,9 @@
 <v>Dynamixel_Servo_Driver</v>
 <v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver</v>
 <v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0\ARM_GCC_473</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0\ARM_GCC_473\Debug</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0\ARM_GCC_473\Debug\Listing Files</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0\ARM_GCC_473\Debug\Listing Files\Channel_1.lst</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0\ARM_GCC_473\Debug\Listing Files\Channel_2.lst</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0\ARM_GCC_473\Debug\Listing Files\Clock_4.lst</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0\ARM_GCC_473\Debug\Listing Files\Clock_5.lst</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0\ARM_GCC_473\Debug\Listing Files\Cm0Start.lst</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0\ARM_GCC_473\Debug\Listing Files\CyBootAsmGnu.lst</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0\ARM_GCC_473\Debug\Listing Files\cyfitter_cfg.lst</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0\ARM_GCC_473\Debug\Listing Files\CyFlash.lst</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0\ARM_GCC_473\Debug\Listing Files\CyLib.lst</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0\ARM_GCC_473\Debug\Listing Files\cymetadata.lst</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0\ARM_GCC_473\Debug\Listing Files\cyPm.lst</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0\ARM_GCC_473\Debug\Listing Files\cyutils.lst</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0\ARM_GCC_473\Debug\Listing Files\ISR.lst</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0\ARM_GCC_473\Debug\Listing Files\ISR_1.lst</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0\ARM_GCC_473\Debug\Listing Files\LED.lst</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0\ARM_GCC_473\Debug\Listing Files\main.lst</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0\ARM_GCC_473\Debug\Listing Files\Timer_1.lst</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0\ARM_GCC_473\Debug\Listing Files\Timer_1_PM.lst</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0\ARM_GCC_473\Debug\Listing Files\Timer_2.lst</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0\ARM_GCC_473\Debug\Listing Files\Timer_2_PM.lst</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0\ARM_GCC_473\Debug\Listing Files\tx.lst</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0\ARM_GCC_473\Debug\Listing Files\UART_1.lst</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0\ARM_GCC_473\Debug\Listing Files\UART_1_BOOT.lst</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0\ARM_GCC_473\Debug\Listing Files\UART_1_INT.lst</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0\ARM_GCC_473\Debug\Listing Files\UART_1_IntClock.lst</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0\ARM_GCC_473\Debug\Listing Files\UART_1_PM.lst</v>
+<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0\ARM_GCC_484</v>
+<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\Dynamixel_Servo_Driver.rpt</v>
+<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\Dynamixel_Servo_Driver_timing.html</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -239,12 +180,12 @@
 <v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver</v>
 <v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\PSoC 4 Architecture TRM</v>
 <v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\PSoC 4200 Family Datasheet</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\System Reference Guide v4_10</v>
+<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\System Reference Guide v4_20</v>
 <v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\cy_clock_v2_20</v>
 <v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\cy_constant_v1_0</v>
 <v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\cy_isr_v1_70</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\cy_pins_v2_0</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\TCPWM_P4_v1_10</v>
+<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\cy_pins_v2_10</v>
+<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\TCPWM_P4_v2_0</v>
 <v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\UART_v2_30</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
@@ -252,12 +193,12 @@
 <v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver</v>
 <v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\PSoC 4 Architecture TRM</v>
 <v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\PSoC 4200 Family Datasheet</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\System Reference Guide v4_10</v>
+<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\System Reference Guide v4_20</v>
 <v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\cy_clock_v2_20</v>
 <v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\cy_constant_v1_0</v>
 <v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\cy_isr_v1_70</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\cy_pins_v2_0</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\TCPWM_P4_v1_10</v>
+<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\cy_pins_v2_10</v>
+<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\TCPWM_P4_v2_0</v>
 <v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\UART_v2_30</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
