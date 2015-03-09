@@ -370,8 +370,8 @@ void cyfitter_cfg(void)
 			0x400F3004u, /* Base address: 0x400F3000 Count: 4 */
 			0x400F3101u, /* Base address: 0x400F3100 Count: 1 */
 			0x400F3303u, /* Base address: 0x400F3300 Count: 3 */
-			0x400F4109u, /* Base address: 0x400F4100 Count: 9 */
-			0x400F430Cu, /* Base address: 0x400F4300 Count: 12 */
+			0x400F4107u, /* Base address: 0x400F4100 Count: 7 */
+			0x400F430Au, /* Base address: 0x400F4300 Count: 10 */
 			0x400F6002u, /* Base address: 0x400F6000 Count: 2 */
 		};
 
@@ -382,28 +382,24 @@ void cyfitter_cfg(void)
 			{0x5Fu, 0x01u},
 			{0x18u, 0x01u},
 			{0xB4u, 0x01u},
-			{0xE2u, 0x88u},
-			{0xE6u, 0x04u},
-			{0x51u, 0x20u},
-			{0x57u, 0x20u},
-			{0x58u, 0x20u},
-			{0x83u, 0x20u},
-			{0x85u, 0x20u},
-			{0x88u, 0x20u},
-			{0xD4u, 0xE0u},
-			{0xE2u, 0x10u},
-			{0xE6u, 0x20u},
-			{0x1Bu, 0x22u},
-			{0x1Eu, 0x20u},
+			{0xE2u, 0x04u},
+			{0xE6u, 0x02u},
+			{0x52u, 0x08u},
+			{0x58u, 0x10u},
+			{0x82u, 0x08u},
+			{0x84u, 0x10u},
+			{0xD4u, 0xA0u},
+			{0xE2u, 0x20u},
+			{0xE6u, 0x40u},
+			{0x1Bu, 0x08u},
+			{0x1Du, 0x01u},
 			{0x61u, 0x02u},
-			{0x83u, 0x20u},
-			{0x87u, 0x02u},
-			{0x8Au, 0x10u},
+			{0x81u, 0x01u},
+			{0x87u, 0x08u},
 			{0xA1u, 0x02u},
 			{0xB5u, 0x02u},
-			{0xC6u, 0x0Eu},
+			{0xC6u, 0x0Cu},
 			{0xD8u, 0x02u},
-			{0xE2u, 0x01u},
 			{0xECu, 0x08u},
 			{0x02u, 0x01u},
 			{0x11u, 0x01u},
@@ -435,7 +431,7 @@ void cyfitter_cfg(void)
 
 		/* HSIOM Starting address: CYDEV_HSIOM_BASE */
 		CY_SET_XTND_REG32((void CYFAR *)(CYDEV_HSIOM_BASE), 0xFFFF0000u);
-		CY_SET_XTND_REG32((void CYFAR *)(CYREG_HSIOM_PORT_SEL1), 0x00000333u);
+		CY_SET_XTND_REG32((void CYFAR *)(CYREG_HSIOM_PORT_SEL1), 0x00000338u);
 		CY_SET_XTND_REG32((void CYFAR *)(CYREG_HSIOM_PORT_SEL3), 0x6000EE00u);
 		CY_SET_XTND_REG32((void CYFAR *)(CYREG_HSIOM_PORT_SEL4), 0x00000099u);
 
@@ -468,7 +464,7 @@ void cyfitter_cfg(void)
 
 		/* UDB_PA_1 Starting address: CYDEV_UDB_PA1_BASE */
 		CY_SET_XTND_REG32((void CYFAR *)(CYDEV_UDB_PA1_BASE), 0x00990000u);
-		CY_SET_XTND_REG32((void CYFAR *)(CYREG_UDB_PA1_CFG8), 0x00180000u);
+		CY_SET_XTND_REG32((void CYFAR *)(CYREG_UDB_PA1_CFG8), 0x00090000u);
 
 		/* UDB_PA_2 Starting address: CYDEV_UDB_PA2_BASE */
 		CY_SET_XTND_REG32((void CYFAR *)(CYDEV_UDB_PA2_BASE), 0x00990000u);

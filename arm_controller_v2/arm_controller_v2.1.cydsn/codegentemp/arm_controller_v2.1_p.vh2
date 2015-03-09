@@ -1,5 +1,5 @@
 -- Project:   arm_controller_v2.1
--- Generated: 03/04/2015 18:24:38
+-- Generated: 03/07/2015 20:59:01
 -- PSoC Creator  3.1 Component Pack 1
 
 ENTITY \arm_controller_v2.1\ IS
@@ -832,28 +832,11 @@ BEGIN
             input_mode => "000",
             muxin_width => 3);
 
-    \PWM_1:cy_m0s8_tcpwm_1\:m0s8tcpwmcell
+    \BA_PWM:cy_m0s8_tcpwm_1\:m0s8tcpwmcell
         GENERIC MAP(
             cy_registers => "")
         PORT MAP(
             clock => Net_376_ff9,
-            capture => '0',
-            count => '1',
-            reload => '0',
-            stop => '0',
-            start => '0',
-            tr_underflow => Net_799,
-            tr_overflow => Net_798,
-            tr_compare_match => Net_800,
-            line_out => Net_801,
-            line_out_compl => Net_802,
-            interrupt => Net_797);
-
-    \PWM_2:cy_m0s8_tcpwm_1\:m0s8tcpwmcell
-        GENERIC MAP(
-            cy_registers => "")
-        PORT MAP(
-            clock => Net_376_ff10,
             capture => '0',
             count => '1',
             reload => '0',
@@ -866,11 +849,11 @@ BEGIN
             line_out_compl => Net_673,
             interrupt => Net_669);
 
-    \PWM_3:cy_m0s8_tcpwm_1\:m0s8tcpwmcell
+    \ELBW_PWM:cy_m0s8_tcpwm_1\:m0s8tcpwmcell
         GENERIC MAP(
             cy_registers => "")
         PORT MAP(
-            clock => Net_376_ff11,
+            clock => Net_376_ff10,
             capture => '0',
             count => '1',
             reload => '0',
@@ -882,6 +865,23 @@ BEGIN
             line_out => Net_659,
             line_out_compl => Net_683,
             interrupt => Net_679);
+
+    \SHLDR_PWM:cy_m0s8_tcpwm_1\:m0s8tcpwmcell
+        GENERIC MAP(
+            cy_registers => "")
+        PORT MAP(
+            clock => Net_376_ff11,
+            capture => '0',
+            count => '1',
+            reload => '0',
+            stop => '0',
+            start => '0',
+            tr_underflow => Net_799,
+            tr_overflow => Net_798,
+            tr_compare_match => Net_800,
+            line_out => Net_801,
+            line_out_compl => Net_802,
+            interrupt => Net_797);
 
     \SPI_1:SCB\:m0s8scbcell
         GENERIC MAP(

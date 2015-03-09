@@ -16,14 +16,14 @@
 <dep name=".\Generated_Source\PSoC4\ADC.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_IRQ.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_intClock.h" />
+<dep name=".\Generated_Source\PSoC4\BA_PWM.h" />
 <dep name=".\Generated_Source\PSoC4\Bootloadable_1.h" />
 <dep name=".\Generated_Source\PSoC4\Clock_counter.h" />
 <dep name=".\Generated_Source\PSoC4\Clock_pwm.h" />
 <dep name=".\Generated_Source\PSoC4\CyFlash.h" />
 <dep name=".\Generated_Source\PSoC4\CyLib.h" />
-<dep name=".\Generated_Source\PSoC4\PWM_1.h" />
-<dep name=".\Generated_Source\PSoC4\PWM_2.h" />
-<dep name=".\Generated_Source\PSoC4\PWM_3.h" />
+<dep name=".\Generated_Source\PSoC4\ELBW_PWM.h" />
+<dep name=".\Generated_Source\PSoC4\SHLDR_PWM.h" />
 <dep name=".\Generated_Source\PSoC4\SPI_1.h" />
 <dep name=".\Generated_Source\PSoC4\SPI_1_BOOT.h" />
 <dep name=".\Generated_Source\PSoC4\SPI_1_PINS.h" />
@@ -89,14 +89,14 @@
 <file name=".\Generated_Source\PSoC4\ADC.h" />
 <file name=".\Generated_Source\PSoC4\ADC_IRQ.h" />
 <file name=".\Generated_Source\PSoC4\ADC_intClock.h" />
+<file name=".\Generated_Source\PSoC4\BA_PWM.h" />
 <file name=".\Generated_Source\PSoC4\Bootloadable_1.h" />
 <file name=".\Generated_Source\PSoC4\Clock_counter.h" />
 <file name=".\Generated_Source\PSoC4\Clock_pwm.h" />
 <file name=".\Generated_Source\PSoC4\CyFlash.h" />
 <file name=".\Generated_Source\PSoC4\CyLib.h" />
-<file name=".\Generated_Source\PSoC4\PWM_1.h" />
-<file name=".\Generated_Source\PSoC4\PWM_2.h" />
-<file name=".\Generated_Source\PSoC4\PWM_3.h" />
+<file name=".\Generated_Source\PSoC4\ELBW_PWM.h" />
+<file name=".\Generated_Source\PSoC4\SHLDR_PWM.h" />
 <file name=".\Generated_Source\PSoC4\SPI_1.h" />
 <file name=".\Generated_Source\PSoC4\SPI_1_BOOT.h" />
 <file name=".\Generated_Source\PSoC4\SPI_1_PINS.h" />
@@ -162,14 +162,14 @@
 <dep name=".\Generated_Source\PSoC4\ADC.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_IRQ.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_intClock.h" />
+<dep name=".\Generated_Source\PSoC4\BA_PWM.h" />
 <dep name=".\Generated_Source\PSoC4\Bootloadable_1.h" />
 <dep name=".\Generated_Source\PSoC4\Clock_counter.h" />
 <dep name=".\Generated_Source\PSoC4\Clock_pwm.h" />
 <dep name=".\Generated_Source\PSoC4\CyFlash.h" />
 <dep name=".\Generated_Source\PSoC4\CyLib.h" />
-<dep name=".\Generated_Source\PSoC4\PWM_1.h" />
-<dep name=".\Generated_Source\PSoC4\PWM_2.h" />
-<dep name=".\Generated_Source\PSoC4\PWM_3.h" />
+<dep name=".\Generated_Source\PSoC4\ELBW_PWM.h" />
+<dep name=".\Generated_Source\PSoC4\SHLDR_PWM.h" />
 <dep name=".\Generated_Source\PSoC4\SPI_1.h" />
 <dep name=".\Generated_Source\PSoC4\SPI_1_BOOT.h" />
 <dep name=".\Generated_Source\PSoC4\SPI_1_PINS.h" />
@@ -239,14 +239,14 @@
 <dep name=".\Generated_Source\PSoC4\ADC.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_IRQ.h" />
 <dep name=".\Generated_Source\PSoC4\ADC_intClock.h" />
+<dep name=".\Generated_Source\PSoC4\BA_PWM.h" />
 <dep name=".\Generated_Source\PSoC4\Bootloadable_1.h" />
 <dep name=".\Generated_Source\PSoC4\Clock_counter.h" />
 <dep name=".\Generated_Source\PSoC4\Clock_pwm.h" />
 <dep name=".\Generated_Source\PSoC4\CyFlash.h" />
 <dep name=".\Generated_Source\PSoC4\CyLib.h" />
-<dep name=".\Generated_Source\PSoC4\PWM_1.h" />
-<dep name=".\Generated_Source\PSoC4\PWM_2.h" />
-<dep name=".\Generated_Source\PSoC4\PWM_3.h" />
+<dep name=".\Generated_Source\PSoC4\ELBW_PWM.h" />
+<dep name=".\Generated_Source\PSoC4\SHLDR_PWM.h" />
 <dep name=".\Generated_Source\PSoC4\SPI_1.h" />
 <dep name=".\Generated_Source\PSoC4\SPI_1_BOOT.h" />
 <dep name=".\Generated_Source\PSoC4\SPI_1_PINS.h" />
@@ -357,6 +357,24 @@
 <dep name=".\Generated_Source\PSoC4\ADC_intClock.c" />
 </file>
 <file name=".\Generated_Source\PSoC4\ADC_intClock.c" />
+<file name=".\CortexM0\ARM_GCC_484\Debug\BA_PWM.o">
+<dep name=".\Generated_Source\PSoC4\BA_PWM.h" />
+<dep name=".\Generated_Source\PSoC4\CyLib.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+<dep name=".\Generated_Source\PSoC4\BA_PWM.c" />
+</file>
+<file name=".\Generated_Source\PSoC4\BA_PWM.c" />
+<file name=".\CortexM0\ARM_GCC_484\Debug\BA_PWM_PM.o">
+<dep name=".\Generated_Source\PSoC4\BA_PWM.h" />
+<dep name=".\Generated_Source\PSoC4\CyLib.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+<dep name=".\Generated_Source\PSoC4\BA_PWM_PM.c" />
+</file>
+<file name=".\Generated_Source\PSoC4\BA_PWM_PM.c" />
 <file name=".\CortexM0\ARM_GCC_484\Debug\Bootloadable_1.o">
 <dep name=".\Generated_Source\PSoC4\Bootloadable_1.h" />
 <dep name=".\Generated_Source\PSoC4\CyFlash.h" />
@@ -409,60 +427,42 @@
 <dep name=".\Generated_Source\PSoC4\CyLib.c" />
 </file>
 <file name=".\Generated_Source\PSoC4\CyLib.c" />
-<file name=".\CortexM0\ARM_GCC_484\Debug\PWM_1.o">
+<file name=".\CortexM0\ARM_GCC_484\Debug\ELBW_PWM.o">
 <dep name=".\Generated_Source\PSoC4\CyLib.h" />
-<dep name=".\Generated_Source\PSoC4\PWM_1.h" />
+<dep name=".\Generated_Source\PSoC4\ELBW_PWM.h" />
 <dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
 <dep name=".\Generated_Source\PSoC4\cyfitter.h" />
 <dep name=".\Generated_Source\PSoC4\cytypes.h" />
-<dep name=".\Generated_Source\PSoC4\PWM_1.c" />
+<dep name=".\Generated_Source\PSoC4\ELBW_PWM.c" />
 </file>
-<file name=".\Generated_Source\PSoC4\PWM_1.c" />
-<file name=".\CortexM0\ARM_GCC_484\Debug\PWM_1_PM.o">
+<file name=".\Generated_Source\PSoC4\ELBW_PWM.c" />
+<file name=".\CortexM0\ARM_GCC_484\Debug\ELBW_PWM_PM.o">
 <dep name=".\Generated_Source\PSoC4\CyLib.h" />
-<dep name=".\Generated_Source\PSoC4\PWM_1.h" />
+<dep name=".\Generated_Source\PSoC4\ELBW_PWM.h" />
 <dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
 <dep name=".\Generated_Source\PSoC4\cyfitter.h" />
 <dep name=".\Generated_Source\PSoC4\cytypes.h" />
-<dep name=".\Generated_Source\PSoC4\PWM_1_PM.c" />
+<dep name=".\Generated_Source\PSoC4\ELBW_PWM_PM.c" />
 </file>
-<file name=".\Generated_Source\PSoC4\PWM_1_PM.c" />
-<file name=".\CortexM0\ARM_GCC_484\Debug\PWM_2.o">
+<file name=".\Generated_Source\PSoC4\ELBW_PWM_PM.c" />
+<file name=".\CortexM0\ARM_GCC_484\Debug\SHLDR_PWM.o">
 <dep name=".\Generated_Source\PSoC4\CyLib.h" />
-<dep name=".\Generated_Source\PSoC4\PWM_2.h" />
+<dep name=".\Generated_Source\PSoC4\SHLDR_PWM.h" />
 <dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
 <dep name=".\Generated_Source\PSoC4\cyfitter.h" />
 <dep name=".\Generated_Source\PSoC4\cytypes.h" />
-<dep name=".\Generated_Source\PSoC4\PWM_2.c" />
+<dep name=".\Generated_Source\PSoC4\SHLDR_PWM.c" />
 </file>
-<file name=".\Generated_Source\PSoC4\PWM_2.c" />
-<file name=".\CortexM0\ARM_GCC_484\Debug\PWM_2_PM.o">
+<file name=".\Generated_Source\PSoC4\SHLDR_PWM.c" />
+<file name=".\CortexM0\ARM_GCC_484\Debug\SHLDR_PWM_PM.o">
 <dep name=".\Generated_Source\PSoC4\CyLib.h" />
-<dep name=".\Generated_Source\PSoC4\PWM_2.h" />
+<dep name=".\Generated_Source\PSoC4\SHLDR_PWM.h" />
 <dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
 <dep name=".\Generated_Source\PSoC4\cyfitter.h" />
 <dep name=".\Generated_Source\PSoC4\cytypes.h" />
-<dep name=".\Generated_Source\PSoC4\PWM_2_PM.c" />
+<dep name=".\Generated_Source\PSoC4\SHLDR_PWM_PM.c" />
 </file>
-<file name=".\Generated_Source\PSoC4\PWM_2_PM.c" />
-<file name=".\CortexM0\ARM_GCC_484\Debug\PWM_3.o">
-<dep name=".\Generated_Source\PSoC4\CyLib.h" />
-<dep name=".\Generated_Source\PSoC4\PWM_3.h" />
-<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
-<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
-<dep name=".\Generated_Source\PSoC4\cytypes.h" />
-<dep name=".\Generated_Source\PSoC4\PWM_3.c" />
-</file>
-<file name=".\Generated_Source\PSoC4\PWM_3.c" />
-<file name=".\CortexM0\ARM_GCC_484\Debug\PWM_3_PM.o">
-<dep name=".\Generated_Source\PSoC4\CyLib.h" />
-<dep name=".\Generated_Source\PSoC4\PWM_3.h" />
-<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
-<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
-<dep name=".\Generated_Source\PSoC4\cytypes.h" />
-<dep name=".\Generated_Source\PSoC4\PWM_3_PM.c" />
-</file>
-<file name=".\Generated_Source\PSoC4\PWM_3_PM.c" />
+<file name=".\Generated_Source\PSoC4\SHLDR_PWM_PM.c" />
 <file name=".\CortexM0\ARM_GCC_484\Debug\SPI_1.o">
 <dep name=".\Generated_Source\PSoC4\CyLib.h" />
 <dep name=".\Generated_Source\PSoC4\SPI_1.h" />
@@ -984,6 +984,63 @@
 <file name=".\Generated_Source\PSoC4\cydevicegnu_trm.inc" />
 <file name=".\Generated_Source\PSoC4\cyfittergnu.inc" />
 <file name=".\Generated_Source\PSoC4\CyBootAsmGnu.s" />
+<file name=".\Generated_Source\PSoC4\PWM_1.h" />
+<file name=".\Generated_Source\PSoC4\PWM_2.h" />
+<file name=".\Generated_Source\PSoC4\PWM_3.h" />
+<file name=".\CortexM0\ARM_GCC_484\Debug\PWM_1.o">
+<dep name=".\Generated_Source\PSoC4\CyLib.h" />
+<dep name=".\Generated_Source\PSoC4\PWM_1.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+<dep name=".\Generated_Source\PSoC4\PWM_1.c" />
+</file>
+<file name=".\Generated_Source\PSoC4\PWM_1.c" />
+<file name=".\CortexM0\ARM_GCC_484\Debug\PWM_1_PM.o">
+<dep name=".\Generated_Source\PSoC4\CyLib.h" />
+<dep name=".\Generated_Source\PSoC4\PWM_1.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+<dep name=".\Generated_Source\PSoC4\PWM_1_PM.c" />
+</file>
+<file name=".\Generated_Source\PSoC4\PWM_1_PM.c" />
+<file name=".\CortexM0\ARM_GCC_484\Debug\PWM_2.o">
+<dep name=".\Generated_Source\PSoC4\CyLib.h" />
+<dep name=".\Generated_Source\PSoC4\PWM_2.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+<dep name=".\Generated_Source\PSoC4\PWM_2.c" />
+</file>
+<file name=".\Generated_Source\PSoC4\PWM_2.c" />
+<file name=".\CortexM0\ARM_GCC_484\Debug\PWM_2_PM.o">
+<dep name=".\Generated_Source\PSoC4\CyLib.h" />
+<dep name=".\Generated_Source\PSoC4\PWM_2.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+<dep name=".\Generated_Source\PSoC4\PWM_2_PM.c" />
+</file>
+<file name=".\Generated_Source\PSoC4\PWM_2_PM.c" />
+<file name=".\CortexM0\ARM_GCC_484\Debug\PWM_3.o">
+<dep name=".\Generated_Source\PSoC4\CyLib.h" />
+<dep name=".\Generated_Source\PSoC4\PWM_3.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+<dep name=".\Generated_Source\PSoC4\PWM_3.c" />
+</file>
+<file name=".\Generated_Source\PSoC4\PWM_3.c" />
+<file name=".\CortexM0\ARM_GCC_484\Debug\PWM_3_PM.o">
+<dep name=".\Generated_Source\PSoC4\CyLib.h" />
+<dep name=".\Generated_Source\PSoC4\PWM_3.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+<dep name=".\Generated_Source\PSoC4\PWM_3_PM.c" />
+</file>
+<file name=".\Generated_Source\PSoC4\PWM_3_PM.c" />
 <file name=".\Generated_Source\PSoC4\MISO.h" />
 <file name=".\Generated_Source\PSoC4\MISO_aliases.h" />
 <file name=".\Generated_Source\PSoC4\MOSI.h" />
@@ -1290,8 +1347,6 @@
 <dep name=".\CortexM0\ARM_GCC_484\Debug\Clock_pwm.o" />
 <dep name=".\CortexM0\ARM_GCC_484\Debug\Bootloadable_1.o" />
 <dep name=".\CortexM0\ARM_GCC_484\Debug\isr_1.o" />
-<dep name=".\CortexM0\ARM_GCC_484\Debug\PWM_1.o" />
-<dep name=".\CortexM0\ARM_GCC_484\Debug\PWM_1_PM.o" />
 <dep name=".\CortexM0\ARM_GCC_484\Debug\Timer_1.o" />
 <dep name=".\CortexM0\ARM_GCC_484\Debug\Timer_1_PM.o" />
 <dep name=".\CortexM0\ARM_GCC_484\Debug\Cm0Start.o" />
@@ -1310,14 +1365,10 @@
 <dep name=".\CortexM0\ARM_GCC_484\Debug\UART_1_SCBCLK.o" />
 <dep name=".\CortexM0\ARM_GCC_484\Debug\UART_1_tx.o" />
 <dep name=".\CortexM0\ARM_GCC_484\Debug\UART_1_rx.o" />
-<dep name=".\CortexM0\ARM_GCC_484\Debug\PWM_2.o" />
-<dep name=".\CortexM0\ARM_GCC_484\Debug\PWM_2_PM.o" />
 <dep name=".\CortexM0\ARM_GCC_484\Debug\WIZ_RDY.o" />
 <dep name=".\CortexM0\ARM_GCC_484\Debug\WIZ_INT.o" />
 <dep name=".\CortexM0\ARM_GCC_484\Debug\WIZ_RST.o" />
 <dep name=".\CortexM0\ARM_GCC_484\Debug\WIZ_SS.o" />
-<dep name=".\CortexM0\ARM_GCC_484\Debug\PWM_3.o" />
-<dep name=".\CortexM0\ARM_GCC_484\Debug\PWM_3_PM.o" />
 <dep name=".\CortexM0\ARM_GCC_484\Debug\elbow.o" />
 <dep name=".\CortexM0\ARM_GCC_484\Debug\baseAzimuth.o" />
 <dep name=".\CortexM0\ARM_GCC_484\Debug\ADC.o" />
@@ -1340,6 +1391,12 @@
 <dep name=".\CortexM0\ARM_GCC_484\Debug\SPI_1_sclk_s.o" />
 <dep name=".\CortexM0\ARM_GCC_484\Debug\SPI_1_mosi_s.o" />
 <dep name=".\CortexM0\ARM_GCC_484\Debug\user_test.o" />
+<dep name=".\CortexM0\ARM_GCC_484\Debug\BA_PWM.o" />
+<dep name=".\CortexM0\ARM_GCC_484\Debug\BA_PWM_PM.o" />
+<dep name=".\CortexM0\ARM_GCC_484\Debug\ELBW_PWM.o" />
+<dep name=".\CortexM0\ARM_GCC_484\Debug\ELBW_PWM_PM.o" />
+<dep name=".\CortexM0\ARM_GCC_484\Debug\SHLDR_PWM.o" />
+<dep name=".\CortexM0\ARM_GCC_484\Debug\SHLDR_PWM_PM.o" />
 <dep name=".\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a" />
 <dep name="${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CortexM0\ARM_GCC_484\Debug\CyComponentLibrary.a" />
 </file>
@@ -1434,6 +1491,12 @@
 <name_val_pair name=".\Generated_Source\PSoC4\UART_1_tx.c" v="-mcpu=cortex-m0 -mthumb -Wno-main -I. -I.\Generated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -O0 -std=gnu99" />
 <name_val_pair name=".\Generated_Source\PSoC4\UART_1_rx.c" v="-mcpu=cortex-m0 -mthumb -Wno-main -I. -I.\Generated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -O0 -std=gnu99" />
 <name_val_pair name=".\Generated_Source\PSoC4\user_test.c" v="-mcpu=cortex-m0 -mthumb -Wno-main -I. -I.\Generated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -O0 -std=gnu99" />
+<name_val_pair name=".\Generated_Source\PSoC4\BA_PWM.c" v="-mcpu=cortex-m0 -mthumb -Wno-main -I. -I.\Generated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -O0 -std=gnu99" />
+<name_val_pair name=".\Generated_Source\PSoC4\BA_PWM_PM.c" v="-mcpu=cortex-m0 -mthumb -Wno-main -I. -I.\Generated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -O0 -std=gnu99" />
+<name_val_pair name=".\Generated_Source\PSoC4\ELBW_PWM.c" v="-mcpu=cortex-m0 -mthumb -Wno-main -I. -I.\Generated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -O0 -std=gnu99" />
+<name_val_pair name=".\Generated_Source\PSoC4\ELBW_PWM_PM.c" v="-mcpu=cortex-m0 -mthumb -Wno-main -I. -I.\Generated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -O0 -std=gnu99" />
+<name_val_pair name=".\Generated_Source\PSoC4\SHLDR_PWM.c" v="-mcpu=cortex-m0 -mthumb -Wno-main -I. -I.\Generated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -O0 -std=gnu99" />
+<name_val_pair name=".\Generated_Source\PSoC4\SHLDR_PWM_PM.c" v="-mcpu=cortex-m0 -mthumb -Wno-main -I. -I.\Generated_Source\PSoC4 -Wa,-alh=${OutputDir}/${CompileFile}.lst -g -D DEBUG -Wall -ffunction-sections -O0 -std=gnu99" />
 </name>
 </genericCmdLineData>
 <codeGenCmdLineTag v="-.appdatapath &quot;C:\Users\Samuel\AppData\Local\Cypress Semiconductor\PSoC Creator\3.1&quot; -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -p C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\arm_controller_v2.1.cyprj -d CY8C4245AXI-483 -s C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\Generated_Source\PSoC4 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE" />
@@ -3307,6 +3370,15 @@
 <v>.\Generated_Source\PSoC4\user_test.c</v>
 <v>.\Generated_Source\PSoC4\user_test.h</v>
 <v>.\Generated_Source\PSoC4\user_test_aliases.h</v>
+<v>.\Generated_Source\PSoC4\BA_PWM.c</v>
+<v>.\Generated_Source\PSoC4\BA_PWM.h</v>
+<v>.\Generated_Source\PSoC4\BA_PWM_PM.c</v>
+<v>.\Generated_Source\PSoC4\ELBW_PWM.c</v>
+<v>.\Generated_Source\PSoC4\ELBW_PWM.h</v>
+<v>.\Generated_Source\PSoC4\ELBW_PWM_PM.c</v>
+<v>.\Generated_Source\PSoC4\SHLDR_PWM.c</v>
+<v>.\Generated_Source\PSoC4\SHLDR_PWM.h</v>
+<v>.\Generated_Source\PSoC4\SHLDR_PWM_PM.c</v>
 </gen_list>
 <warp_dep>
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\3.1\PSoC Creator\warp\lib\ieee\work\stdlogic.vif</v>
@@ -3320,14 +3392,14 @@
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\3.1\PSoC Creator\warp\lib\common\cy_psoc3_inc.v</v>
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\3.1\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif</v>
 </warp_dep>
-<deps_time v="130699922858596041" />
+<deps_time v="130702607517341569" />
 <top_block v="TopDesign" />
 <last_generation v="1" />
 </CyGuid_925cc1e1-309e-4e08-b0a1-09a83c35b157>
 </dataGuid>
 <dataGuid v="769d31ea-68b1-4f0c-b90a-7c10a43ee563">
 <CyGuid_769d31ea-68b1-4f0c-b90a-7c10a43ee563 type_name="CyDesigner.Common.ProjMgmt.Model.CyLinkCustomData" version="1">
-<deps_time v="130699951855223015" />
+<deps_time v="130704156535557192" />
 </CyGuid_769d31ea-68b1-4f0c-b90a-7c10a43ee563>
 </dataGuid>
 <dataGuid v="504337dd-7d07-4bc7-9057-90e60cf6c469">

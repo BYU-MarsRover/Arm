@@ -57,15 +57,15 @@
   <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\WIZ_SS.c" value="ARM_C_FILE;WIZ_SS" />
   <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\WIZ_SS.h" value="NONE;WIZ_SS" />
   <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\WIZ_SS_aliases.h" value="NONE;WIZ_SS" />
-  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\PWM_2.c" value="ARM_C_FILE;PWM_2" />
-  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\PWM_2.h" value="NONE;PWM_2" />
-  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\PWM_2_PM.c" value="ARM_C_FILE;PWM_2" />
-  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\PWM_3.c" value="ARM_C_FILE;PWM_3" />
-  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\PWM_3.h" value="NONE;PWM_3" />
-  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\PWM_3_PM.c" value="ARM_C_FILE;PWM_3" />
-  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\PWM_1.c" value="ARM_C_FILE;PWM_1" />
-  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\PWM_1.h" value="NONE;PWM_1" />
-  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\PWM_1_PM.c" value="ARM_C_FILE;PWM_1" />
+  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\BA_PWM.c" value="ARM_C_FILE;BA_PWM" />
+  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\BA_PWM.h" value="NONE;BA_PWM" />
+  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\BA_PWM_PM.c" value="ARM_C_FILE;BA_PWM" />
+  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\ELBW_PWM.c" value="ARM_C_FILE;ELBW_PWM" />
+  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\ELBW_PWM.h" value="NONE;ELBW_PWM" />
+  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\ELBW_PWM_PM.c" value="ARM_C_FILE;ELBW_PWM" />
+  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\SHLDR_PWM.c" value="ARM_C_FILE;SHLDR_PWM" />
+  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\SHLDR_PWM.h" value="NONE;SHLDR_PWM" />
+  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\SHLDR_PWM_PM.c" value="ARM_C_FILE;SHLDR_PWM" />
   <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\ADC.c" value="ARM_C_FILE;ADC" />
   <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\ADC.h" value="NONE;ADC" />
   <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\ADC_PM.c" value="ARM_C_FILE;ADC" />

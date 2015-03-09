@@ -41,9 +41,9 @@
 #include <WIZ_RST_aliases.h>
 #include <WIZ_SS.h>
 #include <WIZ_SS_aliases.h>
-#include <PWM_2.h>
-#include <PWM_3.h>
-#include <PWM_1.h>
+#include <BA_PWM.h>
+#include <ELBW_PWM.h>
+#include <SHLDR_PWM.h>
 #include <ADC.h>
 #include <pot_elbow.h>
 #include <pot_elbow_aliases.h>

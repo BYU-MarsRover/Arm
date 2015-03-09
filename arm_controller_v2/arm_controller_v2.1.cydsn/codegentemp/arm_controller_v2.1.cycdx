@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <blockRegMap version="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://cypress.com/xsd/cyblockregmap cyblockregmap.xsd" xmlns="http://cypress.com/xsd/cyblockregmap">
-  <block name="PWM_1" BASE="0x0" SIZE="0x0" desc="" visible="true">
+  <block name="SHLDR_PWM" BASE="0x0" SIZE="0x0" desc="" visible="true">
     <block name="VMux_count" BASE="0x0" SIZE="0x0" desc="" visible="true" />
     <block name="VMux_reload" BASE="0x0" SIZE="0x0" desc="" visible="true" />
     <block name="VMux_start" BASE="0x0" SIZE="0x0" desc="" visible="true" />
@@ -8,11 +8,11 @@
     <block name="VMux_capture" BASE="0x0" SIZE="0x0" desc="" visible="true" />
     <block name="VMux_clock" BASE="0x0" SIZE="0x0" desc="" visible="true" />
     <block name="cy_m0s8_tcpwm_1" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-    <register name="COUNTER" address="0x40050148" bitWidth="32" desc="Current counter value" />
-    <register name="CC" address="0x4005014C" bitWidth="32" desc="Compare / capture value" />
-    <register name="CC_BUF" address="0x40050150" bitWidth="32" desc="Compare / capture buffer value" />
-    <register name="PERIOD" address="0x40050154" bitWidth="32" desc="Period value" />
-    <register name="PERIOD_BUF" address="0x40050158" bitWidth="32" desc="Period buffer value" />
+    <register name="COUNTER" address="0x40050108" bitWidth="32" desc="Current counter value" />
+    <register name="CC" address="0x4005010C" bitWidth="32" desc="Compare / capture value" />
+    <register name="CC_BUF" address="0x40050110" bitWidth="32" desc="Compare / capture buffer value" />
+    <register name="PERIOD" address="0x40050114" bitWidth="32" desc="Period value" />
+    <register name="PERIOD_BUF" address="0x40050118" bitWidth="32" desc="Period buffer value" />
   </block>
   <block name="ADC" BASE="0x0" SIZE="0x0" desc="Sequencing SAR ADC" visible="true">
     <block name="cy_analog_noconnect_31" BASE="0x0" SIZE="0x0" desc="" visible="true" />
@@ -419,22 +419,7 @@
       <field name="WOUND_RESOLUTION" from="1" to="0" access="R" resetVal="" desc="Maximum SAR resolution allowed" />
     </register>
   </block>
-  <block name="PWM_3" BASE="0x0" SIZE="0x0" desc="" visible="true">
-    <block name="VMux_count" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-    <block name="VMux_reload" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-    <block name="VMux_start" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-    <block name="VMux_stop" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-    <block name="VMux_capture" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-    <block name="VMux_clock" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-    <block name="cy_m0s8_tcpwm_1" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-    <register name="COUNTER" address="0x40050108" bitWidth="32" desc="Current counter value" />
-    <register name="CC" address="0x4005010C" bitWidth="32" desc="Compare / capture value" />
-    <register name="CC_BUF" address="0x40050110" bitWidth="32" desc="Compare / capture buffer value" />
-    <register name="PERIOD" address="0x40050114" bitWidth="32" desc="Period value" />
-    <register name="PERIOD_BUF" address="0x40050118" bitWidth="32" desc="Period buffer value" />
-  </block>
-  <block name="WIZ_SS" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-  <block name="PWM_2" BASE="0x0" SIZE="0x0" desc="" visible="true">
+  <block name="ELBW_PWM" BASE="0x0" SIZE="0x0" desc="" visible="true">
     <block name="VMux_count" BASE="0x0" SIZE="0x0" desc="" visible="true" />
     <block name="VMux_reload" BASE="0x0" SIZE="0x0" desc="" visible="true" />
     <block name="VMux_start" BASE="0x0" SIZE="0x0" desc="" visible="true" />
@@ -447,6 +432,21 @@
     <register name="CC_BUF" address="0x40050190" bitWidth="32" desc="Compare / capture buffer value" />
     <register name="PERIOD" address="0x40050194" bitWidth="32" desc="Period value" />
     <register name="PERIOD_BUF" address="0x40050198" bitWidth="32" desc="Period buffer value" />
+  </block>
+  <block name="WIZ_SS" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+  <block name="BA_PWM" BASE="0x0" SIZE="0x0" desc="" visible="true">
+    <block name="VMux_count" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+    <block name="VMux_reload" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+    <block name="VMux_start" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+    <block name="VMux_stop" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+    <block name="VMux_capture" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+    <block name="VMux_clock" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+    <block name="cy_m0s8_tcpwm_1" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+    <register name="COUNTER" address="0x40050148" bitWidth="32" desc="Current counter value" />
+    <register name="CC" address="0x4005014C" bitWidth="32" desc="Compare / capture value" />
+    <register name="CC_BUF" address="0x40050150" bitWidth="32" desc="Compare / capture buffer value" />
+    <register name="PERIOD" address="0x40050154" bitWidth="32" desc="Period value" />
+    <register name="PERIOD_BUF" address="0x40050158" bitWidth="32" desc="Period buffer value" />
   </block>
   <block name="UART_1" BASE="0x0" SIZE="0x0" desc="Serial Communication Block" visible="true">
     <block name="rx_wake_VM" BASE="0x0" SIZE="0x0" desc="" visible="true" />

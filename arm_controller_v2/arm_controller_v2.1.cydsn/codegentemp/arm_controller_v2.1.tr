@@ -68,9 +68,9 @@ Port Name  Setup to Clk  Clock Name:Phase
 
 Port Name           Clock to Out  Clock Name:Phase      
 ------------------  ------------  --------------------  
-baseAzimuth(0)_PAD  23114         Clock_pwm(FFB):R      
-elbow(0)_PAD        22029         Clock_counter(FFB):R  
-shoulder(0)_PAD     21383         Clock_pwm(FFB):R      
+baseAzimuth(0)_PAD  23110         Clock_pwm(FFB):R      
+elbow(0)_PAD        15120         Clock_pwm(FFB):R      
+shoulder(0)_PAD     21909         Clock_counter(FFB):R  
 
 
                          3.3::Pad to Pad

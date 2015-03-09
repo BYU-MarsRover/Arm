@@ -8,21 +8,29 @@
 #include <stdio.h>
 
 //Initializations of global variables
-//TODO should this be global or should we declare it in main and pass a
-//////pointer to each function?
 #define ELBOW_UPPER_BOUND 1000
 #define ELBOW_LOWER_BOUND 100
 #define SHOULDER_UPPER_BOUND 64000
 #define SHOULDER_LOWER_BOUND 0
 #define SHOULDER_POT 0
 #define ELBOW_POT 1
+
+#define BA_BYTE_1 4
+#define BA_BYTE_2 5
+#define SHLDR_BYTE_1 6
+#define SHLDR_BYTE_2 7
+#define ELBW_BYTE_1 8
+#define ELBW_BYTE_2 9
+#define WT_BYTE_1 10
+#define WR_BYTE_2 11
+
 #define DATA_ARRAY_SIZE 14
 uint16 data_array[DATA_ARRAY_SIZE]; //stores the parsed instructions from the wiznet
 
 uint8 wiznet; //bool indicating wiznet interupt high or low
 uint8 new_pack; //bool indicating a new pack of instructions to carry out
 
-#define NUM_OF_SM 2
+#define NUM_OF_SM 3
 uint8 fin_exec; //counts
 
 #define TEST_ARRAY_SIZE 10
@@ -40,7 +48,15 @@ uint16 shoulder_array[SHLDR_ARR_SIZE];
 uint8 BA_arr_cspot;
 uint16 baseAz_array[BA_ARR_SIZE];
 
-uint16 feedback_count;
+#define WT_ARR_SIZE 20  //for wristTilt
+uint8 WT_arr_cspot;
+uint16 WT_array[WT_ARR_SIZE];
+
+#define WR_ARR_SIZE 20  //for wristRotate
+uint8 WR_arr_cspot;
+uint16 WR_array[WR_ARR_SIZE];
+
+//uint16 feedback_count;
 uint8 timerFlag; //used in the timer_isr
 
 //this ISR will be used to set our timeFlag according to our timer component
@@ -254,6 +270,7 @@ void elbow()
     uint8 i;
     uint16 avg;
     uint16 command;
+    uint16 feedback = potFeedback(ELBOW_POT); //check the feedback in every tick
     
     switch(elbow_state){ //actions
         case elbw_start:
@@ -268,7 +285,7 @@ void elbow()
             break;
 
         case elbw_execute:
-            command = (((data_array[2] << 8) | data_array[3])/2) + 1500;
+            command = (((data_array[ELBW_BYTE_1] << 8) | data_array[ELBW_BYTE_2])/2) + 1500;
             elbow_array[elbw_arr_cspot] = command;
             if(elbw_arr_cspot < (ELBW_ARR_SIZE - 1))
             {
@@ -280,7 +297,7 @@ void elbow()
             }
             avg = average(elbow_array, ELBW_ARR_SIZE);
            
-            uint16 feedback = potFeedback(ELBOW_POT);
+            //uint16 feedback = potFeedback(ELBOW_POT);
             //TODO make sure reading from correct pots
             char buffer[20];
             
@@ -293,34 +310,58 @@ void elbow()
             {
                 if (avg < 1500)
                 {
-                    PWM_3_WriteCompare(1500);
+                    ELBW_PWM_WriteCompare(1500);
                 }
                 else
                 {
-                    PWM_3_WriteCompare(avg);
+                    if(avg <= 2000 && avg >= 1000)
+                    {
+                        ELBW_PWM_WriteCompare(avg);
+                    }
+                    else
+                    {
+                        ELBW_PWM_WriteCompare(1500);
+                    }
                 }
-               
-                fin_exec++;
             }
             else if (feedback >= ELBOW_UPPER_BOUND)
             {
                 if(avg > 1500)
                 {
-                    PWM_3_WriteCompare(1500);
+                    ELBW_PWM_WriteCompare(1500);
                 }
                 else
                 {
-                    PWM_3_WriteCompare(avg);
+                    if(avg <= 2000 && avg >= 1000)
+                    {
+                        ELBW_PWM_WriteCompare(avg);
+                    }
+                    else
+                    {
+                        ELBW_PWM_WriteCompare(1500);
+                    }
                 }
             }
             else
             {
-                PWM_3_WriteCompare(avg);
+                if(avg <= 2000 && avg >= 1000)
+                {
+                    ELBW_PWM_WriteCompare(avg);
+                }
+                else
+                {
+                    ELBW_PWM_WriteCompare(1500);
+                }
             }
-          
+            
+            fin_exec++;
             break;
             
         case elbw_wait:
+            if(feedback <= ELBOW_LOWER_BOUND || feedback >= ELBOW_UPPER_BOUND)
+            {
+                ELBW_PWM_WriteCompare(1500);
+            }
             break;
     }
     
@@ -369,6 +410,7 @@ void shoulder()
     uint8 i;
     uint16 avg;
     uint16 command;
+    uint16 feedback = potFeedback(SHOULDER_POT);
     
     switch(shoulder_state){ //actions
         case shldr_start:
@@ -383,7 +425,7 @@ void shoulder()
             break;
 
         case shldr_execute:
-            command = (((data_array[2] << 8) | data_array[3])/2) + 1500;
+            command = (((data_array[SHLDR_BYTE_1] << 8) | data_array[SHLDR_BYTE_2])/2) + 1500;
             shoulder_array[shldr_arr_cspot] = command;
             if(shldr_arr_cspot < (SHLDR_ARR_SIZE - 1))
             {
@@ -395,40 +437,67 @@ void shoulder()
             }
             avg = average(shoulder_array, SHLDR_ARR_SIZE);
            
-            uint16 feedback = potFeedback(SHOULDER_POT);
+            //uint16 feedback = potFeedback(SHOULDER_POT);
             
             if(feedback <= SHOULDER_LOWER_BOUND)
             {
                 if (avg < 1500)
                 {
-                    PWM_1_WriteCompare(1500);
+                    SHLDR_PWM_WriteCompare(1500);
                 }
                 else
                 {
-                    PWM_1_WriteCompare(avg);
+                    if(avg <= 2000 && avg >= 1000)
+                    {
+                        SHLDR_PWM_WriteCompare(avg);
+                    }
+                    else
+                    {
+                        //throw error
+                        SHLDR_PWM_WriteCompare(1500);
+                    }
                 }
-               
-                fin_exec++;
             }
             else if (feedback >= SHOULDER_UPPER_BOUND)
             {
                 if(avg > 1500)
                 {
-                    PWM_1_WriteCompare(1500);
+                    SHLDR_PWM_WriteCompare(1500);
                 }
                 else
                 {
-                    PWM_1_WriteCompare(avg);
+                    if(avg <= 2000 && avg >= 1000)
+                    {
+                        SHLDR_PWM_WriteCompare(avg);
+                    }
+                    else
+                    {
+                        //throw error
+                        SHLDR_PWM_WriteCompare(1500);
+                    }
                 }
             }
             else
             {
-                PWM_1_WriteCompare(avg);
+                if(avg <= 2000 && avg >= 1000)
+                {
+                    SHLDR_PWM_WriteCompare(avg);
+                }
+                else
+                {
+                    //throw error
+                    SHLDR_PWM_WriteCompare(1500);
+                }
             }
-          
+            
+            fin_exec++;
             break;
             
         case shldr_wait:
+            if(feedback <= SHOULDER_LOWER_BOUND || feedback >= SHOULDER_UPPER_BOUND)
+            {
+                SHLDR_PWM_WriteCompare(1500);
+            }
             break;
     }
     
@@ -489,7 +558,7 @@ void baseAzimuth()
             break;
 
         case BA_execute:
-            command = (((data_array[4] << 8) | data_array[5])/2) + 1500;
+            command = (((data_array[BA_BYTE_1] << 8) | data_array[BA_BYTE_2])/2) + 1500;
             baseAz_array[BA_arr_cspot] = command;
             if(BA_arr_cspot < (BA_ARR_SIZE - 1))
             {
@@ -499,9 +568,268 @@ void baseAzimuth()
             {
                 BA_arr_cspot = 0;
             }
+            
+//            if(command >= 1000 && command < 1100)
+//            {
+//                if(BA_arr_cspot != 0)
+//                {
+//                    if(baseAz_array[BA_arr_cspot - 1] >= 1020)
+//                    {
+//                        baseAz_array[BA_arr_cspot] = (baseAz_array[BA_arr_cspot - 1] - 20);
+//                    }
+//                    else
+//                    {
+//                        baseAz_array[BA_arr_cspot] = 1000;
+//                    }
+//                    
+//                    if(BA_arr_cspot < (BA_ARR_SIZE - 1))
+//                    {
+//                        BA_arr_cspot++;
+//                    }
+//                    else
+//                    {
+//                        BA_arr_cspot = 0;
+//                    }
+//                }
+//                else if(BA_arr_cspot == 0)
+//                {
+//                    if(baseAz_array[BA_ARR_SIZE - 1] >= 1020)
+//                    {
+//                        baseAz_array[BA_arr_cspot] = (baseAz_array[BA_ARR_SIZE - 1] - 20);
+//                    }
+//                    else
+//                    {
+//                        baseAz_array[BA_arr_cspot] = 1000;
+//                    }
+//                    
+//                    if(BA_arr_cspot < (BA_ARR_SIZE - 1))
+//                    {
+//                        BA_arr_cspot++;
+//                    }
+//                    else
+//                    {
+//                        BA_arr_cspot = 0;
+//                    }
+//                }
+//                else
+//                {
+//                    BA_arr_cspot = 0;
+//                }
+//            }
+//            else if(command >= 1100 && command < 1300)
+//            {
+//                if(BA_arr_cspot != 0)
+//                {
+//                    baseAz_array[BA_arr_cspot] = (baseAz_array[BA_arr_cspot - 1] - 10);
+//                    
+//                    if(BA_arr_cspot < (BA_ARR_SIZE - 1))
+//                    {
+//                        BA_arr_cspot++;
+//                    }
+//                    else
+//                    {
+//                        BA_arr_cspot = 0;
+//                    }
+//                }
+//                else if(BA_arr_cspot == 0)
+//                {
+//                    baseAz_array[BA_arr_cspot] = (baseAz_array[BA_ARR_SIZE - 1] - 10);
+//                   
+//                    if(BA_arr_cspot < (BA_ARR_SIZE - 1))
+//                    {
+//                        BA_arr_cspot++;
+//                    }
+//                    else
+//                    {
+//                        BA_arr_cspot = 0;
+//                    }
+//                }
+//                else
+//                {
+//                    BA_arr_cspot = 0;   
+//                }    
+//            }
+//            else if(command >= 1300 && command < 1490)
+//            {
+//                if(BA_arr_cspot != 0)
+//                {
+//                    baseAz_array[BA_arr_cspot] = (baseAz_array[BA_arr_cspot - 1] - 5);
+//                    
+//                    if(BA_arr_cspot < (BA_ARR_SIZE - 1))
+//                    {
+//                        BA_arr_cspot++;
+//                    }
+//                    else
+//                    {
+//                        BA_arr_cspot = 0;
+//                    }
+//                }
+//                else if(BA_arr_cspot == 0)
+//                {
+//                    baseAz_array[BA_arr_cspot] = (baseAz_array[BA_ARR_SIZE - 1] - 5);
+//                   
+//                    if(BA_arr_cspot < (BA_ARR_SIZE - 1))
+//                    {
+//                        BA_arr_cspot++;
+//                    }
+//                    else
+//                    {
+//                        BA_arr_cspot = 0;
+//                    }
+//                }
+//                else
+//                {
+//                    BA_arr_cspot = 0;   
+//                }    
+//            }
+//            else if(command > 1510 && command <= 1700)
+//            {
+//                if(BA_arr_cspot != 0)
+//                {
+//                    baseAz_array[BA_arr_cspot] = (baseAz_array[BA_arr_cspot - 1] + 5);
+//                    
+//                    if(BA_arr_cspot < (BA_ARR_SIZE - 1))
+//                    {
+//                        BA_arr_cspot++;
+//                    }
+//                    else
+//                    {
+//                        BA_arr_cspot = 0;
+//                    }
+//                }
+//                else if(BA_arr_cspot == 0)
+//                {
+//                    baseAz_array[BA_arr_cspot] = (baseAz_array[BA_ARR_SIZE - 1] + 5);
+//                   
+//                    if(BA_arr_cspot < (BA_ARR_SIZE - 1))
+//                    {
+//                        BA_arr_cspot++;
+//                    }
+//                    else
+//                    {
+//                        BA_arr_cspot = 0;
+//                    }
+//                }
+//                else
+//                {
+//                    BA_arr_cspot = 0;   
+//                }    
+//            }
+//            else if(command > 1700 && command <= 1900)
+//            {
+//                if(BA_arr_cspot != 0)
+//                {
+//                    baseAz_array[BA_arr_cspot] = (baseAz_array[BA_arr_cspot - 1] + 10);
+//                    
+//                    if(BA_arr_cspot < (BA_ARR_SIZE - 1))
+//                    {
+//                        BA_arr_cspot++;
+//                    }
+//                    else
+//                    {
+//                        BA_arr_cspot = 0;
+//                    }
+//                }
+//                else if(BA_arr_cspot == 0)
+//                {
+//                    baseAz_array[BA_arr_cspot] = (baseAz_array[BA_ARR_SIZE - 1] + 10);
+//                   
+//                    if(BA_arr_cspot < (BA_ARR_SIZE - 1))
+//                    {
+//                        BA_arr_cspot++;
+//                    }
+//                    else
+//                    {
+//                        BA_arr_cspot = 0;
+//                    }
+//                }
+//                else
+//                {
+//                    BA_arr_cspot = 0;   
+//                }
+//            }
+//            else if(command > 1900 && command <= 2000)
+//            {
+//                if(BA_arr_cspot != 0)
+//                {
+//                    if(baseAz_array[BA_arr_cspot - 1] <= 1980)
+//                    {
+//                        baseAz_array[BA_arr_cspot] = (baseAz_array[BA_arr_cspot - 1] + 20);
+//                    }
+//                    else
+//                    {
+//                        baseAz_array[BA_arr_cspot] = 2000;
+//                    }
+//                    
+//                    if(BA_arr_cspot < (BA_ARR_SIZE - 1))
+//                    {
+//                        BA_arr_cspot++;
+//                    }
+//                    else
+//                    {
+//                        BA_arr_cspot = 0;
+//                    }
+//                }
+//                else if(BA_arr_cspot == 0)
+//                {
+//                    if(baseAz_array[BA_ARR_SIZE - 1] <= 1980)
+//                    {
+//                        baseAz_array[BA_arr_cspot] = (baseAz_array[BA_ARR_SIZE - 1] + 20);
+//                    }
+//                    else
+//                    {
+//                        baseAz_array[BA_arr_cspot] = 2000;
+//                    }
+//                    
+//                    if(BA_arr_cspot < (BA_ARR_SIZE - 1))
+//                    {
+//                        BA_arr_cspot++;
+//                    }
+//                    else
+//                    {
+//                        BA_arr_cspot = 0;
+//                    }
+//                }
+//                else
+//                {
+//                    BA_arr_cspot = 0;
+//                }
+//            }
+//            else if(command <= 1510 && command >= 1490)
+//            {
+//                if(BA_arr_cspot < (BA_ARR_SIZE - 1))
+//                {
+//                    BA_arr_cspot++;
+//                }
+//                else
+//                {
+//                    BA_arr_cspot = 0;
+//                }
+//            }
+//            else
+//            {
+//                //throw error
+//                if(BA_arr_cspot < (BA_ARR_SIZE - 1))
+//                {
+//                    BA_arr_cspot++;
+//                }
+//                else
+//                {
+//                    BA_arr_cspot = 0;
+//                }
+//            }
+            
             avg = average(baseAz_array, BA_ARR_SIZE);
             
-            PWM_2_WriteCompare(avg);
+            if(avg <= 2000 && avg >= 1000)
+            {
+                BA_PWM_WriteCompare(avg);
+            }
+            else
+            {
+                //throw error
+                BA_PWM_WriteCompare(1500);
+            }
             fin_exec++;
             break;
             
@@ -549,6 +877,7 @@ int main()
     //Define variables
     time_t t;
     uint8 counter;
+    int direction = 0;
     
     //start all of our components
     Clock_pwm_Start();
@@ -556,11 +885,12 @@ int main()
     
     UART_1_Start();
     
-    PWM_1_Start();
-    PWM_2_Start();
-    PWM_3_Start();
+    SHLDR_PWM_Start();
+    BA_PWM_Start();
+    ELBW_PWM_Start();
     
-    PWM_3_WriteCompare(1500); //Initialize our motor drivers
+    ELBW_PWM_WriteCompare(1500); //Initialize our motor drivers
+    SHLDR_PWM_WriteCompare(1500);
     CyDelay(10000);
    
     Timer_1_Start();
@@ -569,15 +899,10 @@ int main()
     ADC_StartConvert();
     
     isr_1_StartEx(timer_isr);
-    
-//    uint8 second_counter = 0;
-    
-    
-    
-    
-    //helpers for generating random arrays
+
+    //helps for generating random arrays
     srand((unsigned) time(&t));
-    int direction = 0;
+    
     for(;;)
     {
         //check addresses
@@ -591,7 +916,7 @@ int main()
         }
         
         baseAzimuth();
-//        shoulder();
+        shoulder();
         elbow();
 //        wristTilt();
 //        wristRotate();
@@ -636,8 +961,6 @@ int main()
                     test_array[i+1] = 0;
                 }
                 
-                
-                 
             }
             counter = 0;
             wiznet = 1;

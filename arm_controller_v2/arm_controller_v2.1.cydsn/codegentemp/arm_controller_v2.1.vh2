@@ -2,7 +2,7 @@
 --	Conversion of arm_controller_v2.1.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Wed Mar 04 18:24:36 2015
+--	Sat Mar 07 20:58:59 2015
 --
 
 USE cypress.cypress.all;
@@ -121,34 +121,34 @@ SIGNAL tmpFB_0__WIZ_SS_net_0 : bit;
 SIGNAL tmpIO_0__WIZ_SS_net_0 : bit;
 TERMINAL tmpSIOVREF__WIZ_SS_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__WIZ_SS_net_0 : bit;
-SIGNAL \PWM_2:Net_81\ : bit;
-SIGNAL \PWM_2:Net_75\ : bit;
-SIGNAL \PWM_2:Net_69\ : bit;
-SIGNAL \PWM_2:Net_66\ : bit;
-SIGNAL \PWM_2:Net_82\ : bit;
-SIGNAL \PWM_2:Net_72\ : bit;
+SIGNAL \BA_PWM:Net_81\ : bit;
+SIGNAL \BA_PWM:Net_75\ : bit;
+SIGNAL \BA_PWM:Net_69\ : bit;
+SIGNAL \BA_PWM:Net_66\ : bit;
+SIGNAL \BA_PWM:Net_82\ : bit;
+SIGNAL \BA_PWM:Net_72\ : bit;
 SIGNAL Net_671 : bit;
 SIGNAL Net_670 : bit;
 SIGNAL Net_672 : bit;
 SIGNAL Net_673 : bit;
 SIGNAL Net_669 : bit;
-SIGNAL \PWM_3:Net_81\ : bit;
-SIGNAL \PWM_3:Net_75\ : bit;
-SIGNAL \PWM_3:Net_69\ : bit;
-SIGNAL \PWM_3:Net_66\ : bit;
-SIGNAL \PWM_3:Net_82\ : bit;
-SIGNAL \PWM_3:Net_72\ : bit;
+SIGNAL \ELBW_PWM:Net_81\ : bit;
+SIGNAL \ELBW_PWM:Net_75\ : bit;
+SIGNAL \ELBW_PWM:Net_69\ : bit;
+SIGNAL \ELBW_PWM:Net_66\ : bit;
+SIGNAL \ELBW_PWM:Net_82\ : bit;
+SIGNAL \ELBW_PWM:Net_72\ : bit;
 SIGNAL Net_681 : bit;
 SIGNAL Net_680 : bit;
 SIGNAL Net_682 : bit;
 SIGNAL Net_683 : bit;
 SIGNAL Net_679 : bit;
-SIGNAL \PWM_1:Net_81\ : bit;
-SIGNAL \PWM_1:Net_75\ : bit;
-SIGNAL \PWM_1:Net_69\ : bit;
-SIGNAL \PWM_1:Net_66\ : bit;
-SIGNAL \PWM_1:Net_82\ : bit;
-SIGNAL \PWM_1:Net_72\ : bit;
+SIGNAL \SHLDR_PWM:Net_81\ : bit;
+SIGNAL \SHLDR_PWM:Net_75\ : bit;
+SIGNAL \SHLDR_PWM:Net_69\ : bit;
+SIGNAL \SHLDR_PWM:Net_66\ : bit;
+SIGNAL \SHLDR_PWM:Net_82\ : bit;
+SIGNAL \SHLDR_PWM:Net_72\ : bit;
 SIGNAL Net_799 : bit;
 SIGNAL Net_798 : bit;
 SIGNAL Net_800 : bit;
@@ -1118,7 +1118,7 @@ WIZ_SS:cy_psoc3_pins_v1_10
 		out_clock_en=>tmpOE__elbow_net_0,
 		out_reset=>zero,
 		interrupt=>tmpINTERRUPT_0__WIZ_SS_net_0);
-\PWM_2:cy_m0s8_tcpwm_1\:cy_m0s8_tcpwm_v1_0
+\BA_PWM:cy_m0s8_tcpwm_1\:cy_m0s8_tcpwm_v1_0
 	GENERIC MAP(cy_registers=>"")
 	PORT MAP(clock=>Net_376,
 		capture=>zero,
@@ -1132,7 +1132,7 @@ WIZ_SS:cy_psoc3_pins_v1_10
 		line_out=>Net_647,
 		line_out_compl=>Net_673,
 		interrupt=>Net_669);
-\PWM_3:cy_m0s8_tcpwm_1\:cy_m0s8_tcpwm_v1_0
+\ELBW_PWM:cy_m0s8_tcpwm_1\:cy_m0s8_tcpwm_v1_0
 	GENERIC MAP(cy_registers=>"")
 	PORT MAP(clock=>Net_376,
 		capture=>zero,
@@ -1146,7 +1146,7 @@ WIZ_SS:cy_psoc3_pins_v1_10
 		line_out=>Net_659,
 		line_out_compl=>Net_683,
 		interrupt=>Net_679);
-\PWM_1:cy_m0s8_tcpwm_1\:cy_m0s8_tcpwm_v1_0
+\SHLDR_PWM:cy_m0s8_tcpwm_1\:cy_m0s8_tcpwm_v1_0
 	GENERIC MAP(cy_registers=>"")
 	PORT MAP(clock=>Net_376,
 		capture=>zero,
