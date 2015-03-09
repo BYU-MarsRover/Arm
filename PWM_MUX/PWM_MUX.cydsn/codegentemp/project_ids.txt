@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 C:\Program Files (x86)\Cypress\PSoC Creator\3.1\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|5a33efbf-87fa-42aa-9b80-c94378c4847e
 C:\Program Files (x86)\Cypress\PSoC Creator\3.1\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|522d3d2a-b119-45a7-b9ca-a74f9ee7b61c
 C:\Program Files (x86)\Cypress\PSoC Creator\3.1\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|66b3da65-14ae-42ee-a574-bfcae9dfe106
 C:\Program Files (x86)\Cypress\PSoC Creator\3.1\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|733f932b-4bae-441f-9e01-bbac25ecefb5
 \\vmware-host\Shared Folders\OneDrive\Tech\GitHub\Arm\PWM_MUX\PWM_MUX.cydsn\PWM_MUX.cyprj|81a6340a-ec18-4cb3-9759-eb9c5f2ef8d3
+=======
+C:\Program Files (x86)\Cypress\PSoC Creator\3.1\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|5a33efbf-87fa-42aa-9b80-c94378c4847e
+C:\Program Files (x86)\Cypress\PSoC Creator\3.1\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|522d3d2a-b119-45a7-b9ca-a74f9ee7b61c
+C:\Program Files (x86)\Cypress\PSoC Creator\3.1\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|66b3da65-14ae-42ee-a574-bfcae9dfe106
+C:\Program Files (x86)\Cypress\PSoC Creator\3.1\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|733f932b-4bae-441f-9e01-bbac25ecefb5
+\\vmware-host\Shared Folders\OneDrive\Tech\GitHub\Arm\PWM_MUX\PWM_MUX.cydsn\PWM_MUX.cyprj|81a6340a-ec18-4cb3-9759-eb9c5f2ef8d3
+>>>>>>> 0742168bb9b6d18216297ff5e7f48388d3571538
