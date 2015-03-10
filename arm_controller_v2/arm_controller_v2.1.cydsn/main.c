@@ -6,8 +6,14 @@
 #include <time.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include <wiznet5500.h>
+#include <spi.h>
 
 //Initializations of global variables
+#define ownIpAddr 4
+#define dstIpAddr 1
+#define udpPort 27015
+
 #define ELBOW_UPPER_BOUND 1000
 #define ELBOW_LOWER_BOUND 100
 #define SHOULDER_UPPER_BOUND 64000
@@ -25,7 +31,7 @@
 #define WR_BYTE_2 11
 
 #define DATA_ARRAY_SIZE 14
-uint16 data_array[DATA_ARRAY_SIZE]; //stores the parsed instructions from the wiznet
+uint8 data_array[DATA_ARRAY_SIZE]; //stores the parsed instructions from the wiznet
 
 uint8 wiznet; //bool indicating wiznet interupt high or low
 uint8 new_pack; //bool indicating a new pack of instructions to carry out
@@ -124,11 +130,12 @@ uint16 potFeedback(uint32 channel){
 //to be used for parsing reading/parsing the data from the wiznet
 void fill_data_array()
 {
-    uint8 i = 0;
-    for(i = 0; i < TEST_ARRAY_SIZE; i++)
-    {
-        data_array[i] = test_array[i];
-    }
+    wiznetReadUdpFrame(data_array, DATA_ARRAY_SIZE);
+//    uint8 i = 0;
+//    for(i = 0; i < TEST_ARRAY_SIZE; i++)
+//    {
+//        data_array[i] = test_array[i];
+//    }
 }
 
 
@@ -872,7 +879,7 @@ void baseAzimuth()
 
 int main()
 {  
-    CyGlobalIntEnable;
+    
     
     //Define variables
     time_t t;
@@ -889,27 +896,30 @@ int main()
     BA_PWM_Start();
     ELBW_PWM_Start();
     
+    wiznetInit(ownIpAddr, dstIpAddr, udpPort);
+    
     ELBW_PWM_WriteCompare(1500); //Initialize our motor drivers
     SHLDR_PWM_WriteCompare(1500);
     CyDelay(10000);
    
-    Timer_1_Start();
-    
     ADC_Start();
     ADC_StartConvert();
     
-    isr_1_StartEx(timer_isr);
-
     //helps for generating random arrays
     srand((unsigned) time(&t));
+    
+    CyGlobalIntEnable;
+    isr_1_StartEx(timer_isr);
+    Timer_1_Start();
     
     for(;;)
     {
         //check addresses
         //TODO get the address bytes from Steve
         
-        if(wiznet) //WIZ_INT_Read()
+        if(!WIZ_INT_Read())
         {
+            wiznetClearInterrupts();
             fill_data_array();
             new_pack = 1;
             fin_exec = 0;
@@ -929,49 +939,49 @@ int main()
         while(!timerFlag){} //this while loop will periodize our code to the time of longest path
         timerFlag = 0;
         
-        counter++;
-        
-        if(counter == 20)
-        {
-            uint16 feedback1 = ADC_GetResult16(2);
-            int16 forward = 1000;
-            int16 backward = -1000;
-            for(int i = 0; i < TEST_ARRAY_SIZE; (i+=2))
-            {
-//                int16 random_number = rand()%2001 - 1000;
-//                test_array[i] = random_number >> 8;
-//                test_array[i+1] = random_number & 0x00FF;
-//                if((second_counter%2) == 0)
+//        counter++;
+//        
+//        if(counter == 20)
+//        {
+//            uint16 feedback1 = ADC_GetResult16(2);
+//            int16 forward = 1000;
+//            int16 backward = -1000;
+//            for(int i = 0; i < TEST_ARRAY_SIZE; (i+=2))
+//            {
+////                int16 random_number = rand()%2001 - 1000;
+////                test_array[i] = random_number >> 8;
+////                test_array[i+1] = random_number & 0x00FF;
+////                if((second_counter%2) == 0)
+////                {
+////                    test_array[i] = ;
+////                }
+//                if (feedback1 > 500)
 //                {
-//                    test_array[i] = ;
+//                    test_array[i] = forward >> 8;
+//                    test_array[i+1] = forward & 0x00FF;
 //                }
-                if (feedback1 > 500)
-                {
-                    test_array[i] = forward >> 8;
-                    test_array[i+1] = forward & 0x00FF;
-                }
-                else if (feedback1 < 500)
-                {
-                    test_array[i] = backward >> 8;
-                    test_array[i+1] = backward & 0x00FF;
-                }
-                else
-                {
-                    test_array[i] = 0;
-                    test_array[i+1] = 0;
-                }
-                
-            }
-            counter = 0;
-            wiznet = 1;
-        }
-        
-//            //Potential solution to how we will want to send feedback
-//            feedback_count++;
-//            if(feedback_count == feedback_interval) //sends feeback to base station every 50th
-//            {                                        //time through the full set of instructions
-//                send_feedback();
+//                else if (feedback1 < 500)
+//                {
+//                    test_array[i] = backward >> 8;
+//                    test_array[i+1] = backward & 0x00FF;
+//                }
+//                else
+//                {
+//                    test_array[i] = 0;
+//                    test_array[i+1] = 0;
+//                }
+//                
 //            }
+//            counter = 0;
+//            wiznet = 1;
+//        }
+//        
+////            //Potential solution to how we will want to send feedback
+////            feedback_count++;
+////            if(feedback_count == feedback_interval) //sends feeback to base station every 50th
+////            {                                        //time through the full set of instructions
+////                send_feedback();
+////            }
     }
 }
 

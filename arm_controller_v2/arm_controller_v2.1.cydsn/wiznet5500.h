@@ -75,6 +75,7 @@ void wiznetSend(void);
 void wiznetClearInterrupts(void);
 void wiznetConfigInterrupts(uint8_t, uint8_t);
 uint16_t wiznetWriteUdpFrame(uint8_t *, uint8_t);
+uint16_t wiznetReadUdpFrame(uint8_t *, uint8_t);
 void wiznetPrintRegisters(uint8_t);
 
 void wiznetWrite8b(uint16_t, uint8_t, uint8_t);
