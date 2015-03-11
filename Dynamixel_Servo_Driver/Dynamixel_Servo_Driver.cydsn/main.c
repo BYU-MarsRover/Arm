@@ -31,7 +31,7 @@ int main()
 
     // Initializations of the FPGA hardware logic blocks
     
-    UART_1_Start();
+    UART_2_Start();
     Timer_1_Start();
     Timer_2_Start();
     
@@ -94,7 +94,7 @@ int main()
     array[7] = position >> 8;
     array[8] = ~(servoID + 0x05 + 0x1E + array[6] + array[7] + 0x03);
     
-    UART_1_PutArray(array, 0x09);
+    UART_2_SpiUartPutArray(array, 0x09);
     
 }
     
@@ -111,7 +111,7 @@ void SetServoTorque( uint8 servoID, uint16 torque){
     array[7] = torque >> 8;
     array[8] = ~(servoID + 0x05 + 0x0E + array[6] + array[7] + 0x03);
     
-    UART_1_PutArray(array, 0x09);
+    UART_2_SpiUartPutArray(array, 0x09);
     
 }    
 
@@ -128,7 +128,7 @@ void ServoSpeed( uint8 servoID, uint16 speed){
     array[7] = speed >> 8;
     array[8] = ~(servoID + 0x05 + 0x20 + array[6] + array[7] + 0x03);
     
-    UART_1_PutArray(array, 0x09);
+    UART_2_SpiUartPutArray(array, 0x09);
     
 }
 
@@ -145,7 +145,7 @@ void ReadRequest(uint8 id,uint16 address, uint8 length){ // note that this uses 
     array[7]= ~(id + 0x04 + address + length +0x02);
  
     
-    UART_1_PutArray(array, 0x08);
+    UART_2_SpiUartPutArray(array, 0x08);
     
 }
 
@@ -161,7 +161,7 @@ void UartWriteLED( uint8 ledvalue){
     array[6] = ledvalue;
     array[7] = ~(0x0FE + 0x04 + 0x19 + ledvalue + 0x03);
     
-    UART_1_PutArray(array, 0x08);
+    UART_2_SpiUartPutArray(array, 0x08);
     
 }
 

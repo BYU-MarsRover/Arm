@@ -1,5 +1,5 @@
 # Dynamixel_Servo_Driver
-# 2015-03-04 06:30:40Z
+# 2015-03-11 00:04:57Z
 
 # IO_2@[IOP=(3)][IoId=(2)] is reserved: SWDDebugEnabled
 dont_use_io iocell 3 2
@@ -9,4 +9,4 @@ set_io "Channel_1(0)" iocell 3 0
 set_io "Channel_2(0)" iocell 3 4
 set_location "ClockGenBlock" m0s8clockgenblockcell -1 -1 0
 set_io "LED(0)" iocell 1 6
-set_io "tx(0)" iocell 2 0
+set_io "\UART_2:tx(0)\" iocell 4 1
