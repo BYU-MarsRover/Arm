@@ -235,6 +235,23 @@
 <v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\baseAzimuth\baseAzimuth.h</v>
 <v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\baseAzimuth\baseAzimuth_aliases.h</v>
 <v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Bootloadable_1</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Bootloadable_1\Bootloadable_1.c</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Bootloadable_1\Bootloadable_1.h</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Clock_counter</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Clock_counter\Clock_counter.c</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Clock_counter\Clock_counter.h</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Clock_pwm</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Clock_pwm\Clock_pwm.c</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Clock_pwm\Clock_pwm.h</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\cy_boot</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\cy_boot\cm0gcc.ld</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\cy_boot\Cm0Iar.icf</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\cy_boot\Cm0RealView.scat</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\cy_boot\Cm0Start.c</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\cy_boot\core_cm0.h</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\cy_boot\core_cm0_psoc4.h</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\cy_boot\core_cmFunc.h</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\cy_boot\core_cmInstr.h</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="arm_controller_v2\arm_controller_v2.1">
@@ -360,6 +377,23 @@
 <v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\main.lst</v>
 <v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\pot_elbow.lst</v>
 <v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\pot_shoulder.lst</v>
+<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\SHLDR_PWM.lst</v>
+<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\SHLDR_PWM_PM.lst</v>
+<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\shoulder.lst</v>
+<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\spi.lst</v>
+<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\SPI_1.lst</v>
+<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\SPI_1_BOOT.lst</v>
+<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\SPI_1_miso_s.lst</v>
+<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\SPI_1_mosi_s.lst</v>
+<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\SPI_1_PM.lst</v>
+<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\SPI_1_SCBCLK.lst</v>
+<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\SPI_1_sclk_s.lst</v>
+<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\SPI_1_SPI.lst</v>
+<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\SPI_1_SPI_BOOT.lst</v>
+<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\SPI_1_SPI_UART.lst</v>
+<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\SPI_1_ss_s.lst</v>
+<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\Timer_1.lst</v>
+<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\Timer_1_PM.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>

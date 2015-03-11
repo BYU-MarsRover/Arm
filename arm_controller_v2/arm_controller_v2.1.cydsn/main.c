@@ -28,7 +28,9 @@
 #define ELBW_BYTE_1 8
 #define ELBW_BYTE_2 9
 #define WT_BYTE_1 10
-#define WR_BYTE_2 11
+#define WT_BYTE_2 11
+#define WR_BYTE_1 12
+#define WR_BYTE_2 13
 
 #define DATA_ARRAY_SIZE 14
 uint8 data_array[DATA_ARRAY_SIZE]; //stores the parsed instructions from the wiznet
@@ -90,6 +92,8 @@ void wristTilt();
 void wristRotate();
 void send_feedback();
 uint16 potFeedback();
+uint16 average(uint16* array, uint8 num_items);
+
 //--------------------------------------------------- END Function Stubs
 
 // function to convert int to string
@@ -121,7 +125,275 @@ void reverse(char s[])
      reverse(s);
  }
 
+//Average function to be used in smoothing our input
+uint16 average(uint16* array, uint8 num_items)
+{
+    uint8 i;
+    uint32 sum = 0;
+    uint16 avg = 0;
+    
+    for(i = 0; i < num_items; i++)
+    {
+        sum += array[i];
+    }
+    
+    avg = sum/num_items;
+    
+    return avg;
+}
 
+void pos_to_vel(uint8 cur_pos, uint16* array, uint8 ARRAY_SIZE, uint16 command)
+{
+    if(command >= 1000 && command < 1100)
+    {
+        if(cur_pos != 0)
+        {
+            if(array[cur_pos - 1] >= 1020)
+            {
+                array[cur_pos] = (array[cur_pos - 1] - 20);
+            }
+            else
+            {
+                array[cur_pos] = 1000;
+            }
+            
+            if(cur_pos < (ARRAY_SIZE - 1))
+            {
+                cur_pos++;
+            }
+            else
+            {
+                cur_pos = 0;
+            }
+        }
+        else if(cur_pos == 0)
+        {
+            if(array[ARRAY_SIZE - 1] >= 1020)
+            {
+                array[cur_pos] = (array[ARRAY_SIZE - 1] - 20);
+            }
+            else
+            {
+                array[cur_pos] = 1000;
+            }
+            
+            if(cur_pos < (ARRAY_SIZE - 1))
+            {
+                cur_pos++;
+            }
+            else
+            {
+                cur_pos = 0;
+            }
+        }
+        else
+        {
+            cur_pos = 0;
+        }
+    }
+    else if(command >= 1100 && command < 1300)
+    {
+        if(cur_pos != 0)
+        {
+            array[cur_pos] = (array[cur_pos - 1] - 10);
+            
+            if(cur_pos < (ARRAY_SIZE - 1))
+            {
+                cur_pos++;
+            }
+            else
+            {
+                cur_pos = 0;
+            }
+        }
+        else if(cur_pos == 0)
+        {
+            array[cur_pos] = (array[ARRAY_SIZE - 1] - 10);
+           
+            if(cur_pos < (ARRAY_SIZE - 1))
+            {
+                cur_pos++;
+            }
+            else
+            {
+                cur_pos = 0;
+            }
+        }
+        else
+        {
+            cur_pos = 0;   
+        }    
+    }
+    else if(command >= 1300 && command < 1490)
+    {
+        if(cur_pos != 0)
+        {
+            array[cur_pos] = (array[cur_pos - 1] - 5);
+            
+            if(cur_pos < (ARRAY_SIZE - 1))
+            {
+                cur_pos++;
+            }
+            else
+            {
+                cur_pos = 0;
+            }
+        }
+        else if(cur_pos == 0)
+        {
+            array[cur_pos] = (array[ARRAY_SIZE - 1] - 5);
+           
+            if(cur_pos < (ARRAY_SIZE - 1))
+            {
+                cur_pos++;
+            }
+            else
+            {
+                cur_pos = 0;
+            }
+        }
+        else
+        {
+            cur_pos = 0;   
+        }    
+    }
+    else if(command > 1510 && command <= 1700)
+    {
+        if(cur_pos != 0)
+        {
+            array[cur_pos] = (array[cur_pos - 1] + 5);
+            
+            if(cur_pos < (ARRAY_SIZE - 1))
+            {
+                cur_pos++;
+            }
+            else
+            {
+                cur_pos = 0;
+            }
+        }
+        else if(cur_pos == 0)
+        {
+            array[cur_pos] = (array[ARRAY_SIZE - 1] + 5);
+           
+            if(cur_pos < (ARRAY_SIZE - 1))
+            {
+                cur_pos++;
+            }
+            else
+            {
+                cur_pos = 0;
+            }
+        }
+        else
+        {
+            cur_pos = 0;   
+        }    
+    }
+    else if(command > 1700 && command <= 1900)
+    {
+        if(cur_pos != 0)
+        {
+            array[cur_pos] = (array[cur_pos - 1] + 10);
+            
+            if(cur_pos < (ARRAY_SIZE - 1))
+            {
+                cur_pos++;
+            }
+            else
+            {
+                cur_pos = 0;
+            }
+        }
+        else if(cur_pos == 0)
+        {
+            array[cur_pos] = (array[ARRAY_SIZE - 1] + 10);
+           
+            if(cur_pos < (ARRAY_SIZE - 1))
+            {
+                cur_pos++;
+            }
+            else
+            {
+                cur_pos = 0;
+            }
+        }
+        else
+        {
+            cur_pos = 0;   
+        }
+    }
+    else if(command > 1900 && command <= 2000)
+    {
+        if(cur_pos != 0)
+        {
+            if(array[cur_pos - 1] <= 1980)
+            {
+                array[cur_pos] = (array[cur_pos - 1] + 20);
+            }
+            else
+            {
+                array[cur_pos] = 2000;
+            }
+            
+            if(cur_pos < (ARRAY_SIZE - 1))
+            {
+                cur_pos++;
+            }
+            else
+            {
+                cur_pos = 0;
+            }
+        }
+        else if(cur_pos == 0)
+        {
+            if(array[ARRAY_SIZE - 1] <= 1980)
+            {
+                array[cur_pos] = (array[ARRAY_SIZE - 1] + 20);
+            }
+            else
+            {
+                array[cur_pos] = 2000;
+            }
+            
+            if(cur_pos < (ARRAY_SIZE - 1))
+            {
+                cur_pos++;
+            }
+            else
+            {
+                cur_pos = 0;
+            }
+        }
+        else
+        {
+            cur_pos = 0;
+        }
+    }
+    else if(command <= 1510 && command >= 1490)
+    {
+        if(cur_pos < (ARRAY_SIZE - 1))
+        {
+            cur_pos++;
+        }
+        else
+        {
+            cur_pos = 0;
+        }
+    }
+    else
+    {
+        //throw error
+        if(cur_pos < (ARRAY_SIZE - 1))
+        {
+            cur_pos++;
+        }
+        else
+        {
+            cur_pos = 0;
+        }
+    }
+}
 
 uint16 potFeedback(uint32 channel){
     uint16 feedback = ADC_GetResult16(channel);
@@ -140,7 +412,7 @@ void fill_data_array()
 
 
 
-enum wristTilt_states {tilt_init = 0, tilt_start, tilt_control, tilt_feedback} wristTilt_state;
+enum wristTilt_states {tilt_start = 0, tilt_init, tilt_control, tilt_wait, tilt_feedback} wristTilt_state;
 //control the tilting motion of the wrist
 void wristTilt()
 {
@@ -158,38 +430,88 @@ void wristTilt()
     //--------------------------
     // State machine
     
-        // Action
-    switch(wristTilt_state)
-    {
-        case tilt_init:
-            wristTilt_state = tilt_start;
-            break;
+    uint8 i;
+    uint16 avg;
+    uint16 command;
+    
+    switch(wristTilt_state){ //actions
         case tilt_start:
-            // Set the torque - this is a one time thing
-            // Set the speed - I think this is a one time thing
             break;
+
+        case tilt_init:
+            for(i = 0; i < WT_ARR_SIZE; i++)
+            {
+                WT_array[i] = 1500;
+            }
+            WT_arr_cspot = 0;
+            break;
+
         case tilt_control:
+            command = (((data_array[WT_BYTE_1] << 8) | data_array[WT_BYTE_2])/2) + 1500;
+            WT_array[WT_arr_cspot] = command;
+            if(WT_arr_cspot < (WT_ARR_SIZE - 1))
+            {
+                WT_arr_cspot++;
+            }
+            else
+            {
+                WT_arr_cspot = 0;
+            }
+            
+            //pos_to_vel(WT_arr_cspot, WT_array, WT_ARR_SIZE, command);
+            
+            avg = average(WT_array, WT_ARR_SIZE);
+            
+            if(avg <= 2000 && avg >= 1000)
+            {
+                //UART_1_SpiUartPutArray(avg);
+            }
+            else
+            {
+                //throw error
+                //BA_PWM_WriteCompare(1500);
+            }
+            fin_exec++;
             break;
-        case tilt_feedback:
+            
+        case tilt_wait:
             break;
     }
-        // Transistion
-    switch(wristTilt_state)
-    {
-        case tilt_init:
-            wristTilt_state = tilt_start;
-            break;
+    
+    switch(wristTilt_state){ //transitions
         case tilt_start:
-            wristTilt_state = tilt_control;
+            wristTilt_state = tilt_init;
             break;
+        
+        case tilt_init:
+            wristTilt_state = tilt_wait;
+            break;
+        
         case tilt_control:
+            if(new_pack)
+            {
+                wristTilt_state = tilt_control;
+            }
+            else
+            {
+                wristTilt_state = tilt_wait;
+            }
             break;
-        case tilt_feedback:
+        
+        case tilt_wait:
+            if(new_pack)
+            {
+                wristTilt_state = tilt_control;
+            }
+            else
+            {
+                wristTilt_state = tilt_wait; 
+            }
             break;
-    }
+    }    
 }
 
-enum wristRotate_states {rotate_init = 0, rotate_start, rotate_control, rotate_feedback} wristRotate_state;
+enum wristRotate_states {rotate_start = 0, rotate_init, rotate_control, rotate_wait, rotate_feedback} wristRotate_state;
 //control the rotating motion of the wrist
 void wristRotate()
 {
@@ -207,35 +529,85 @@ void wristRotate()
     //--------------------------
     // State machine
     
-        // Action
-    switch(wristRotate_state)
-    {
-        case rotate_init:
-            wristRotate_state = rotate_start;
-            break;
+    uint8 i;
+    uint16 avg;
+    uint16 command;
+    
+    switch(wristRotate_state){ //actions
         case rotate_start:
-            // Set the torque - this is a one time thing
-            // Set the speed - I think this is a one time thing
             break;
+
+        case rotate_init:
+            for(i = 0; i < WR_ARR_SIZE; i++)
+            {
+                WR_array[i] = 1500;
+            }
+            WR_arr_cspot = 0;
+            break;
+
         case rotate_control:
+            command = (((data_array[WR_BYTE_1] << 8) | data_array[WR_BYTE_2])/2) + 1500;
+            WR_array[WR_arr_cspot] = command;
+            if(WR_arr_cspot < (WR_ARR_SIZE - 1))
+            {
+                WR_arr_cspot++;
+            }
+            else
+            {
+                WR_arr_cspot = 0;
+            }
+            
+            //pos_to_vel(WR_arr_cspot, WR_array, WR_ARR_SIZE, command);
+            
+            avg = average(WR_array, WR_ARR_SIZE);
+            
+            if(avg <= 2000 && avg >= 1000)
+            {
+                //BA_PWM_WriteCompare(avg);
+            }
+            else
+            {
+                //throw error
+                //BA_PWM_WriteCompare(1500);
+            }
+            fin_exec++;
             break;
-        case rotate_feedback:
+            
+        case rotate_wait:
             break;
     }
-        // Transistion
-    switch(wristRotate_state)
-    {
-        case rotate_init:
-            wristRotate_state = rotate_start;
-            break;
+    
+    switch(wristRotate_state){ //transitions
         case rotate_start:
-            wristRotate_state = rotate_control;
+            wristRotate_state = rotate_init;
             break;
+        
+        case rotate_init:
+            wristRotate_state = rotate_wait;
+            break;
+        
         case rotate_control:
+            if(new_pack)
+            {
+                wristRotate_state = rotate_control;
+            }
+            else
+            {
+                wristRotate_state = rotate_wait;
+            }
             break;
-        case rotate_feedback:
+        
+        case rotate_wait:
+            if(new_pack)
+            {
+                wristRotate_state = rotate_control;
+            }
+            else
+            {
+                wristRotate_state = rotate_wait;
+            }
             break;
-    }
+    }    
 }
 
 void send_feedback()
@@ -245,25 +617,6 @@ void send_feedback()
     //TODO define system state
     //send packet via serial to wiznet
 }
-
-
-//Average function to be used in smoothing our input
-uint16 average(uint16* array, uint8 num_items)
-{
-    uint8 i;
-    uint32 sum = 0;
-    uint16 avg = 0;
-    
-    for(i = 0; i < num_items; i++)
-    {
-        sum += array[i];
-    }
-    
-    avg = sum/num_items;
-    
-    return avg;
-}
-
 
 //control the elbow
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -576,255 +929,7 @@ void baseAzimuth()
                 BA_arr_cspot = 0;
             }
             
-//            if(command >= 1000 && command < 1100)
-//            {
-//                if(BA_arr_cspot != 0)
-//                {
-//                    if(baseAz_array[BA_arr_cspot - 1] >= 1020)
-//                    {
-//                        baseAz_array[BA_arr_cspot] = (baseAz_array[BA_arr_cspot - 1] - 20);
-//                    }
-//                    else
-//                    {
-//                        baseAz_array[BA_arr_cspot] = 1000;
-//                    }
-//                    
-//                    if(BA_arr_cspot < (BA_ARR_SIZE - 1))
-//                    {
-//                        BA_arr_cspot++;
-//                    }
-//                    else
-//                    {
-//                        BA_arr_cspot = 0;
-//                    }
-//                }
-//                else if(BA_arr_cspot == 0)
-//                {
-//                    if(baseAz_array[BA_ARR_SIZE - 1] >= 1020)
-//                    {
-//                        baseAz_array[BA_arr_cspot] = (baseAz_array[BA_ARR_SIZE - 1] - 20);
-//                    }
-//                    else
-//                    {
-//                        baseAz_array[BA_arr_cspot] = 1000;
-//                    }
-//                    
-//                    if(BA_arr_cspot < (BA_ARR_SIZE - 1))
-//                    {
-//                        BA_arr_cspot++;
-//                    }
-//                    else
-//                    {
-//                        BA_arr_cspot = 0;
-//                    }
-//                }
-//                else
-//                {
-//                    BA_arr_cspot = 0;
-//                }
-//            }
-//            else if(command >= 1100 && command < 1300)
-//            {
-//                if(BA_arr_cspot != 0)
-//                {
-//                    baseAz_array[BA_arr_cspot] = (baseAz_array[BA_arr_cspot - 1] - 10);
-//                    
-//                    if(BA_arr_cspot < (BA_ARR_SIZE - 1))
-//                    {
-//                        BA_arr_cspot++;
-//                    }
-//                    else
-//                    {
-//                        BA_arr_cspot = 0;
-//                    }
-//                }
-//                else if(BA_arr_cspot == 0)
-//                {
-//                    baseAz_array[BA_arr_cspot] = (baseAz_array[BA_ARR_SIZE - 1] - 10);
-//                   
-//                    if(BA_arr_cspot < (BA_ARR_SIZE - 1))
-//                    {
-//                        BA_arr_cspot++;
-//                    }
-//                    else
-//                    {
-//                        BA_arr_cspot = 0;
-//                    }
-//                }
-//                else
-//                {
-//                    BA_arr_cspot = 0;   
-//                }    
-//            }
-//            else if(command >= 1300 && command < 1490)
-//            {
-//                if(BA_arr_cspot != 0)
-//                {
-//                    baseAz_array[BA_arr_cspot] = (baseAz_array[BA_arr_cspot - 1] - 5);
-//                    
-//                    if(BA_arr_cspot < (BA_ARR_SIZE - 1))
-//                    {
-//                        BA_arr_cspot++;
-//                    }
-//                    else
-//                    {
-//                        BA_arr_cspot = 0;
-//                    }
-//                }
-//                else if(BA_arr_cspot == 0)
-//                {
-//                    baseAz_array[BA_arr_cspot] = (baseAz_array[BA_ARR_SIZE - 1] - 5);
-//                   
-//                    if(BA_arr_cspot < (BA_ARR_SIZE - 1))
-//                    {
-//                        BA_arr_cspot++;
-//                    }
-//                    else
-//                    {
-//                        BA_arr_cspot = 0;
-//                    }
-//                }
-//                else
-//                {
-//                    BA_arr_cspot = 0;   
-//                }    
-//            }
-//            else if(command > 1510 && command <= 1700)
-//            {
-//                if(BA_arr_cspot != 0)
-//                {
-//                    baseAz_array[BA_arr_cspot] = (baseAz_array[BA_arr_cspot - 1] + 5);
-//                    
-//                    if(BA_arr_cspot < (BA_ARR_SIZE - 1))
-//                    {
-//                        BA_arr_cspot++;
-//                    }
-//                    else
-//                    {
-//                        BA_arr_cspot = 0;
-//                    }
-//                }
-//                else if(BA_arr_cspot == 0)
-//                {
-//                    baseAz_array[BA_arr_cspot] = (baseAz_array[BA_ARR_SIZE - 1] + 5);
-//                   
-//                    if(BA_arr_cspot < (BA_ARR_SIZE - 1))
-//                    {
-//                        BA_arr_cspot++;
-//                    }
-//                    else
-//                    {
-//                        BA_arr_cspot = 0;
-//                    }
-//                }
-//                else
-//                {
-//                    BA_arr_cspot = 0;   
-//                }    
-//            }
-//            else if(command > 1700 && command <= 1900)
-//            {
-//                if(BA_arr_cspot != 0)
-//                {
-//                    baseAz_array[BA_arr_cspot] = (baseAz_array[BA_arr_cspot - 1] + 10);
-//                    
-//                    if(BA_arr_cspot < (BA_ARR_SIZE - 1))
-//                    {
-//                        BA_arr_cspot++;
-//                    }
-//                    else
-//                    {
-//                        BA_arr_cspot = 0;
-//                    }
-//                }
-//                else if(BA_arr_cspot == 0)
-//                {
-//                    baseAz_array[BA_arr_cspot] = (baseAz_array[BA_ARR_SIZE - 1] + 10);
-//                   
-//                    if(BA_arr_cspot < (BA_ARR_SIZE - 1))
-//                    {
-//                        BA_arr_cspot++;
-//                    }
-//                    else
-//                    {
-//                        BA_arr_cspot = 0;
-//                    }
-//                }
-//                else
-//                {
-//                    BA_arr_cspot = 0;   
-//                }
-//            }
-//            else if(command > 1900 && command <= 2000)
-//            {
-//                if(BA_arr_cspot != 0)
-//                {
-//                    if(baseAz_array[BA_arr_cspot - 1] <= 1980)
-//                    {
-//                        baseAz_array[BA_arr_cspot] = (baseAz_array[BA_arr_cspot - 1] + 20);
-//                    }
-//                    else
-//                    {
-//                        baseAz_array[BA_arr_cspot] = 2000;
-//                    }
-//                    
-//                    if(BA_arr_cspot < (BA_ARR_SIZE - 1))
-//                    {
-//                        BA_arr_cspot++;
-//                    }
-//                    else
-//                    {
-//                        BA_arr_cspot = 0;
-//                    }
-//                }
-//                else if(BA_arr_cspot == 0)
-//                {
-//                    if(baseAz_array[BA_ARR_SIZE - 1] <= 1980)
-//                    {
-//                        baseAz_array[BA_arr_cspot] = (baseAz_array[BA_ARR_SIZE - 1] + 20);
-//                    }
-//                    else
-//                    {
-//                        baseAz_array[BA_arr_cspot] = 2000;
-//                    }
-//                    
-//                    if(BA_arr_cspot < (BA_ARR_SIZE - 1))
-//                    {
-//                        BA_arr_cspot++;
-//                    }
-//                    else
-//                    {
-//                        BA_arr_cspot = 0;
-//                    }
-//                }
-//                else
-//                {
-//                    BA_arr_cspot = 0;
-//                }
-//            }
-//            else if(command <= 1510 && command >= 1490)
-//            {
-//                if(BA_arr_cspot < (BA_ARR_SIZE - 1))
-//                {
-//                    BA_arr_cspot++;
-//                }
-//                else
-//                {
-//                    BA_arr_cspot = 0;
-//                }
-//            }
-//            else
-//            {
-//                //throw error
-//                if(BA_arr_cspot < (BA_ARR_SIZE - 1))
-//                {
-//                    BA_arr_cspot++;
-//                }
-//                else
-//                {
-//                    BA_arr_cspot = 0;
-//                }
-//            }
+            //pos_to_vel(BA_arr_cspot, baseAz_array, BA_ARR_SIZE, command);
             
             avg = average(baseAz_array, BA_ARR_SIZE);
             
