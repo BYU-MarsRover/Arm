@@ -25,7 +25,7 @@
       <Tool Name="postbuild" Command="" Options="" />
     </Toolchain>
   </Toolchains>
-  <Project Name="arm_controller_v2.1" Path="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn" Version="4.20" Type="Bootloadable">
+  <Project Name="arm_controller_v2.1" Path="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn" Version="4.20" Type="Normal">
     <CMSIS_SVD_File>arm_controller_v2.1.svd</CMSIS_SVD_File>
     <Datasheet />
     <LinkerFiles>
@@ -46,7 +46,6 @@
         <Files Root="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn">
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\cyfitter_cfg.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\cyfitter_cfg.c</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\cybootloader.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\cymetadata.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\cydevice_trm.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\cydevicegnu_trm.inc</File>
@@ -61,8 +60,6 @@
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Clock_counter.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Clock_pwm.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Clock_pwm.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Bootloadable_1.c</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Bootloadable_1.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\isr_1.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\isr_1.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Timer_1.c</File>

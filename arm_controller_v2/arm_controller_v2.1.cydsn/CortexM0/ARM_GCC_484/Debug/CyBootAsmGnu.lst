@@ -4197,7 +4197,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
  1326              	.set CYDEV_DEBUGGING_DPS, CYDEV_DEBUGGING_DPS_SWD
  1327              	.set CYDEV_DEBUGGING_ENABLE, 1
  1328              	.set CYDEV_HEAP_SIZE, 0x80
- 1329              	.set CYDEV_PROJ_TYPE, 2
+ 1329              	.set CYDEV_PROJ_TYPE, 0
 ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 71
 
 

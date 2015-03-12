@@ -2,7 +2,7 @@
 --	Conversion of arm_controller_v2.1.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Mon Mar 09 17:57:20 2015
+--	Wed Mar 11 17:03:36 2015
 --
 
 USE cypress.cypress.all;

@@ -4,8 +4,6 @@
   <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\cyfitter_cfg.h" value="NONE;" />
   <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\cyfitter_cfg.c" value="ARM_C_FILE;" />
   <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\protect.hex" value="NONE;" />
-  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\cybootloader.icf" value="NONE;" />
-  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\cybootloader.c" value="ARM_C_FILE;" />
   <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\cymetadata.c" value="ARM_C_FILE;" />
   <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\cydevice_trm.h" value="NONE;" />
   <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\cydevicegnu_trm.inc" value="NONE;" />
@@ -20,8 +18,6 @@
   <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\Clock_counter.h" value="NONE;Clock_counter" />
   <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\Clock_pwm.c" value="ARM_C_FILE;Clock_pwm" />
   <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\Clock_pwm.h" value="NONE;Clock_pwm" />
-  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\Bootloadable_1.c" value="ARM_C_FILE;Bootloadable_1" />
-  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\Bootloadable_1.h" value="NONE;Bootloadable_1" />
   <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\isr_1.c" value="ARM_C_FILE;isr_1" />
   <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\isr_1.h" value="NONE;isr_1" />
   <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\elbow.c" value="ARM_C_FILE;elbow" />
