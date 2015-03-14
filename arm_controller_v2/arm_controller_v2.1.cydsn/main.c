@@ -1,72 +1,8 @@
 /* ========================================
  *created by Samuel Bury Jan. 31, 2015
- *last modified date: Jan. 31, 2015
 */
-#include <project.h>
-#include <time.h>
-#include <stdlib.h>
-#include <stdio.h>
-#include <wiznet5500.h>
-#include <spi.h>
 
-//Initializations of global variables
-#define ownIpAddr 4
-#define dstIpAddr 1
-#define udpPort 27015
-
-// to do: We need to make sure the bounds checking doesn't break
-#define ELBOW_UPPER_BOUND 1000     //was 100  // 16 bit values from ADC
-#define ELBOW_LOWER_BOUND 100       //was 1000
-#define SHOULDER_UPPER_BOUND 800
-#define SHOULDER_LOWER_BOUND 280
-#define SHOULDER_POT 0
-#define ELBOW_POT 1
-
-#define BA_BYTE_1 4
-#define BA_BYTE_2 5
-#define SHLDR_BYTE_1 6
-#define SHLDR_BYTE_2 7
-#define ELBW_BYTE_1 8
-#define ELBW_BYTE_2 9
-#define WT_BYTE_1 10
-#define WT_BYTE_2 11
-#define WR_BYTE_1 12
-#define WR_BYTE_2 13
-
-#define DATA_ARRAY_SIZE 14
-int8 data_array[DATA_ARRAY_SIZE]; //stores the parsed instructions from the wiznet
-
-uint8 wiznet; //bool indicating wiznet interupt high or low
-uint8 new_pack; //bool indicating a new pack of instructions to carry out
-
-#define NUM_OF_SM 5
-uint8 fin_exec; //counts
-
-#define TEST_ARRAY_SIZE 14
-int8 test_array[TEST_ARRAY_SIZE];
-
-#define ELBW_ARR_SIZE 20
-uint8 elbw_arr_cspot;
-uint16 elbow_array[ELBW_ARR_SIZE];
-
-#define SHLDR_ARR_SIZE 20
-uint8 shldr_arr_cspot;
-uint16 shoulder_array[SHLDR_ARR_SIZE];
-
-#define BA_ARR_SIZE 20
-uint8 BA_arr_cspot;
-uint16 baseAz_array[BA_ARR_SIZE];
-
-#define WT_ARR_SIZE 20  //for wristTilt
-uint8 WT_arr_cspot;
-uint16 WT_array[WT_ARR_SIZE];
-
-#define WR_ARR_SIZE 20  //for wristRotate
-uint8 WR_arr_cspot;
-uint16 WR_array[WR_ARR_SIZE];
-
-//uint16 feedback_count;
-uint8 timerFlag; //used in the timer_isr
+#include "main.h"
 
 //this ISR will be used to set our timeFlag according to our timer component
 ///set to the time of the longest path for our code
@@ -78,55 +14,37 @@ CY_ISR(timer_isr)
     Timer_1_ClearInterrupt(isr_var);
 }
 
-
 //Funtion declarations/definitions
-//TODO do we need to make a header for good practice?
 
-//---------------------------------------------------
-//    Function stubs for the header
-//---------------------------------------------------
-void fill_data_array();
-void baseAzimuth();
-void shoulder();
-void elbow();
-void wristTilt();
-void wristRotate();
-void send_feedback();
-uint16 potFeedback();
-uint16 average(uint16* array, uint8 num_items);
-void ServoGoalPosition( uint8 servoID, uint16 position);
-void make_command(uint16* act_array, uint8 act_cspot, int8* info_array, uint8 byte1, uint8 byte2);
+//// function to convert int to string
+//void reverse(char s[])
+// {
+//     int i, j;
+//     char c;
+// 
+//     for (i = 0, j = strlen(s)-1; i<j; i++, j--) {
+//         c = s[i];
+//         s[i] = s[j];
+//         s[j] = c;
+//     }
+// }
+///* itoa:  convert n to characters in s */
+// void itoa(int n, char s[])
+// {
+//     int i, sign;
+// 
+//     if ((sign = n) < 0)  /* record sign */
+//         n = -n;          /* make n positive */
+//     i = 0;
+//     do {       /* generate digits in reverse order */
+//         s[i++] = n % 10 + '0';   /* get next digit */
+//     } while ((n /= 10) > 0);     /* delete it */
+//     if (sign < 0)
+//         s[i++] = '-';
+//     s[i] = '\0';
+//     reverse(s);
+// }
 
-//--------------------------------------------------- END Function Stubs
-
-// function to convert int to string
-void reverse(char s[])
- {
-     int i, j;
-     char c;
- 
-     for (i = 0, j = strlen(s)-1; i<j; i++, j--) {
-         c = s[i];
-         s[i] = s[j];
-         s[j] = c;
-     }
- }
-/* itoa:  convert n to characters in s */
- void itoa(int n, char s[])
- {
-     int i, sign;
- 
-     if ((sign = n) < 0)  /* record sign */
-         n = -n;          /* make n positive */
-     i = 0;
-     do {       /* generate digits in reverse order */
-         s[i++] = n % 10 + '0';   /* get next digit */
-     } while ((n /= 10) > 0);     /* delete it */
-     if (sign < 0)
-         s[i++] = '-';
-     s[i] = '\0';
-     reverse(s);
- }
 
 //Average function to be used in smoothing our input
 uint16 average(uint16* av_array, uint8 num_items)
@@ -145,7 +63,6 @@ uint16 average(uint16* av_array, uint8 num_items)
     return avg;
 }
 
-/*
 void pos_to_vel(uint8 cur_pos, uint16* array, uint8 ARRAY_SIZE, uint16 command)
 {
     if(command >= 1000 && command < 1100)
@@ -398,13 +315,36 @@ void pos_to_vel(uint8 cur_pos, uint16* array, uint8 ARRAY_SIZE, uint16 command)
         }
     }
 }
-*/
 
-uint16 potFeedback(uint32 channel){
+void make_command(uint16* act_array, uint8 act_cspot, int8* info_array, uint8 byte1, uint8 byte2)
+{
+    int16 command;
+    int16 temp1;
+    int16 temp2;
+    int16 temp3;
+    
+    temp1 = (info_array[byte1] << 8) & 0xFF00;
+    temp2 = 0x00FF & (info_array[byte2]);
+    temp3 = temp1 | temp2;
+    command = temp3/2 + 1500;
+    act_array[act_cspot] = command;
+}
+
+uint16 potFeedback(uint32 channel)
+{
     //uint16 feedback = ADC_GetResult16(channel);
     uint16 feedback = 500;
     return feedback;
 }
+
+void send_feedback()
+{
+    //compile all of the most recent feedback variables into a packet
+    //necessary feedback variables: system state, dynamixel read write errors, PID errors
+    //TODO define system state
+    //send packet via serial to wiznet
+}
+
 //to be used for parsing reading/parsing the data from the wiznet
 void fill_data_array()
 {
@@ -670,14 +610,6 @@ void wristRotate()
             }
             break;
     }    
-}
-
-void send_feedback()
-{
-    //compile all of the most recent feedback variables into a packet
-    //necessary feedback variables: system state, dynamixel read write errors, PID errors
-    //TODO define system state
-    //send packet via serial to wiznet
 }
 
 //control the elbow
@@ -956,20 +888,6 @@ void shoulder()
     }    
 }
 
-void make_command(uint16* act_array, uint8 act_cspot, int8* info_array, uint8 byte1, uint8 byte2)
-{
-    int16 command;
-    int16 temp1;
-    int16 temp2;
-    int16 temp3;
-    
-    temp1 = (info_array[byte1] << 8) & 0xFF00;
-    temp2 = 0x00FF & (info_array[byte2]);
-    temp3 = temp1 | temp2;
-    command = temp3/2 + 1500;
-    act_array[act_cspot] = command;
-}
-
 //control the turret
 enum baseAzimuth_states {BA_start,BA_init,BA_execute,BA_wait} baseAzimuth_state;
 void baseAzimuth()
@@ -1057,16 +975,10 @@ void baseAzimuth()
     }    
 }
 
-int main()
-{  
-    
-    
-    //Define variables
-    time_t t;
-    uint8 counter;
-    int direction = 0;
-    int16 temp_val= -1000;
-    wiznet = 0;
+//Initialization function for the program
+void initialize()
+{
+    //Initialize state variables
     baseAzimuth_state = BA_start;
     wristTilt_state = tilt_start;
     wristRotate_state = rotate_start;
@@ -1076,19 +988,19 @@ int main()
     //start all of our components
     Clock_pwm_Start();
     Clock_counter_Start();
-    
     UART_1_Start();
-    
     SHLDR_PWM_Start();
     BA_PWM_Start();
     ELBW_PWM_Start();
     
     wiznetInit(ownIpAddr, dstIpAddr, udpPort);
     
+    //Initialize the dynamixels
     ServoSpeed(0xFE, 100);
     SetServoTorque(0xFE, 0x03FF);
     
-    ELBW_PWM_WriteCompare(1500); //Initialize our motor drivers
+    //Initialize our motor drivers
+    ELBW_PWM_WriteCompare(1500); 
     SHLDR_PWM_WriteCompare(1500);
     CyDelay(3000);
    
@@ -1096,18 +1008,32 @@ int main()
     ADC_StartConvert();
     
     //helps for generating random arrays
-    srand((unsigned) time(&t));
+    //srand((unsigned) time(&t));
     
     CyGlobalIntEnable;
     isr_1_StartEx(timer_isr);
     Timer_1_Start();
+}
+
+int main()
+{  
+    //Define variables
+    time_t t;
+    uint8 counter;
+    int direction = 0;
+    int16 temp_val= -1000;
+    wiznet = 0;
     
+    //for testing
     int increasing = 1;
+    
+    initialize();
 
     for(;;)
     {
         //check addresses
         //TODO get the address bytes from Steve
+        //TODO at what point should we send feedback?
         
         if(wiznet) //!WIZ_INT_Read()
         {
@@ -1132,6 +1058,9 @@ int main()
         while(!timerFlag){} //this while loop will periodize our code to the time of longest path
         timerFlag = 0;
         
+/*``````````````````````````````````````````````````````````````````````````*
+ * From here to the end of the main function is purely for testing purposes *
+ *``````````````````````````````````````````````````````````````````````````*/
         counter++;
         
         if(counter == 50)
@@ -1201,7 +1130,6 @@ int main()
 ////            {                                        //time through the full set of instructions
 ////                send_feedback();
 ////            }
-}
-
+} //<<--- END OF MAIN()!!!
 
 /* [] END OF FILE */
