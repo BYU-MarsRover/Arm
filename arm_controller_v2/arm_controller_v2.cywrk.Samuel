@@ -369,6 +369,37 @@
 <VisibleNodeIds>
 <v>arm_controller_v2</v>
 <v>arm_controller_v2\arm_controller_v2.1</v>
+<v>arm_controller_v2\arm_controller_v2.1\CortexM0</v>
+<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484</v>
+<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug</v>
+<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files</v>
+<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\ADC.lst</v>
+<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\ADC_INT.lst</v>
+<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\ADC_intClock.lst</v>
+<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\ADC_IRQ.lst</v>
+<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\ADC_PM.lst</v>
+<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\BA_PWM.lst</v>
+<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\BA_PWM_PM.lst</v>
+<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\baseAzimuth.lst</v>
+<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\Clock_counter.lst</v>
+<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\Clock_pwm.lst</v>
+<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\Cm0Start.lst</v>
+<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\CyFlash.lst</v>
+<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\CyLib.lst</v>
+<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\cymetadata.lst</v>
+<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\cyPm.lst</v>
+<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\cyutils.lst</v>
+<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\elbow.lst</v>
+<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\ELBW_PWM.lst</v>
+<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\ELBW_PWM_PM.lst</v>
+<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\isr_1.lst</v>
+<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\main.lst</v>
+<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\pot_elbow.lst</v>
+<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\pot_shoulder.lst</v>
+<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\SHLDR_PWM.lst</v>
+<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\SHLDR_PWM_PM.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
