@@ -93,18 +93,18 @@
   <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\user_test_aliases.h" value="NONE;user_test" />
   <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\SPI_1_SCBCLK.c" value="ARM_C_FILE;SPI_1_SCBCLK" />
   <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\SPI_1_SCBCLK.h" value="NONE;SPI_1_SCBCLK" />
-  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\SPI_1_ss_s.c" value="ARM_C_FILE;SPI_1_ss_s" />
-  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\SPI_1_ss_s.h" value="NONE;SPI_1_ss_s" />
-  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\SPI_1_ss_s_aliases.h" value="NONE;SPI_1_ss_s" />
-  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\SPI_1_miso_s.c" value="ARM_C_FILE;SPI_1_miso_s" />
-  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\SPI_1_miso_s.h" value="NONE;SPI_1_miso_s" />
-  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\SPI_1_miso_s_aliases.h" value="NONE;SPI_1_miso_s" />
-  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\SPI_1_sclk_s.c" value="ARM_C_FILE;SPI_1_sclk_s" />
-  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\SPI_1_sclk_s.h" value="NONE;SPI_1_sclk_s" />
-  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\SPI_1_sclk_s_aliases.h" value="NONE;SPI_1_sclk_s" />
-  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\SPI_1_mosi_s.c" value="ARM_C_FILE;SPI_1_mosi_s" />
-  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\SPI_1_mosi_s.h" value="NONE;SPI_1_mosi_s" />
-  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\SPI_1_mosi_s_aliases.h" value="NONE;SPI_1_mosi_s" />
+  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\SPI_1_sclk_m.c" value="ARM_C_FILE;SPI_1_sclk_m" />
+  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\SPI_1_sclk_m.h" value="NONE;SPI_1_sclk_m" />
+  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\SPI_1_sclk_m_aliases.h" value="NONE;SPI_1_sclk_m" />
+  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\SPI_1_miso_m.c" value="ARM_C_FILE;SPI_1_miso_m" />
+  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\SPI_1_miso_m.h" value="NONE;SPI_1_miso_m" />
+  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\SPI_1_miso_m_aliases.h" value="NONE;SPI_1_miso_m" />
+  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\SPI_1_mosi_m.c" value="ARM_C_FILE;SPI_1_mosi_m" />
+  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\SPI_1_mosi_m.h" value="NONE;SPI_1_mosi_m" />
+  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\SPI_1_mosi_m_aliases.h" value="NONE;SPI_1_mosi_m" />
+  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\SPI_1_ss0_m.c" value="ARM_C_FILE;SPI_1_ss0_m" />
+  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\SPI_1_ss0_m.h" value="NONE;SPI_1_ss0_m" />
+  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\SPI_1_ss0_m_aliases.h" value="NONE;SPI_1_ss0_m" />
   <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\ADC_IRQ.c" value="ARM_C_FILE;ADC_IRQ" />
   <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\ADC_IRQ.h" value="NONE;ADC_IRQ" />
   <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\ADC_intClock.c" value="ARM_C_FILE;ADC_intClock" />

@@ -39,9 +39,9 @@
 
 /* Mode defined pins */
 #define SPI_1_REMOVE_I2C_PINS                (1u)
-#define SPI_1_REMOVE_SPI_MASTER_PINS         (1u)
-#define SPI_1_REMOVE_SPI_SLAVE_PINS          (0u)
-#define SPI_1_REMOVE_SPI_MASTER_SS0_PIN      (1u)
+#define SPI_1_REMOVE_SPI_MASTER_PINS         (0u)
+#define SPI_1_REMOVE_SPI_SLAVE_PINS          (1u)
+#define SPI_1_REMOVE_SPI_MASTER_SS0_PIN      (0u)
 #define SPI_1_REMOVE_SPI_MASTER_SS1_PIN      (1u)
 #define SPI_1_REMOVE_SPI_MASTER_SS2_PIN      (1u)
 #define SPI_1_REMOVE_SPI_MASTER_SS3_PIN      (1u)

@@ -71,7 +71,7 @@
     uint16 WR_array[WR_ARR_SIZE];
 
     //uint16 feedback_count;
-    uint8 timerFlag; //used in the timer_isr
+    volatile uint8 timerFlag; //used in the timer_isr
     
     //---------------------------------------------------
     //    Function stubs for the header
@@ -80,7 +80,7 @@
     //void itoa(int n, char s[]);
     uint16 average(uint16* array, uint8 num_items);
     void pos_to_vel(uint8 cur_pos, uint16* array, uint8 ARRAY_SIZE, uint16 command);
-    void make_command(uint16* act_array, uint8 act_cspot, int8* info_array, uint8 byte1, uint8 byte2);
+    uint16 make_command(int8* info_array, uint8 byte1, uint8 byte2);
     uint16 potFeedback();
     void send_feedback();
     void fill_data_array();

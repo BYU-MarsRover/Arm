@@ -154,18 +154,6 @@
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\SPI_1_BOOT.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\SPI_1_SCBCLK.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\SPI_1_SCBCLK.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\SPI_1_ss_s.c</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\SPI_1_ss_s.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\SPI_1_ss_s_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\SPI_1_miso_s.c</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\SPI_1_miso_s.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\SPI_1_miso_s_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\SPI_1_sclk_s.c</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\SPI_1_sclk_s.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\SPI_1_sclk_s_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\SPI_1_mosi_s.c</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\SPI_1_mosi_s.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\SPI_1_mosi_s_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\user_test.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\user_test.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\user_test_aliases.h</File>
@@ -178,6 +166,18 @@
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\SHLDR_PWM.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\SHLDR_PWM.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\SHLDR_PWM_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\SPI_1_sclk_m.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\SPI_1_sclk_m.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\SPI_1_sclk_m_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\SPI_1_miso_m.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\SPI_1_miso_m.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\SPI_1_miso_m_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\SPI_1_mosi_m.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\SPI_1_mosi_m.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\SPI_1_mosi_m_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\SPI_1_ss0_m.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\SPI_1_ss0_m.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\SPI_1_ss0_m_aliases.h</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\Export\ARM_GCC_Generic">

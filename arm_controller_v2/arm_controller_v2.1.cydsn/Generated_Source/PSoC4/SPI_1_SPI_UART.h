@@ -25,7 +25,7 @@
 *   SPI Initial Parameter Constants
 ****************************************/
 
-#define SPI_1_SPI_MODE                   (0u)
+#define SPI_1_SPI_MODE                   (1u)
 #define SPI_1_SPI_SUB_MODE               (0u)
 #define SPI_1_SPI_CLOCK_MODE             (0u)
 #define SPI_1_SPI_OVS_FACTOR             (16u)

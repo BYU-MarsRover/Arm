@@ -316,9 +316,9 @@ void pos_to_vel(uint8 cur_pos, uint16* array, uint8 ARRAY_SIZE, uint16 command)
     }
 }
 
-void make_command(uint16* act_array, uint8 act_cspot, int8* info_array, uint8 byte1, uint8 byte2)
+uint16 make_command(int8* info_array, uint8 byte1, uint8 byte2)
 {
-    int16 command;
+    uint16 command;
     int16 temp1;
     int16 temp2;
     int16 temp3;
@@ -326,8 +326,9 @@ void make_command(uint16* act_array, uint8 act_cspot, int8* info_array, uint8 by
     temp1 = (info_array[byte1] << 8) & 0xFF00;
     temp2 = 0x00FF & (info_array[byte2]);
     temp3 = temp1 | temp2;
-    command = temp3/2 + 1500;
-    act_array[act_cspot] = command;
+    command = (temp3/2) + 1500;
+    return command;
+    //act_array[act_cspot] = command;
 }
 
 uint16 potFeedback(uint32 channel)
@@ -348,12 +349,12 @@ void send_feedback()
 //to be used for parsing reading/parsing the data from the wiznet
 void fill_data_array()
 {
-   // wiznetReadUdpFrame(data_array, DATA_ARRAY_SIZE);
-    uint8 i = 0;
-    for(i = 0; i < TEST_ARRAY_SIZE; i++)
-    {
-        data_array[i] = test_array[i];
-    }
+    wiznetReadUdpFrame(data_array, DATA_ARRAY_SIZE);
+//    uint8 i = 0;
+//    for(i = 0; i < TEST_ARRAY_SIZE; i++)
+//    {
+//        data_array[i] = test_array[i];
+//    }
 }
 
 void ServoGoalPosition( uint8 servoID, uint16 position)
@@ -429,6 +430,7 @@ void wristTilt()
     
     uint8 i;
     uint16 avg;
+    uint16 command;
     
     switch(wristTilt_state){ //actions
         case tilt_start:
@@ -444,7 +446,9 @@ void wristTilt()
             break;
 
         case tilt_control:
-            make_command(WT_array, WT_arr_cspot, data_array, WT_BYTE_1, WT_BYTE_2);
+            command = make_command(data_array, WT_BYTE_1, WT_BYTE_2);
+            
+            WT_array[WT_arr_cspot] = command;
             
             if(WT_arr_cspot < (WT_ARR_SIZE - 1))
             {
@@ -530,6 +534,7 @@ void wristRotate()
     
     uint8 i;
     uint16 avg;
+    uint16 command;
     
     switch(wristRotate_state){ //actions
         case rotate_start:
@@ -544,7 +549,9 @@ void wristRotate()
             break;
 
         case rotate_control:
-            make_command(WR_array, WR_arr_cspot, data_array, WR_BYTE_1, WR_BYTE_2);
+            command = make_command(data_array, WR_BYTE_1, WR_BYTE_2);
+            
+            WR_array[WR_arr_cspot] = command;
             
             if(WR_arr_cspot < (WR_ARR_SIZE - 1))
             {
@@ -623,6 +630,7 @@ void elbow()
     //get feedback
     uint8 i;
     uint16 avg;
+    uint16 command;
     
     uint16 feedback = potFeedback(ELBOW_POT); //check the feedback in every tick
     
@@ -639,7 +647,9 @@ void elbow()
             break;
 
         case elbw_execute:
-            make_command(elbow_array, elbw_arr_cspot, data_array, ELBW_BYTE_1, ELBW_BYTE_2);
+            command = make_command(data_array, ELBW_BYTE_1, ELBW_BYTE_2);
+            
+            elbow_array[elbw_arr_cspot] = command;
             
             if(elbw_arr_cspot < (ELBW_ARR_SIZE - 1))
             {
@@ -763,7 +773,7 @@ void shoulder()
     //get feedback
     uint8 i;
     uint16 avg;
-    int16 command;
+    uint16 command;
     uint16 feedback = potFeedback(SHOULDER_POT);
     
     switch(shoulder_state){ //actions
@@ -779,8 +789,9 @@ void shoulder()
             break;
 
         case shldr_execute:
-            make_command(shoulder_array, shldr_arr_cspot, data_array, SHLDR_BYTE_1, SHLDR_BYTE_2);
-            
+            command = make_command(data_array, SHLDR_BYTE_1, SHLDR_BYTE_2);
+            shoulder_array[shldr_arr_cspot] = command;    
+        
             if(shldr_arr_cspot < (SHLDR_ARR_SIZE - 1))
             {
                 shldr_arr_cspot++;
@@ -897,6 +908,7 @@ void baseAzimuth()
     //actuate the turret using PWM
     uint8 i;
     uint16 avg;
+    uint16 command;
     
     switch(baseAzimuth_state){ //actions
         case BA_start:
@@ -908,10 +920,12 @@ void baseAzimuth()
                 baseAz_array[i] = 1500;
             }
             BA_arr_cspot = 0;
+            BA_PWM_WriteCompare(1500);
             break;
 
         case BA_execute:
-            make_command(baseAz_array, BA_arr_cspot, data_array, BA_BYTE_1, BA_BYTE_2);
+            command = make_command(data_array, BA_BYTE_1, BA_BYTE_2);
+            baseAz_array[BA_arr_cspot] = command;
             
             if(BA_arr_cspot < (BA_ARR_SIZE - 1))
             {
@@ -986,6 +1000,8 @@ void initialize()
     elbow_state = elbw_start;
     
     //start all of our components
+    SPI_1_Start();
+    WIZ_SS_Write(1);
     Clock_pwm_Start();
     Clock_counter_Start();
     UART_1_Start();
@@ -993,7 +1009,9 @@ void initialize()
     BA_PWM_Start();
     ELBW_PWM_Start();
     
+    
     wiznetInit(ownIpAddr, dstIpAddr, udpPort);
+    
     
     //Initialize the dynamixels
     ServoSpeed(0xFE, 100);
@@ -1018,11 +1036,11 @@ void initialize()
 int main()
 {  
     //Define variables
-    time_t t;
-    uint8 counter;
-    int direction = 0;
-    int16 temp_val= -1000;
-    wiznet = 0;
+    time_t t; //for testing
+    uint8 counter; //for testing
+    int direction = 0; //for testing
+    int16 temp_val= -1000; //for testing
+    //wiznet = 0; //for testing -- see header move from here when establish ISR for wiznet
     
     //for testing
     int increasing = 1;
@@ -1035,13 +1053,13 @@ int main()
         //TODO get the address bytes from Steve
         //TODO at what point should we send feedback?
         
-        if(wiznet) //!WIZ_INT_Read()
+        if(!WIZ_INT_Read()) //!WIZ_INT_Read()--put wiznet in as condition if use ISR
         {
-            //wiznetClearInterrupts();
+            wiznetClearInterrupts();
             fill_data_array();
             new_pack = 1;
             fin_exec = 0;
-            wiznet = 0;
+            //wiznet = 0; //for testing
         }
         
         baseAzimuth();
@@ -1057,79 +1075,80 @@ int main()
         
         while(!timerFlag){} //this while loop will periodize our code to the time of longest path
         timerFlag = 0;
+    }
         
 /*``````````````````````````````````````````````````````````````````````````*
  * From here to the end of the main function is purely for testing purposes *
  *``````````````````````````````````````````````````````````````````````````*/
-        counter++;
-        
-        if(counter == 50)
-        {
-        
-            if(increasing)
-            {
-                temp_val += 100;
-                if(temp_val == 1000)
-                {
-                    increasing = 0;
-                }
-            }
-            else
-            {
-                temp_val -= 100;
-                if(temp_val == -1000)
-                {
-                    increasing = 1;   
-                }
-            }
-            
-            //uint16 feedback1 = ADC_GetResult16(2);
-            //int16 forward = 1000;
-            //int16 backward = -1000;
-            for(int i = 0; i < TEST_ARRAY_SIZE; (i+=2))
-            {
-                //int16 random_number = rand()%2001 - 1000;
-                //test_array[i] = random_number >> 8;
-                //test_array[i+1] = random_number & 0x00FF;
-                test_array[i] = temp_val >> 8;
-                test_array[i+1] = temp_val & 0x00FF;
-            }
-            counter = 0;
-            wiznet = 1;
-        }
-    }
-//                if((second_counter%2) == 0)
+//        counter++;
+//        
+//        if(counter == 50)
+//        {
+//        
+//            if(increasing)
+//            {
+//                temp_val += 100;
+//                if(temp_val == 1000)
 //                {
-//                    test_array[i] = ;
+//                    increasing = 0;
 //                }
-            
-//                if (feedback1 > 500)
+//            }
+//            else
+//            {
+//                temp_val -= 100;
+//                if(temp_val == -1000)
 //                {
-//                    test_array[i] = forward >> 8;
-//                    test_array[i+1] = forward & 0x00FF;
+//                    increasing = 1;   
 //                }
-//                else if (feedback1 < 500)
-//                {
-//                    test_array[i] = backward >> 8;
-//                    test_array[i+1] = backward & 0x00FF;
-//                }
-//                else
-//                {
-//                    test_array[i] = 0;
-//                    test_array[i+1] = 0;
-//                }
-//                
+//            }
+//            
+//            //uint16 feedback1 = ADC_GetResult16(2);
+//            //int16 forward = 1000;
+//            //int16 backward = -1000;
+//            for(int i = 0; i < TEST_ARRAY_SIZE; (i+=2))
+//            {
+//                //int16 random_number = rand()%2001 - 1000;
+//                //test_array[i] = random_number >> 8;
+//                //test_array[i+1] = random_number & 0x00FF;
+//                test_array[i] = temp_val >> 8;
+//                test_array[i+1] = temp_val & 0x00FF;
 //            }
 //            counter = 0;
 //            wiznet = 1;
 //        }
-//        
-////            //Potential solution to how we will want to send feedback
-////            feedback_count++;
-////            if(feedback_count == feedback_interval) //sends feeback to base station every 50th
-////            {                                        //time through the full set of instructions
-////                send_feedback();
+//    }
+////                if((second_counter%2) == 0)
+////                {
+////                    test_array[i] = ;
+////                }
+//            
+////                if (feedback1 > 500)
+////                {
+////                    test_array[i] = forward >> 8;
+////                    test_array[i+1] = forward & 0x00FF;
+////                }
+////                else if (feedback1 < 500)
+////                {
+////                    test_array[i] = backward >> 8;
+////                    test_array[i+1] = backward & 0x00FF;
+////                }
+////                else
+////                {
+////                    test_array[i] = 0;
+////                    test_array[i+1] = 0;
+////                }
+////                
 ////            }
+////            counter = 0;
+////            wiznet = 1;
+////        }
+////        
+//////            //Potential solution to how we will want to send feedback
+//////            feedback_count++;
+//////            if(feedback_count == feedback_interval) //sends feeback to base station every 50th
+//////            {                                        //time through the full set of instructions
+//////                send_feedback();
+//////            }
 } //<<--- END OF MAIN()!!!
 
 /* [] END OF FILE */

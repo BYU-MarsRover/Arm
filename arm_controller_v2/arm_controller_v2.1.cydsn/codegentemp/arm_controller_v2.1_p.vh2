@@ -1,5 +1,5 @@
 -- Project:   arm_controller_v2.1
--- Generated: 03/11/2015 17:03:39
+-- Generated: 03/18/2015 20:58:48
 -- PSoC Creator  3.1 Component Pack 1
 
 ENTITY \arm_controller_v2.1\ IS
@@ -8,10 +8,10 @@ ENTITY \arm_controller_v2.1\ IS
         WIZ_RDY(0)_PAD : IN std_ulogic;
         WIZ_RST(0)_PAD : OUT std_ulogic;
         WIZ_SS(0)_PAD : OUT std_ulogic;
-        \SPI_1:miso_s(0)_PAD\ : INOUT std_ulogic;
-        \SPI_1:mosi_s(0)_PAD\ : IN std_ulogic;
-        \SPI_1:sclk_s(0)_PAD\ : IN std_ulogic;
-        \SPI_1:ss_s(0)_PAD\ : IN std_ulogic;
+        \SPI_1:miso_m(0)_PAD\ : IN std_ulogic;
+        \SPI_1:mosi_m(0)_PAD\ : INOUT std_ulogic;
+        \SPI_1:sclk_m(0)_PAD\ : INOUT std_ulogic;
+        \SPI_1:ss0_m(0)_PAD\ : INOUT std_ulogic;
         \UART_1:rx(0)_PAD\ : IN std_ulogic;
         \UART_1:tx(0)_PAD\ : INOUT std_ulogic;
         baseAzimuth(0)_PAD : OUT std_ulogic;
@@ -91,10 +91,9 @@ ARCHITECTURE __DEFAULT__ OF \arm_controller_v2.1\ IS
     SIGNAL \ADC:Net_3111_8\ : bit;
     SIGNAL \ADC:Net_3111_9\ : bit;
     SIGNAL \ADC:Net_3112\ : bit;
-    SIGNAL \SPI_1:Net_458\ : bit;
-    SIGNAL \SPI_1:Net_653\ : bit;
     SIGNAL \SPI_1:Net_656\ : bit;
     SIGNAL \SPI_1:Net_660\ : bit;
+    SIGNAL \SPI_1:Net_663\ : bit;
     SIGNAL \SPI_1:Net_687\ : bit;
     SIGNAL \SPI_1:Net_703\ : bit;
     SIGNAL \SPI_1:Net_751\ : bit;
@@ -102,15 +101,14 @@ ARCHITECTURE __DEFAULT__ OF \arm_controller_v2.1\ IS
     SIGNAL \SPI_1:Net_824\ : bit;
     SIGNAL \SPI_1:Net_847_ff2\ : bit;
     ATTRIBUTE global_signal OF \SPI_1:Net_847_ff2\ : SIGNAL IS true;
-    SIGNAL \SPI_1:Net_909\ : bit;
-    SIGNAL \\\SPI_1:miso_s(0)\\__PA\ : bit;
-    SIGNAL \\\SPI_1:mosi_s(0)\\__PA\ : bit;
-    SIGNAL \\\SPI_1:sclk_s(0)\\__PA\ : bit;
+    SIGNAL \\\SPI_1:miso_m(0)\\__PA\ : bit;
+    SIGNAL \\\SPI_1:mosi_m(0)\\__PA\ : bit;
+    SIGNAL \\\SPI_1:sclk_m(0)\\__PA\ : bit;
+    SIGNAL \\\SPI_1:ss0_m(0)\\__PA\ : bit;
     SIGNAL \SPI_1:ss_0\ : bit;
     SIGNAL \SPI_1:ss_1\ : bit;
     SIGNAL \SPI_1:ss_2\ : bit;
     SIGNAL \SPI_1:ss_3\ : bit;
-    SIGNAL \\\SPI_1:ss_s(0)\\__PA\ : bit;
     SIGNAL \UART_1:Net_654\ : bit;
     SIGNAL \UART_1:Net_656\ : bit;
     SIGNAL \UART_1:Net_660\ : bit;
@@ -147,10 +145,10 @@ ARCHITECTURE __DEFAULT__ OF \arm_controller_v2.1\ IS
     ATTRIBUTE lib_model OF WIZ_RST(0) : LABEL IS "iocell3";
     ATTRIBUTE lib_model OF WIZ_SS(0) : LABEL IS "iocell4";
     ATTRIBUTE Location OF \ADC:cy_psoc4_sar\ : LABEL IS "F(SARADC,0)";
-    ATTRIBUTE lib_model OF \SPI_1:miso_s(0)\ : LABEL IS "iocell5";
-    ATTRIBUTE lib_model OF \SPI_1:mosi_s(0)\ : LABEL IS "iocell6";
-    ATTRIBUTE lib_model OF \SPI_1:sclk_s(0)\ : LABEL IS "iocell7";
-    ATTRIBUTE lib_model OF \SPI_1:ss_s(0)\ : LABEL IS "iocell8";
+    ATTRIBUTE lib_model OF \SPI_1:miso_m(0)\ : LABEL IS "iocell5";
+    ATTRIBUTE lib_model OF \SPI_1:mosi_m(0)\ : LABEL IS "iocell6";
+    ATTRIBUTE lib_model OF \SPI_1:sclk_m(0)\ : LABEL IS "iocell7";
+    ATTRIBUTE lib_model OF \SPI_1:ss0_m(0)\ : LABEL IS "iocell8";
     ATTRIBUTE lib_model OF \UART_1:rx(0)\ : LABEL IS "iocell9";
     ATTRIBUTE lib_model OF \UART_1:tx(0)\ : LABEL IS "iocell10";
     ATTRIBUTE lib_model OF __ONE__ : LABEL IS "macrocell1";
@@ -895,33 +893,32 @@ BEGIN
             cts => open,
             rts => \SPI_1:Net_751\,
             mosi_m => \SPI_1:Net_660\,
-            miso_m => open,
+            miso_m => \SPI_1:Net_663\,
             select_m_3 => \SPI_1:ss_3\,
             select_m_2 => \SPI_1:ss_2\,
             select_m_1 => \SPI_1:ss_1\,
             select_m_0 => \SPI_1:ss_0\,
             sclk_m => \SPI_1:Net_687\,
-            mosi_s => \SPI_1:Net_909\,
+            mosi_s => open,
             miso_s => \SPI_1:Net_703\,
-            select_s => \SPI_1:Net_458\,
-            sclk_s => \SPI_1:Net_653\,
+            select_s => open,
+            sclk_s => open,
             tx_req => \SPI_1:Net_823\,
             rx_req => \SPI_1:Net_824\);
 
-    \SPI_1:miso_s(0)\:iocell
+    \SPI_1:miso_m(0)\:iocell
         GENERIC MAP(
             in_sync_mode => 0,
             out_sync_mode => 0,
             oe_sync_mode => 0,
-            logicalport => "\SPI_1:miso_s\",
+            logicalport => "\SPI_1:miso_m\",
             logicalport_pin_id => 0,
             io_capabilities => "0000000000000000000000000000001000000000000000000000000000000001")
         PORT MAP(
-            pa_out => \\\SPI_1:miso_s(0)\\__PA\,
+            pa_out => \\\SPI_1:miso_m(0)\\__PA\,
             oe => open,
-            pin_input => \SPI_1:Net_703\,
-            pad_out => \SPI_1:miso_s(0)_PAD\,
-            pad_in => \SPI_1:miso_s(0)_PAD\,
+            fb => \SPI_1:Net_663\,
+            pad_in => \SPI_1:miso_m(0)_PAD\,
             in_clock => open,
             in_clock_en => '1',
             in_reset => '0',
@@ -929,11 +926,102 @@ BEGIN
             out_clock_en => '1',
             out_reset => '0');
 
-    \SPI_1:miso_s\:logicalport
+    \SPI_1:miso_m\:logicalport
+        GENERIC MAP(
+            drive_mode => "001",
+            ibuf_enabled => "1",
+            id => "8c8734ef-3644-4eed-bc55-360072b94fff/1425177d-0d0e-4468-8bcc-e638e5509a9b",
+            init_dr_st => "0",
+            input_buffer_sel => "00",
+            input_clk_en => 0,
+            input_sync => "0",
+            input_sync_mode => "0",
+            intr_mode => "00",
+            invert_in_clock => 0,
+            invert_in_clock_en => 0,
+            invert_in_reset => 0,
+            invert_out_clock => 0,
+            invert_out_clock_en => 0,
+            invert_out_reset => 0,
+            io_voltage => "",
+            layout_mode => "CONTIGUOUS",
+            oe_conn => "0",
+            oe_reset => 0,
+            oe_sync => "0",
+            output_clk_en => 0,
+            output_clock_mode => "0",
+            output_conn => "0",
+            output_mode => "0",
+            output_reset => 0,
+            output_sync => "0",
+            ovt_hyst_trim => "0",
+            ovt_needed => "0",
+            ovt_slew_control => "00",
+            pa_in_clock => -1,
+            pa_in_clock_en => -1,
+            pa_in_reset => -1,
+            pa_out_clock => -1,
+            pa_out_clock_en => -1,
+            pa_out_reset => -1,
+            pin_aliases => "",
+            pin_mode => "I",
+            por_state => 4,
+            port_alias_group => "",
+            port_alias_required => 0,
+            sio_group_cnt => 0,
+            sio_hifreq => "",
+            sio_hyst => "1",
+            sio_ibuf => "00000000",
+            sio_info => "00",
+            sio_obuf => "00000000",
+            sio_refsel => "00000000",
+            sio_vtrip => "00000000",
+            slew_rate => "0",
+            spanning => 0,
+            sw_only => 0,
+            use_annotation => "0",
+            vtrip => "00",
+            width => 1,
+            in_clk_inv => 0,
+            in_clken_inv => 0,
+            in_clken_mode => 1,
+            in_rst_inv => 0,
+            out_clk_inv => 0,
+            out_clken_inv => 0,
+            out_clken_mode => 1,
+            out_rst_inv => 0)
+        PORT MAP(
+            in_clock_en => open,
+            in_reset => open,
+            out_clock_en => open,
+            out_reset => open);
+
+    \SPI_1:mosi_m(0)\:iocell
+        GENERIC MAP(
+            in_sync_mode => 0,
+            out_sync_mode => 0,
+            oe_sync_mode => 0,
+            logicalport => "\SPI_1:mosi_m\",
+            logicalport_pin_id => 0,
+            io_capabilities => "0000000000000000000000000000000100000000000000000000000000000001")
+        PORT MAP(
+            pa_out => \\\SPI_1:mosi_m(0)\\__PA\,
+            oe => open,
+            pin_input => \SPI_1:Net_660\,
+            pad_out => \SPI_1:mosi_m(0)_PAD\,
+            pad_in => \SPI_1:mosi_m(0)_PAD\,
+            in_clock => open,
+            in_clock_en => '1',
+            in_reset => '0',
+            out_clock => open,
+            out_clock_en => '1',
+            out_reset => '0');
+
+    \SPI_1:mosi_m\:logicalport
         GENERIC MAP(
             drive_mode => "110",
             ibuf_enabled => "0",
-            id => "8c8734ef-3644-4eed-bc55-360072b94fff/52f31aa9-2f0a-497d-9a1f-1424095e13e6",
+            id => "8c8734ef-3644-4eed-bc55-360072b94fff/ed092b9b-d398-4703-be89-cebf998501f6",
             init_dr_st => "1",
             input_buffer_sel => "00",
             input_clk_en => 0,
@@ -999,109 +1087,20 @@ BEGIN
             out_clock_en => open,
             out_reset => open);
 
-    \SPI_1:mosi_s(0)\:iocell
+    \SPI_1:sclk_m(0)\:iocell
         GENERIC MAP(
             in_sync_mode => 0,
             out_sync_mode => 0,
             oe_sync_mode => 0,
-            logicalport => "\SPI_1:mosi_s\",
-            logicalport_pin_id => 0,
-            io_capabilities => "0000000000000000000000000000000100000000000000000000000000000001")
-        PORT MAP(
-            pa_out => \\\SPI_1:mosi_s(0)\\__PA\,
-            oe => open,
-            fb => \SPI_1:Net_909\,
-            pad_in => \SPI_1:mosi_s(0)_PAD\,
-            in_clock => open,
-            in_clock_en => '1',
-            in_reset => '0',
-            out_clock => open,
-            out_clock_en => '1',
-            out_reset => '0');
-
-    \SPI_1:mosi_s\:logicalport
-        GENERIC MAP(
-            drive_mode => "001",
-            ibuf_enabled => "1",
-            id => "8c8734ef-3644-4eed-bc55-360072b94fff/5e2b647c-52cb-4f09-80bd-87ed9563ab24",
-            init_dr_st => "0",
-            input_buffer_sel => "00",
-            input_clk_en => 0,
-            input_sync => "0",
-            input_sync_mode => "0",
-            intr_mode => "00",
-            invert_in_clock => 0,
-            invert_in_clock_en => 0,
-            invert_in_reset => 0,
-            invert_out_clock => 0,
-            invert_out_clock_en => 0,
-            invert_out_reset => 0,
-            io_voltage => "",
-            layout_mode => "CONTIGUOUS",
-            oe_conn => "0",
-            oe_reset => 0,
-            oe_sync => "0",
-            output_clk_en => 0,
-            output_clock_mode => "0",
-            output_conn => "0",
-            output_mode => "0",
-            output_reset => 0,
-            output_sync => "0",
-            ovt_hyst_trim => "0",
-            ovt_needed => "0",
-            ovt_slew_control => "00",
-            pa_in_clock => -1,
-            pa_in_clock_en => -1,
-            pa_in_reset => -1,
-            pa_out_clock => -1,
-            pa_out_clock_en => -1,
-            pa_out_reset => -1,
-            pin_aliases => "",
-            pin_mode => "I",
-            por_state => 4,
-            port_alias_group => "",
-            port_alias_required => 0,
-            sio_group_cnt => 0,
-            sio_hifreq => "",
-            sio_hyst => "1",
-            sio_ibuf => "00000000",
-            sio_info => "00",
-            sio_obuf => "00000000",
-            sio_refsel => "00000000",
-            sio_vtrip => "00000000",
-            slew_rate => "0",
-            spanning => 0,
-            sw_only => 0,
-            use_annotation => "0",
-            vtrip => "00",
-            width => 1,
-            in_clk_inv => 0,
-            in_clken_inv => 0,
-            in_clken_mode => 1,
-            in_rst_inv => 0,
-            out_clk_inv => 0,
-            out_clken_inv => 0,
-            out_clken_mode => 1,
-            out_rst_inv => 0)
-        PORT MAP(
-            in_clock_en => open,
-            in_reset => open,
-            out_clock_en => open,
-            out_reset => open);
-
-    \SPI_1:sclk_s(0)\:iocell
-        GENERIC MAP(
-            in_sync_mode => 0,
-            out_sync_mode => 0,
-            oe_sync_mode => 0,
-            logicalport => "\SPI_1:sclk_s\",
+            logicalport => "\SPI_1:sclk_m\",
             logicalport_pin_id => 0,
             io_capabilities => "0000000000000000000000000000100000000000000000000000000000000001")
         PORT MAP(
-            pa_out => \\\SPI_1:sclk_s(0)\\__PA\,
+            pa_out => \\\SPI_1:sclk_m(0)\\__PA\,
             oe => open,
-            fb => \SPI_1:Net_653\,
-            pad_in => \SPI_1:sclk_s(0)_PAD\,
+            pin_input => \SPI_1:Net_687\,
+            pad_out => \SPI_1:sclk_m(0)_PAD\,
+            pad_in => \SPI_1:sclk_m(0)_PAD\,
             in_clock => open,
             in_clock_en => '1',
             in_reset => '0',
@@ -1109,12 +1108,12 @@ BEGIN
             out_clock_en => '1',
             out_reset => '0');
 
-    \SPI_1:sclk_s\:logicalport
+    \SPI_1:sclk_m\:logicalport
         GENERIC MAP(
-            drive_mode => "001",
-            ibuf_enabled => "1",
-            id => "8c8734ef-3644-4eed-bc55-360072b94fff/4c15b41e-e284-4978-99e7-5aaee19bd0ce",
-            init_dr_st => "0",
+            drive_mode => "110",
+            ibuf_enabled => "0",
+            id => "8c8734ef-3644-4eed-bc55-360072b94fff/38438ec5-732c-47a6-9805-e2b697fb82a2",
+            init_dr_st => "1",
             input_buffer_sel => "00",
             input_clk_en => 0,
             input_sync => "0",
@@ -1133,7 +1132,7 @@ BEGIN
             oe_sync => "0",
             output_clk_en => 0,
             output_clock_mode => "0",
-            output_conn => "0",
+            output_conn => "1",
             output_mode => "0",
             output_reset => 0,
             output_sync => "0",
@@ -1147,7 +1146,7 @@ BEGIN
             pa_out_clock_en => -1,
             pa_out_reset => -1,
             pin_aliases => "",
-            pin_mode => "I",
+            pin_mode => "B",
             por_state => 4,
             port_alias_group => "",
             port_alias_required => 0,
@@ -1179,19 +1178,20 @@ BEGIN
             out_clock_en => open,
             out_reset => open);
 
-    \SPI_1:ss_s(0)\:iocell
+    \SPI_1:ss0_m(0)\:iocell
         GENERIC MAP(
             in_sync_mode => 0,
             out_sync_mode => 0,
             oe_sync_mode => 0,
-            logicalport => "\SPI_1:ss_s\",
+            logicalport => "\SPI_1:ss0_m\",
             logicalport_pin_id => 0,
             io_capabilities => "0000000000000000000000000000010000000000000000000000000000000001")
         PORT MAP(
-            pa_out => \\\SPI_1:ss_s(0)\\__PA\,
+            pa_out => \\\SPI_1:ss0_m(0)\\__PA\,
             oe => open,
-            fb => \SPI_1:Net_458\,
-            pad_in => \SPI_1:ss_s(0)_PAD\,
+            pin_input => \SPI_1:ss_0\,
+            pad_out => \SPI_1:ss0_m(0)_PAD\,
+            pad_in => \SPI_1:ss0_m(0)_PAD\,
             in_clock => open,
             in_clock_en => '1',
             in_reset => '0',
@@ -1199,12 +1199,12 @@ BEGIN
             out_clock_en => '1',
             out_reset => '0');
 
-    \SPI_1:ss_s\:logicalport
+    \SPI_1:ss0_m\:logicalport
         GENERIC MAP(
-            drive_mode => "001",
-            ibuf_enabled => "1",
-            id => "8c8734ef-3644-4eed-bc55-360072b94fff/3446580a-3b9d-491c-8730-f7ea34ca86e3",
-            init_dr_st => "0",
+            drive_mode => "110",
+            ibuf_enabled => "0",
+            id => "8c8734ef-3644-4eed-bc55-360072b94fff/9613317f-9767-4872-a15a-e07325d93413",
+            init_dr_st => "1",
             input_buffer_sel => "00",
             input_clk_en => 0,
             input_sync => "0",
@@ -1223,7 +1223,7 @@ BEGIN
             oe_sync => "0",
             output_clk_en => 0,
             output_clock_mode => "0",
-            output_conn => "0",
+            output_conn => "1",
             output_mode => "0",
             output_reset => 0,
             output_sync => "0",
@@ -1237,7 +1237,7 @@ BEGIN
             pa_out_clock_en => -1,
             pa_out_reset => -1,
             pin_aliases => "",
-            pin_mode => "I",
+            pin_mode => "B",
             por_state => 4,
             port_alias_group => "",
             port_alias_required => 0,
