@@ -1060,6 +1060,11 @@ int main()
     
     //for testing
     int increasing = 1;
+    //uint16 first_count;
+    //uint16 second_count;
+    //uint16 dropped_packets;
+    //uint16 temp_code_time;
+    //uint16 code_time;
     
     initialize();
 
@@ -1068,7 +1073,7 @@ int main()
         //check addresses
         //TODO get the address bytes from Steve
         //TODO at what point should we send feedback?
-        
+        //first_count = Timer_1_ReadCounter();
         if(WIZ_INT_Read()==0) //!WIZ_INT_Read()--put wiznet in as condition if use ISR
         {
             wiznetClearInterrupts();
@@ -1078,6 +1083,7 @@ int main()
             //wiznet = 0; //for testing
         }
         
+        //if(wiznet gives a complete packet)
         baseAzimuth();
         shoulder();
         elbow();
@@ -1088,6 +1094,10 @@ int main()
         {
             new_pack = 0;
         }
+        //else{dropped_packets++}
+        //second_count = Timer_1_ReadCounter();
+        //temp_code_time = second_count - first_count;
+        //if(temp_code_time > code_time){print out the new, longer code time}
         
         while(!timerFlag){} //this while loop will periodize our code to the time of longest path
         timerFlag = 0;
