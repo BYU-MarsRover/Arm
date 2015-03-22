@@ -992,6 +992,21 @@ void baseAzimuth()
 //Initialization function for the program
 void initialize()
 {
+    WIZ_RST_Write(0);
+    CyDelay(10);
+    WIZ_RST_Write(1);
+    WIZ_SS_Write(1);
+    for(uint8 j=0; j<100; j++)
+    {
+        if(WIZ_RDY_Read())
+        {
+            break;
+        }
+        else
+        {
+            CyDelay(4);
+        }
+    }
     //Initialize state variables
     baseAzimuth_state = BA_start;
     wristTilt_state = tilt_start;
@@ -1000,8 +1015,9 @@ void initialize()
     elbow_state = elbw_start;
     
     //start all of our components
-    SPI_1_Start();
-    WIZ_SS_Write(1);
+    //SPI_1_Start();
+    SPIM_1_Start();
+    
     Clock_pwm_Start();
     Clock_counter_Start();
     UART_1_Start();
@@ -1009,9 +1025,9 @@ void initialize()
     BA_PWM_Start();
     ELBW_PWM_Start();
     
-    
+    //uint8_t test_byte;
     wiznetInit(ownIpAddr, dstIpAddr, udpPort);
-    
+    //SPI_1_SpiUartWriteTxData(test_byte);
     
     //Initialize the dynamixels
     ServoSpeed(0xFE, 100);
@@ -1053,7 +1069,7 @@ int main()
         //TODO get the address bytes from Steve
         //TODO at what point should we send feedback?
         
-        if(!WIZ_INT_Read()) //!WIZ_INT_Read()--put wiznet in as condition if use ISR
+        if(WIZ_INT_Read()==0) //!WIZ_INT_Read()--put wiznet in as condition if use ISR
         {
             wiznetClearInterrupts();
             fill_data_array();

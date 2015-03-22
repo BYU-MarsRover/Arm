@@ -66,7 +66,7 @@
 
 
 
-void wiznetInit(uint8_t, uint8_t, uint16_t);
+uint8_t wiznetInit(uint8_t, uint8_t, uint16_t);
 void wiznetOpen(void);
 void wiznetClose(void);
 void wiznetSend(void);

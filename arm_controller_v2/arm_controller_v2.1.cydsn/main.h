@@ -10,13 +10,13 @@
     #include <time.h>
     #include <stdlib.h>
     #include <stdio.h>
-    #include <wiznet5500.h>
-    #include <spi.h>
+    #include "wiznet5500.h"
+    #include "spi.h"
 
     //Initializations of global variables
-    #define ownIpAddr 4
-    #define dstIpAddr 1
-    #define udpPort 27015
+    #define ownIpAddr 4u
+    #define dstIpAddr 1u
+    #define udpPort 27015u
 
     //TODO: We need to make sure the bounds checking doesn't break
     #define ELBOW_UPPER_BOUND 1000     //was 100  // 16 bit values from ADC
@@ -27,8 +27,8 @@
     #define ELBOW_POT 1
 
     //Byte inices of specific bytes transmitted from the wiznet
-    #define BA_BYTE_1 4
-    #define BA_BYTE_2 5
+    #define BA_BYTE_1 8 //change back to 4 and 5
+    #define BA_BYTE_2 9
     #define SHLDR_BYTE_1 6
     #define SHLDR_BYTE_2 7
     #define ELBW_BYTE_1 8

@@ -23,7 +23,7 @@
 static uint16_t wiznetTxPointer;
 static uint16_t wiznetRxPointer;
 
-void wiznetInit(uint8_t ownIpAddr, uint8_t dstIpAddr, uint16_t dstUdpPort){
+uint8_t wiznetInit(uint8_t ownIpAddr, uint8_t dstIpAddr, uint16_t dstUdpPort){
 	// This is terrible, need a better way.
 	uint8_t cmdArray[] = {0x00,192u,168u,1u,1u,255u,255u,255u,0u,0x00,0x08,0xDC,0xFF,0xFF,0xFF,192u,168u,1u,254u};
 	//                    --- | Gateway Addr  | Subnet Mask     | WizNet's MAC Address        | WizNet's Own IP Address
@@ -79,8 +79,8 @@ void wiznetInit(uint8_t ownIpAddr, uint8_t dstIpAddr, uint16_t dstUdpPort){
 			transferSPI((uint8_t)(k&0xFF));
 		}
 	WIZ_SS_Write(HIGH); // WizNet SPI Frame Finished
-
-
+    
+    return wiznetOldMacAddr[5];
 }
 
 // Public Functions

@@ -1,5 +1,5 @@
---------------- Build Started: 03/19/2015 09:37:44 Project: arm_controller_v2.1, Configuration: ARM GCC 4.8.4 Debug ---------------
+--------------- Build Started: 03/21/2015 19:16:59 Project: arm_controller_v2.1, Configuration: ARM GCC 4.8.4 Debug ---------------
 The code generation step is up to date.
 The compile step is up to date, no work needs to be done.
 The link step is up to date, no work needs to be done.
---------------- Build Succeeded: 03/19/2015 09:37:46 ---------------
+--------------- Build Succeeded: 03/21/2015 19:17:00 ---------------
