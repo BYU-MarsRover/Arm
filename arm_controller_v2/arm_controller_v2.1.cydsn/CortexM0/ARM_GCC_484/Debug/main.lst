@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
   44 0000 80B5     		push	{r7, lr}
   45              		.cfi_def_cfa_offset 8
   46              		.cfi_offset 7, -8
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 2
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 2
 
 
   47              		.cfi_offset 14, -4
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
   28:.\main.c      **** //         s[j] = c;
   29:.\main.c      **** //     }
   30:.\main.c      **** // }
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 3
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 3
 
 
   31:.\main.c      **** ///* itoa:  convert n to characters in s */
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  113              	.L6:
   57:.\main.c      ****     {
   58:.\main.c      ****         sum += av_array[i];
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 4
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 4
 
 
  114              		.loc 1 58 0 discriminator 2
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  160 0074 06B0     		add	sp, sp, #24
  161              		@ sp needed
  162 0076 80BD     		pop	{r7, pc}
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 5
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 5
 
 
  163              		.cfi_endproc
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  211 0032 1B78     		ldrb	r3, [r3]
  212 0034 002B     		cmp	r3, #0
  213 0036 34D0     		beq	.L10
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 6
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 6
 
 
   71:.\main.c      ****         {
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  257 0082 1A78     		ldrb	r2, [r3]
  258 0084 BB1D     		add	r3, r7, #6
  259 0086 1B78     		ldrb	r3, [r3]
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 7
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 7
 
 
  260 0088 013B     		sub	r3, r3, #1
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  300 00c8 D318     		add	r3, r2, r3
  301 00ca BA1D     		add	r2, r7, #6
  302 00cc 1278     		ldrb	r2, [r2]
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 8
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 8
 
 
  303 00ce 9B49     		ldr	r1, .L70+8
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
   70:.\main.c      ****         if(cur_pos != 0)
  344              		.loc 1 70 0
  345 0112 27E2     		b	.L8
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 9
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 9
 
 
  346              	.L16:
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  387 0154 0A3A     		sub	r2, r2, #10
  388 0156 92B2     		uxth	r2, r2
  389 0158 1A80     		strh	r2, [r3]
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 10
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 10
 
 
  120:.\main.c      ****             
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  430 019a 8A18     		add	r2, r1, r2
  431 019c 1288     		ldrh	r2, [r2]
  432 019e 0A3A     		sub	r2, r2, #10
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 11
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 11
 
 
  433 01a0 92B2     		uxth	r2, r2
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  469 01d2 1A88     		ldrh	r2, [r3]
  470 01d4 5B4B     		ldr	r3, .L70+16
  471 01d6 9A42     		cmp	r2, r3
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 12
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 12
 
 
  472 01d8 53D9     		bls	.L30
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  158:.\main.c      ****             else
  159:.\main.c      ****             {
  160:.\main.c      ****                 cur_pos = 0;
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 13
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 13
 
 
  517              		.loc 1 160 0
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  561              	.L36:
  170:.\main.c      ****             }
  171:.\main.c      ****             else
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 14
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 14
 
 
  172:.\main.c      ****             {
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  600 02a6 D318     		add	r3, r2, r3
  601 02a8 FA1D     		add	r2, r7, #7
  602 02aa 1278     		ldrb	r2, [r2]
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 15
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 15
 
 
  603 02ac 2349     		ldr	r1, .L70+8
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  643 02ec 5B00     		lsl	r3, r3, #1
  644 02ee 3A68     		ldr	r2, [r7]
  645 02f0 D318     		add	r3, r2, r3
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 16
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 16
 
 
  646 02f2 BA1D     		add	r2, r7, #6
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  685 0330 18E1     		b	.L8
  686              	.L42:
  687 0332 17E1     		b	.L8
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 17
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 17
 
 
  688              	.L71:
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  220:.\main.c      ****             if(cur_pos < (ARRAY_SIZE - 1))
  734              		.loc 1 220 0
  735 0390 FB1D     		add	r3, r7, #7
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 18
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 18
 
 
  736 0392 1A78     		ldrb	r2, [r3]
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  778 03d8 1A80     		strh	r2, [r3]
  232:.\main.c      ****            
  233:.\main.c      ****             if(cur_pos < (ARRAY_SIZE - 1))
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 19
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 19
 
 
  779              		.loc 1 233 0
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  817 0410 7DE0     		b	.L54	@long jump
  818              	.LCB739:
  819              		.loc 1 247 0 is_stmt 0 discriminator 1
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 20
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 20
 
 
  820 0412 3B1D     		add	r3, r7, #4
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  864              		.loc 1 257 0
  865 0460 FB1D     		add	r3, r7, #7
  866 0462 1B78     		ldrb	r3, [r3]
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 21
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 21
 
 
  867 0464 5B00     		lsl	r3, r3, #1
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  906 04a0 9B18     		add	r3, r3, r2
  907 04a2 5B00     		lsl	r3, r3, #1
  908 04a4 3A68     		ldr	r2, [r7]
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 22
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 22
 
 
  909 04a6 D318     		add	r3, r2, r3
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  952 04f0 FB1D     		add	r3, r7, #7
  953 04f2 1A78     		ldrb	r2, [r3]
  954 04f4 FB1D     		add	r3, r7, #7
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 23
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 23
 
 
  955 04f6 0132     		add	r2, r2, #1
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  993 052c 9A42     		cmp	r2, r3
  994 052e 05DA     		bge	.L67
  297:.\main.c      ****         {
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 24
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 24
 
 
  298:.\main.c      ****             cur_pos++;
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  1030 0562 1A70     		strb	r2, [r3]
  1031              	.L8:
  315:.\main.c      ****         }
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 25
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 25
 
 
  316:.\main.c      ****     }
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  1075 0014 7A68     		ldr	r2, [r7, #4]
  1076 0016 D318     		add	r3, r2, r3
  1077 0018 1B78     		ldrb	r3, [r3]
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 26
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 26
 
 
  1078 001a 5BB2     		sxtb	r3, r3
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  1128 0074 1B88     		ldrh	r3, [r3]
  331:.\main.c      ****     //act_array[act_cspot] = command;
  332:.\main.c      **** }
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 27
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 27
 
 
  1129              		.loc 1 332 0
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  1176 001e 80BD     		pop	{r7, pc}
  1177              		.cfi_endproc
  1178              	.LFE38:
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 28
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 28
 
 
  1179              		.size	potFeedback, .-potFeedback
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  1220 0004 034B     		ldr	r3, .L83
  1221 0006 181C     		mov	r0, r3
  1222 0008 0E21     		mov	r1, #14
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 29
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 29
 
 
  1223 000a FFF7FEFF 		bl	wiznetReadUdpFrame
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  1264              		.loc 1 365 0
  1265 001a 3B1C     		mov	r3, r7
  1266 001c 0C33     		add	r3, r3, #12
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 30
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 30
 
 
  1267 001e FF22     		mov	r2, #255
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  1314 006e 3B1C     		mov	r3, r7
  1315 0070 0C33     		add	r3, r3, #12
  1316 0072 DB79     		ldrb	r3, [r3, #7]
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 31
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 31
 
 
  1317 0074 D318     		add	r3, r2, r3
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  380:.\main.c      ****     
  381:.\main.c      ****     array[0] = 0xFF;
  1364              		.loc 1 381 0
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 32
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 32
 
 
  1365 0012 3B1C     		mov	r3, r7
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  1411              		.loc 1 389 0
  1412 0060 3B1C     		mov	r3, r7
  1413 0062 0C33     		add	r3, r3, #12
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 33
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 33
 
 
  1414 0064 9A79     		ldrb	r2, [r3, #6]
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  1461 0004 00AF     		add	r7, sp, #0
  1462              		.cfi_def_cfa_register 7
  1463 0006 0A1C     		mov	r2, r1
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 34
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 34
 
 
  1464 0008 FB1D     		add	r3, r7, #7
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  1508 0050 3B1D     		add	r3, r7, #4
  1509 0052 1B88     		ldrh	r3, [r3]
  1510 0054 1B0A     		lsr	r3, r3, #8
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 35
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 35
 
 
  1511 0056 9BB2     		uxth	r3, r3
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  413:.\main.c      **** enum wristTilt_states {tilt_start, tilt_init, tilt_control, tilt_wait, tilt_feedback} wristTilt_sta
  414:.\main.c      **** //control the tilting motion of the wrist
  415:.\main.c      **** void wristTilt()
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 36
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 36
 
 
  416:.\main.c      **** {
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  451:.\main.c      ****             WT_array[WT_arr_cspot] = command;
  452:.\main.c      ****             
  453:.\main.c      ****             if(WT_arr_cspot < (WT_ARR_SIZE - 1))
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 37
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 37
 
 
  454:.\main.c      ****             {
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  440:.\main.c      ****             for(i = 0; i < WT_ARR_SIZE; i++)
  1601              		.loc 1 440 0 is_stmt 0 discriminator 1
  1602 0034 FB1D     		add	r3, r7, #7
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 38
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 38
 
 
  1603 0036 1B78     		ldrb	r3, [r3]
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  464:.\main.c      ****             avg = average(WT_array, WT_ARR_SIZE);
  1650              		.loc 1 464 0
  1651 0082 BC1C     		add	r4, r7, #2
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 39
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 39
 
 
  1652 0084 2B4B     		ldr	r3, .L112+4
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  483:.\main.c      ****     
  484:.\main.c      ****     switch(wristTilt_state){ //transitions
  1698              		.loc 1 484 0
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 40
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 40
 
 
  1699 00d0 174B     		ldr	r3, .L112
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  501:.\main.c      ****             }
  502:.\main.c      ****             break;
  1737              		.loc 1 502 0
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 41
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 41
 
 
  1738 0108 0FE0     		b	.L88
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  1778 0140 00000000 		.word	data_array
  1779 0144 E7030000 		.word	999
  1780 0148 00000000 		.word	fin_exec
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 42
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 42
 
 
  1781 014c 00000000 		.word	new_pack
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  1811 0010 022B     		cmp	r3, #2
  1812 0012 17D0     		beq	.L119
  540:.\main.c      ****         case rotate_start:
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 43
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 43
 
 
  541:.\main.c      ****             break;
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  1820 001c 0AE0     		b	.L121
  1821              	.L122:
  546:.\main.c      ****                 WR_array[i] = 1500;
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 44
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 44
 
 
  1822              		.loc 1 546 0 discriminator 2
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  1869 006a 122B     		cmp	r3, #18
  1870 006c 06D8     		bhi	.L123
  558:.\main.c      ****                 WR_arr_cspot++;
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 45
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 45
 
 
  1871              		.loc 1 558 0
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  1919              	.L126:
  582:.\main.c      ****             fin_exec++;
  1920              		.loc 1 582 0
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 46
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 46
 
 
  1921 00c0 214B     		ldr	r3, .L138+24
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  597:.\main.c      ****         
  598:.\main.c      ****         case rotate_control:
  599:.\main.c      ****             if(new_pack)
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 47
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 47
 
 
  1963              		.loc 1 599 0
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  618:.\main.c      ****             break;
  1998              		.loc 1 618 0
  1999 0128 C046     		mov	r8, r8
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 48
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 48
 
 
  2000              	.L114:
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  633:.\main.c      ****     uint16 command;
  634:.\main.c      ****     
  635:.\main.c      ****     uint16 feedback = potFeedback(ELBOW_POT); //check the feedback in every tick
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 49
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 49
 
 
  2040              		.loc 1 635 0
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  2083 0048 FB1D     		add	r3, r7, #7
  2084 004a 1B78     		ldrb	r3, [r3]
  2085 004c 132B     		cmp	r3, #19
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 50
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 50
 
 
  2086 004e F0D9     		bls	.L148
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  659:.\main.c      ****             {
  660:.\main.c      ****                 elbw_arr_cspot = 0;
  2126              		.loc 1 660 0
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 51
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 51
 
 
  2127 0090 5A4B     		ldr	r3, .L174+12
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  2160 00c8 DB00     		lsl	r3, r3, #3
  2161 00ca 9A42     		cmp	r2, r3
  2162 00cc 0AD8     		bhi	.L154
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 52
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 52
 
 
  2163              		.loc 1 681 0 is_stmt 0 discriminator 1
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  699:.\main.c      ****                     if(avg <= 2000 && avg >= 1000)
  2200              		.loc 1 699 0
  2201 010c 3B1C     		mov	r3, r7
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 53
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 53
 
 
  2202 010e 1A88     		ldrh	r2, [r3]
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  2242 0152 181C     		mov	r0, r3
  2243 0154 FFF7FEFF 		bl	ELBW_PWM_WriteCompare
  2244 0158 03E0     		b	.L155
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 54
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 54
 
 
  2245              	.L160:
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  2282              		.loc 1 639 0
  2283 018e C046     		mov	r8, r8
  2284              	.L141:
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 55
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 55
 
 
  730:.\main.c      ****     }
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  745:.\main.c      ****             }
  746:.\main.c      ****             else
  747:.\main.c      ****             {
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 56
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 56
 
 
  748:.\main.c      ****                 elbow_state = elbw_wait;
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  2361 01f0 00000000 		.word	elbow_state
  2362 01f4 00000000 		.word	elbow_array
  2363 01f8 DC050000 		.word	1500
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 57
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 57
 
 
  2364 01fc 00000000 		.word	elbw_arr_cspot
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  2402 0016 012B     		cmp	r3, #1
  2403 0018 07D0     		beq	.L178
  2404 001a 00DC     		bgt	.LCB2231
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 58
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 58
 
 
  2405 001c BBE0     		b	.L209	@long jump
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  790:.\main.c      **** 
  791:.\main.c      ****         case shldr_execute:
  792:.\main.c      ****             command = make_command(data_array, SHLDR_BYTE_1, SHLDR_BYTE_2);
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 59
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 59
 
 
  2447              		.loc 1 792 0
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  2490 00a2 031C     		mov	r3, r0
  2491 00a4 2380     		strh	r3, [r4]
  804:.\main.c      ****            
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 60
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 60
 
 
  805:.\main.c      ****             //uint16 feedback = potFeedback(SHOULDER_POT); -- see above
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  820:.\main.c      ****                     {
  821:.\main.c      ****                         //throw error
  822:.\main.c      ****                         SHLDR_PWM_WriteCompare(1500);
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 61
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 61
 
 
  2531              		.loc 1 822 0
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  2571 012a 181C     		mov	r0, r3
  2572 012c FFF7FEFF 		bl	SHLDR_PWM_WriteCompare
  2573 0130 19E0     		b	.L191
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 62
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 62
 
 
  2574              	.L195:
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  2606              		.loc 1 858 0
  2607 0166 2C4B     		ldr	r3, .L210+32
  2608 0168 1B78     		ldrb	r3, [r3]
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 63
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 63
 
 
  2609 016a 0133     		add	r3, r3, #1
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  2651              	.L201:
  2652 01a8 022B     		cmp	r3, #2
  2653 01aa 0AD0     		beq	.L203
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 64
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 64
 
 
  2654 01ac 032B     		cmp	r3, #3
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  2689 01d8 0BE0     		b	.L176
  2690              	.L204:
  888:.\main.c      ****         
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 65
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 65
 
 
  889:.\main.c      ****         case shldr_wait:
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  2733              		.align	2
  2734              		.global	baseAzimuth
  2735              		.code	16
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 66
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 66
 
 
  2736              		.thumb_func
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  932:.\main.c      ****                 BA_arr_cspot++;
  933:.\main.c      ****             }
  934:.\main.c      ****             else
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 67
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 67
 
 
  935:.\main.c      ****             {
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  922:.\main.c      ****             BA_arr_cspot = 0;
  2787              		.loc 1 922 0 is_stmt 1
  2788 003c 404B     		ldr	r3, .L236+12
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 68
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 68
 
 
  2789 003e 0022     		mov	r2, #0
@@ -4037,8 +4037,8 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  2799 004c 3C1D     		add	r4, r7, #4
  2800 004e 3D4B     		ldr	r3, .L236+16
  2801 0050 181C     		mov	r0, r3
- 2802 0052 0821     		mov	r1, #8
- 2803 0054 0922     		mov	r2, #9
+ 2802 0052 0221     		mov	r1, #2
+ 2803 0054 0322     		mov	r2, #3
  2804 0056 FFF7FEFF 		bl	make_command
  2805 005a 031C     		mov	r3, r0
  2806 005c 2380     		strh	r3, [r4]
@@ -4078,7 +4078,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  2835              		.loc 1 941 0
  2836 008a BC1C     		add	r4, r7, #2
  2837 008c 2A4B     		ldr	r3, .L236+4
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 69
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 69
 
 
  2838 008e 181C     		mov	r0, r3
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  2882 00d4 174B     		ldr	r3, .L236
  2883 00d6 1B78     		ldrb	r3, [r3]
  2884 00d8 012B     		cmp	r3, #1
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 70
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 70
 
 
  2885 00da 0CD0     		beq	.L226
@@ -4198,7 +4198,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  2921 010c 0FE0     		b	.L212
  2922              	.L231:
  975:.\main.c      ****                 baseAzimuth_state = BA_wait;
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 71
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 71
 
 
  2923              		.loc 1 975 0
@@ -4258,7 +4258,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  2964 0150 00000000 		.word	new_pack
  2965              		.cfi_endproc
  2966              	.LFE48:
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 72
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 72
 
 
  2967              		.size	baseAzimuth, .-baseAzimuth
@@ -4318,7 +4318,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
 1002:.\main.c      ****         {
 1003:.\main.c      ****             break;
  3010              		.loc 1 1003 0
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 73
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 73
 
 
  3011 0030 0BE0     		b	.L241
@@ -4378,7 +4378,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
 1017:.\main.c      ****     //start all of our components
 1018:.\main.c      ****     //SPI_1_Start();
 1019:.\main.c      ****     SPIM_1_Start();
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 74
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 74
 
 
  3050              		.loc 1 1019 0
@@ -4438,7 +4438,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  3085 00ac 181C     		mov	r0, r3
  3086 00ae FFF7FEFF 		bl	SHLDR_PWM_WriteCompare
 1039:.\main.c      ****     CyDelay(3000);
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 75
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 75
 
 
  3087              		.loc 1 1039 0
@@ -4498,7 +4498,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  3130              		.code	16
  3131              		.thumb_func
  3132              		.type	main, %function
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 76
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 76
 
 
  3133              	main:
@@ -4536,101 +4536,111 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  3153              		.loc 1 1062 0
  3154 0012 0123     		mov	r3, #1
  3155 0014 7B60     		str	r3, [r7, #4]
-1063:.\main.c      ****     
-1064:.\main.c      ****     initialize();
- 3156              		.loc 1 1064 0
+1063:.\main.c      ****     //uint16 first_count;
+1064:.\main.c      ****     //uint16 second_count;
+1065:.\main.c      ****     //uint16 dropped_packets;
+1066:.\main.c      ****     //uint16 temp_code_time;
+1067:.\main.c      ****     //uint16 code_time;
+1068:.\main.c      ****     
+1069:.\main.c      ****     initialize();
+ 3156              		.loc 1 1069 0
  3157 0016 FFF7FEFF 		bl	initialize
  3158              	.L249:
-1065:.\main.c      **** 
-1066:.\main.c      ****     for(;;)
-1067:.\main.c      ****     {
-1068:.\main.c      ****         //check addresses
-1069:.\main.c      ****         //TODO get the address bytes from Steve
-1070:.\main.c      ****         //TODO at what point should we send feedback?
-1071:.\main.c      ****         
-1072:.\main.c      ****         if(WIZ_INT_Read()==0) //!WIZ_INT_Read()--put wiznet in as condition if use ISR
- 3159              		.loc 1 1072 0
+1070:.\main.c      **** 
+1071:.\main.c      ****     for(;;)
+1072:.\main.c      ****     {
+1073:.\main.c      ****         //check addresses
+1074:.\main.c      ****         //TODO get the address bytes from Steve
+1075:.\main.c      ****         //TODO at what point should we send feedback?
+1076:.\main.c      ****         //first_count = Timer_1_ReadCounter();
+1077:.\main.c      ****         if(WIZ_INT_Read()==0) //!WIZ_INT_Read()--put wiznet in as condition if use ISR
+ 3159              		.loc 1 1077 0
  3160 001a FFF7FEFF 		bl	WIZ_INT_Read
  3161 001e 031C     		mov	r3, r0
  3162 0020 002B     		cmp	r3, #0
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 77
+
+
  3163 0022 09D1     		bne	.L246
-1073:.\main.c      ****         {
-1074:.\main.c      ****             wiznetClearInterrupts();
- 3164              		.loc 1 1074 0
+1078:.\main.c      ****         {
+1079:.\main.c      ****             wiznetClearInterrupts();
+ 3164              		.loc 1 1079 0
  3165 0024 FFF7FEFF 		bl	wiznetClearInterrupts
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 77
-
-
-1075:.\main.c      ****             fill_data_array();
- 3166              		.loc 1 1075 0
+1080:.\main.c      ****             fill_data_array();
+ 3166              		.loc 1 1080 0
  3167 0028 FFF7FEFF 		bl	fill_data_array
-1076:.\main.c      ****             new_pack = 1;
- 3168              		.loc 1 1076 0
+1081:.\main.c      ****             new_pack = 1;
+ 3168              		.loc 1 1081 0
  3169 002c 114B     		ldr	r3, .L251+4
  3170 002e 0122     		mov	r2, #1
  3171 0030 1A70     		strb	r2, [r3]
-1077:.\main.c      ****             fin_exec = 0;
- 3172              		.loc 1 1077 0
+1082:.\main.c      ****             fin_exec = 0;
+ 3172              		.loc 1 1082 0
  3173 0032 114B     		ldr	r3, .L251+8
  3174 0034 0022     		mov	r2, #0
  3175 0036 1A70     		strb	r2, [r3]
  3176              	.L246:
-1078:.\main.c      ****             //wiznet = 0; //for testing
-1079:.\main.c      ****         }
-1080:.\main.c      ****         
-1081:.\main.c      ****         baseAzimuth();
- 3177              		.loc 1 1081 0
+1083:.\main.c      ****             //wiznet = 0; //for testing
+1084:.\main.c      ****         }
+1085:.\main.c      ****         
+1086:.\main.c      ****         //if(wiznet gives a complete packet)
+1087:.\main.c      ****         baseAzimuth();
+ 3177              		.loc 1 1087 0
  3178 0038 FFF7FEFF 		bl	baseAzimuth
-1082:.\main.c      ****         shoulder();
- 3179              		.loc 1 1082 0
+1088:.\main.c      ****         shoulder();
+ 3179              		.loc 1 1088 0
  3180 003c FFF7FEFF 		bl	shoulder
-1083:.\main.c      ****         elbow();
- 3181              		.loc 1 1083 0
+1089:.\main.c      ****         elbow();
+ 3181              		.loc 1 1089 0
  3182 0040 FFF7FEFF 		bl	elbow
-1084:.\main.c      ****         wristTilt();
- 3183              		.loc 1 1084 0
+1090:.\main.c      ****         wristTilt();
+ 3183              		.loc 1 1090 0
  3184 0044 FFF7FEFF 		bl	wristTilt
-1085:.\main.c      ****         wristRotate();
- 3185              		.loc 1 1085 0
+1091:.\main.c      ****         wristRotate();
+ 3185              		.loc 1 1091 0
  3186 0048 FFF7FEFF 		bl	wristRotate
-1086:.\main.c      **** 
-1087:.\main.c      ****         if(fin_exec == NUM_OF_SM)
- 3187              		.loc 1 1087 0
+1092:.\main.c      **** 
+1093:.\main.c      ****         if(fin_exec == NUM_OF_SM)
+ 3187              		.loc 1 1093 0
  3188 004c 0A4B     		ldr	r3, .L251+8
  3189 004e 1B78     		ldrb	r3, [r3]
  3190 0050 052B     		cmp	r3, #5
  3191 0052 03D1     		bne	.L247
-1088:.\main.c      ****         {
-1089:.\main.c      ****             new_pack = 0;
- 3192              		.loc 1 1089 0
+1094:.\main.c      ****         {
+1095:.\main.c      ****             new_pack = 0;
+ 3192              		.loc 1 1095 0
  3193 0054 074B     		ldr	r3, .L251+4
  3194 0056 0022     		mov	r2, #0
  3195 0058 1A70     		strb	r2, [r3]
-1090:.\main.c      ****         }
-1091:.\main.c      ****         
-1092:.\main.c      ****         while(!timerFlag){} //this while loop will periodize our code to the time of longest path
- 3196              		.loc 1 1092 0
+1096:.\main.c      ****         }
+1097:.\main.c      ****         //else{dropped_packets++}
+1098:.\main.c      ****         //second_count = Timer_1_ReadCounter();
+1099:.\main.c      ****         //temp_code_time = second_count - first_count;
+1100:.\main.c      ****         //if(temp_code_time > code_time){print out the new, longer code time}
+1101:.\main.c      ****         
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 78
+
+
+1102:.\main.c      ****         while(!timerFlag){} //this while loop will periodize our code to the time of longest path
+ 3196              		.loc 1 1102 0
  3197 005a FFE7     		b	.L250
  3198              	.L247:
  3199              	.L250:
  3200 005c C046     		mov	r8, r8
  3201              	.L248:
- 3202              		.loc 1 1092 0 is_stmt 0 discriminator 1
+ 3202              		.loc 1 1102 0 is_stmt 0 discriminator 1
  3203 005e 074B     		ldr	r3, .L251+12
  3204 0060 1B78     		ldrb	r3, [r3]
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 78
-
-
  3205 0062 DBB2     		uxtb	r3, r3
  3206 0064 002B     		cmp	r3, #0
  3207 0066 FAD0     		beq	.L248
-1093:.\main.c      ****         timerFlag = 0;
- 3208              		.loc 1 1093 0 is_stmt 1
+1103:.\main.c      ****         timerFlag = 0;
+ 3208              		.loc 1 1103 0 is_stmt 1
  3209 0068 044B     		ldr	r3, .L251+12
  3210 006a 0022     		mov	r2, #0
  3211 006c 1A70     		strb	r2, [r3]
-1094:.\main.c      ****     }
- 3212              		.loc 1 1094 0
+1104:.\main.c      ****     }
+ 3212              		.loc 1 1104 0
  3213 006e D4E7     		b	.L249
  3214              	.L252:
  3215              		.align	2
@@ -4668,6 +4678,9 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  3247 002c 02       		.uleb128 0x2
  3248 002d 01       		.byte	0x1
  3249 002e 08       		.byte	0x8
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 79
+
+
  3250 002f 40020000 		.4byte	.LASF1
  3251 0033 02       		.uleb128 0x2
  3252 0034 02       		.byte	0x2
@@ -4678,9 +4691,6 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  3257 003c 07       		.byte	0x7
  3258 003d F5020000 		.4byte	.LASF3
  3259 0041 02       		.uleb128 0x2
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 79
-
-
  3260 0042 04       		.byte	0x4
  3261 0043 05       		.byte	0x5
  3262 0044 BB010000 		.4byte	.LASF4
@@ -4728,6 +4738,9 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  3304 0098 58010000 		.4byte	.LASF13
  3305 009c 02       		.byte	0x2
  3306 009d A5       		.byte	0xa5
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 80
+
+
  3307 009e 33000000 		.4byte	0x33
  3308 00a2 02       		.uleb128 0x2
  3309 00a3 04       		.byte	0x4
@@ -4738,9 +4751,6 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  3314 00ab 04       		.byte	0x4
  3315 00ac 88040000 		.4byte	.LASF15
  3316 00b0 02       		.uleb128 0x2
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 80
-
-
  3317 00b1 01       		.byte	0x1
  3318 00b2 08       		.byte	0x8
  3319 00b3 2F030000 		.4byte	.LASF16
@@ -4788,6 +4798,9 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  3361 010c 00       		.sleb128 0
  3362 010d 07       		.uleb128 0x7
  3363 010e 2B010000 		.4byte	.LASF27
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 81
+
+
  3364 0112 01       		.sleb128 1
  3365 0113 07       		.uleb128 0x7
  3366 0114 95020000 		.4byte	.LASF28
@@ -4798,9 +4811,6 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  3371 011f 07       		.uleb128 0x7
  3372 0120 79050000 		.4byte	.LASF30
  3373 0124 04       		.sleb128 4
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 81
-
-
  3374 0125 00       		.byte	0
  3375 0126 06       		.uleb128 0x6
  3376 0127 22030000 		.4byte	.LASF31
@@ -4848,6 +4858,9 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  3418 017b 98010000 		.4byte	0x198
  3419 017f 07       		.uleb128 0x7
  3420 0180 16000000 		.4byte	.LASF42
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 82
+
+
  3421 0184 00       		.sleb128 0
  3422 0185 07       		.uleb128 0x7
  3423 0186 B2000000 		.4byte	.LASF43
@@ -4858,9 +4871,6 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  3428 0191 07       		.uleb128 0x7
  3429 0192 41010000 		.4byte	.LASF45
  3430 0196 03       		.sleb128 3
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 82
-
-
  3431 0197 00       		.byte	0
  3432 0198 08       		.uleb128 0x8
  3433 0199 97040000 		.4byte	.LASF49
@@ -4908,6 +4918,9 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  3475 01f0 63       		.sleb128 -29
  3476 01f1 0C       		.uleb128 0xc
  3477 01f2 6900     		.ascii	"i\000"
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 83
+
+
  3478 01f4 01       		.byte	0x1
  3479 01f5 34       		.byte	0x34
  3480 01f6 6B000000 		.4byte	0x6b
@@ -4918,9 +4931,6 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  3485 01fe 73756D00 		.ascii	"sum\000"
  3486 0202 01       		.byte	0x1
  3487 0203 35       		.byte	0x35
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 83
-
-
  3488 0204 81000000 		.4byte	0x81
  3489 0208 02       		.uleb128 0x2
  3490 0209 91       		.byte	0x91
@@ -4968,6 +4978,9 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  3532 0257 42       		.byte	0x42
  3533 0258 6B000000 		.4byte	0x6b
  3534 025c 02       		.uleb128 0x2
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 84
+
+
  3535 025d 91       		.byte	0x91
  3536 025e 76       		.sleb128 -10
  3537 025f 0B       		.uleb128 0xb
@@ -4978,9 +4991,6 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  3542 026a 02       		.uleb128 0x2
  3543 026b 91       		.byte	0x91
  3544 026c 74       		.sleb128 -12
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 84
-
-
  3545 026d 00       		.byte	0
  3546 026e 0F       		.uleb128 0xf
  3547 026f AE010000 		.4byte	.LASF56
@@ -5028,6 +5038,9 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  3589 02c5 76040000 		.4byte	.LASF60
  3590 02c9 01       		.byte	0x1
  3591 02ca 4201     		.2byte	0x142
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 85
+
+
  3592 02cc 97000000 		.4byte	0x97
  3593 02d0 02       		.uleb128 0x2
  3594 02d1 91       		.byte	0x91
@@ -5038,9 +5051,6 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  3599 02d9 4301     		.2byte	0x143
  3600 02db 97000000 		.4byte	0x97
  3601 02df 02       		.uleb128 0x2
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 85
-
-
  3602 02e0 91       		.byte	0x91
  3603 02e1 74       		.sleb128 -12
  3604 02e2 11       		.uleb128 0x11
@@ -5088,6 +5098,9 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  3646 0337 5501     		.2byte	0x155
  3647 0339 00000000 		.4byte	.LFB39
  3648 033d 08000000 		.4byte	.LFE39-.LFB39
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 86
+
+
  3649 0341 01       		.uleb128 0x1
  3650 0342 9C       		.byte	0x9c
  3651 0343 13       		.uleb128 0x13
@@ -5098,9 +5111,6 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  3656 034f 18000000 		.4byte	.LFE40-.LFB40
  3657 0353 01       		.uleb128 0x1
  3658 0354 9C       		.byte	0x9c
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 86
-
-
  3659 0355 14       		.uleb128 0x14
  3660 0356 A0030000 		.4byte	.LASF68
  3661 035a 01       		.byte	0x1
@@ -5148,6 +5158,9 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  3703 03af 7901     		.2byte	0x179
  3704 03b1 00000000 		.4byte	.LFB42
  3705 03b5 98000000 		.4byte	.LFE42-.LFB42
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 87
+
+
  3706 03b9 01       		.uleb128 0x1
  3707 03ba 9C       		.byte	0x9c
  3708 03bb ED030000 		.4byte	0x3ed
@@ -5158,9 +5171,6 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  3713 03c7 6B000000 		.4byte	0x6b
  3714 03cb 02       		.uleb128 0x2
  3715 03cc 91       		.byte	0x91
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 87
-
-
  3716 03cd 67       		.sleb128 -25
  3717 03ce 10       		.uleb128 0x10
  3718 03cf 83000000 		.4byte	.LASF72
@@ -5208,6 +5218,9 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  3760 0422 25040000 		.4byte	.LASF52
  3761 0426 01       		.byte	0x1
  3762 0427 8D01     		.2byte	0x18d
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 88
+
+
  3763 0429 99030000 		.4byte	0x399
  3764 042d 02       		.uleb128 0x2
  3765 042e 91       		.byte	0x91
@@ -5218,9 +5231,6 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  3770 0436 01       		.byte	0x1
  3771 0437 9F01     		.2byte	0x19f
  3772 0439 00000000 		.4byte	.LFB44
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 88
-
-
  3773 043d 50010000 		.4byte	.LFE44-.LFB44
  3774 0441 01       		.uleb128 0x1
  3775 0442 9C       		.byte	0x9c
@@ -5268,6 +5278,9 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  3817 0494 91       		.byte	0x91
  3818 0495 6F       		.sleb128 -17
  3819 0496 18       		.uleb128 0x18
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 89
+
+
  3820 0497 61766700 		.ascii	"avg\000"
  3821 049b 01       		.byte	0x1
  3822 049c 1802     		.2byte	0x218
@@ -5278,9 +5291,6 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  3827 04a5 11       		.uleb128 0x11
  3828 04a6 59050000 		.4byte	.LASF54
  3829 04aa 01       		.byte	0x1
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 89
-
-
  3830 04ab 1902     		.2byte	0x219
  3831 04ad 76000000 		.4byte	0x76
  3832 04b1 02       		.uleb128 0x2
@@ -5328,6 +5338,9 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  3874 0502 02       		.uleb128 0x2
  3875 0503 91       		.byte	0x91
  3876 0504 6C       		.sleb128 -20
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 90
+
+
  3877 0505 00       		.byte	0
  3878 0506 17       		.uleb128 0x17
  3879 0507 F6030000 		.4byte	.LASF78
@@ -5338,9 +5351,6 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  3884 0516 01       		.uleb128 0x1
  3885 0517 9C       		.byte	0x9c
  3886 0518 57050000 		.4byte	0x557
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 90
-
-
  3887 051c 18       		.uleb128 0x18
  3888 051d 6900     		.ascii	"i\000"
  3889 051f 01       		.byte	0x1
@@ -5388,6 +5398,9 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  3931 0570 01       		.byte	0x1
  3932 0571 8D03     		.2byte	0x38d
  3933 0573 6B000000 		.4byte	0x6b
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 91
+
+
  3934 0577 02       		.uleb128 0x2
  3935 0578 91       		.byte	0x91
  3936 0579 6F       		.sleb128 -17
@@ -5398,9 +5411,6 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  3941 0582 76000000 		.4byte	0x76
  3942 0586 02       		.uleb128 0x2
  3943 0587 91       		.byte	0x91
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 91
-
-
  3944 0588 6A       		.sleb128 -22
  3945 0589 11       		.uleb128 0x11
  3946 058a 59050000 		.4byte	.LASF54
@@ -5448,6 +5458,9 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  3988 05e4 01       		.byte	0x1
  3989 05e5 1F04     		.2byte	0x41f
  3990 05e7 C3000000 		.4byte	0xc3
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 92
+
+
  3991 05eb 1C       		.uleb128 0x1c
  3992 05ec 56020000 		.4byte	.LASF82
  3993 05f0 01       		.byte	0x1
@@ -5458,9 +5471,6 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  3998 05fc 01       		.byte	0x1
  3999 05fd 2104     		.2byte	0x421
  4000 05ff 5D000000 		.4byte	0x5d
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 92
-
-
  4001 0603 02       		.uleb128 0x2
  4002 0604 91       		.byte	0x91
  4003 0605 74       		.sleb128 -12
@@ -5508,6 +5518,9 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  4045 0658 A1040000 		.4byte	.LASF88
  4046 065c 04       		.byte	0x4
  4047 065d 2D       		.byte	0x2d
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 93
+
+
  4048 065e 6B000000 		.4byte	0x6b
  4049 0662 05       		.uleb128 0x5
  4050 0663 03       		.byte	0x3
@@ -5518,9 +5531,6 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  4055 066e 30       		.byte	0x30
  4056 066f 6B000000 		.4byte	0x6b
  4057 0673 05       		.uleb128 0x5
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 93
-
-
  4058 0674 03       		.byte	0x3
  4059 0675 00000000 		.4byte	fin_exec
  4060 0679 1D       		.uleb128 0x1d
@@ -5568,6 +5578,9 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  4102 06d3 3B       		.byte	0x3b
  4103 06d4 9B060000 		.4byte	0x69b
  4104 06d8 05       		.uleb128 0x5
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 94
+
+
  4105 06d9 03       		.byte	0x3
  4106 06da 00000000 		.4byte	shoulder_array
  4107 06de 1D       		.uleb128 0x1d
@@ -5578,9 +5591,6 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  4112 06e9 05       		.uleb128 0x5
  4113 06ea 03       		.byte	0x3
  4114 06eb 00000000 		.4byte	BA_arr_cspot
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 94
-
-
  4115 06ef 1D       		.uleb128 0x1d
  4116 06f0 CF030000 		.4byte	.LASF96
  4117 06f4 04       		.byte	0x4
@@ -5628,6 +5638,9 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  4159 074b B7000000 		.4byte	0xb7
  4160 074f 05       		.uleb128 0x5
  4161 0750 03       		.byte	0x3
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 95
+
+
  4162 0751 00000000 		.4byte	timerFlag
  4163 0755 1E       		.uleb128 0x1e
  4164 0756 EA000000 		.4byte	.LASF102
@@ -5638,9 +5651,6 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  4169 0762 03       		.byte	0x3
  4170 0763 00000000 		.4byte	wristTilt_state
  4171 0767 1E       		.uleb128 0x1e
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 95
-
-
  4172 0768 36040000 		.4byte	.LASF103
  4173 076c 01       		.byte	0x1
  4174 076d 0502     		.2byte	0x205
@@ -5688,6 +5698,9 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  4216 000a 0E       		.uleb128 0xe
  4217 000b 55       		.uleb128 0x55
  4218 000c 17       		.uleb128 0x17
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 96
+
+
  4219 000d 11       		.uleb128 0x11
  4220 000e 01       		.uleb128 0x1
  4221 000f 10       		.uleb128 0x10
@@ -5698,9 +5711,6 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  4226 0014 24       		.uleb128 0x24
  4227 0015 00       		.byte	0
  4228 0016 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 96
-
-
  4229 0017 0B       		.uleb128 0xb
  4230 0018 3E       		.uleb128 0x3e
  4231 0019 0B       		.uleb128 0xb
@@ -5748,6 +5758,9 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  4273 0043 0B       		.uleb128 0xb
  4274 0044 3A       		.uleb128 0x3a
  4275 0045 0B       		.uleb128 0xb
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 97
+
+
  4276 0046 3B       		.uleb128 0x3b
  4277 0047 05       		.uleb128 0x5
  4278 0048 01       		.uleb128 0x1
@@ -5758,9 +5771,6 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  4283 004d 28       		.uleb128 0x28
  4284 004e 00       		.byte	0
  4285 004f 03       		.uleb128 0x3
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 97
-
-
  4286 0050 0E       		.uleb128 0xe
  4287 0051 1C       		.uleb128 0x1c
  4288 0052 0D       		.uleb128 0xd
@@ -5808,6 +5818,9 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  4330 007d 00       		.byte	0
  4331 007e 0A       		.uleb128 0xa
  4332 007f 2E       		.uleb128 0x2e
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 98
+
+
  4333 0080 01       		.byte	0x1
  4334 0081 3F       		.uleb128 0x3f
  4335 0082 19       		.uleb128 0x19
@@ -5818,9 +5831,6 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  4340 0087 3B       		.uleb128 0x3b
  4341 0088 0B       		.uleb128 0xb
  4342 0089 27       		.uleb128 0x27
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 98
-
-
  4343 008a 19       		.uleb128 0x19
  4344 008b 49       		.uleb128 0x49
  4345 008c 13       		.uleb128 0x13
@@ -5868,6 +5878,9 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  4387 00b7 00       		.byte	0
  4388 00b8 0D       		.uleb128 0xd
  4389 00b9 0F       		.uleb128 0xf
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 99
+
+
  4390 00ba 00       		.byte	0
  4391 00bb 0B       		.uleb128 0xb
  4392 00bc 0B       		.uleb128 0xb
@@ -5878,9 +5891,6 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  4397 00c1 0E       		.uleb128 0xe
  4398 00c2 2E       		.uleb128 0x2e
  4399 00c3 01       		.byte	0x1
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 99
-
-
  4400 00c4 3F       		.uleb128 0x3f
  4401 00c5 19       		.uleb128 0x19
  4402 00c6 03       		.uleb128 0x3
@@ -5928,6 +5938,9 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  4444 00f2 19       		.uleb128 0x19
  4445 00f3 01       		.uleb128 0x1
  4446 00f4 13       		.uleb128 0x13
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 100
+
+
  4447 00f5 00       		.byte	0
  4448 00f6 00       		.byte	0
  4449 00f7 10       		.uleb128 0x10
@@ -5938,9 +5951,6 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  4454 00fc 3A       		.uleb128 0x3a
  4455 00fd 0B       		.uleb128 0xb
  4456 00fe 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 100
-
-
  4457 00ff 05       		.uleb128 0x5
  4458 0100 49       		.uleb128 0x49
  4459 0101 13       		.uleb128 0x13
@@ -5988,6 +5998,9 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  4501 012c 2E       		.uleb128 0x2e
  4502 012d 00       		.byte	0
  4503 012e 3F       		.uleb128 0x3f
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 101
+
+
  4504 012f 19       		.uleb128 0x19
  4505 0130 03       		.uleb128 0x3
  4506 0131 0E       		.uleb128 0xe
@@ -5998,9 +6011,6 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  4511 0136 11       		.uleb128 0x11
  4512 0137 01       		.uleb128 0x1
  4513 0138 12       		.uleb128 0x12
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 101
-
-
  4514 0139 06       		.uleb128 0x6
  4515 013a 40       		.uleb128 0x40
  4516 013b 18       		.uleb128 0x18
@@ -6048,6 +6058,9 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  4558 0167 49       		.uleb128 0x49
  4559 0168 13       		.uleb128 0x13
  4560 0169 2F       		.uleb128 0x2f
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 102
+
+
  4561 016a 0B       		.uleb128 0xb
  4562 016b 00       		.byte	0
  4563 016c 00       		.byte	0
@@ -6058,9 +6071,6 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  4568 0171 19       		.uleb128 0x19
  4569 0172 03       		.uleb128 0x3
  4570 0173 0E       		.uleb128 0xe
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 102
-
-
  4571 0174 3A       		.uleb128 0x3a
  4572 0175 0B       		.uleb128 0xb
  4573 0176 3B       		.uleb128 0x3b
@@ -6108,6 +6118,9 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  4615 01a1 19       		.uleb128 0x19
  4616 01a2 03       		.uleb128 0x3
  4617 01a3 0E       		.uleb128 0xe
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 103
+
+
  4618 01a4 3A       		.uleb128 0x3a
  4619 01a5 0B       		.uleb128 0xb
  4620 01a6 3B       		.uleb128 0x3b
@@ -6118,9 +6131,6 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  4625 01ab 01       		.uleb128 0x1
  4626 01ac 12       		.uleb128 0x12
  4627 01ad 06       		.uleb128 0x6
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 103
-
-
  4628 01ae 40       		.uleb128 0x40
  4629 01af 18       		.uleb128 0x18
  4630 01b0 9642     		.uleb128 0x2116
@@ -6168,6 +6178,9 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  4672 01db 13       		.uleb128 0x13
  4673 01dc 3F       		.uleb128 0x3f
  4674 01dd 19       		.uleb128 0x19
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 104
+
+
  4675 01de 02       		.uleb128 0x2
  4676 01df 18       		.uleb128 0x18
  4677 01e0 00       		.byte	0
@@ -6178,9 +6191,6 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  4682 01e5 03       		.uleb128 0x3
  4683 01e6 0E       		.uleb128 0xe
  4684 01e7 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 104
-
-
  4685 01e8 0B       		.uleb128 0xb
  4686 01e9 3B       		.uleb128 0x3b
  4687 01ea 05       		.uleb128 0x5
@@ -6228,6 +6238,9 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  4729 0070 00000000 		.4byte	.LFB46
  4730 0074 14020000 		.4byte	.LFE46-.LFB46
  4731 0078 00000000 		.4byte	.LFB47
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 105
+
+
  4732 007c 20020000 		.4byte	.LFE47-.LFB47
  4733 0080 00000000 		.4byte	.LFB48
  4734 0084 54010000 		.4byte	.LFE48-.LFB48
@@ -6238,9 +6251,6 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  4739 0098 00000000 		.4byte	0
  4740 009c 00000000 		.4byte	0
  4741              		.section	.debug_ranges,"",%progbits
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 105
-
-
  4742              	.Ldebug_ranges0:
  4743 0000 00000000 		.4byte	.LFB34
  4744 0004 28000000 		.4byte	.LFE34
@@ -6288,6 +6298,9 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  4782              	.LASF99:
  4783 0000 57525F61 		.ascii	"WR_arr_cspot\000"
  4783      72725F63 
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 106
+
+
  4783      73706F74 
  4783      00
  4784              	.LASF70:
@@ -6298,9 +6311,6 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  4787 0016 42415F73 		.ascii	"BA_start\000"
  4787      74617274 
  4787      00
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 106
-
-
  4788              	.LASF38:
  4789 001f 73686C64 		.ascii	"shldr_init\000"
  4789      725F696E 
@@ -6348,6 +6358,9 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  4809      6374696F 
  4809      6E00
  4810              	.LASF6:
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 107
+
+
  4811 009b 6C6F6E67 		.ascii	"long long int\000"
  4811      206C6F6E 
  4811      6720696E 
@@ -6358,9 +6371,6 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  4813      00
  4814              	.LASF43:
  4815 00b2 42415F69 		.ascii	"BA_init\000"
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 107
-
-
  4815      6E697400 
  4816              	.LASF39:
  4817 00ba 73686C64 		.ascii	"shldr_execute\000"
@@ -6408,6 +6418,9 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  4835      6E697400 
  4836              	.LASF101:
  4837 0137 74696D65 		.ascii	"timerFlag\000"
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 108
+
+
  4837      72466C61 
  4837      6700
  4838              	.LASF45:
@@ -6418,9 +6431,6 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  4841      6572766F 
  4841      546F7271 
  4841      756500
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 108
-
-
  4842              	.LASF13:
  4843 0158 696E7431 		.ascii	"int16\000"
  4843      3600
@@ -6468,6 +6478,9 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  4865 01c4 62617365 		.ascii	"baseAzimuth_states\000"
  4865      417A696D 
  4865      7574685F 
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 109
+
+
  4865      73746174 
  4865      657300
  4866              	.LASF29:
@@ -6478,9 +6491,6 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  4869 01e3 66696E5F 		.ascii	"fin_exec\000"
  4869      65786563 
  4869      00
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 109
-
-
  4870              	.LASF66:
  4871 01ec 73656E64 		.ascii	"send_feedback\000"
  4871      5F666565 
@@ -6528,6 +6538,9 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  4892              	.LASF105:
  4893 025e 73686F75 		.ascii	"shoulder_state\000"
  4893      6C646572 
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 110
+
+
  4893      5F737461 
  4893      746500
  4894              	.LASF59:
@@ -6538,9 +6551,6 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  4897      5F666565 
  4897      64626163 
  4897      6B00
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 110
-
-
  4898              	.LASF33:
  4899 0281 656C6277 		.ascii	"elbw_init\000"
  4899      5F696E69 
@@ -6588,6 +6598,9 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  4917      7369676E 
  4917      65642069 
  4917      6E7400
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 111
+
+
  4918              	.LASF24:
  4919 0308 77726973 		.ascii	"wristTilt_states\000"
  4919      7454696C 
@@ -6598,9 +6611,6 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  4921 0319 61765F61 		.ascii	"av_array\000"
  4921      72726179 
  4921      00
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 111
-
-
  4922              	.LASF31:
  4923 0322 656C626F 		.ascii	"elbow_states\000"
  4923      775F7374 
@@ -6648,6 +6658,9 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  4943 03cf 62617365 		.ascii	"baseAz_array\000"
  4943      417A5F61 
  4943      72726179 
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 112
+
+
  4943      00
  4944              	.LASF94:
  4945 03dc 73686F75 		.ascii	"shoulder_array\000"
@@ -6658,9 +6671,6 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  4947 03eb 696E666F 		.ascii	"info_array\000"
  4947      5F617272 
  4947      617900
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 112
-
-
  4948              	.LASF78:
  4949 03f6 73686F75 		.ascii	"shoulder\000"
  4949      6C646572 
@@ -6708,6 +6718,9 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  4970              	.LASF104:
  4971 046a 656C626F 		.ascii	"elbow_state\000"
  4971      775F7374 
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 113
+
+
  4971      61746500 
  4972              	.LASF60:
  4973 0476 74656D70 		.ascii	"temp1\000"
@@ -6718,9 +6731,6 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  4976              	.LASF62:
  4977 0482 74656D70 		.ascii	"temp3\000"
  4977      3300
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 113
-
-
  4978              	.LASF15:
  4979 0488 646F7562 		.ascii	"double\000"
  4979      6C6500
@@ -6768,6 +6778,9 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  4997      617900
  4998              	.LASF54:
  4999 0559 636F6D6D 		.ascii	"command\000"
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccxtXvbc.s 			page 114
+
+
  4999      616E6400 
  5000              	.LASF34:
  5001 0561 656C6277 		.ascii	"elbw_execute\000"
@@ -6778,9 +6791,6 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 1
  5003 056e 696E6372 		.ascii	"increasing\000"
  5003      65617369 
  5003      6E6700
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc5Uyw6h.s 			page 114
-
-
  5004              	.LASF30:
  5005 0579 726F7461 		.ascii	"rotate_feedback\000"
  5005      74655F66 

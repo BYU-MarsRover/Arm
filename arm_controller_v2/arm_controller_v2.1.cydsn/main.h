@@ -19,6 +19,7 @@
     #define udpPort 27015u
 
     //TODO: We need to make sure the bounds checking doesn't break
+    //TODO: re-verify in order to match stop-switch placement
     #define ELBOW_UPPER_BOUND 1000     //was 100  // 16 bit values from ADC
     #define ELBOW_LOWER_BOUND 100       //was 1000
     #define SHOULDER_UPPER_BOUND 800
@@ -26,9 +27,10 @@
     #define SHOULDER_POT 0
     #define ELBOW_POT 1
 
-    //Byte inices of specific bytes transmitted from the wiznet
-    #define BA_BYTE_1 8 //change back to 4 and 5
-    #define BA_BYTE_2 9
+    //TODO: make sure ourbyte scheme matching the newest version for udp format
+    //Array indices of specific bytes transmitted from the wiznet
+    #define BA_BYTE_1 2 //change back to 4 and 5
+    #define BA_BYTE_2 3
     #define SHLDR_BYTE_1 6
     #define SHLDR_BYTE_2 7
     #define ELBW_BYTE_1 8
@@ -38,15 +40,19 @@
     #define WR_BYTE_1 12
     #define WR_BYTE_2 13
 
+    //TODO: Make sure that this data_array is the proper size for the newest version of udp format
     #define DATA_ARRAY_SIZE 14
     int8 data_array[DATA_ARRAY_SIZE]; //stores the parsed instructions from the wiznet
 
+    //TODO: might need to implement another ISR setting wiznet as a flag
     uint8 wiznet; //bool indicating wiznet interupt high or low
     uint8 new_pack; //bool indicating a new pack of instructions to carry out
 
+    //TODO: change this logic. 
     #define NUM_OF_SM 5
-    uint8 fin_exec; //counts
+    uint8 fin_exec; //counts the number of execute states the program goes through
 
+    //TODO: erase this in final product
     #define TEST_ARRAY_SIZE 14
     int8 test_array[TEST_ARRAY_SIZE];
 

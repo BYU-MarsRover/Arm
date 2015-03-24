@@ -6,7 +6,7 @@
 
 //this ISR will be used to set our timeFlag according to our timer component
 ///set to the time of the longest path for our code
-//TODO test how long it takes code to run before really implementing this
+//TODO: test how long it takes code to run before really implementing this
 CY_ISR(timer_isr)
 {
     uint32 isr_var = Timer_1_GetInterruptSourceMasked();
@@ -328,11 +328,11 @@ uint16 make_command(int8* info_array, uint8 byte1, uint8 byte2)
     temp3 = temp1 | temp2;
     command = (temp3/2) + 1500;
     return command;
-    //act_array[act_cspot] = command;
 }
 
 uint16 potFeedback(uint32 channel)
 {
+    //TODO: uncomment this section
     //uint16 feedback = ADC_GetResult16(channel);
     uint16 feedback = 500;
     return feedback;
@@ -439,10 +439,11 @@ void wristTilt()
         case tilt_init:
             for(i = 0; i < WT_ARR_SIZE; i++)
             {
-                WT_array[i] = 1500;
+                WT_array[i] = 1500; //TODO: make sure this is the neutral value
             }
             WT_arr_cspot = 0;
             
+            ServoGoalPosition(0x02, 1500);
             break;
 
         case tilt_control:
@@ -465,14 +466,12 @@ void wristTilt()
             
             if(avg <= 2000 && avg >= 1000)
             {
-                //UART_1_SpiUartPutArray(avg);
                 ServoGoalPosition(0x02, avg);
             }
             else
             {
                 //throw error
-                //BA_PWM_WriteCompare(1500);
-                ServoGoalPosition(0x02, 1500);
+                ServoGoalPosition(0x02, 1500); //TODO: write a neutral value
             }
             fin_exec++;
             break;
@@ -543,9 +542,11 @@ void wristRotate()
         case rotate_init:
             for(i = 0; i < WR_ARR_SIZE; i++)
             {
-                WR_array[i] = 1500;
+                WR_array[i] = 1500; //TODO: Make sure this is the neutral value
             }
             WR_arr_cspot = 0;
+            
+            ServoGoalPosition(0x01, 1500); //TODO: Make sure this is the neutral value
             break;
 
         case rotate_control:
@@ -568,15 +569,13 @@ void wristRotate()
             
             if(avg <= 2000 && avg >= 1000)
             {
-                //BA_PWM_WriteCompare(avg);
-                //TODO maybe scale avg between 0 and 3000
+                //TODO: maybe scale avg between 0 and 3000
                 ServoGoalPosition(0x01, avg);
             }
             else
             {
                 //throw error
-                //BA_PWM_WriteCompare(1500);
-                //TODO if we scale change the "neutral" value
+                //TODO: if we scale change the "neutral" value
                 ServoGoalPosition(0x01, 1500);
             }
             fin_exec++;
@@ -620,7 +619,6 @@ void wristRotate()
 }
 
 //control the elbow
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 enum elbow_states {elbw_start,elbw_init,elbw_execute,elbw_wait} elbow_state;
 void elbow()
 { 
@@ -632,6 +630,7 @@ void elbow()
     uint16 avg;
     uint16 command;
     
+    //TODO: make sure reading from correct pots
     uint16 feedback = potFeedback(ELBOW_POT); //check the feedback in every tick
     
     switch(elbow_state){ //actions
@@ -644,6 +643,8 @@ void elbow()
                 elbow_array[i] = 1500;
             }
             elbw_arr_cspot = 0;
+            
+            ELBW_PWM_WriteCompare(1500);
             break;
 
         case elbw_execute:
@@ -659,16 +660,7 @@ void elbow()
             {
                 elbw_arr_cspot = 0;
             }
-            avg = average(elbow_array, ELBW_ARR_SIZE);
-           
-            //uint16 feedback = potFeedback(ELBOW_POT); --see above
-            //TODO make sure reading from correct pots
-//            char buffer[20];
-//            
-//            itoa(avg, buffer);
-//            
-//            UART_1_UartPutString(buffer);      
-//            UART_1_UartPutString("\r\n");      
+            avg = average(elbow_array, ELBW_ARR_SIZE);   
             
             if(feedback <= ELBOW_LOWER_BOUND)
             {
@@ -763,7 +755,6 @@ void elbow()
 }
 
 //control the shoulder
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 enum shoulder_states {shldr_start,shldr_init,shldr_execute,shldr_wait} shoulder_state;
 void shoulder()
 { 
@@ -774,7 +765,7 @@ void shoulder()
     uint8 i;
     uint16 avg;
     uint16 command;
-    uint16 feedback = potFeedback(SHOULDER_POT);
+    uint16 feedback = potFeedback(SHOULDER_POT); //TODO: Make sure reading from thecorrect pots
     
     switch(shoulder_state){ //actions
         case shldr_start:
@@ -786,6 +777,8 @@ void shoulder()
                 shoulder_array[i] = 1500;
             }
             shldr_arr_cspot = 0;
+                        
+            SHLDR_PWM_WriteCompare(1500);
             break;
 
         case shldr_execute:
@@ -801,8 +794,6 @@ void shoulder()
                 shldr_arr_cspot = 0;
             }
             avg = average(shoulder_array, SHLDR_ARR_SIZE);
-           
-            //uint16 feedback = potFeedback(SHOULDER_POT); -- see above
             
             if(feedback <= SHOULDER_LOWER_BOUND)
             {
@@ -920,6 +911,7 @@ void baseAzimuth()
                 baseAz_array[i] = 1500;
             }
             BA_arr_cspot = 0;
+            
             BA_PWM_WriteCompare(1500);
             break;
 
