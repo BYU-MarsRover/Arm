@@ -1,6 +1,6 @@
 -- ======================================================================
 -- Dynamixel_Servo_Driver.ctl generated from Dynamixel_Servo_Driver
--- 03/26/2015 at 12:25
+-- 03/26/2015 at 13:09
 -- This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 -- ======================================================================
 

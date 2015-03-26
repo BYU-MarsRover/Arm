@@ -50,6 +50,11 @@
   <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\Dynamixel_Servo_Driver\Dynamixel_Servo_Driver.cydsn\codegentemp\UART_2_SPI_UART_PVT.h" value="NONE;UART_2" />
   <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\Dynamixel_Servo_Driver\Dynamixel_Servo_Driver.cydsn\codegentemp\UART_2_PVT.h" value="NONE;UART_2" />
   <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\Dynamixel_Servo_Driver\Dynamixel_Servo_Driver.cydsn\codegentemp\UART_2_BOOT.h" value="NONE;UART_2" />
+  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\Dynamixel_Servo_Driver\Dynamixel_Servo_Driver.cydsn\codegentemp\UART_1.c" value="ARM_C_FILE;UART_1" />
+  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\Dynamixel_Servo_Driver\Dynamixel_Servo_Driver.cydsn\codegentemp\UART_1.h" value="NONE;UART_1" />
+  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\Dynamixel_Servo_Driver\Dynamixel_Servo_Driver.cydsn\codegentemp\UART_1_PM.c" value="ARM_C_FILE;UART_1" />
+  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\Dynamixel_Servo_Driver\Dynamixel_Servo_Driver.cydsn\codegentemp\UART_1_INT.c" value="ARM_C_FILE;UART_1" />
+  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\Dynamixel_Servo_Driver\Dynamixel_Servo_Driver.cydsn\codegentemp\UART_1_BOOT.c" value="ARM_C_FILE;UART_1" />
   <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\Dynamixel_Servo_Driver\Dynamixel_Servo_Driver.cydsn\codegentemp\UART_2_SCBCLK.c" value="ARM_C_FILE;UART_2_SCBCLK" />
   <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\Dynamixel_Servo_Driver\Dynamixel_Servo_Driver.cydsn\codegentemp\UART_2_SCBCLK.h" value="NONE;UART_2_SCBCLK" />
   <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\Dynamixel_Servo_Driver\Dynamixel_Servo_Driver.cydsn\codegentemp\UART_2_tx.c" value="ARM_C_FILE;UART_2_tx" />
@@ -57,6 +62,8 @@
   <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\Dynamixel_Servo_Driver\Dynamixel_Servo_Driver.cydsn\codegentemp\UART_2_tx_aliases.h" value="NONE;UART_2_tx" />
   <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\Dynamixel_Servo_Driver\Dynamixel_Servo_Driver.cydsn\codegentemp\UART_2_SCB_IRQ.c" value="ARM_C_FILE;UART_2_SCB_IRQ" />
   <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\Dynamixel_Servo_Driver\Dynamixel_Servo_Driver.cydsn\codegentemp\UART_2_SCB_IRQ.h" value="NONE;UART_2_SCB_IRQ" />
+  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\Dynamixel_Servo_Driver\Dynamixel_Servo_Driver.cydsn\codegentemp\UART_1_IntClock.c" value="ARM_C_FILE;UART_1_IntClock" />
+  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\Dynamixel_Servo_Driver\Dynamixel_Servo_Driver.cydsn\codegentemp\UART_1_IntClock.h" value="NONE;UART_1_IntClock" />
   <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\Dynamixel_Servo_Driver\Dynamixel_Servo_Driver.cydsn\codegentemp\cm0gcc.ld" value="NONE;cy_boot" />
   <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\Dynamixel_Servo_Driver\Dynamixel_Servo_Driver.cydsn\codegentemp\Cm0RealView.scat" value="NONE;cy_boot" />
   <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\Dynamixel_Servo_Driver\Dynamixel_Servo_Driver.cydsn\codegentemp\Cm0Start.c" value="ARM_C_FILE;cy_boot" />

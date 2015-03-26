@@ -36,10 +36,12 @@
 #include <UART_2_SPI_UART_PVT.h>
 #include <UART_2_PVT.h>
 #include <UART_2_BOOT.h>
+#include <UART_1.h>
 #include <UART_2_SCBCLK.h>
 #include <UART_2_tx.h>
 #include <UART_2_tx_aliases.h>
 #include <UART_2_SCB_IRQ.h>
+#include <UART_1_IntClock.h>
 #include <core_cm0_psoc4.h>
 #include <core_cm0.h>
 #include <CyFlash.h>
