@@ -43,6 +43,7 @@ uint8_t wiznetInit(uint8_t ownIpAddr, uint8_t dstIpAddr, uint16_t dstUdpPort){
 	wiznetReadArray(WIZNET_SHAR, WIZNET_BLK_COMMON, wiznetOldMacAddr, 6); // sizeof(wiznetOldMacAddr)
 	
 	// WizNet Module IP Address Ending
+    cmdArray[17] = 10u;
 	cmdArray[18] = ownIpAddr;
 	
 	// Ephemeral Port (WizNet's own UDP Port when sending UDP, usually value above 0xC000)

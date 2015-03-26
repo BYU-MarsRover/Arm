@@ -843,7 +843,7 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x2c9d
+.debug_info     0x00000000     0x2c9a
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x239 .\CortexM0\ARM_GCC_484\Debug\main.o
  .debug_info    0x00000239       0xfd .\CortexM0\ARM_GCC_484\Debug\cymetadata.o
@@ -852,12 +852,12 @@ END GROUP
  .debug_info    0x00000a77      0x14c .\CortexM0\ARM_GCC_484\Debug\Dynamixel_Servo_Driver.a(LED.o)
  .debug_info    0x00000bc3      0x6f0 .\CortexM0\ARM_GCC_484\Debug\Dynamixel_Servo_Driver.a(Timer_1.o)
  .debug_info    0x000012b3      0x6f0 .\CortexM0\ARM_GCC_484\Debug\Dynamixel_Servo_Driver.a(Timer_2.o)
- .debug_info    0x000019a3       0xba .\CortexM0\ARM_GCC_484\Debug\Dynamixel_Servo_Driver.a(CyBootAsmGnu.o)
- .debug_info    0x00001a5d      0xc5b .\CortexM0\ARM_GCC_484\Debug\Dynamixel_Servo_Driver.a(CyLib.o)
- .debug_info    0x000026b8      0x1eb .\CortexM0\ARM_GCC_484\Debug\Dynamixel_Servo_Driver.a(UART_2.o)
- .debug_info    0x000028a3      0x1ac .\CortexM0\ARM_GCC_484\Debug\Dynamixel_Servo_Driver.a(UART_2_SPI_UART.o)
- .debug_info    0x00002a4f      0x197 .\CortexM0\ARM_GCC_484\Debug\Dynamixel_Servo_Driver.a(UART_2_UART.o)
- .debug_info    0x00002be6       0xb7 .\CortexM0\ARM_GCC_484\Debug\Dynamixel_Servo_Driver.a(UART_2_SPI_UART_INT.o)
+ .debug_info    0x000019a3       0xb7 .\CortexM0\ARM_GCC_484\Debug\Dynamixel_Servo_Driver.a(CyBootAsmGnu.o)
+ .debug_info    0x00001a5a      0xc5b .\CortexM0\ARM_GCC_484\Debug\Dynamixel_Servo_Driver.a(CyLib.o)
+ .debug_info    0x000026b5      0x1eb .\CortexM0\ARM_GCC_484\Debug\Dynamixel_Servo_Driver.a(UART_2.o)
+ .debug_info    0x000028a0      0x1ac .\CortexM0\ARM_GCC_484\Debug\Dynamixel_Servo_Driver.a(UART_2_SPI_UART.o)
+ .debug_info    0x00002a4c      0x197 .\CortexM0\ARM_GCC_484\Debug\Dynamixel_Servo_Driver.a(UART_2_UART.o)
+ .debug_info    0x00002be3       0xb7 .\CortexM0\ARM_GCC_484\Debug\Dynamixel_Servo_Driver.a(UART_2_SPI_UART_INT.o)
 
 .debug_abbrev   0x00000000      0xce8
  *(.debug_abbrev)
@@ -912,32 +912,32 @@ END GROUP
  .debug_frame   0x00001968       0x28 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-memcpy-stub.o)
  .debug_frame   0x00001990       0x20 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-memset.o)
 
-.debug_str      0x00000000     0x179a
+.debug_str      0x00000000     0x1797
  *(.debug_str)
- .debug_str     0x00000000      0x1ee .\CortexM0\ARM_GCC_484\Debug\main.o
-                                0x22f (size before relaxing)
- .debug_str     0x000001ee       0x5b .\CortexM0\ARM_GCC_484\Debug\cymetadata.o
-                                0x1e6 (size before relaxing)
- .debug_str     0x00000249      0x13c .\CortexM0\ARM_GCC_484\Debug\Cm0Start.o
-                                0x2d4 (size before relaxing)
- .debug_str     0x00000385      0x193 .\CortexM0\ARM_GCC_484\Debug\Dynamixel_Servo_Driver.a(cyfitter_cfg.o)
-                                0x36e (size before relaxing)
- .debug_str     0x00000518       0x7e .\CortexM0\ARM_GCC_484\Debug\Dynamixel_Servo_Driver.a(LED.o)
-                                0x213 (size before relaxing)
- .debug_str     0x00000596      0x441 .\CortexM0\ARM_GCC_484\Debug\Dynamixel_Servo_Driver.a(Timer_1.o)
-                                0x5e4 (size before relaxing)
- .debug_str     0x000009d7      0x37d .\CortexM0\ARM_GCC_484\Debug\Dynamixel_Servo_Driver.a(Timer_2.o)
-                                0x5e4 (size before relaxing)
- .debug_str     0x00000d54      0x718 .\CortexM0\ARM_GCC_484\Debug\Dynamixel_Servo_Driver.a(CyLib.o)
-                                0x8ed (size before relaxing)
- .debug_str     0x0000146c      0x131 .\CortexM0\ARM_GCC_484\Debug\Dynamixel_Servo_Driver.a(UART_2.o)
-                                0x2d6 (size before relaxing)
- .debug_str     0x0000159d       0xf1 .\CortexM0\ARM_GCC_484\Debug\Dynamixel_Servo_Driver.a(UART_2_SPI_UART.o)
-                                0x294 (size before relaxing)
- .debug_str     0x0000168e       0xc9 .\CortexM0\ARM_GCC_484\Debug\Dynamixel_Servo_Driver.a(UART_2_UART.o)
-                                0x269 (size before relaxing)
- .debug_str     0x00001757       0x43 .\CortexM0\ARM_GCC_484\Debug\Dynamixel_Servo_Driver.a(UART_2_SPI_UART_INT.o)
-                                0x1ee (size before relaxing)
+ .debug_str     0x00000000      0x1eb .\CortexM0\ARM_GCC_484\Debug\main.o
+                                0x22c (size before relaxing)
+ .debug_str     0x000001eb       0x5b .\CortexM0\ARM_GCC_484\Debug\cymetadata.o
+                                0x1e3 (size before relaxing)
+ .debug_str     0x00000246      0x13c .\CortexM0\ARM_GCC_484\Debug\Cm0Start.o
+                                0x2d1 (size before relaxing)
+ .debug_str     0x00000382      0x193 .\CortexM0\ARM_GCC_484\Debug\Dynamixel_Servo_Driver.a(cyfitter_cfg.o)
+                                0x36b (size before relaxing)
+ .debug_str     0x00000515       0x7e .\CortexM0\ARM_GCC_484\Debug\Dynamixel_Servo_Driver.a(LED.o)
+                                0x210 (size before relaxing)
+ .debug_str     0x00000593      0x441 .\CortexM0\ARM_GCC_484\Debug\Dynamixel_Servo_Driver.a(Timer_1.o)
+                                0x5e1 (size before relaxing)
+ .debug_str     0x000009d4      0x37d .\CortexM0\ARM_GCC_484\Debug\Dynamixel_Servo_Driver.a(Timer_2.o)
+                                0x5e1 (size before relaxing)
+ .debug_str     0x00000d51      0x718 .\CortexM0\ARM_GCC_484\Debug\Dynamixel_Servo_Driver.a(CyLib.o)
+                                0x8ea (size before relaxing)
+ .debug_str     0x00001469      0x131 .\CortexM0\ARM_GCC_484\Debug\Dynamixel_Servo_Driver.a(UART_2.o)
+                                0x2d3 (size before relaxing)
+ .debug_str     0x0000159a       0xf1 .\CortexM0\ARM_GCC_484\Debug\Dynamixel_Servo_Driver.a(UART_2_SPI_UART.o)
+                                0x291 (size before relaxing)
+ .debug_str     0x0000168b       0xc9 .\CortexM0\ARM_GCC_484\Debug\Dynamixel_Servo_Driver.a(UART_2_UART.o)
+                                0x266 (size before relaxing)
+ .debug_str     0x00001754       0x43 .\CortexM0\ARM_GCC_484\Debug\Dynamixel_Servo_Driver.a(UART_2_SPI_UART_INT.o)
+                                0x1eb (size before relaxing)
 
 .debug_loc
  *(.debug_loc)

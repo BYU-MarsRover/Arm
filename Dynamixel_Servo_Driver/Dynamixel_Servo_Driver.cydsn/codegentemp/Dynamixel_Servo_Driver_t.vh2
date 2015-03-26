@@ -1,6 +1,6 @@
--- Project:   \\vmware-host\Shared Folders\OneDrive\Tech\GitHub\Arm\Dynamixel_Servo_Driver\Dynamixel_Servo_Driver.cydsn\Dynamixel_Servo_Driver.cyprj
--- Generated: 03/10/2015 18:04:58
--- PSoC Creator  3.1 SP1
+-- Project:   C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\Dynamixel_Servo_Driver\Dynamixel_Servo_Driver.cydsn\Dynamixel_Servo_Driver.cyprj
+-- Generated: 03/26/2015 12:25:51
+-- PSoC Creator  3.1 Component Pack 1
 
 ENTITY Dynamixel_Servo_Driver IS
     PORT(

@@ -1,6 +1,6 @@
 -- Project:   Dynamixel_Servo_Driver
--- Generated: 03/10/2015 18:04:57
--- PSoC Creator  3.1 SP1
+-- Generated: 03/26/2015 12:25:50
+-- PSoC Creator  3.1 Component Pack 1
 
 ENTITY Dynamixel_Servo_Driver IS
     PORT(

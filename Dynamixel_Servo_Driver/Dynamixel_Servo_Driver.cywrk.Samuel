@@ -193,14 +193,6 @@
 <v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0\ARM_GCC_484\Debug\Listing Files\UART_2_SCBCLK.lst</v>
 <v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0\ARM_GCC_484\Debug\Listing Files\UART_2_SPI_UART.lst</v>
 <v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0\ARM_GCC_484\Debug\Listing Files\UART_2_SPI_UART_INT.lst</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0\ARM_GCC_484\Debug\Listing Files\UART_2_tx.lst</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0\ARM_GCC_484\Debug\Listing Files\UART_2_UART.lst</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0\ARM_GCC_484\Debug\Listing Files\UART_2_UART_BOOT.lst</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0\ARM_GCC_484\Debug\Dynamixel_Servo_Driver.elf</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0\ARM_GCC_484\Debug\Dynamixel_Servo_Driver.hex</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\CortexM0\ARM_GCC_484\Debug\Dynamixel_Servo_Driver.map</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\Dynamixel_Servo_Driver.rpt</v>
-<v>Dynamixel_Servo_Driver\Dynamixel_Servo_Driver\Dynamixel_Servo_Driver_timing.html</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -240,11 +232,7 @@
 </userData>
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
-<OpenDocs>
-<name v=".\Dynamixel_Servo_Driver.cydsn\TopDesign\TopDesign.cysch" />
-<name v=".\Dynamixel_Servo_Driver.cydsn\main.c" />
-<name v=".\Dynamixel_Servo_Driver.cydsn\Dynamixel_Servo_Driver.cydwr" />
-</OpenDocs>
+<OpenDocs />
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

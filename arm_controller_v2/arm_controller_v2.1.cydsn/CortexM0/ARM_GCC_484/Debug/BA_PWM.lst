@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
   24:.\Generated_Source\PSoC4/BA_PWM.c **** /*******************************************************************************
   25:.\Generated_Source\PSoC4/BA_PWM.c **** * Function Name: BA_PWM_Init
   26:.\Generated_Source\PSoC4/BA_PWM.c **** ********************************************************************************
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 2
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 2
 
 
   27:.\Generated_Source\PSoC4/BA_PWM.c **** *
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
   73:.\Generated_Source\PSoC4/BA_PWM.c ****                 BA_PWM_SetCompareSwap(1u);
   74:.\Generated_Source\PSoC4/BA_PWM.c ****                 BA_PWM_WriteCompareBuf(BA_PWM_TC_COMPARE_BUF_VALUE);
   75:.\Generated_Source\PSoC4/BA_PWM.c ****             #endif  /* (1u == BA_PWM_TC_COMPARE_SWAP) */
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 3
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 3
 
 
   76:.\Generated_Source\PSoC4/BA_PWM.c ****         #endif  /* (BA_PWM__COMPARE == BA_PWM_TC_COMP_CAP_MODE) */
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
   57 0020 1A60     		str	r2, [r3]
  113:.\Generated_Source\PSoC4/BA_PWM.c ****         #endif  /* (BA_PWM__PWM == BA_PWM_PWM_MODE) */
  114:.\Generated_Source\PSoC4/BA_PWM.c **** 
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 4
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 4
 
 
  115:.\Generated_Source\PSoC4/BA_PWM.c ****         /* Set values from customizer to CTRL1 */
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  150:.\Generated_Source\PSoC4/BA_PWM.c ****             BA_PWM_SetCompareSwap(1u);
  151:.\Generated_Source\PSoC4/BA_PWM.c ****             BA_PWM_WriteCompareBuf(BA_PWM_PWM_COMPARE_BUF_VALUE);
  152:.\Generated_Source\PSoC4/BA_PWM.c ****         #endif  /* (1u == BA_PWM_PWM_COMPARE_SWAP) */
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 5
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 5
 
 
  153:.\Generated_Source\PSoC4/BA_PWM.c **** 
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  105              		.cfi_offset 7, -8
  106              		.cfi_offset 14, -4
  107 0002 83B0     		sub	sp, sp, #12
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 6
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 6
 
 
  108              		.cfi_def_cfa_offset 24
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  143              		.size	BA_PWM_Enable, .-BA_PWM_Enable
  144              		.section	.text.BA_PWM_Start,"ax",%progbits
  145              		.align	2
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 7
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 7
 
 
  146              		.global	BA_PWM_Start
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  168 0010 034B     		ldr	r3, .L9
  169 0012 0122     		mov	r2, #1
  170 0014 1A70     		strb	r2, [r3]
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 8
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 8
 
 
  171              	.L8:
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  203              		.cfi_def_cfa_register 7
  252:.\Generated_Source\PSoC4/BA_PWM.c ****     uint8 enableInterrupts;
  253:.\Generated_Source\PSoC4/BA_PWM.c **** 
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 9
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 9
 
 
  254:.\Generated_Source\PSoC4/BA_PWM.c ****     enableInterrupts = CyEnterCriticalSection();
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  271:.\Generated_Source\PSoC4/BA_PWM.c **** * Parameters:
  272:.\Generated_Source\PSoC4/BA_PWM.c **** *  mode: Mode for the BA_PWM to operate in
  273:.\Generated_Source\PSoC4/BA_PWM.c **** *   Values:
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 10
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 10
 
 
  274:.\Generated_Source\PSoC4/BA_PWM.c **** *   - BA_PWM_MODE_TIMER_COMPARE - Timer / Counter with
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  296:.\Generated_Source\PSoC4/BA_PWM.c ****     CyExitCriticalSection(enableInterrupts);
  273              		.loc 1 296 0
  274 002c 3B1C     		mov	r3, r7
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 11
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 11
 
 
  275 002e 0F33     		add	r3, r3, #15
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  304              		.cfi_offset 4, -12
  305              		.cfi_offset 7, -8
  306              		.cfi_offset 14, -4
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 12
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 12
 
 
  307 0002 85B0     		sub	sp, sp, #20
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  352              		.align	2
  353              		.global	BA_PWM_SetPrescaler
  354              		.code	16
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 13
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 13
 
 
  355              		.thumb_func
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  363:.\Generated_Source\PSoC4/BA_PWM.c ****     BA_PWM_CONTROL_REG &= (uint32)~BA_PWM_PRESCALER_MASK;
  377              		.loc 1 363 0
  378 0014 0A4B     		ldr	r3, .L21
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 14
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 14
 
 
  379 0016 0A4A     		ldr	r2, .L21
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  379:.\Generated_Source\PSoC4/BA_PWM.c **** * Parameters:
  380:.\Generated_Source\PSoC4/BA_PWM.c **** *  oneShotEnable
  381:.\Generated_Source\PSoC4/BA_PWM.c **** *   Values:
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 15
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 15
 
 
  382:.\Generated_Source\PSoC4/BA_PWM.c **** *     - 0 - Continuous
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  454 0032 3B1C     		mov	r3, r7
  455 0034 0F33     		add	r3, r3, #15
  456 0036 1B78     		ldrb	r3, [r3]
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 16
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 16
 
 
  457 0038 181C     		mov	r0, r3
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  431:.\Generated_Source\PSoC4/BA_PWM.c **** *                             with up counting mode
  432:.\Generated_Source\PSoC4/BA_PWM.c **** *     - PWM_MODE_RIGHT      - Setting for right aligned PWM.  Should be combined
  433:.\Generated_Source\PSoC4/BA_PWM.c **** *                             with down counting mode
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 17
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 17
 
 
  434:.\Generated_Source\PSoC4/BA_PWM.c **** *     - PWM_MODE_CENTER     - Setting for center aligned PWM.  Should be
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  451:.\Generated_Source\PSoC4/BA_PWM.c **** * Function Name: BA_PWM_SetPWMSyncKill
  452:.\Generated_Source\PSoC4/BA_PWM.c **** ********************************************************************************
  453:.\Generated_Source\PSoC4/BA_PWM.c **** *
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 18
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 18
 
 
  454:.\Generated_Source\PSoC4/BA_PWM.c **** * Summary:
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  539 001a 0421     		mov	r1, #4
  540 001c 8A43     		bic	r2, r1
  541 001e 1A60     		str	r2, [r3]
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 19
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 19
 
 
  486:.\Generated_Source\PSoC4/BA_PWM.c ****     BA_PWM_CONTROL_REG |= ((uint32)((syncKillEnable & BA_PWM_1BIT_MASK)  <<
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  504:.\Generated_Source\PSoC4/BA_PWM.c **** *  stopOnKillEnable
  505:.\Generated_Source\PSoC4/BA_PWM.c **** *   Values:
  506:.\Generated_Source\PSoC4/BA_PWM.c **** *     - 0 - Don't stop
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 20
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 20
 
 
  507:.\Generated_Source\PSoC4/BA_PWM.c **** *     - 1 - Stop
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  615 0034 0F33     		add	r3, r3, #15
  616 0036 1B78     		ldrb	r3, [r3]
  617 0038 181C     		mov	r0, r3
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 21
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 21
 
 
  618 003a FFF7FEFF 		bl	CyExitCriticalSection
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  648 0004 00AF     		add	r7, sp, #0
  649              		.cfi_def_cfa_register 7
  650 0006 7860     		str	r0, [r7, #4]
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 22
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 22
 
 
  548:.\Generated_Source\PSoC4/BA_PWM.c ****     uint8 enableInterrupts;
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  695              		.global	BA_PWM_SetPWMInvert
  696              		.code	16
  697              		.thumb_func
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 23
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 23
 
 
  698              		.type	BA_PWM_SetPWMInvert, %function
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  724 001c 0A40     		and	r2, r1
  725 001e 1A60     		str	r2, [r3]
  586:.\Generated_Source\PSoC4/BA_PWM.c ****     BA_PWM_CONTROL_REG |= mask;
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 24
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 24
 
 
  726              		.loc 1 586 0
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  607:.\Generated_Source\PSoC4/BA_PWM.c **** *
  608:.\Generated_Source\PSoC4/BA_PWM.c **** *******************************************************************************/
  609:.\Generated_Source\PSoC4/BA_PWM.c **** void BA_PWM_WriteCounter(uint32 count)
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 25
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 25
 
 
  610:.\Generated_Source\PSoC4/BA_PWM.c **** {
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  627:.\Generated_Source\PSoC4/BA_PWM.c **** *
  628:.\Generated_Source\PSoC4/BA_PWM.c **** *******************************************************************************/
  629:.\Generated_Source\PSoC4/BA_PWM.c **** uint32 BA_PWM_ReadCounter(void)
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 26
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 26
 
 
  630:.\Generated_Source\PSoC4/BA_PWM.c **** {
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  651:.\Generated_Source\PSoC4/BA_PWM.c **** *                                         generated both when counter reaches 0
  652:.\Generated_Source\PSoC4/BA_PWM.c **** *                                         and period
  653:.\Generated_Source\PSoC4/BA_PWM.c **** *
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 27
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 27
 
 
  654:.\Generated_Source\PSoC4/BA_PWM.c **** * Return:
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  869 0038 BD46     		mov	sp, r7
  870 003a 05B0     		add	sp, sp, #20
  871              		@ sp needed
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 28
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 28
 
 
  872 003c 90BD     		pop	{r4, r7, pc}
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  905 0010 1A60     		str	r2, [r3]
  690:.\Generated_Source\PSoC4/BA_PWM.c **** }
  906              		.loc 1 690 0
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 29
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 29
 
 
  907 0012 BD46     		mov	sp, r7
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  941 000e BD46     		mov	sp, r7
  942              		@ sp needed
  943 0010 80BD     		pop	{r7, pc}
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 30
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 30
 
 
  944              	.L57:
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  971              		.loc 1 737 0
  972 0008 3C1C     		mov	r4, r7
  973 000a 0F34     		add	r4, r4, #15
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 31
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 31
 
 
  974 000c FFF7FEFF 		bl	CyEnterCriticalSection
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  747:.\Generated_Source\PSoC4/BA_PWM.c **** * Function Name: BA_PWM_WritePeriodBuf
  748:.\Generated_Source\PSoC4/BA_PWM.c **** ********************************************************************************
  749:.\Generated_Source\PSoC4/BA_PWM.c **** *
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 32
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 32
 
 
  750:.\Generated_Source\PSoC4/BA_PWM.c **** * Summary:
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  767:.\Generated_Source\PSoC4/BA_PWM.c **** * Function Name: BA_PWM_ReadPeriodBuf
  768:.\Generated_Source\PSoC4/BA_PWM.c **** ********************************************************************************
  769:.\Generated_Source\PSoC4/BA_PWM.c **** *
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 33
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 33
 
 
  770:.\Generated_Source\PSoC4/BA_PWM.c **** * Summary:
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  791:.\Generated_Source\PSoC4/BA_PWM.c **** *  Writes the register that controls whether the period registers are
  792:.\Generated_Source\PSoC4/BA_PWM.c **** *  swapped. When enabled in Timer/Counter mode the swap occurs at a TC event.
  793:.\Generated_Source\PSoC4/BA_PWM.c **** *  In the PWM mode the swap occurs at the next TC event following a hardware
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 34
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 34
 
 
  794:.\Generated_Source\PSoC4/BA_PWM.c **** *  switch event.
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  1123 0030 1A60     		str	r2, [r3]
  814:.\Generated_Source\PSoC4/BA_PWM.c ****                                                             BA_PWM_RELOAD_PERIOD_SHIFT));
  815:.\Generated_Source\PSoC4/BA_PWM.c **** 
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 35
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 35
 
 
  816:.\Generated_Source\PSoC4/BA_PWM.c ****     CyExitCriticalSection(enableInterrupts);
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  1157              		.cfi_def_cfa_offset 16
  1158 0004 00AF     		add	r7, sp, #0
  1159              		.cfi_def_cfa_register 7
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 36
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 36
 
 
  1160 0006 7860     		str	r0, [r7, #4]
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  864:.\Generated_Source\PSoC4/BA_PWM.c **** * Function Name: BA_PWM_ReadCompare
  865:.\Generated_Source\PSoC4/BA_PWM.c **** ********************************************************************************
  866:.\Generated_Source\PSoC4/BA_PWM.c **** *
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 37
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 37
 
 
  867:.\Generated_Source\PSoC4/BA_PWM.c **** * Summary:
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  1201 000c 181C     		mov	r0, r3
  1202 000e BD46     		mov	sp, r7
  1203              		@ sp needed
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 38
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 38
 
 
  1204 0010 80BD     		pop	{r7, pc}
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  934:.\Generated_Source\PSoC4/BA_PWM.c ****         {
  935:.\Generated_Source\PSoC4/BA_PWM.c ****             compareBuf++;
  936:.\Generated_Source\PSoC4/BA_PWM.c ****         }
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 39
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 39
 
 
  937:.\Generated_Source\PSoC4/BA_PWM.c ****         else if (((uint32)BA_PWM__COUNT_UP == currentMode) && (0u != compareBuf))
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  965:.\Generated_Source\PSoC4/BA_PWM.c **** uint32 BA_PWM_ReadCompareBuf(void)
  966:.\Generated_Source\PSoC4/BA_PWM.c **** {
  1257              		.loc 1 966 0
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 40
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 40
 
 
  1258              		.cfi_startproc
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  1285              		.code	16
  1286              		.thumb_func
  1287              		.type	BA_PWM_ReadCapture, %function
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 41
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 41
 
 
  1288              	BA_PWM_ReadCapture:
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  1321              	BA_PWM_ReadCaptureBuf:
  1322              	.LFB27:
 1015:.\Generated_Source\PSoC4/BA_PWM.c **** 
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 42
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 42
 
 
 1016:.\Generated_Source\PSoC4/BA_PWM.c **** 
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
 1037:.\Generated_Source\PSoC4/BA_PWM.c **** 
 1038:.\Generated_Source\PSoC4/BA_PWM.c **** /*******************************************************************************
 1039:.\Generated_Source\PSoC4/BA_PWM.c **** * Function Name: BA_PWM_SetCaptureMode
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 43
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 43
 
 
 1040:.\Generated_Source\PSoC4/BA_PWM.c **** ********************************************************************************
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  1383 0022 074A     		ldr	r2, .L94
  1384 0024 1168     		ldr	r1, [r2]
  1385 0026 7A68     		ldr	r2, [r7, #4]
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 44
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 44
 
 
  1386 0028 0A43     		orr	r2, r1
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
 1093:.\Generated_Source\PSoC4/BA_PWM.c **** {
  1414              		.loc 1 1093 0
  1415              		.cfi_startproc
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 45
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 45
 
 
  1416 0000 90B5     		push	{r4, r7, lr}
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  1461 0040 64010540 		.word	1074069860
  1462              		.cfi_endproc
  1463              	.LFE29:
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 46
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 46
 
 
  1464              		.size	BA_PWM_SetReloadMode, .-BA_PWM_SetReloadMode
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
 1130:.\Generated_Source\PSoC4/BA_PWM.c **** 
 1131:.\Generated_Source\PSoC4/BA_PWM.c ****     BA_PWM_TRIG_CONTROL1_REG &= (uint32)~BA_PWM_START_MASK;
  1491              		.loc 1 1131 0
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 47
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 47
 
 
  1492 0014 0A4B     		ldr	r3, .L100
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
 1145:.\Generated_Source\PSoC4/BA_PWM.c **** * Parameters:
 1146:.\Generated_Source\PSoC4/BA_PWM.c **** *  triggerMode: Enumerated trigger mode value
 1147:.\Generated_Source\PSoC4/BA_PWM.c **** *   Values:
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 48
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 48
 
 
 1148:.\Generated_Source\PSoC4/BA_PWM.c **** *     - BA_PWM_TRIG_LEVEL     - Level
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  1568 0030 0F33     		add	r3, r3, #15
  1569 0032 1B78     		ldrb	r3, [r3]
  1570 0034 181C     		mov	r0, r3
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 49
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 49
 
 
  1571 0036 FFF7FEFF 		bl	CyExitCriticalSection
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  1600              		.cfi_def_cfa_offset 32
  1601 0004 00AF     		add	r7, sp, #0
  1602              		.cfi_def_cfa_register 7
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 50
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 50
 
 
  1603 0006 7860     		str	r0, [r7, #4]
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  1648              		.type	BA_PWM_TriggerCommand, %function
  1649              	BA_PWM_TriggerCommand:
  1650              	.LFB33:
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 51
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 51
 
 
 1201:.\Generated_Source\PSoC4/BA_PWM.c **** 
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
 1236:.\Generated_Source\PSoC4/BA_PWM.c ****     BA_PWM_COMMAND_REG = ((uint32)(mask << command));
  1670              		.loc 1 1236 0
  1671 0016 084B     		ldr	r3, .L109
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 52
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 52
 
 
  1672 0018 3A68     		ldr	r2, [r7]
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
 1259:.\Generated_Source\PSoC4/BA_PWM.c **** uint32 BA_PWM_ReadStatus(void)
 1260:.\Generated_Source\PSoC4/BA_PWM.c **** {
  1704              		.loc 1 1260 0
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 53
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 53
 
 
  1705              		.cfi_startproc
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
 1276:.\Generated_Source\PSoC4/BA_PWM.c **** *   Values:
 1277:.\Generated_Source\PSoC4/BA_PWM.c **** *     - BA_PWM_INTR_MASK_TC       - Terminal count mask
 1278:.\Generated_Source\PSoC4/BA_PWM.c **** *     - BA_PWM_INTR_MASK_CC_MATCH - Compare count / capture mask
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 54
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 54
 
 
 1279:.\Generated_Source\PSoC4/BA_PWM.c **** *
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
 1298:.\Generated_Source\PSoC4/BA_PWM.c **** *   None
 1299:.\Generated_Source\PSoC4/BA_PWM.c **** *
 1300:.\Generated_Source\PSoC4/BA_PWM.c **** * Return:
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 55
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 55
 
 
 1301:.\Generated_Source\PSoC4/BA_PWM.c **** *  Masked interrupt source
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
 1324:.\Generated_Source\PSoC4/BA_PWM.c **** *  Interrupt request value
 1325:.\Generated_Source\PSoC4/BA_PWM.c **** *   Values:
 1326:.\Generated_Source\PSoC4/BA_PWM.c **** *     - BA_PWM_INTR_MASK_TC       - Terminal count mask
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 56
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 56
 
 
 1327:.\Generated_Source\PSoC4/BA_PWM.c **** *     - BA_PWM_INTR_MASK_CC_MATCH - Compare count / capture mask
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
 1350:.\Generated_Source\PSoC4/BA_PWM.c **** *  None
 1351:.\Generated_Source\PSoC4/BA_PWM.c **** *
 1352:.\Generated_Source\PSoC4/BA_PWM.c **** *******************************************************************************/
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 57
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 57
 
 
 1353:.\Generated_Source\PSoC4/BA_PWM.c **** void BA_PWM_ClearInterrupt(uint32 interruptMask)
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
 1372:.\Generated_Source\PSoC4/BA_PWM.c **** * Return:
 1373:.\Generated_Source\PSoC4/BA_PWM.c **** *  None
 1374:.\Generated_Source\PSoC4/BA_PWM.c **** *
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 58
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 58
 
 
 1375:.\Generated_Source\PSoC4/BA_PWM.c **** *******************************************************************************/
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  1924 002d 01       		.byte	0x1
  1925 002e 08       		.byte	0x8
  1926 002f 51030000 		.4byte	.LASF1
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 59
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 59
 
 
  1927 0033 02       		.uleb128 0x2
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  1981 0096 05       		.uleb128 0x5
  1982 0097 A4020000 		.4byte	.LASF14
  1983 009b 02       		.byte	0x2
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 60
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 60
 
 
  1984 009c 4D01     		.2byte	0x14d
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  2038 010f FC       		.byte	0xfc
  2039 0110 6B000000 		.4byte	0x6b
  2040 0114 02       		.uleb128 0x2
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 61
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 61
 
 
  2041 0115 91       		.byte	0x91
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  2095 0181 00       		.byte	0
  2096 0182 0A       		.uleb128 0xa
  2097 0183 6D050000 		.4byte	.LASF25
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 62
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 62
 
 
  2098 0187 01       		.byte	0x1
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  2152 01f4 00000000 		.4byte	.LFB8
  2153 01f8 1C000000 		.4byte	.LFE8-.LFB8
  2154 01fc 01       		.uleb128 0x1
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 63
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 63
 
 
  2155 01fd 9C       		.byte	0x9c
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  2209 026c 0C       		.uleb128 0xc
  2210 026d 28050000 		.4byte	.LASF20
  2211 0271 01       		.byte	0x1
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 64
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 64
 
 
  2212 0272 0302     		.2byte	0x203
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  2266 02e2 02       		.uleb128 0x2
  2267 02e3 91       		.byte	0x91
  2268 02e4 6F       		.sleb128 -17
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 65
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 65
 
 
  2269 02e5 00       		.byte	0
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  2323 0357 0D       		.uleb128 0xd
  2324 0358 20040000 		.4byte	.LASF43
  2325 035c 01       		.byte	0x1
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 66
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 66
 
 
  2326 035d AF02     		.2byte	0x2af
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  2380 03d0 00000000 		.4byte	.LFB19
  2381 03d4 1C000000 		.4byte	.LFE19-.LFB19
  2382 03d8 01       		.uleb128 0x1
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 67
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 67
 
 
  2383 03d9 9C       		.byte	0x9c
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  2437 044b 5F040000 		.4byte	0x45f
  2438 044f 0B       		.uleb128 0xb
  2439 0450 23030000 		.4byte	.LASF54
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 68
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 68
 
 
  2440 0454 01       		.byte	0x1
@@ -4078,7 +4078,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  2494 04cc 01       		.byte	0x1
  2495 04cd 0804     		.2byte	0x408
  2496 04cf 76000000 		.4byte	0x76
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 69
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 69
 
 
  2497 04d3 00000000 		.4byte	.LFB27
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  2551 0545 6F       		.sleb128 -17
  2552 0546 00       		.byte	0
  2553 0547 0A       		.uleb128 0xa
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 70
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 70
 
 
  2554 0548 BC040000 		.4byte	.LASF64
@@ -4198,7 +4198,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  2608 05b7 A604     		.2byte	0x4a6
  2609 05b9 00000000 		.4byte	.LFB32
  2610 05bd 44000000 		.4byte	.LFE32-.LFB32
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 71
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 71
 
 
  2611 05c1 01       		.uleb128 0x1
@@ -4258,7 +4258,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  2665 062a 0E       		.uleb128 0xe
  2666 062b 89040000 		.4byte	.LASF69
  2667 062f 01       		.byte	0x1
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 72
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 72
 
 
  2668 0630 EB04     		.2byte	0x4eb
@@ -4318,7 +4318,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  2722 06ae 4905     		.2byte	0x549
  2723 06b0 76000000 		.4byte	0x76
  2724 06b4 02       		.uleb128 0x2
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 73
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 73
 
 
  2725 06b5 91       		.byte	0x91
@@ -4378,7 +4378,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  2779 0016 0B       		.uleb128 0xb
  2780 0017 0B       		.uleb128 0xb
  2781 0018 3E       		.uleb128 0x3e
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 74
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 74
 
 
  2782 0019 0B       		.uleb128 0xb
@@ -4438,7 +4438,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  2836 004f 03       		.uleb128 0x3
  2837 0050 0E       		.uleb128 0xe
  2838 0051 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 75
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 75
 
 
  2839 0052 0B       		.uleb128 0xb
@@ -4498,7 +4498,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  2893 008a 00       		.byte	0
  2894 008b 0A       		.uleb128 0xa
  2895 008c 2E       		.uleb128 0x2e
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 76
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 76
 
 
  2896 008d 01       		.byte	0x1
@@ -4558,7 +4558,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  2950 00c4 2E       		.uleb128 0x2e
  2951 00c5 01       		.byte	0x1
  2952 00c6 3F       		.uleb128 0x3f
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 77
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 77
 
 
  2953 00c7 19       		.uleb128 0x19
@@ -4618,7 +4618,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  3007 00ff 0B       		.uleb128 0xb
  3008 0100 49       		.uleb128 0x49
  3009 0101 13       		.uleb128 0x13
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 78
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 78
 
 
  3010 0102 3F       		.uleb128 0x3f
@@ -4678,7 +4678,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  3064 00ac 1C000000 		.4byte	.LFE19-.LFB19
  3065 00b0 00000000 		.4byte	.LFB20
  3066 00b4 18000000 		.4byte	.LFE20-.LFB20
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 79
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 79
 
 
  3067 00b8 00000000 		.4byte	.LFB21
@@ -4738,7 +4738,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  3121 0030 00000000 		.4byte	.LFB6
  3122 0034 48000000 		.4byte	.LFE6
  3123 0038 00000000 		.4byte	.LFB7
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 80
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 80
 
 
  3124 003c 4C000000 		.4byte	.LFE7
@@ -4798,7 +4798,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  3178 0114 20000000 		.4byte	.LFE34
  3179 0118 00000000 		.4byte	.LFB35
  3180 011c 18000000 		.4byte	.LFE35
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 81
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 81
 
 
  3181 0120 00000000 		.4byte	.LFB36
@@ -4858,7 +4858,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  3209      7369676E 
  3209      65642069 
  3210              	.LASF24:
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 82
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 82
 
 
  3211 007d 71644D6F 		.ascii	"qdMode\000"
@@ -4918,7 +4918,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  3233      333200
  3234              	.LASF41:
  3235 0164 42415F50 		.ascii	"BA_PWM_SetCounterMode\000"
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 83
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 83
 
 
  3235      574D5F53 
@@ -4978,7 +4978,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  3257      65744361 
  3257      70747572 
  3257      654D6F64 
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 84
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 84
 
 
  3258              	.LASF16:
@@ -5038,7 +5038,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  3279      7465645F 
  3279      536F7572 
  3279      63655C50 
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 85
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 85
 
 
  3280              	.LASF15:
@@ -5098,7 +5098,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  3302              	.LASF34:
  3303 0388 73746F70 		.ascii	"stopOnKillEnable\000"
  3303      4F6E4B69 
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 86
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 86
 
 
  3303      6C6C456E 
@@ -5158,7 +5158,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  3322              	.LASF69:
  3323 0489 42415F50 		.ascii	"BA_PWM_ReadStatus\000"
  3323      574D5F52 
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 87
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 87
 
 
  3323      65616453 
@@ -5218,7 +5218,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 1
  3343      574D5F52 
  3343      65616443 
  3343      6F6D7061 
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccp0F9Es.s 			page 88
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccvZGOY8.s 			page 88
 
 
  3343      726500

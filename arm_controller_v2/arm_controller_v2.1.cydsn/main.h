@@ -29,28 +29,23 @@
 
     //TODO: make sure ourbyte scheme matching the newest version for udp format
     //Array indices of specific bytes transmitted from the wiznet
-    #define BA_BYTE_1 2 //change back to 4 and 5
-    #define BA_BYTE_2 3
-    #define SHLDR_BYTE_1 6
-    #define SHLDR_BYTE_2 7
-    #define ELBW_BYTE_1 8
-    #define ELBW_BYTE_2 9
-    #define WT_BYTE_1 10
-    #define WT_BYTE_2 11
-    #define WR_BYTE_1 12
-    #define WR_BYTE_2 13
+    #define BA_BYTE_1 10 //change back to 4 and 5
+    #define BA_BYTE_2 11
+    #define SHLDR_BYTE_1 12
+    #define SHLDR_BYTE_2 13
+    #define ELBW_BYTE_1 14
+    #define ELBW_BYTE_2 15
+    #define WT_BYTE_1 16
+    #define WT_BYTE_2 17
+    #define WR_BYTE_1 18
+    #define WR_BYTE_2 19
 
     //TODO: Make sure that this data_array is the proper size for the newest version of udp format
-    #define DATA_ARRAY_SIZE 14
+    #define DATA_ARRAY_SIZE 22
     int8 data_array[DATA_ARRAY_SIZE]; //stores the parsed instructions from the wiznet
 
     //TODO: might need to implement another ISR setting wiznet as a flag
     uint8 wiznet; //bool indicating wiznet interupt high or low
-    uint8 new_pack; //bool indicating a new pack of instructions to carry out
-
-    //TODO: change this logic. 
-    #define NUM_OF_SM 5
-    uint8 fin_exec; //counts the number of execute states the program goes through
 
     //TODO: erase this in final product
     #define TEST_ARRAY_SIZE 14
@@ -75,6 +70,14 @@
     #define WR_ARR_SIZE 20  //for wristRotate
     uint8 WR_arr_cspot;
     uint16 WR_array[WR_ARR_SIZE];
+    
+    // execute flags
+    uint8 WT_FLAG = 0;
+    uint8 WR_FLAG = 0;
+    uint8 ELBOW_FLAG = 0;
+    uint8 SHOULDER_FLAG = 0;
+    uint8 BA_FLAG = 0;
+    
 
     //uint16 feedback_count;
     volatile uint8 timerFlag; //used in the timer_isr

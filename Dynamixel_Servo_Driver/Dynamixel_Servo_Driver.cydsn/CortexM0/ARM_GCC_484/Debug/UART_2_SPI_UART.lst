@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccrvbamY.s 			page 1
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccASSPsf.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccrvbamY.s 			page 1
   30:.\Generated_Source\PSoC4/UART_2_SPI_UART.c **** 
   31:.\Generated_Source\PSoC4/UART_2_SPI_UART.c **** #if(UART_2_INTERNAL_TX_SW_BUFFER_CONST)
   32:.\Generated_Source\PSoC4/UART_2_SPI_UART.c ****     volatile uint32 UART_2_txBufferHead;
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccrvbamY.s 			page 2
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccASSPsf.s 			page 2
 
 
   33:.\Generated_Source\PSoC4/UART_2_SPI_UART.c ****     volatile uint32 UART_2_txBufferTail;
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccrvbamY.s 			page 1
   87:.\Generated_Source\PSoC4/UART_2_SPI_UART.c ****                 if(UART_2_RX_BUFFER_SIZE == locTail)
   88:.\Generated_Source\PSoC4/UART_2_SPI_UART.c ****                 {
   89:.\Generated_Source\PSoC4/UART_2_SPI_UART.c ****                     locTail = 0u;
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccrvbamY.s 			page 3
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccASSPsf.s 			page 3
 
 
   90:.\Generated_Source\PSoC4/UART_2_SPI_UART.c ****                 }
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccrvbamY.s 			page 1
  144:.\Generated_Source\PSoC4/UART_2_SPI_UART.c ****                 size = (locHead + (UART_2_RX_BUFFER_SIZE - UART_2_rxBufferTail));
  145:.\Generated_Source\PSoC4/UART_2_SPI_UART.c ****             }
  146:.\Generated_Source\PSoC4/UART_2_SPI_UART.c ****         }
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccrvbamY.s 			page 4
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccASSPsf.s 			page 4
 
 
  147:.\Generated_Source\PSoC4/UART_2_SPI_UART.c ****         #else
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccrvbamY.s 			page 1
  201:.\Generated_Source\PSoC4/UART_2_SPI_UART.c **** 
  202:.\Generated_Source\PSoC4/UART_2_SPI_UART.c **** #if(UART_2_TX_DIRECTION)
  203:.\Generated_Source\PSoC4/UART_2_SPI_UART.c **** 
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccrvbamY.s 			page 5
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccASSPsf.s 			page 5
 
 
  204:.\Generated_Source\PSoC4/UART_2_SPI_UART.c ****     /*******************************************************************************
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccrvbamY.s 			page 1
  247:.\Generated_Source\PSoC4/UART_2_SPI_UART.c ****                (UART_2_SPI_UART_FIFO_SIZE != UART_2_GET_TX_FIFO_ENTRIES))
  248:.\Generated_Source\PSoC4/UART_2_SPI_UART.c ****             {
  249:.\Generated_Source\PSoC4/UART_2_SPI_UART.c ****                 /* TX software buffer is empty: put data directly in TX FIFO */
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccrvbamY.s 			page 6
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccASSPsf.s 			page 6
 
 
  250:.\Generated_Source\PSoC4/UART_2_SPI_UART.c ****                 UART_2_TX_FIFO_WR_REG = txData;
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccrvbamY.s 			page 1
   62              	.LFE0:
   63              		.size	UART_2_SpiUartWriteTxData, .-UART_2_SpiUartWriteTxData
   64              		.section	.text.UART_2_SpiUartPutArray,"ax",%progbits
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccrvbamY.s 			page 7
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccASSPsf.s 			page 7
 
 
   65              		.align	2
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccrvbamY.s 			page 1
   92 0014 D318     		add	r3, r2, r3
   93 0016 1B78     		ldrb	r3, [r3]
   94 0018 181C     		mov	r0, r3
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccrvbamY.s 			page 8
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccASSPsf.s 			page 8
 
 
   95 001a FFF7FEFF 		bl	UART_2_SpiUartWriteTxData
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccrvbamY.s 			page 1
  331:.\Generated_Source\PSoC4/UART_2_SPI_UART.c ****     {
  122              		.loc 1 331 0
  123              		.cfi_startproc
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccrvbamY.s 			page 9
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccASSPsf.s 			page 9
 
 
  124 0000 80B5     		push	{r7, lr}
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccrvbamY.s 			page 1
  151              	.LFE2:
  152              		.size	UART_2_SpiUartGetTxBufferSize, .-UART_2_SpiUartGetTxBufferSize
  153              		.section	.text.UART_2_SpiUartClearTxBuffer,"ax",%progbits
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccrvbamY.s 			page 10
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccASSPsf.s 			page 10
 
 
  154              		.align	2
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccrvbamY.s 			page 1
  169              		.loc 1 397 0
  170 0004 074B     		ldr	r3, .L13
  171 0006 074A     		ldr	r2, .L13
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccrvbamY.s 			page 11
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccASSPsf.s 			page 11
 
 
  172 0008 1268     		ldr	r2, [r2]
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccrvbamY.s 			page 1
  203              		.loc 1 420 0
  204              		.cfi_startproc
  205 0000 80B5     		push	{r7, lr}
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccrvbamY.s 			page 12
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccASSPsf.s 			page 12
 
 
  206              		.cfi_def_cfa_offset 8
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccrvbamY.s 			page 1
  437:.\Generated_Source\PSoC4/UART_2_SPI_UART.c **** *
  438:.\Generated_Source\PSoC4/UART_2_SPI_UART.c **** * Parameters:
  439:.\Generated_Source\PSoC4/UART_2_SPI_UART.c **** *  None
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccrvbamY.s 			page 13
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccASSPsf.s 			page 13
 
 
  440:.\Generated_Source\PSoC4/UART_2_SPI_UART.c **** *
@@ -778,21 +778,21 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccrvbamY.s 			page 1
  283 0004 0400     		.2byte	0x4
  284 0006 00000000 		.4byte	.Ldebug_abbrev0
  285 000a 04       		.byte	0x4
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccrvbamY.s 			page 14
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccASSPsf.s 			page 14
 
 
  286 000b 01       		.uleb128 0x1
  287 000c B1000000 		.4byte	.LASF27
  288 0010 01       		.byte	0x1
  289 0011 80000000 		.4byte	.LASF28
- 290 0015 D3010000 		.4byte	.LASF29
+ 290 0015 0B020000 		.4byte	.LASF29
  291 0019 00000000 		.4byte	.Ldebug_ranges0+0
  292 001d 00000000 		.4byte	0
  293 0021 00000000 		.4byte	.Ldebug_line0
  294 0025 02       		.uleb128 0x2
  295 0026 01       		.byte	0x1
  296 0027 06       		.byte	0x6
- 297 0028 88020000 		.4byte	.LASF0
+ 297 0028 85020000 		.4byte	.LASF0
  298 002c 02       		.uleb128 0x2
  299 002d 01       		.byte	0x1
  300 002e 08       		.byte	0x8
@@ -800,7 +800,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccrvbamY.s 			page 1
  302 0033 02       		.uleb128 0x2
  303 0034 02       		.byte	0x2
  304 0035 05       		.byte	0x5
- 305 0036 75020000 		.4byte	.LASF2
+ 305 0036 72020000 		.4byte	.LASF2
  306 003a 02       		.uleb128 0x2
  307 003b 02       		.byte	0x2
  308 003c 07       		.byte	0x7
@@ -808,7 +808,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccrvbamY.s 			page 1
  310 0041 02       		.uleb128 0x2
  311 0042 04       		.byte	0x4
  312 0043 05       		.byte	0x5
- 313 0044 7F020000 		.4byte	.LASF4
+ 313 0044 7C020000 		.4byte	.LASF4
  314 0048 02       		.uleb128 0x2
  315 0049 04       		.byte	0x4
  316 004a 07       		.byte	0x7
@@ -816,7 +816,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccrvbamY.s 			page 1
  318 004f 02       		.uleb128 0x2
  319 0050 08       		.byte	0x8
  320 0051 05       		.byte	0x5
- 321 0052 62020000 		.4byte	.LASF6
+ 321 0052 F8010000 		.4byte	.LASF6
  322 0056 02       		.uleb128 0x2
  323 0057 08       		.byte	0x8
  324 0058 07       		.byte	0x7
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccrvbamY.s 			page 1
  340 0077 8F010000 		.4byte	.LASF10
  341 007b 02       		.byte	0x2
  342 007c A3       		.byte	0xa3
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccrvbamY.s 			page 15
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccASSPsf.s 			page 15
 
 
  343 007d 48000000 		.4byte	0x48
@@ -853,7 +853,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccrvbamY.s 			page 1
  352 008f 02       		.uleb128 0x2
  353 0090 01       		.byte	0x1
  354 0091 08       		.byte	0x8
- 355 0092 70020000 		.4byte	.LASF13
+ 355 0092 06020000 		.4byte	.LASF13
  356 0096 05       		.uleb128 0x5
  357 0097 00000000 		.4byte	.LASF14
  358 009b 02       		.byte	0x2
@@ -864,7 +864,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccrvbamY.s 			page 1
  363 00a7 02       		.uleb128 0x2
  364 00a8 04       		.byte	0x4
  365 00a9 07       		.byte	0x7
- 366 00aa 59020000 		.4byte	.LASF15
+ 366 00aa EF010000 		.4byte	.LASF15
  367 00ae 07       		.uleb128 0x7
  368 00af 4A010000 		.4byte	.LASF16
  369 00b3 01       		.byte	0x1
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccrvbamY.s 			page 1
  397 00ee 2B01     		.2byte	0x12b
  398 00f0 14010000 		.4byte	0x114
  399 00f4 02       		.uleb128 0x2
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccrvbamY.s 			page 16
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccASSPsf.s 			page 16
 
 
  400 00f5 91       		.byte	0x91
@@ -945,7 +945,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccrvbamY.s 			page 1
  441 0147 74       		.sleb128 -12
  442 0148 00       		.byte	0
  443 0149 10       		.uleb128 0x10
- 444 014a 3D020000 		.4byte	.LASF30
+ 444 014a D3010000 		.4byte	.LASF30
  445 014e 01       		.byte	0x1
  446 014f 7701     		.2byte	0x177
  447 0151 00000000 		.4byte	.LFB3
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccrvbamY.s 			page 1
  454 0161 A301     		.2byte	0x1a3
  455 0163 76000000 		.4byte	0x76
  456 0167 00000000 		.4byte	.LFB4
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccrvbamY.s 			page 17
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccASSPsf.s 			page 17
 
 
  457 016b 20000000 		.4byte	.LFE4-.LFB4
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccrvbamY.s 			page 1
  511 0014 24       		.uleb128 0x24
  512 0015 00       		.byte	0
  513 0016 0B       		.uleb128 0xb
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccrvbamY.s 			page 18
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccASSPsf.s 			page 18
 
 
  514 0017 0B       		.uleb128 0xb
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccrvbamY.s 			page 1
  568 004d 3F       		.uleb128 0x3f
  569 004e 19       		.uleb128 0x19
  570 004f 03       		.uleb128 0x3
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccrvbamY.s 			page 19
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccASSPsf.s 			page 19
 
 
  571 0050 0E       		.uleb128 0xe
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccrvbamY.s 			page 1
  625 0088 19       		.uleb128 0x19
  626 0089 01       		.uleb128 0x1
  627 008a 13       		.uleb128 0x13
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccrvbamY.s 			page 20
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccASSPsf.s 			page 20
 
 
  628 008b 00       		.byte	0
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccrvbamY.s 			page 1
  682 00c1 0E       		.uleb128 0xe
  683 00c2 3A       		.uleb128 0x3a
  684 00c3 0B       		.uleb128 0xb
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccrvbamY.s 			page 21
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccASSPsf.s 			page 21
 
 
  685 00c4 3B       		.uleb128 0x3b
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccrvbamY.s 			page 1
  739 00fc 00       		.byte	0
  740 00fd 00       		.byte	0
  741 00fe 11       		.uleb128 0x11
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccrvbamY.s 			page 22
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccASSPsf.s 			page 22
 
 
  742 00ff 2E       		.uleb128 0x2e
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccrvbamY.s 			page 1
  796 0014 20000000 		.4byte	.LFE2
  797 0018 00000000 		.4byte	.LFB3
  798 001c 2C000000 		.4byte	.LFE3
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccrvbamY.s 			page 23
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccASSPsf.s 			page 23
 
 
  799 0020 00000000 		.4byte	.LFB4
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccrvbamY.s 			page 1
  825      7465645F 
  825      536F7572 
  825      63655C50 
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccrvbamY.s 			page 24
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccASSPsf.s 			page 24
 
 
  826              	.LASF11:
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccrvbamY.s 			page 1
  849      676E6564 
  849      20636861 
  849      7200
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccrvbamY.s 			page 25
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccASSPsf.s 			page 25
 
 
  850              	.LASF26:
@@ -1456,52 +1456,51 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccrvbamY.s 			page 1
  855      6720756E 
  855      7369676E 
  855      65642069 
- 856              	.LASF29:
- 857 01d3 5C5C766D 		.ascii	"\\\\vmware-host\\Shared Folders\\OneDrive\\Tech\\Gi"
- 857      77617265 
- 857      2D686F73 
- 857      745C5368 
- 857      61726564 
- 858 0200 74487562 		.ascii	"tHub\\Arm\\Dynamixel_Servo_Driver\\Dynamixel_Servo_"
- 858      5C41726D 
- 858      5C44796E 
- 858      616D6978 
- 858      656C5F53 
- 859 0230 44726976 		.ascii	"Driver.cydsn\000"
- 859      65722E63 
- 859      7964736E 
+ 856              	.LASF30:
+ 857 01d3 55415254 		.ascii	"UART_2_SpiUartClearTxBuffer\000"
+ 857      5F325F53 
+ 857      70695561 
+ 857      7274436C 
+ 857      65617254 
+ 858              	.LASF15:
+ 859 01ef 73697A65 		.ascii	"sizetype\000"
+ 859      74797065 
  859      00
- 860              	.LASF30:
- 861 023d 55415254 		.ascii	"UART_2_SpiUartClearTxBuffer\000"
- 861      5F325F53 
- 861      70695561 
- 861      7274436C 
- 861      65617254 
- 862              	.LASF15:
- 863 0259 73697A65 		.ascii	"sizetype\000"
- 863      74797065 
+ 860              	.LASF6:
+ 861 01f8 6C6F6E67 		.ascii	"long long int\000"
+ 861      206C6F6E 
+ 861      6720696E 
+ 861      7400
+ 862              	.LASF13:
+ 863 0206 63686172 		.ascii	"char\000"
  863      00
- 864              	.LASF6:
- 865 0262 6C6F6E67 		.ascii	"long long int\000"
- 865      206C6F6E 
- 865      6720696E 
- 865      7400
- 866              	.LASF13:
- 867 0270 63686172 		.ascii	"char\000"
+ 864              	.LASF29:
+ 865 020b 433A5C55 		.ascii	"C:\\Users\\Samuel\\Documents\\GitHub\\BYU-MarsRover"
+ 865      73657273 
+ 865      5C53616D 
+ 865      75656C5C 
+ 865      446F6375 
+ 866 0239 5C41726D 		.ascii	"\\Arm\\Dynamixel_Servo_Driver\\Dynamixel_Servo_Driv"
+ 866      5C44796E 
+ 866      616D6978 
+ 866      656C5F53 
+ 866      6572766F 
+ 867 0269 65722E63 		.ascii	"er.cydsn\000"
+ 867      7964736E 
  867      00
  868              	.LASF2:
- 869 0275 73686F72 		.ascii	"short int\000"
+ 869 0272 73686F72 		.ascii	"short int\000"
  869      7420696E 
  869      7400
  870              	.LASF4:
- 871 027f 6C6F6E67 		.ascii	"long int\000"
+ 871 027c 6C6F6E67 		.ascii	"long int\000"
  871      20696E74 
  871      00
  872              	.LASF0:
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccrvbamY.s 			page 26
+ 873 0285 7369676E 		.ascii	"signed char\000"
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccASSPsf.s 			page 26
 
 
- 873 0288 7369676E 		.ascii	"signed char\000"
  873      65642063 
  873      68617200 
  874              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.4 20140526 (release) [ARM/embedded-4_8-br

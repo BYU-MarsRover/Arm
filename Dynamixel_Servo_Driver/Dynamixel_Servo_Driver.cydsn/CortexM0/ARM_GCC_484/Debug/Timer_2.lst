@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
   24:.\Generated_Source\PSoC4/Timer_2.c **** /*******************************************************************************
   25:.\Generated_Source\PSoC4/Timer_2.c **** * Function Name: Timer_2_Init
   26:.\Generated_Source\PSoC4/Timer_2.c **** ********************************************************************************
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 2
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 2
 
 
   27:.\Generated_Source\PSoC4/Timer_2.c **** *
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
   64:.\Generated_Source\PSoC4/Timer_2.c ****         Timer_2_SetInterruptMode(Timer_2_TC_INTERRUPT_MASK);
   49              		.loc 1 64 0
   50 0012 0220     		mov	r0, #2
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 3
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 3
 
 
   51 0014 FFF7FEFF 		bl	Timer_2_SetInterruptMode
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  111:.\Generated_Source\PSoC4/Timer_2.c ****         #if (Timer_2__PWM == Timer_2_PWM_MODE)
  112:.\Generated_Source\PSoC4/Timer_2.c ****             Timer_2_CONTROL_REG |= Timer_2_CTRL_PWM_PRESCALER;
  113:.\Generated_Source\PSoC4/Timer_2.c ****         #endif  /* (Timer_2__PWM == Timer_2_PWM_MODE) */
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 4
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 4
 
 
  114:.\Generated_Source\PSoC4/Timer_2.c **** 
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
   66 002c 40010540 		.word	1074069824
   67 0030 64010540 		.word	1074069860
   68 0034 FFFF0000 		.word	65535
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 5
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 5
 
 
   69              		.cfi_endproc
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  101 0018 0A43     		orr	r2, r1
  102 001a 1A60     		str	r2, [r3]
  183:.\Generated_Source\PSoC4/Timer_2.c ****     CyExitCriticalSection(enableInterrupts);
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 6
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 6
 
 
  103              		.loc 1 183 0
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  213:.\Generated_Source\PSoC4/Timer_2.c **** * Return:
  214:.\Generated_Source\PSoC4/Timer_2.c **** *  None
  215:.\Generated_Source\PSoC4/Timer_2.c **** *
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 7
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 7
 
 
  216:.\Generated_Source\PSoC4/Timer_2.c **** * Global variables:
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  164              		.code	16
  165              		.thumb_func
  166              		.type	Timer_2_Stop, %function
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 8
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 8
 
 
  167              	Timer_2_Stop:
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  196 0022 FFF7FEFF 		bl	CyExitCriticalSection
  259:.\Generated_Source\PSoC4/Timer_2.c **** }
  197              		.loc 1 259 0
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 9
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 9
 
 
  198 0026 BD46     		mov	sp, r7
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  223              		.cfi_offset 14, -4
  224 0002 85B0     		sub	sp, sp, #20
  225              		.cfi_def_cfa_offset 32
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 10
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 10
 
 
  226 0004 00AF     		add	r7, sp, #0
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  271              		.code	16
  272              		.thumb_func
  273              		.type	Timer_2_SetQDMode, %function
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 11
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 11
 
 
  274              	Timer_2_SetQDMode:
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  299 001c 0A40     		and	r2, r1
  300 001e 1A60     		str	r2, [r3]
  327:.\Generated_Source\PSoC4/Timer_2.c ****     Timer_2_CONTROL_REG |= qdMode;
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 12
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 12
 
 
  301              		.loc 1 327 0
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  348:.\Generated_Source\PSoC4/Timer_2.c **** *         - Timer_2_PRESCALE_DIVBY16   - Divide by 16
  349:.\Generated_Source\PSoC4/Timer_2.c **** *         - Timer_2_PRESCALE_DIVBY32   - Divide by 32
  350:.\Generated_Source\PSoC4/Timer_2.c **** *         - Timer_2_PRESCALE_DIVBY64   - Divide by 64
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 13
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 13
 
 
  351:.\Generated_Source\PSoC4/Timer_2.c **** *         - Timer_2_PRESCALE_DIVBY128  - Divide by 128
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  367:.\Generated_Source\PSoC4/Timer_2.c **** }
  373              		.loc 1 367 0
  374 0038 BD46     		mov	sp, r7
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 14
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 14
 
 
  375 003a 05B0     		add	sp, sp, #20
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  391:.\Generated_Source\PSoC4/Timer_2.c ****     uint8 enableInterrupts;
  392:.\Generated_Source\PSoC4/Timer_2.c **** 
  393:.\Generated_Source\PSoC4/Timer_2.c ****     enableInterrupts = CyEnterCriticalSection();
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 15
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 15
 
 
  406              		.loc 1 393 0
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  453              		.type	Timer_2_SetPWMMode, %function
  454              	Timer_2_SetPWMMode:
  455              	.LFB8:
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 16
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 16
 
 
  401:.\Generated_Source\PSoC4/Timer_2.c **** 
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  466 0006 7860     		str	r0, [r7, #4]
  445:.\Generated_Source\PSoC4/Timer_2.c ****     Timer_2_TRIG_CONTROL2_REG = (modeMask & Timer_2_6BIT_MASK);
  467              		.loc 1 445 0
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 17
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 17
 
 
  468 0008 034B     		ldr	r3, .L27
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  475:.\Generated_Source\PSoC4/Timer_2.c **** * Return:
  476:.\Generated_Source\PSoC4/Timer_2.c **** *  None
  477:.\Generated_Source\PSoC4/Timer_2.c **** *
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 18
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 18
 
 
  478:.\Generated_Source\PSoC4/Timer_2.c **** *******************************************************************************/
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  534              		.loc 1 490 0
  535 003e BD46     		mov	sp, r7
  536 0040 05B0     		add	sp, sp, #20
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 19
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 19
 
 
  537              		@ sp needed
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  516:.\Generated_Source\PSoC4/Timer_2.c **** 
  517:.\Generated_Source\PSoC4/Timer_2.c ****     enableInterrupts = CyEnterCriticalSection();
  566              		.loc 1 517 0
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 20
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 20
 
 
  567 0008 3C1C     		mov	r4, r7
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  614              	.LFB11:
  525:.\Generated_Source\PSoC4/Timer_2.c **** 
  526:.\Generated_Source\PSoC4/Timer_2.c **** 
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 21
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 21
 
 
  527:.\Generated_Source\PSoC4/Timer_2.c **** /*******************************************************************************
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  642 0022 084A     		ldr	r2, .L36
  643 0024 1168     		ldr	r1, [r2]
  644 0026 7A68     		ldr	r2, [r7, #4]
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 22
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 22
 
 
  645 0028 1202     		lsl	r2, r2, #8
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  576:.\Generated_Source\PSoC4/Timer_2.c **** *  None
  577:.\Generated_Source\PSoC4/Timer_2.c **** *
  578:.\Generated_Source\PSoC4/Timer_2.c **** *******************************************************************************/
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 23
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 23
 
 
  579:.\Generated_Source\PSoC4/Timer_2.c **** void Timer_2_SetPWMInvert(uint32 mask)
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  720              	.L40:
  721 003e C046     		.align	2
  722              	.L39:
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 24
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 24
 
 
  723 0040 40010540 		.word	1074069824
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  754 0012 BD46     		mov	sp, r7
  755 0014 02B0     		add	sp, sp, #8
  756              		@ sp needed
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 25
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 25
 
 
  757 0016 80BD     		pop	{r7, pc}
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  791              	.L47:
  792 0012 C046     		.align	2
  793              	.L46:
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 26
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 26
 
 
  794 0014 48010540 		.word	1074069832
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  818              		.loc 1 662 0
  819 0008 3C1C     		mov	r4, r7
  820 000a 0F34     		add	r4, r4, #15
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 27
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 27
 
 
  821 000c FFF7FEFF 		bl	CyEnterCriticalSection
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  673:.\Generated_Source\PSoC4/Timer_2.c **** ********************************************************************************
  674:.\Generated_Source\PSoC4/Timer_2.c **** *
  675:.\Generated_Source\PSoC4/Timer_2.c **** * Summary:
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 28
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 28
 
 
  676:.\Generated_Source\PSoC4/Timer_2.c **** *  Writes the 16 bit period register with the new period value.
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  693:.\Generated_Source\PSoC4/Timer_2.c **** /*******************************************************************************
  694:.\Generated_Source\PSoC4/Timer_2.c **** * Function Name: Timer_2_ReadPeriod
  695:.\Generated_Source\PSoC4/Timer_2.c **** ********************************************************************************
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 29
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 29
 
 
  696:.\Generated_Source\PSoC4/Timer_2.c **** *
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  717:.\Generated_Source\PSoC4/Timer_2.c **** * Summary:
  718:.\Generated_Source\PSoC4/Timer_2.c **** *  Writes the register that controls whether the compare registers are
  719:.\Generated_Source\PSoC4/Timer_2.c **** *  swapped. When enabled in the Timer/Counter mode(without capture) the swap
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 30
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 30
 
 
  720:.\Generated_Source\PSoC4/Timer_2.c **** *  occurs at a TC event. In the PWM mode the swap occurs at the next TC event
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  968 002e 1A60     		str	r2, [r3]
  741:.\Generated_Source\PSoC4/Timer_2.c **** 
  742:.\Generated_Source\PSoC4/Timer_2.c ****     CyExitCriticalSection(enableInterrupts);
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 31
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 31
 
 
  969              		.loc 1 742 0
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  1004              		.cfi_def_cfa_register 7
  1005 0006 7860     		str	r0, [r7, #4]
  762:.\Generated_Source\PSoC4/Timer_2.c ****     Timer_2_PERIOD_BUF_REG = (periodBuf & Timer_2_16BIT_MASK);
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 32
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 32
 
 
  1006              		.loc 1 762 0
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  1040              		.loc 1 782 0
  1041 0004 034B     		ldr	r3, .L66
  1042 0006 1B68     		ldr	r3, [r3]
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 33
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 33
 
 
  1043 0008 1B04     		lsl	r3, r3, #16
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  1072 0002 85B0     		sub	sp, sp, #20
  1073              		.cfi_def_cfa_offset 32
  1074 0004 00AF     		add	r7, sp, #0
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 34
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 34
 
 
  1075              		.cfi_def_cfa_register 7
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  1119              		.align	2
  1120              		.global	Timer_2_WriteCompare
  1121              		.code	16
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 35
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 35
 
 
  1122              		.thumb_func
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  857:.\Generated_Source\PSoC4/Timer_2.c ****     #endif /* (Timer_2_CY_TCPWM_4000) */
  858:.\Generated_Source\PSoC4/Timer_2.c ****     
  859:.\Generated_Source\PSoC4/Timer_2.c ****     Timer_2_COMP_CAP_REG = (compare & Timer_2_16BIT_MASK);
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 36
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 36
 
 
  1137              		.loc 1 859 0
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  880:.\Generated_Source\PSoC4/Timer_2.c ****     #if (Timer_2_CY_TCPWM_4000)
  881:.\Generated_Source\PSoC4/Timer_2.c ****         uint32 currentMode;
  882:.\Generated_Source\PSoC4/Timer_2.c ****         uint32 regVal;
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 37
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 37
 
 
  883:.\Generated_Source\PSoC4/Timer_2.c ****     #endif /* (Timer_2_CY_TCPWM_4000) */
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  912:.\Generated_Source\PSoC4/Timer_2.c **** *
  913:.\Generated_Source\PSoC4/Timer_2.c **** * Summary:
  914:.\Generated_Source\PSoC4/Timer_2.c **** *  Writes the 16 bit compare buffer register with the new compare value. Not
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 38
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 38
 
 
  915:.\Generated_Source\PSoC4/Timer_2.c **** *  applicable for Timer/Counter with Capture or in Quadrature Decoder modes.
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  1217 0016 80BD     		pop	{r7, pc}
  1218              	.L80:
  1219              		.align	2
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 39
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 39
 
 
  1220              	.L79:
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  981:.\Generated_Source\PSoC4/Timer_2.c ****         else if (((uint32)Timer_2__COUNT_UP == currentMode) && (0xFFFFu != regVal))
  982:.\Generated_Source\PSoC4/Timer_2.c ****         {
  983:.\Generated_Source\PSoC4/Timer_2.c ****             regVal++;
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 40
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 40
 
 
  984:.\Generated_Source\PSoC4/Timer_2.c ****         }
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  1266              		.loc 1 1012 0
  1267              		.cfi_startproc
  1268 0000 80B5     		push	{r7, lr}
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 41
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 41
 
 
  1269              		.cfi_def_cfa_offset 8
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  1302              		.cfi_def_cfa_offset 8
  1303              		.cfi_offset 7, -8
  1304              		.cfi_offset 14, -4
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 42
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 42
 
 
  1305 0002 00AF     		add	r7, sp, #0
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  1332              		.loc 1 1060 0
  1333              		.cfi_startproc
  1334 0000 90B5     		push	{r4, r7, lr}
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 43
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 43
 
 
  1335              		.cfi_def_cfa_offset 12
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  1380              	.LFE28:
  1381              		.size	Timer_2_SetCaptureMode, .-Timer_2_SetCaptureMode
  1382              		.section	.text.Timer_2_SetReloadMode,"ax",%progbits
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 44
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 44
 
 
  1383              		.align	2
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  1408              		.loc 1 1098 0
  1409 0014 0A4B     		ldr	r3, .L97
  1410 0016 0A4A     		ldr	r2, .L97
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 45
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 45
 
 
  1411 0018 1268     		ldr	r2, [r2]
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
 1115:.\Generated_Source\PSoC4/Timer_2.c **** *   Values:
 1116:.\Generated_Source\PSoC4/Timer_2.c **** *     - Timer_2_TRIG_LEVEL     - Level
 1117:.\Generated_Source\PSoC4/Timer_2.c **** *     - Timer_2_TRIG_RISING    - Rising edge
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 46
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 46
 
 
 1118:.\Generated_Source\PSoC4/Timer_2.c **** *     - Timer_2_TRIG_FALLING   - Falling edge
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  1486 0034 181C     		mov	r0, r3
  1487 0036 FFF7FEFF 		bl	CyExitCriticalSection
 1135:.\Generated_Source\PSoC4/Timer_2.c **** }
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 47
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 47
 
 
  1488              		.loc 1 1135 0
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  1519              		.cfi_def_cfa_register 7
  1520 0006 7860     		str	r0, [r7, #4]
 1159:.\Generated_Source\PSoC4/Timer_2.c ****     uint8 enableInterrupts;
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 48
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 48
 
 
 1160:.\Generated_Source\PSoC4/Timer_2.c **** 
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  1567              	.LFB32:
 1168:.\Generated_Source\PSoC4/Timer_2.c **** 
 1169:.\Generated_Source\PSoC4/Timer_2.c **** 
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 49
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 49
 
 
 1170:.\Generated_Source\PSoC4/Timer_2.c **** /*******************************************************************************
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  1594 0020 074B     		ldr	r3, .L106
  1595 0022 074A     		ldr	r2, .L106
  1596 0024 1168     		ldr	r1, [r2]
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 50
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 50
 
 
  1597 0026 7A68     		ldr	r2, [r7, #4]
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
 1222:.\Generated_Source\PSoC4/Timer_2.c **** *     - Timer_2_CMD_RELOAD     - Trigger Reload command
 1223:.\Generated_Source\PSoC4/Timer_2.c **** *     - Timer_2_CMD_STOP       - Trigger Stop command
 1224:.\Generated_Source\PSoC4/Timer_2.c **** *     - Timer_2_CMD_START      - Trigger Start command
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 51
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 51
 
 
 1225:.\Generated_Source\PSoC4/Timer_2.c **** *
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  1666 0036 C046     		.align	2
  1667              	.L109:
  1668 0038 08000540 		.word	1074069512
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 52
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 52
 
 
  1669              		.cfi_endproc
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
 1263:.\Generated_Source\PSoC4/Timer_2.c **** }
  1699              		.loc 1 1263 0
  1700 0014 181C     		mov	r0, r3
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 53
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 53
 
 
  1701 0016 BD46     		mov	sp, r7
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  1732 000a 7A68     		ldr	r2, [r7, #4]
  1733 000c 1A60     		str	r2, [r3]
 1287:.\Generated_Source\PSoC4/Timer_2.c **** }
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 54
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 54
 
 
  1734              		.loc 1 1287 0
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  1765              		.loc 1 1310 0
  1766 0008 181C     		mov	r0, r3
  1767 000a BD46     		mov	sp, r7
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 55
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 55
 
 
  1768              		@ sp needed
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  1799              		@ sp needed
  1800 000c 80BD     		pop	{r7, pc}
  1801              	.L125:
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 56
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 56
 
 
  1802 000e C046     		.align	2
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  1833 0010 02B0     		add	sp, sp, #8
  1834              		@ sp needed
  1835 0012 80BD     		pop	{r7, pc}
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 57
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 57
 
 
  1836              	.L128:
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  1867 000e BD46     		mov	sp, r7
  1868 0010 02B0     		add	sp, sp, #8
  1869              		@ sp needed
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 58
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 58
 
 
  1870 0012 80BD     		pop	{r7, pc}
@@ -3439,10 +3439,10 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  1885 0006 00000000 		.4byte	.Ldebug_abbrev0
  1886 000a 04       		.byte	0x4
  1887 000b 01       		.uleb128 0x1
- 1888 000c F3020000 		.4byte	.LASF76
+ 1888 000c 45030000 		.4byte	.LASF76
  1889 0010 01       		.byte	0x1
- 1890 0011 48050000 		.4byte	.LASF77
- 1891 0015 C9040000 		.4byte	.LASF78
+ 1890 0011 45050000 		.4byte	.LASF77
+ 1891 0015 C0010000 		.4byte	.LASF78
  1892 0019 00000000 		.4byte	.Ldebug_ranges0+0
  1893 001d 00000000 		.4byte	0
  1894 0021 00000000 		.4byte	.Ldebug_line0
@@ -3453,15 +3453,15 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  1899 002c 02       		.uleb128 0x2
  1900 002d 01       		.byte	0x1
  1901 002e 08       		.byte	0x8
- 1902 002f A7030000 		.4byte	.LASF1
+ 1902 002f F9030000 		.4byte	.LASF1
  1903 0033 02       		.uleb128 0x2
  1904 0034 02       		.byte	0x2
  1905 0035 05       		.byte	0x5
- 1906 0036 C6030000 		.4byte	.LASF2
+ 1906 0036 18040000 		.4byte	.LASF2
  1907 003a 02       		.uleb128 0x2
  1908 003b 02       		.byte	0x2
  1909 003c 07       		.byte	0x7
- 1910 003d C0010000 		.4byte	.LASF3
+ 1910 003d 27020000 		.4byte	.LASF3
  1911 0041 02       		.uleb128 0x2
  1912 0042 04       		.byte	0x4
  1913 0043 05       		.byte	0x5
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  1924 0057 08       		.byte	0x8
  1925 0058 07       		.byte	0x7
  1926 0059 35000000 		.4byte	.LASF7
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 59
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 59
 
 
  1927 005d 03       		.uleb128 0x3
@@ -3502,7 +3502,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  1945 0081 02       		.uleb128 0x2
  1946 0082 04       		.byte	0x4
  1947 0083 04       		.byte	0x4
- 1948 0084 E3020000 		.4byte	.LASF11
+ 1948 0084 35030000 		.4byte	.LASF11
  1949 0088 02       		.uleb128 0x2
  1950 0089 08       		.byte	0x8
  1951 008a 04       		.byte	0x4
@@ -3510,9 +3510,9 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  1953 008f 02       		.uleb128 0x2
  1954 0090 01       		.byte	0x1
  1955 0091 08       		.byte	0x8
- 1956 0092 52040000 		.4byte	.LASF13
+ 1956 0092 A4040000 		.4byte	.LASF13
  1957 0096 05       		.uleb128 0x5
- 1958 0097 30020000 		.4byte	.LASF14
+ 1958 0097 82020000 		.4byte	.LASF14
  1959 009b 02       		.byte	0x2
  1960 009c 4D01     		.2byte	0x14d
  1961 009e A2000000 		.4byte	0xa2
@@ -3521,9 +3521,9 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  1964 00a7 02       		.uleb128 0x2
  1965 00a8 04       		.byte	0x4
  1966 00a9 07       		.byte	0x7
- 1967 00aa 4F020000 		.4byte	.LASF15
+ 1967 00aa A1020000 		.4byte	.LASF15
  1968 00ae 07       		.uleb128 0x7
- 1969 00af 6B050000 		.4byte	.LASF16
+ 1969 00af 68050000 		.4byte	.LASF16
  1970 00b3 01       		.byte	0x1
  1971 00b4 26       		.byte	0x26
  1972 00b5 00000000 		.4byte	.LFB0
@@ -3538,12 +3538,12 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  1981 00ca 30000000 		.4byte	.LFE1-.LFB1
  1982 00ce 01       		.uleb128 0x1
  1983 00cf 9C       		.byte	0x9c
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 60
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 60
 
 
  1984 00d0 E3000000 		.4byte	0xe3
  1985 00d4 09       		.uleb128 0x9
- 1986 00d5 B8040000 		.4byte	.LASF20
+ 1986 00d5 0A050000 		.4byte	.LASF20
  1987 00d9 01       		.byte	0x1
  1988 00da B3       		.byte	0xb3
  1989 00db 6B000000 		.4byte	0x6b
@@ -3552,7 +3552,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  1992 00e1 6F       		.sleb128 -17
  1993 00e2 00       		.byte	0
  1994 00e3 07       		.uleb128 0x7
- 1995 00e4 7E020000 		.4byte	.LASF17
+ 1995 00e4 D0020000 		.4byte	.LASF17
  1996 00e8 01       		.byte	0x1
  1997 00e9 E0       		.byte	0xe0
  1998 00ea 00000000 		.4byte	.LFB2
@@ -3560,7 +3560,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  2000 00f2 01       		.uleb128 0x1
  2001 00f3 9C       		.byte	0x9c
  2002 00f4 08       		.uleb128 0x8
- 2003 00f5 42020000 		.4byte	.LASF19
+ 2003 00f5 94020000 		.4byte	.LASF19
  2004 00f9 01       		.byte	0x1
  2005 00fa FA       		.byte	0xfa
  2006 00fb 00000000 		.4byte	.LFB3
@@ -3569,7 +3569,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  2009 0104 9C       		.byte	0x9c
  2010 0105 18010000 		.4byte	0x118
  2011 0109 09       		.uleb128 0x9
- 2012 010a B8040000 		.4byte	.LASF20
+ 2012 010a 0A050000 		.4byte	.LASF20
  2013 010e 01       		.byte	0x1
  2014 010f FC       		.byte	0xfc
  2015 0110 6B000000 		.4byte	0x6b
@@ -3578,7 +3578,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  2018 0116 6F       		.sleb128 -17
  2019 0117 00       		.byte	0
  2020 0118 0A       		.uleb128 0xa
- 2021 0119 BF020000 		.4byte	.LASF21
+ 2021 0119 11030000 		.4byte	.LASF21
  2022 011d 01       		.byte	0x1
  2023 011e 1F01     		.2byte	0x11f
  2024 0120 00000000 		.4byte	.LFB4
@@ -3587,7 +3587,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  2027 0129 9C       		.byte	0x9c
  2028 012a 4D010000 		.4byte	0x14d
  2029 012e 0B       		.uleb128 0xb
- 2030 012f 57040000 		.4byte	.LASF23
+ 2030 012f A9040000 		.4byte	.LASF23
  2031 0133 01       		.byte	0x1
  2032 0134 1F01     		.2byte	0x11f
  2033 0136 76000000 		.4byte	0x76
@@ -3595,10 +3595,10 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  2035 013b 91       		.byte	0x91
  2036 013c 64       		.sleb128 -28
  2037 013d 0C       		.uleb128 0xc
- 2038 013e B8040000 		.4byte	.LASF20
+ 2038 013e 0A050000 		.4byte	.LASF20
  2039 0142 01       		.byte	0x1
  2040 0143 2101     		.2byte	0x121
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 61
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 61
 
 
  2041 0145 6B000000 		.4byte	0x6b
@@ -3607,7 +3607,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  2044 014b 6F       		.sleb128 -17
  2045 014c 00       		.byte	0
  2046 014d 0A       		.uleb128 0xa
- 2047 014e B1050000 		.4byte	.LASF22
+ 2047 014e AE050000 		.4byte	.LASF22
  2048 0152 01       		.byte	0x1
  2049 0153 4001     		.2byte	0x140
  2050 0155 00000000 		.4byte	.LFB5
@@ -3624,7 +3624,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  2061 0170 91       		.byte	0x91
  2062 0171 64       		.sleb128 -28
  2063 0172 0C       		.uleb128 0xc
- 2064 0173 B8040000 		.4byte	.LASF20
+ 2064 0173 0A050000 		.4byte	.LASF20
  2065 0177 01       		.byte	0x1
  2066 0178 4201     		.2byte	0x142
  2067 017a 6B000000 		.4byte	0x6b
@@ -3633,7 +3633,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  2070 0180 6F       		.sleb128 -17
  2071 0181 00       		.byte	0
  2072 0182 0A       		.uleb128 0xa
- 2073 0183 33050000 		.4byte	.LASF25
+ 2073 0183 30050000 		.4byte	.LASF25
  2074 0187 01       		.byte	0x1
  2075 0188 6501     		.2byte	0x165
  2076 018a 00000000 		.4byte	.LFB6
@@ -3642,7 +3642,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  2079 0193 9C       		.byte	0x9c
  2080 0194 B7010000 		.4byte	0x1b7
  2081 0198 0B       		.uleb128 0xb
- 2082 0199 E9020000 		.4byte	.LASF26
+ 2082 0199 3B030000 		.4byte	.LASF26
  2083 019d 01       		.byte	0x1
  2084 019e 6501     		.2byte	0x165
  2085 01a0 76000000 		.4byte	0x76
@@ -3650,7 +3650,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  2087 01a5 91       		.byte	0x91
  2088 01a6 64       		.sleb128 -28
  2089 01a7 0C       		.uleb128 0xc
- 2090 01a8 B8040000 		.4byte	.LASF20
+ 2090 01a8 0A050000 		.4byte	.LASF20
  2091 01ac 01       		.byte	0x1
  2092 01ad 6701     		.2byte	0x167
  2093 01af 6B000000 		.4byte	0x6b
@@ -3658,11 +3658,11 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  2095 01b4 91       		.byte	0x91
  2096 01b5 6F       		.sleb128 -17
  2097 01b6 00       		.byte	0
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 62
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 62
 
 
  2098 01b7 0A       		.uleb128 0xa
- 2099 01b8 5C040000 		.4byte	.LASF27
+ 2099 01b8 AE040000 		.4byte	.LASF27
  2100 01bc 01       		.byte	0x1
  2101 01bd 8501     		.2byte	0x185
  2102 01bf 00000000 		.4byte	.LFB7
@@ -3671,7 +3671,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  2105 01c8 9C       		.byte	0x9c
  2106 01c9 EC010000 		.4byte	0x1ec
  2107 01cd 0B       		.uleb128 0xb
- 2108 01ce E9010000 		.4byte	.LASF28
+ 2108 01ce 50020000 		.4byte	.LASF28
  2109 01d2 01       		.byte	0x1
  2110 01d3 8501     		.2byte	0x185
  2111 01d5 76000000 		.4byte	0x76
@@ -3679,7 +3679,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  2113 01da 91       		.byte	0x91
  2114 01db 64       		.sleb128 -28
  2115 01dc 0C       		.uleb128 0xc
- 2116 01dd B8040000 		.4byte	.LASF20
+ 2116 01dd 0A050000 		.4byte	.LASF20
  2117 01e1 01       		.byte	0x1
  2118 01e2 8701     		.2byte	0x187
  2119 01e4 6B000000 		.4byte	0x6b
@@ -3688,7 +3688,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  2122 01ea 6F       		.sleb128 -17
  2123 01eb 00       		.byte	0
  2124 01ec 0D       		.uleb128 0xd
- 2125 01ed 94020000 		.4byte	.LASF29
+ 2125 01ed E6020000 		.4byte	.LASF29
  2126 01f1 01       		.byte	0x1
  2127 01f2 BB01     		.2byte	0x1bb
  2128 01f4 00000000 		.4byte	.LFB8
@@ -3715,10 +3715,10 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  2149 0223 9C       		.byte	0x9c
  2150 0224 47020000 		.4byte	0x247
  2151 0228 0B       		.uleb128 0xb
- 2152 0229 6F020000 		.4byte	.LASF32
+ 2152 0229 C1020000 		.4byte	.LASF32
  2153 022d 01       		.byte	0x1
  2154 022e DF01     		.2byte	0x1df
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 63
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 63
 
 
  2155 0230 76000000 		.4byte	0x76
@@ -3726,7 +3726,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  2157 0235 91       		.byte	0x91
  2158 0236 64       		.sleb128 -28
  2159 0237 0C       		.uleb128 0xc
- 2160 0238 B8040000 		.4byte	.LASF20
+ 2160 0238 0A050000 		.4byte	.LASF20
  2161 023c 01       		.byte	0x1
  2162 023d E101     		.2byte	0x1e1
  2163 023f 6B000000 		.4byte	0x6b
@@ -3735,7 +3735,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  2166 0245 6F       		.sleb128 -17
  2167 0246 00       		.byte	0
  2168 0247 0A       		.uleb128 0xa
- 2169 0248 F2030000 		.4byte	.LASF33
+ 2169 0248 44040000 		.4byte	.LASF33
  2170 024c 01       		.byte	0x1
  2171 024d 0102     		.2byte	0x201
  2172 024f 00000000 		.4byte	.LFB10
@@ -3744,7 +3744,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  2175 0258 9C       		.byte	0x9c
  2176 0259 7C020000 		.4byte	0x27c
  2177 025d 0B       		.uleb128 0xb
- 2178 025e B5030000 		.4byte	.LASF34
+ 2178 025e 07040000 		.4byte	.LASF34
  2179 0262 01       		.byte	0x1
  2180 0263 0102     		.2byte	0x201
  2181 0265 76000000 		.4byte	0x76
@@ -3752,7 +3752,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  2183 026a 91       		.byte	0x91
  2184 026b 64       		.sleb128 -28
  2185 026c 0C       		.uleb128 0xc
- 2186 026d B8040000 		.4byte	.LASF20
+ 2186 026d 0A050000 		.4byte	.LASF20
  2187 0271 01       		.byte	0x1
  2188 0272 0302     		.2byte	0x203
  2189 0274 6B000000 		.4byte	0x6b
@@ -3761,7 +3761,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  2192 027a 6F       		.sleb128 -17
  2193 027b 00       		.byte	0
  2194 027c 0A       		.uleb128 0xa
- 2195 027d 58020000 		.4byte	.LASF35
+ 2195 027d AA020000 		.4byte	.LASF35
  2196 0281 01       		.byte	0x1
  2197 0282 2202     		.2byte	0x222
  2198 0284 00000000 		.4byte	.LFB11
@@ -3778,10 +3778,10 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  2209 029f 91       		.byte	0x91
  2210 02a0 64       		.sleb128 -28
  2211 02a1 0C       		.uleb128 0xc
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 64
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 64
 
 
- 2212 02a2 B8040000 		.4byte	.LASF20
+ 2212 02a2 0A050000 		.4byte	.LASF20
  2213 02a6 01       		.byte	0x1
  2214 02a7 2402     		.2byte	0x224
  2215 02a9 6B000000 		.4byte	0x6b
@@ -3807,7 +3807,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  2235 02d4 91       		.byte	0x91
  2236 02d5 64       		.sleb128 -28
  2237 02d6 0C       		.uleb128 0xc
- 2238 02d7 B8040000 		.4byte	.LASF20
+ 2238 02d7 0A050000 		.4byte	.LASF20
  2239 02db 01       		.byte	0x1
  2240 02dc 4502     		.2byte	0x245
  2241 02de 6B000000 		.4byte	0x6b
@@ -3834,11 +3834,11 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  2262 030a 74       		.sleb128 -12
  2263 030b 00       		.byte	0
  2264 030c 0E       		.uleb128 0xe
- 2265 030d 6F040000 		.4byte	.LASF45
+ 2265 030d C1040000 		.4byte	.LASF45
  2266 0311 01       		.byte	0x1
  2267 0312 7502     		.2byte	0x275
  2268 0314 76000000 		.4byte	0x76
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 65
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 65
 
 
  2269 0318 00000000 		.4byte	.LFB14
@@ -3846,7 +3846,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  2271 0320 01       		.uleb128 0x1
  2272 0321 9C       		.byte	0x9c
  2273 0322 0A       		.uleb128 0xa
- 2274 0323 A1040000 		.4byte	.LASF41
+ 2274 0323 F3040000 		.4byte	.LASF41
  2275 0327 01       		.byte	0x1
  2276 0328 9202     		.2byte	0x292
  2277 032a 00000000 		.4byte	.LFB15
@@ -3855,7 +3855,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  2280 0333 9C       		.byte	0x9c
  2281 0334 57030000 		.4byte	0x357
  2282 0338 0B       		.uleb128 0xb
- 2283 0339 36020000 		.4byte	.LASF42
+ 2283 0339 88020000 		.4byte	.LASF42
  2284 033d 01       		.byte	0x1
  2285 033e 9202     		.2byte	0x292
  2286 0340 76000000 		.4byte	0x76
@@ -3863,7 +3863,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  2288 0345 91       		.byte	0x91
  2289 0346 64       		.sleb128 -28
  2290 0347 0C       		.uleb128 0xc
- 2291 0348 B8040000 		.4byte	.LASF20
+ 2291 0348 0A050000 		.4byte	.LASF20
  2292 034c 01       		.byte	0x1
  2293 034d 9402     		.2byte	0x294
  2294 034f 6B000000 		.4byte	0x6b
@@ -3872,7 +3872,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  2297 0355 6F       		.sleb128 -17
  2298 0356 00       		.byte	0
  2299 0357 0D       		.uleb128 0xd
- 2300 0358 F7010000 		.4byte	.LASF43
+ 2300 0358 5E020000 		.4byte	.LASF43
  2301 035c 01       		.byte	0x1
  2302 035d AF02     		.2byte	0x2af
  2303 035f 00000000 		.4byte	.LFB16
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  2323 038d 18000000 		.4byte	.LFE17-.LFB17
  2324 0391 01       		.uleb128 0x1
  2325 0392 9C       		.byte	0x9c
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 66
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 66
 
 
  2326 0393 0A       		.uleb128 0xa
@@ -3911,7 +3911,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  2333 03a4 9C       		.byte	0x9c
  2334 03a5 C8030000 		.4byte	0x3c8
  2335 03a9 0B       		.uleb128 0xb
- 2336 03aa 78050000 		.4byte	.LASF48
+ 2336 03aa 75050000 		.4byte	.LASF48
  2337 03ae 01       		.byte	0x1
  2338 03af DD02     		.2byte	0x2dd
  2339 03b1 76000000 		.4byte	0x76
@@ -3919,7 +3919,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  2341 03b6 91       		.byte	0x91
  2342 03b7 64       		.sleb128 -28
  2343 03b8 0C       		.uleb128 0xc
- 2344 03b9 B8040000 		.4byte	.LASF20
+ 2344 03b9 0A050000 		.4byte	.LASF20
  2345 03bd 01       		.byte	0x1
  2346 03be DF02     		.2byte	0x2df
  2347 03c0 6B000000 		.4byte	0x6b
@@ -3928,7 +3928,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  2350 03c6 6F       		.sleb128 -17
  2351 03c7 00       		.byte	0
  2352 03c8 0D       		.uleb128 0xd
- 2353 03c9 6F030000 		.4byte	.LASF49
+ 2353 03c9 C1030000 		.4byte	.LASF49
  2354 03cd 01       		.byte	0x1
  2355 03ce F802     		.2byte	0x2f8
  2356 03d0 00000000 		.4byte	.LFB19
@@ -3937,7 +3937,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  2359 03d9 9C       		.byte	0x9c
  2360 03da EE030000 		.4byte	0x3ee
  2361 03de 0B       		.uleb128 0xb
- 2362 03df DA050000 		.4byte	.LASF50
+ 2362 03df D7050000 		.4byte	.LASF50
  2363 03e3 01       		.byte	0x1
  2364 03e4 F802     		.2byte	0x2f8
  2365 03e6 76000000 		.4byte	0x76
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  2380 0405 70010000 		.4byte	.LASF52
  2381 0409 01       		.byte	0x1
  2382 040a 2603     		.2byte	0x326
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 67
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 67
 
 
  2383 040c 00000000 		.4byte	.LFB21
@@ -3967,7 +3967,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  2386 0415 9C       		.byte	0x9c
  2387 0416 39040000 		.4byte	0x439
  2388 041a 0B       		.uleb128 0xb
- 2389 041b 78050000 		.4byte	.LASF48
+ 2389 041b 75050000 		.4byte	.LASF48
  2390 041f 01       		.byte	0x1
  2391 0420 2603     		.2byte	0x326
  2392 0422 76000000 		.4byte	0x76
@@ -3975,7 +3975,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  2394 0427 91       		.byte	0x91
  2395 0428 64       		.sleb128 -28
  2396 0429 0C       		.uleb128 0xc
- 2397 042a B8040000 		.4byte	.LASF20
+ 2397 042a 0A050000 		.4byte	.LASF20
  2398 042e 01       		.byte	0x1
  2399 042f 2803     		.2byte	0x328
  2400 0431 6B000000 		.4byte	0x6b
@@ -3984,7 +3984,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  2403 0437 6F       		.sleb128 -17
  2404 0438 00       		.byte	0
  2405 0439 0D       		.uleb128 0xd
- 2406 043a 9C050000 		.4byte	.LASF53
+ 2406 043a 99050000 		.4byte	.LASF53
  2407 043e 01       		.byte	0x1
  2408 043f 4303     		.2byte	0x343
  2409 0441 00000000 		.4byte	.LFB22
@@ -3993,7 +3993,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  2412 044a 9C       		.byte	0x9c
  2413 044b 5F040000 		.4byte	0x45f
  2414 044f 0B       		.uleb128 0xb
- 2415 0450 8C020000 		.4byte	.LASF54
+ 2415 0450 DE020000 		.4byte	.LASF54
  2416 0454 01       		.byte	0x1
  2417 0455 4303     		.2byte	0x343
  2418 0457 76000000 		.4byte	0x76
@@ -4002,7 +4002,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  2421 045d 74       		.sleb128 -12
  2422 045e 00       		.byte	0
  2423 045f 0E       		.uleb128 0xe
- 2424 0460 D0030000 		.4byte	.LASF55
+ 2424 0460 22040000 		.4byte	.LASF55
  2425 0464 01       		.byte	0x1
  2426 0465 6E03     		.2byte	0x36e
  2427 0467 76000000 		.4byte	0x76
@@ -4011,19 +4011,19 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  2430 0473 01       		.uleb128 0x1
  2431 0474 9C       		.byte	0x9c
  2432 0475 0D       		.uleb128 0xd
- 2433 0476 A7020000 		.4byte	.LASF56
+ 2433 0476 F9020000 		.4byte	.LASF56
  2434 047a 01       		.byte	0x1
  2435 047b 9C03     		.2byte	0x39c
  2436 047d 00000000 		.4byte	.LFB24
  2437 0481 1C000000 		.4byte	.LFE24-.LFB24
  2438 0485 01       		.uleb128 0x1
  2439 0486 9C       		.byte	0x9c
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 68
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 68
 
 
  2440 0487 9B040000 		.4byte	0x49b
  2441 048b 0B       		.uleb128 0xb
- 2442 048c 96040000 		.4byte	.LASF57
+ 2442 048c E8040000 		.4byte	.LASF57
  2443 0490 01       		.byte	0x1
  2444 0491 9C03     		.2byte	0x39c
  2445 0493 76000000 		.4byte	0x76
@@ -4041,7 +4041,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  2457 04af 01       		.uleb128 0x1
  2458 04b0 9C       		.byte	0x9c
  2459 04b1 0E       		.uleb128 0xe
- 2460 04b2 CF020000 		.4byte	.LASF59
+ 2460 04b2 21030000 		.4byte	.LASF59
  2461 04b6 01       		.byte	0x1
  2462 04b7 F303     		.2byte	0x3f3
  2463 04b9 76000000 		.4byte	0x76
@@ -4050,7 +4050,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  2466 04c5 01       		.uleb128 0x1
  2467 04c6 9C       		.byte	0x9c
  2468 04c7 0E       		.uleb128 0xe
- 2469 04c8 0B040000 		.4byte	.LASF60
+ 2469 04c8 5D040000 		.4byte	.LASF60
  2470 04cc 01       		.byte	0x1
  2471 04cd 0804     		.2byte	0x408
  2472 04cf 76000000 		.4byte	0x76
@@ -4059,7 +4059,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  2475 04db 01       		.uleb128 0x1
  2476 04dc 9C       		.byte	0x9c
  2477 04dd 0A       		.uleb128 0xa
- 2478 04de C3050000 		.4byte	.LASF61
+ 2478 04de C0050000 		.4byte	.LASF61
  2479 04e2 01       		.byte	0x1
  2480 04e3 2304     		.2byte	0x423
  2481 04e5 00000000 		.4byte	.LFB28
@@ -4076,9 +4076,9 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  2492 0500 91       		.byte	0x91
  2493 0501 64       		.sleb128 -28
  2494 0502 0C       		.uleb128 0xc
- 2495 0503 B8040000 		.4byte	.LASF20
+ 2495 0503 0A050000 		.4byte	.LASF20
  2496 0507 01       		.byte	0x1
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 69
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 69
 
 
  2497 0508 2504     		.2byte	0x425
@@ -4088,7 +4088,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  2501 0510 6F       		.sleb128 -17
  2502 0511 00       		.byte	0
  2503 0512 0A       		.uleb128 0xa
- 2504 0513 D3010000 		.4byte	.LASF63
+ 2504 0513 3A020000 		.4byte	.LASF63
  2505 0517 01       		.byte	0x1
  2506 0518 4404     		.2byte	0x444
  2507 051a 00000000 		.4byte	.LFB29
@@ -4105,7 +4105,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  2518 0535 91       		.byte	0x91
  2519 0536 64       		.sleb128 -28
  2520 0537 0C       		.uleb128 0xc
- 2521 0538 B8040000 		.4byte	.LASF20
+ 2521 0538 0A050000 		.4byte	.LASF20
  2522 053c 01       		.byte	0x1
  2523 053d 4604     		.2byte	0x446
  2524 053f 6B000000 		.4byte	0x6b
@@ -4131,14 +4131,14 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  2544 056a 91       		.byte	0x91
  2545 056b 64       		.sleb128 -28
  2546 056c 0C       		.uleb128 0xc
- 2547 056d B8040000 		.4byte	.LASF20
+ 2547 056d 0A050000 		.4byte	.LASF20
  2548 0571 01       		.byte	0x1
  2549 0572 6704     		.2byte	0x467
  2550 0574 6B000000 		.4byte	0x6b
  2551 0578 02       		.uleb128 0x2
  2552 0579 91       		.byte	0x91
  2553 057a 6F       		.sleb128 -17
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 70
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 70
 
 
  2554 057b 00       		.byte	0
@@ -4160,7 +4160,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  2570 059f 91       		.byte	0x91
  2571 05a0 64       		.sleb128 -28
  2572 05a1 0C       		.uleb128 0xc
- 2573 05a2 B8040000 		.4byte	.LASF20
+ 2573 05a2 0A050000 		.4byte	.LASF20
  2574 05a6 01       		.byte	0x1
  2575 05a7 8704     		.2byte	0x487
  2576 05a9 6B000000 		.4byte	0x6b
@@ -4169,7 +4169,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  2579 05af 6F       		.sleb128 -17
  2580 05b0 00       		.byte	0
  2581 05b1 0A       		.uleb128 0xa
- 2582 05b2 0B020000 		.4byte	.LASF66
+ 2582 05b2 1B050000 		.4byte	.LASF66
  2583 05b6 01       		.byte	0x1
  2584 05b7 A604     		.2byte	0x4a6
  2585 05b9 00000000 		.4byte	.LFB32
@@ -4186,7 +4186,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  2596 05d4 91       		.byte	0x91
  2597 05d5 64       		.sleb128 -28
  2598 05d6 0C       		.uleb128 0xc
- 2599 05d7 B8040000 		.4byte	.LASF20
+ 2599 05d7 0A050000 		.4byte	.LASF20
  2600 05db 01       		.byte	0x1
  2601 05dc A804     		.2byte	0x4a8
  2602 05de 6B000000 		.4byte	0x6b
@@ -4198,7 +4198,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  2608 05e7 3D010000 		.4byte	.LASF67
  2609 05eb 01       		.byte	0x1
  2610 05ec CE04     		.2byte	0x4ce
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 71
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 71
 
 
  2611 05ee 00000000 		.4byte	.LFB33
@@ -4223,7 +4223,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  2630 0618 91       		.byte	0x91
  2631 0619 60       		.sleb128 -32
  2632 061a 0C       		.uleb128 0xc
- 2633 061b B8040000 		.4byte	.LASF20
+ 2633 061b 0A050000 		.4byte	.LASF20
  2634 061f 01       		.byte	0x1
  2635 0620 D004     		.2byte	0x4d0
  2636 0622 6B000000 		.4byte	0x6b
@@ -4232,7 +4232,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  2639 0628 6F       		.sleb128 -17
  2640 0629 00       		.byte	0
  2641 062a 0E       		.uleb128 0xe
- 2642 062b 83040000 		.4byte	.LASF69
+ 2642 062b D5040000 		.4byte	.LASF69
  2643 062f 01       		.byte	0x1
  2644 0630 EB04     		.2byte	0x4eb
  2645 0632 76000000 		.4byte	0x76
@@ -4241,7 +4241,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  2648 063e 01       		.uleb128 0x1
  2649 063f 9C       		.byte	0x9c
  2650 0640 0D       		.uleb128 0xd
- 2651 0641 83050000 		.4byte	.LASF70
+ 2651 0641 80050000 		.4byte	.LASF70
  2652 0645 01       		.byte	0x1
  2653 0646 0405     		.2byte	0x504
  2654 0648 00000000 		.4byte	.LFB35
@@ -4250,7 +4250,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  2657 0651 9C       		.byte	0x9c
  2658 0652 66060000 		.4byte	0x666
  2659 0656 0B       		.uleb128 0xb
- 2660 0657 E4030000 		.4byte	.LASF71
+ 2660 0657 36040000 		.4byte	.LASF71
  2661 065b 01       		.byte	0x1
  2662 065c 0405     		.2byte	0x504
  2663 065e 76000000 		.4byte	0x76
@@ -4258,11 +4258,11 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  2665 0663 91       		.byte	0x91
  2666 0664 74       		.sleb128 -12
  2667 0665 00       		.byte	0
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 72
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 72
 
 
  2668 0666 0E       		.uleb128 0xe
- 2669 0667 86030000 		.4byte	.LASF72
+ 2669 0667 D8030000 		.4byte	.LASF72
  2670 066b 01       		.byte	0x1
  2671 066c 1B05     		.2byte	0x51b
  2672 066e 76000000 		.4byte	0x76
@@ -4271,7 +4271,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  2675 067a 01       		.uleb128 0x1
  2676 067b 9C       		.byte	0x9c
  2677 067c 0E       		.uleb128 0xe
- 2678 067d 22040000 		.4byte	.LASF73
+ 2678 067d 74040000 		.4byte	.LASF73
  2679 0681 01       		.byte	0x1
  2680 0682 3205     		.2byte	0x532
  2681 0684 76000000 		.4byte	0x76
@@ -4289,7 +4289,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  2693 06a3 9C       		.byte	0x9c
  2694 06a4 B8060000 		.4byte	0x6b8
  2695 06a8 0B       		.uleb128 0xb
- 2696 06a9 E4030000 		.4byte	.LASF71
+ 2696 06a9 36040000 		.4byte	.LASF71
  2697 06ad 01       		.byte	0x1
  2698 06ae 4905     		.2byte	0x549
  2699 06b0 76000000 		.4byte	0x76
@@ -4298,7 +4298,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  2702 06b6 74       		.sleb128 -12
  2703 06b7 00       		.byte	0
  2704 06b8 0D       		.uleb128 0xd
- 2705 06b9 3D040000 		.4byte	.LASF75
+ 2705 06b9 8F040000 		.4byte	.LASF75
  2706 06bd 01       		.byte	0x1
  2707 06be 6005     		.2byte	0x560
  2708 06c0 00000000 		.4byte	.LFB39
@@ -4307,7 +4307,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  2711 06c9 9C       		.byte	0x9c
  2712 06ca DE060000 		.4byte	0x6de
  2713 06ce 0B       		.uleb128 0xb
- 2714 06cf E4030000 		.4byte	.LASF71
+ 2714 06cf 36040000 		.4byte	.LASF71
  2715 06d3 01       		.byte	0x1
  2716 06d4 6005     		.2byte	0x560
  2717 06d6 76000000 		.4byte	0x76
@@ -4316,9 +4316,9 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  2720 06dc 74       		.sleb128 -12
  2721 06dd 00       		.byte	0
  2722 06de 0F       		.uleb128 0xf
- 2723 06df 20020000 		.4byte	.LASF79
+ 2723 06df 72020000 		.4byte	.LASF79
  2724 06e3 01       		.byte	0x1
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 73
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 73
 
 
  2725 06e4 15       		.byte	0x15
@@ -4378,7 +4378,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  2779 002e 3A       		.uleb128 0x3a
  2780 002f 0B       		.uleb128 0xb
  2781 0030 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 74
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 74
 
 
  2782 0031 0B       		.uleb128 0xb
@@ -4438,7 +4438,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  2836 0068 0E       		.uleb128 0xe
  2837 0069 3A       		.uleb128 0x3a
  2838 006a 0B       		.uleb128 0xb
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 75
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 75
 
 
  2839 006b 3B       		.uleb128 0x3b
@@ -4498,7 +4498,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  2893 00a3 00       		.byte	0
  2894 00a4 00       		.byte	0
  2895 00a5 0B       		.uleb128 0xb
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 76
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 76
 
 
  2896 00a6 05       		.uleb128 0x5
@@ -4558,7 +4558,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  2950 00dd 0E       		.uleb128 0xe
  2951 00de 2E       		.uleb128 0x2e
  2952 00df 00       		.byte	0
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 77
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 77
 
 
  2953 00e0 3F       		.uleb128 0x3f
@@ -4618,7 +4618,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  3007 0028 00000000 		.4byte	.LFB3
  3008 002c 30000000 		.4byte	.LFE3-.LFB3
  3009 0030 00000000 		.4byte	.LFB4
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 78
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 78
 
 
  3010 0034 48000000 		.4byte	.LFE4-.LFB4
@@ -4678,7 +4678,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  3064 010c 44000000 		.4byte	.LFE31-.LFB31
  3065 0110 00000000 		.4byte	.LFB32
  3066 0114 44000000 		.4byte	.LFE32-.LFB32
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 79
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 79
 
 
  3067 0118 00000000 		.4byte	.LFB33
@@ -4738,7 +4738,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  3121 0090 00000000 		.4byte	.LFB18
  3122 0094 48000000 		.4byte	.LFE18
  3123 0098 00000000 		.4byte	.LFB19
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 80
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 80
 
 
  3124 009c 1C000000 		.4byte	.LFE19
@@ -4798,7 +4798,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  3173 0006 54696D65 		.ascii	"Timer_2_ReadPeriod\000"
  3173      725F325F 
  3173      52656164 
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 81
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 81
 
 
  3173      50657269 
@@ -4858,7 +4858,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  3196              	.LASF37:
  3197 00c1 54696D65 		.ascii	"Timer_2_SetPWMInvert\000"
  3197      725F325F 
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 82
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 82
 
 
  3197      53657450 
@@ -4918,7 +4918,7 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  3220              	.LASF52:
  3221 0170 54696D65 		.ascii	"Timer_2_SetPeriodSwap\000"
  3221      725F325F 
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 83
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 83
 
 
  3221      53657450 
@@ -4943,300 +4943,299 @@ ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 1
  3229 01b7 6D6F6465 		.ascii	"modeMask\000"
  3229      4D61736B 
  3229      00
- 3230              	.LASF3:
- 3231 01c0 73686F72 		.ascii	"short unsigned int\000"
- 3231      7420756E 
- 3231      7369676E 
- 3231      65642069 
- 3231      6E7400
- 3232              	.LASF63:
- 3233 01d3 54696D65 		.ascii	"Timer_2_SetReloadMode\000"
- 3233      725F325F 
- 3233      53657452 
- 3233      656C6F61 
- 3233      644D6F64 
- 3234              	.LASF28:
- 3235 01e9 6F6E6553 		.ascii	"oneShotEnable\000"
- 3235      686F7445 
- 3235      6E61626C 
- 3235      6500
- 3236              	.LASF43:
- 3237 01f7 54696D65 		.ascii	"Timer_2_WritePeriod\000"
+ 3230              	.LASF78:
+ 3231 01c0 433A5C55 		.ascii	"C:\\Users\\Samuel\\Documents\\GitHub\\BYU-MarsRover"
+ 3231      73657273 
+ 3231      5C53616D 
+ 3231      75656C5C 
+ 3231      446F6375 
+ 3232 01ee 5C41726D 		.ascii	"\\Arm\\Dynamixel_Servo_Driver\\Dynamixel_Servo_Driv"
+ 3232      5C44796E 
+ 3232      616D6978 
+ 3232      656C5F53 
+ 3232      6572766F 
+ 3233 021e 65722E63 		.ascii	"er.cydsn\000"
+ 3233      7964736E 
+ 3233      00
+ 3234              	.LASF3:
+ 3235 0227 73686F72 		.ascii	"short unsigned int\000"
+ 3235      7420756E 
+ 3235      7369676E 
+ 3235      65642069 
+ 3235      6E7400
+ 3236              	.LASF63:
+ 3237 023a 54696D65 		.ascii	"Timer_2_SetReloadMode\000"
  3237      725F325F 
- 3237      57726974 
- 3237      65506572 
- 3237      696F6400 
- 3238              	.LASF66:
- 3239 020b 54696D65 		.ascii	"Timer_2_SetCountMode\000"
- 3239      725F325F 
- 3239      53657443 
- 3239      6F756E74 
- 3239      4D6F6465 
- 3240              	.LASF79:
- 3241 0220 54696D65 		.ascii	"Timer_2_initVar\000"
+ 3237      53657452 
+ 3237      656C6F61 
+ 3237      644D6F64 
+ 3238              	.LASF28:
+ 3239 0250 6F6E6553 		.ascii	"oneShotEnable\000"
+ 3239      686F7445 
+ 3239      6E61626C 
+ 3239      6500
+ 3240              	.LASF43:
+ 3241 025e 54696D65 		.ascii	"Timer_2_WritePeriod\000"
  3241      725F325F 
- 3241      696E6974 
- 3241      56617200 
- 3242              	.LASF14:
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 84
+ 3241      57726974 
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 84
 
 
- 3243 0230 72656733 		.ascii	"reg32\000"
- 3243      3200
- 3244              	.LASF42:
- 3245 0236 636F756E 		.ascii	"counterMode\000"
- 3245      7465724D 
- 3245      6F646500 
- 3246              	.LASF19:
- 3247 0242 54696D65 		.ascii	"Timer_2_Stop\000"
- 3247      725F325F 
- 3247      53746F70 
- 3247      00
- 3248              	.LASF15:
- 3249 024f 73697A65 		.ascii	"sizetype\000"
- 3249      74797065 
+ 3241      65506572 
+ 3241      696F6400 
+ 3242              	.LASF79:
+ 3243 0272 54696D65 		.ascii	"Timer_2_initVar\000"
+ 3243      725F325F 
+ 3243      696E6974 
+ 3243      56617200 
+ 3244              	.LASF14:
+ 3245 0282 72656733 		.ascii	"reg32\000"
+ 3245      3200
+ 3246              	.LASF42:
+ 3247 0288 636F756E 		.ascii	"counterMode\000"
+ 3247      7465724D 
+ 3247      6F646500 
+ 3248              	.LASF19:
+ 3249 0294 54696D65 		.ascii	"Timer_2_Stop\000"
+ 3249      725F325F 
+ 3249      53746F70 
  3249      00
- 3250              	.LASF35:
- 3251 0258 54696D65 		.ascii	"Timer_2_SetPWMDeadTime\000"
- 3251      725F325F 
- 3251      53657450 
- 3251      574D4465 
- 3251      61645469 
- 3252              	.LASF32:
- 3253 026f 73796E63 		.ascii	"syncKillEnable\000"
- 3253      4B696C6C 
- 3253      456E6162 
- 3253      6C6500
- 3254              	.LASF17:
- 3255 027e 54696D65 		.ascii	"Timer_2_Start\000"
- 3255      725F325F 
- 3255      53746172 
- 3255      7400
- 3256              	.LASF54:
- 3257 028c 636F6D70 		.ascii	"compare\000"
- 3257      61726500 
- 3258              	.LASF29:
- 3259 0294 54696D65 		.ascii	"Timer_2_SetPWMMode\000"
- 3259      725F325F 
- 3259      53657450 
- 3259      574D4D6F 
- 3259      646500
- 3260              	.LASF56:
- 3261 02a7 54696D65 		.ascii	"Timer_2_WriteCompareBuf\000"
+ 3250              	.LASF15:
+ 3251 02a1 73697A65 		.ascii	"sizetype\000"
+ 3251      74797065 
+ 3251      00
+ 3252              	.LASF35:
+ 3253 02aa 54696D65 		.ascii	"Timer_2_SetPWMDeadTime\000"
+ 3253      725F325F 
+ 3253      53657450 
+ 3253      574D4465 
+ 3253      61645469 
+ 3254              	.LASF32:
+ 3255 02c1 73796E63 		.ascii	"syncKillEnable\000"
+ 3255      4B696C6C 
+ 3255      456E6162 
+ 3255      6C6500
+ 3256              	.LASF17:
+ 3257 02d0 54696D65 		.ascii	"Timer_2_Start\000"
+ 3257      725F325F 
+ 3257      53746172 
+ 3257      7400
+ 3258              	.LASF54:
+ 3259 02de 636F6D70 		.ascii	"compare\000"
+ 3259      61726500 
+ 3260              	.LASF29:
+ 3261 02e6 54696D65 		.ascii	"Timer_2_SetPWMMode\000"
  3261      725F325F 
- 3261      57726974 
- 3261      65436F6D 
- 3261      70617265 
- 3262              	.LASF21:
- 3263 02bf 54696D65 		.ascii	"Timer_2_SetMode\000"
+ 3261      53657450 
+ 3261      574D4D6F 
+ 3261      646500
+ 3262              	.LASF56:
+ 3263 02f9 54696D65 		.ascii	"Timer_2_WriteCompareBuf\000"
  3263      725F325F 
- 3263      5365744D 
- 3263      6F646500 
- 3264              	.LASF59:
- 3265 02cf 54696D65 		.ascii	"Timer_2_ReadCapture\000"
+ 3263      57726974 
+ 3263      65436F6D 
+ 3263      70617265 
+ 3264              	.LASF21:
+ 3265 0311 54696D65 		.ascii	"Timer_2_SetMode\000"
  3265      725F325F 
- 3265      52656164 
- 3265      43617074 
- 3265      75726500 
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 85
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 85
 
 
- 3266              	.LASF11:
- 3267 02e3 666C6F61 		.ascii	"float\000"
- 3267      7400
- 3268              	.LASF26:
- 3269 02e9 70726573 		.ascii	"prescaler\000"
- 3269      63616C65 
- 3269      7200
- 3270              	.LASF76:
- 3271 02f3 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
- 3271      4320342E 
- 3271      382E3420 
- 3271      32303134 
- 3271      30353236 
- 3272 0326 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m0 -mthumb -g -O"
- 3272      20726576 
- 3272      6973696F 
- 3272      6E203231 
- 3272      31333538 
- 3273 0359 30202D66 		.ascii	"0 -ffunction-sections\000"
- 3273      66756E63 
- 3273      74696F6E 
- 3273      2D736563 
- 3273      74696F6E 
- 3274              	.LASF49:
- 3275 036f 54696D65 		.ascii	"Timer_2_WritePeriodBuf\000"
- 3275      725F325F 
- 3275      57726974 
- 3275      65506572 
- 3275      696F6442 
- 3276              	.LASF72:
- 3277 0386 54696D65 		.ascii	"Timer_2_GetInterruptSourceMasked\000"
+ 3265      5365744D 
+ 3265      6F646500 
+ 3266              	.LASF59:
+ 3267 0321 54696D65 		.ascii	"Timer_2_ReadCapture\000"
+ 3267      725F325F 
+ 3267      52656164 
+ 3267      43617074 
+ 3267      75726500 
+ 3268              	.LASF11:
+ 3269 0335 666C6F61 		.ascii	"float\000"
+ 3269      7400
+ 3270              	.LASF26:
+ 3271 033b 70726573 		.ascii	"prescaler\000"
+ 3271      63616C65 
+ 3271      7200
+ 3272              	.LASF76:
+ 3273 0345 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
+ 3273      4320342E 
+ 3273      382E3420 
+ 3273      32303134 
+ 3273      30353236 
+ 3274 0378 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m0 -mthumb -g -O"
+ 3274      20726576 
+ 3274      6973696F 
+ 3274      6E203231 
+ 3274      31333538 
+ 3275 03ab 30202D66 		.ascii	"0 -ffunction-sections\000"
+ 3275      66756E63 
+ 3275      74696F6E 
+ 3275      2D736563 
+ 3275      74696F6E 
+ 3276              	.LASF49:
+ 3277 03c1 54696D65 		.ascii	"Timer_2_WritePeriodBuf\000"
  3277      725F325F 
- 3277      47657449 
- 3277      6E746572 
- 3277      72757074 
- 3278              	.LASF1:
- 3279 03a7 756E7369 		.ascii	"unsigned char\000"
- 3279      676E6564 
- 3279      20636861 
- 3279      7200
- 3280              	.LASF34:
- 3281 03b5 73746F70 		.ascii	"stopOnKillEnable\000"
- 3281      4F6E4B69 
- 3281      6C6C456E 
- 3281      61626C65 
- 3281      00
- 3282              	.LASF2:
- 3283 03c6 73686F72 		.ascii	"short int\000"
- 3283      7420696E 
- 3283      7400
- 3284              	.LASF55:
- 3285 03d0 54696D65 		.ascii	"Timer_2_ReadCompare\000"
- 3285      725F325F 
- 3285      52656164 
- 3285      436F6D70 
- 3285      61726500 
- 3286              	.LASF71:
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 86
+ 3277      57726974 
+ 3277      65506572 
+ 3277      696F6442 
+ 3278              	.LASF72:
+ 3279 03d8 54696D65 		.ascii	"Timer_2_GetInterruptSourceMasked\000"
+ 3279      725F325F 
+ 3279      47657449 
+ 3279      6E746572 
+ 3279      72757074 
+ 3280              	.LASF1:
+ 3281 03f9 756E7369 		.ascii	"unsigned char\000"
+ 3281      676E6564 
+ 3281      20636861 
+ 3281      7200
+ 3282              	.LASF34:
+ 3283 0407 73746F70 		.ascii	"stopOnKillEnable\000"
+ 3283      4F6E4B69 
+ 3283      6C6C456E 
+ 3283      61626C65 
+ 3283      00
+ 3284              	.LASF2:
+ 3285 0418 73686F72 		.ascii	"short int\000"
+ 3285      7420696E 
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 86
 
 
- 3287 03e4 696E7465 		.ascii	"interruptMask\000"
- 3287      72727570 
- 3287      744D6173 
- 3287      6B00
- 3288              	.LASF33:
- 3289 03f2 54696D65 		.ascii	"Timer_2_SetPWMStopOnKill\000"
- 3289      725F325F 
- 3289      53657450 
- 3289      574D5374 
- 3289      6F704F6E 
- 3290              	.LASF60:
- 3291 040b 54696D65 		.ascii	"Timer_2_ReadCaptureBuf\000"
+ 3285      7400
+ 3286              	.LASF55:
+ 3287 0422 54696D65 		.ascii	"Timer_2_ReadCompare\000"
+ 3287      725F325F 
+ 3287      52656164 
+ 3287      436F6D70 
+ 3287      61726500 
+ 3288              	.LASF71:
+ 3289 0436 696E7465 		.ascii	"interruptMask\000"
+ 3289      72727570 
+ 3289      744D6173 
+ 3289      6B00
+ 3290              	.LASF33:
+ 3291 0444 54696D65 		.ascii	"Timer_2_SetPWMStopOnKill\000"
  3291      725F325F 
- 3291      52656164 
- 3291      43617074 
- 3291      75726542 
- 3292              	.LASF73:
- 3293 0422 54696D65 		.ascii	"Timer_2_GetInterruptSource\000"
+ 3291      53657450 
+ 3291      574D5374 
+ 3291      6F704F6E 
+ 3292              	.LASF60:
+ 3293 045d 54696D65 		.ascii	"Timer_2_ReadCaptureBuf\000"
  3293      725F325F 
- 3293      47657449 
- 3293      6E746572 
- 3293      72757074 
- 3294              	.LASF75:
- 3295 043d 54696D65 		.ascii	"Timer_2_SetInterrupt\000"
+ 3293      52656164 
+ 3293      43617074 
+ 3293      75726542 
+ 3294              	.LASF73:
+ 3295 0474 54696D65 		.ascii	"Timer_2_GetInterruptSource\000"
  3295      725F325F 
- 3295      53657449 
+ 3295      47657449 
  3295      6E746572 
  3295      72757074 
- 3296              	.LASF13:
- 3297 0452 63686172 		.ascii	"char\000"
- 3297      00
- 3298              	.LASF23:
- 3299 0457 6D6F6465 		.ascii	"mode\000"
+ 3296              	.LASF75:
+ 3297 048f 54696D65 		.ascii	"Timer_2_SetInterrupt\000"
+ 3297      725F325F 
+ 3297      53657449 
+ 3297      6E746572 
+ 3297      72757074 
+ 3298              	.LASF13:
+ 3299 04a4 63686172 		.ascii	"char\000"
  3299      00
- 3300              	.LASF27:
- 3301 045c 54696D65 		.ascii	"Timer_2_SetOneShot\000"
- 3301      725F325F 
- 3301      5365744F 
- 3301      6E655368 
- 3301      6F7400
- 3302              	.LASF45:
- 3303 046f 54696D65 		.ascii	"Timer_2_ReadCounter\000"
+ 3300              	.LASF23:
+ 3301 04a9 6D6F6465 		.ascii	"mode\000"
+ 3301      00
+ 3302              	.LASF27:
+ 3303 04ae 54696D65 		.ascii	"Timer_2_SetOneShot\000"
  3303      725F325F 
- 3303      52656164 
- 3303      436F756E 
- 3303      74657200 
- 3304              	.LASF69:
- 3305 0483 54696D65 		.ascii	"Timer_2_ReadStatus\000"
+ 3303      5365744F 
+ 3303      6E655368 
+ 3303      6F7400
+ 3304              	.LASF45:
+ 3305 04c1 54696D65 		.ascii	"Timer_2_ReadCounter\000"
  3305      725F325F 
  3305      52656164 
- 3305      53746174 
- 3305      757300
- 3306              	.LASF57:
- 3307 0496 636F6D70 		.ascii	"compareBuf\000"
- 3307      61726542 
- 3307      756600
- 3308              	.LASF41:
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 87
+ 3305      436F756E 
+ 3305      74657200 
+ 3306              	.LASF69:
+ 3307 04d5 54696D65 		.ascii	"Timer_2_ReadStatus\000"
+ 3307      725F325F 
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 87
 
 
- 3309 04a1 54696D65 		.ascii	"Timer_2_SetCounterMode\000"
- 3309      725F325F 
- 3309      53657443 
- 3309      6F756E74 
- 3309      65724D6F 
- 3310              	.LASF20:
- 3311 04b8 656E6162 		.ascii	"enableInterrupts\000"
- 3311      6C65496E 
- 3311      74657272 
- 3311      75707473 
- 3311      00
- 3312              	.LASF78:
- 3313 04c9 5C5C766D 		.ascii	"\\\\vmware-host\\Shared Folders\\OneDrive\\Tech\\Gi"
- 3313      77617265 
- 3313      2D686F73 
- 3313      745C5368 
- 3313      61726564 
- 3314 04f6 74487562 		.ascii	"tHub\\Arm\\Dynamixel_Servo_Driver\\Dynamixel_Servo_"
- 3314      5C41726D 
- 3314      5C44796E 
- 3314      616D6978 
- 3314      656C5F53 
- 3315 0526 44726976 		.ascii	"Driver.cydsn\000"
- 3315      65722E63 
- 3315      7964736E 
- 3315      00
+ 3307      52656164 
+ 3307      53746174 
+ 3307      757300
+ 3308              	.LASF57:
+ 3309 04e8 636F6D70 		.ascii	"compareBuf\000"
+ 3309      61726542 
+ 3309      756600
+ 3310              	.LASF41:
+ 3311 04f3 54696D65 		.ascii	"Timer_2_SetCounterMode\000"
+ 3311      725F325F 
+ 3311      53657443 
+ 3311      6F756E74 
+ 3311      65724D6F 
+ 3312              	.LASF20:
+ 3313 050a 656E6162 		.ascii	"enableInterrupts\000"
+ 3313      6C65496E 
+ 3313      74657272 
+ 3313      75707473 
+ 3313      00
+ 3314              	.LASF66:
+ 3315 051b 54696D65 		.ascii	"Timer_2_SetCountMode\000"
+ 3315      725F325F 
+ 3315      53657443 
+ 3315      6F756E74 
+ 3315      4D6F6465 
  3316              	.LASF25:
- 3317 0533 54696D65 		.ascii	"Timer_2_SetPrescaler\000"
+ 3317 0530 54696D65 		.ascii	"Timer_2_SetPrescaler\000"
  3317      725F325F 
  3317      53657450 
  3317      72657363 
  3317      616C6572 
  3318              	.LASF77:
- 3319 0548 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\Timer_2.c\000"
+ 3319 0545 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\Timer_2.c\000"
  3319      6E657261 
  3319      7465645F 
  3319      536F7572 
  3319      63655C50 
  3320              	.LASF16:
- 3321 056b 54696D65 		.ascii	"Timer_2_Init\000"
+ 3321 0568 54696D65 		.ascii	"Timer_2_Init\000"
  3321      725F325F 
  3321      496E6974 
  3321      00
  3322              	.LASF48:
- 3323 0578 73776170 		.ascii	"swapEnable\000"
+ 3323 0575 73776170 		.ascii	"swapEnable\000"
  3323      456E6162 
  3323      6C6500
  3324              	.LASF70:
- 3325 0583 54696D65 		.ascii	"Timer_2_SetInterruptMode\000"
+ 3325 0580 54696D65 		.ascii	"Timer_2_SetInterruptMode\000"
  3325      725F325F 
  3325      53657449 
  3325      6E746572 
  3325      72757074 
  3326              	.LASF53:
- 3327 059c 54696D65 		.ascii	"Timer_2_WriteCompare\000"
+ 3327 0599 54696D65 		.ascii	"Timer_2_WriteCompare\000"
  3327      725F325F 
  3327      57726974 
-ARM GAS  C:\Users\JOHNSO~1\AppData\Local\Temp\ccY6jUMl.s 			page 88
-
-
  3327      65436F6D 
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cc1JqIsg.s 			page 88
+
+
  3327      70617265 
  3328              	.LASF22:
- 3329 05b1 54696D65 		.ascii	"Timer_2_SetQDMode\000"
+ 3329 05ae 54696D65 		.ascii	"Timer_2_SetQDMode\000"
  3329      725F325F 
  3329      53657451 
  3329      444D6F64 
  3329      6500
  3330              	.LASF61:
- 3331 05c3 54696D65 		.ascii	"Timer_2_SetCaptureMode\000"
+ 3331 05c0 54696D65 		.ascii	"Timer_2_SetCaptureMode\000"
  3331      725F325F 
  3331      53657443 
  3331      61707475 
  3331      72654D6F 
  3332              	.LASF50:
- 3333 05da 70657269 		.ascii	"periodBuf\000"
+ 3333 05d7 70657269 		.ascii	"periodBuf\000"
  3333      6F644275 
  3333      6600
  3334              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.4 20140526 (release) [ARM/embedded-4_8-br

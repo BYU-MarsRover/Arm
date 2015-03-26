@@ -1,6 +1,6 @@
 // ======================================================================
 // arm_controller_v2.1.v generated from TopDesign.cysch
-// 03/21/2015 at 18:11
+// 03/25/2015 at 19:52
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -1347,7 +1347,7 @@ module SPI_Master_v2_40_6 (
 		  .divisor(0),
 		  .period("500000000"),
 		  .is_direct(0),
-		  .is_digital(0))
+		  .is_digital(1))
 		IntClock
 		 (.clock_out(Net_239));
 

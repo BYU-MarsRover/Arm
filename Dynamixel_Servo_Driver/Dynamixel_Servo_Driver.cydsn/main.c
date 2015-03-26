@@ -94,7 +94,7 @@ int main()
     array[7] = position >> 8;
     array[8] = ~(servoID + 0x05 + 0x1E + array[6] + array[7] + 0x03);
     
-    UART_2_SpiUartPutArray(array, 0x09);
+    UART_2_SpiUartPutArray(array, 9);
     
 }
     
@@ -111,7 +111,7 @@ void SetServoTorque( uint8 servoID, uint16 torque){
     array[7] = torque >> 8;
     array[8] = ~(servoID + 0x05 + 0x0E + array[6] + array[7] + 0x03);
     
-    UART_2_SpiUartPutArray(array, 0x09);
+    UART_2_SpiUartPutArray(array, 9);
     
 }    
 
@@ -128,7 +128,7 @@ void ServoSpeed( uint8 servoID, uint16 speed){
     array[7] = speed >> 8;
     array[8] = ~(servoID + 0x05 + 0x20 + array[6] + array[7] + 0x03);
     
-    UART_2_SpiUartPutArray(array, 0x09);
+    UART_2_SpiUartPutArray(array, 9);
     
 }
 

@@ -473,7 +473,7 @@ void wristTilt()
                 //throw error
                 ServoGoalPosition(0x02, 1500); //TODO: write a neutral value
             }
-            fin_exec++;
+            WT_FLAG = 0;
             break;
             
         case tilt_wait:
@@ -490,7 +490,7 @@ void wristTilt()
             break;
         
         case tilt_control:
-            if(new_pack)
+            if(WT_FLAG)
             {
                 wristTilt_state = tilt_control;
             }
@@ -501,7 +501,7 @@ void wristTilt()
             break;
         
         case tilt_wait:
-            if(new_pack)
+            if(WT_FLAG)
             {
                 wristTilt_state = tilt_control;
             }
@@ -578,7 +578,7 @@ void wristRotate()
                 //TODO: if we scale change the "neutral" value
                 ServoGoalPosition(0x01, 1500);
             }
-            fin_exec++;
+            WR_FLAG = 0;
             break;
             
         case rotate_wait:
@@ -595,7 +595,7 @@ void wristRotate()
             break;
         
         case rotate_control:
-            if(new_pack)
+            if(WR_FLAG)
             {
                 wristRotate_state = rotate_control;
             }
@@ -606,7 +606,7 @@ void wristRotate()
             break;
         
         case rotate_wait:
-            if(new_pack)
+            if(WR_FLAG)
             {
                 wristRotate_state = rotate_control;
             }
@@ -710,7 +710,7 @@ void elbow()
                 }
             }
             
-            fin_exec++;
+            ELBOW_FLAG = 0;
             break;
             
         case elbw_wait:
@@ -731,7 +731,7 @@ void elbow()
             break;
         
         case elbw_execute:
-            if(new_pack)
+            if(ELBOW_FLAG)
             {
                 elbow_state = elbw_execute;
             }
@@ -742,7 +742,7 @@ void elbow()
             break;
         
         case elbw_wait:
-            if(new_pack)
+            if(ELBOW_FLAG)
             {
                 elbow_state = elbw_execute;
             }
@@ -845,8 +845,7 @@ void shoulder()
                     SHLDR_PWM_WriteCompare(1500);
                 }
             }
-            
-            fin_exec++;
+            SHOULDER_FLAG = 0;
             break;
             
         case shldr_wait:
@@ -867,7 +866,7 @@ void shoulder()
             break;
         
         case shldr_execute:
-            if(new_pack)
+            if(SHOULDER_FLAG)
             {
                 shoulder_state = shldr_execute;
             }
@@ -878,7 +877,7 @@ void shoulder()
             break;
         
         case shldr_wait:
-            if(new_pack)
+            if(SHOULDER_FLAG)
             {
                 shoulder_state = shldr_execute;
             }
@@ -912,7 +911,7 @@ void baseAzimuth()
             }
             BA_arr_cspot = 0;
             
-            BA_PWM_WriteCompare(1500);
+            BA_PWM_WriteCompare(2000);
             break;
 
         case BA_execute:
@@ -941,7 +940,7 @@ void baseAzimuth()
                 //throw error
                 BA_PWM_WriteCompare(1500);
             }
-            fin_exec++;
+            BA_FLAG = 0;
             break;
             
         case BA_wait:
@@ -958,7 +957,7 @@ void baseAzimuth()
             break;
         
         case BA_execute:
-            if(new_pack)
+            if(BA_FLAG)
             {
                 baseAzimuth_state = BA_execute;
             }
@@ -969,7 +968,7 @@ void baseAzimuth()
             break;
         
         case BA_wait:
-            if(new_pack)
+            if(BA_FLAG)
             {
                 baseAzimuth_state = BA_execute;
             }
@@ -1070,8 +1069,11 @@ int main()
         {
             wiznetClearInterrupts();
             fill_data_array();
-            new_pack = 1;
-            fin_exec = 0;
+            BA_FLAG = 1;
+            WR_FLAG = 1;
+            WT_FLAG = 1;
+            SHOULDER_FLAG = 1;
+            ELBOW_FLAG = 1;
             //wiznet = 0; //for testing
         }
         
@@ -1082,10 +1084,6 @@ int main()
         wristTilt();
         wristRotate();
 
-        if(fin_exec == NUM_OF_SM)
-        {
-            new_pack = 0;
-        }
         //else{dropped_packets++}
         //second_count = Timer_1_ReadCounter();
         //temp_code_time = second_count - first_count;
