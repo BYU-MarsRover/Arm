@@ -1,5 +1,5 @@
 /*******************************************************************************
-* File Name: LED_1.c  
+* File Name: sens_hygro.c  
 * Version 2.10
 *
 * Description:
@@ -15,18 +15,18 @@
 *******************************************************************************/
 
 #include "cytypes.h"
-#include "LED_1.h"
+#include "sens_hygro.h"
 
 #define SetP4PinDriveMode(shift, mode)  \
     do { \
-        LED_1_PC =   (LED_1_PC & \
-                                (uint32)(~(uint32)(LED_1_DRIVE_MODE_IND_MASK << (LED_1_DRIVE_MODE_BITS * (shift))))) | \
-                                (uint32)((uint32)(mode) << (LED_1_DRIVE_MODE_BITS * (shift))); \
+        sens_hygro_PC =   (sens_hygro_PC & \
+                                (uint32)(~(uint32)(sens_hygro_DRIVE_MODE_IND_MASK << (sens_hygro_DRIVE_MODE_BITS * (shift))))) | \
+                                (uint32)((uint32)(mode) << (sens_hygro_DRIVE_MODE_BITS * (shift))); \
     } while (0)
 
 
 /*******************************************************************************
-* Function Name: LED_1_Write
+* Function Name: sens_hygro_Write
 ********************************************************************************
 *
 * Summary:
@@ -39,16 +39,16 @@
 *  None 
 *  
 *******************************************************************************/
-void LED_1_Write(uint8 value) 
+void sens_hygro_Write(uint8 value) 
 {
-    uint8 drVal = (uint8)(LED_1_DR & (uint8)(~LED_1_MASK));
-    drVal = (drVal | ((uint8)(value << LED_1_SHIFT) & LED_1_MASK));
-    LED_1_DR = (uint32)drVal;
+    uint8 drVal = (uint8)(sens_hygro_DR & (uint8)(~sens_hygro_MASK));
+    drVal = (drVal | ((uint8)(value << sens_hygro_SHIFT) & sens_hygro_MASK));
+    sens_hygro_DR = (uint32)drVal;
 }
 
 
 /*******************************************************************************
-* Function Name: LED_1_SetDriveMode
+* Function Name: sens_hygro_SetDriveMode
 ********************************************************************************
 *
 * Summary:
@@ -57,27 +57,27 @@ void LED_1_Write(uint8 value)
 * Parameters:  
 *  mode:  Change the pins to one of the following drive modes.
 *
-*  LED_1_DM_STRONG     Strong Drive 
-*  LED_1_DM_OD_HI      Open Drain, Drives High 
-*  LED_1_DM_OD_LO      Open Drain, Drives Low 
-*  LED_1_DM_RES_UP     Resistive Pull Up 
-*  LED_1_DM_RES_DWN    Resistive Pull Down 
-*  LED_1_DM_RES_UPDWN  Resistive Pull Up/Down 
-*  LED_1_DM_DIG_HIZ    High Impedance Digital 
-*  LED_1_DM_ALG_HIZ    High Impedance Analog 
+*  sens_hygro_DM_STRONG     Strong Drive 
+*  sens_hygro_DM_OD_HI      Open Drain, Drives High 
+*  sens_hygro_DM_OD_LO      Open Drain, Drives Low 
+*  sens_hygro_DM_RES_UP     Resistive Pull Up 
+*  sens_hygro_DM_RES_DWN    Resistive Pull Down 
+*  sens_hygro_DM_RES_UPDWN  Resistive Pull Up/Down 
+*  sens_hygro_DM_DIG_HIZ    High Impedance Digital 
+*  sens_hygro_DM_ALG_HIZ    High Impedance Analog 
 *
 * Return: 
 *  None
 *
 *******************************************************************************/
-void LED_1_SetDriveMode(uint8 mode) 
+void sens_hygro_SetDriveMode(uint8 mode) 
 {
-	SetP4PinDriveMode(LED_1__0__SHIFT, mode);
+	SetP4PinDriveMode(sens_hygro__0__SHIFT, mode);
 }
 
 
 /*******************************************************************************
-* Function Name: LED_1_Read
+* Function Name: sens_hygro_Read
 ********************************************************************************
 *
 * Summary:
@@ -91,17 +91,17 @@ void LED_1_SetDriveMode(uint8 mode)
 *  Returns the current value of the Digital Port as a right justified number
 *  
 * Note:
-*  Macro LED_1_ReadPS calls this function. 
+*  Macro sens_hygro_ReadPS calls this function. 
 *  
 *******************************************************************************/
-uint8 LED_1_Read(void) 
+uint8 sens_hygro_Read(void) 
 {
-    return (uint8)((LED_1_PS & LED_1_MASK) >> LED_1_SHIFT);
+    return (uint8)((sens_hygro_PS & sens_hygro_MASK) >> sens_hygro_SHIFT);
 }
 
 
 /*******************************************************************************
-* Function Name: LED_1_ReadDataReg
+* Function Name: sens_hygro_ReadDataReg
 ********************************************************************************
 *
 * Summary:
@@ -114,17 +114,17 @@ uint8 LED_1_Read(void)
 *  Returns the current value assigned to the Digital Port's data output register
 *  
 *******************************************************************************/
-uint8 LED_1_ReadDataReg(void) 
+uint8 sens_hygro_ReadDataReg(void) 
 {
-    return (uint8)((LED_1_DR & LED_1_MASK) >> LED_1_SHIFT);
+    return (uint8)((sens_hygro_DR & sens_hygro_MASK) >> sens_hygro_SHIFT);
 }
 
 
 /* If Interrupts Are Enabled for this Pins component */ 
-#if defined(LED_1_INTSTAT) 
+#if defined(sens_hygro_INTSTAT) 
 
     /*******************************************************************************
-    * Function Name: LED_1_ClearInterrupt
+    * Function Name: sens_hygro_ClearInterrupt
     ********************************************************************************
     *
     * Summary:
@@ -138,11 +138,11 @@ uint8 LED_1_ReadDataReg(void)
     *  Returns the value of the interrupt status register
     *  
     *******************************************************************************/
-    uint8 LED_1_ClearInterrupt(void) 
+    uint8 sens_hygro_ClearInterrupt(void) 
     {
-		uint8 maskedStatus = (uint8)(LED_1_INTSTAT & LED_1_MASK);
-		LED_1_INTSTAT = maskedStatus;
-        return maskedStatus >> LED_1_SHIFT;
+		uint8 maskedStatus = (uint8)(sens_hygro_INTSTAT & sens_hygro_MASK);
+		sens_hygro_INTSTAT = maskedStatus;
+        return maskedStatus >> sens_hygro_SHIFT;
     }
 
 #endif /* If Interrupts Are Enabled for this Pins component */ 

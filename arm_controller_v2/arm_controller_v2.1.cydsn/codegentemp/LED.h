@@ -1,5 +1,5 @@
 /*******************************************************************************
-* File Name: LED_1.h  
+* File Name: LED.h  
 * Version 2.10
 *
 * Description:
@@ -14,23 +14,23 @@
 * the software package with which this file was provided.
 *******************************************************************************/
 
-#if !defined(CY_PINS_LED_1_H) /* Pins LED_1_H */
-#define CY_PINS_LED_1_H
+#if !defined(CY_PINS_LED_H) /* Pins LED_H */
+#define CY_PINS_LED_H
 
 #include "cytypes.h"
 #include "cyfitter.h"
-#include "LED_1_aliases.h"
+#include "LED_aliases.h"
 
 
 /***************************************
 *        Function Prototypes             
 ***************************************/    
 
-void    LED_1_Write(uint8 value) ;
-void    LED_1_SetDriveMode(uint8 mode) ;
-uint8   LED_1_ReadDataReg(void) ;
-uint8   LED_1_Read(void) ;
-uint8   LED_1_ClearInterrupt(void) ;
+void    LED_Write(uint8 value) ;
+void    LED_SetDriveMode(uint8 mode) ;
+uint8   LED_ReadDataReg(void) ;
+uint8   LED_Read(void) ;
+uint8   LED_ClearInterrupt(void) ;
 
 
 /***************************************
@@ -38,22 +38,22 @@ uint8   LED_1_ClearInterrupt(void) ;
 ***************************************/
 
 /* Drive Modes */
-#define LED_1_DRIVE_MODE_BITS        (3)
-#define LED_1_DRIVE_MODE_IND_MASK    (0xFFFFFFFFu >> (32 - LED_1_DRIVE_MODE_BITS))
+#define LED_DRIVE_MODE_BITS        (3)
+#define LED_DRIVE_MODE_IND_MASK    (0xFFFFFFFFu >> (32 - LED_DRIVE_MODE_BITS))
 
-#define LED_1_DM_ALG_HIZ         (0x00u)
-#define LED_1_DM_DIG_HIZ         (0x01u)
-#define LED_1_DM_RES_UP          (0x02u)
-#define LED_1_DM_RES_DWN         (0x03u)
-#define LED_1_DM_OD_LO           (0x04u)
-#define LED_1_DM_OD_HI           (0x05u)
-#define LED_1_DM_STRONG          (0x06u)
-#define LED_1_DM_RES_UPDWN       (0x07u)
+#define LED_DM_ALG_HIZ         (0x00u)
+#define LED_DM_DIG_HIZ         (0x01u)
+#define LED_DM_RES_UP          (0x02u)
+#define LED_DM_RES_DWN         (0x03u)
+#define LED_DM_OD_LO           (0x04u)
+#define LED_DM_OD_HI           (0x05u)
+#define LED_DM_STRONG          (0x06u)
+#define LED_DM_RES_UPDWN       (0x07u)
 
 /* Digital Port Constants */
-#define LED_1_MASK               LED_1__MASK
-#define LED_1_SHIFT              LED_1__SHIFT
-#define LED_1_WIDTH              1u
+#define LED_MASK               LED__MASK
+#define LED_SHIFT              LED__SHIFT
+#define LED_WIDTH              1u
 
 
 /***************************************
@@ -62,18 +62,18 @@ uint8   LED_1_ClearInterrupt(void) ;
 
 /* Main Port Registers */
 /* Pin State */
-#define LED_1_PS                     (* (reg32 *) LED_1__PS)
+#define LED_PS                     (* (reg32 *) LED__PS)
 /* Port Configuration */
-#define LED_1_PC                     (* (reg32 *) LED_1__PC)
+#define LED_PC                     (* (reg32 *) LED__PC)
 /* Data Register */
-#define LED_1_DR                     (* (reg32 *) LED_1__DR)
+#define LED_DR                     (* (reg32 *) LED__DR)
 /* Input Buffer Disable Override */
-#define LED_1_INP_DIS                (* (reg32 *) LED_1__PC2)
+#define LED_INP_DIS                (* (reg32 *) LED__PC2)
 
 
-#if defined(LED_1__INTSTAT)  /* Interrupt Registers */
+#if defined(LED__INTSTAT)  /* Interrupt Registers */
 
-    #define LED_1_INTSTAT                (* (reg32 *) LED_1__INTSTAT)
+    #define LED_INTSTAT                (* (reg32 *) LED__INTSTAT)
 
 #endif /* Interrupt Registers */
 
@@ -83,11 +83,11 @@ uint8   LED_1_ClearInterrupt(void) ;
 * must not be used.
 ***************************************/
 
-#define LED_1_DRIVE_MODE_SHIFT       (0x00u)
-#define LED_1_DRIVE_MODE_MASK        (0x07u << LED_1_DRIVE_MODE_SHIFT)
+#define LED_DRIVE_MODE_SHIFT       (0x00u)
+#define LED_DRIVE_MODE_MASK        (0x07u << LED_DRIVE_MODE_SHIFT)
 
 
-#endif /* End Pins LED_1_H */
+#endif /* End Pins LED_H */
 
 
 /* [] END OF FILE */

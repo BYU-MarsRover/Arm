@@ -63,6 +63,9 @@
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Clock_pwm.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\isr_1.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\isr_1.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\LED.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\LED.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\LED_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Timer_1.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Timer_1.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Timer_1_PM.c</File>
@@ -140,9 +143,6 @@
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\shoulder.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\shoulder.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\shoulder_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\user_test.c</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\user_test.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\user_test_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\BA_PWM.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\BA_PWM.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\BA_PWM_PM.c</File>
@@ -152,9 +152,6 @@
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\SHLDR_PWM.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\SHLDR_PWM.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\SHLDR_PWM_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\LED_1.c</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\LED_1.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\LED_1_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\MISO_1.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\MISO_1.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\MISO_1_aliases.h</File>
@@ -171,6 +168,45 @@
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\SPIM_1_PVT.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\SPIM_1_IntClock.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\SPIM_1_IntClock.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\sens_hygro.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\sens_hygro.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\sens_hygro_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\sens_ph.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\sens_ph.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\sens_ph_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\stop_shdr_up.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\stop_shdr_up.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\stop_shdr_up_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\stop_shdr_dn.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\stop_shdr_dn.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\stop_shdr_dn_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\stop_elb_up.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\stop_elb_up.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\stop_elb_up_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\stop_elb_dn.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\stop_elb_dn.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\stop_elb_dn_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_TEST.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_TEST.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_TEST_SPI_UART.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_TEST_SPI_UART.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_TEST_SPI_UART_INT.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_TEST_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_TEST_UART.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_TEST_BOOT.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_TEST_UART_BOOT.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_TEST_PINS.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_TEST_SPI_UART_PVT.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_TEST_PVT.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_TEST_BOOT.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_TEST_SCBCLK.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_TEST_SCBCLK.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_TEST_tx.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_TEST_tx.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_TEST_tx_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_TEST_rx.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_TEST_rx.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_TEST_rx_aliases.h</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\Export\ARM_GCC_Generic">

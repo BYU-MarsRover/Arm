@@ -48,7 +48,7 @@
     uint8 wiznet; //bool indicating wiznet interupt high or low
 
     //TODO: erase this in final product
-    #define TEST_ARRAY_SIZE 14
+    #define TEST_ARRAY_SIZE 22
     int8 test_array[TEST_ARRAY_SIZE];
 
     #define ELBW_ARR_SIZE 20
@@ -60,8 +60,7 @@
     uint16 shoulder_array[SHLDR_ARR_SIZE];
 
     #define BA_ARR_SIZE 20
-    uint8 BA_arr_cspot;
-    uint16 baseAz_array[BA_ARR_SIZE];
+    
 
     #define WT_ARR_SIZE 20  //for wristTilt
     uint8 WT_arr_cspot;
@@ -78,6 +77,7 @@
     uint8 SHOULDER_FLAG = 0;
     uint8 BA_FLAG = 0;
     
+    int16 temp_val= -500; //for testing
 
     //uint16 feedback_count;
     volatile uint8 timerFlag; //used in the timer_isr
@@ -88,7 +88,9 @@
     //void reverse(char s[]);
     //void itoa(int n, char s[]);
     uint16 average(uint16* array, uint8 num_items);
-    void pos_to_vel(uint8 cur_pos, uint16* array, uint8 ARRAY_SIZE, uint16 command);
+    uint8 maintain_array(uint8 cpos, uint8 SIZE);
+    uint8 check_update(uint16* array, uint8 arr_pos, uint8 size, int change);
+    uint8 pos_to_vel(uint8 cur_pos, uint16* array, uint8 ARRAY_SIZE, uint16 command);
     uint16 make_command(int8* info_array, uint8 byte1, uint8 byte2);
     uint16 potFeedback();
     void send_feedback();
@@ -100,7 +102,7 @@
     void wristRotate();
     void elbow();
     void shoulder();
-    void baseAzimuth();
+    uint8 baseAzimuth(uint8 BA_arr_cspot, uint16* baseAz_array);
     void initialize();
     //--------------------------------------------------- END Function Stubs
 #endif

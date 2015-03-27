@@ -1,5 +1,5 @@
 /*******************************************************************************
-* File Name: user_test.c  
+* File Name: sens_hygro.c  
 * Version 2.10
 *
 * Description:
@@ -15,18 +15,18 @@
 *******************************************************************************/
 
 #include "cytypes.h"
-#include "user_test.h"
+#include "sens_hygro.h"
 
 #define SetP4PinDriveMode(shift, mode)  \
     do { \
-        user_test_PC =   (user_test_PC & \
-                                (uint32)(~(uint32)(user_test_DRIVE_MODE_IND_MASK << (user_test_DRIVE_MODE_BITS * (shift))))) | \
-                                (uint32)((uint32)(mode) << (user_test_DRIVE_MODE_BITS * (shift))); \
+        sens_hygro_PC =   (sens_hygro_PC & \
+                                (uint32)(~(uint32)(sens_hygro_DRIVE_MODE_IND_MASK << (sens_hygro_DRIVE_MODE_BITS * (shift))))) | \
+                                (uint32)((uint32)(mode) << (sens_hygro_DRIVE_MODE_BITS * (shift))); \
     } while (0)
 
 
 /*******************************************************************************
-* Function Name: user_test_Write
+* Function Name: sens_hygro_Write
 ********************************************************************************
 *
 * Summary:
@@ -39,16 +39,16 @@
 *  None 
 *  
 *******************************************************************************/
-void user_test_Write(uint8 value) 
+void sens_hygro_Write(uint8 value) 
 {
-    uint8 drVal = (uint8)(user_test_DR & (uint8)(~user_test_MASK));
-    drVal = (drVal | ((uint8)(value << user_test_SHIFT) & user_test_MASK));
-    user_test_DR = (uint32)drVal;
+    uint8 drVal = (uint8)(sens_hygro_DR & (uint8)(~sens_hygro_MASK));
+    drVal = (drVal | ((uint8)(value << sens_hygro_SHIFT) & sens_hygro_MASK));
+    sens_hygro_DR = (uint32)drVal;
 }
 
 
 /*******************************************************************************
-* Function Name: user_test_SetDriveMode
+* Function Name: sens_hygro_SetDriveMode
 ********************************************************************************
 *
 * Summary:
@@ -57,27 +57,27 @@ void user_test_Write(uint8 value)
 * Parameters:  
 *  mode:  Change the pins to one of the following drive modes.
 *
-*  user_test_DM_STRONG     Strong Drive 
-*  user_test_DM_OD_HI      Open Drain, Drives High 
-*  user_test_DM_OD_LO      Open Drain, Drives Low 
-*  user_test_DM_RES_UP     Resistive Pull Up 
-*  user_test_DM_RES_DWN    Resistive Pull Down 
-*  user_test_DM_RES_UPDWN  Resistive Pull Up/Down 
-*  user_test_DM_DIG_HIZ    High Impedance Digital 
-*  user_test_DM_ALG_HIZ    High Impedance Analog 
+*  sens_hygro_DM_STRONG     Strong Drive 
+*  sens_hygro_DM_OD_HI      Open Drain, Drives High 
+*  sens_hygro_DM_OD_LO      Open Drain, Drives Low 
+*  sens_hygro_DM_RES_UP     Resistive Pull Up 
+*  sens_hygro_DM_RES_DWN    Resistive Pull Down 
+*  sens_hygro_DM_RES_UPDWN  Resistive Pull Up/Down 
+*  sens_hygro_DM_DIG_HIZ    High Impedance Digital 
+*  sens_hygro_DM_ALG_HIZ    High Impedance Analog 
 *
 * Return: 
 *  None
 *
 *******************************************************************************/
-void user_test_SetDriveMode(uint8 mode) 
+void sens_hygro_SetDriveMode(uint8 mode) 
 {
-	SetP4PinDriveMode(user_test__0__SHIFT, mode);
+	SetP4PinDriveMode(sens_hygro__0__SHIFT, mode);
 }
 
 
 /*******************************************************************************
-* Function Name: user_test_Read
+* Function Name: sens_hygro_Read
 ********************************************************************************
 *
 * Summary:
@@ -91,17 +91,17 @@ void user_test_SetDriveMode(uint8 mode)
 *  Returns the current value of the Digital Port as a right justified number
 *  
 * Note:
-*  Macro user_test_ReadPS calls this function. 
+*  Macro sens_hygro_ReadPS calls this function. 
 *  
 *******************************************************************************/
-uint8 user_test_Read(void) 
+uint8 sens_hygro_Read(void) 
 {
-    return (uint8)((user_test_PS & user_test_MASK) >> user_test_SHIFT);
+    return (uint8)((sens_hygro_PS & sens_hygro_MASK) >> sens_hygro_SHIFT);
 }
 
 
 /*******************************************************************************
-* Function Name: user_test_ReadDataReg
+* Function Name: sens_hygro_ReadDataReg
 ********************************************************************************
 *
 * Summary:
@@ -114,17 +114,17 @@ uint8 user_test_Read(void)
 *  Returns the current value assigned to the Digital Port's data output register
 *  
 *******************************************************************************/
-uint8 user_test_ReadDataReg(void) 
+uint8 sens_hygro_ReadDataReg(void) 
 {
-    return (uint8)((user_test_DR & user_test_MASK) >> user_test_SHIFT);
+    return (uint8)((sens_hygro_DR & sens_hygro_MASK) >> sens_hygro_SHIFT);
 }
 
 
 /* If Interrupts Are Enabled for this Pins component */ 
-#if defined(user_test_INTSTAT) 
+#if defined(sens_hygro_INTSTAT) 
 
     /*******************************************************************************
-    * Function Name: user_test_ClearInterrupt
+    * Function Name: sens_hygro_ClearInterrupt
     ********************************************************************************
     *
     * Summary:
@@ -138,11 +138,11 @@ uint8 user_test_ReadDataReg(void)
     *  Returns the value of the interrupt status register
     *  
     *******************************************************************************/
-    uint8 user_test_ClearInterrupt(void) 
+    uint8 sens_hygro_ClearInterrupt(void) 
     {
-		uint8 maskedStatus = (uint8)(user_test_INTSTAT & user_test_MASK);
-		user_test_INTSTAT = maskedStatus;
-        return maskedStatus >> user_test_SHIFT;
+		uint8 maskedStatus = (uint8)(sens_hygro_INTSTAT & sens_hygro_MASK);
+		sens_hygro_INTSTAT = maskedStatus;
+        return maskedStatus >> sens_hygro_SHIFT;
     }
 
 #endif /* If Interrupts Are Enabled for this Pins component */ 

@@ -79,12 +79,12 @@
   <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\UART_1_SPI_UART_PVT.h" value="NONE;UART_1" />
   <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\UART_1_PVT.h" value="NONE;UART_1" />
   <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\UART_1_BOOT.h" value="NONE;UART_1" />
-  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\user_test.c" value="ARM_C_FILE;user_test" />
-  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\user_test.h" value="NONE;user_test" />
-  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\user_test_aliases.h" value="NONE;user_test" />
-  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\LED_1.c" value="ARM_C_FILE;LED_1" />
-  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\LED_1.h" value="NONE;LED_1" />
-  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\LED_1_aliases.h" value="NONE;LED_1" />
+  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\sens_hygro.c" value="ARM_C_FILE;sens_hygro" />
+  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\sens_hygro.h" value="NONE;sens_hygro" />
+  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\sens_hygro_aliases.h" value="NONE;sens_hygro" />
+  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\stop_shdr_up.c" value="ARM_C_FILE;stop_shdr_up" />
+  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\stop_shdr_up.h" value="NONE;stop_shdr_up" />
+  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\stop_shdr_up_aliases.h" value="NONE;stop_shdr_up" />
   <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\MOSI_1.c" value="ARM_C_FILE;MOSI_1" />
   <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\MOSI_1.h" value="NONE;MOSI_1" />
   <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\MOSI_1_aliases.h" value="NONE;MOSI_1" />
@@ -96,6 +96,34 @@
   <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\SPIM_1_PM.c" value="ARM_C_FILE;SPIM_1" />
   <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\SPIM_1_INT.c" value="ARM_C_FILE;SPIM_1" />
   <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\SPIM_1_PVT.h" value="NONE;SPIM_1" />
+  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\sens_ph.c" value="ARM_C_FILE;sens_ph" />
+  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\sens_ph.h" value="NONE;sens_ph" />
+  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\sens_ph_aliases.h" value="NONE;sens_ph" />
+  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\stop_shdr_dn.c" value="ARM_C_FILE;stop_shdr_dn" />
+  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\stop_shdr_dn.h" value="NONE;stop_shdr_dn" />
+  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\stop_shdr_dn_aliases.h" value="NONE;stop_shdr_dn" />
+  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\stop_elb_up.c" value="ARM_C_FILE;stop_elb_up" />
+  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\stop_elb_up.h" value="NONE;stop_elb_up" />
+  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\stop_elb_up_aliases.h" value="NONE;stop_elb_up" />
+  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\stop_elb_dn.c" value="ARM_C_FILE;stop_elb_dn" />
+  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\stop_elb_dn.h" value="NONE;stop_elb_dn" />
+  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\stop_elb_dn_aliases.h" value="NONE;stop_elb_dn" />
+  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\UART_TEST.c" value="ARM_C_FILE;UART_TEST" />
+  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\UART_TEST.h" value="NONE;UART_TEST" />
+  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\UART_TEST_SPI_UART.h" value="NONE;UART_TEST" />
+  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\UART_TEST_SPI_UART.c" value="ARM_C_FILE;UART_TEST" />
+  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\UART_TEST_SPI_UART_INT.c" value="ARM_C_FILE;UART_TEST" />
+  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\UART_TEST_PM.c" value="ARM_C_FILE;UART_TEST" />
+  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\UART_TEST_UART.c" value="ARM_C_FILE;UART_TEST" />
+  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\UART_TEST_BOOT.c" value="ARM_C_FILE;UART_TEST" />
+  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\UART_TEST_UART_BOOT.c" value="ARM_C_FILE;UART_TEST" />
+  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\UART_TEST_PINS.h" value="NONE;UART_TEST" />
+  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\UART_TEST_SPI_UART_PVT.h" value="NONE;UART_TEST" />
+  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\UART_TEST_PVT.h" value="NONE;UART_TEST" />
+  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\UART_TEST_BOOT.h" value="NONE;UART_TEST" />
+  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\LED.c" value="ARM_C_FILE;LED" />
+  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\LED.h" value="NONE;LED" />
+  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\LED_aliases.h" value="NONE;LED" />
   <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\ADC_IRQ.c" value="ARM_C_FILE;ADC_IRQ" />
   <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\ADC_IRQ.h" value="NONE;ADC_IRQ" />
   <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\ADC_intClock.c" value="ARM_C_FILE;ADC_intClock" />
@@ -110,6 +138,14 @@
   <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\UART_1_rx_aliases.h" value="NONE;UART_1_rx" />
   <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\SPIM_1_IntClock.c" value="ARM_C_FILE;SPIM_1_IntClock" />
   <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\SPIM_1_IntClock.h" value="NONE;SPIM_1_IntClock" />
+  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\UART_TEST_SCBCLK.c" value="ARM_C_FILE;UART_TEST_SCBCLK" />
+  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\UART_TEST_SCBCLK.h" value="NONE;UART_TEST_SCBCLK" />
+  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\UART_TEST_tx.c" value="ARM_C_FILE;UART_TEST_tx" />
+  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\UART_TEST_tx.h" value="NONE;UART_TEST_tx" />
+  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\UART_TEST_tx_aliases.h" value="NONE;UART_TEST_tx" />
+  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\UART_TEST_rx.c" value="ARM_C_FILE;UART_TEST_rx" />
+  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\UART_TEST_rx.h" value="NONE;UART_TEST_rx" />
+  <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\UART_TEST_rx_aliases.h" value="NONE;UART_TEST_rx" />
   <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\cm0gcc.ld" value="NONE;cy_boot" />
   <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\Cm0RealView.scat" value="NONE;cy_boot" />
   <file name="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\Cm0Start.c" value="ARM_C_FILE;cy_boot" />

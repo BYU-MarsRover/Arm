@@ -16,7 +16,7 @@ CY_ISR(timer_isr)
 
 //Funtion declarations/definitions
 
-//// function to convert int to string
+// function to convert int to string
 //void reverse(char s[])
 // {
 //     int i, j;
@@ -63,257 +63,101 @@ uint16 average(uint16* av_array, uint8 num_items)
     return avg;
 }
 
-void pos_to_vel(uint8 cur_pos, uint16* array, uint8 ARRAY_SIZE, uint16 command)
+uint8 maintain_array(uint8 cpos, uint8 SIZE)
 {
-    if(command >= 1000 && command < 1100)
+    if(cpos < (SIZE - 1))
     {
-        if(cur_pos != 0)
-        {
-            if(array[cur_pos - 1] >= 1020)
-            {
-                array[cur_pos] = (array[cur_pos - 1] - 20);
-            }
-            else
-            {
-                array[cur_pos] = 1000;
-            }
-            
-            if(cur_pos < (ARRAY_SIZE - 1))
-            {
-                cur_pos++;
-            }
-            else
-            {
-                cur_pos = 0;
-            }
-        }
-        else if(cur_pos == 0)
-        {
-            if(array[ARRAY_SIZE - 1] >= 1020)
-            {
-                array[cur_pos] = (array[ARRAY_SIZE - 1] - 20);
-            }
-            else
-            {
-                array[cur_pos] = 1000;
-            }
-            
-            if(cur_pos < (ARRAY_SIZE - 1))
-            {
-                cur_pos++;
-            }
-            else
-            {
-                cur_pos = 0;
-            }
-        }
-        else
-        {
-            cur_pos = 0;
-        }
+        cpos++;
     }
-    else if(command >= 1100 && command < 1300)
+    else
     {
-        if(cur_pos != 0)
-        {
-            array[cur_pos] = (array[cur_pos - 1] - 10);
-            
-            if(cur_pos < (ARRAY_SIZE - 1))
-            {
-                cur_pos++;
-            }
-            else
-            {
-                cur_pos = 0;
-            }
-        }
-        else if(cur_pos == 0)
-        {
-            array[cur_pos] = (array[ARRAY_SIZE - 1] - 10);
-           
-            if(cur_pos < (ARRAY_SIZE - 1))
-            {
-                cur_pos++;
-            }
-            else
-            {
-                cur_pos = 0;
-            }
-        }
-        else
-        {
-            cur_pos = 0;   
-        }    
+        cpos = 0;
     }
-    else if(command >= 1300 && command < 1490)
+    return cpos;
+}
+
+uint8 check_update(uint16* array, uint8 arr_pos, uint8 size, int change)
+{
+    uint8 index;
+    if(arr_pos != 0)
     {
-        if(cur_pos != 0)
-        {
-            array[cur_pos] = (array[cur_pos - 1] - 5);
-            
-            if(cur_pos < (ARRAY_SIZE - 1))
-            {
-                cur_pos++;
-            }
-            else
-            {
-                cur_pos = 0;
-            }
-        }
-        else if(cur_pos == 0)
-        {
-            array[cur_pos] = (array[ARRAY_SIZE - 1] - 5);
-           
-            if(cur_pos < (ARRAY_SIZE - 1))
-            {
-                cur_pos++;
-            }
-            else
-            {
-                cur_pos = 0;
-            }
-        }
-        else
-        {
-            cur_pos = 0;   
-        }    
+        index = arr_pos - 1;
     }
-    else if(command > 1510 && command <= 1700)
+    else
     {
-        if(cur_pos != 0)
-        {
-            array[cur_pos] = (array[cur_pos - 1] + 5);
-            
-            if(cur_pos < (ARRAY_SIZE - 1))
-            {
-                cur_pos++;
-            }
-            else
-            {
-                cur_pos = 0;
-            }
-        }
-        else if(cur_pos == 0)
-        {
-            array[cur_pos] = (array[ARRAY_SIZE - 1] + 5);
-           
-            if(cur_pos < (ARRAY_SIZE - 1))
-            {
-                cur_pos++;
-            }
-            else
-            {
-                cur_pos = 0;
-            }
-        }
-        else
-        {
-            cur_pos = 0;   
-        }    
+        index = size - 1;
     }
-    else if(command > 1700 && command <= 1900)
+    
+    if(change < 0)
     {
-        if(cur_pos != 0)
+        if(array[index] >= (1000 - change))
         {
-            array[cur_pos] = (array[cur_pos - 1] + 10);
-            
-            if(cur_pos < (ARRAY_SIZE - 1))
-            {
-                cur_pos++;
-            }
-            else
-            {
-                cur_pos = 0;
-            }
-        }
-        else if(cur_pos == 0)
-        {
-            array[cur_pos] = (array[ARRAY_SIZE - 1] + 10);
-           
-            if(cur_pos < (ARRAY_SIZE - 1))
-            {
-                cur_pos++;
-            }
-            else
-            {
-                cur_pos = 0;
-            }
+            array[arr_pos] = (array[index] + change);
         }
         else
         {
-            cur_pos = 0;   
-        }
-    }
-    else if(command > 1900 && command <= 2000)
-    {
-        if(cur_pos != 0)
-        {
-            if(array[cur_pos - 1] <= 1980)
-            {
-                array[cur_pos] = (array[cur_pos - 1] + 20);
-            }
-            else
-            {
-                array[cur_pos] = 2000;
-            }
-            
-            if(cur_pos < (ARRAY_SIZE - 1))
-            {
-                cur_pos++;
-            }
-            else
-            {
-                cur_pos = 0;
-            }
-        }
-        else if(cur_pos == 0)
-        {
-            if(array[ARRAY_SIZE - 1] <= 1980)
-            {
-                array[cur_pos] = (array[ARRAY_SIZE - 1] + 20);
-            }
-            else
-            {
-                array[cur_pos] = 2000;
-            }
-            
-            if(cur_pos < (ARRAY_SIZE - 1))
-            {
-                cur_pos++;
-            }
-            else
-            {
-                cur_pos = 0;
-            }
-        }
-        else
-        {
-            cur_pos = 0;
-        }
-    }
-    else if(command <= 1510 && command >= 1490)
-    {
-        if(cur_pos < (ARRAY_SIZE - 1))
-        {
-            cur_pos++;
-        }
-        else
-        {
-            cur_pos = 0;
+            array[arr_pos] = 1000;
         }
     }
     else
     {
-        //throw error
-        if(cur_pos < (ARRAY_SIZE - 1))
+        if(array[index] <= (2000 - change))
         {
-            cur_pos++;
+            array[arr_pos] = (array[index] + change);
         }
         else
         {
-            cur_pos = 0;
+            array[arr_pos] = 2000;
         }
     }
+    
+    return maintain_array(arr_pos, size);
+}
+
+uint8 pos_to_vel(uint8 cur_pos, uint16* array, uint8 ARRAY_SIZE, uint16 command)
+{
+    if(command >= 1000 && command < 1125)
+    {
+         cur_pos = check_update(array, cur_pos, ARRAY_SIZE, -100);
+    }
+    else if(command >= 1125 && command < 1250)
+    {
+        cur_pos = check_update(array, cur_pos, ARRAY_SIZE, -75);  
+    }
+    else if(command >= 1250 && command < 1375)
+    {
+        cur_pos = check_update(array, cur_pos, ARRAY_SIZE, -50);
+    }
+    else if(command >= 1375 && command < 1490)
+    {
+        cur_pos = check_update(array, cur_pos, ARRAY_SIZE, -25);
+    }
+    else if(command <= 1510 && command >= 1490)
+    {
+        cur_pos = maintain_array(cur_pos, ARRAY_SIZE);
+    }
+    else if(command > 1510 && command <= 1625)
+    {
+        cur_pos = check_update(array, cur_pos, ARRAY_SIZE, 25);
+    }
+    else if(command > 1625 && command <= 1750)
+    {
+        cur_pos = check_update(array, cur_pos, ARRAY_SIZE, 50);
+    }
+    else if(command > 1750 && command <= 1875)
+    {
+        cur_pos = check_update(array, cur_pos, ARRAY_SIZE, 75);
+    }
+    else if(command > 1875 && command <= 2000)
+    {
+         cur_pos = check_update(array, cur_pos, ARRAY_SIZE, +100);
+    }
+    else
+    {
+        //throw error
+        cur_pos = maintain_array(cur_pos, ARRAY_SIZE);
+    }
+    return cur_pos;
 }
 
 uint16 make_command(int8* info_array, uint8 byte1, uint8 byte2)
@@ -349,12 +193,12 @@ void send_feedback()
 //to be used for parsing reading/parsing the data from the wiznet
 void fill_data_array()
 {
-    wiznetReadUdpFrame(data_array, DATA_ARRAY_SIZE);
-//    uint8 i = 0;
-//    for(i = 0; i < TEST_ARRAY_SIZE; i++)
-//    {
-//        data_array[i] = test_array[i];
-//    }
+    //wiznetReadUdpFrame(data_array, DATA_ARRAY_SIZE);
+    uint8 i = 0;
+    for(i = 0; i < TEST_ARRAY_SIZE; i++)
+    {
+        data_array[i] = test_array[i];
+    }
 }
 
 void ServoGoalPosition( uint8 servoID, uint16 position)
@@ -891,7 +735,7 @@ void shoulder()
 
 //control the turret
 enum baseAzimuth_states {BA_start,BA_init,BA_execute,BA_wait} baseAzimuth_state;
-void baseAzimuth()
+uint8 baseAzimuth(uint8 BA_arr_cspot, uint16* baseAz_array)
 { 
     //take instruction from data_array
     //smooth input
@@ -911,25 +755,32 @@ void baseAzimuth()
             }
             BA_arr_cspot = 0;
             
-            BA_PWM_WriteCompare(2000);
+            BA_PWM_WriteCompare(1500);
             break;
 
         case BA_execute:
             command = make_command(data_array, BA_BYTE_1, BA_BYTE_2);
-            baseAz_array[BA_arr_cspot] = command;
             
-            if(BA_arr_cspot < (BA_ARR_SIZE - 1))
-            {
-                BA_arr_cspot++;
-            }
-            else
-            {
-                BA_arr_cspot = 0;
-            }
+//            baseAz_array[BA_arr_cspot] = command;
+//            
+//            if(BA_arr_cspot < (BA_ARR_SIZE - 1))
+//            {
+//                BA_arr_cspot++;
+//            }
+//            else
+//            {
+//                BA_arr_cspot = 0;
+//            }
             
-            //pos_to_vel(BA_arr_cspot, baseAz_array, BA_ARR_SIZE, command);
+            BA_arr_cspot = pos_to_vel(BA_arr_cspot, baseAz_array, BA_ARR_SIZE, command);
             
             avg = average(baseAz_array, BA_ARR_SIZE);
+            
+            if(avg == 1000 || avg == 2000)
+            {
+
+                temp_val = temp_val*(-1);
+            }
             
             if(avg <= 2000 && avg >= 1000)
             {
@@ -937,6 +788,8 @@ void baseAzimuth()
             }
             else
             {
+                LED_Write(1);
+
                 //throw error
                 BA_PWM_WriteCompare(1500);
             }
@@ -977,7 +830,8 @@ void baseAzimuth()
                 baseAzimuth_state = BA_wait; 
             }
             break;
-    }    
+    }  
+    return BA_arr_cspot;
 }
 
 //Initialization function for the program
@@ -998,6 +852,7 @@ void initialize()
             CyDelay(4);
         }
     }
+    
     //Initialize state variables
     baseAzimuth_state = BA_start;
     wristTilt_state = tilt_start;
@@ -1038,60 +893,87 @@ void initialize()
     CyGlobalIntEnable;
     isr_1_StartEx(timer_isr);
     Timer_1_Start();
+    
+    //UART_TEST_Start();
+    
 }
-
+//const char welcome_string[] = "Hello World\n\r";
 int main()
 {  
     //Define variables
     time_t t; //for testing
+    char time_array[8];
     uint8 counter; //for testing
     int direction = 0; //for testing
-    int16 temp_val= -1000; //for testing
+    
     //wiznet = 0; //for testing -- see header move from here when establish ISR for wiznet
+    
+    uint8 BA_cspot;
+    uint16 BA_array[BA_ARR_SIZE];
+    
+    
     
     //for testing
     int increasing = 1;
-    //uint16 first_count;
-    //uint16 second_count;
-    //uint16 dropped_packets;
-    //uint16 temp_code_time;
-    //uint16 code_time;
+    int first_count;
+    int second_count;
+    //uint16 dropped_packets; -- potential error variable
+    int temp_code_time;
+    int code_time = 0;
+    
     
     initialize();
+//    uint8 i;
+//    for(i =0; i < strlen(welcome_string); i++)
+//    {
+//        UART_TEST_UartPutChar(welcome_string[i]);
+//    }
 
     for(;;)
     {
+        
+        //UART_TEST_UartPutChar(31);
         //check addresses
         //TODO get the address bytes from Steve
         //TODO at what point should we send feedback?
         //first_count = Timer_1_ReadCounter();
-        if(WIZ_INT_Read()==0) //!WIZ_INT_Read()--put wiznet in as condition if use ISR
+        
+        
+        if(wiznet)//(WIZ_INT_Read()==0) //!WIZ_INT_Read()--put wiznet in as condition if use ISR
         {
-            wiznetClearInterrupts();
+            //wiznetClearInterrupts();
             fill_data_array();
             BA_FLAG = 1;
             WR_FLAG = 1;
             WT_FLAG = 1;
             SHOULDER_FLAG = 1;
             ELBOW_FLAG = 1;
-            //wiznet = 0; //for testing
+            wiznet = 0; //for testing
         }
         
+        
         //if(wiznet gives a complete packet)
-        baseAzimuth();
+        BA_cspot = baseAzimuth(BA_cspot, BA_array);
         shoulder();
         elbow();
         wristTilt();
         wristRotate();
+        send_feedback();
 
         //else{dropped_packets++}
         //second_count = Timer_1_ReadCounter();
+       // LED_Write(0);
         //temp_code_time = second_count - first_count;
-        //if(temp_code_time > code_time){print out the new, longer code time}
+//        if(temp_code_time > code_time)
+//        {
+//            code_time = temp_code_time;
+//            itoa(code_time, time_array);
+//            UART_TEST_UartPutString(time_array);
+//        }
         
         while(!timerFlag){} //this while loop will periodize our code to the time of longest path
         timerFlag = 0;
-    }
+    
         
 /*``````````````````````````````````````````````````````````````````````````*
  * From here to the end of the main function is purely for testing purposes *
@@ -1121,16 +1003,17 @@ int main()
 //            //uint16 feedback1 = ADC_GetResult16(2);
 //            //int16 forward = 1000;
 //            //int16 backward = -1000;
-//            for(int i = 0; i < TEST_ARRAY_SIZE; (i+=2))
-//            {
-//                //int16 random_number = rand()%2001 - 1000;
-//                //test_array[i] = random_number >> 8;
-//                //test_array[i+1] = random_number & 0x00FF;
-//                test_array[i] = temp_val >> 8;
-//                test_array[i+1] = temp_val & 0x00FF;
-//            }
+            for(int i = 0; i < TEST_ARRAY_SIZE; (i+=2))
+            {
+                //int16 random_number = rand()%2001 - 1000;
+                //test_array[i] = random_number >> 8;
+                //test_array[i+1] = random_number & 0x00FF;
+                test_array[i] = temp_val >> 8;
+                test_array[i+1] = temp_val & 0x00FF;
+            }
 //            counter = 0;
-//            wiznet = 1;
+            wiznet = 1;
+    }
 //        }
 //    }
 ////                if((second_counter%2) == 0)

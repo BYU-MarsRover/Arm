@@ -1,5 +1,5 @@
 /*******************************************************************************
-* File Name: LED_1.h  
+* File Name: stop_shdr_up.h  
 * Version 2.10
 *
 * Description:
@@ -15,8 +15,8 @@
 * the software package with which this file was provided.
 *******************************************************************************/
 
-#if !defined(CY_PINS_LED_1_ALIASES_H) /* Pins LED_1_ALIASES_H */
-#define CY_PINS_LED_1_ALIASES_H
+#if !defined(CY_PINS_stop_shdr_up_ALIASES_H) /* Pins stop_shdr_up_ALIASES_H */
+#define CY_PINS_stop_shdr_up_ALIASES_H
 
 #include "cytypes.h"
 #include "cyfitter.h"
@@ -26,14 +26,14 @@
 /***************************************
 *              Constants        
 ***************************************/
-#define LED_1_0		(LED_1__0__PC)
-#define LED_1_0_PS		(LED_1__0__PS)
-#define LED_1_0_PC		(LED_1__0__PC)
-#define LED_1_0_DR		(LED_1__0__DR)
-#define LED_1_0_SHIFT	(LED_1__0__SHIFT)
+#define stop_shdr_up_0		(stop_shdr_up__0__PC)
+#define stop_shdr_up_0_PS		(stop_shdr_up__0__PS)
+#define stop_shdr_up_0_PC		(stop_shdr_up__0__PC)
+#define stop_shdr_up_0_DR		(stop_shdr_up__0__DR)
+#define stop_shdr_up_0_SHIFT	(stop_shdr_up__0__SHIFT)
 
 
-#endif /* End Pins LED_1_ALIASES_H */
+#endif /* End Pins stop_shdr_up_ALIASES_H */
 
 
 /* [] END OF FILE */
