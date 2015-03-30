@@ -122,15 +122,15 @@ uint8 pos_to_vel(uint8 cur_pos, uint16* array, uint8 ARRAY_SIZE, uint16 command)
     }
     else if(command >= 1125 && command < 1250)
     {
-        cur_pos = check_update(array, cur_pos, ARRAY_SIZE, -75);  
+        cur_pos = check_update(array, cur_pos, ARRAY_SIZE, -50);  
     }
     else if(command >= 1250 && command < 1375)
     {
-        cur_pos = check_update(array, cur_pos, ARRAY_SIZE, -50);
+        cur_pos = check_update(array, cur_pos, ARRAY_SIZE, -10);
     }
     else if(command >= 1375 && command < 1490)
     {
-        cur_pos = check_update(array, cur_pos, ARRAY_SIZE, -25);
+        cur_pos = check_update(array, cur_pos, ARRAY_SIZE, -5);
     }
     else if(command <= 1510 && command >= 1490)
     {
@@ -138,15 +138,15 @@ uint8 pos_to_vel(uint8 cur_pos, uint16* array, uint8 ARRAY_SIZE, uint16 command)
     }
     else if(command > 1510 && command <= 1625)
     {
-        cur_pos = check_update(array, cur_pos, ARRAY_SIZE, 25);
+        cur_pos = check_update(array, cur_pos, ARRAY_SIZE, 5);
     }
     else if(command > 1625 && command <= 1750)
     {
-        cur_pos = check_update(array, cur_pos, ARRAY_SIZE, 50);
+        cur_pos = check_update(array, cur_pos, ARRAY_SIZE, 10);
     }
     else if(command > 1750 && command <= 1875)
     {
-        cur_pos = check_update(array, cur_pos, ARRAY_SIZE, 75);
+        cur_pos = check_update(array, cur_pos, ARRAY_SIZE, 50);
     }
     else if(command > 1875 && command <= 2000)
     {
@@ -193,12 +193,12 @@ void send_feedback()
 //to be used for parsing reading/parsing the data from the wiznet
 void fill_data_array()
 {
-    //wiznetReadUdpFrame(data_array, DATA_ARRAY_SIZE);
-    uint8 i = 0;
-    for(i = 0; i < TEST_ARRAY_SIZE; i++)
-    {
-        data_array[i] = test_array[i];
-    }
+    wiznetReadUdpFrame(data_array, DATA_ARRAY_SIZE);
+//    uint8 i = 0;
+//    for(i = 0; i < TEST_ARRAY_SIZE; i++)
+//    {
+//        data_array[i] = test_array[i];
+//    }
 }
 
 void ServoGoalPosition( uint8 servoID, uint16 position)
@@ -776,11 +776,11 @@ uint8 baseAzimuth(uint8 BA_arr_cspot, uint16* baseAz_array)
             
             avg = average(baseAz_array, BA_ARR_SIZE);
             
-            if(avg == 1000 || avg == 2000)
-            {
-
-                temp_val = temp_val*(-1);
-            }
+//            if(avg == 1000 || avg == 2000)
+//            {
+//
+//                temp_val = temp_val*(-1);
+//            }
             
             if(avg <= 2000 && avg >= 1000)
             {
@@ -920,6 +920,7 @@ int main()
     //uint16 dropped_packets; -- potential error variable
     int temp_code_time;
     int code_time = 0;
+    uint8 fs_count = 0;
     
     
     initialize();
@@ -939,26 +940,43 @@ int main()
         //first_count = Timer_1_ReadCounter();
         
         
-        if(wiznet)//(WIZ_INT_Read()==0) //!WIZ_INT_Read()--put wiznet in as condition if use ISR
+        if(WIZ_INT_Read()==0) //!WIZ_INT_Read()--put wiznet in as condition if use ISR
         {
-            //wiznetClearInterrupts();
+            wiznetClearInterrupts();
             fill_data_array();
             BA_FLAG = 1;
             WR_FLAG = 1;
             WT_FLAG = 1;
             SHOULDER_FLAG = 1;
             ELBOW_FLAG = 1;
-            wiznet = 0; //for testing
+            fs_count = 0;
+            //wiznet = 0; //for testing
+        }
+        else
+        {
+            fs_count += 1;
         }
         
+        if(fs_count >= 50)
+        {
+            temp_val = 1500;
+            for(int i = 0; i < TEST_ARRAY_SIZE; (i+=2))
+            {
+                data_array[i] = temp_val >> 8;
+                data_array[i+1] = temp_val & 0x00FF;
+            }
+        }
+        else
+        {
         
         //if(wiznet gives a complete packet)
-        BA_cspot = baseAzimuth(BA_cspot, BA_array);
-        shoulder();
-        elbow();
-        wristTilt();
-        wristRotate();
-        send_feedback();
+            BA_cspot = baseAzimuth(BA_cspot, BA_array);
+            shoulder();
+            elbow();
+            wristTilt();
+            wristRotate();
+            send_feedback();
+        }
 
         //else{dropped_packets++}
         //second_count = Timer_1_ReadCounter();
@@ -1003,17 +1021,17 @@ int main()
 //            //uint16 feedback1 = ADC_GetResult16(2);
 //            //int16 forward = 1000;
 //            //int16 backward = -1000;
-            for(int i = 0; i < TEST_ARRAY_SIZE; (i+=2))
-            {
-                //int16 random_number = rand()%2001 - 1000;
-                //test_array[i] = random_number >> 8;
-                //test_array[i+1] = random_number & 0x00FF;
-                test_array[i] = temp_val >> 8;
-                test_array[i+1] = temp_val & 0x00FF;
-            }
-//            counter = 0;
-            wiznet = 1;
-    }
+//            for(int i = 0; i < TEST_ARRAY_SIZE; (i+=2))
+//            {
+//                //int16 random_number = rand()%2001 - 1000;
+//                //test_array[i] = random_number >> 8;
+//                //test_array[i+1] = random_number & 0x00FF;
+//                test_array[i] = temp_val >> 8;
+//                test_array[i+1] = temp_val & 0x00FF;
+//            }
+////            counter = 0;
+//            wiznet = 1;
+    } //<<<<<<----------DONT DELETE THIS BRACE!!!!!!!!!!!! it goes to for loop :)
 //        }
 //    }
 ////                if((second_counter%2) == 0)
