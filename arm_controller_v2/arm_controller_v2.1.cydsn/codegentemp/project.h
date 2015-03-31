@@ -78,6 +78,9 @@
 #include <UART_TEST_BOOT.h>
 #include <LED.h>
 #include <LED_aliases.h>
+#include <EFFECTOR_PWM.h>
+#include <effector_A.h>
+#include <effector_A_aliases.h>
 #include <ADC_IRQ.h>
 #include <ADC_intClock.h>
 #include <UART_1_SCBCLK.h>

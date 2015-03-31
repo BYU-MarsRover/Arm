@@ -254,9 +254,9 @@ void ServoSpeed( uint8 servoID, uint16 speed)
     
 }
 
-enum wristTilt_states {tilt_start, tilt_init, tilt_control, tilt_wait, tilt_feedback} wristTilt_state;
+enum wristTilt_states {tilt_start, tilt_init, tilt_control, tilt_wait} wristTilt_state;
 //control the tilting motion of the wrist
-void wristTilt()
+uint8 wristTilt(uint8 WT_arr_cspot, uint16* WT_array)
 {
     // Overview
     //take instruction from data_array
@@ -354,12 +354,13 @@ void wristTilt()
                 wristTilt_state = tilt_wait; 
             }
             break;
-    }    
+    }  
+    return WT_arr_cspot;
 }
 
-enum wristRotate_states {rotate_start, rotate_init, rotate_control, rotate_wait, rotate_feedback} wristRotate_state;
+enum wristRotate_states {rotate_start, rotate_init, rotate_control, rotate_wait} wristRotate_state;
 //control the rotating motion of the wrist
-void wristRotate()
+uint8 wristRotate(uint8 WR_arr_cspot, uint16* WR_array)
 {
     //Overview
     //take instruction from data_array
@@ -459,12 +460,13 @@ void wristRotate()
                 wristRotate_state = rotate_wait;
             }
             break;
-    }    
+    }  
+    return WR_arr_cspot;
 }
 
 //control the elbow
 enum elbow_states {elbw_start,elbw_init,elbw_execute,elbw_wait} elbow_state;
-void elbow()
+uint8 elbow(uint8 elbw_arr_cspot, uint16* elbow_array)
 { 
     //take instruction from data_array
     //smooth input
@@ -595,12 +597,13 @@ void elbow()
                 elbow_state = elbw_wait; 
             }
             break;
-    }    
+    }  
+    return elbw_arr_cspot;
 }
 
 //control the shoulder
 enum shoulder_states {shldr_start,shldr_init,shldr_execute,shldr_wait} shoulder_state;
-void shoulder()
+uint8 shoulder(uint8 shldr_arr_cspot, uint16* shoulder_array)
 { 
     //take instruction from data_array
     //smooth input
@@ -730,7 +733,8 @@ void shoulder()
                 shoulder_state = shldr_wait; 
             }
             break;
-    }    
+    }  
+    return shldr_arr_cspot;
 }
 
 //control the turret
@@ -834,9 +838,76 @@ uint8 baseAzimuth(uint8 BA_arr_cspot, uint16* baseAz_array)
     return BA_arr_cspot;
 }
 
+enum effector_states {eff_start, eff_init, eff_execute, eff_wait} effector_state;
+void effector()
+{
+    uint16 command;
+
+    switch(effector_state){ //actions
+        case shldr_start:
+            break;
+
+        case eff_init:           
+           EFFECTOR_PWM_WriteCompare1(1500);
+           break;
+
+        case eff_execute:
+            command = make_command(data_array, EFF_BYTE_1, EFF_BYTE_2);    
+
+            if(command <= 2000 && command >= 1000)
+            {
+                EFFECTOR_PWM_WriteCompare1(command);
+            }
+            else
+            {
+                //throw error
+                SHLDR_PWM_WriteCompare(1500);
+            }
+            
+            EFFECTOR_FLAG = 0;
+            break;
+            
+        case eff_wait:
+            break;
+    }
+    
+    switch(effector_state){ //transitions
+        case eff_start:
+            effector_state = eff_init;
+            break;
+        
+        case eff_init:
+            effector_state = eff_wait;
+            break;
+        
+        case eff_execute:
+            if(EFFECTOR_FLAG)
+            {
+                effector_state = eff_execute;
+            }
+            else
+            {
+                effector_state = eff_wait;
+            }
+            break;
+        
+        case eff_wait:
+            if(EFFECTOR_FLAG)
+            {
+                effector_state = eff_execute;
+            }
+            else
+            {
+                effector_state = eff_wait; 
+            }
+            break;
+    }    
+}
+
 //Initialization function for the program
 void initialize()
 {
+    //initialize the wiznet
     WIZ_RST_Write(0);
     CyDelay(10);
     WIZ_RST_Write(1);
@@ -859,17 +930,19 @@ void initialize()
     wristRotate_state = rotate_start;
     shoulder_state = shldr_start;
     elbow_state = elbw_start;
+    effector_state = eff_start;
     
     //start all of our components
-    //SPI_1_Start();
     SPIM_1_Start();
-    
     Clock_pwm_Start();
     Clock_counter_Start();
     UART_1_Start();
     SHLDR_PWM_Start();
     BA_PWM_Start();
     ELBW_PWM_Start();
+    EFFECTOR_PWM_Start();
+    ADC_Start();
+    ADC_StartConvert();
     
     //uint8_t test_byte;
     wiznetInit(ownIpAddr, dstIpAddr, udpPort);
@@ -883,9 +956,8 @@ void initialize()
     ELBW_PWM_WriteCompare(1500); 
     SHLDR_PWM_WriteCompare(1500);
     CyDelay(3000);
-   
-    ADC_Start();
-    ADC_StartConvert();
+    
+    /*-------------call the initial calibration funtion here------------*/
     
     //helps for generating random arrays
     //srand((unsigned) time(&t));
@@ -901,27 +973,35 @@ void initialize()
 int main()
 {  
     //Define variables
-    time_t t; //for testing
-    char time_array[8];
-    uint8 counter; //for testing
-    int direction = 0; //for testing
+    //for testing
+//    time_t t; 
+//    char time_array[8];
+//    uint8 counter;
+//    int direction = 0;
     
     //wiznet = 0; //for testing -- see header move from here when establish ISR for wiznet
     
     uint8 BA_cspot;
     uint16 BA_array[BA_ARR_SIZE];
-    
-    
+    uint8 shldr_cspot;
+    uint16 shldr_array[SHLDR_ARR_SIZE];
+    uint8 elbw_cspot;
+    uint16 elbw_array[ELBW_ARR_SIZE];
+    uint8 WT_cspot;
+    uint16 WT_array[WT_ARR_SIZE];
+    uint8 WR_cspot;
+    uint16 WR_array[WR_ARR_SIZE];
     
     //for testing
-    int increasing = 1;
-    int first_count;
-    int second_count;
-    //uint16 dropped_packets; -- potential error variable
-    int temp_code_time;
-    int code_time = 0;
-    uint8 fs_count = 0;
+//    int increasing = 1;
+//    int first_count;
+//    int second_count;
+//    int temp_code_time;
+//    int code_time = 0;
     
+    
+    uint8 fs_count = 0; //fail safe counter to check the interval between receiving packets
+    int16 temp_val = 1500; 
     
     initialize();
 //    uint8 i;
@@ -932,18 +1012,14 @@ int main()
 
     for(;;)
     {
-        
         //UART_TEST_UartPutChar(31);
-        //check addresses
-        //TODO get the address bytes from Steve
-        //TODO at what point should we send feedback?
         //first_count = Timer_1_ReadCounter();
-        
         
         if(WIZ_INT_Read()==0) //!WIZ_INT_Read()--put wiznet in as condition if use ISR
         {
             wiznetClearInterrupts();
             fill_data_array();
+            //TODO check addresses? -- set up error checking/reporting logic
             BA_FLAG = 1;
             WR_FLAG = 1;
             WT_FLAG = 1;
@@ -971,17 +1047,18 @@ int main()
         
         //if(wiznet gives a complete packet)
             BA_cspot = baseAzimuth(BA_cspot, BA_array);
-            shoulder();
-            elbow();
-            wristTilt();
-            wristRotate();
-            send_feedback();
+            shldr_cspot = shoulder(shldr_cspot, shldr_array);
+            elbw_cspot = elbow(elbw_cspot, elbw_array);
+            WT_cspot = wristTilt(WT_cspot, WT_array);
+            WR_cspot = wristRotate(WR_cspot, WR_array);
+            effector();
+            send_feedback(); //send feedback onece every tick
         }
 
-        //else{dropped_packets++}
-        //second_count = Timer_1_ReadCounter();
-       // LED_Write(0);
-        //temp_code_time = second_count - first_count;
+//        else{dropped_packets++}
+//        second_count = Timer_1_ReadCounter();
+//        LED_Write(0);
+//        temp_code_time = second_count - first_count;
 //        if(temp_code_time > code_time)
 //        {
 //            code_time = temp_code_time;
