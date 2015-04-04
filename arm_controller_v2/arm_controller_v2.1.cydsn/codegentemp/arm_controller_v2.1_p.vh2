@@ -1,5 +1,5 @@
 -- Project:   arm_controller_v2.1
--- Generated: 03/31/2015 08:40:54
+-- Generated: 04/03/2015 22:37:51
 -- PSoC Creator  3.1 Component Pack 1
 
 ENTITY \arm_controller_v2.1\ IS
@@ -110,8 +110,8 @@ ARCHITECTURE __DEFAULT__ OF \arm_controller_v2.1\ IS
     SIGNAL \ADC:Net_3111_8\ : bit;
     SIGNAL \ADC:Net_3111_9\ : bit;
     SIGNAL \ADC:Net_3112\ : bit;
+    SIGNAL \EFFECTOR_PWM:PWMUDB:cmp1_eq\ : bit;
     SIGNAL \EFFECTOR_PWM:PWMUDB:cmp1_less\ : bit;
-    SIGNAL \EFFECTOR_PWM:PWMUDB:cmp2_less\ : bit;
     SIGNAL \EFFECTOR_PWM:PWMUDB:control_0\ : bit;
     SIGNAL \EFFECTOR_PWM:PWMUDB:control_1\ : bit;
     SIGNAL \EFFECTOR_PWM:PWMUDB:control_2\ : bit;
@@ -121,10 +121,8 @@ ARCHITECTURE __DEFAULT__ OF \arm_controller_v2.1\ IS
     SIGNAL \EFFECTOR_PWM:PWMUDB:control_6\ : bit;
     SIGNAL \EFFECTOR_PWM:PWMUDB:control_7\ : bit;
     SIGNAL \EFFECTOR_PWM:PWMUDB:prevCompare1\ : bit;
-    SIGNAL \EFFECTOR_PWM:PWMUDB:prevCompare2\ : bit;
     SIGNAL \EFFECTOR_PWM:PWMUDB:runmode_enable\ : bit;
     SIGNAL \EFFECTOR_PWM:PWMUDB:status_0\ : bit;
-    SIGNAL \EFFECTOR_PWM:PWMUDB:status_1\ : bit;
     SIGNAL \EFFECTOR_PWM:PWMUDB:status_2\ : bit;
     SIGNAL \EFFECTOR_PWM:PWMUDB:status_3\ : bit;
     SIGNAL \EFFECTOR_PWM:PWMUDB:tc_i\ : bit;
@@ -238,26 +236,24 @@ ARCHITECTURE __DEFAULT__ OF \arm_controller_v2.1\ IS
     ATTRIBUTE lib_model OF \EFFECTOR_PWM:PWMUDB:genblk1:ctrlreg\ : LABEL IS "controlcell1";
     ATTRIBUTE lib_model OF \EFFECTOR_PWM:PWMUDB:genblk8:stsreg\ : LABEL IS "statusicell1";
     ATTRIBUTE lib_model OF \EFFECTOR_PWM:PWMUDB:prevCompare1\ : LABEL IS "macrocell5";
-    ATTRIBUTE lib_model OF \EFFECTOR_PWM:PWMUDB:prevCompare2\ : LABEL IS "macrocell6";
-    ATTRIBUTE lib_model OF \EFFECTOR_PWM:PWMUDB:runmode_enable\ : LABEL IS "macrocell7";
+    ATTRIBUTE lib_model OF \EFFECTOR_PWM:PWMUDB:runmode_enable\ : LABEL IS "macrocell6";
     ATTRIBUTE lib_model OF \EFFECTOR_PWM:PWMUDB:sP16:pwmdp:u0\ : LABEL IS "datapathcell1";
     ATTRIBUTE lib_model OF \EFFECTOR_PWM:PWMUDB:sP16:pwmdp:u1\ : LABEL IS "datapathcell2";
-    ATTRIBUTE lib_model OF \EFFECTOR_PWM:PWMUDB:status_0\ : LABEL IS "macrocell8";
-    ATTRIBUTE lib_model OF \EFFECTOR_PWM:PWMUDB:status_1\ : LABEL IS "macrocell9";
-    ATTRIBUTE lib_model OF \EFFECTOR_PWM:PWMUDB:status_2\ : LABEL IS "macrocell10";
+    ATTRIBUTE lib_model OF \EFFECTOR_PWM:PWMUDB:status_0\ : LABEL IS "macrocell7";
+    ATTRIBUTE lib_model OF \EFFECTOR_PWM:PWMUDB:status_2\ : LABEL IS "macrocell8";
     ATTRIBUTE lib_model OF \SPIM_1:BSPIM:RxStsReg\ : LABEL IS "statusicell2";
     ATTRIBUTE lib_model OF \SPIM_1:BSPIM:TxStsReg\ : LABEL IS "statusicell3";
-    ATTRIBUTE lib_model OF \SPIM_1:BSPIM:cnt_enable\ : LABEL IS "macrocell11";
-    ATTRIBUTE lib_model OF \SPIM_1:BSPIM:ld_ident\ : LABEL IS "macrocell12";
-    ATTRIBUTE lib_model OF \SPIM_1:BSPIM:load_cond\ : LABEL IS "macrocell13";
-    ATTRIBUTE lib_model OF \SPIM_1:BSPIM:load_rx_data\ : LABEL IS "macrocell14";
-    ATTRIBUTE lib_model OF \SPIM_1:BSPIM:rx_status_6\ : LABEL IS "macrocell15";
+    ATTRIBUTE lib_model OF \SPIM_1:BSPIM:cnt_enable\ : LABEL IS "macrocell9";
+    ATTRIBUTE lib_model OF \SPIM_1:BSPIM:ld_ident\ : LABEL IS "macrocell10";
+    ATTRIBUTE lib_model OF \SPIM_1:BSPIM:load_cond\ : LABEL IS "macrocell11";
+    ATTRIBUTE lib_model OF \SPIM_1:BSPIM:load_rx_data\ : LABEL IS "macrocell12";
+    ATTRIBUTE lib_model OF \SPIM_1:BSPIM:rx_status_6\ : LABEL IS "macrocell13";
     ATTRIBUTE lib_model OF \SPIM_1:BSPIM:sR8:Dp:u0\ : LABEL IS "datapathcell3";
-    ATTRIBUTE lib_model OF \SPIM_1:BSPIM:state_0\ : LABEL IS "macrocell16";
-    ATTRIBUTE lib_model OF \SPIM_1:BSPIM:state_1\ : LABEL IS "macrocell17";
-    ATTRIBUTE lib_model OF \SPIM_1:BSPIM:state_2\ : LABEL IS "macrocell18";
-    ATTRIBUTE lib_model OF \SPIM_1:BSPIM:tx_status_0\ : LABEL IS "macrocell19";
-    ATTRIBUTE lib_model OF \SPIM_1:BSPIM:tx_status_4\ : LABEL IS "macrocell20";
+    ATTRIBUTE lib_model OF \SPIM_1:BSPIM:state_0\ : LABEL IS "macrocell14";
+    ATTRIBUTE lib_model OF \SPIM_1:BSPIM:state_1\ : LABEL IS "macrocell15";
+    ATTRIBUTE lib_model OF \SPIM_1:BSPIM:state_2\ : LABEL IS "macrocell16";
+    ATTRIBUTE lib_model OF \SPIM_1:BSPIM:tx_status_0\ : LABEL IS "macrocell17";
+    ATTRIBUTE lib_model OF \SPIM_1:BSPIM:tx_status_4\ : LABEL IS "macrocell18";
     ATTRIBUTE lib_model OF \UART_1:rx(0)\ : LABEL IS "iocell9";
     ATTRIBUTE lib_model OF \UART_1:tx(0)\ : LABEL IS "iocell10";
     ATTRIBUTE lib_model OF \UART_TEST:rx(0)\ : LABEL IS "iocell11";
@@ -977,13 +973,14 @@ BEGIN
 
     Net_1108:macrocell
         GENERIC MAP(
-            eqn_main => "(main_0 * main_1)",
+            eqn_main => "(main_0 * !main_1 * !main_2)",
             clk_inv => '0')
         PORT MAP(
             q => Net_1108,
             clock_0 => Net_376_digital,
             main_0 => \EFFECTOR_PWM:PWMUDB:control_7\,
-            main_1 => \EFFECTOR_PWM:PWMUDB:cmp1_less\);
+            main_1 => \EFFECTOR_PWM:PWMUDB:cmp1_eq\,
+            main_2 => \EFFECTOR_PWM:PWMUDB:cmp1_less\);
 
     Net_23:macrocell
         GENERIC MAP(
@@ -1575,26 +1572,18 @@ BEGIN
             status_4 => open,
             status_3 => \EFFECTOR_PWM:PWMUDB:status_3\,
             status_2 => \EFFECTOR_PWM:PWMUDB:status_2\,
-            status_1 => \EFFECTOR_PWM:PWMUDB:status_1\,
+            status_1 => open,
             status_0 => \EFFECTOR_PWM:PWMUDB:status_0\);
 
     \EFFECTOR_PWM:PWMUDB:prevCompare1\:macrocell
         GENERIC MAP(
-            eqn_main => "(main_0)",
+            eqn_main => "(!main_0 * !main_1)",
             clk_inv => '0')
         PORT MAP(
             q => \EFFECTOR_PWM:PWMUDB:prevCompare1\,
-            main_0 => \EFFECTOR_PWM:PWMUDB:cmp1_less\,
-            clock_0 => Net_376_digital);
-
-    \EFFECTOR_PWM:PWMUDB:prevCompare2\:macrocell
-        GENERIC MAP(
-            eqn_main => "(main_0)",
-            clk_inv => '0')
-        PORT MAP(
-            q => \EFFECTOR_PWM:PWMUDB:prevCompare2\,
-            main_0 => \EFFECTOR_PWM:PWMUDB:cmp2_less\,
-            clock_0 => Net_376_digital);
+            clock_0 => Net_376_digital,
+            main_0 => \EFFECTOR_PWM:PWMUDB:cmp1_eq\,
+            main_1 => \EFFECTOR_PWM:PWMUDB:cmp1_less\);
 
     \EFFECTOR_PWM:PWMUDB:runmode_enable\:macrocell
         GENERIC MAP(
@@ -1680,9 +1669,9 @@ BEGIN
             clock => Net_376_digital,
             cs_addr_2 => \EFFECTOR_PWM:PWMUDB:tc_i\,
             cs_addr_1 => \EFFECTOR_PWM:PWMUDB:runmode_enable\,
+            ce0_comb => \EFFECTOR_PWM:PWMUDB:cmp1_eq\,
             cl0_comb => \EFFECTOR_PWM:PWMUDB:cmp1_less\,
             z0_comb => \EFFECTOR_PWM:PWMUDB:tc_i\,
-            cl1_comb => \EFFECTOR_PWM:PWMUDB:cmp2_less\,
             f1_blk_stat_comb => \EFFECTOR_PWM:PWMUDB:status_3\,
             busclk => ClockBlock_HFCLK,
             ce0i => \EFFECTOR_PWM:PWMUDB:sP16:pwmdp:u0.ce0__sig\,
@@ -1701,23 +1690,14 @@ BEGIN
 
     \EFFECTOR_PWM:PWMUDB:status_0\:macrocell
         GENERIC MAP(
-            eqn_main => "(!main_0 * main_1)",
+            eqn_main => "(!main_0 * !main_1 * !main_2)",
             clk_inv => '0')
         PORT MAP(
             q => \EFFECTOR_PWM:PWMUDB:status_0\,
             clock_0 => Net_376_digital,
             main_0 => \EFFECTOR_PWM:PWMUDB:prevCompare1\,
-            main_1 => \EFFECTOR_PWM:PWMUDB:cmp1_less\);
-
-    \EFFECTOR_PWM:PWMUDB:status_1\:macrocell
-        GENERIC MAP(
-            eqn_main => "(!main_0 * main_1)",
-            clk_inv => '0')
-        PORT MAP(
-            q => \EFFECTOR_PWM:PWMUDB:status_1\,
-            clock_0 => Net_376_digital,
-            main_0 => \EFFECTOR_PWM:PWMUDB:prevCompare2\,
-            main_1 => \EFFECTOR_PWM:PWMUDB:cmp2_less\);
+            main_1 => \EFFECTOR_PWM:PWMUDB:cmp1_eq\,
+            main_2 => \EFFECTOR_PWM:PWMUDB:cmp1_less\);
 
     \EFFECTOR_PWM:PWMUDB:status_2\:macrocell
         GENERIC MAP(
@@ -3143,10 +3123,10 @@ BEGIN
 
     stop_elb_dn:logicalport
         GENERIC MAP(
-            drive_mode => "001",
+            drive_mode => "010",
             ibuf_enabled => "1",
             id => "62541715-f2cd-4ba8-ab70-733a1f419760",
-            init_dr_st => "0",
+            init_dr_st => "1",
             input_buffer_sel => "00",
             input_clk_en => 0,
             input_sync => "1",
@@ -3233,10 +3213,10 @@ BEGIN
 
     stop_elb_up:logicalport
         GENERIC MAP(
-            drive_mode => "001",
+            drive_mode => "010",
             ibuf_enabled => "1",
             id => "09e9c478-a1e6-4aba-9991-355d6130e210",
-            init_dr_st => "0",
+            init_dr_st => "1",
             input_buffer_sel => "00",
             input_clk_en => 0,
             input_sync => "1",
@@ -3323,10 +3303,10 @@ BEGIN
 
     stop_shdr_dn:logicalport
         GENERIC MAP(
-            drive_mode => "001",
+            drive_mode => "010",
             ibuf_enabled => "1",
             id => "c73e94b4-9699-4460-aee0-54682babc7db",
-            init_dr_st => "0",
+            init_dr_st => "1",
             input_buffer_sel => "00",
             input_clk_en => 0,
             input_sync => "1",
@@ -3413,10 +3393,10 @@ BEGIN
 
     stop_shdr_up:logicalport
         GENERIC MAP(
-            drive_mode => "001",
+            drive_mode => "010",
             ibuf_enabled => "1",
             id => "a25be4be-7d08-4ed9-aa2a-fe87948bb7c1",
-            init_dr_st => "0",
+            init_dr_st => "1",
             input_buffer_sel => "00",
             input_clk_en => 0,
             input_sync => "1",

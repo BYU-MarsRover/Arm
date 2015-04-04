@@ -12,6 +12,7 @@
     #include <stdio.h>
     #include "wiznet5500.h"
     #include "spi.h"
+    #include <cypins.h>
 
     //Initializations of global variables
     #define ownIpAddr 4u
@@ -20,10 +21,15 @@
 
     //TODO: We need to make sure the bounds checking doesn't break
     //TODO: re-verify in order to match stop-switch placement
-    #define ELBOW_UPPER_BOUND 1000     //was 100  // 16 bit values from ADC
-    #define ELBOW_LOWER_BOUND 100       //was 1000
-    #define SHOULDER_UPPER_BOUND 800
-    #define SHOULDER_LOWER_BOUND 280
+    //#define ELBOW_UPPER_BOUND 1000     //was 100  // 16 bit values from ADC
+    uint32  ELBOW_UPPER_BOUND = 1000;
+    //#define ELBOW_LOWER_BOUND 100       //was 1000
+    uint32  ELBOW_LOWER_BOUND = 100;
+    //#define SHOULDER_UPPER_BOUND 800
+    uint32  SHOULDER_UPPER_BOUND = 800;
+    //#define SHOULDER_LOWER_BOUND 280
+    uint32  SHOULDER_LOWER_BOUND = 280;
+    
     #define SHOULDER_POT 0
     #define ELBOW_POT 1
 
@@ -81,17 +87,21 @@
 
     volatile uint8 timerFlag; //used in the timer_isr
     
+    enum equipment {SHOULDER = 0, ELBOW, WRIST, TURRET, EFFECTOR};
+    
     //---------------------------------------------------
     //    Function stubs for the header
     //---------------------------------------------------
     //void reverse(char s[]);
     //void itoa(int n, char s[]);
+    uint16 CalibrationElbow(uint16 velocity);
+    uint16 CalibrationShoulder(uint16 velocity);
     uint16 average(uint16* array, uint8 num_items);
     uint8 maintain_array(uint8 cpos, uint8 SIZE);
     uint8 check_update(uint16* array, uint8 arr_pos, uint8 size, int change);
     uint8 pos_to_vel(uint8 cur_pos, uint16* array, uint8 ARRAY_SIZE, uint16 command);
     uint16 make_command(int8* info_array, uint8 byte1, uint8 byte2);
-    uint16 potFeedback();
+    uint16 potFeedback(uint32 channel);
     void send_feedback();
     void fill_data_array();
     void ServoGoalPosition( uint8 servoID, uint16 position);

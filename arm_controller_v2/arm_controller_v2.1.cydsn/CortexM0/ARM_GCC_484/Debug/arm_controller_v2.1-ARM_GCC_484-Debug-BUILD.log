@@ -1,8 +1,8 @@
---------------- Build Started: 03/31/2015 09:32:50 Project: arm_controller_v2.1, Configuration: ARM GCC 4.8.4 Debug ---------------
+--------------- Build Started: 04/04/2015 00:05:24 Project: arm_controller_v2.1, Configuration: ARM GCC 4.8.4 Debug ---------------
 The code generation step is up to date.
 arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -I.\Generated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_484\Debug/main.lst -g -D DEBUG -Wall -ffunction-sections -O0 -std=gnu99 -c .\main.c -o .\CortexM0\ARM_GCC_484\Debug\main.o
 .\main.c: In function 'fill_data_array':
-.\main.c:196:5: warning: pointer targets in passing argument 1 of 'wiznetReadUdpFrame' differ in signedness [-Wpointer-sign]
+.\main.c:304:5: warning: pointer targets in passing argument 1 of 'wiznetReadUdpFrame' differ in signedness [-Wpointer-sign]
      wiznetReadUdpFrame(data_array, DATA_ARRAY_SIZE);
      ^
 In file included from .\main.h:13:0,
@@ -15,6 +15,6 @@ arm-none-eabi-ar.exe: creating .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.
 arm-none-eabi-gcc.exe -Wl,--start-group -o .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.elf .\CortexM0\ARM_GCC_484\Debug\main.o .\CortexM0\ARM_GCC_484\Debug\spi.o .\CortexM0\ARM_GCC_484\Debug\wiznet5500.o .\CortexM0\ARM_GCC_484\Debug\cymetadata.o .\CortexM0\ARM_GCC_484\Debug\Cm0Start.o .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a "C:\Program Files (x86)\Cypress\PSoC Creator\3.1\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CortexM0\ARM_GCC_484\Debug\CyComponentLibrary.a" -mthumb -march=armv6-m -Wl,-Map,.\CortexM0\ARM_GCC_484\Debug/arm_controller_v2.1.map -T .\Generated_Source\PSoC4\cm0gcc.ld -g -specs=nano.specs "-u _printf_float" "" -Wl,--gc-sections -Wl,--end-group
 cyelftool.exe -C C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.elf --flash_size 32768 --flash_row_size 128
 cyelftool.exe -S C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.elf
-Flash used: 13302 of 32768 bytes (40.6 %).
-SRAM used: 1524 of 4096 bytes (37.2 %). Stack: 1024 bytes. Heap: 128 bytes.
---------------- Build Succeeded: 03/31/2015 09:32:51 ---------------
+Flash used: 13990 of 32768 bytes (42.7 %).
+SRAM used: 1540 of 4096 bytes (37.6 %). Stack: 1024 bytes. Heap: 128 bytes.
+--------------- Build Succeeded: 04/04/2015 00:05:28 ---------------

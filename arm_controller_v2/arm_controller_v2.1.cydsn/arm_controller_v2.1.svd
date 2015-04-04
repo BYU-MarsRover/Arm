@@ -2154,18 +2154,9 @@
       </addressBlock>
       <registers>
         <register>
-          <name>EFFECTOR_PWM_COMPARE_1</name>
-          <description>UDB.D0 - Assigned Compare1 Value</description>
+          <name>EFFECTOR_PWM_COMPARE_Reg</name>
+          <description>UDB.D0 - Assigned Compare Value</description>
           <addressOffset>0x400F0020</addressOffset>
-          <size>16</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-        </register>
-        <register>
-          <name>EFFECTOR_PWM_COMPARE_2</name>
-          <description>UDB.D1 - Assigned Compare2 Value</description>
-          <addressOffset>0x400F0030</addressOffset>
           <size>16</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -2174,7 +2165,7 @@
         <register>
           <name>EFFECTOR_PWM_Control_Reg</name>
           <description>UDB Control Register - Assigned Control Register Value</description>
-          <addressOffset>0x400F0073</addressOffset>
+          <addressOffset>0x400F0072</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -2206,7 +2197,7 @@
         <register>
           <name>EFFECTOR_PWM_STATUS_MASK</name>
           <description>UDB Status bits Interrupt Mask Enable Register</description>
-          <addressOffset>0x400F0083</addressOffset>
+          <addressOffset>0x400F0082</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>

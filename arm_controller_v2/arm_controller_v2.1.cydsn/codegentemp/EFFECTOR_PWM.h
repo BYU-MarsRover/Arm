@@ -33,7 +33,7 @@ extern uint8 EFFECTOR_PWM_initVar;
 #define EFFECTOR_PWM_DeadBandMode                   (0u)
 #define EFFECTOR_PWM_KillModeMinTime                (0u)
 #define EFFECTOR_PWM_KillMode                       (0u)
-#define EFFECTOR_PWM_PWMMode                        (1u)
+#define EFFECTOR_PWM_PWMMode                        (0u)
 #define EFFECTOR_PWM_PWMModeIsCenterAligned         (0u)
 #define EFFECTOR_PWM_DeadBandUsed                   (0u)
 #define EFFECTOR_PWM_DeadBand2_4                    (0u)
@@ -50,7 +50,7 @@ extern uint8 EFFECTOR_PWM_initVar;
     #define EFFECTOR_PWM_UseControl                 (0u)
 #endif /* !defined(EFFECTOR_PWM_PWMUDB_genblk1_ctrlreg__REMOVED) */
 
-#define EFFECTOR_PWM_UseOneCompareMode              (0u)
+#define EFFECTOR_PWM_UseOneCompareMode              (1u)
 #define EFFECTOR_PWM_MinimumKillTime                (1u)
 #define EFFECTOR_PWM_EnableMode                     (0u)
 
@@ -226,8 +226,8 @@ void EFFECTOR_PWM_RestoreConfig(void) ;
 /***************************************
 *         Initialization Values
 **************************************/
-#define EFFECTOR_PWM_INIT_PERIOD_VALUE          (65535u)
-#define EFFECTOR_PWM_INIT_COMPARE_VALUE1        (127u)
+#define EFFECTOR_PWM_INIT_PERIOD_VALUE          (20000u)
+#define EFFECTOR_PWM_INIT_COMPARE_VALUE1        (18500u)
 #define EFFECTOR_PWM_INIT_COMPARE_VALUE2        (63u)
 #define EFFECTOR_PWM_INIT_INTERRUPTS_MODE       (uint8)(((uint8)(0u <<   \
                                                     EFFECTOR_PWM_STATUS_TC_INT_EN_MASK_SHIFT)) | \
@@ -238,7 +238,7 @@ void EFFECTOR_PWM_RestoreConfig(void) ;
                                                     (uint8)((uint8)(0u <<  \
                                                     EFFECTOR_PWM_STATUS_KILL_INT_EN_MASK_SHIFT )))
 #define EFFECTOR_PWM_DEFAULT_COMPARE2_MODE      (uint8)((uint8)1u <<  EFFECTOR_PWM_CTRL_CMPMODE2_SHIFT)
-#define EFFECTOR_PWM_DEFAULT_COMPARE1_MODE      (uint8)((uint8)1u <<  EFFECTOR_PWM_CTRL_CMPMODE1_SHIFT)
+#define EFFECTOR_PWM_DEFAULT_COMPARE1_MODE      (uint8)((uint8)3u <<  EFFECTOR_PWM_CTRL_CMPMODE1_SHIFT)
 #define EFFECTOR_PWM_INIT_DEAD_TIME             (1u)
 
 

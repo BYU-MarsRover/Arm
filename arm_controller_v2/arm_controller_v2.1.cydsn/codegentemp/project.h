@@ -54,8 +54,8 @@
 #include <UART_1_BOOT.h>
 #include <sens_hygro.h>
 #include <sens_hygro_aliases.h>
-#include <stop_shdr_up.h>
-#include <stop_shdr_up_aliases.h>
+#include <stop_elb_dn.h>
+#include <stop_elb_dn_aliases.h>
 #include <MOSI_1.h>
 #include <MOSI_1_aliases.h>
 #include <SCLK_1.h>
@@ -64,12 +64,12 @@
 #include <SPIM_1_PVT.h>
 #include <sens_ph.h>
 #include <sens_ph_aliases.h>
-#include <stop_shdr_dn.h>
-#include <stop_shdr_dn_aliases.h>
 #include <stop_elb_up.h>
 #include <stop_elb_up_aliases.h>
-#include <stop_elb_dn.h>
-#include <stop_elb_dn_aliases.h>
+#include <stop_shdr_dn.h>
+#include <stop_shdr_dn_aliases.h>
+#include <stop_shdr_up.h>
+#include <stop_shdr_up_aliases.h>
 #include <UART_TEST.h>
 #include <UART_TEST_SPI_UART.h>
 #include <UART_TEST_PINS.h>

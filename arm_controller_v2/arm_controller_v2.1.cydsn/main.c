@@ -44,7 +44,115 @@ CY_ISR(timer_isr)
 //     s[i] = '\0';
 //     reverse(s);
 // }
+uint16 CalibrationElbow(uint16 velocity)
+{
+    uint8 	CYCLES = 3;
+	uint8 	i;
+	uint16 	bound;
+	uint16 	average;
+    uint32  channel;
+    int16   difference;
+ 
+	for(i = 0, average = 0; i < CYCLES; i++)
+	{
+        // Move till stop switch presses down
+        if(velocity < 1500)
+        {
+            while(stop_elb_dn_Read())
+            {
+                ELBW_PWM_WriteCompare(velocity);
+            }
+        }
+        else if(velocity > 1500)
+        {
+            while(stop_elb_up_Read())
+            {
+                ELBW_PWM_WriteCompare(velocity);
+            }
+        }
+        else
+        {
+            ELBW_PWM_WriteCompare(velocity);
+            LED_Write(1);
+        }
+        ELBW_PWM_WriteCompare(NEUTRAL);
+        channel = ELBOW_POT;
+        
+        // Add the value to average
+        average+=potFeedback(channel);
+ 
+		// Move away for 2 seconds
+			// Use negative of velocity * 2, so that it moves away quick enough
+        difference = 1500-velocity;
+        ELBW_PWM_WriteCompare((uint16)1500 + difference);
+        CyDelay(1000);
+ 
+		// Add a switch check
+			// Safety check in case it somehow moves the other direction to fast
+ 
+		// Stop moving
+        ELBW_PWM_WriteCompare(NEUTRAL);
+	}
+ 
+	bound = average / CYCLES;
+ 
+	return bound;
+}
 
+uint16 CalibrationShoulder(uint16 velocity)
+{
+	uint8 	CYCLES = 3;
+	uint8 	i;
+	uint16 	bound;
+	uint16 	average;
+    uint32  channel;
+    int16 difference;
+ 
+	for(i = 0, average = 0; i < CYCLES; i++)
+	{
+		// Move till stop switch presses down
+        if(velocity < 1500)
+        {
+            while(stop_shdr_dn_Read())
+            {
+                SHLDR_PWM_WriteCompare(velocity);
+            }
+        }
+        else if(velocity > 1500)
+        {
+            while(stop_shdr_up_Read())
+            {
+                SHLDR_PWM_WriteCompare(velocity);
+            }
+        }
+        else
+        {
+            SHLDR_PWM_WriteCompare(velocity);
+            LED_Write(1);
+        }
+        SHLDR_PWM_WriteCompare(NEUTRAL);
+        channel = SHOULDER_POT;
+ 
+		// Add the value to average
+        average+=potFeedback(channel);
+ 
+		// Move away for 2 seconds
+			// Use negative of velocity * 2, so that it moves away quick enough
+        difference = 1500-velocity;
+        SHLDR_PWM_WriteCompare((uint16)1500 + difference);
+        CyDelay(1000);
+ 
+		// Add a switch check
+			// Safety check in case it somehow moves the other direction to fast
+ 
+		// Stop moving
+        SHLDR_PWM_WriteCompare(NEUTRAL);
+	}
+ 
+	bound = average / CYCLES;
+ 
+	return bound;
+}
 
 //Average function to be used in smoothing our input
 uint16 average(uint16* av_array, uint8 num_items)
@@ -177,8 +285,8 @@ uint16 make_command(int8* info_array, uint8 byte1, uint8 byte2)
 uint16 potFeedback(uint32 channel)
 {
     //TODO: uncomment this section
-    //uint16 feedback = ADC_GetResult16(channel);
-    uint16 feedback = 500;
+    uint16 feedback = ADC_GetResult16(channel);
+    //uint16 feedback = 500;
     return feedback;
 }
 
@@ -848,7 +956,7 @@ void effector()
             break;
 
         case eff_init:           
-           EFFECTOR_PWM_WriteCompare1(1500);
+           EFFECTOR_PWM_WriteCompare(1500);
            break;
 
         case eff_execute:
@@ -856,7 +964,7 @@ void effector()
 
             if(command <= 2000 && command >= 1000)
             {
-                EFFECTOR_PWM_WriteCompare1(command);
+                EFFECTOR_PWM_WriteCompare(command);
             }
             else
             {
@@ -958,6 +1066,10 @@ void initialize()
     CyDelay(3000);
     
     /*-------------call the initial calibration funtion here------------*/
+    //SHOULDER_UPPER_BOUND = CalibrationShoulder(1700);
+    //SHOULDER_LOWER_BOUND = CalibrationShoulder(1300);
+    ELBOW_UPPER_BOUND = CalibrationElbow(1700);
+    ELBOW_LOWER_BOUND = CalibrationElbow(1300);
     
     //helps for generating random arrays
     //srand((unsigned) time(&t));
@@ -1014,6 +1126,15 @@ int main()
     {
         //UART_TEST_UartPutChar(31);
         //first_count = Timer_1_ReadCounter();
+        
+        if(stop_elb_dn_Read())
+        {
+            LED_Write(1);
+        }
+        else
+        {
+            LED_Write(0);
+        }
         
         if(WIZ_INT_Read()==0) //!WIZ_INT_Read()--put wiznet in as condition if use ISR
         {
