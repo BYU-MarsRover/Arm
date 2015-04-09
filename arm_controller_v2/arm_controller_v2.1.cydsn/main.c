@@ -55,6 +55,9 @@ uint16 CalibrationElbow(uint16 velocity)
  
 	for(i = 0, average = 0; i < CYCLES; i++)
 	{
+        // Test stop switch
+        LED_Write(0);
+        
         // Move till stop switch presses down
         if(velocity < 1500)
         {
@@ -73,7 +76,7 @@ uint16 CalibrationElbow(uint16 velocity)
         else
         {
             ELBW_PWM_WriteCompare(velocity);
-            LED_Write(1);
+            //LED_Write(1);
         }
         ELBW_PWM_WriteCompare(NEUTRAL);
         channel = ELBOW_POT;
@@ -84,17 +87,23 @@ uint16 CalibrationElbow(uint16 velocity)
 		// Move away for 2 seconds
 			// Use negative of velocity * 2, so that it moves away quick enough
         difference = 1500-velocity;
-        ELBW_PWM_WriteCompare((uint16)1500 + difference);
+        ELBW_PWM_WriteCompare((uint16)(1500 + difference));
         CyDelay(1000);
- 
-		// Add a switch check
-			// Safety check in case it somehow moves the other direction to fast
  
 		// Stop moving
         ELBW_PWM_WriteCompare(NEUTRAL);
+        
+        // Test stop switch
+        //LED_Write(1);
+        //CyDelay(1000);
 	}
- 
-	bound = average / CYCLES;
+    
+    if(velocity > 1500)
+	    bound = ((average / CYCLES) * .9);
+    else if(velocity < 1500)
+        bound = ((average / CYCLES) * 1.1);
+    else // velocity == 1500
+        LED_Write(1); 
  
 	return bound;
 }
@@ -139,17 +148,19 @@ uint16 CalibrationShoulder(uint16 velocity)
 		// Move away for 2 seconds
 			// Use negative of velocity * 2, so that it moves away quick enough
         difference = 1500-velocity;
-        SHLDR_PWM_WriteCompare((uint16)1500 + difference);
+        SHLDR_PWM_WriteCompare((uint16)(1500 + difference));
         CyDelay(1000);
- 
-		// Add a switch check
-			// Safety check in case it somehow moves the other direction to fast
  
 		// Stop moving
         SHLDR_PWM_WriteCompare(NEUTRAL);
 	}
  
-	bound = average / CYCLES;
+	if(velocity > 1500)
+	    bound = ((average / CYCLES) * .9);
+    else if(velocity < 1500)
+        bound = ((average / CYCLES) * 1.1);
+    else // velocity == 1500
+        LED_Write(1); 
  
 	return bound;
 }
@@ -616,11 +627,43 @@ uint8 elbow(uint8 elbw_arr_cspot, uint16* elbow_array)
             }
             avg = average(elbow_array, ELBW_ARR_SIZE);   
             
-            if(feedback <= ELBOW_LOWER_BOUND)
+            if(!stop_elb_dn_Read() || !stop_elb_up_Read())
             {
-                if (avg < 1500)
+                if(feedback <= ELBOW_LOWER_BOUND )
                 {
-                    ELBW_PWM_WriteCompare(1500);
+                    if (avg < 1500)
+                    {
+                        ELBW_PWM_WriteCompare(1500);
+                    }
+                    else
+                    {
+                        if(avg <= 2000 && avg >= 1000)
+                        {
+                            ELBW_PWM_WriteCompare(avg);
+                        }
+                        else
+                        {
+                            ELBW_PWM_WriteCompare(1500);
+                        }
+                    }
+                }
+                else if (feedback >= ELBOW_UPPER_BOUND)
+                {
+                    if(avg > 1500)
+                    {
+                        ELBW_PWM_WriteCompare(1500);
+                    }
+                    else
+                    {
+                        if(avg <= 2000 && avg >= 1000)
+                        {
+                            ELBW_PWM_WriteCompare(avg);
+                        }
+                        else
+                        {
+                            ELBW_PWM_WriteCompare(1500);
+                        }
+                    }
                 }
                 else
                 {
@@ -634,36 +677,15 @@ uint8 elbow(uint8 elbw_arr_cspot, uint16* elbow_array)
                     }
                 }
             }
-            else if (feedback >= ELBOW_UPPER_BOUND)
+            else // One of the stop switches was presses, shouldn't happen but just in case
             {
-                if(avg > 1500)
-                {
-                    ELBW_PWM_WriteCompare(1500);
-                }
+                if(!stop_elb_dn_Read())
+                    ELBOW_LOWER_BOUND = potFeedback(ELBOW_POT) * 1.1;
+                else if(!stop_elb_up_Read())
+                    ELBOW_UPPER_BOUND = potFeedback(ELBOW_POT) * .9;
                 else
-                {
-                    if(avg <= 2000 && avg >= 1000)
-                    {
-                        ELBW_PWM_WriteCompare(avg);
-                    }
-                    else
-                    {
-                        ELBW_PWM_WriteCompare(1500);
-                    }
-                }
+                    LED_Write(1);
             }
-            else
-            {
-                if(avg <= 2000 && avg >= 1000)
-                {
-                    ELBW_PWM_WriteCompare(avg);
-                }
-                else
-                {
-                    ELBW_PWM_WriteCompare(1500);
-                }
-            }
-            
             ELBOW_FLAG = 0;
             break;
             
@@ -750,11 +772,45 @@ uint8 shoulder(uint8 shldr_arr_cspot, uint16* shoulder_array)
             }
             avg = average(shoulder_array, SHLDR_ARR_SIZE);
             
-            if(feedback <= SHOULDER_LOWER_BOUND)
+            if(!stop_shdr_dn_Read() || !stop_shdr_up_Read())
             {
-                if (avg < 1500)
+                if(feedback <= SHOULDER_LOWER_BOUND)
                 {
-                    SHLDR_PWM_WriteCompare(1500);
+                    if (avg < 1500)
+                    {
+                        SHLDR_PWM_WriteCompare(1500);
+                    }
+                    else
+                    {
+                        if(avg <= 2000 && avg >= 1000)
+                        {
+                            SHLDR_PWM_WriteCompare(avg);
+                        }
+                        else
+                        {
+                            //throw error
+                            SHLDR_PWM_WriteCompare(1500);
+                        }
+                    }
+                }
+                else if (feedback >= SHOULDER_UPPER_BOUND)
+                {
+                    if(avg > 1500)
+                    {
+                        SHLDR_PWM_WriteCompare(1500);
+                    }
+                    else
+                    {
+                        if(avg <= 2000 && avg >= 1000)
+                        {
+                            SHLDR_PWM_WriteCompare(avg);
+                        }
+                        else
+                        {
+                            //throw error
+                            SHLDR_PWM_WriteCompare(1500);
+                        }
+                    }
                 }
                 else
                 {
@@ -769,36 +825,14 @@ uint8 shoulder(uint8 shldr_arr_cspot, uint16* shoulder_array)
                     }
                 }
             }
-            else if (feedback >= SHOULDER_UPPER_BOUND)
+            else // One of the stop switches was presses, shouldn't happen but just in case
             {
-                if(avg > 1500)
-                {
-                    SHLDR_PWM_WriteCompare(1500);
-                }
+                if(!stop_shdr_dn_Read())
+                    SHOULDER_LOWER_BOUND = potFeedback(SHOULDER_POT) * 1.1;
+                else if(!stop_shdr_up_Read())
+                    SHOULDER_UPPER_BOUND = potFeedback(SHOULDER_POT) * .9;
                 else
-                {
-                    if(avg <= 2000 && avg >= 1000)
-                    {
-                        SHLDR_PWM_WriteCompare(avg);
-                    }
-                    else
-                    {
-                        //throw error
-                        SHLDR_PWM_WriteCompare(1500);
-                    }
-                }
-            }
-            else
-            {
-                if(avg <= 2000 && avg >= 1000)
-                {
-                    SHLDR_PWM_WriteCompare(avg);
-                }
-                else
-                {
-                    //throw error
-                    SHLDR_PWM_WriteCompare(1500);
-                }
+                    LED_Write(1);
             }
             SHOULDER_FLAG = 0;
             break;
@@ -1060,10 +1094,12 @@ void initialize()
     ServoSpeed(0xFE, 100);
     SetServoTorque(0xFE, 0x03FF);
     
+    LED_Write(1);
     //Initialize our motor drivers
     ELBW_PWM_WriteCompare(1500); 
     SHLDR_PWM_WriteCompare(1500);
     CyDelay(3000);
+    LED_Write(0);
     
     /*-------------call the initial calibration funtion here------------*/
     //SHOULDER_UPPER_BOUND = CalibrationShoulder(1700);
