@@ -1,5 +1,5 @@
 /*******************************************************************************
-* File Name: UART_TEST_rx.c  
+* File Name: I2C_1_sda.c  
 * Version 2.10
 *
 * Description:
@@ -15,18 +15,18 @@
 *******************************************************************************/
 
 #include "cytypes.h"
-#include "UART_TEST_rx.h"
+#include "I2C_1_sda.h"
 
 #define SetP4PinDriveMode(shift, mode)  \
     do { \
-        UART_TEST_rx_PC =   (UART_TEST_rx_PC & \
-                                (uint32)(~(uint32)(UART_TEST_rx_DRIVE_MODE_IND_MASK << (UART_TEST_rx_DRIVE_MODE_BITS * (shift))))) | \
-                                (uint32)((uint32)(mode) << (UART_TEST_rx_DRIVE_MODE_BITS * (shift))); \
+        I2C_1_sda_PC =   (I2C_1_sda_PC & \
+                                (uint32)(~(uint32)(I2C_1_sda_DRIVE_MODE_IND_MASK << (I2C_1_sda_DRIVE_MODE_BITS * (shift))))) | \
+                                (uint32)((uint32)(mode) << (I2C_1_sda_DRIVE_MODE_BITS * (shift))); \
     } while (0)
 
 
 /*******************************************************************************
-* Function Name: UART_TEST_rx_Write
+* Function Name: I2C_1_sda_Write
 ********************************************************************************
 *
 * Summary:
@@ -39,16 +39,16 @@
 *  None 
 *  
 *******************************************************************************/
-void UART_TEST_rx_Write(uint8 value) 
+void I2C_1_sda_Write(uint8 value) 
 {
-    uint8 drVal = (uint8)(UART_TEST_rx_DR & (uint8)(~UART_TEST_rx_MASK));
-    drVal = (drVal | ((uint8)(value << UART_TEST_rx_SHIFT) & UART_TEST_rx_MASK));
-    UART_TEST_rx_DR = (uint32)drVal;
+    uint8 drVal = (uint8)(I2C_1_sda_DR & (uint8)(~I2C_1_sda_MASK));
+    drVal = (drVal | ((uint8)(value << I2C_1_sda_SHIFT) & I2C_1_sda_MASK));
+    I2C_1_sda_DR = (uint32)drVal;
 }
 
 
 /*******************************************************************************
-* Function Name: UART_TEST_rx_SetDriveMode
+* Function Name: I2C_1_sda_SetDriveMode
 ********************************************************************************
 *
 * Summary:
@@ -57,27 +57,27 @@ void UART_TEST_rx_Write(uint8 value)
 * Parameters:  
 *  mode:  Change the pins to one of the following drive modes.
 *
-*  UART_TEST_rx_DM_STRONG     Strong Drive 
-*  UART_TEST_rx_DM_OD_HI      Open Drain, Drives High 
-*  UART_TEST_rx_DM_OD_LO      Open Drain, Drives Low 
-*  UART_TEST_rx_DM_RES_UP     Resistive Pull Up 
-*  UART_TEST_rx_DM_RES_DWN    Resistive Pull Down 
-*  UART_TEST_rx_DM_RES_UPDWN  Resistive Pull Up/Down 
-*  UART_TEST_rx_DM_DIG_HIZ    High Impedance Digital 
-*  UART_TEST_rx_DM_ALG_HIZ    High Impedance Analog 
+*  I2C_1_sda_DM_STRONG     Strong Drive 
+*  I2C_1_sda_DM_OD_HI      Open Drain, Drives High 
+*  I2C_1_sda_DM_OD_LO      Open Drain, Drives Low 
+*  I2C_1_sda_DM_RES_UP     Resistive Pull Up 
+*  I2C_1_sda_DM_RES_DWN    Resistive Pull Down 
+*  I2C_1_sda_DM_RES_UPDWN  Resistive Pull Up/Down 
+*  I2C_1_sda_DM_DIG_HIZ    High Impedance Digital 
+*  I2C_1_sda_DM_ALG_HIZ    High Impedance Analog 
 *
 * Return: 
 *  None
 *
 *******************************************************************************/
-void UART_TEST_rx_SetDriveMode(uint8 mode) 
+void I2C_1_sda_SetDriveMode(uint8 mode) 
 {
-	SetP4PinDriveMode(UART_TEST_rx__0__SHIFT, mode);
+	SetP4PinDriveMode(I2C_1_sda__0__SHIFT, mode);
 }
 
 
 /*******************************************************************************
-* Function Name: UART_TEST_rx_Read
+* Function Name: I2C_1_sda_Read
 ********************************************************************************
 *
 * Summary:
@@ -91,17 +91,17 @@ void UART_TEST_rx_SetDriveMode(uint8 mode)
 *  Returns the current value of the Digital Port as a right justified number
 *  
 * Note:
-*  Macro UART_TEST_rx_ReadPS calls this function. 
+*  Macro I2C_1_sda_ReadPS calls this function. 
 *  
 *******************************************************************************/
-uint8 UART_TEST_rx_Read(void) 
+uint8 I2C_1_sda_Read(void) 
 {
-    return (uint8)((UART_TEST_rx_PS & UART_TEST_rx_MASK) >> UART_TEST_rx_SHIFT);
+    return (uint8)((I2C_1_sda_PS & I2C_1_sda_MASK) >> I2C_1_sda_SHIFT);
 }
 
 
 /*******************************************************************************
-* Function Name: UART_TEST_rx_ReadDataReg
+* Function Name: I2C_1_sda_ReadDataReg
 ********************************************************************************
 *
 * Summary:
@@ -114,17 +114,17 @@ uint8 UART_TEST_rx_Read(void)
 *  Returns the current value assigned to the Digital Port's data output register
 *  
 *******************************************************************************/
-uint8 UART_TEST_rx_ReadDataReg(void) 
+uint8 I2C_1_sda_ReadDataReg(void) 
 {
-    return (uint8)((UART_TEST_rx_DR & UART_TEST_rx_MASK) >> UART_TEST_rx_SHIFT);
+    return (uint8)((I2C_1_sda_DR & I2C_1_sda_MASK) >> I2C_1_sda_SHIFT);
 }
 
 
 /* If Interrupts Are Enabled for this Pins component */ 
-#if defined(UART_TEST_rx_INTSTAT) 
+#if defined(I2C_1_sda_INTSTAT) 
 
     /*******************************************************************************
-    * Function Name: UART_TEST_rx_ClearInterrupt
+    * Function Name: I2C_1_sda_ClearInterrupt
     ********************************************************************************
     *
     * Summary:
@@ -138,11 +138,11 @@ uint8 UART_TEST_rx_ReadDataReg(void)
     *  Returns the value of the interrupt status register
     *  
     *******************************************************************************/
-    uint8 UART_TEST_rx_ClearInterrupt(void) 
+    uint8 I2C_1_sda_ClearInterrupt(void) 
     {
-		uint8 maskedStatus = (uint8)(UART_TEST_rx_INTSTAT & UART_TEST_rx_MASK);
-		UART_TEST_rx_INTSTAT = maskedStatus;
-        return maskedStatus >> UART_TEST_rx_SHIFT;
+		uint8 maskedStatus = (uint8)(I2C_1_sda_INTSTAT & I2C_1_sda_MASK);
+		I2C_1_sda_INTSTAT = maskedStatus;
+        return maskedStatus >> I2C_1_sda_SHIFT;
     }
 
 #endif /* If Interrupts Are Enabled for this Pins component */ 

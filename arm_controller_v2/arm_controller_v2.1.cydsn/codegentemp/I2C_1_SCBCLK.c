@@ -1,5 +1,5 @@
 /*******************************************************************************
-* File Name: UART_TEST_SCBCLK.c
+* File Name: I2C_1_SCBCLK.c
 * Version 2.20
 *
 *  Description:
@@ -17,12 +17,12 @@
 *******************************************************************************/
 
 #include <cydevice_trm.h>
-#include "UART_TEST_SCBCLK.h"
+#include "I2C_1_SCBCLK.h"
 
 #if defined CYREG_PERI_DIV_CMD
 
 /*******************************************************************************
-* Function Name: UART_TEST_SCBCLK_StartEx
+* Function Name: I2C_1_SCBCLK_StartEx
 ********************************************************************************
 *
 * Summary:
@@ -36,24 +36,24 @@
 *  None
 *
 *******************************************************************************/
-void UART_TEST_SCBCLK_StartEx(uint32 alignClkDiv)
+void I2C_1_SCBCLK_StartEx(uint32 alignClkDiv)
 {
     /* Make sure any previous start command has finished. */
-    while((UART_TEST_SCBCLK_CMD_REG & UART_TEST_SCBCLK_CMD_ENABLE_MASK) != 0u)
+    while((I2C_1_SCBCLK_CMD_REG & I2C_1_SCBCLK_CMD_ENABLE_MASK) != 0u)
     {
     }
     
     /* Specify the target divider and it's alignment divider, and enable. */
-    UART_TEST_SCBCLK_CMD_REG =
-        ((uint32)UART_TEST_SCBCLK__DIV_ID << UART_TEST_SCBCLK_CMD_DIV_SHIFT)|
-        (alignClkDiv << UART_TEST_SCBCLK_CMD_PA_DIV_SHIFT) |
-        (uint32)UART_TEST_SCBCLK_CMD_ENABLE_MASK;
+    I2C_1_SCBCLK_CMD_REG =
+        ((uint32)I2C_1_SCBCLK__DIV_ID << I2C_1_SCBCLK_CMD_DIV_SHIFT)|
+        (alignClkDiv << I2C_1_SCBCLK_CMD_PA_DIV_SHIFT) |
+        (uint32)I2C_1_SCBCLK_CMD_ENABLE_MASK;
 }
 
 #else
 
 /*******************************************************************************
-* Function Name: UART_TEST_SCBCLK_Start
+* Function Name: I2C_1_SCBCLK_Start
 ********************************************************************************
 *
 * Summary:
@@ -67,17 +67,17 @@ void UART_TEST_SCBCLK_StartEx(uint32 alignClkDiv)
 *
 *******************************************************************************/
 
-void UART_TEST_SCBCLK_Start(void)
+void I2C_1_SCBCLK_Start(void)
 {
     /* Set the bit to enable the clock. */
-    UART_TEST_SCBCLK_ENABLE_REG |= UART_TEST_SCBCLK__ENABLE_MASK;
+    I2C_1_SCBCLK_ENABLE_REG |= I2C_1_SCBCLK__ENABLE_MASK;
 }
 
 #endif /* CYREG_PERI_DIV_CMD */
 
 
 /*******************************************************************************
-* Function Name: UART_TEST_SCBCLK_Stop
+* Function Name: I2C_1_SCBCLK_Stop
 ********************************************************************************
 *
 * Summary:
@@ -92,31 +92,31 @@ void UART_TEST_SCBCLK_Start(void)
 *  None
 *
 *******************************************************************************/
-void UART_TEST_SCBCLK_Stop(void)
+void I2C_1_SCBCLK_Stop(void)
 {
 #if defined CYREG_PERI_DIV_CMD
 
     /* Make sure any previous start command has finished. */
-    while((UART_TEST_SCBCLK_CMD_REG & UART_TEST_SCBCLK_CMD_ENABLE_MASK) != 0u)
+    while((I2C_1_SCBCLK_CMD_REG & I2C_1_SCBCLK_CMD_ENABLE_MASK) != 0u)
     {
     }
     
     /* Specify the target divider and it's alignment divider, and disable. */
-    UART_TEST_SCBCLK_CMD_REG =
-        ((uint32)UART_TEST_SCBCLK__DIV_ID << UART_TEST_SCBCLK_CMD_DIV_SHIFT)|
-        ((uint32)UART_TEST_SCBCLK_CMD_DISABLE_MASK);
+    I2C_1_SCBCLK_CMD_REG =
+        ((uint32)I2C_1_SCBCLK__DIV_ID << I2C_1_SCBCLK_CMD_DIV_SHIFT)|
+        ((uint32)I2C_1_SCBCLK_CMD_DISABLE_MASK);
 
 #else
 
     /* Clear the bit to disable the clock. */
-    UART_TEST_SCBCLK_ENABLE_REG &= (uint32)(~UART_TEST_SCBCLK__ENABLE_MASK);
+    I2C_1_SCBCLK_ENABLE_REG &= (uint32)(~I2C_1_SCBCLK__ENABLE_MASK);
     
 #endif /* CYREG_PERI_DIV_CMD */
 }
 
 
 /*******************************************************************************
-* Function Name: UART_TEST_SCBCLK_SetFractionalDividerRegister
+* Function Name: I2C_1_SCBCLK_SetFractionalDividerRegister
 ********************************************************************************
 *
 * Summary:
@@ -131,35 +131,35 @@ void UART_TEST_SCBCLK_Stop(void)
 *  None
 *
 *******************************************************************************/
-void UART_TEST_SCBCLK_SetFractionalDividerRegister(uint16 clkDivider, uint8 clkFractional)
+void I2C_1_SCBCLK_SetFractionalDividerRegister(uint16 clkDivider, uint8 clkFractional)
 {
     uint32 maskVal;
     uint32 regVal;
     
-#if defined (UART_TEST_SCBCLK__FRAC_MASK) || defined (CYREG_PERI_DIV_CMD)
+#if defined (I2C_1_SCBCLK__FRAC_MASK) || defined (CYREG_PERI_DIV_CMD)
     
 	/* get all but divider bits */
-    maskVal = UART_TEST_SCBCLK_DIV_REG & 
-                    (uint32)(~(uint32)(UART_TEST_SCBCLK_DIV_INT_MASK | UART_TEST_SCBCLK_DIV_FRAC_MASK)); 
+    maskVal = I2C_1_SCBCLK_DIV_REG & 
+                    (uint32)(~(uint32)(I2C_1_SCBCLK_DIV_INT_MASK | I2C_1_SCBCLK_DIV_FRAC_MASK)); 
 	/* combine mask and new divider vals into 32-bit value */
     regVal = maskVal |
-        ((uint32)((uint32)clkDivider <<  UART_TEST_SCBCLK_DIV_INT_SHIFT) & UART_TEST_SCBCLK_DIV_INT_MASK) |
-        ((uint32)((uint32)clkFractional << UART_TEST_SCBCLK_DIV_FRAC_SHIFT) & UART_TEST_SCBCLK_DIV_FRAC_MASK);
+        ((uint32)((uint32)clkDivider <<  I2C_1_SCBCLK_DIV_INT_SHIFT) & I2C_1_SCBCLK_DIV_INT_MASK) |
+        ((uint32)((uint32)clkFractional << I2C_1_SCBCLK_DIV_FRAC_SHIFT) & I2C_1_SCBCLK_DIV_FRAC_MASK);
     
 #else
     /* get all but integer divider bits */
-    maskVal = UART_TEST_SCBCLK_DIV_REG & (uint32)(~(uint32)UART_TEST_SCBCLK__DIVIDER_MASK);
+    maskVal = I2C_1_SCBCLK_DIV_REG & (uint32)(~(uint32)I2C_1_SCBCLK__DIVIDER_MASK);
     /* combine mask and new divider val into 32-bit value */
     regVal = clkDivider | maskVal;
     
-#endif /* UART_TEST_SCBCLK__FRAC_MASK || CYREG_PERI_DIV_CMD */
+#endif /* I2C_1_SCBCLK__FRAC_MASK || CYREG_PERI_DIV_CMD */
 
-    UART_TEST_SCBCLK_DIV_REG = regVal;
+    I2C_1_SCBCLK_DIV_REG = regVal;
 }
 
 
 /*******************************************************************************
-* Function Name: UART_TEST_SCBCLK_GetDividerRegister
+* Function Name: I2C_1_SCBCLK_GetDividerRegister
 ********************************************************************************
 *
 * Summary:
@@ -173,15 +173,15 @@ void UART_TEST_SCBCLK_SetFractionalDividerRegister(uint16 clkDivider, uint8 clkF
 *  divide by 2, the return value will be 1.
 *
 *******************************************************************************/
-uint16 UART_TEST_SCBCLK_GetDividerRegister(void)
+uint16 I2C_1_SCBCLK_GetDividerRegister(void)
 {
-    return (uint16)((UART_TEST_SCBCLK_DIV_REG & UART_TEST_SCBCLK_DIV_INT_MASK)
-        >> UART_TEST_SCBCLK_DIV_INT_SHIFT);
+    return (uint16)((I2C_1_SCBCLK_DIV_REG & I2C_1_SCBCLK_DIV_INT_MASK)
+        >> I2C_1_SCBCLK_DIV_INT_SHIFT);
 }
 
 
 /*******************************************************************************
-* Function Name: UART_TEST_SCBCLK_GetFractionalDividerRegister
+* Function Name: I2C_1_SCBCLK_GetFractionalDividerRegister
 ********************************************************************************
 *
 * Summary:
@@ -195,15 +195,15 @@ uint16 UART_TEST_SCBCLK_GetDividerRegister(void)
 *  0 if the fractional divider is not in use.
 *
 *******************************************************************************/
-uint8 UART_TEST_SCBCLK_GetFractionalDividerRegister(void)
+uint8 I2C_1_SCBCLK_GetFractionalDividerRegister(void)
 {
-#if defined (UART_TEST_SCBCLK__FRAC_MASK)
+#if defined (I2C_1_SCBCLK__FRAC_MASK)
     /* return fractional divider bits */
-    return (uint8)((UART_TEST_SCBCLK_DIV_REG & UART_TEST_SCBCLK_DIV_FRAC_MASK)
-        >> UART_TEST_SCBCLK_DIV_FRAC_SHIFT);
+    return (uint8)((I2C_1_SCBCLK_DIV_REG & I2C_1_SCBCLK_DIV_FRAC_MASK)
+        >> I2C_1_SCBCLK_DIV_FRAC_SHIFT);
 #else
     return 0u;
-#endif /* UART_TEST_SCBCLK__FRAC_MASK */
+#endif /* I2C_1_SCBCLK__FRAC_MASK */
 }
 
 

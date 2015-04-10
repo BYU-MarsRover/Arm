@@ -827,8 +827,8 @@ uint8 shoulder(uint8 shldr_arr_cspot, uint16* shoulder_array)
             }
             else // One of the stop switches was presses, shouldn't happen but just in case
             {
-                if(!stop_shdr_dn_Read())
-                    SHOULDER_LOWER_BOUND = potFeedback(SHOULDER_POT) * 1.1;
+                if(!stop_shdr_dn_Read()) // TODO: Needs to move away so the switch doesn't stay pressed
+                    SHOULDER_LOWER_BOUND = potFeedback(SHOULDER_POT) * 1.1; // TODO: Fix to be integer arithmetic
                 else if(!stop_shdr_up_Read())
                     SHOULDER_UPPER_BOUND = potFeedback(SHOULDER_POT) * .9;
                 else
@@ -1046,6 +1046,54 @@ void effector()
     }    
 }
 
+enum phSensor_states {ph_start, ph_init, ph_execute, ph_wait} phSensor_state;
+void phSensor()
+{
+    switch(phSensor_state)
+    { //actions
+        case ph_start:
+            // Do nothing
+            break;
+
+        case ph_init:           
+           // TODO: Add initialization code. might not need
+           break;
+
+        case ph_execute:
+            // TODO:  Call Marshalls code for phSensor
+            PH_FLAG = 0;
+            break;
+            
+        case ph_wait:
+            break;
+    }
+    
+    switch(phSensor_state)
+    { //transitions
+        case ph_start:
+            phSensor_state = ph_init;
+            break;
+        
+        case ph_init:
+            phSensor_state = ph_wait;
+            break;
+        
+        case ph_execute:
+            if(PH_FLAG)
+                phSensor_state = ph_execute;
+            else
+                phSensor_state = ph_wait;
+            break;
+        
+        case ph_wait:
+            if(PH_FLAG)
+                phSensor_state = ph_execute;
+            else
+                phSensor_state = ph_wait; 
+            break;
+    }    
+}
+
 //Initialization function for the program
 void initialize()
 {
@@ -1182,6 +1230,8 @@ int main()
             WT_FLAG = 1;
             SHOULDER_FLAG = 1;
             ELBOW_FLAG = 1;
+            EFFECTOR_FLAG = 1;
+            PH_FLAG = 1;
             fs_count = 0;
             //wiznet = 0; //for testing
         }

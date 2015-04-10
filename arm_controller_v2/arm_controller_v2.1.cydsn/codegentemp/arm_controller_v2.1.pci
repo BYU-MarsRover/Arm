@@ -1,5 +1,5 @@
 # arm_controller_v2.1
-# 2015-04-04 04:37:51Z
+# 2015-04-10 22:27:12Z
 
 # IO_2@[IOP=(3)][IoId=(2)] is reserved: SWDDebugEnabled
 dont_use_io iocell 3 2
@@ -17,8 +17,6 @@ set_io "WIZ_SS(0)" iocell 0 3
 set_location "\ADC:cy_psoc4_sar\" p4sarcell -1 -1 0
 set_io "\UART_1:rx(0)\" iocell 3 0
 set_io "\UART_1:tx(0)\" iocell 3 1
-set_io "\UART_TEST:rx(0)\" iocell 4 0
-set_io "\UART_TEST:tx(0)\" iocell 4 1
 set_io "baseAzimuth(0)" iocell 1 2
 set_io "effector_A(0)" iocell 2 4
 set_io "elbow(0)" iocell 1 0

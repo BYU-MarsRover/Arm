@@ -25,7 +25,7 @@
       <Tool Name="postbuild" Command="" Options="" />
     </Toolchain>
   </Toolchains>
-  <Project Name="arm_controller_v2.1" Path="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn" Version="4.20" Type="Normal">
+  <Project Name="arm_controller_v2.1" Path="C:\Users\Matt\repos\BYU_Mars_Rover\arm_controller_v2\arm_controller_v2.1.cydsn" Version="4.20" Type="Normal">
     <CMSIS_SVD_File>arm_controller_v2.1.svd</CMSIS_SVD_File>
     <Datasheet />
     <LinkerFiles>
@@ -33,8 +33,8 @@
       <LinkerFile Toolchain="ARM MDK Generic">.\Generated_Source\PSoC4\Cm0RealView.scat</LinkerFile>
     </LinkerFiles>
     <Folders>
-      <Folder BuildType="BUILD" Path="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn">
-        <Files Root="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn">
+      <Folder BuildType="BUILD" Path="C:\Users\Matt\repos\BYU_Mars_Rover\arm_controller_v2\arm_controller_v2.1.cydsn">
+        <Files Root="C:\Users\Matt\repos\BYU_Mars_Rover\arm_controller_v2\arm_controller_v2.1.cydsn">
           <File BuildType="BUILD" Toolchain="">.\main.c</File>
           <File BuildType="BUILD" Toolchain="">.\spi.c</File>
           <File BuildType="BUILD" Toolchain="">.\wiznet5500.c</File>
@@ -43,8 +43,8 @@
           <File BuildType="BUILD" Toolchain="">.\main.h</File>
         </Files>
       </Folder>
-      <Folder BuildType="STRICT" Path="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\Generated_Source\PSoC4">
-        <Files Root="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn">
+      <Folder BuildType="STRICT" Path="C:\Users\Matt\repos\BYU_Mars_Rover\arm_controller_v2\arm_controller_v2.1.cydsn\Generated_Source\PSoC4">
+        <Files Root="C:\Users\Matt\repos\BYU_Mars_Rover\arm_controller_v2\arm_controller_v2.1.cydsn">
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\cyfitter_cfg.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\cyfitter_cfg.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\cymetadata.c</File>
@@ -120,6 +120,29 @@
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\WIZ_SS.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\WIZ_SS.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\WIZ_SS_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\I2C_1.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\I2C_1.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\I2C_1_I2C.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\I2C_1_I2C_INT.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\I2C_1_I2C.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\I2C_1_I2C_BOOT.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\I2C_1_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\I2C_1_BOOT.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\I2C_1_PINS.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\I2C_1_I2C_PVT.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\I2C_1_PVT.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\I2C_1_BOOT.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\I2C_1_I2C_SLAVE.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\I2C_1_SCBCLK.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\I2C_1_SCBCLK.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\I2C_1_sda.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\I2C_1_sda.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\I2C_1_sda_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\I2C_1_scl.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\I2C_1_scl.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\I2C_1_scl_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\I2C_1_SCB_IRQ.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\I2C_1_SCB_IRQ.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\elbow.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\elbow.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\elbow_aliases.h</File>
@@ -186,27 +209,6 @@
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\stop_elb_dn.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\stop_elb_dn.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\stop_elb_dn_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_TEST.c</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_TEST.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_TEST_SPI_UART.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_TEST_SPI_UART.c</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_TEST_SPI_UART_INT.c</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_TEST_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_TEST_UART.c</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_TEST_BOOT.c</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_TEST_UART_BOOT.c</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_TEST_PINS.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_TEST_SPI_UART_PVT.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_TEST_PVT.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_TEST_BOOT.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_TEST_SCBCLK.c</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_TEST_SCBCLK.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_TEST_tx.c</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_TEST_tx.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_TEST_tx_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_TEST_rx.c</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_TEST_rx.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_TEST_rx_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\EFFECTOR_PWM.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\EFFECTOR_PWM.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\EFFECTOR_PWM_PM.c</File>
@@ -215,47 +217,47 @@
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\effector_A_aliases.h</File>
         </Files>
       </Folder>
-      <Folder BuildType="STRICT" Path="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\Export\ARM_GCC_Generic">
-        <Files Root="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn">
+      <Folder BuildType="STRICT" Path="C:\Users\Matt\repos\BYU_Mars_Rover\arm_controller_v2\arm_controller_v2.1.cydsn\Export\ARM_GCC_Generic">
+        <Files Root="C:\Users\Matt\repos\BYU_Mars_Rover\arm_controller_v2\arm_controller_v2.1.cydsn">
           <File BuildType="BUILD" Toolchain="ARM GCC Generic">.\Export\ARM_GCC_Generic\CyComponentLibrary.a</File>
         </Files>
       </Folder>
-      <Folder BuildType="STRICT" Path="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\Export\ARM_MDK_Generic">
-        <Files Root="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn">
+      <Folder BuildType="STRICT" Path="C:\Users\Matt\repos\BYU_Mars_Rover\arm_controller_v2\arm_controller_v2.1.cydsn\Export\ARM_MDK_Generic">
+        <Files Root="C:\Users\Matt\repos\BYU_Mars_Rover\arm_controller_v2\arm_controller_v2.1.cydsn">
           <File BuildType="BUILD" Toolchain="ARM MDK Generic">.\Export\ARM_MDK_Generic\CyComponentLibrary.a</File>
         </Files>
       </Folder>
-      <Folder BuildType="STRICT" Path="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\Export\ARM_IAR_Generic">
-        <Files Root="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn">
+      <Folder BuildType="STRICT" Path="C:\Users\Matt\repos\BYU_Mars_Rover\arm_controller_v2\arm_controller_v2.1.cydsn\Export\ARM_IAR_Generic">
+        <Files Root="C:\Users\Matt\repos\BYU_Mars_Rover\arm_controller_v2\arm_controller_v2.1.cydsn">
           <File BuildType="BUILD" Toolchain="ARM IAR Generic">.\Export\ARM_IAR_Generic\CyComponentLibrary.a</File>
         </Files>
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\codegentemp">
-        <Files Root="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn" />
+        <Files Root="C:\Users\Matt\repos\BYU_Mars_Rover\arm_controller_v2\arm_controller_v2.1.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\ARM_GCC_441">
-        <Files Root="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn" />
+        <Files Root="C:\Users\Matt\repos\BYU_Mars_Rover\arm_controller_v2\arm_controller_v2.1.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\ARM_GCC_473">
-        <Files Root="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn" />
+        <Files Root="C:\Users\Matt\repos\BYU_Mars_Rover\arm_controller_v2\arm_controller_v2.1.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\DP8051_Keil_951">
-        <Files Root="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn" />
+        <Files Root="C:\Users\Matt\repos\BYU_Mars_Rover\arm_controller_v2\arm_controller_v2.1.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\DP8051">
-        <Files Root="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn" />
+        <Files Root="C:\Users\Matt\repos\BYU_Mars_Rover\arm_controller_v2\arm_controller_v2.1.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM0">
-        <Files Root="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn" />
+        <Files Root="C:\Users\Matt\repos\BYU_Mars_Rover\arm_controller_v2\arm_controller_v2.1.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM3">
-        <Files Root="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn" />
+        <Files Root="C:\Users\Matt\repos\BYU_Mars_Rover\arm_controller_v2\arm_controller_v2.1.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\Generated_Source\PSoC3">
-        <Files Root="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn" />
+        <Files Root="C:\Users\Matt\repos\BYU_Mars_Rover\arm_controller_v2\arm_controller_v2.1.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\Generated_Source\PSoC5">
-        <Files Root="C:\Users\Samuel\Documents\GitHub\BYU-MarsRover\Arm\arm_controller_v2\arm_controller_v2.1.cydsn" />
+        <Files Root="C:\Users\Matt\repos\BYU_Mars_Rover\arm_controller_v2\arm_controller_v2.1.cydsn" />
       </Folder>
     </Folders>
   </Project>

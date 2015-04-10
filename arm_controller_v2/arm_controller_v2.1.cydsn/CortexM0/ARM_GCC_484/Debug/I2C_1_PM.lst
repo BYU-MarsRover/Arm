@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cco6nsgB.s 			page 1
+ARM GAS  C:\Users\Matt\AppData\Local\Temp\ccAkDwYd.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cco6nsgB.s 			page 1
   23:.\Generated_Source\PSoC4/I2C_1_PM.c **** #endif /* (I2C_1_SCB_MODE_I2C_INC) */
   24:.\Generated_Source\PSoC4/I2C_1_PM.c **** 
   25:.\Generated_Source\PSoC4/I2C_1_PM.c **** #if(I2C_1_SCB_MODE_EZI2C_INC)
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cco6nsgB.s 			page 2
+ARM GAS  C:\Users\Matt\AppData\Local\Temp\ccAkDwYd.s 			page 2
 
 
   26:.\Generated_Source\PSoC4/I2C_1_PM.c ****     #include "I2C_1_EZI2C_PVT.h"
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cco6nsgB.s 			page 1
   72:.\Generated_Source\PSoC4/I2C_1_PM.c ****     {
   73:.\Generated_Source\PSoC4/I2C_1_PM.c ****         if(I2C_1_SCB_MODE_I2C_RUNTM_CFG)
   74:.\Generated_Source\PSoC4/I2C_1_PM.c ****         {
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cco6nsgB.s 			page 3
+ARM GAS  C:\Users\Matt\AppData\Local\Temp\ccAkDwYd.s 			page 3
 
 
   75:.\Generated_Source\PSoC4/I2C_1_PM.c ****             I2C_1_I2CSaveConfig();
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cco6nsgB.s 			page 1
   47 000e 064B     		ldr	r3, .L3+4
   48 0010 1A70     		strb	r2, [r3]
  123:.\Generated_Source\PSoC4/I2C_1_PM.c **** 
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cco6nsgB.s 			page 4
+ARM GAS  C:\Users\Matt\AppData\Local\Temp\ccAkDwYd.s 			page 4
 
 
  124:.\Generated_Source\PSoC4/I2C_1_PM.c ****         if(0u != I2C_1_backup.enableState)
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cco6nsgB.s 			page 1
  150:.\Generated_Source\PSoC4/I2C_1_PM.c **** *
  151:.\Generated_Source\PSoC4/I2C_1_PM.c **** *******************************************************************************/
  152:.\Generated_Source\PSoC4/I2C_1_PM.c **** void I2C_1_Wakeup(void)
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cco6nsgB.s 			page 5
+ARM GAS  C:\Users\Matt\AppData\Local\Temp\ccAkDwYd.s 			page 5
 
 
  153:.\Generated_Source\PSoC4/I2C_1_PM.c **** {
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cco6nsgB.s 			page 1
  199:.\Generated_Source\PSoC4/I2C_1_PM.c **** 
  200:.\Generated_Source\PSoC4/I2C_1_PM.c ****     #elif (I2C_1_SCB_MODE_UART_CONST_CFG && I2C_1_UART_WAKE_ENABLE_CONST)
  201:.\Generated_Source\PSoC4/I2C_1_PM.c ****         I2C_1_UartRestoreConfig();
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cco6nsgB.s 			page 6
+ARM GAS  C:\Users\Matt\AppData\Local\Temp\ccAkDwYd.s 			page 6
 
 
  202:.\Generated_Source\PSoC4/I2C_1_PM.c **** 
@@ -343,36 +343,36 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cco6nsgB.s 			page 1
  112 0006 00000000 		.4byte	.Ldebug_abbrev0
  113 000a 04       		.byte	0x4
  114 000b 01       		.uleb128 0x1
- 115 000c 98000000 		.4byte	.LASF19
+ 115 000c E7000000 		.4byte	.LASF19
  116 0010 01       		.byte	0x1
- 117 0011 1F010000 		.4byte	.LASF20
- 118 0015 51010000 		.4byte	.LASF21
+ 117 0011 6E010000 		.4byte	.LASF20
+ 118 0015 98000000 		.4byte	.LASF21
  119 0019 00000000 		.4byte	.Ldebug_ranges0+0
  120 001d 00000000 		.4byte	0
  121 0021 00000000 		.4byte	.Ldebug_line0
  122 0025 02       		.uleb128 0x2
  123 0026 01       		.byte	0x1
  124 0027 06       		.byte	0x6
- 125 0028 D0010000 		.4byte	.LASF0
+ 125 0028 C0010000 		.4byte	.LASF0
  126 002c 02       		.uleb128 0x2
  127 002d 01       		.byte	0x1
  128 002e 08       		.byte	0x8
  129 002f 2E000000 		.4byte	.LASF1
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cco6nsgB.s 			page 7
+ARM GAS  C:\Users\Matt\AppData\Local\Temp\ccAkDwYd.s 			page 7
 
 
  130 0033 02       		.uleb128 0x2
  131 0034 02       		.byte	0x2
  132 0035 05       		.byte	0x5
- 133 0036 EF010000 		.4byte	.LASF2
+ 133 0036 DF010000 		.4byte	.LASF2
  134 003a 02       		.uleb128 0x2
  135 003b 02       		.byte	0x2
  136 003c 07       		.byte	0x7
- 137 003d BD010000 		.4byte	.LASF3
+ 137 003d AD010000 		.4byte	.LASF3
  138 0041 02       		.uleb128 0x2
  139 0042 04       		.byte	0x4
  140 0043 05       		.byte	0x5
- 141 0044 48010000 		.4byte	.LASF4
+ 141 0044 97010000 		.4byte	.LASF4
  142 0048 02       		.uleb128 0x2
  143 0049 04       		.byte	0x4
  144 004a 07       		.byte	0x7
@@ -406,19 +406,19 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cco6nsgB.s 			page 1
  172 0081 02       		.uleb128 0x2
  173 0082 04       		.byte	0x4
  174 0083 04       		.byte	0x4
- 175 0084 E9010000 		.4byte	.LASF11
+ 175 0084 D9010000 		.4byte	.LASF11
  176 0088 02       		.uleb128 0x2
  177 0089 08       		.byte	0x8
  178 008a 04       		.byte	0x4
- 179 008b B0010000 		.4byte	.LASF12
+ 179 008b A0010000 		.4byte	.LASF12
  180 008f 02       		.uleb128 0x2
  181 0090 01       		.byte	0x1
  182 0091 08       		.byte	0x8
- 183 0092 43010000 		.4byte	.LASF13
+ 183 0092 92010000 		.4byte	.LASF13
  184 0096 05       		.uleb128 0x5
- 185 0097 B7010000 		.4byte	.LASF14
+ 185 0097 A7010000 		.4byte	.LASF14
  186 009b 02       		.byte	0x2
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cco6nsgB.s 			page 8
+ARM GAS  C:\Users\Matt\AppData\Local\Temp\ccAkDwYd.s 			page 8
 
 
  187 009c 4D01     		.2byte	0x14d
@@ -428,7 +428,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cco6nsgB.s 			page 1
  191 00a7 02       		.uleb128 0x2
  192 00a8 04       		.byte	0x4
  193 00a9 07       		.byte	0x7
- 194 00aa F9010000 		.4byte	.LASF15
+ 194 00aa E9010000 		.4byte	.LASF15
  195 00ae 07       		.uleb128 0x7
  196 00af 01       		.byte	0x1
  197 00b0 03       		.byte	0x3
@@ -463,7 +463,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cco6nsgB.s 			page 1
  226 00ee 01       		.uleb128 0x1
  227 00ef 9C       		.byte	0x9c
  228 00f0 0A       		.uleb128 0xa
- 229 00f1 DC010000 		.4byte	.LASF23
+ 229 00f1 CC010000 		.4byte	.LASF23
  230 00f5 01       		.byte	0x1
  231 00f6 2C       		.byte	0x2c
  232 00f7 C3000000 		.4byte	0xc3
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cco6nsgB.s 			page 1
  241 0002 01       		.byte	0x1
  242 0003 25       		.uleb128 0x25
  243 0004 0E       		.uleb128 0xe
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cco6nsgB.s 			page 9
+ARM GAS  C:\Users\Matt\AppData\Local\Temp\ccAkDwYd.s 			page 9
 
 
  244 0005 13       		.uleb128 0x13
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cco6nsgB.s 			page 1
  298 003b 3A       		.uleb128 0x3a
  299 003c 0B       		.uleb128 0xb
  300 003d 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cco6nsgB.s 			page 10
+ARM GAS  C:\Users\Matt\AppData\Local\Temp\ccAkDwYd.s 			page 10
 
 
  301 003e 05       		.uleb128 0x5
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cco6nsgB.s 			page 1
  355 0074 01       		.uleb128 0x1
  356 0075 12       		.uleb128 0x12
  357 0076 06       		.uleb128 0x6
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cco6nsgB.s 			page 11
+ARM GAS  C:\Users\Matt\AppData\Local\Temp\ccAkDwYd.s 			page 11
 
 
  358 0077 40       		.uleb128 0x40
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cco6nsgB.s 			page 1
  408 0000 6C6F6E67 		.ascii	"long long int\000"
  408      206C6F6E 
  408      6720696E 
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cco6nsgB.s 			page 12
+ARM GAS  C:\Users\Matt\AppData\Local\Temp\ccAkDwYd.s 			page 12
 
 
  408      7400
@@ -709,83 +709,82 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cco6nsgB.s 			page 1
  428      6720756E 
  428      7369676E 
  428      65642069 
- 429              	.LASF19:
- 430 0098 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
- 430      4320342E 
- 430      382E3420 
- 430      32303134 
- 430      30353236 
- 431 00cb 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m0 -mthumb -g -O"
- 431      20726576 
- 431      6973696F 
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cco6nsgB.s 			page 13
+ 429              	.LASF21:
+ 430 0098 433A5C55 		.ascii	"C:\\Users\\Matt\\repos\\BYU_Mars_Rover\\arm_control"
+ 430      73657273 
+ 430      5C4D6174 
+ 430      745C7265 
+ 430      706F735C 
+ 431 00c6 6C65725F 		.ascii	"ler_v2\\arm_controller_v2.1.cydsn\000"
+ 431      76325C61 
+ 431      726D5F63 
+ARM GAS  C:\Users\Matt\AppData\Local\Temp\ccAkDwYd.s 			page 13
 
 
- 431      6E203231 
- 431      31333538 
- 432 00fe 30202D73 		.ascii	"0 -std=gnu99 -ffunction-sections\000"
- 432      74643D67 
- 432      6E753939 
- 432      202D6666 
- 432      756E6374 
- 433              	.LASF20:
- 434 011f 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\I2C_1_PM.c\000"
- 434      6E657261 
- 434      7465645F 
- 434      536F7572 
- 434      63655C50 
- 435              	.LASF13:
- 436 0143 63686172 		.ascii	"char\000"
- 436      00
- 437              	.LASF4:
- 438 0148 6C6F6E67 		.ascii	"long int\000"
- 438      20696E74 
- 438      00
- 439              	.LASF21:
- 440 0151 433A5C55 		.ascii	"C:\\Users\\Samuel\\Documents\\GitHub\\BYU-MarsRover"
- 440      73657273 
- 440      5C53616D 
- 440      75656C5C 
- 440      446F6375 
- 441 017f 5C41726D 		.ascii	"\\Arm\\arm_controller_v2\\arm_controller_v2.1.cydsn"
- 441      5C61726D 
- 441      5F636F6E 
- 441      74726F6C 
- 441      6C65725F 
- 442 01af 00       		.ascii	"\000"
- 443              	.LASF12:
- 444 01b0 646F7562 		.ascii	"double\000"
- 444      6C6500
- 445              	.LASF14:
- 446 01b7 72656733 		.ascii	"reg32\000"
- 446      3200
- 447              	.LASF3:
- 448 01bd 73686F72 		.ascii	"short unsigned int\000"
- 448      7420756E 
- 448      7369676E 
- 448      65642069 
- 448      6E7400
- 449              	.LASF0:
- 450 01d0 7369676E 		.ascii	"signed char\000"
- 450      65642063 
- 450      68617200 
- 451              	.LASF23:
- 452 01dc 4932435F 		.ascii	"I2C_1_backup\000"
- 452      315F6261 
- 452      636B7570 
- 452      00
- 453              	.LASF11:
- 454 01e9 666C6F61 		.ascii	"float\000"
- 454      7400
- 455              	.LASF2:
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cco6nsgB.s 			page 14
+ 431      6F6E7472 
+ 431      6F6C6C65 
+ 432              	.LASF19:
+ 433 00e7 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
+ 433      4320342E 
+ 433      382E3420 
+ 433      32303134 
+ 433      30353236 
+ 434 011a 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m0 -mthumb -g -O"
+ 434      20726576 
+ 434      6973696F 
+ 434      6E203231 
+ 434      31333538 
+ 435 014d 30202D73 		.ascii	"0 -std=gnu99 -ffunction-sections\000"
+ 435      74643D67 
+ 435      6E753939 
+ 435      202D6666 
+ 435      756E6374 
+ 436              	.LASF20:
+ 437 016e 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\I2C_1_PM.c\000"
+ 437      6E657261 
+ 437      7465645F 
+ 437      536F7572 
+ 437      63655C50 
+ 438              	.LASF13:
+ 439 0192 63686172 		.ascii	"char\000"
+ 439      00
+ 440              	.LASF4:
+ 441 0197 6C6F6E67 		.ascii	"long int\000"
+ 441      20696E74 
+ 441      00
+ 442              	.LASF12:
+ 443 01a0 646F7562 		.ascii	"double\000"
+ 443      6C6500
+ 444              	.LASF14:
+ 445 01a7 72656733 		.ascii	"reg32\000"
+ 445      3200
+ 446              	.LASF3:
+ 447 01ad 73686F72 		.ascii	"short unsigned int\000"
+ 447      7420756E 
+ 447      7369676E 
+ 447      65642069 
+ 447      6E7400
+ 448              	.LASF0:
+ 449 01c0 7369676E 		.ascii	"signed char\000"
+ 449      65642063 
+ 449      68617200 
+ 450              	.LASF23:
+ 451 01cc 4932435F 		.ascii	"I2C_1_backup\000"
+ 451      315F6261 
+ 451      636B7570 
+ 451      00
+ 452              	.LASF11:
+ 453 01d9 666C6F61 		.ascii	"float\000"
+ 453      7400
+ 454              	.LASF2:
+ 455 01df 73686F72 		.ascii	"short int\000"
+ARM GAS  C:\Users\Matt\AppData\Local\Temp\ccAkDwYd.s 			page 14
 
 
- 456 01ef 73686F72 		.ascii	"short int\000"
- 456      7420696E 
- 456      7400
- 457              	.LASF15:
- 458 01f9 73697A65 		.ascii	"sizetype\000"
- 458      74797065 
- 458      00
- 459              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.4 20140526 (release) [ARM/embedded-4_8-br
+ 455      7420696E 
+ 455      7400
+ 456              	.LASF15:
+ 457 01e9 73697A65 		.ascii	"sizetype\000"
+ 457      74797065 
+ 457      00
+ 458              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.4 20140526 (release) [ARM/embedded-4_8-br

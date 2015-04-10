@@ -2165,7 +2165,7 @@
         <register>
           <name>EFFECTOR_PWM_Control_Reg</name>
           <description>UDB Control Register - Assigned Control Register Value</description>
-          <addressOffset>0x400F0072</addressOffset>
+          <addressOffset>0x400F0070</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -2197,7 +2197,7 @@
         <register>
           <name>EFFECTOR_PWM_STATUS_MASK</name>
           <description>UDB Status bits Interrupt Mask Enable Register</description>
-          <addressOffset>0x400F0082</addressOffset>
+          <addressOffset>0x400F0080</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -2493,7 +2493,7 @@
       </registers>
     </peripheral>
     <peripheral>
-      <name>UART_TEST</name>
+      <name>I2C_1</name>
       <description>Serial Communication Block</description>
       <baseAddress>0x0</baseAddress>
       <addressBlock>

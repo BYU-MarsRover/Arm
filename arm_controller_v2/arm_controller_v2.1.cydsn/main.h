@@ -74,6 +74,7 @@
     uint8 SHOULDER_FLAG = 0;
     uint8 BA_FLAG = 0;
     uint8 EFFECTOR_FLAG = 0;
+    uint8 PH_FLAG = 0;
     
     //error variables to send back to base station
     uint16 dropped_packets = 0;

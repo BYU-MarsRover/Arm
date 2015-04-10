@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccfW6ck0.s 			page 1
+ARM GAS  C:\Users\Matt\AppData\Local\Temp\cckeRfZv.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccfW6ck0.s 			page 1
   30:.\Generated_Source\PSoC4/MISO_1.c **** ********************************************************************************
   31:.\Generated_Source\PSoC4/MISO_1.c **** *
   32:.\Generated_Source\PSoC4/MISO_1.c **** * Summary:
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccfW6ck0.s 			page 2
+ARM GAS  C:\Users\Matt\AppData\Local\Temp\cckeRfZv.s 			page 2
 
 
   33:.\Generated_Source\PSoC4/MISO_1.c **** *  Assign a new value to the digital port's data output register.  
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccfW6ck0.s 			page 1
   66 003c 0F32     		add	r2, r2, #15
   67 003e 1278     		ldrb	r2, [r2]
   68 0040 1A60     		str	r2, [r3]
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccfW6ck0.s 			page 3
+ARM GAS  C:\Users\Matt\AppData\Local\Temp\cckeRfZv.s 			page 3
 
 
   47:.\Generated_Source\PSoC4/MISO_1.c **** }
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccfW6ck0.s 			page 1
   95 0002 82B0     		sub	sp, sp, #8
   96              		.cfi_def_cfa_offset 16
   97 0004 00AF     		add	r7, sp, #0
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccfW6ck0.s 			page 4
+ARM GAS  C:\Users\Matt\AppData\Local\Temp\cckeRfZv.s 			page 4
 
 
   98              		.cfi_def_cfa_register 7
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccfW6ck0.s 			page 1
   93:.\Generated_Source\PSoC4/MISO_1.c **** * Note:
   94:.\Generated_Source\PSoC4/MISO_1.c **** *  Macro MISO_1_ReadPS calls this function. 
   95:.\Generated_Source\PSoC4/MISO_1.c **** *  
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccfW6ck0.s 			page 5
+ARM GAS  C:\Users\Matt\AppData\Local\Temp\cckeRfZv.s 			page 5
 
 
   96:.\Generated_Source\PSoC4/MISO_1.c **** *******************************************************************************/
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccfW6ck0.s 			page 1
  115:.\Generated_Source\PSoC4/MISO_1.c **** *  
  116:.\Generated_Source\PSoC4/MISO_1.c **** *******************************************************************************/
  117:.\Generated_Source\PSoC4/MISO_1.c **** uint8 MISO_1_ReadDataReg(void) 
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccfW6ck0.s 			page 6
+ARM GAS  C:\Users\Matt\AppData\Local\Temp\cckeRfZv.s 			page 6
 
 
  118:.\Generated_Source\PSoC4/MISO_1.c **** {
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccfW6ck0.s 			page 1
  137:.\Generated_Source\PSoC4/MISO_1.c ****     * Return: 
  138:.\Generated_Source\PSoC4/MISO_1.c ****     *  Returns the value of the interrupt status register
  139:.\Generated_Source\PSoC4/MISO_1.c ****     *  
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccfW6ck0.s 			page 7
+ARM GAS  C:\Users\Matt\AppData\Local\Temp\cckeRfZv.s 			page 7
 
 
  140:.\Generated_Source\PSoC4/MISO_1.c ****     *******************************************************************************/
@@ -418,41 +418,41 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccfW6ck0.s 			page 1
  251 0004 0400     		.2byte	0x4
  252 0006 00000000 		.4byte	.Ldebug_abbrev0
  253 000a 04       		.byte	0x4
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccfW6ck0.s 			page 8
+ARM GAS  C:\Users\Matt\AppData\Local\Temp\cckeRfZv.s 			page 8
 
 
  254 000b 01       		.uleb128 0x1
- 255 000c 67010000 		.4byte	.LASF24
+ 255 000c 57010000 		.4byte	.LASF24
  256 0010 01       		.byte	0x1
  257 0011 4D000000 		.4byte	.LASF25
- 258 0015 DF000000 		.4byte	.LASF26
+ 258 0015 82000000 		.4byte	.LASF26
  259 0019 00000000 		.4byte	.Ldebug_ranges0+0
  260 001d 00000000 		.4byte	0
  261 0021 00000000 		.4byte	.Ldebug_line0
  262 0025 02       		.uleb128 0x2
  263 0026 01       		.byte	0x1
  264 0027 06       		.byte	0x6
- 265 0028 19020000 		.4byte	.LASF0
+ 265 0028 09020000 		.4byte	.LASF0
  266 002c 02       		.uleb128 0x2
  267 002d 01       		.byte	0x1
  268 002e 08       		.byte	0x8
- 269 002f 82000000 		.4byte	.LASF1
+ 269 002f D1000000 		.4byte	.LASF1
  270 0033 02       		.uleb128 0x2
  271 0034 02       		.byte	0x2
  272 0035 05       		.byte	0x5
- 273 0036 00020000 		.4byte	.LASF2
+ 273 0036 F0010000 		.4byte	.LASF2
  274 003a 02       		.uleb128 0x2
  275 003b 02       		.byte	0x2
  276 003c 07       		.byte	0x7
- 277 003d A8000000 		.4byte	.LASF3
+ 277 003d F7000000 		.4byte	.LASF3
  278 0041 02       		.uleb128 0x2
  279 0042 04       		.byte	0x4
  280 0043 05       		.byte	0x5
- 281 0044 10020000 		.4byte	.LASF4
+ 281 0044 00020000 		.4byte	.LASF4
  282 0048 02       		.uleb128 0x2
  283 0049 04       		.byte	0x4
  284 004a 07       		.byte	0x7
- 285 004b 96000000 		.4byte	.LASF5
+ 285 004b E5000000 		.4byte	.LASF5
  286 004f 02       		.uleb128 0x2
  287 0050 08       		.byte	0x8
  288 0051 05       		.byte	0x5
@@ -460,7 +460,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccfW6ck0.s 			page 1
  290 0056 02       		.uleb128 0x2
  291 0057 08       		.byte	0x8
  292 0058 07       		.byte	0x7
- 293 0059 4B010000 		.4byte	.LASF7
+ 293 0059 3B010000 		.4byte	.LASF7
  294 005d 03       		.uleb128 0x3
  295 005e 04       		.byte	0x4
  296 005f 05       		.byte	0x5
@@ -468,17 +468,17 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccfW6ck0.s 			page 1
  298 0064 02       		.uleb128 0x2
  299 0065 04       		.byte	0x4
  300 0066 07       		.byte	0x7
- 301 0067 3E010000 		.4byte	.LASF8
+ 301 0067 2E010000 		.4byte	.LASF8
  302 006b 04       		.uleb128 0x4
- 303 006c 0A020000 		.4byte	.LASF9
+ 303 006c FA010000 		.4byte	.LASF9
  304 0070 02       		.byte	0x2
  305 0071 A1       		.byte	0xa1
  306 0072 2C000000 		.4byte	0x2c
  307 0076 04       		.uleb128 0x4
- 308 0077 D8000000 		.4byte	.LASF10
+ 308 0077 27010000 		.4byte	.LASF10
  309 007b 02       		.byte	0x2
  310 007c A3       		.byte	0xa3
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccfW6ck0.s 			page 9
+ARM GAS  C:\Users\Matt\AppData\Local\Temp\cckeRfZv.s 			page 9
 
 
  311 007d 48000000 		.4byte	0x48
@@ -489,11 +489,11 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccfW6ck0.s 			page 1
  316 0088 02       		.uleb128 0x2
  317 0089 08       		.byte	0x8
  318 008a 04       		.byte	0x4
- 319 008b BB000000 		.4byte	.LASF12
+ 319 008b 0A010000 		.4byte	.LASF12
  320 008f 02       		.uleb128 0x2
  321 0090 01       		.byte	0x1
  322 0091 08       		.byte	0x8
- 323 0092 FB010000 		.4byte	.LASF13
+ 323 0092 EB010000 		.4byte	.LASF13
  324 0096 05       		.uleb128 0x5
  325 0097 0E000000 		.4byte	.LASF14
  326 009b 02       		.byte	0x2
@@ -519,7 +519,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccfW6ck0.s 			page 1
  346 00c8 91       		.byte	0x91
  347 00c9 6F       		.sleb128 -17
  348 00ca 09       		.uleb128 0x9
- 349 00cb 90000000 		.4byte	.LASF22
+ 349 00cb DF000000 		.4byte	.LASF22
  350 00cf 01       		.byte	0x1
  351 00d0 2C       		.byte	0x2c
  352 00d1 6B000000 		.4byte	0x6b
@@ -537,8 +537,8 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccfW6ck0.s 			page 1
  364 00e9 9C       		.byte	0x9c
  365 00ea FD000000 		.4byte	0xfd
  366 00ee 08       		.uleb128 0x8
- 367 00ef 62010000 		.4byte	.LASF18
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccfW6ck0.s 			page 10
+ 367 00ef 52010000 		.4byte	.LASF18
+ARM GAS  C:\Users\Matt\AppData\Local\Temp\cckeRfZv.s 			page 10
 
 
  368 00f3 01       		.byte	0x1
@@ -567,7 +567,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccfW6ck0.s 			page 1
  391 0125 01       		.uleb128 0x1
  392 0126 9C       		.byte	0x9c
  393 0127 0B       		.uleb128 0xb
- 394 0128 C2000000 		.4byte	.LASF21
+ 394 0128 11010000 		.4byte	.LASF21
  395 012c 01       		.byte	0x1
  396 012d 8D       		.byte	0x8d
  397 012e 6B000000 		.4byte	0x6b
@@ -576,7 +576,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccfW6ck0.s 			page 1
  400 013a 01       		.uleb128 0x1
  401 013b 9C       		.byte	0x9c
  402 013c 09       		.uleb128 0x9
- 403 013d EE010000 		.4byte	.LASF23
+ 403 013d DE010000 		.4byte	.LASF23
  404 0141 01       		.byte	0x1
  405 0142 8F       		.byte	0x8f
  406 0143 6B000000 		.4byte	0x6b
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccfW6ck0.s 			page 1
  422 0008 0E       		.uleb128 0xe
  423 0009 1B       		.uleb128 0x1b
  424 000a 0E       		.uleb128 0xe
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccfW6ck0.s 			page 11
+ARM GAS  C:\Users\Matt\AppData\Local\Temp\cckeRfZv.s 			page 11
 
 
  425 000b 55       		.uleb128 0x55
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccfW6ck0.s 			page 1
  479 0041 00       		.byte	0
  480 0042 00       		.byte	0
  481 0043 06       		.uleb128 0x6
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccfW6ck0.s 			page 12
+ARM GAS  C:\Users\Matt\AppData\Local\Temp\cckeRfZv.s 			page 12
 
 
  482 0044 35       		.uleb128 0x35
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccfW6ck0.s 			page 1
  536 007b 0B       		.uleb128 0xb
  537 007c 49       		.uleb128 0x49
  538 007d 13       		.uleb128 0x13
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccfW6ck0.s 			page 13
+ARM GAS  C:\Users\Matt\AppData\Local\Temp\cckeRfZv.s 			page 13
 
 
  539 007e 02       		.uleb128 0x2
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccfW6ck0.s 			page 1
  593 00b6 00       		.byte	0
  594              		.section	.debug_aranges,"",%progbits
  595 0000 3C000000 		.4byte	0x3c
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccfW6ck0.s 			page 14
+ARM GAS  C:\Users\Matt\AppData\Local\Temp\cckeRfZv.s 			page 14
 
 
  596 0004 0200     		.2byte	0x2
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccfW6ck0.s 			page 1
  638 0027 4D49534F 		.ascii	"MISO_1_SetDriveMode\000"
  638      5F315F53 
  638      65744472 
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccfW6ck0.s 			page 15
+ARM GAS  C:\Users\Matt\AppData\Local\Temp\cckeRfZv.s 			page 15
 
 
  638      6976654D 
@@ -864,107 +864,106 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccfW6ck0.s 			page 1
  647              	.LASF11:
  648 007c 666C6F61 		.ascii	"float\000"
  648      7400
- 649              	.LASF1:
- 650 0082 756E7369 		.ascii	"unsigned char\000"
- 650      676E6564 
- 650      20636861 
- 650      7200
- 651              	.LASF22:
- 652 0090 64725661 		.ascii	"drVal\000"
- 652      6C00
- 653              	.LASF5:
- 654 0096 6C6F6E67 		.ascii	"long unsigned int\000"
- 654      20756E73 
- 654      69676E65 
- 654      6420696E 
- 654      7400
- 655              	.LASF3:
- 656 00a8 73686F72 		.ascii	"short unsigned int\000"
- 656      7420756E 
- 656      7369676E 
- 656      65642069 
- 656      6E7400
- 657              	.LASF12:
- 658 00bb 646F7562 		.ascii	"double\000"
- 658      6C6500
- 659              	.LASF21:
- 660 00c2 4D49534F 		.ascii	"MISO_1_ClearInterrupt\000"
- 660      5F315F43 
- 660      6C656172 
- 660      496E7465 
- 660      72727570 
- 661              	.LASF10:
- 662 00d8 75696E74 		.ascii	"uint32\000"
- 662      333200
- 663              	.LASF26:
- 664 00df 433A5C55 		.ascii	"C:\\Users\\Samuel\\Documents\\GitHub\\BYU-MarsRover"
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccfW6ck0.s 			page 16
+ 649              	.LASF26:
+ 650 0082 433A5C55 		.ascii	"C:\\Users\\Matt\\repos\\BYU_Mars_Rover\\arm_control"
+ 650      73657273 
+ 650      5C4D6174 
+ 650      745C7265 
+ 650      706F735C 
+ 651 00b0 6C65725F 		.ascii	"ler_v2\\arm_controller_v2.1.cydsn\000"
+ 651      76325C61 
+ 651      726D5F63 
+ 651      6F6E7472 
+ 651      6F6C6C65 
+ 652              	.LASF1:
+ 653 00d1 756E7369 		.ascii	"unsigned char\000"
+ 653      676E6564 
+ 653      20636861 
+ 653      7200
+ 654              	.LASF22:
+ 655 00df 64725661 		.ascii	"drVal\000"
+ 655      6C00
+ 656              	.LASF5:
+ 657 00e5 6C6F6E67 		.ascii	"long unsigned int\000"
+ 657      20756E73 
+ 657      69676E65 
+ 657      6420696E 
+ 657      7400
+ 658              	.LASF3:
+ 659 00f7 73686F72 		.ascii	"short unsigned int\000"
+ 659      7420756E 
+ 659      7369676E 
+ 659      65642069 
+ 659      6E7400
+ 660              	.LASF12:
+ 661 010a 646F7562 		.ascii	"double\000"
+ 661      6C6500
+ARM GAS  C:\Users\Matt\AppData\Local\Temp\cckeRfZv.s 			page 16
 
 
- 664      73657273 
- 664      5C53616D 
- 664      75656C5C 
- 664      446F6375 
- 665 010d 5C41726D 		.ascii	"\\Arm\\arm_controller_v2\\arm_controller_v2.1.cydsn"
- 665      5C61726D 
- 665      5F636F6E 
- 665      74726F6C 
- 665      6C65725F 
- 666 013d 00       		.ascii	"\000"
- 667              	.LASF8:
- 668 013e 756E7369 		.ascii	"unsigned int\000"
- 668      676E6564 
- 668      20696E74 
- 668      00
- 669              	.LASF7:
- 670 014b 6C6F6E67 		.ascii	"long long unsigned int\000"
- 670      206C6F6E 
- 670      6720756E 
- 670      7369676E 
- 670      65642069 
- 671              	.LASF18:
- 672 0162 6D6F6465 		.ascii	"mode\000"
- 672      00
- 673              	.LASF24:
- 674 0167 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
- 674      4320342E 
- 674      382E3420 
- 674      32303134 
- 674      30353236 
- 675 019a 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m0 -mthumb -g -O"
- 675      20726576 
- 675      6973696F 
- 675      6E203231 
- 675      31333538 
- 676 01cd 30202D73 		.ascii	"0 -std=gnu99 -ffunction-sections\000"
- 676      74643D67 
- 676      6E753939 
- 676      202D6666 
- 676      756E6374 
- 677              	.LASF23:
- 678 01ee 6D61736B 		.ascii	"maskedStatus\000"
- 678      65645374 
- 678      61747573 
- 678      00
- 679              	.LASF13:
- 680 01fb 63686172 		.ascii	"char\000"
- 680      00
- 681              	.LASF2:
- 682 0200 73686F72 		.ascii	"short int\000"
- 682      7420696E 
- 682      7400
- 683              	.LASF9:
- 684 020a 75696E74 		.ascii	"uint8\000"
- 684      3800
- 685              	.LASF4:
- 686 0210 6C6F6E67 		.ascii	"long int\000"
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccfW6ck0.s 			page 17
+ 662              	.LASF21:
+ 663 0111 4D49534F 		.ascii	"MISO_1_ClearInterrupt\000"
+ 663      5F315F43 
+ 663      6C656172 
+ 663      496E7465 
+ 663      72727570 
+ 664              	.LASF10:
+ 665 0127 75696E74 		.ascii	"uint32\000"
+ 665      333200
+ 666              	.LASF8:
+ 667 012e 756E7369 		.ascii	"unsigned int\000"
+ 667      676E6564 
+ 667      20696E74 
+ 667      00
+ 668              	.LASF7:
+ 669 013b 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 669      206C6F6E 
+ 669      6720756E 
+ 669      7369676E 
+ 669      65642069 
+ 670              	.LASF18:
+ 671 0152 6D6F6465 		.ascii	"mode\000"
+ 671      00
+ 672              	.LASF24:
+ 673 0157 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
+ 673      4320342E 
+ 673      382E3420 
+ 673      32303134 
+ 673      30353236 
+ 674 018a 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m0 -mthumb -g -O"
+ 674      20726576 
+ 674      6973696F 
+ 674      6E203231 
+ 674      31333538 
+ 675 01bd 30202D73 		.ascii	"0 -std=gnu99 -ffunction-sections\000"
+ 675      74643D67 
+ 675      6E753939 
+ 675      202D6666 
+ 675      756E6374 
+ 676              	.LASF23:
+ 677 01de 6D61736B 		.ascii	"maskedStatus\000"
+ 677      65645374 
+ 677      61747573 
+ 677      00
+ 678              	.LASF13:
+ 679 01eb 63686172 		.ascii	"char\000"
+ 679      00
+ 680              	.LASF2:
+ 681 01f0 73686F72 		.ascii	"short int\000"
+ 681      7420696E 
+ 681      7400
+ 682              	.LASF9:
+ 683 01fa 75696E74 		.ascii	"uint8\000"
+ 683      3800
+ 684              	.LASF4:
+ 685 0200 6C6F6E67 		.ascii	"long int\000"
+ 685      20696E74 
+ARM GAS  C:\Users\Matt\AppData\Local\Temp\cckeRfZv.s 			page 17
 
 
- 686      20696E74 
- 686      00
- 687              	.LASF0:
- 688 0219 7369676E 		.ascii	"signed char\000"
- 688      65642063 
- 688      68617200 
- 689              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.4 20140526 (release) [ARM/embedded-4_8-br
+ 685      00
+ 686              	.LASF0:
+ 687 0209 7369676E 		.ascii	"signed char\000"
+ 687      65642063 
+ 687      68617200 
+ 688              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.4 20140526 (release) [ARM/embedded-4_8-br

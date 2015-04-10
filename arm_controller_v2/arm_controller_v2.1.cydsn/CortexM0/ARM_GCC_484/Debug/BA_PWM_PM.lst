@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccQ904qP.s 			page 1
+ARM GAS  C:\Users\Matt\AppData\Local\Temp\cchAeUBb.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccQ904qP.s 			page 1
   26:.\Generated_Source\PSoC4/BA_PWM_PM.c **** ********************************************************************************
   27:.\Generated_Source\PSoC4/BA_PWM_PM.c **** *
   28:.\Generated_Source\PSoC4/BA_PWM_PM.c **** * Summary:
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccQ904qP.s 			page 2
+ARM GAS  C:\Users\Matt\AppData\Local\Temp\cchAeUBb.s 			page 2
 
 
   29:.\Generated_Source\PSoC4/BA_PWM_PM.c **** *  All configuration registers are retention. Nothing to save here.
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccQ904qP.s 			page 1
   53              		.loc 1 59 0
   54              		.cfi_startproc
   55 0000 80B5     		push	{r7, lr}
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccQ904qP.s 			page 3
+ARM GAS  C:\Users\Matt\AppData\Local\Temp\cchAeUBb.s 			page 3
 
 
   56              		.cfi_def_cfa_offset 8
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccQ904qP.s 			page 1
   98              		.thumb_func
   99              		.type	BA_PWM_RestoreConfig, %function
  100              	BA_PWM_RestoreConfig:
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccQ904qP.s 			page 4
+ARM GAS  C:\Users\Matt\AppData\Local\Temp\cchAeUBb.s 			page 4
 
 
  101              	.LFB2:
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccQ904qP.s 			page 1
  102:.\Generated_Source\PSoC4/BA_PWM_PM.c **** *  None
  103:.\Generated_Source\PSoC4/BA_PWM_PM.c **** *
  104:.\Generated_Source\PSoC4/BA_PWM_PM.c **** * Return:
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccQ904qP.s 			page 5
+ARM GAS  C:\Users\Matt\AppData\Local\Temp\cchAeUBb.s 			page 5
 
 
  105:.\Generated_Source\PSoC4/BA_PWM_PM.c **** *  None
@@ -293,12 +293,12 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccQ904qP.s 			page 1
  162 0006 00000000 		.4byte	.Ldebug_abbrev0
  163 000a 04       		.byte	0x4
  164 000b 01       		.uleb128 0x1
- 165 000c 54010000 		.4byte	.LASF21
+ 165 000c 44010000 		.4byte	.LASF21
  166 0010 01       		.byte	0x1
- 167 0011 09020000 		.4byte	.LASF22
- 168 0015 B7000000 		.4byte	.LASF23
+ 167 0011 F9010000 		.4byte	.LASF22
+ 168 0015 87000000 		.4byte	.LASF23
  169 0019 00000000 		.4byte	.Ldebug_ranges0+0
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccQ904qP.s 			page 6
+ARM GAS  C:\Users\Matt\AppData\Local\Temp\cchAeUBb.s 			page 6
 
 
  170 001d 00000000 		.4byte	0
@@ -306,23 +306,23 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccQ904qP.s 			page 1
  172 0025 02       		.uleb128 0x2
  173 0026 01       		.byte	0x1
  174 0027 06       		.byte	0x6
- 175 0028 48010000 		.4byte	.LASF0
+ 175 0028 38010000 		.4byte	.LASF0
  176 002c 02       		.uleb128 0x2
  177 002d 01       		.byte	0x1
  178 002e 08       		.byte	0x8
- 179 002f 8D000000 		.4byte	.LASF1
+ 179 002f DC000000 		.4byte	.LASF1
  180 0033 02       		.uleb128 0x2
  181 0034 02       		.byte	0x2
  182 0035 05       		.byte	0x5
- 183 0036 E9010000 		.4byte	.LASF2
+ 183 0036 D9010000 		.4byte	.LASF2
  184 003a 02       		.uleb128 0x2
  185 003b 02       		.byte	0x2
  186 003c 07       		.byte	0x7
- 187 003d 35010000 		.4byte	.LASF3
+ 187 003d 25010000 		.4byte	.LASF3
  188 0041 02       		.uleb128 0x2
  189 0042 04       		.byte	0x4
  190 0043 05       		.byte	0x5
- 191 0044 AE000000 		.4byte	.LASF4
+ 191 0044 FD000000 		.4byte	.LASF4
  192 0048 02       		.uleb128 0x2
  193 0049 04       		.byte	0x4
  194 004a 07       		.byte	0x7
@@ -356,20 +356,20 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccQ904qP.s 			page 1
  222 0081 02       		.uleb128 0x2
  223 0082 04       		.byte	0x4
  224 0083 04       		.byte	0x4
- 225 0084 87000000 		.4byte	.LASF11
+ 225 0084 D6000000 		.4byte	.LASF11
  226 0088 02       		.uleb128 0x2
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccQ904qP.s 			page 7
+ARM GAS  C:\Users\Matt\AppData\Local\Temp\cchAeUBb.s 			page 7
 
 
  227 0089 08       		.byte	0x8
  228 008a 04       		.byte	0x4
- 229 008b 16010000 		.4byte	.LASF12
+ 229 008b 06010000 		.4byte	.LASF12
  230 008f 02       		.uleb128 0x2
  231 0090 01       		.byte	0x1
  232 0091 08       		.byte	0x8
- 233 0092 9B000000 		.4byte	.LASF13
+ 233 0092 EA000000 		.4byte	.LASF13
  234 0096 05       		.uleb128 0x5
- 235 0097 2F010000 		.4byte	.LASF14
+ 235 0097 1F010000 		.4byte	.LASF14
  236 009b 02       		.byte	0x2
  237 009c 4D01     		.2byte	0x14d
  238 009e A2000000 		.4byte	0xa2
@@ -378,7 +378,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccQ904qP.s 			page 1
  241 00a7 02       		.uleb128 0x2
  242 00a8 04       		.byte	0x4
  243 00a9 07       		.byte	0x7
- 244 00aa 00020000 		.4byte	.LASF15
+ 244 00aa F0010000 		.4byte	.LASF15
  245 00ae 07       		.uleb128 0x7
  246 00af 01       		.byte	0x1
  247 00b0 03       		.byte	0x3
@@ -397,7 +397,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccQ904qP.s 			page 1
  260 00c9 24       		.byte	0x24
  261 00ca AE000000 		.4byte	0xae
  262 00ce 09       		.uleb128 0x9
- 263 00cf 1D010000 		.4byte	.LASF17
+ 263 00cf 0D010000 		.4byte	.LASF17
  264 00d3 01       		.byte	0x1
  265 00d4 26       		.byte	0x26
  266 00d5 00000000 		.4byte	.LFB0
@@ -405,7 +405,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccQ904qP.s 			page 1
  268 00dd 01       		.uleb128 0x1
  269 00de 9C       		.byte	0x9c
  270 00df 0A       		.uleb128 0xa
- 271 00e0 F3010000 		.4byte	.LASF18
+ 271 00e0 E3010000 		.4byte	.LASF18
  272 00e4 01       		.byte	0x1
  273 00e5 3A       		.byte	0x3a
  274 00e6 00000000 		.4byte	.LFB1
@@ -418,13 +418,13 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccQ904qP.s 			page 1
  281 00f6 58       		.byte	0x58
  282 00f7 00000000 		.4byte	.LFB2
  283 00fb 08000000 		.4byte	.LFE2-.LFB2
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccQ904qP.s 			page 8
+ARM GAS  C:\Users\Matt\AppData\Local\Temp\cchAeUBb.s 			page 8
 
 
  284 00ff 01       		.uleb128 0x1
  285 0100 9C       		.byte	0x9c
  286 0101 0A       		.uleb128 0xa
- 287 0102 DB010000 		.4byte	.LASF20
+ 287 0102 CB010000 		.4byte	.LASF20
  288 0106 01       		.byte	0x1
  289 0107 6C       		.byte	0x6c
  290 0108 00000000 		.4byte	.LFB3
@@ -432,7 +432,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccQ904qP.s 			page 1
  292 0110 01       		.uleb128 0x1
  293 0111 9C       		.byte	0x9c
  294 0112 0B       		.uleb128 0xb
- 295 0113 A0000000 		.4byte	.LASF25
+ 295 0113 EF000000 		.4byte	.LASF25
  296 0117 01       		.byte	0x1
  297 0118 15       		.byte	0x15
  298 0119 C3000000 		.4byte	0xc3
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccQ904qP.s 			page 1
  338 0021 0B       		.uleb128 0xb
  339 0022 0B       		.uleb128 0xb
  340 0023 3E       		.uleb128 0x3e
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccQ904qP.s 			page 9
+ARM GAS  C:\Users\Matt\AppData\Local\Temp\cchAeUBb.s 			page 9
 
 
  341 0024 0B       		.uleb128 0xb
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccQ904qP.s 			page 1
  395 005a 03       		.uleb128 0x3
  396 005b 0E       		.uleb128 0xe
  397 005c 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccQ904qP.s 			page 10
+ARM GAS  C:\Users\Matt\AppData\Local\Temp\cchAeUBb.s 			page 10
 
 
  398 005d 0B       		.uleb128 0xb
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccQ904qP.s 			page 1
  452 0095 00       		.byte	0
  453 0096 0B       		.uleb128 0xb
  454 0097 34       		.uleb128 0x34
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccQ904qP.s 			page 11
+ARM GAS  C:\Users\Matt\AppData\Local\Temp\cchAeUBb.s 			page 11
 
 
  455 0098 00       		.byte	0
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccQ904qP.s 			page 1
  503      6720696E 
  503      7400
  504              	.LASF10:
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccQ904qP.s 			page 12
+ARM GAS  C:\Users\Matt\AppData\Local\Temp\cchAeUBb.s 			page 12
 
 
  505 000e 75696E74 		.ascii	"uint32\000"
@@ -699,104 +699,103 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccQ904qP.s 			page 1
  519      41434B55 
  519      505F5354 
  519      52554354 
- 520              	.LASF11:
- 521 0087 666C6F61 		.ascii	"float\000"
- 521      7400
- 522              	.LASF1:
- 523 008d 756E7369 		.ascii	"unsigned char\000"
- 523      676E6564 
- 523      20636861 
- 523      7200
- 524              	.LASF13:
- 525 009b 63686172 		.ascii	"char\000"
- 525      00
- 526              	.LASF25:
- 527 00a0 42415F50 		.ascii	"BA_PWM_backup\000"
- 527      574D5F62 
- 527      61636B75 
- 527      7000
- 528              	.LASF4:
- 529 00ae 6C6F6E67 		.ascii	"long int\000"
- 529      20696E74 
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccQ904qP.s 			page 13
+ 520              	.LASF23:
+ 521 0087 433A5C55 		.ascii	"C:\\Users\\Matt\\repos\\BYU_Mars_Rover\\arm_control"
+ 521      73657273 
+ 521      5C4D6174 
+ 521      745C7265 
+ 521      706F735C 
+ 522 00b5 6C65725F 		.ascii	"ler_v2\\arm_controller_v2.1.cydsn\000"
+ 522      76325C61 
+ 522      726D5F63 
+ 522      6F6E7472 
+ 522      6F6C6C65 
+ 523              	.LASF11:
+ 524 00d6 666C6F61 		.ascii	"float\000"
+ 524      7400
+ 525              	.LASF1:
+ 526 00dc 756E7369 		.ascii	"unsigned char\000"
+ 526      676E6564 
+ 526      20636861 
+ 526      7200
+ARM GAS  C:\Users\Matt\AppData\Local\Temp\cchAeUBb.s 			page 13
 
 
- 529      00
- 530              	.LASF23:
- 531 00b7 433A5C55 		.ascii	"C:\\Users\\Samuel\\Documents\\GitHub\\BYU-MarsRover"
- 531      73657273 
- 531      5C53616D 
- 531      75656C5C 
- 531      446F6375 
- 532 00e5 5C41726D 		.ascii	"\\Arm\\arm_controller_v2\\arm_controller_v2.1.cydsn"
- 532      5C61726D 
- 532      5F636F6E 
- 532      74726F6C 
- 532      6C65725F 
- 533 0115 00       		.ascii	"\000"
- 534              	.LASF12:
- 535 0116 646F7562 		.ascii	"double\000"
- 535      6C6500
- 536              	.LASF17:
- 537 011d 42415F50 		.ascii	"BA_PWM_SaveConfig\000"
- 537      574D5F53 
- 537      61766543 
- 537      6F6E6669 
- 537      6700
- 538              	.LASF14:
- 539 012f 72656733 		.ascii	"reg32\000"
- 539      3200
- 540              	.LASF3:
- 541 0135 73686F72 		.ascii	"short unsigned int\000"
- 541      7420756E 
- 541      7369676E 
- 541      65642069 
- 541      6E7400
- 542              	.LASF0:
- 543 0148 7369676E 		.ascii	"signed char\000"
- 543      65642063 
- 543      68617200 
- 544              	.LASF21:
- 545 0154 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
- 545      4320342E 
- 545      382E3420 
- 545      32303134 
- 545      30353236 
- 546 0187 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m0 -mthumb -g -O"
- 546      20726576 
- 546      6973696F 
- 546      6E203231 
- 546      31333538 
- 547 01ba 30202D73 		.ascii	"0 -std=gnu99 -ffunction-sections\000"
- 547      74643D67 
- 547      6E753939 
- 547      202D6666 
- 547      756E6374 
- 548              	.LASF20:
- 549 01db 42415F50 		.ascii	"BA_PWM_Wakeup\000"
- 549      574D5F57 
- 549      616B6575 
- 549      7000
- 550              	.LASF2:
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccQ904qP.s 			page 14
+ 527              	.LASF13:
+ 528 00ea 63686172 		.ascii	"char\000"
+ 528      00
+ 529              	.LASF25:
+ 530 00ef 42415F50 		.ascii	"BA_PWM_backup\000"
+ 530      574D5F62 
+ 530      61636B75 
+ 530      7000
+ 531              	.LASF4:
+ 532 00fd 6C6F6E67 		.ascii	"long int\000"
+ 532      20696E74 
+ 532      00
+ 533              	.LASF12:
+ 534 0106 646F7562 		.ascii	"double\000"
+ 534      6C6500
+ 535              	.LASF17:
+ 536 010d 42415F50 		.ascii	"BA_PWM_SaveConfig\000"
+ 536      574D5F53 
+ 536      61766543 
+ 536      6F6E6669 
+ 536      6700
+ 537              	.LASF14:
+ 538 011f 72656733 		.ascii	"reg32\000"
+ 538      3200
+ 539              	.LASF3:
+ 540 0125 73686F72 		.ascii	"short unsigned int\000"
+ 540      7420756E 
+ 540      7369676E 
+ 540      65642069 
+ 540      6E7400
+ 541              	.LASF0:
+ 542 0138 7369676E 		.ascii	"signed char\000"
+ 542      65642063 
+ 542      68617200 
+ 543              	.LASF21:
+ 544 0144 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
+ 544      4320342E 
+ 544      382E3420 
+ 544      32303134 
+ 544      30353236 
+ 545 0177 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m0 -mthumb -g -O"
+ 545      20726576 
+ 545      6973696F 
+ 545      6E203231 
+ 545      31333538 
+ 546 01aa 30202D73 		.ascii	"0 -std=gnu99 -ffunction-sections\000"
+ 546      74643D67 
+ 546      6E753939 
+ 546      202D6666 
+ 546      756E6374 
+ 547              	.LASF20:
+ 548 01cb 42415F50 		.ascii	"BA_PWM_Wakeup\000"
+ 548      574D5F57 
+ 548      616B6575 
+ 548      7000
+ 549              	.LASF2:
+ 550 01d9 73686F72 		.ascii	"short int\000"
+ARM GAS  C:\Users\Matt\AppData\Local\Temp\cchAeUBb.s 			page 14
 
 
- 551 01e9 73686F72 		.ascii	"short int\000"
- 551      7420696E 
- 551      7400
- 552              	.LASF18:
- 553 01f3 42415F50 		.ascii	"BA_PWM_Sleep\000"
- 553      574D5F53 
- 553      6C656570 
- 553      00
- 554              	.LASF15:
- 555 0200 73697A65 		.ascii	"sizetype\000"
- 555      74797065 
- 555      00
- 556              	.LASF22:
- 557 0209 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\BA_PWM_PM.c\000"
- 557      6E657261 
- 557      7465645F 
- 557      536F7572 
- 557      63655C50 
- 558              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.4 20140526 (release) [ARM/embedded-4_8-br
+ 550      7420696E 
+ 550      7400
+ 551              	.LASF18:
+ 552 01e3 42415F50 		.ascii	"BA_PWM_Sleep\000"
+ 552      574D5F53 
+ 552      6C656570 
+ 552      00
+ 553              	.LASF15:
+ 554 01f0 73697A65 		.ascii	"sizetype\000"
+ 554      74797065 
+ 554      00
+ 555              	.LASF22:
+ 556 01f9 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\BA_PWM_PM.c\000"
+ 556      6E657261 
+ 556      7465645F 
+ 556      536F7572 
+ 556      63655C50 
+ 557              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.4 20140526 (release) [ARM/embedded-4_8-br

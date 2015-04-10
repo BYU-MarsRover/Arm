@@ -1,5 +1,5 @@
 /*******************************************************************************
-* File Name: UART_TEST_tx.h  
+* File Name: I2C_1_scl.h  
 * Version 2.10
 *
 * Description:
@@ -15,8 +15,8 @@
 * the software package with which this file was provided.
 *******************************************************************************/
 
-#if !defined(CY_PINS_UART_TEST_tx_ALIASES_H) /* Pins UART_TEST_tx_ALIASES_H */
-#define CY_PINS_UART_TEST_tx_ALIASES_H
+#if !defined(CY_PINS_I2C_1_scl_ALIASES_H) /* Pins I2C_1_scl_ALIASES_H */
+#define CY_PINS_I2C_1_scl_ALIASES_H
 
 #include "cytypes.h"
 #include "cyfitter.h"
@@ -26,14 +26,14 @@
 /***************************************
 *              Constants        
 ***************************************/
-#define UART_TEST_tx_0		(UART_TEST_tx__0__PC)
-#define UART_TEST_tx_0_PS		(UART_TEST_tx__0__PS)
-#define UART_TEST_tx_0_PC		(UART_TEST_tx__0__PC)
-#define UART_TEST_tx_0_DR		(UART_TEST_tx__0__DR)
-#define UART_TEST_tx_0_SHIFT	(UART_TEST_tx__0__SHIFT)
+#define I2C_1_scl_0		(I2C_1_scl__0__PC)
+#define I2C_1_scl_0_PS		(I2C_1_scl__0__PS)
+#define I2C_1_scl_0_PC		(I2C_1_scl__0__PC)
+#define I2C_1_scl_0_DR		(I2C_1_scl__0__DR)
+#define I2C_1_scl_0_SHIFT	(I2C_1_scl__0__SHIFT)
 
 
-#endif /* End Pins UART_TEST_tx_ALIASES_H */
+#endif /* End Pins I2C_1_scl_ALIASES_H */
 
 
 /* [] END OF FILE */
