@@ -301,12 +301,25 @@ uint16 potFeedback(uint32 channel)
     return feedback;
 }
 
-void send_feedback()
+void send_packet(uint8 heart_beat)
 {
     //compile all of the most recent feedback variables into a packet
     //necessary feedback variables: system state, dynamixel read write errors, PID errors
     //TODO define system state
     //send packet via serial to wiznet
+    
+    if(heart_beat){
+        wiznetWriteUdpFrame(feedback_array, FEEDBACK_ARRAY_SIZE);
+        LED_Write(1);
+    }
+    else{
+        wiznetWriteUdpFrame(feedback_array, FEEDBACK_ARRAY_SIZE);
+        LED_Write(1);
+    }
+    wiznetSend();
+    while(WIZ_INT_Read() == 1);
+    wiznetClearInterrupts();
+    LED_Write(0);    
 }
 
 //to be used for parsing reading/parsing the data from the wiznet
@@ -1122,6 +1135,10 @@ void initialize()
     elbow_state = elbw_start;
     effector_state = eff_start;
     
+    for(int i = 0; i < FEEDBACK_ARRAY_SIZE; i++){
+        feedback_array[i] = 0;   
+    }
+    
     //start all of our components
     SPIM_1_Start();
     Clock_pwm_Start();
@@ -1233,6 +1250,7 @@ int main()
             EFFECTOR_FLAG = 1;
             PH_FLAG = 1;
             fs_count = 0;
+            send_packet(1);
             //wiznet = 0; //for testing
         }
         else
@@ -1259,7 +1277,8 @@ int main()
             WT_cspot = wristTilt(WT_cspot, WT_array);
             WR_cspot = wristRotate(WR_cspot, WR_array);
             effector();
-            send_feedback(); //send feedback onece every tick
+            feedback_array[1] = (feedback_array[1] + 1);
+            send_packet(0); //send feedback onece every tick
         }
 
 //        else{dropped_packets++}

@@ -54,6 +54,9 @@
     #define DATA_ARRAY_SIZE 22
     int8 data_array[DATA_ARRAY_SIZE]; //stores the parsed instructions from the wiznet
 
+    #define FEEDBACK_ARRAY_SIZE 10
+    uint8_t feedback_array[FEEDBACK_ARRAY_SIZE];
+    
     //TODO: might need to implement another ISR setting wiznet as a flag
     uint8 wiznet; //bool indicating wiznet interupt high or low
 
@@ -103,7 +106,7 @@
     uint8 pos_to_vel(uint8 cur_pos, uint16* array, uint8 ARRAY_SIZE, uint16 command);
     uint16 make_command(int8* info_array, uint8 byte1, uint8 byte2);
     uint16 potFeedback(uint32 channel);
-    void send_feedback();
+    void send_packet(uint8 heart_beat);
     void fill_data_array();
     void ServoGoalPosition( uint8 servoID, uint16 position);
     void SetServoTorque( uint8 servoID, uint16 torque);
