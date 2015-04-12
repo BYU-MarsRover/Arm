@@ -79,6 +79,9 @@ uint16 CalibrationElbow(uint16 velocity)
             //LED_Write(1);
         }
         ELBW_PWM_WriteCompare(NEUTRAL);
+        LED_Write(1);
+        CyDelay(1000);
+        
         channel = ELBOW_POT;
         
         // Add the value to average
@@ -88,20 +91,19 @@ uint16 CalibrationElbow(uint16 velocity)
 			// Use negative of velocity * 2, so that it moves away quick enough
         difference = 1500-velocity;
         ELBW_PWM_WriteCompare((uint16)(1500 + difference));
+        LED_Write(0); 
         CyDelay(1000);
  
 		// Stop moving
         ELBW_PWM_WriteCompare(NEUTRAL);
-        
-        // Test stop switch
-        //LED_Write(1);
-        //CyDelay(1000);
+        LED_Write(1); 
+        CyDelay(1000);
 	}
     
     if(velocity > 1500)
-	    bound = ((average / CYCLES) * .9);
+	    bound = ((average / CYCLES) - BOUND_OFFSET);
     else if(velocity < 1500)
-        bound = ((average / CYCLES) * 1.1);
+        bound = ((average / CYCLES) + BOUND_OFFSET);
     else // velocity == 1500
         LED_Write(1); 
  
@@ -140,6 +142,9 @@ uint16 CalibrationShoulder(uint16 velocity)
             LED_Write(1);
         }
         SHLDR_PWM_WriteCompare(NEUTRAL);
+        LED_Write(1); 
+        CyDelay(1000);
+        
         channel = SHOULDER_POT;
  
 		// Add the value to average
@@ -149,16 +154,19 @@ uint16 CalibrationShoulder(uint16 velocity)
 			// Use negative of velocity * 2, so that it moves away quick enough
         difference = 1500-velocity;
         SHLDR_PWM_WriteCompare((uint16)(1500 + difference));
+        LED_Write(0); 
         CyDelay(1000);
  
 		// Stop moving
         SHLDR_PWM_WriteCompare(NEUTRAL);
+        LED_Write(1); 
+        CyDelay(1000);
 	}
  
 	if(velocity > 1500)
-	    bound = ((average / CYCLES) * .9);
+	    bound = ((average / CYCLES) - BOUND_OFFSET);
     else if(velocity < 1500)
-        bound = ((average / CYCLES) * 1.1);
+        bound = ((average / CYCLES) + BOUND_OFFSET);
     else // velocity == 1500
         LED_Write(1); 
  
@@ -309,10 +317,38 @@ void send_packet(uint8 heart_beat)
     //send packet via serial to wiznet
     
     if(heart_beat){
+        feedback_array[0] = 7;
+        feedback_array[1] = 7;
+        feedback_array[2] = 7;
+        feedback_array[3] = 7;
+        feedback_array[4] = 7;
+        feedback_array[5] = 7;
+        feedback_array[6] = 7;
+        feedback_array[7] = 7;
+        feedback_array[8] = 7;
+        feedback_array[9] = 7;
+        feedback_array[10] = 7;
+        feedback_array[11] = 7;
+        feedback_array[12] = 7;
+        feedback_array[13] = 0xee;
         wiznetWriteUdpFrame(feedback_array, FEEDBACK_ARRAY_SIZE);
         LED_Write(1);
     }
     else{
+        feedback_array[0] = 7;      // ph value
+        feedback_array[1] = 7;      // humidity
+        feedback_array[2] = 7;      // wrist rotate temperature
+        feedback_array[3] = 7;      // wrist rotate position
+        feedback_array[4] = 7;      // wrist rotate error status
+        feedback_array[5] = 7;      // wrist tilt temperature
+        feedback_array[6] = 7;      // wrist tilt position
+        feedback_array[7] = 7;      // wrist tilt error statue
+        feedback_array[8] = 7;      // elbow stop switch count
+        feedback_array[9] = 7;      // elbow pot value
+        feedback_array[10] = 7;      // shoulder stop swtich count
+        feedback_array[11] = 7;      // shoulder pot value
+        feedback_array[12] = 7;      // turret error status
+        feedback_array[13] = 0xff;       
         wiznetWriteUdpFrame(feedback_array, FEEDBACK_ARRAY_SIZE);
         LED_Write(1);
     }
@@ -642,7 +678,7 @@ uint8 elbow(uint8 elbw_arr_cspot, uint16* elbow_array)
             
             if(!stop_elb_dn_Read() || !stop_elb_up_Read())
             {
-                if(feedback <= ELBOW_LOWER_BOUND )
+                if(feedback <= ELBOW_LOWER_BOUND )  // lower bound checking, only move away is allowed
                 {
                     if (avg < 1500)
                     {
@@ -660,7 +696,7 @@ uint8 elbow(uint8 elbw_arr_cspot, uint16* elbow_array)
                         }
                     }
                 }
-                else if (feedback >= ELBOW_UPPER_BOUND)
+                else if (feedback >= ELBOW_UPPER_BOUND) // upper bound checking, only move away is allowed
                 {
                     if(avg > 1500)
                     {
@@ -686,18 +722,51 @@ uint8 elbow(uint8 elbw_arr_cspot, uint16* elbow_array)
                     }
                     else
                     {
-                        ELBW_PWM_WriteCompare(1500);
+                        ELBW_PWM_WriteCompare(NEUTRAL);
                     }
                 }
             }
             else // One of the stop switches was presses, shouldn't happen but just in case
             {
-                if(!stop_elb_dn_Read())
-                    ELBOW_LOWER_BOUND = potFeedback(ELBOW_POT) * 1.1;
-                else if(!stop_elb_up_Read())
-                    ELBOW_UPPER_BOUND = potFeedback(ELBOW_POT) * .9;
-                else
+                if(!stop_elb_dn_Read()){
+                    ELBOW_LOWER_BOUND = potFeedback(ELBOW_POT) + BOUND_OFFSET;
+                    if (avg < 1500)
+                    {
+                        ELBW_PWM_WriteCompare(1500);
+                    }
+                    else
+                    {
+                        if(avg <= 2000 && avg >= 1000)
+                        {
+                            ELBW_PWM_WriteCompare(avg);
+                        }
+                        else
+                        {
+                            ELBW_PWM_WriteCompare(1500);
+                        }
+                    }
+                }
+                else if(!stop_elb_up_Read()){
+                    ELBOW_UPPER_BOUND = potFeedback(ELBOW_POT) - BOUND_OFFSET;
+                    if(avg > 1500)
+                    {
+                        ELBW_PWM_WriteCompare(1500);
+                    }
+                    else
+                    {
+                        if(avg <= 2000 && avg >= 1000)
+                        {
+                            ELBW_PWM_WriteCompare(avg);
+                        }
+                        else
+                        {
+                            ELBW_PWM_WriteCompare(1500);
+                        }
+                    }
+                }
+                else{
                     LED_Write(1);
+                }
             }
             ELBOW_FLAG = 0;
             break;
@@ -840,12 +909,45 @@ uint8 shoulder(uint8 shldr_arr_cspot, uint16* shoulder_array)
             }
             else // One of the stop switches was presses, shouldn't happen but just in case
             {
-                if(!stop_shdr_dn_Read()) // TODO: Needs to move away so the switch doesn't stay pressed
-                    SHOULDER_LOWER_BOUND = potFeedback(SHOULDER_POT) * 1.1; // TODO: Fix to be integer arithmetic
-                else if(!stop_shdr_up_Read())
-                    SHOULDER_UPPER_BOUND = potFeedback(SHOULDER_POT) * .9;
-                else
+                if(!stop_elb_dn_Read()){
+                    SHOULDER_LOWER_BOUND = potFeedback(SHOULDER_POT) + BOUND_OFFSET;
+                    if (avg < 1500)
+                    {
+                        SHLDR_PWM_WriteCompare(1500);
+                    }
+                    else
+                    {
+                        if(avg <= 2000 && avg >= 1000)
+                        {
+                            SHLDR_PWM_WriteCompare(avg);
+                        }
+                        else
+                        {
+                            SHLDR_PWM_WriteCompare(1500);
+                        }
+                    }
+                }
+                else if(!stop_elb_up_Read()){
+                    SHOULDER_UPPER_BOUND = potFeedback(SHOULDER_POT) - BOUND_OFFSET;
+                    if(avg > 1500)
+                    {
+                        SHLDR_PWM_WriteCompare(1500);
+                    }
+                    else
+                    {
+                        if(avg <= 2000 && avg >= 1000)
+                        {
+                            SHLDR_PWM_WriteCompare(avg);
+                        }
+                        else
+                        {
+                            SHLDR_PWM_WriteCompare(1500);
+                        }
+                    }
+                }
+                else{
                     LED_Write(1);
+                }
             }
             SHOULDER_FLAG = 0;
             break;

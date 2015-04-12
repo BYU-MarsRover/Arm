@@ -29,6 +29,7 @@
     uint32  SHOULDER_UPPER_BOUND = 800;
     //#define SHOULDER_LOWER_BOUND 280
     uint32  SHOULDER_LOWER_BOUND = 280;
+    #define BOUND_OFFSET 20
     
     #define SHOULDER_POT 0
     #define ELBOW_POT 1
@@ -54,7 +55,7 @@
     #define DATA_ARRAY_SIZE 22
     int8 data_array[DATA_ARRAY_SIZE]; //stores the parsed instructions from the wiznet
 
-    #define FEEDBACK_ARRAY_SIZE 10
+    #define FEEDBACK_ARRAY_SIZE 14
     uint8_t feedback_array[FEEDBACK_ARRAY_SIZE];
     
     //TODO: might need to implement another ISR setting wiznet as a flag

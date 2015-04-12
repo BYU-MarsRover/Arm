@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Matt\AppData\Local\Temp\ccVR6uo8.s 			page 1
+ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccvCNjkc.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Matt\AppData\Local\Temp\ccVR6uo8.s 			page 1
   30:.\Generated_Source\PSoC4/WIZ_RDY.c **** ********************************************************************************
   31:.\Generated_Source\PSoC4/WIZ_RDY.c **** *
   32:.\Generated_Source\PSoC4/WIZ_RDY.c **** * Summary:
-ARM GAS  C:\Users\Matt\AppData\Local\Temp\ccVR6uo8.s 			page 2
+ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccvCNjkc.s 			page 2
 
 
   33:.\Generated_Source\PSoC4/WIZ_RDY.c **** *  Assign a new value to the digital port's data output register.  
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Matt\AppData\Local\Temp\ccVR6uo8.s 			page 1
   66 003c 0F32     		add	r2, r2, #15
   67 003e 1278     		ldrb	r2, [r2]
   68 0040 1A60     		str	r2, [r3]
-ARM GAS  C:\Users\Matt\AppData\Local\Temp\ccVR6uo8.s 			page 3
+ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccvCNjkc.s 			page 3
 
 
   47:.\Generated_Source\PSoC4/WIZ_RDY.c **** }
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Matt\AppData\Local\Temp\ccVR6uo8.s 			page 1
   95 0002 82B0     		sub	sp, sp, #8
   96              		.cfi_def_cfa_offset 16
   97 0004 00AF     		add	r7, sp, #0
-ARM GAS  C:\Users\Matt\AppData\Local\Temp\ccVR6uo8.s 			page 4
+ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccvCNjkc.s 			page 4
 
 
   98              		.cfi_def_cfa_register 7
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Matt\AppData\Local\Temp\ccVR6uo8.s 			page 1
   92:.\Generated_Source\PSoC4/WIZ_RDY.c **** *  
   93:.\Generated_Source\PSoC4/WIZ_RDY.c **** * Note:
   94:.\Generated_Source\PSoC4/WIZ_RDY.c **** *  Macro WIZ_RDY_ReadPS calls this function. 
-ARM GAS  C:\Users\Matt\AppData\Local\Temp\ccVR6uo8.s 			page 5
+ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccvCNjkc.s 			page 5
 
 
   95:.\Generated_Source\PSoC4/WIZ_RDY.c **** *  
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Matt\AppData\Local\Temp\ccVR6uo8.s 			page 1
  114:.\Generated_Source\PSoC4/WIZ_RDY.c **** *  Returns the current value assigned to the Digital Port's data output register
  115:.\Generated_Source\PSoC4/WIZ_RDY.c **** *  
  116:.\Generated_Source\PSoC4/WIZ_RDY.c **** *******************************************************************************/
-ARM GAS  C:\Users\Matt\AppData\Local\Temp\ccVR6uo8.s 			page 6
+ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccvCNjkc.s 			page 6
 
 
  117:.\Generated_Source\PSoC4/WIZ_RDY.c **** uint8 WIZ_RDY_ReadDataReg(void) 
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Matt\AppData\Local\Temp\ccVR6uo8.s 			page 1
  136:.\Generated_Source\PSoC4/WIZ_RDY.c ****     *
  137:.\Generated_Source\PSoC4/WIZ_RDY.c ****     * Return: 
  138:.\Generated_Source\PSoC4/WIZ_RDY.c ****     *  Returns the value of the interrupt status register
-ARM GAS  C:\Users\Matt\AppData\Local\Temp\ccVR6uo8.s 			page 7
+ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccvCNjkc.s 			page 7
 
 
  139:.\Generated_Source\PSoC4/WIZ_RDY.c ****     *  
@@ -418,42 +418,42 @@ ARM GAS  C:\Users\Matt\AppData\Local\Temp\ccVR6uo8.s 			page 1
  251 0000 48010000 		.4byte	0x148
  252 0004 0400     		.2byte	0x4
  253 0006 00000000 		.4byte	.Ldebug_abbrev0
-ARM GAS  C:\Users\Matt\AppData\Local\Temp\ccVR6uo8.s 			page 8
+ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccvCNjkc.s 			page 8
 
 
  254 000a 04       		.byte	0x4
  255 000b 01       		.uleb128 0x1
- 256 000c 5D010000 		.4byte	.LASF24
+ 256 000c 60010000 		.4byte	.LASF24
  257 0010 01       		.byte	0x1
- 258 0011 3A010000 		.4byte	.LASF25
- 259 0015 41000000 		.4byte	.LASF26
+ 258 0011 3D010000 		.4byte	.LASF25
+ 259 0015 9D000000 		.4byte	.LASF26
  260 0019 00000000 		.4byte	.Ldebug_ranges0+0
  261 001d 00000000 		.4byte	0
  262 0021 00000000 		.4byte	.Ldebug_line0
  263 0025 02       		.uleb128 0x2
  264 0026 01       		.byte	0x1
  265 0027 06       		.byte	0x6
- 266 0028 0F020000 		.4byte	.LASF0
+ 266 0028 12020000 		.4byte	.LASF0
  267 002c 02       		.uleb128 0x2
  268 002d 01       		.byte	0x1
  269 002e 08       		.byte	0x8
- 270 002f 90000000 		.4byte	.LASF1
+ 270 002f 41000000 		.4byte	.LASF1
  271 0033 02       		.uleb128 0x2
  272 0034 02       		.byte	0x2
  273 0035 05       		.byte	0x5
- 274 0036 F6010000 		.4byte	.LASF2
+ 274 0036 F9010000 		.4byte	.LASF2
  275 003a 02       		.uleb128 0x2
  276 003b 02       		.byte	0x2
  277 003c 07       		.byte	0x7
- 278 003d B6000000 		.4byte	.LASF3
+ 278 003d 67000000 		.4byte	.LASF3
  279 0041 02       		.uleb128 0x2
  280 0042 04       		.byte	0x4
  281 0043 05       		.byte	0x5
- 282 0044 06020000 		.4byte	.LASF4
+ 282 0044 09020000 		.4byte	.LASF4
  283 0048 02       		.uleb128 0x2
  284 0049 04       		.byte	0x4
  285 004a 07       		.byte	0x7
- 286 004b A4000000 		.4byte	.LASF5
+ 286 004b 55000000 		.4byte	.LASF5
  287 004f 02       		.uleb128 0x2
  288 0050 08       		.byte	0x8
  289 0051 05       		.byte	0x5
@@ -461,7 +461,7 @@ ARM GAS  C:\Users\Matt\AppData\Local\Temp\ccVR6uo8.s 			page 1
  291 0056 02       		.uleb128 0x2
  292 0057 08       		.byte	0x8
  293 0058 07       		.byte	0x7
- 294 0059 F9000000 		.4byte	.LASF7
+ 294 0059 FC000000 		.4byte	.LASF7
  295 005d 03       		.uleb128 0x3
  296 005e 04       		.byte	0x4
  297 005f 05       		.byte	0x5
@@ -469,16 +469,16 @@ ARM GAS  C:\Users\Matt\AppData\Local\Temp\ccVR6uo8.s 			page 1
  299 0064 02       		.uleb128 0x2
  300 0065 04       		.byte	0x4
  301 0066 07       		.byte	0x7
- 302 0067 EC000000 		.4byte	.LASF8
+ 302 0067 EF000000 		.4byte	.LASF8
  303 006b 04       		.uleb128 0x4
- 304 006c 00020000 		.4byte	.LASF9
+ 304 006c 03020000 		.4byte	.LASF9
  305 0070 02       		.byte	0x2
  306 0071 A1       		.byte	0xa1
  307 0072 2C000000 		.4byte	0x2c
  308 0076 04       		.uleb128 0x4
- 309 0077 D0000000 		.4byte	.LASF10
+ 309 0077 81000000 		.4byte	.LASF10
  310 007b 02       		.byte	0x2
-ARM GAS  C:\Users\Matt\AppData\Local\Temp\ccVR6uo8.s 			page 9
+ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccvCNjkc.s 			page 9
 
 
  311 007c A3       		.byte	0xa3
@@ -490,11 +490,11 @@ ARM GAS  C:\Users\Matt\AppData\Local\Temp\ccVR6uo8.s 			page 1
  317 0088 02       		.uleb128 0x2
  318 0089 08       		.byte	0x8
  319 008a 04       		.byte	0x4
- 320 008b C9000000 		.4byte	.LASF12
+ 320 008b 7A000000 		.4byte	.LASF12
  321 008f 02       		.uleb128 0x2
  322 0090 01       		.byte	0x1
  323 0091 08       		.byte	0x8
- 324 0092 F1010000 		.4byte	.LASF13
+ 324 0092 F4010000 		.4byte	.LASF13
  325 0096 05       		.uleb128 0x5
  326 0097 0E000000 		.4byte	.LASF14
  327 009b 02       		.byte	0x2
@@ -503,7 +503,7 @@ ARM GAS  C:\Users\Matt\AppData\Local\Temp\ccVR6uo8.s 			page 1
  330 00a2 06       		.uleb128 0x6
  331 00a3 76000000 		.4byte	0x76
  332 00a7 07       		.uleb128 0x7
- 333 00a8 27010000 		.4byte	.LASF15
+ 333 00a8 2A010000 		.4byte	.LASF15
  334 00ac 01       		.byte	0x1
  335 00ad 2A       		.byte	0x2a
  336 00ae 00000000 		.4byte	.LFB0
@@ -520,7 +520,7 @@ ARM GAS  C:\Users\Matt\AppData\Local\Temp\ccVR6uo8.s 			page 1
  347 00c8 91       		.byte	0x91
  348 00c9 6F       		.sleb128 -17
  349 00ca 09       		.uleb128 0x9
- 350 00cb 9E000000 		.4byte	.LASF22
+ 350 00cb 4F000000 		.4byte	.LASF22
  351 00cf 01       		.byte	0x1
  352 00d0 2C       		.byte	0x2c
  353 00d1 6B000000 		.4byte	0x6b
@@ -529,7 +529,7 @@ ARM GAS  C:\Users\Matt\AppData\Local\Temp\ccVR6uo8.s 			page 1
  356 00d7 77       		.sleb128 -9
  357 00d8 00       		.byte	0
  358 00d9 07       		.uleb128 0x7
- 359 00da D7000000 		.4byte	.LASF16
+ 359 00da 88000000 		.4byte	.LASF16
  360 00de 01       		.byte	0x1
  361 00df 49       		.byte	0x49
  362 00e0 00000000 		.4byte	.LFB1
@@ -538,10 +538,10 @@ ARM GAS  C:\Users\Matt\AppData\Local\Temp\ccVR6uo8.s 			page 1
  365 00e9 9C       		.byte	0x9c
  366 00ea FD000000 		.4byte	0xfd
  367 00ee 08       		.uleb128 0x8
-ARM GAS  C:\Users\Matt\AppData\Local\Temp\ccVR6uo8.s 			page 10
+ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccvCNjkc.s 			page 10
 
 
- 368 00ef 35010000 		.4byte	.LASF18
+ 368 00ef 38010000 		.4byte	.LASF18
  369 00f3 01       		.byte	0x1
  370 00f4 49       		.byte	0x49
  371 00f5 6B000000 		.4byte	0x6b
@@ -568,7 +568,7 @@ ARM GAS  C:\Users\Matt\AppData\Local\Temp\ccVR6uo8.s 			page 1
  392 0125 01       		.uleb128 0x1
  393 0126 9C       		.byte	0x9c
  394 0127 0B       		.uleb128 0xb
- 395 0128 10010000 		.4byte	.LASF21
+ 395 0128 13010000 		.4byte	.LASF21
  396 012c 01       		.byte	0x1
  397 012d 8D       		.byte	0x8d
  398 012e 6B000000 		.4byte	0x6b
@@ -577,7 +577,7 @@ ARM GAS  C:\Users\Matt\AppData\Local\Temp\ccVR6uo8.s 			page 1
  401 013a 01       		.uleb128 0x1
  402 013b 9C       		.byte	0x9c
  403 013c 09       		.uleb128 0x9
- 404 013d E4010000 		.4byte	.LASF23
+ 404 013d E7010000 		.4byte	.LASF23
  405 0141 01       		.byte	0x1
  406 0142 8F       		.byte	0x8f
  407 0143 6B000000 		.4byte	0x6b
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Matt\AppData\Local\Temp\ccVR6uo8.s 			page 1
  422 0007 03       		.uleb128 0x3
  423 0008 0E       		.uleb128 0xe
  424 0009 1B       		.uleb128 0x1b
-ARM GAS  C:\Users\Matt\AppData\Local\Temp\ccVR6uo8.s 			page 11
+ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccvCNjkc.s 			page 11
 
 
  425 000a 0E       		.uleb128 0xe
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Matt\AppData\Local\Temp\ccVR6uo8.s 			page 1
  479 0040 13       		.uleb128 0x13
  480 0041 00       		.byte	0
  481 0042 00       		.byte	0
-ARM GAS  C:\Users\Matt\AppData\Local\Temp\ccVR6uo8.s 			page 12
+ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccvCNjkc.s 			page 12
 
 
  482 0043 06       		.uleb128 0x6
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Matt\AppData\Local\Temp\ccVR6uo8.s 			page 1
  536 007a 3B       		.uleb128 0x3b
  537 007b 0B       		.uleb128 0xb
  538 007c 49       		.uleb128 0x49
-ARM GAS  C:\Users\Matt\AppData\Local\Temp\ccVR6uo8.s 			page 13
+ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccvCNjkc.s 			page 13
 
 
  539 007d 13       		.uleb128 0x13
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Matt\AppData\Local\Temp\ccVR6uo8.s 			page 1
  593 00b5 00       		.byte	0
  594 00b6 00       		.byte	0
  595              		.section	.debug_aranges,"",%progbits
-ARM GAS  C:\Users\Matt\AppData\Local\Temp\ccVR6uo8.s 			page 14
+ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccvCNjkc.s 			page 14
 
 
  596 0000 3C000000 		.4byte	0x3c
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Matt\AppData\Local\Temp\ccVR6uo8.s 			page 1
  638              	.LASF17:
  639 0028 76616C75 		.ascii	"value\000"
  639      6500
-ARM GAS  C:\Users\Matt\AppData\Local\Temp\ccVR6uo8.s 			page 15
+ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccvCNjkc.s 			page 15
 
 
  640              	.LASF11:
@@ -849,123 +849,123 @@ ARM GAS  C:\Users\Matt\AppData\Local\Temp\ccVR6uo8.s 			page 1
  643      5244595F 
  643      52656164 
  643      00
- 644              	.LASF26:
- 645 0041 433A5C55 		.ascii	"C:\\Users\\Matt\\repos\\BYU_Mars_Rover\\arm_control"
- 645      73657273 
- 645      5C4D6174 
- 645      745C7265 
- 645      706F735C 
- 646 006f 6C65725F 		.ascii	"ler_v2\\arm_controller_v2.1.cydsn\000"
- 646      76325C61 
- 646      726D5F63 
- 646      6F6E7472 
- 646      6F6C6C65 
- 647              	.LASF1:
- 648 0090 756E7369 		.ascii	"unsigned char\000"
- 648      676E6564 
- 648      20636861 
- 648      7200
- 649              	.LASF22:
- 650 009e 64725661 		.ascii	"drVal\000"
- 650      6C00
- 651              	.LASF5:
- 652 00a4 6C6F6E67 		.ascii	"long unsigned int\000"
- 652      20756E73 
- 652      69676E65 
- 652      6420696E 
- 652      7400
- 653              	.LASF3:
- 654 00b6 73686F72 		.ascii	"short unsigned int\000"
- 654      7420756E 
- 654      7369676E 
- 654      65642069 
- 654      6E7400
- 655              	.LASF12:
- 656 00c9 646F7562 		.ascii	"double\000"
- 656      6C6500
- 657              	.LASF10:
- 658 00d0 75696E74 		.ascii	"uint32\000"
- 658      333200
- 659              	.LASF16:
- 660 00d7 57495A5F 		.ascii	"WIZ_RDY_SetDriveMode\000"
- 660      5244595F 
- 660      53657444 
- 660      72697665 
- 660      4D6F6465 
+ 644              	.LASF1:
+ 645 0041 756E7369 		.ascii	"unsigned char\000"
+ 645      676E6564 
+ 645      20636861 
+ 645      7200
+ 646              	.LASF22:
+ 647 004f 64725661 		.ascii	"drVal\000"
+ 647      6C00
+ 648              	.LASF5:
+ 649 0055 6C6F6E67 		.ascii	"long unsigned int\000"
+ 649      20756E73 
+ 649      69676E65 
+ 649      6420696E 
+ 649      7400
+ 650              	.LASF3:
+ 651 0067 73686F72 		.ascii	"short unsigned int\000"
+ 651      7420756E 
+ 651      7369676E 
+ 651      65642069 
+ 651      6E7400
+ 652              	.LASF12:
+ 653 007a 646F7562 		.ascii	"double\000"
+ 653      6C6500
+ 654              	.LASF10:
+ 655 0081 75696E74 		.ascii	"uint32\000"
+ 655      333200
+ 656              	.LASF16:
+ 657 0088 57495A5F 		.ascii	"WIZ_RDY_SetDriveMode\000"
+ 657      5244595F 
+ 657      53657444 
+ 657      72697665 
+ 657      4D6F6465 
+ 658              	.LASF26:
+ 659 009d 433A5C55 		.ascii	"C:\\Users\\Jae Lee\\Documents\\GitHub\\Arm\\arm_con"
+ 659      73657273 
+ 659      5C4A6165 
+ 659      204C6565 
+ 659      5C446F63 
+ 660 00ca 74726F6C 		.ascii	"troller_v2\\arm_controller_v2.1.cydsn\000"
+ 660      6C65725F 
+ 660      76325C61 
+ 660      726D5F63 
+ 660      6F6E7472 
  661              	.LASF8:
- 662 00ec 756E7369 		.ascii	"unsigned int\000"
+ 662 00ef 756E7369 		.ascii	"unsigned int\000"
  662      676E6564 
  662      20696E74 
  662      00
  663              	.LASF7:
-ARM GAS  C:\Users\Matt\AppData\Local\Temp\ccVR6uo8.s 			page 16
+ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccvCNjkc.s 			page 16
 
 
- 664 00f9 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 664 00fc 6C6F6E67 		.ascii	"long long unsigned int\000"
  664      206C6F6E 
  664      6720756E 
  664      7369676E 
  664      65642069 
  665              	.LASF21:
- 666 0110 57495A5F 		.ascii	"WIZ_RDY_ClearInterrupt\000"
+ 666 0113 57495A5F 		.ascii	"WIZ_RDY_ClearInterrupt\000"
  666      5244595F 
  666      436C6561 
  666      72496E74 
  666      65727275 
  667              	.LASF15:
- 668 0127 57495A5F 		.ascii	"WIZ_RDY_Write\000"
+ 668 012a 57495A5F 		.ascii	"WIZ_RDY_Write\000"
  668      5244595F 
  668      57726974 
  668      6500
  669              	.LASF18:
- 670 0135 6D6F6465 		.ascii	"mode\000"
+ 670 0138 6D6F6465 		.ascii	"mode\000"
  670      00
  671              	.LASF25:
- 672 013a 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\WIZ_RDY.c\000"
+ 672 013d 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\WIZ_RDY.c\000"
  672      6E657261 
  672      7465645F 
  672      536F7572 
  672      63655C50 
  673              	.LASF24:
- 674 015d 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
+ 674 0160 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
  674      4320342E 
  674      382E3420 
  674      32303134 
  674      30353236 
- 675 0190 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m0 -mthumb -g -O"
+ 675 0193 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m0 -mthumb -g -O"
  675      20726576 
  675      6973696F 
  675      6E203231 
  675      31333538 
- 676 01c3 30202D73 		.ascii	"0 -std=gnu99 -ffunction-sections\000"
+ 676 01c6 30202D73 		.ascii	"0 -std=gnu99 -ffunction-sections\000"
  676      74643D67 
  676      6E753939 
  676      202D6666 
  676      756E6374 
  677              	.LASF23:
- 678 01e4 6D61736B 		.ascii	"maskedStatus\000"
+ 678 01e7 6D61736B 		.ascii	"maskedStatus\000"
  678      65645374 
  678      61747573 
  678      00
  679              	.LASF13:
- 680 01f1 63686172 		.ascii	"char\000"
+ 680 01f4 63686172 		.ascii	"char\000"
  680      00
  681              	.LASF2:
- 682 01f6 73686F72 		.ascii	"short int\000"
+ 682 01f9 73686F72 		.ascii	"short int\000"
  682      7420696E 
  682      7400
  683              	.LASF9:
- 684 0200 75696E74 		.ascii	"uint8\000"
+ 684 0203 75696E74 		.ascii	"uint8\000"
  684      3800
  685              	.LASF4:
-ARM GAS  C:\Users\Matt\AppData\Local\Temp\ccVR6uo8.s 			page 17
+ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccvCNjkc.s 			page 17
 
 
- 686 0206 6C6F6E67 		.ascii	"long int\000"
+ 686 0209 6C6F6E67 		.ascii	"long int\000"
  686      20696E74 
  686      00
  687              	.LASF0:
- 688 020f 7369676E 		.ascii	"signed char\000"
+ 688 0212 7369676E 		.ascii	"signed char\000"
  688      65642063 
  688      68617200 
  689              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.4 20140526 (release) [ARM/embedded-4_8-br
