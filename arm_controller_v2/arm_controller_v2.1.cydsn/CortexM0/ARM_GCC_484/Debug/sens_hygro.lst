@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccySJ5ej.s 			page 1
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccSfclYR.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccySJ5ej.s 			page 1
   30:.\Generated_Source\PSoC4/sens_hygro.c **** ********************************************************************************
   31:.\Generated_Source\PSoC4/sens_hygro.c **** *
   32:.\Generated_Source\PSoC4/sens_hygro.c **** * Summary:
-ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccySJ5ej.s 			page 2
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccSfclYR.s 			page 2
 
 
   33:.\Generated_Source\PSoC4/sens_hygro.c **** *  Assign a new value to the digital port's data output register.  
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccySJ5ej.s 			page 1
   66 003c 0F32     		add	r2, r2, #15
   67 003e 1278     		ldrb	r2, [r2]
   68 0040 1A60     		str	r2, [r3]
-ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccySJ5ej.s 			page 3
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccSfclYR.s 			page 3
 
 
   47:.\Generated_Source\PSoC4/sens_hygro.c **** }
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccySJ5ej.s 			page 1
   95 0002 82B0     		sub	sp, sp, #8
   96              		.cfi_def_cfa_offset 16
   97 0004 00AF     		add	r7, sp, #0
-ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccySJ5ej.s 			page 4
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccSfclYR.s 			page 4
 
 
   98              		.cfi_def_cfa_register 7
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccySJ5ej.s 			page 1
   93:.\Generated_Source\PSoC4/sens_hygro.c **** * Note:
   94:.\Generated_Source\PSoC4/sens_hygro.c **** *  Macro sens_hygro_ReadPS calls this function. 
   95:.\Generated_Source\PSoC4/sens_hygro.c **** *  
-ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccySJ5ej.s 			page 5
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccSfclYR.s 			page 5
 
 
   96:.\Generated_Source\PSoC4/sens_hygro.c **** *******************************************************************************/
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccySJ5ej.s 			page 1
  115:.\Generated_Source\PSoC4/sens_hygro.c **** *  
  116:.\Generated_Source\PSoC4/sens_hygro.c **** *******************************************************************************/
  117:.\Generated_Source\PSoC4/sens_hygro.c **** uint8 sens_hygro_ReadDataReg(void) 
-ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccySJ5ej.s 			page 6
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccSfclYR.s 			page 6
 
 
  118:.\Generated_Source\PSoC4/sens_hygro.c **** {
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccySJ5ej.s 			page 1
  137:.\Generated_Source\PSoC4/sens_hygro.c ****     * Return: 
  138:.\Generated_Source\PSoC4/sens_hygro.c ****     *  Returns the value of the interrupt status register
  139:.\Generated_Source\PSoC4/sens_hygro.c ****     *  
-ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccySJ5ej.s 			page 7
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccSfclYR.s 			page 7
 
 
  140:.\Generated_Source\PSoC4/sens_hygro.c ****     *******************************************************************************/
@@ -418,21 +418,21 @@ ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccySJ5ej.s 			page 1
  251 0004 0400     		.2byte	0x4
  252 0006 00000000 		.4byte	.Ldebug_abbrev0
  253 000a 04       		.byte	0x4
-ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccySJ5ej.s 			page 8
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccSfclYR.s 			page 8
 
 
  254 000b 01       		.uleb128 0x1
- 255 000c 30010000 		.4byte	.LASF24
+ 255 000c 2F010000 		.4byte	.LASF24
  256 0010 01       		.byte	0x1
  257 0011 14000000 		.4byte	.LASF25
- 258 0015 A4000000 		.4byte	.LASF26
+ 258 0015 DE000000 		.4byte	.LASF26
  259 0019 00000000 		.4byte	.Ldebug_ranges0+0
  260 001d 00000000 		.4byte	0
  261 0021 00000000 		.4byte	.Ldebug_line0
  262 0025 02       		.uleb128 0x2
  263 0026 01       		.byte	0x1
  264 0027 06       		.byte	0x6
- 265 0028 14020000 		.4byte	.LASF0
+ 265 0028 13020000 		.4byte	.LASF0
  266 002c 02       		.uleb128 0x2
  267 002d 01       		.byte	0x1
  268 002e 08       		.byte	0x8
@@ -440,7 +440,7 @@ ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccySJ5ej.s 			page 1
  270 0033 02       		.uleb128 0x2
  271 0034 02       		.byte	0x2
  272 0035 05       		.byte	0x5
- 273 0036 E3010000 		.4byte	.LASF2
+ 273 0036 E2010000 		.4byte	.LASF2
  274 003a 02       		.uleb128 0x2
  275 003b 02       		.byte	0x2
  276 003c 07       		.byte	0x7
@@ -448,7 +448,7 @@ ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccySJ5ej.s 			page 1
  278 0041 02       		.uleb128 0x2
  279 0042 04       		.byte	0x4
  280 0043 05       		.byte	0x5
- 281 0044 0B020000 		.4byte	.LASF4
+ 281 0044 0A020000 		.4byte	.LASF4
  282 0048 02       		.uleb128 0x2
  283 0049 04       		.byte	0x4
  284 004a 07       		.byte	0x7
@@ -460,7 +460,7 @@ ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccySJ5ej.s 			page 1
  290 0056 02       		.uleb128 0x2
  291 0057 08       		.byte	0x8
  292 0058 07       		.byte	0x7
- 293 0059 03010000 		.4byte	.LASF7
+ 293 0059 B1000000 		.4byte	.LASF7
  294 005d 03       		.uleb128 0x3
  295 005e 04       		.byte	0x4
  296 005f 05       		.byte	0x5
@@ -468,9 +468,9 @@ ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccySJ5ej.s 			page 1
  298 0064 02       		.uleb128 0x2
  299 0065 04       		.byte	0x4
  300 0066 07       		.byte	0x7
- 301 0067 F6000000 		.4byte	.LASF8
+ 301 0067 A4000000 		.4byte	.LASF8
  302 006b 04       		.uleb128 0x4
- 303 006c 05020000 		.4byte	.LASF9
+ 303 006c 04020000 		.4byte	.LASF9
  304 0070 02       		.byte	0x2
  305 0071 A1       		.byte	0xa1
  306 0072 2C000000 		.4byte	0x2c
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccySJ5ej.s 			page 1
  308 0077 9D000000 		.4byte	.LASF10
  309 007b 02       		.byte	0x2
  310 007c A3       		.byte	0xa3
-ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccySJ5ej.s 			page 9
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccSfclYR.s 			page 9
 
 
  311 007d 48000000 		.4byte	0x48
@@ -493,7 +493,7 @@ ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccySJ5ej.s 			page 1
  320 008f 02       		.uleb128 0x2
  321 0090 01       		.byte	0x1
  322 0091 08       		.byte	0x8
- 323 0092 C4010000 		.4byte	.LASF13
+ 323 0092 C3010000 		.4byte	.LASF13
  324 0096 05       		.uleb128 0x5
  325 0097 0E000000 		.4byte	.LASF14
  326 009b 02       		.byte	0x2
@@ -502,7 +502,7 @@ ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccySJ5ej.s 			page 1
  329 00a2 06       		.uleb128 0x6
  330 00a3 76000000 		.4byte	0x76
  331 00a7 07       		.uleb128 0x7
- 332 00a8 1F010000 		.4byte	.LASF15
+ 332 00a8 CD000000 		.4byte	.LASF15
  333 00ac 01       		.byte	0x1
  334 00ad 2A       		.byte	0x2a
  335 00ae 00000000 		.4byte	.LFB0
@@ -528,7 +528,7 @@ ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccySJ5ej.s 			page 1
  355 00d7 77       		.sleb128 -9
  356 00d8 00       		.byte	0
  357 00d9 07       		.uleb128 0x7
- 358 00da ED010000 		.4byte	.LASF16
+ 358 00da EC010000 		.4byte	.LASF16
  359 00de 01       		.byte	0x1
  360 00df 49       		.byte	0x49
  361 00e0 00000000 		.4byte	.LFB1
@@ -537,8 +537,8 @@ ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccySJ5ej.s 			page 1
  364 00e9 9C       		.byte	0x9c
  365 00ea FD000000 		.4byte	0xfd
  366 00ee 08       		.uleb128 0x8
- 367 00ef 1A010000 		.4byte	.LASF18
-ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccySJ5ej.s 			page 10
+ 367 00ef C8000000 		.4byte	.LASF18
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccSfclYR.s 			page 10
 
 
  368 00f3 01       		.byte	0x1
@@ -549,7 +549,7 @@ ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccySJ5ej.s 			page 1
  373 00fb 77       		.sleb128 -9
  374 00fc 00       		.byte	0
  375 00fd 0A       		.uleb128 0xa
- 376 00fe 20020000 		.4byte	.LASF19
+ 376 00fe 1F020000 		.4byte	.LASF19
  377 0102 01       		.byte	0x1
  378 0103 61       		.byte	0x61
  379 0104 6B000000 		.4byte	0x6b
@@ -567,7 +567,7 @@ ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccySJ5ej.s 			page 1
  391 0125 01       		.uleb128 0x1
  392 0126 9C       		.byte	0x9c
  393 0127 0B       		.uleb128 0xb
- 394 0128 C9010000 		.4byte	.LASF21
+ 394 0128 C8010000 		.4byte	.LASF21
  395 012c 01       		.byte	0x1
  396 012d 8D       		.byte	0x8d
  397 012e 6B000000 		.4byte	0x6b
@@ -576,7 +576,7 @@ ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccySJ5ej.s 			page 1
  400 013a 01       		.uleb128 0x1
  401 013b 9C       		.byte	0x9c
  402 013c 09       		.uleb128 0x9
- 403 013d B7010000 		.4byte	.LASF23
+ 403 013d B6010000 		.4byte	.LASF23
  404 0141 01       		.byte	0x1
  405 0142 8F       		.byte	0x8f
  406 0143 6B000000 		.4byte	0x6b
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccySJ5ej.s 			page 1
  422 0008 0E       		.uleb128 0xe
  423 0009 1B       		.uleb128 0x1b
  424 000a 0E       		.uleb128 0xe
-ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccySJ5ej.s 			page 11
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccSfclYR.s 			page 11
 
 
  425 000b 55       		.uleb128 0x55
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccySJ5ej.s 			page 1
  479 0041 00       		.byte	0
  480 0042 00       		.byte	0
  481 0043 06       		.uleb128 0x6
-ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccySJ5ej.s 			page 12
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccSfclYR.s 			page 12
 
 
  482 0044 35       		.uleb128 0x35
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccySJ5ej.s 			page 1
  536 007b 0B       		.uleb128 0xb
  537 007c 49       		.uleb128 0x49
  538 007d 13       		.uleb128 0x13
-ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccySJ5ej.s 			page 13
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccSfclYR.s 			page 13
 
 
  539 007e 02       		.uleb128 0x2
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccySJ5ej.s 			page 1
  593 00b6 00       		.byte	0
  594              		.section	.debug_aranges,"",%progbits
  595 0000 3C000000 		.4byte	0x3c
-ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccySJ5ej.s 			page 14
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccSfclYR.s 			page 14
 
 
  596 0004 0200     		.2byte	0x2
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccySJ5ej.s 			page 1
  638 003a 76616C75 		.ascii	"value\000"
  638      6500
  639              	.LASF11:
-ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccySJ5ej.s 			page 15
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccSfclYR.s 			page 15
 
 
  640 0040 666C6F61 		.ascii	"float\000"
@@ -875,96 +875,96 @@ ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccySJ5ej.s 			page 1
  653              	.LASF10:
  654 009d 75696E74 		.ascii	"uint32\000"
  654      333200
- 655              	.LASF26:
- 656 00a4 433A5C55 		.ascii	"C:\\Users\\Jae Lee\\Documents\\GitHub\\Arm\\arm_con"
- 656      73657273 
- 656      5C4A6165 
- 656      204C6565 
- 656      5C446F63 
- 657 00d1 74726F6C 		.ascii	"troller_v2\\arm_controller_v2.1.cydsn\000"
- 657      6C65725F 
- 657      76325C61 
- 657      726D5F63 
- 657      6F6E7472 
- 658              	.LASF8:
- 659 00f6 756E7369 		.ascii	"unsigned int\000"
- 659      676E6564 
- 659      20696E74 
- 659      00
- 660              	.LASF7:
- 661 0103 6C6F6E67 		.ascii	"long long unsigned int\000"
- 661      206C6F6E 
- 661      6720756E 
- 661      7369676E 
- 661      65642069 
- 662              	.LASF18:
-ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccySJ5ej.s 			page 16
+ 655              	.LASF8:
+ 656 00a4 756E7369 		.ascii	"unsigned int\000"
+ 656      676E6564 
+ 656      20696E74 
+ 656      00
+ 657              	.LASF7:
+ 658 00b1 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 658      206C6F6E 
+ 658      6720756E 
+ 658      7369676E 
+ 658      65642069 
+ 659              	.LASF18:
+ 660 00c8 6D6F6465 		.ascii	"mode\000"
+ 660      00
+ 661              	.LASF15:
+ 662 00cd 73656E73 		.ascii	"sens_hygro_Write\000"
+ 662      5F687967 
+ 662      726F5F57 
+ 662      72697465 
+ 662      00
+ 663              	.LASF26:
+ 664 00de 433A5C55 		.ascii	"C:\\Users\\Samuel\\Documents\\GitHub\\Arm\\arm_cont"
+ 664      73657273 
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccSfclYR.s 			page 16
 
 
- 663 011a 6D6F6465 		.ascii	"mode\000"
- 663      00
- 664              	.LASF15:
- 665 011f 73656E73 		.ascii	"sens_hygro_Write\000"
- 665      5F687967 
- 665      726F5F57 
- 665      72697465 
- 665      00
+ 664      5C53616D 
+ 664      75656C5C 
+ 664      446F6375 
+ 665 010b 726F6C6C 		.ascii	"roller_v2\\arm_controller_v2.1.cydsn\000"
+ 665      65725F76 
+ 665      325C6172 
+ 665      6D5F636F 
+ 665      6E74726F 
  666              	.LASF24:
- 667 0130 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
+ 667 012f 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
  667      4320342E 
  667      382E3420 
  667      32303134 
  667      30353236 
- 668 0163 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m0 -mthumb -g -O"
+ 668 0162 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m0 -mthumb -g -O"
  668      20726576 
  668      6973696F 
  668      6E203231 
  668      31333538 
- 669 0196 30202D73 		.ascii	"0 -std=gnu99 -ffunction-sections\000"
+ 669 0195 30202D73 		.ascii	"0 -std=gnu99 -ffunction-sections\000"
  669      74643D67 
  669      6E753939 
  669      202D6666 
  669      756E6374 
  670              	.LASF23:
- 671 01b7 6D61736B 		.ascii	"maskedStatus\000"
+ 671 01b6 6D61736B 		.ascii	"maskedStatus\000"
  671      65645374 
  671      61747573 
  671      00
  672              	.LASF13:
- 673 01c4 63686172 		.ascii	"char\000"
+ 673 01c3 63686172 		.ascii	"char\000"
  673      00
  674              	.LASF21:
- 675 01c9 73656E73 		.ascii	"sens_hygro_ClearInterrupt\000"
+ 675 01c8 73656E73 		.ascii	"sens_hygro_ClearInterrupt\000"
  675      5F687967 
  675      726F5F43 
  675      6C656172 
  675      496E7465 
  676              	.LASF2:
- 677 01e3 73686F72 		.ascii	"short int\000"
+ 677 01e2 73686F72 		.ascii	"short int\000"
  677      7420696E 
  677      7400
  678              	.LASF16:
- 679 01ed 73656E73 		.ascii	"sens_hygro_SetDriveMode\000"
+ 679 01ec 73656E73 		.ascii	"sens_hygro_SetDriveMode\000"
  679      5F687967 
  679      726F5F53 
  679      65744472 
  679      6976654D 
  680              	.LASF9:
- 681 0205 75696E74 		.ascii	"uint8\000"
+ 681 0204 75696E74 		.ascii	"uint8\000"
  681      3800
  682              	.LASF4:
- 683 020b 6C6F6E67 		.ascii	"long int\000"
+ 683 020a 6C6F6E67 		.ascii	"long int\000"
  683      20696E74 
  683      00
  684              	.LASF0:
- 685 0214 7369676E 		.ascii	"signed char\000"
-ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccySJ5ej.s 			page 17
+ 685 0213 7369676E 		.ascii	"signed char\000"
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccSfclYR.s 			page 17
 
 
  685      65642063 
  685      68617200 
  686              	.LASF19:
- 687 0220 73656E73 		.ascii	"sens_hygro_Read\000"
+ 687 021f 73656E73 		.ascii	"sens_hygro_Read\000"
  687      5F687967 
  687      726F5F52 
  687      65616400 

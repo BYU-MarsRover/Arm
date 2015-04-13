@@ -1,6 +1,6 @@
 -- Project:   arm_controller_v2.1
--- Generated: 04/11/2015 21:19:06
--- PSoC Creator  3.1
+-- Generated: 04/11/2015 21:31:32
+-- PSoC Creator  3.1 Component Pack 1
 
 ENTITY \arm_controller_v2.1\ IS
     PORT(

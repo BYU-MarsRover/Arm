@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccwgeWg4.s 			page 1
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccddTiE2.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccwgeWg4.s 			page 1
   26:.\Generated_Source\PSoC4/Timer_1_PM.c **** ********************************************************************************
   27:.\Generated_Source\PSoC4/Timer_1_PM.c **** *
   28:.\Generated_Source\PSoC4/Timer_1_PM.c **** * Summary:
-ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccwgeWg4.s 			page 2
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccddTiE2.s 			page 2
 
 
   29:.\Generated_Source\PSoC4/Timer_1_PM.c **** *  All configuration registers are retention. Nothing to save here.
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccwgeWg4.s 			page 1
   53              		.loc 1 59 0
   54              		.cfi_startproc
   55 0000 80B5     		push	{r7, lr}
-ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccwgeWg4.s 			page 3
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccddTiE2.s 			page 3
 
 
   56              		.cfi_def_cfa_offset 8
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccwgeWg4.s 			page 1
   98              		.thumb_func
   99              		.type	Timer_1_RestoreConfig, %function
  100              	Timer_1_RestoreConfig:
-ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccwgeWg4.s 			page 4
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccddTiE2.s 			page 4
 
 
  101              	.LFB2:
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccwgeWg4.s 			page 1
  102:.\Generated_Source\PSoC4/Timer_1_PM.c **** *  None
  103:.\Generated_Source\PSoC4/Timer_1_PM.c **** *
  104:.\Generated_Source\PSoC4/Timer_1_PM.c **** * Return:
-ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccwgeWg4.s 			page 5
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccddTiE2.s 			page 5
 
 
  105:.\Generated_Source\PSoC4/Timer_1_PM.c **** *  None
@@ -293,12 +293,12 @@ ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccwgeWg4.s 			page 1
  162 0006 00000000 		.4byte	.Ldebug_abbrev0
  163 000a 04       		.byte	0x4
  164 000b 01       		.uleb128 0x1
- 165 000c 10010000 		.4byte	.LASF21
+ 165 000c 35010000 		.4byte	.LASF21
  166 0010 01       		.byte	0x1
- 167 0011 B7000000 		.4byte	.LASF22
- 168 0015 97010000 		.4byte	.LASF23
+ 167 0011 BC010000 		.4byte	.LASF22
+ 168 0015 B1000000 		.4byte	.LASF23
  169 0019 00000000 		.4byte	.Ldebug_ranges0+0
-ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccwgeWg4.s 			page 6
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccddTiE2.s 			page 6
 
 
  170 001d 00000000 		.4byte	0
@@ -306,23 +306,23 @@ ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccwgeWg4.s 			page 1
  172 0025 02       		.uleb128 0x2
  173 0026 01       		.byte	0x1
  174 0027 06       		.byte	0x6
- 175 0028 F6000000 		.4byte	.LASF0
+ 175 0028 1B010000 		.4byte	.LASF0
  176 002c 02       		.uleb128 0x2
  177 002d 01       		.byte	0x1
  178 002e 08       		.byte	0x8
- 179 002f 02010000 		.4byte	.LASF1
+ 179 002f 27010000 		.4byte	.LASF1
  180 0033 02       		.uleb128 0x2
  181 0034 02       		.byte	0x2
  182 0035 05       		.byte	0x5
- 183 0036 FF010000 		.4byte	.LASF2
+ 183 0036 FE010000 		.4byte	.LASF2
  184 003a 02       		.uleb128 0x2
  185 003b 02       		.byte	0x2
  186 003c 07       		.byte	0x7
- 187 003d E3000000 		.4byte	.LASF3
+ 187 003d 08010000 		.4byte	.LASF3
  188 0041 02       		.uleb128 0x2
  189 0042 04       		.byte	0x4
  190 0043 05       		.byte	0x5
- 191 0044 A7000000 		.4byte	.LASF4
+ 191 0044 A1000000 		.4byte	.LASF4
  192 0048 02       		.uleb128 0x2
  193 0049 04       		.byte	0x4
  194 004a 07       		.byte	0x7
@@ -356,20 +356,20 @@ ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccwgeWg4.s 			page 1
  222 0081 02       		.uleb128 0x2
  223 0082 04       		.byte	0x4
  224 0083 04       		.byte	0x4
- 225 0084 7A000000 		.4byte	.LASF11
+ 225 0084 E2010000 		.4byte	.LASF11
  226 0088 02       		.uleb128 0x2
-ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccwgeWg4.s 			page 7
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccddTiE2.s 			page 7
 
 
  227 0089 08       		.byte	0x8
  228 008a 04       		.byte	0x4
- 229 008b B0000000 		.4byte	.LASF12
+ 229 008b AA000000 		.4byte	.LASF12
  230 008f 02       		.uleb128 0x2
  231 0090 01       		.byte	0x1
  232 0091 08       		.byte	0x8
- 233 0092 A2000000 		.4byte	.LASF13
+ 233 0092 9C000000 		.4byte	.LASF13
  234 0096 05       		.uleb128 0x5
- 235 0097 DD000000 		.4byte	.LASF14
+ 235 0097 02010000 		.4byte	.LASF14
  236 009b 02       		.byte	0x2
  237 009c 4D01     		.2byte	0x14d
  238 009e A2000000 		.4byte	0xa2
@@ -378,7 +378,7 @@ ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccwgeWg4.s 			page 1
  241 00a7 02       		.uleb128 0x2
  242 00a8 04       		.byte	0x4
  243 00a9 07       		.byte	0x7
- 244 00aa 1F020000 		.4byte	.LASF15
+ 244 00aa 1E020000 		.4byte	.LASF15
  245 00ae 07       		.uleb128 0x7
  246 00af 01       		.byte	0x1
  247 00b0 03       		.byte	0x3
@@ -392,12 +392,12 @@ ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccwgeWg4.s 			page 1
  255 00c1 00       		.byte	0
  256 00c2 00       		.byte	0
  257 00c3 04       		.uleb128 0x4
- 258 00c4 09020000 		.4byte	.LASF16
+ 258 00c4 08020000 		.4byte	.LASF16
  259 00c8 03       		.byte	0x3
  260 00c9 24       		.byte	0x24
  261 00ca AE000000 		.4byte	0xae
  262 00ce 09       		.uleb128 0x9
- 263 00cf 80000000 		.4byte	.LASF17
+ 263 00cf 7A000000 		.4byte	.LASF17
  264 00d3 01       		.byte	0x1
  265 00d4 26       		.byte	0x26
  266 00d5 00000000 		.4byte	.LFB0
@@ -413,18 +413,18 @@ ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccwgeWg4.s 			page 1
  276 00ee 01       		.uleb128 0x1
  277 00ef 9C       		.byte	0x9c
  278 00f0 09       		.uleb128 0x9
- 279 00f1 E9010000 		.4byte	.LASF19
+ 279 00f1 E8010000 		.4byte	.LASF19
  280 00f5 01       		.byte	0x1
  281 00f6 58       		.byte	0x58
  282 00f7 00000000 		.4byte	.LFB2
  283 00fb 08000000 		.4byte	.LFE2-.LFB2
-ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccwgeWg4.s 			page 8
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccddTiE2.s 			page 8
 
 
  284 00ff 01       		.uleb128 0x1
  285 0100 9C       		.byte	0x9c
  286 0101 0A       		.uleb128 0xa
- 287 0102 93000000 		.4byte	.LASF20
+ 287 0102 8D000000 		.4byte	.LASF20
  288 0106 01       		.byte	0x1
  289 0107 6C       		.byte	0x6c
  290 0108 00000000 		.4byte	.LFB3
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccwgeWg4.s 			page 1
  338 0021 0B       		.uleb128 0xb
  339 0022 0B       		.uleb128 0xb
  340 0023 3E       		.uleb128 0x3e
-ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccwgeWg4.s 			page 9
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccddTiE2.s 			page 9
 
 
  341 0024 0B       		.uleb128 0xb
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccwgeWg4.s 			page 1
  395 005a 03       		.uleb128 0x3
  396 005b 0E       		.uleb128 0xe
  397 005c 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccwgeWg4.s 			page 10
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccddTiE2.s 			page 10
 
 
  398 005d 0B       		.uleb128 0xb
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccwgeWg4.s 			page 1
  452 0095 00       		.byte	0
  453 0096 0B       		.uleb128 0xb
  454 0097 34       		.uleb128 0x34
-ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccwgeWg4.s 			page 11
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccddTiE2.s 			page 11
 
 
  455 0098 00       		.byte	0
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccwgeWg4.s 			page 1
  503      6720696E 
  503      7400
  504              	.LASF10:
-ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccwgeWg4.s 			page 12
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccddTiE2.s 			page 12
 
 
  505 000e 75696E74 		.ascii	"uint32\000"
@@ -697,105 +697,105 @@ ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccwgeWg4.s 			page 1
  519      6720756E 
  519      7369676E 
  519      65642069 
- 520              	.LASF11:
- 521 007a 666C6F61 		.ascii	"float\000"
- 521      7400
- 522              	.LASF17:
- 523 0080 54696D65 		.ascii	"Timer_1_SaveConfig\000"
+ 520              	.LASF17:
+ 521 007a 54696D65 		.ascii	"Timer_1_SaveConfig\000"
+ 521      725F315F 
+ 521      53617665 
+ 521      436F6E66 
+ 521      696700
+ 522              	.LASF20:
+ 523 008d 54696D65 		.ascii	"Timer_1_Wakeup\000"
  523      725F315F 
- 523      53617665 
- 523      436F6E66 
- 523      696700
- 524              	.LASF20:
- 525 0093 54696D65 		.ascii	"Timer_1_Wakeup\000"
- 525      725F315F 
- 525      57616B65 
- 525      757000
- 526              	.LASF13:
- 527 00a2 63686172 		.ascii	"char\000"
+ 523      57616B65 
+ 523      757000
+ 524              	.LASF13:
+ 525 009c 63686172 		.ascii	"char\000"
+ 525      00
+ 526              	.LASF4:
+ 527 00a1 6C6F6E67 		.ascii	"long int\000"
+ 527      20696E74 
  527      00
- 528              	.LASF4:
- 529 00a7 6C6F6E67 		.ascii	"long int\000"
- 529      20696E74 
- 529      00
-ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccwgeWg4.s 			page 13
+ 528              	.LASF12:
+ 529 00aa 646F7562 		.ascii	"double\000"
+ 529      6C6500
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccddTiE2.s 			page 13
 
 
- 530              	.LASF12:
- 531 00b0 646F7562 		.ascii	"double\000"
- 531      6C6500
- 532              	.LASF22:
- 533 00b7 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\Timer_1_PM.c\000"
- 533      6E657261 
- 533      7465645F 
- 533      536F7572 
- 533      63655C50 
- 534              	.LASF14:
- 535 00dd 72656733 		.ascii	"reg32\000"
- 535      3200
- 536              	.LASF3:
- 537 00e3 73686F72 		.ascii	"short unsigned int\000"
- 537      7420756E 
- 537      7369676E 
- 537      65642069 
- 537      6E7400
- 538              	.LASF0:
- 539 00f6 7369676E 		.ascii	"signed char\000"
- 539      65642063 
- 539      68617200 
- 540              	.LASF1:
- 541 0102 756E7369 		.ascii	"unsigned char\000"
- 541      676E6564 
- 541      20636861 
- 541      7200
- 542              	.LASF21:
- 543 0110 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
- 543      4320342E 
- 543      382E3420 
- 543      32303134 
- 543      30353236 
- 544 0143 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m0 -mthumb -g -O"
- 544      20726576 
- 544      6973696F 
- 544      6E203231 
- 544      31333538 
- 545 0176 30202D73 		.ascii	"0 -std=gnu99 -ffunction-sections\000"
- 545      74643D67 
- 545      6E753939 
- 545      202D6666 
- 545      756E6374 
- 546              	.LASF23:
- 547 0197 433A5C55 		.ascii	"C:\\Users\\Jae Lee\\Documents\\GitHub\\Arm\\arm_con"
- 547      73657273 
- 547      5C4A6165 
- 547      204C6565 
- 547      5C446F63 
- 548 01c4 74726F6C 		.ascii	"troller_v2\\arm_controller_v2.1.cydsn\000"
- 548      6C65725F 
- 548      76325C61 
- 548      726D5F63 
- 548      6F6E7472 
+ 530              	.LASF23:
+ 531 00b1 433A5C55 		.ascii	"C:\\Users\\Samuel\\Documents\\GitHub\\Arm\\arm_cont"
+ 531      73657273 
+ 531      5C53616D 
+ 531      75656C5C 
+ 531      446F6375 
+ 532 00de 726F6C6C 		.ascii	"roller_v2\\arm_controller_v2.1.cydsn\000"
+ 532      65725F76 
+ 532      325C6172 
+ 532      6D5F636F 
+ 532      6E74726F 
+ 533              	.LASF14:
+ 534 0102 72656733 		.ascii	"reg32\000"
+ 534      3200
+ 535              	.LASF3:
+ 536 0108 73686F72 		.ascii	"short unsigned int\000"
+ 536      7420756E 
+ 536      7369676E 
+ 536      65642069 
+ 536      6E7400
+ 537              	.LASF0:
+ 538 011b 7369676E 		.ascii	"signed char\000"
+ 538      65642063 
+ 538      68617200 
+ 539              	.LASF1:
+ 540 0127 756E7369 		.ascii	"unsigned char\000"
+ 540      676E6564 
+ 540      20636861 
+ 540      7200
+ 541              	.LASF21:
+ 542 0135 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
+ 542      4320342E 
+ 542      382E3420 
+ 542      32303134 
+ 542      30353236 
+ 543 0168 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m0 -mthumb -g -O"
+ 543      20726576 
+ 543      6973696F 
+ 543      6E203231 
+ 543      31333538 
+ 544 019b 30202D73 		.ascii	"0 -std=gnu99 -ffunction-sections\000"
+ 544      74643D67 
+ 544      6E753939 
+ 544      202D6666 
+ 544      756E6374 
+ 545              	.LASF22:
+ 546 01bc 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\Timer_1_PM.c\000"
+ 546      6E657261 
+ 546      7465645F 
+ 546      536F7572 
+ 546      63655C50 
+ 547              	.LASF11:
+ 548 01e2 666C6F61 		.ascii	"float\000"
+ 548      7400
  549              	.LASF19:
- 550 01e9 54696D65 		.ascii	"Timer_1_RestoreConfig\000"
+ 550 01e8 54696D65 		.ascii	"Timer_1_RestoreConfig\000"
  550      725F315F 
-ARM GAS  C:\Users\JAELEE~1\AppData\Local\Temp\ccwgeWg4.s 			page 14
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccddTiE2.s 			page 14
 
 
  550      52657374 
  550      6F726543 
  550      6F6E6669 
  551              	.LASF2:
- 552 01ff 73686F72 		.ascii	"short int\000"
+ 552 01fe 73686F72 		.ascii	"short int\000"
  552      7420696E 
  552      7400
  553              	.LASF16:
- 554 0209 54696D65 		.ascii	"Timer_1_BACKUP_STRUCT\000"
+ 554 0208 54696D65 		.ascii	"Timer_1_BACKUP_STRUCT\000"
  554      725F315F 
  554      4241434B 
  554      55505F53 
  554      54525543 
  555              	.LASF15:
- 556 021f 73697A65 		.ascii	"sizetype\000"
+ 556 021e 73697A65 		.ascii	"sizetype\000"
  556      74797065 
  556      00
  557              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.4 20140526 (release) [ARM/embedded-4_8-br

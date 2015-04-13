@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="arm_controller_v2\arm_controller_v2.1\Header Files\main.h">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="arm_controller_v2\arm_controller_v2.1\Source Files\main.c">
 <ExpandedNodeIds>
 <v>arm_controller_v2</v>
 <v>arm_controller_v2\arm_controller_v2.1</v>
@@ -188,31 +188,6 @@
 <v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\UART_1_tx\UART_1_tx.c</v>
 <v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\UART_1_tx\UART_1_tx.h</v>
 <v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\UART_1_tx\UART_1_tx_aliases.h</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\UART_TEST</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\UART_TEST\UART_TEST.c</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\UART_TEST\UART_TEST.h</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\UART_TEST\UART_TEST_BOOT.c</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\UART_TEST\UART_TEST_BOOT.h</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\UART_TEST\UART_TEST_PINS.h</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\UART_TEST\UART_TEST_PM.c</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\UART_TEST\UART_TEST_PVT.h</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\UART_TEST\UART_TEST_SPI_UART.c</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\UART_TEST\UART_TEST_SPI_UART.h</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\UART_TEST\UART_TEST_SPI_UART_INT.c</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\UART_TEST\UART_TEST_SPI_UART_PVT.h</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\UART_TEST\UART_TEST_UART.c</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\UART_TEST\UART_TEST_UART_BOOT.c</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\UART_TEST_rx</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\UART_TEST_rx\UART_TEST_rx.c</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\UART_TEST_rx\UART_TEST_rx.h</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\UART_TEST_rx\UART_TEST_rx_aliases.h</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\UART_TEST_SCBCLK</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\UART_TEST_SCBCLK\UART_TEST_SCBCLK.c</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\UART_TEST_SCBCLK\UART_TEST_SCBCLK.h</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\UART_TEST_tx</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\UART_TEST_tx\UART_TEST_tx.c</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\UART_TEST_tx\UART_TEST_tx.h</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\UART_TEST_tx\UART_TEST_tx_aliases.h</v>
 <v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\WIZ_INT</v>
 <v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\WIZ_INT\WIZ_INT.c</v>
 <v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\WIZ_INT\WIZ_INT.h</v>
@@ -337,6 +312,15 @@
 <v>arm_controller_v2\Programmertest\Generated_Source\PSoC4\project.h</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
+<v>arm_controller_v2</v>
+<v>arm_controller_v2\arm_controller_v2.1</v>
+<v>arm_controller_v2\arm_controller_v2.1\TopDesign</v>
+<v>arm_controller_v2\arm_controller_v2.1\arm_controller_v2.1.cydwr</v>
+<v>arm_controller_v2\arm_controller_v2.1\Header Files</v>
+<v>arm_controller_v2\arm_controller_v2.1\Header Files\main.h</v>
+<v>arm_controller_v2\arm_controller_v2.1\Header Files\spi.h</v>
+<v>arm_controller_v2\arm_controller_v2.1\Header Files\wiznet5500.h</v>
+<v>arm_controller_v2\arm_controller_v2.1\Source Files</v>
 <v>arm_controller_v2\arm_controller_v2.1\Source Files\main.c</v>
 <v>arm_controller_v2\arm_controller_v2.1\Source Files\spi.c</v>
 <v>arm_controller_v2\arm_controller_v2.1\Source Files\wiznet5500.c</v>
@@ -361,15 +345,6 @@
 <v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\baseAzimuth\baseAzimuth.c</v>
 <v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\baseAzimuth\baseAzimuth.h</v>
 <v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\baseAzimuth\baseAzimuth_aliases.h</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Clock_counter</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Clock_counter\Clock_counter.c</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Clock_counter\Clock_counter.h</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Clock_pwm</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Clock_pwm\Clock_pwm.c</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Clock_pwm\Clock_pwm.h</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\cy_boot</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\cy_boot\cm0gcc.ld</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\cy_boot\Cm0Iar.icf</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="arm_controller_v2\arm_controller_v2.1">
@@ -463,16 +438,6 @@
 <v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\UART_1_tx.lst</v>
 <v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\UART_1_UART.lst</v>
 <v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\UART_1_UART_BOOT.lst</v>
-<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\UART_TEST.lst</v>
-<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\UART_TEST_BOOT.lst</v>
-<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\UART_TEST_PM.lst</v>
-<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\UART_TEST_rx.lst</v>
-<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\UART_TEST_SCBCLK.lst</v>
-<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\UART_TEST_SPI_UART.lst</v>
-<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\UART_TEST_SPI_UART_INT.lst</v>
-<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\UART_TEST_tx.lst</v>
-<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\UART_TEST_UART.lst</v>
-<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\UART_TEST_UART_BOOT.lst</v>
 <v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\WIZ_INT.lst</v>
 <v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\WIZ_RDY.lst</v>
 <v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\WIZ_RST.lst</v>

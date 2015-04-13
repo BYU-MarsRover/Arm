@@ -121,6 +121,7 @@ uint16 CalibrationShoulder(uint16 velocity)
  
 	for(i = 0, average = 0; i < CYCLES; i++)
 	{
+        LED_Write(0);
 		// Move till stop switch presses down
         if(velocity < 1500)
         {
@@ -139,7 +140,7 @@ uint16 CalibrationShoulder(uint16 velocity)
         else
         {
             SHLDR_PWM_WriteCompare(velocity);
-            LED_Write(1);
+            //LED_Write(1);
         }
         SHLDR_PWM_WriteCompare(NEUTRAL);
         LED_Write(1); 
@@ -1269,8 +1270,8 @@ void initialize()
     LED_Write(0);
     
     /*-------------call the initial calibration funtion here------------*/
-    //SHOULDER_UPPER_BOUND = CalibrationShoulder(1700);
-    //SHOULDER_LOWER_BOUND = CalibrationShoulder(1300);
+    SHOULDER_UPPER_BOUND = CalibrationShoulder(1700);
+    SHOULDER_LOWER_BOUND = CalibrationShoulder(1300);
     ELBOW_UPPER_BOUND = CalibrationElbow(1700);
     ELBOW_LOWER_BOUND = CalibrationElbow(1300);
     

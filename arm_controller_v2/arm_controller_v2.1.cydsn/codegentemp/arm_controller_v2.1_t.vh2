@@ -1,6 +1,6 @@
--- Project:   C:\Users\Jae Lee\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\arm_controller_v2.1.cyprj
--- Generated: 04/11/2015 21:19:08
--- PSoC Creator  3.1
+-- Project:   C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\arm_controller_v2.1.cyprj
+-- Generated: 04/11/2015 21:31:37
+-- PSoC Creator  3.1 Component Pack 1
 
 ENTITY \arm_controller_v2.1\ IS
     PORT(
