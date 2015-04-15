@@ -491,6 +491,10 @@ uint8 wristTilt(uint8 WT_arr_cspot, uint16* WT_array)
             
         case tilt_wait:
             break;
+                        
+        default:
+            wristTilt_state = tilt_start;
+            break;
     }
     
     switch(wristTilt_state){ //transitions
@@ -522,6 +526,10 @@ uint8 wristTilt(uint8 WT_arr_cspot, uint16* WT_array)
             {
                 wristTilt_state = tilt_wait; 
             }
+            break;
+            
+        default:
+            wristTilt_state = tilt_start;
             break;
     }  
     return WT_arr_cspot;
@@ -597,6 +605,10 @@ uint8 wristRotate(uint8 WR_arr_cspot, uint16* WR_array)
             
         case rotate_wait:
             break;
+                        
+        default:
+            wristRotate_state = rotate_start;
+            break;
     }
     
     switch(wristRotate_state){ //transitions
@@ -628,6 +640,10 @@ uint8 wristRotate(uint8 WR_arr_cspot, uint16* WR_array)
             {
                 wristRotate_state = rotate_wait;
             }
+            break;
+            
+        default:
+            wristRotate_state = rotate_start;
             break;
     }  
     return WR_arr_cspot;
@@ -778,6 +794,10 @@ uint8 elbow(uint8 elbw_arr_cspot, uint16* elbow_array)
                 ELBW_PWM_WriteCompare(1500);
             }
             break;
+                        
+        default:
+            elbow_state = elbw_start;
+            break;
     }
     
     switch(elbow_state){ //transitions
@@ -809,6 +829,10 @@ uint8 elbow(uint8 elbw_arr_cspot, uint16* elbow_array)
             {
                 elbow_state = elbw_wait; 
             }
+            break;
+            
+        default:
+            elbow_state = elbw_start;
             break;
     }  
     return elbw_arr_cspot;
@@ -959,6 +983,10 @@ uint8 shoulder(uint8 shldr_arr_cspot, uint16* shoulder_array)
                 SHLDR_PWM_WriteCompare(1500);
             }
             break;
+                        
+        default:
+            shoulder_state = shldr_start;
+            break;
     }
     
     switch(shoulder_state){ //transitions
@@ -990,6 +1018,10 @@ uint8 shoulder(uint8 shldr_arr_cspot, uint16* shoulder_array)
             {
                 shoulder_state = shldr_wait; 
             }
+            break;
+            
+        default:
+            shoulder_state = shldr_start;
             break;
     }  
     return shldr_arr_cspot;
@@ -1060,6 +1092,10 @@ uint8 baseAzimuth(uint8 BA_arr_cspot, uint16* baseAz_array)
             
         case BA_wait:
             break;
+            
+        default:
+            baseAzimuth_state = BA_start;
+            break;
     }
     
     switch(baseAzimuth_state){ //transitions
@@ -1091,6 +1127,10 @@ uint8 baseAzimuth(uint8 BA_arr_cspot, uint16* baseAz_array)
             {
                 baseAzimuth_state = BA_wait; 
             }
+            break;
+            
+        default:
+            baseAzimuth_state = BA_start;
             break;
     }  
     return BA_arr_cspot;
@@ -1127,6 +1167,10 @@ void effector()
             
         case eff_wait:
             break;
+        
+        default:
+            effector_state = eff_start;
+            break;
     }
     
     switch(effector_state){ //transitions
@@ -1159,6 +1203,10 @@ void effector()
                 effector_state = eff_wait; 
             }
             break;
+        
+        default:
+            effector_state = eff_start;
+            break;
     }    
 }
 
@@ -1181,6 +1229,10 @@ void phSensor()
             break;
             
         case ph_wait:
+            break;
+        
+        default:
+            phSensor_state = ph_start;
             break;
     }
     
@@ -1206,6 +1258,10 @@ void phSensor()
                 phSensor_state = ph_execute;
             else
                 phSensor_state = ph_wait; 
+            break;
+            
+        default:
+            phSensor_state = ph_start;
             break;
     }    
 }
@@ -1238,9 +1294,9 @@ void initialize()
     elbow_state = elbw_start;
     effector_state = eff_start;
     
-    for(int i = 0; i < FEEDBACK_ARRAY_SIZE; i++){
-        feedback_array[i] = 0;   
-    }
+//    for(int i = 0; i < FEEDBACK_ARRAY_SIZE; i++){
+//        feedback_array[i] = 0;   
+//    }
     
     //start all of our components
     SPIM_1_Start();

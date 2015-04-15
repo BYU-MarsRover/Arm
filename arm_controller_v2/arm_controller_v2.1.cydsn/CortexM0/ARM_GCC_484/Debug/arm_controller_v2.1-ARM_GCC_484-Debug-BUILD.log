@@ -1,4 +1,4 @@
---------------- Build Started: 04/11/2015 22:27:49 Project: arm_controller_v2.1, Configuration: ARM GCC 4.8.4 Debug ---------------
+--------------- Build Started: 04/14/2015 21:51:07 Project: arm_controller_v2.1, Configuration: ARM GCC 4.8.4 Debug ---------------
 The code generation step is up to date.
 arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -I.\Generated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_484\Debug/main.lst -g -D DEBUG -Wall -ffunction-sections -O0 -std=gnu99 -c .\main.c -o .\CortexM0\ARM_GCC_484\Debug\main.o
 .\main.c: In function 'fill_data_array':
@@ -15,6 +15,6 @@ arm-none-eabi-ar.exe: creating .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.
 arm-none-eabi-gcc.exe -Wl,--start-group -o .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.elf .\CortexM0\ARM_GCC_484\Debug\main.o .\CortexM0\ARM_GCC_484\Debug\spi.o .\CortexM0\ARM_GCC_484\Debug\wiznet5500.o .\CortexM0\ARM_GCC_484\Debug\cymetadata.o .\CortexM0\ARM_GCC_484\Debug\Cm0Start.o .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a "C:\Program Files (x86)\Cypress\PSoC Creator\3.1\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CortexM0\ARM_GCC_484\Debug\CyComponentLibrary.a" -mthumb -march=armv6-m -Wl,-Map,.\CortexM0\ARM_GCC_484\Debug/arm_controller_v2.1.map -T .\Generated_Source\PSoC4\cm0gcc.ld -g -specs=nano.specs "-u _printf_float" "" -Wl,--gc-sections -Wl,--end-group
 cyelftool.exe -C C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.elf --flash_size 32768 --flash_row_size 128
 cyelftool.exe -S C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.elf
-Flash used: 15494 of 32768 bytes (47.3 %).
+Flash used: 15646 of 32768 bytes (47.7 %).
 SRAM used: 1564 of 4096 bytes (38.2 %). Stack: 1024 bytes. Heap: 128 bytes.
---------------- Build Succeeded: 04/11/2015 22:27:53 ---------------
+--------------- Build Succeeded: 04/14/2015 21:51:15 ---------------
