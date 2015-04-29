@@ -1273,6 +1273,7 @@ void initialize()
     EFFECTOR_PWM_Start();
     ADC_Start();
     ADC_StartConvert();
+    //start arduino
     
     wiznetInit(ownIpAddr, dstIpAddr, udpPort);
     
@@ -1284,13 +1285,22 @@ void initialize()
     ELBW_PWM_WriteCompare(1500); 
     SHLDR_PWM_WriteCompare(1500);
     CyDelay(3000);
-    LED_Write(0);
     
     //initial calibration funtions for elbow and shoulder pots
     SHOULDER_UPPER_BOUND = CalibrationShoulder(1700);
     SHOULDER_LOWER_BOUND = CalibrationShoulder(1300);
+    uint16 starting_shldr_pos = SHOULDER_UPPER_BOUND;
+    uint16 feedback = potFeedback(SHOULDER_POT);
+    while(feedback < SHOULDER_UPPER_BOUND)
+    {
+        SHLDR_PWM_WriteCompare(1900);
+        feedback = potFeedback(SHOULDER_POT);
+    }
     ELBOW_UPPER_BOUND = CalibrationElbow(1700);
     ELBOW_LOWER_BOUND = CalibrationElbow(1300);
+    ELBW_PWM_WriteCompare(1700);
+    CyDelay(2000);
+    ELBW_PWM_WriteCompare(1500);
     
     //ISR stuff
     CyGlobalIntEnable;
@@ -1313,7 +1323,7 @@ int main()
     uint16 WR_array[WR_ARR_SIZE];
     
     uint8 fs_count = 0; //fail safe counter to check the interval between receiving packets
-    int16 temp_val = 1500; 
+    int16 temp_val = 1500; //do we need this still?
     
     initialize();
 
@@ -1359,6 +1369,7 @@ int main()
             WT_cspot = wristTilt(WT_cspot, WT_array);
             WR_cspot = wristRotate(WR_cspot, WR_array);
             effector();
+            //add arduino
             feedback_array[1] = (feedback_array[1] + 1);
             send_packet(0); //send feedback once every tick
             
