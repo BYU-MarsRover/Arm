@@ -66,22 +66,19 @@
   <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\shoulder.c" value="ARM_C_FILE;shoulder" />
   <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\shoulder.h" value="NONE;shoulder" />
   <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\shoulder_aliases.h" value="NONE;shoulder" />
-  <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\UART_1.c" value="ARM_C_FILE;UART_1" />
-  <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\UART_1.h" value="NONE;UART_1" />
-  <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\UART_1_SPI_UART.h" value="NONE;UART_1" />
-  <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\UART_1_SPI_UART.c" value="ARM_C_FILE;UART_1" />
-  <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\UART_1_SPI_UART_INT.c" value="ARM_C_FILE;UART_1" />
-  <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\UART_1_PM.c" value="ARM_C_FILE;UART_1" />
-  <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\UART_1_UART.c" value="ARM_C_FILE;UART_1" />
-  <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\UART_1_BOOT.c" value="ARM_C_FILE;UART_1" />
-  <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\UART_1_UART_BOOT.c" value="ARM_C_FILE;UART_1" />
-  <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\UART_1_PINS.h" value="NONE;UART_1" />
-  <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\UART_1_SPI_UART_PVT.h" value="NONE;UART_1" />
-  <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\UART_1_PVT.h" value="NONE;UART_1" />
-  <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\UART_1_BOOT.h" value="NONE;UART_1" />
-  <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\sens_hygro.c" value="ARM_C_FILE;sens_hygro" />
-  <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\sens_hygro.h" value="NONE;sens_hygro" />
-  <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\sens_hygro_aliases.h" value="NONE;sens_hygro" />
+  <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\Wrist_UART.c" value="ARM_C_FILE;Wrist_UART" />
+  <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\Wrist_UART.h" value="NONE;Wrist_UART" />
+  <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\Wrist_UART_SPI_UART.h" value="NONE;Wrist_UART" />
+  <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\Wrist_UART_SPI_UART.c" value="ARM_C_FILE;Wrist_UART" />
+  <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\Wrist_UART_SPI_UART_INT.c" value="ARM_C_FILE;Wrist_UART" />
+  <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\Wrist_UART_PM.c" value="ARM_C_FILE;Wrist_UART" />
+  <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\Wrist_UART_UART.c" value="ARM_C_FILE;Wrist_UART" />
+  <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\Wrist_UART_BOOT.c" value="ARM_C_FILE;Wrist_UART" />
+  <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\Wrist_UART_UART_BOOT.c" value="ARM_C_FILE;Wrist_UART" />
+  <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\Wrist_UART_PINS.h" value="NONE;Wrist_UART" />
+  <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\Wrist_UART_SPI_UART_PVT.h" value="NONE;Wrist_UART" />
+  <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\Wrist_UART_PVT.h" value="NONE;Wrist_UART" />
+  <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\Wrist_UART_BOOT.h" value="NONE;Wrist_UART" />
   <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\stop_elb_dn.c" value="ARM_C_FILE;stop_elb_dn" />
   <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\stop_elb_dn.h" value="NONE;stop_elb_dn" />
   <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\stop_elb_dn_aliases.h" value="NONE;stop_elb_dn" />
@@ -96,9 +93,6 @@
   <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\SPIM_1_PM.c" value="ARM_C_FILE;SPIM_1" />
   <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\SPIM_1_INT.c" value="ARM_C_FILE;SPIM_1" />
   <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\SPIM_1_PVT.h" value="NONE;SPIM_1" />
-  <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\sens_ph.c" value="ARM_C_FILE;sens_ph" />
-  <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\sens_ph.h" value="NONE;sens_ph" />
-  <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\sens_ph_aliases.h" value="NONE;sens_ph" />
   <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\stop_elb_up.c" value="ARM_C_FILE;stop_elb_up" />
   <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\stop_elb_up.h" value="NONE;stop_elb_up" />
   <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\stop_elb_up_aliases.h" value="NONE;stop_elb_up" />
@@ -117,20 +111,41 @@
   <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\effector_A.c" value="ARM_C_FILE;effector_A" />
   <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\effector_A.h" value="NONE;effector_A" />
   <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\effector_A_aliases.h" value="NONE;effector_A" />
+  <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\Arduino_UART.c" value="ARM_C_FILE;Arduino_UART" />
+  <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\Arduino_UART.h" value="NONE;Arduino_UART" />
+  <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\Arduino_UART_SPI_UART.h" value="NONE;Arduino_UART" />
+  <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\Arduino_UART_SPI_UART.c" value="ARM_C_FILE;Arduino_UART" />
+  <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\Arduino_UART_SPI_UART_INT.c" value="ARM_C_FILE;Arduino_UART" />
+  <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\Arduino_UART_PM.c" value="ARM_C_FILE;Arduino_UART" />
+  <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\Arduino_UART_UART.c" value="ARM_C_FILE;Arduino_UART" />
+  <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\Arduino_UART_BOOT.c" value="ARM_C_FILE;Arduino_UART" />
+  <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\Arduino_UART_UART_BOOT.c" value="ARM_C_FILE;Arduino_UART" />
+  <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\Arduino_UART_PINS.h" value="NONE;Arduino_UART" />
+  <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\Arduino_UART_SPI_UART_PVT.h" value="NONE;Arduino_UART" />
+  <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\Arduino_UART_PVT.h" value="NONE;Arduino_UART" />
+  <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\Arduino_UART_BOOT.h" value="NONE;Arduino_UART" />
   <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\ADC_IRQ.c" value="ARM_C_FILE;ADC_IRQ" />
   <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\ADC_IRQ.h" value="NONE;ADC_IRQ" />
   <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\ADC_intClock.c" value="ARM_C_FILE;ADC_intClock" />
   <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\ADC_intClock.h" value="NONE;ADC_intClock" />
-  <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\UART_1_SCBCLK.c" value="ARM_C_FILE;UART_1_SCBCLK" />
-  <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\UART_1_SCBCLK.h" value="NONE;UART_1_SCBCLK" />
-  <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\UART_1_tx.c" value="ARM_C_FILE;UART_1_tx" />
-  <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\UART_1_tx.h" value="NONE;UART_1_tx" />
-  <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\UART_1_tx_aliases.h" value="NONE;UART_1_tx" />
-  <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\UART_1_rx.c" value="ARM_C_FILE;UART_1_rx" />
-  <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\UART_1_rx.h" value="NONE;UART_1_rx" />
-  <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\UART_1_rx_aliases.h" value="NONE;UART_1_rx" />
+  <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\Wrist_UART_SCBCLK.c" value="ARM_C_FILE;Wrist_UART_SCBCLK" />
+  <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\Wrist_UART_SCBCLK.h" value="NONE;Wrist_UART_SCBCLK" />
+  <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\Wrist_UART_tx.c" value="ARM_C_FILE;Wrist_UART_tx" />
+  <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\Wrist_UART_tx.h" value="NONE;Wrist_UART_tx" />
+  <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\Wrist_UART_tx_aliases.h" value="NONE;Wrist_UART_tx" />
+  <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\Wrist_UART_rx.c" value="ARM_C_FILE;Wrist_UART_rx" />
+  <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\Wrist_UART_rx.h" value="NONE;Wrist_UART_rx" />
+  <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\Wrist_UART_rx_aliases.h" value="NONE;Wrist_UART_rx" />
   <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\SPIM_1_IntClock.c" value="ARM_C_FILE;SPIM_1_IntClock" />
   <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\SPIM_1_IntClock.h" value="NONE;SPIM_1_IntClock" />
+  <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\Arduino_UART_SCBCLK.c" value="ARM_C_FILE;Arduino_UART_SCBCLK" />
+  <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\Arduino_UART_SCBCLK.h" value="NONE;Arduino_UART_SCBCLK" />
+  <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\Arduino_UART_tx.c" value="ARM_C_FILE;Arduino_UART_tx" />
+  <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\Arduino_UART_tx.h" value="NONE;Arduino_UART_tx" />
+  <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\Arduino_UART_tx_aliases.h" value="NONE;Arduino_UART_tx" />
+  <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\Arduino_UART_rx.c" value="ARM_C_FILE;Arduino_UART_rx" />
+  <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\Arduino_UART_rx.h" value="NONE;Arduino_UART_rx" />
+  <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\Arduino_UART_rx_aliases.h" value="NONE;Arduino_UART_rx" />
   <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\cm0gcc.ld" value="NONE;cy_boot" />
   <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\Cm0RealView.scat" value="NONE;cy_boot" />
   <file name="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\codegentemp\Cm0Start.c" value="ARM_C_FILE;cy_boot" />

@@ -1,13 +1,13 @@
-Loading plugins phase: Elapsed time ==> 0s.453ms
+Loading plugins phase: Elapsed time ==> 0s.421ms
 Initializing data phase: Elapsed time ==> 0s.000ms
 <CYPRESSTAG name="CyDsfit arguments...">
 cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -p C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\arm_controller_v2.1.cyprj -d CY8C4245AXI-483 -s C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\Generated_Source\PSoC4 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE</CYPRESSTAG>
 <CYPRESSTAG name="Design elaboration results...">
 </CYPRESSTAG>
-Elaboration phase: Elapsed time ==> 8s.511ms
+Elaboration phase: Elapsed time ==> 9s.262ms
 <CYPRESSTAG name="HDL generation results...">
 </CYPRESSTAG>
-HDL generation phase: Elapsed time ==> 0s.328ms
+HDL generation phase: Elapsed time ==> 0s.296ms
 <CYPRESSTAG name="Synthesis results...">
 
      | | | | | | |
@@ -41,7 +41,7 @@ Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Samue
 ======================================================================
 
 vlogfe V6.3 IR 41:  Verilog parser
-Sat Apr 11 21:31:22 2015
+Mon Apr 27 18:25:53 2015
 
 
 ======================================================================
@@ -51,7 +51,7 @@ Options  :    -yv2 -q10 arm_controller_v2.1.v
 ======================================================================
 
 vpp V6.3 IR 41:  Verilog Pre-Processor
-Sat Apr 11 21:31:22 2015
+Mon Apr 27 18:25:53 2015
 
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\3.1\PSoC Creator\warp\..\psoc\content\cyprimitives\CyPrimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\3.1\PSoC Creator\warp\..\psoc\content\cyprimitives\CyPrimitives.cylib\ZeroTerminal\ZeroTerminal.v'
@@ -96,7 +96,7 @@ Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Samue
 ======================================================================
 
 tovif V6.3 IR 41:  High-level synthesis
-Sat Apr 11 21:31:24 2015
+Mon Apr 27 18:25:54 2015
 
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.1\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.1\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -133,7 +133,7 @@ Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Samue
 ======================================================================
 
 topld V6.3 IR 41:  Synthesis and optimization
-Sat Apr 11 21:31:28 2015
+Mon Apr 27 18:25:58 2015
 
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.1\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.1\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -167,15 +167,15 @@ Detecting unused logic.
     User names
 	\ADC:Net_3125\
 	\ADC:Net_3126\
-	\UART_1:Net_452\
-	\UART_1:Net_682\
-	\UART_1:uncfg_rx_irq\
-	\UART_1:Net_754\
-	\UART_1:Net_767\
-	\UART_1:Net_547\
-	\UART_1:Net_891\
-	\UART_1:Net_474\
-	\UART_1:Net_899\
+	\Wrist_UART:Net_452\
+	\Wrist_UART:Net_682\
+	\Wrist_UART:uncfg_rx_irq\
+	\Wrist_UART:Net_754\
+	\Wrist_UART:Net_767\
+	\Wrist_UART:Net_547\
+	\Wrist_UART:Net_891\
+	\Wrist_UART:Net_474\
+	\Wrist_UART:Net_899\
 	\SPIM_1:BSPIM:mosi_after_ld\
 	\SPIM_1:BSPIM:so_send\
 	\SPIM_1:BSPIM:mosi_fin\
@@ -324,6 +324,15 @@ Detecting unused logic.
 	\EFFECTOR_PWM:Net_138\
 	\EFFECTOR_PWM:Net_183\
 	\EFFECTOR_PWM:Net_181\
+	\Arduino_UART:Net_452\
+	\Arduino_UART:Net_682\
+	\Arduino_UART:uncfg_rx_irq\
+	\Arduino_UART:Net_754\
+	\Arduino_UART:Net_767\
+	\Arduino_UART:Net_547\
+	\Arduino_UART:Net_891\
+	\Arduino_UART:Net_474\
+	\Arduino_UART:Net_899\
 
     Synthesized names
 	\EFFECTOR_PWM:PWMUDB:add_vi_vv_MODGEN_1_31\
@@ -357,7 +366,7 @@ Detecting unused logic.
 	\EFFECTOR_PWM:PWMUDB:add_vi_vv_MODGEN_1_3\
 	\EFFECTOR_PWM:PWMUDB:add_vi_vv_MODGEN_1_2\
 
-Deleted 159 User equations/components.
+Deleted 168 User equations/components.
 Deleted 30 Synthesized equations/components.
 
 ------------------------------------------------------
@@ -403,14 +412,13 @@ Aliasing \ADC:Net_3235\ to zero
 Aliasing tmpOE__pot_elbow_net_0 to tmpOE__elbow_net_0
 Aliasing tmpOE__pot_shoulder_net_0 to tmpOE__elbow_net_0
 Aliasing tmpOE__shoulder_net_0 to tmpOE__elbow_net_0
-Aliasing \UART_1:Net_459\ to zero
-Aliasing \UART_1:Net_676\ to zero
-Aliasing \UART_1:Net_245\ to zero
-Aliasing \UART_1:Net_416\ to zero
-Aliasing \UART_1:tmpOE__tx_net_0\ to tmpOE__elbow_net_0
-Aliasing \UART_1:tmpOE__rx_net_0\ to tmpOE__elbow_net_0
-Aliasing \UART_1:Net_747\ to zero
-Aliasing tmpOE__sens_hygro_net_0 to tmpOE__elbow_net_0
+Aliasing \Wrist_UART:Net_459\ to zero
+Aliasing \Wrist_UART:Net_676\ to zero
+Aliasing \Wrist_UART:Net_245\ to zero
+Aliasing \Wrist_UART:Net_416\ to zero
+Aliasing \Wrist_UART:tmpOE__tx_net_0\ to tmpOE__elbow_net_0
+Aliasing \Wrist_UART:tmpOE__rx_net_0\ to tmpOE__elbow_net_0
+Aliasing \Wrist_UART:Net_747\ to zero
 Aliasing tmpOE__stop_elb_dn_net_0 to tmpOE__elbow_net_0
 Aliasing tmpOE__MOSI_1_net_0 to tmpOE__elbow_net_0
 Aliasing tmpOE__SCLK_1_net_0 to tmpOE__elbow_net_0
@@ -423,7 +431,6 @@ Aliasing \SPIM_1:BSPIM:rx_status_2\ to zero
 Aliasing \SPIM_1:BSPIM:rx_status_1\ to zero
 Aliasing \SPIM_1:BSPIM:rx_status_0\ to zero
 Aliasing \SPIM_1:Net_274\ to zero
-Aliasing tmpOE__sens_ph_net_0 to tmpOE__elbow_net_0
 Aliasing tmpOE__stop_elb_up_net_0 to tmpOE__elbow_net_0
 Aliasing tmpOE__stop_shdr_dn_net_0 to tmpOE__elbow_net_0
 Aliasing tmpOE__stop_shdr_up_net_0 to tmpOE__elbow_net_0
@@ -482,6 +489,13 @@ Aliasing \EFFECTOR_PWM:PWMUDB:MODULE_1:g2:a0:a_2\ to zero
 Aliasing \EFFECTOR_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_0\ to tmpOE__elbow_net_0
 Aliasing Net_1081 to zero
 Aliasing tmpOE__effector_A_net_0 to tmpOE__elbow_net_0
+Aliasing \Arduino_UART:Net_459\ to zero
+Aliasing \Arduino_UART:Net_676\ to zero
+Aliasing \Arduino_UART:Net_245\ to zero
+Aliasing \Arduino_UART:Net_416\ to zero
+Aliasing \Arduino_UART:tmpOE__tx_net_0\ to tmpOE__elbow_net_0
+Aliasing \Arduino_UART:tmpOE__rx_net_0\ to tmpOE__elbow_net_0
+Aliasing \Arduino_UART:Net_747\ to zero
 Aliasing \SPIM_1:BSPIM:so_send_reg\\D\ to zero
 Aliasing \SPIM_1:BSPIM:mosi_pre_reg\\D\ to zero
 Aliasing \SPIM_1:BSPIM:dpcounter_one_reg\\D\ to \SPIM_1:BSPIM:load_rx_data\
@@ -518,151 +532,163 @@ Removing Lhs of wire \SHLDR_PWM:Net_69\[91] = tmpOE__elbow_net_0[7]
 Removing Lhs of wire \SHLDR_PWM:Net_66\[92] = zero[12]
 Removing Lhs of wire \SHLDR_PWM:Net_82\[93] = zero[12]
 Removing Lhs of wire \SHLDR_PWM:Net_72\[94] = zero[12]
-Removing Lhs of wire \ADC:Net_3107\[179] = zero[12]
-Removing Lhs of wire \ADC:Net_3106\[180] = zero[12]
-Removing Lhs of wire \ADC:Net_3105\[181] = zero[12]
-Removing Lhs of wire \ADC:Net_3104\[182] = zero[12]
-Removing Lhs of wire \ADC:Net_3103\[183] = zero[12]
-Removing Lhs of wire \ADC:Net_17\[232] = \ADC:Net_1845\[103]
-Removing Lhs of wire \ADC:Net_3207_1\[254] = zero[12]
-Removing Lhs of wire \ADC:Net_3207_0\[255] = zero[12]
-Removing Lhs of wire \ADC:Net_3235\[256] = zero[12]
-Removing Lhs of wire tmpOE__pot_elbow_net_0[324] = tmpOE__elbow_net_0[7]
-Removing Lhs of wire tmpOE__pot_shoulder_net_0[330] = tmpOE__elbow_net_0[7]
-Removing Lhs of wire tmpOE__shoulder_net_0[336] = tmpOE__elbow_net_0[7]
-Removing Lhs of wire \UART_1:Net_459\[343] = zero[12]
-Removing Lhs of wire \UART_1:Net_652\[344] = zero[12]
-Removing Lhs of wire \UART_1:Net_676\[346] = zero[12]
-Removing Lhs of wire \UART_1:Net_245\[347] = zero[12]
-Removing Lhs of wire \UART_1:Net_416\[348] = zero[12]
-Removing Rhs of wire \UART_1:Net_654\[349] = \UART_1:Net_379\[350]
-Removing Lhs of wire \UART_1:SCBclock\[353] = \UART_1:Net_847\[342]
-Removing Lhs of wire \UART_1:Net_653\[354] = zero[12]
-Removing Lhs of wire \UART_1:Net_909\[355] = zero[12]
-Removing Lhs of wire \UART_1:Net_663\[356] = zero[12]
-Removing Lhs of wire \UART_1:tmpOE__tx_net_0\[358] = tmpOE__elbow_net_0[7]
-Removing Lhs of wire \UART_1:tmpOE__rx_net_0\[367] = tmpOE__elbow_net_0[7]
-Removing Lhs of wire \UART_1:Net_739\[371] = zero[12]
-Removing Lhs of wire \UART_1:Net_747\[372] = zero[12]
-Removing Lhs of wire tmpOE__sens_hygro_net_0[397] = tmpOE__elbow_net_0[7]
-Removing Lhs of wire tmpOE__stop_elb_dn_net_0[403] = tmpOE__elbow_net_0[7]
-Removing Lhs of wire tmpOE__MOSI_1_net_0[409] = tmpOE__elbow_net_0[7]
-Removing Rhs of wire Net_23[410] = \SPIM_1:BSPIM:mosi_reg\[435]
-Removing Lhs of wire tmpOE__SCLK_1_net_0[416] = tmpOE__elbow_net_0[7]
-Removing Rhs of wire \SPIM_1:Net_276\[422] = \SPIM_1:Net_239\[423]
-Removing Rhs of wire \SPIM_1:BSPIM:load_rx_data\[427] = \SPIM_1:BSPIM:dpcounter_one\[428]
-Removing Lhs of wire \SPIM_1:BSPIM:pol_supprt\[429] = zero[12]
-Removing Lhs of wire \SPIM_1:BSPIM:miso_to_dp\[430] = \SPIM_1:Net_244\[431]
-Removing Lhs of wire \SPIM_1:Net_244\[431] = Net_19[36]
-Removing Rhs of wire \SPIM_1:BSPIM:tx_status_1\[457] = \SPIM_1:BSPIM:dpMOSI_fifo_empty\[458]
-Removing Rhs of wire \SPIM_1:BSPIM:tx_status_2\[459] = \SPIM_1:BSPIM:dpMOSI_fifo_not_full\[460]
-Removing Lhs of wire \SPIM_1:BSPIM:tx_status_3\[461] = \SPIM_1:BSPIM:load_rx_data\[427]
-Removing Rhs of wire \SPIM_1:BSPIM:rx_status_4\[463] = \SPIM_1:BSPIM:dpMISO_fifo_full\[464]
-Removing Rhs of wire \SPIM_1:BSPIM:rx_status_5\[465] = \SPIM_1:BSPIM:dpMISO_fifo_not_empty\[466]
-Removing Lhs of wire \SPIM_1:BSPIM:tx_status_6\[468] = zero[12]
-Removing Lhs of wire \SPIM_1:BSPIM:tx_status_5\[469] = zero[12]
-Removing Lhs of wire \SPIM_1:BSPIM:rx_status_3\[470] = zero[12]
-Removing Lhs of wire \SPIM_1:BSPIM:rx_status_2\[471] = zero[12]
-Removing Lhs of wire \SPIM_1:BSPIM:rx_status_1\[472] = zero[12]
-Removing Lhs of wire \SPIM_1:BSPIM:rx_status_0\[473] = zero[12]
-Removing Lhs of wire \SPIM_1:Net_273\[483] = zero[12]
-Removing Lhs of wire \SPIM_1:Net_274\[522] = zero[12]
-Removing Lhs of wire tmpOE__sens_ph_net_0[524] = tmpOE__elbow_net_0[7]
-Removing Lhs of wire tmpOE__stop_elb_up_net_0[530] = tmpOE__elbow_net_0[7]
-Removing Lhs of wire tmpOE__stop_shdr_dn_net_0[536] = tmpOE__elbow_net_0[7]
-Removing Lhs of wire tmpOE__stop_shdr_up_net_0[542] = tmpOE__elbow_net_0[7]
-Removing Lhs of wire tmpOE__LED_net_0[548] = tmpOE__elbow_net_0[7]
-Removing Lhs of wire \EFFECTOR_PWM:Net_68\[556] = Net_376[3]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:ctrl_enable\[567] = \EFFECTOR_PWM:PWMUDB:control_7\[559]
-Removing Lhs of wire \EFFECTOR_PWM:Net_180\[575] = zero[12]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:hwCapture\[578] = zero[12]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:hwEnable\[579] = \EFFECTOR_PWM:PWMUDB:control_7\[559]
-Removing Lhs of wire \EFFECTOR_PWM:Net_178\[581] = zero[12]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:trig_out\[584] = tmpOE__elbow_net_0[7]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:runmode_enable\\R\[586] = \EFFECTOR_PWM:Net_186\[587]
-Removing Lhs of wire \EFFECTOR_PWM:Net_186\[587] = zero[12]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:runmode_enable\\S\[588] = zero[12]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:final_enable\[589] = \EFFECTOR_PWM:PWMUDB:runmode_enable\[585]
-Removing Lhs of wire \EFFECTOR_PWM:Net_179\[592] = tmpOE__elbow_net_0[7]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:ltch_kill_reg\\R\[594] = zero[12]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:ltch_kill_reg\\S\[595] = zero[12]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:km_tc\[596] = zero[12]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:min_kill_reg\\R\[597] = zero[12]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:min_kill_reg\\S\[598] = zero[12]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:final_kill\[601] = tmpOE__elbow_net_0[7]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:add_vi_vv_MODGEN_1_1\[604] = \EFFECTOR_PWM:PWMUDB:MODULE_1:g2:a0:s_1\[891]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:add_vi_vv_MODGEN_1_0\[606] = \EFFECTOR_PWM:PWMUDB:MODULE_1:g2:a0:s_0\[892]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:dith_count_1\\R\[607] = zero[12]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:dith_count_1\\S\[608] = zero[12]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:dith_count_0\\R\[609] = zero[12]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:dith_count_0\\S\[610] = zero[12]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:status_6\[613] = zero[12]
-Removing Rhs of wire \EFFECTOR_PWM:PWMUDB:status_5\[614] = \EFFECTOR_PWM:PWMUDB:final_kill_reg\[628]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:status_4\[615] = zero[12]
-Removing Rhs of wire \EFFECTOR_PWM:PWMUDB:status_3\[616] = \EFFECTOR_PWM:PWMUDB:fifo_full\[635]
-Removing Rhs of wire \EFFECTOR_PWM:PWMUDB:status_1\[618] = \EFFECTOR_PWM:PWMUDB:cmp2_status_reg\[627]
-Removing Rhs of wire \EFFECTOR_PWM:PWMUDB:status_0\[619] = \EFFECTOR_PWM:PWMUDB:cmp1_status_reg\[626]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:cmp2_status\[624] = zero[12]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:cmp2\[625] = zero[12]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:cmp1_status_reg\\R\[629] = zero[12]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:cmp1_status_reg\\S\[630] = zero[12]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:cmp2_status_reg\\R\[631] = zero[12]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:cmp2_status_reg\\S\[632] = zero[12]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:final_kill_reg\\R\[633] = zero[12]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:final_kill_reg\\S\[634] = zero[12]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:cs_addr_2\[636] = \EFFECTOR_PWM:PWMUDB:tc_i\[591]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:cs_addr_1\[637] = \EFFECTOR_PWM:PWMUDB:runmode_enable\[585]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:cs_addr_0\[638] = zero[12]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:pwm1_i\[724] = zero[12]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:pwm2_i\[726] = zero[12]
-Removing Rhs of wire Net_1108[729] = \EFFECTOR_PWM:PWMUDB:pwm_i_reg\[721]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:pwm_temp\[732] = \EFFECTOR_PWM:PWMUDB:cmp1\[622]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:MODULE_1:g2:a0:a_23\[773] = zero[12]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:MODULE_1:g2:a0:a_22\[774] = zero[12]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:MODULE_1:g2:a0:a_21\[775] = zero[12]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:MODULE_1:g2:a0:a_20\[776] = zero[12]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:MODULE_1:g2:a0:a_19\[777] = zero[12]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:MODULE_1:g2:a0:a_18\[778] = zero[12]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:MODULE_1:g2:a0:a_17\[779] = zero[12]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:MODULE_1:g2:a0:a_16\[780] = zero[12]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:MODULE_1:g2:a0:a_15\[781] = zero[12]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:MODULE_1:g2:a0:a_14\[782] = zero[12]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:MODULE_1:g2:a0:a_13\[783] = zero[12]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:MODULE_1:g2:a0:a_12\[784] = zero[12]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:MODULE_1:g2:a0:a_11\[785] = zero[12]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:MODULE_1:g2:a0:a_10\[786] = zero[12]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:MODULE_1:g2:a0:a_9\[787] = zero[12]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:MODULE_1:g2:a0:a_8\[788] = zero[12]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:MODULE_1:g2:a0:a_7\[789] = zero[12]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:MODULE_1:g2:a0:a_6\[790] = zero[12]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:MODULE_1:g2:a0:a_5\[791] = zero[12]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:MODULE_1:g2:a0:a_4\[792] = zero[12]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:MODULE_1:g2:a0:a_3\[793] = zero[12]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:MODULE_1:g2:a0:a_2\[794] = zero[12]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:MODULE_1:g2:a0:a_1\[795] = \EFFECTOR_PWM:PWMUDB:MODIN1_1\[796]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:MODIN1_1\[796] = \EFFECTOR_PWM:PWMUDB:dith_count_1\[603]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:MODULE_1:g2:a0:a_0\[797] = \EFFECTOR_PWM:PWMUDB:MODIN1_0\[798]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:MODIN1_0\[798] = \EFFECTOR_PWM:PWMUDB:dith_count_0\[605]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_0\[930] = tmpOE__elbow_net_0[7]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_0\[931] = tmpOE__elbow_net_0[7]
-Removing Lhs of wire Net_1081[937] = zero[12]
-Removing Lhs of wire tmpOE__effector_A_net_0[939] = tmpOE__elbow_net_0[7]
-Removing Lhs of wire \SPIM_1:BSPIM:so_send_reg\\D\[945] = zero[12]
-Removing Lhs of wire \SPIM_1:BSPIM:mosi_pre_reg\\D\[951] = zero[12]
-Removing Lhs of wire \SPIM_1:BSPIM:dpcounter_one_reg\\D\[953] = \SPIM_1:BSPIM:load_rx_data\[427]
-Removing Lhs of wire \SPIM_1:BSPIM:mosi_from_dp_reg\\D\[954] = \SPIM_1:BSPIM:mosi_from_dp\[441]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:prevCapture\\D\[958] = zero[12]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:trig_last\\D\[959] = zero[12]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:prevCompare1\\D\[965] = \EFFECTOR_PWM:PWMUDB:cmp1\[622]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:cmp1_status_reg\\D\[966] = \EFFECTOR_PWM:PWMUDB:cmp1_status\[623]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:cmp2_status_reg\\D\[967] = zero[12]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:pwm_i_reg\\D\[969] = \EFFECTOR_PWM:PWMUDB:pwm_i\[722]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:pwm1_i_reg\\D\[970] = zero[12]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:pwm2_i_reg\\D\[971] = zero[12]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:tc_i_reg\\D\[972] = \EFFECTOR_PWM:PWMUDB:status_2\[617]
+Removing Lhs of wire \ADC:Net_3107\[175] = zero[12]
+Removing Lhs of wire \ADC:Net_3106\[176] = zero[12]
+Removing Lhs of wire \ADC:Net_3105\[177] = zero[12]
+Removing Lhs of wire \ADC:Net_3104\[178] = zero[12]
+Removing Lhs of wire \ADC:Net_3103\[179] = zero[12]
+Removing Lhs of wire \ADC:Net_17\[224] = \ADC:Net_1845\[103]
+Removing Lhs of wire \ADC:Net_3207_1\[246] = zero[12]
+Removing Lhs of wire \ADC:Net_3207_0\[247] = zero[12]
+Removing Lhs of wire \ADC:Net_3235\[248] = zero[12]
+Removing Lhs of wire tmpOE__pot_elbow_net_0[318] = tmpOE__elbow_net_0[7]
+Removing Lhs of wire tmpOE__pot_shoulder_net_0[324] = tmpOE__elbow_net_0[7]
+Removing Lhs of wire tmpOE__shoulder_net_0[330] = tmpOE__elbow_net_0[7]
+Removing Lhs of wire \Wrist_UART:Net_459\[337] = zero[12]
+Removing Lhs of wire \Wrist_UART:Net_652\[338] = zero[12]
+Removing Lhs of wire \Wrist_UART:Net_676\[340] = zero[12]
+Removing Lhs of wire \Wrist_UART:Net_245\[341] = zero[12]
+Removing Lhs of wire \Wrist_UART:Net_416\[342] = zero[12]
+Removing Rhs of wire \Wrist_UART:Net_654\[343] = \Wrist_UART:Net_379\[344]
+Removing Lhs of wire \Wrist_UART:SCBclock\[347] = \Wrist_UART:Net_847\[336]
+Removing Lhs of wire \Wrist_UART:Net_653\[348] = zero[12]
+Removing Lhs of wire \Wrist_UART:Net_909\[349] = zero[12]
+Removing Lhs of wire \Wrist_UART:Net_663\[350] = zero[12]
+Removing Lhs of wire \Wrist_UART:tmpOE__tx_net_0\[352] = tmpOE__elbow_net_0[7]
+Removing Lhs of wire \Wrist_UART:tmpOE__rx_net_0\[361] = tmpOE__elbow_net_0[7]
+Removing Lhs of wire \Wrist_UART:Net_739\[365] = zero[12]
+Removing Lhs of wire \Wrist_UART:Net_747\[366] = zero[12]
+Removing Lhs of wire tmpOE__stop_elb_dn_net_0[391] = tmpOE__elbow_net_0[7]
+Removing Lhs of wire tmpOE__MOSI_1_net_0[397] = tmpOE__elbow_net_0[7]
+Removing Rhs of wire Net_23[398] = \SPIM_1:BSPIM:mosi_reg\[423]
+Removing Lhs of wire tmpOE__SCLK_1_net_0[404] = tmpOE__elbow_net_0[7]
+Removing Rhs of wire \SPIM_1:Net_276\[410] = \SPIM_1:Net_239\[411]
+Removing Rhs of wire \SPIM_1:BSPIM:load_rx_data\[415] = \SPIM_1:BSPIM:dpcounter_one\[416]
+Removing Lhs of wire \SPIM_1:BSPIM:pol_supprt\[417] = zero[12]
+Removing Lhs of wire \SPIM_1:BSPIM:miso_to_dp\[418] = \SPIM_1:Net_244\[419]
+Removing Lhs of wire \SPIM_1:Net_244\[419] = Net_19[36]
+Removing Rhs of wire \SPIM_1:BSPIM:tx_status_1\[445] = \SPIM_1:BSPIM:dpMOSI_fifo_empty\[446]
+Removing Rhs of wire \SPIM_1:BSPIM:tx_status_2\[447] = \SPIM_1:BSPIM:dpMOSI_fifo_not_full\[448]
+Removing Lhs of wire \SPIM_1:BSPIM:tx_status_3\[449] = \SPIM_1:BSPIM:load_rx_data\[415]
+Removing Rhs of wire \SPIM_1:BSPIM:rx_status_4\[451] = \SPIM_1:BSPIM:dpMISO_fifo_full\[452]
+Removing Rhs of wire \SPIM_1:BSPIM:rx_status_5\[453] = \SPIM_1:BSPIM:dpMISO_fifo_not_empty\[454]
+Removing Lhs of wire \SPIM_1:BSPIM:tx_status_6\[456] = zero[12]
+Removing Lhs of wire \SPIM_1:BSPIM:tx_status_5\[457] = zero[12]
+Removing Lhs of wire \SPIM_1:BSPIM:rx_status_3\[458] = zero[12]
+Removing Lhs of wire \SPIM_1:BSPIM:rx_status_2\[459] = zero[12]
+Removing Lhs of wire \SPIM_1:BSPIM:rx_status_1\[460] = zero[12]
+Removing Lhs of wire \SPIM_1:BSPIM:rx_status_0\[461] = zero[12]
+Removing Lhs of wire \SPIM_1:Net_273\[471] = zero[12]
+Removing Lhs of wire \SPIM_1:Net_274\[510] = zero[12]
+Removing Lhs of wire tmpOE__stop_elb_up_net_0[512] = tmpOE__elbow_net_0[7]
+Removing Lhs of wire tmpOE__stop_shdr_dn_net_0[518] = tmpOE__elbow_net_0[7]
+Removing Lhs of wire tmpOE__stop_shdr_up_net_0[524] = tmpOE__elbow_net_0[7]
+Removing Lhs of wire tmpOE__LED_net_0[530] = tmpOE__elbow_net_0[7]
+Removing Lhs of wire \EFFECTOR_PWM:Net_68\[538] = Net_376[3]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:ctrl_enable\[549] = \EFFECTOR_PWM:PWMUDB:control_7\[541]
+Removing Lhs of wire \EFFECTOR_PWM:Net_180\[557] = zero[12]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:hwCapture\[560] = zero[12]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:hwEnable\[561] = \EFFECTOR_PWM:PWMUDB:control_7\[541]
+Removing Lhs of wire \EFFECTOR_PWM:Net_178\[563] = zero[12]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:trig_out\[566] = tmpOE__elbow_net_0[7]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:runmode_enable\\R\[568] = \EFFECTOR_PWM:Net_186\[569]
+Removing Lhs of wire \EFFECTOR_PWM:Net_186\[569] = zero[12]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:runmode_enable\\S\[570] = zero[12]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:final_enable\[571] = \EFFECTOR_PWM:PWMUDB:runmode_enable\[567]
+Removing Lhs of wire \EFFECTOR_PWM:Net_179\[574] = tmpOE__elbow_net_0[7]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:ltch_kill_reg\\R\[576] = zero[12]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:ltch_kill_reg\\S\[577] = zero[12]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:km_tc\[578] = zero[12]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:min_kill_reg\\R\[579] = zero[12]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:min_kill_reg\\S\[580] = zero[12]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:final_kill\[583] = tmpOE__elbow_net_0[7]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:add_vi_vv_MODGEN_1_1\[586] = \EFFECTOR_PWM:PWMUDB:MODULE_1:g2:a0:s_1\[873]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:add_vi_vv_MODGEN_1_0\[588] = \EFFECTOR_PWM:PWMUDB:MODULE_1:g2:a0:s_0\[874]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:dith_count_1\\R\[589] = zero[12]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:dith_count_1\\S\[590] = zero[12]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:dith_count_0\\R\[591] = zero[12]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:dith_count_0\\S\[592] = zero[12]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:status_6\[595] = zero[12]
+Removing Rhs of wire \EFFECTOR_PWM:PWMUDB:status_5\[596] = \EFFECTOR_PWM:PWMUDB:final_kill_reg\[610]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:status_4\[597] = zero[12]
+Removing Rhs of wire \EFFECTOR_PWM:PWMUDB:status_3\[598] = \EFFECTOR_PWM:PWMUDB:fifo_full\[617]
+Removing Rhs of wire \EFFECTOR_PWM:PWMUDB:status_1\[600] = \EFFECTOR_PWM:PWMUDB:cmp2_status_reg\[609]
+Removing Rhs of wire \EFFECTOR_PWM:PWMUDB:status_0\[601] = \EFFECTOR_PWM:PWMUDB:cmp1_status_reg\[608]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:cmp2_status\[606] = zero[12]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:cmp2\[607] = zero[12]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:cmp1_status_reg\\R\[611] = zero[12]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:cmp1_status_reg\\S\[612] = zero[12]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:cmp2_status_reg\\R\[613] = zero[12]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:cmp2_status_reg\\S\[614] = zero[12]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:final_kill_reg\\R\[615] = zero[12]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:final_kill_reg\\S\[616] = zero[12]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:cs_addr_2\[618] = \EFFECTOR_PWM:PWMUDB:tc_i\[573]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:cs_addr_1\[619] = \EFFECTOR_PWM:PWMUDB:runmode_enable\[567]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:cs_addr_0\[620] = zero[12]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:pwm1_i\[706] = zero[12]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:pwm2_i\[708] = zero[12]
+Removing Rhs of wire Net_1108[711] = \EFFECTOR_PWM:PWMUDB:pwm_i_reg\[703]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:pwm_temp\[714] = \EFFECTOR_PWM:PWMUDB:cmp1\[604]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:MODULE_1:g2:a0:a_23\[755] = zero[12]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:MODULE_1:g2:a0:a_22\[756] = zero[12]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:MODULE_1:g2:a0:a_21\[757] = zero[12]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:MODULE_1:g2:a0:a_20\[758] = zero[12]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:MODULE_1:g2:a0:a_19\[759] = zero[12]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:MODULE_1:g2:a0:a_18\[760] = zero[12]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:MODULE_1:g2:a0:a_17\[761] = zero[12]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:MODULE_1:g2:a0:a_16\[762] = zero[12]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:MODULE_1:g2:a0:a_15\[763] = zero[12]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:MODULE_1:g2:a0:a_14\[764] = zero[12]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:MODULE_1:g2:a0:a_13\[765] = zero[12]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:MODULE_1:g2:a0:a_12\[766] = zero[12]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:MODULE_1:g2:a0:a_11\[767] = zero[12]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:MODULE_1:g2:a0:a_10\[768] = zero[12]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:MODULE_1:g2:a0:a_9\[769] = zero[12]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:MODULE_1:g2:a0:a_8\[770] = zero[12]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:MODULE_1:g2:a0:a_7\[771] = zero[12]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:MODULE_1:g2:a0:a_6\[772] = zero[12]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:MODULE_1:g2:a0:a_5\[773] = zero[12]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:MODULE_1:g2:a0:a_4\[774] = zero[12]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:MODULE_1:g2:a0:a_3\[775] = zero[12]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:MODULE_1:g2:a0:a_2\[776] = zero[12]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:MODULE_1:g2:a0:a_1\[777] = \EFFECTOR_PWM:PWMUDB:MODIN1_1\[778]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:MODIN1_1\[778] = \EFFECTOR_PWM:PWMUDB:dith_count_1\[585]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:MODULE_1:g2:a0:a_0\[779] = \EFFECTOR_PWM:PWMUDB:MODIN1_0\[780]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:MODIN1_0\[780] = \EFFECTOR_PWM:PWMUDB:dith_count_0\[587]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_0\[912] = tmpOE__elbow_net_0[7]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_0\[913] = tmpOE__elbow_net_0[7]
+Removing Lhs of wire Net_1081[919] = zero[12]
+Removing Lhs of wire tmpOE__effector_A_net_0[921] = tmpOE__elbow_net_0[7]
+Removing Lhs of wire \Arduino_UART:Net_459\[928] = zero[12]
+Removing Lhs of wire \Arduino_UART:Net_652\[929] = zero[12]
+Removing Lhs of wire \Arduino_UART:Net_676\[931] = zero[12]
+Removing Lhs of wire \Arduino_UART:Net_245\[932] = zero[12]
+Removing Lhs of wire \Arduino_UART:Net_416\[933] = zero[12]
+Removing Rhs of wire \Arduino_UART:Net_654\[934] = \Arduino_UART:Net_379\[935]
+Removing Lhs of wire \Arduino_UART:SCBclock\[938] = \Arduino_UART:Net_847\[927]
+Removing Lhs of wire \Arduino_UART:Net_653\[939] = zero[12]
+Removing Lhs of wire \Arduino_UART:Net_909\[940] = zero[12]
+Removing Lhs of wire \Arduino_UART:Net_663\[941] = zero[12]
+Removing Lhs of wire \Arduino_UART:tmpOE__tx_net_0\[943] = tmpOE__elbow_net_0[7]
+Removing Lhs of wire \Arduino_UART:tmpOE__rx_net_0\[952] = tmpOE__elbow_net_0[7]
+Removing Lhs of wire \Arduino_UART:Net_739\[956] = zero[12]
+Removing Lhs of wire \Arduino_UART:Net_747\[957] = zero[12]
+Removing Lhs of wire \SPIM_1:BSPIM:so_send_reg\\D\[982] = zero[12]
+Removing Lhs of wire \SPIM_1:BSPIM:mosi_pre_reg\\D\[988] = zero[12]
+Removing Lhs of wire \SPIM_1:BSPIM:dpcounter_one_reg\\D\[990] = \SPIM_1:BSPIM:load_rx_data\[415]
+Removing Lhs of wire \SPIM_1:BSPIM:mosi_from_dp_reg\\D\[991] = \SPIM_1:BSPIM:mosi_from_dp\[429]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:prevCapture\\D\[995] = zero[12]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:trig_last\\D\[996] = zero[12]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:prevCompare1\\D\[1002] = \EFFECTOR_PWM:PWMUDB:cmp1\[604]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:cmp1_status_reg\\D\[1003] = \EFFECTOR_PWM:PWMUDB:cmp1_status\[605]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:cmp2_status_reg\\D\[1004] = zero[12]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:pwm_i_reg\\D\[1006] = \EFFECTOR_PWM:PWMUDB:pwm_i\[704]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:pwm1_i_reg\\D\[1007] = zero[12]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:pwm2_i_reg\\D\[1008] = zero[12]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:tc_i_reg\\D\[1009] = \EFFECTOR_PWM:PWMUDB:status_2\[599]
 
 ------------------------------------------------------
-Aliased 0 equations, 173 wires.
+Aliased 0 equations, 185 wires.
 ------------------------------------------------------
 
 ----------------------------------------------------------
@@ -796,14 +822,14 @@ Aliasing \EFFECTOR_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_8\ to zero
 Aliasing \EFFECTOR_PWM:PWMUDB:min_kill_reg\\D\ to tmpOE__elbow_net_0
 Aliasing \EFFECTOR_PWM:PWMUDB:ltch_kill_reg\\D\ to tmpOE__elbow_net_0
 Aliasing \EFFECTOR_PWM:PWMUDB:final_kill_reg\\D\ to zero
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:final_capture\[640] = zero[12]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_24\[901] = zero[12]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_16\[911] = zero[12]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_8\[921] = zero[12]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:min_kill_reg\\D\[957] = tmpOE__elbow_net_0[7]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:runmode_enable\\D\[960] = \EFFECTOR_PWM:PWMUDB:control_7\[559]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:ltch_kill_reg\\D\[962] = tmpOE__elbow_net_0[7]
-Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:final_kill_reg\\D\[968] = zero[12]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:final_capture\[622] = zero[12]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_24\[883] = zero[12]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_16\[893] = zero[12]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_8\[903] = zero[12]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:min_kill_reg\\D\[994] = tmpOE__elbow_net_0[7]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:runmode_enable\\D\[997] = \EFFECTOR_PWM:PWMUDB:control_7\[541]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:ltch_kill_reg\\D\[999] = tmpOE__elbow_net_0[7]
+Removing Lhs of wire \EFFECTOR_PWM:PWMUDB:final_kill_reg\\D\[1005] = zero[12]
 
 ------------------------------------------------------
 Aliased 0 equations, 8 wires.
@@ -836,10 +862,10 @@ CYPRESS_DIR    : C:\Program Files (x86)\Cypress\PSoC Creator\3.1\PSoC Creator\wa
 Warp Program   : C:\Program Files (x86)\Cypress\PSoC Creator\3.1\PSoC Creator\warp\bin/warp.exe
 Warp Arguments : -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\arm_controller_v2.1.cyprj -dcpsoc3 arm_controller_v2.1.v -verilog
 </CYPRESSTAG>
-Warp synthesis phase: Elapsed time ==> 8s.990ms
+Warp synthesis phase: Elapsed time ==> 6s.543ms
 <CYPRESSTAG name="Fitter results...">
 <CYPRESSTAG name="Fitter startup details...">
-cyp3fit: V3.1.0.1570, Family: PSoC3, Started at: Saturday, 11 April 2015 21:31:30
+cyp3fit: V3.1.0.1570, Family: PSoC3, Started at: Monday, 27 April 2015 18:26:00
 Options: -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\arm_controller_v2.1.cyprj -d CY8C4245AXI-483 arm_controller_v2.1.v -verilog
 </CYPRESSTAG>
 <CYPRESSTAG name="Design parsing">
@@ -863,7 +889,8 @@ Removing unused cells resulting from optimization
 Done removing unused cells.
 <CYPRESSTAG name="Global Clock Selection" icon="FILE_RPT_TECHM">
     Digital Clock 0: Automatic-assigning  clock 'SPIM_1_IntClock'. Fanout=1, Signal=\SPIM_1:Net_276_digital\
-    Fixed Function Clock 2: Automatic-assigning  clock 'UART_1_SCBCLK'. Signal=\UART_1:Net_847_ff2\
+    Fixed Function Clock 2: Automatic-assigning  clock 'Wrist_UART_SCBCLK'. Signal=\Wrist_UART:Net_847_ff2\
+    Fixed Function Clock 3: Automatic-assigning  clock 'Arduino_UART_SCBCLK'. Signal=\Arduino_UART:Net_847_ff3\
     Fixed Function Clock 8: Automatic-assigning  clock 'Clock_counter'. Signal=Net_130_ff8
     Fixed Function Clock 7: Automatic-assigning  clock 'ADC_intClock'. Signal=\ADC:Net_1845_ff7\
     Fixed Function Clock 9: Automatic-assigning  clock 'Clock_pwm'. Signal=Net_376_ff9
@@ -1210,7 +1237,7 @@ Design Equations
         {
         }
 
-    Pin : Name = \UART_1:rx(0)\
+    Pin : Name = \Arduino_UART:rx(0)\
         Attributes:
             In Group/Port: True
             In Sync Option: NOSYNC
@@ -1242,14 +1269,14 @@ Design Equations
             Initial Value: 0
             IO Voltage: 0
         PORT MAP (
-            pa_out => \UART_1:rx(0)\__PA ,
-            fb => \UART_1:Net_654\ ,
-            pad => \UART_1:rx(0)_PAD\ );
+            pa_out => \Arduino_UART:rx(0)\__PA ,
+            fb => \Arduino_UART:Net_654\ ,
+            pad => \Arduino_UART:rx(0)_PAD\ );
         Properties:
         {
         }
 
-    Pin : Name = \UART_1:tx(0)\
+    Pin : Name = \Arduino_UART:tx(0)\
         Attributes:
             In Group/Port: True
             In Sync Option: NOSYNC
@@ -1281,9 +1308,87 @@ Design Equations
             Initial Value: 1
             IO Voltage: 0
         PORT MAP (
-            pa_out => \UART_1:tx(0)\__PA ,
-            input => \UART_1:Net_656\ ,
-            pad => \UART_1:tx(0)_PAD\ );
+            pa_out => \Arduino_UART:tx(0)\__PA ,
+            input => \Arduino_UART:Net_656\ ,
+            pad => \Arduino_UART:tx(0)_PAD\ );
+        Properties:
+        {
+        }
+
+    Pin : Name = \Wrist_UART:rx(0)\
+        Attributes:
+            In Group/Port: True
+            In Sync Option: NOSYNC
+            Out Sync Option: AUTO
+            Interrupt generated: False
+            Interrupt mode: NONE
+            Drive mode: HI_Z_DIGITAL
+            VTrip: CMOS
+            Slew: FAST
+            Input Sync needed: False
+            Output Sync needed: False
+            SC shield enabled: False
+            POR State: ANY
+            LCD Mode: COMMON
+            Register Mode: RegComb
+            CaSense Mode: NEITHER
+            Treat as pin: True
+            Is OE Registered: False
+            Uses Analog: False
+            Can contain Digital: True
+            Is SIO: False
+            SIO Output Buf: NONREGULATED
+            SIO Input Buf: SINGLE_ENDED
+            SIO HiFreq: LOW
+            SIO Hyst: DISABLED
+            SIO Vtrip: MULTIPLIER_0_5
+            SIO RefSel: VCC_IO
+            Required Capabilitites: DIGITAL, SCB_UART_RX
+            Initial Value: 0
+            IO Voltage: 0
+        PORT MAP (
+            pa_out => \Wrist_UART:rx(0)\__PA ,
+            fb => \Wrist_UART:Net_654\ ,
+            pad => \Wrist_UART:rx(0)_PAD\ );
+        Properties:
+        {
+        }
+
+    Pin : Name = \Wrist_UART:tx(0)\
+        Attributes:
+            In Group/Port: True
+            In Sync Option: NOSYNC
+            Out Sync Option: NOSYNC
+            Interrupt generated: False
+            Interrupt mode: NONE
+            Drive mode: CMOS_OUT
+            VTrip: CMOS
+            Slew: FAST
+            Input Sync needed: False
+            Output Sync needed: False
+            SC shield enabled: False
+            POR State: ANY
+            LCD Mode: COMMON
+            Register Mode: RegComb
+            CaSense Mode: NEITHER
+            Treat as pin: True
+            Is OE Registered: False
+            Uses Analog: False
+            Can contain Digital: True
+            Is SIO: False
+            SIO Output Buf: NONREGULATED
+            SIO Input Buf: SINGLE_ENDED
+            SIO HiFreq: LOW
+            SIO Hyst: DISABLED
+            SIO Vtrip: MULTIPLIER_0_5
+            SIO RefSel: VCC_IO
+            Required Capabilitites: DIGITAL, SCB_UART_TX
+            Initial Value: 1
+            IO Voltage: 0
+        PORT MAP (
+            pa_out => \Wrist_UART:tx(0)\__PA ,
+            input => \Wrist_UART:Net_656\ ,
+            pad => \Wrist_UART:tx(0)_PAD\ );
         Properties:
         {
         }
@@ -1479,84 +1584,6 @@ Design Equations
             pa_out => pot_shoulder(0)__PA ,
             analog_term => \ADC:mux_bus_plus_0\ ,
             pad => pot_shoulder(0)_PAD );
-        Properties:
-        {
-        }
-
-    Pin : Name = sens_hygro(0)
-        Attributes:
-            In Group/Port: True
-            In Sync Option: AUTO
-            Out Sync Option: AUTO
-            Interrupt generated: False
-            Interrupt mode: NONE
-            Drive mode: HI_Z_ANALOG
-            VTrip: EITHER
-            Slew: FAST
-            Input Sync needed: False
-            Output Sync needed: False
-            SC shield enabled: False
-            POR State: ANY
-            LCD Mode: COMMON
-            Register Mode: RegComb
-            CaSense Mode: NEITHER
-            Treat as pin: True
-            Is OE Registered: False
-            Uses Analog: True
-            Can contain Digital: False
-            Is SIO: False
-            SIO Output Buf: NONREGULATED
-            SIO Input Buf: SINGLE_ENDED
-            SIO HiFreq: LOW
-            SIO Hyst: DISABLED
-            SIO Vtrip: MULTIPLIER_0_5
-            SIO RefSel: VCC_IO
-            Required Capabilitites: ANALOG
-            Initial Value: 1
-            IO Voltage: 0
-        PORT MAP (
-            pa_out => sens_hygro(0)__PA ,
-            analog_term => \ADC:mux_bus_plus_2\ ,
-            pad => sens_hygro(0)_PAD );
-        Properties:
-        {
-        }
-
-    Pin : Name = sens_ph(0)
-        Attributes:
-            In Group/Port: True
-            In Sync Option: AUTO
-            Out Sync Option: AUTO
-            Interrupt generated: False
-            Interrupt mode: NONE
-            Drive mode: HI_Z_ANALOG
-            VTrip: EITHER
-            Slew: FAST
-            Input Sync needed: False
-            Output Sync needed: False
-            SC shield enabled: False
-            POR State: ANY
-            LCD Mode: COMMON
-            Register Mode: RegComb
-            CaSense Mode: NEITHER
-            Treat as pin: True
-            Is OE Registered: False
-            Uses Analog: True
-            Can contain Digital: False
-            Is SIO: False
-            SIO Output Buf: NONREGULATED
-            SIO Input Buf: SINGLE_ENDED
-            SIO HiFreq: LOW
-            SIO Hyst: DISABLED
-            SIO Vtrip: MULTIPLIER_0_5
-            SIO RefSel: VCC_IO
-            Required Capabilitites: ANALOG
-            Initial Value: 1
-            IO Voltage: 0
-        PORT MAP (
-            pa_out => sens_ph(0)__PA ,
-            analog_term => \ADC:mux_bus_plus_3\ ,
-            pad => sens_ph(0)_PAD );
         Properties:
         {
         }
@@ -2332,23 +2359,23 @@ CapSense Blocks               :    0 :    1 :    1 :   0.00%
 Temperature Sensors           :    0 :    1 :    1 :   0.00%
 Low Power Comparators         :    0 :    2 :    2 :   0.00%
 TCPWM Blocks                  :    4 :    0 :    4 : 100.00%
-Serial Communication Blocks   :    1 :    1 :    2 :  50.00%
+Serial Communication Blocks   :    2 :    0 :    2 : 100.00%
 Segment LCD Blocks            :    0 :    1 :    1 :   0.00%
 </CYPRESSTAG>
-Technology Mapping: Elapsed time ==> 1s.265ms
-Tech mapping phase: Elapsed time ==> 1s.359ms
+Technology Mapping: Elapsed time ==> 1s.250ms
+Tech mapping phase: Elapsed time ==> 1s.312ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Placement">
 <CYPRESSTAG name="Analog Placement">
-Elapsed time ==> 0.0290361s
+Elapsed time ==> 0.0289045s
 </CYPRESSTAG>
-Analog Placement phase: Elapsed time ==> 0s.109ms
+Analog Placement phase: Elapsed time ==> 0s.078ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Routing">
 <CYPRESSTAG name="Analog Routing">
-Route success=True, Iterations=1 Elapsed=0.0303214 secs
+Route success=True, Iterations=1 Elapsed=0.0213134 secs
 </CYPRESSTAG>
-Analog Routing phase: Elapsed time ==> 0s.031ms
+Analog Routing phase: Elapsed time ==> 0s.015ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Code Generation">
 ============ Analog Final Answer Routes ============
@@ -2366,21 +2393,11 @@ Map of net to items {
   }
   Net: \ADC:mux_bus_minus_1\ {
   }
-  Net: \ADC:mux_bus_minus_2\ {
-  }
-  Net: \ADC:mux_bus_minus_3\ {
-  }
   Net: \ADC:mux_bus_plus_0\ {
     p2_0
   }
   Net: \ADC:mux_bus_plus_1\ {
     p2_1
-  }
-  Net: \ADC:mux_bus_plus_2\ {
-    p2_2
-  }
-  Net: \ADC:mux_bus_plus_3\ {
-    p2_3
   }
   Net: \ADC:Net_2020\ {
     sarmux_vplus
@@ -2388,8 +2405,6 @@ Map of net to items {
   Net: AMuxNet::\ADC:cy_psoc4_sarmux_8\_CYAMUXSIDE_A {
     SARMUX0_sw0
     SARMUX0_sw1
-    SARMUX0_sw2
-    SARMUX0_sw3
   }
   Net: \ADC:Net_124\ {
     sarmux_vminus
@@ -2400,13 +2415,9 @@ Map of net to items {
 Map of item to net {
   p2_0                                             -> \ADC:mux_bus_plus_0\
   p2_1                                             -> \ADC:mux_bus_plus_1\
-  p2_2                                             -> \ADC:mux_bus_plus_2\
-  p2_3                                             -> \ADC:mux_bus_plus_3\
   sarmux_vplus                                     -> \ADC:Net_2020\
   SARMUX0_sw0                                      -> AMuxNet::\ADC:cy_psoc4_sarmux_8\_CYAMUXSIDE_A
   SARMUX0_sw1                                      -> AMuxNet::\ADC:cy_psoc4_sarmux_8\_CYAMUXSIDE_A
-  SARMUX0_sw2                                      -> AMuxNet::\ADC:cy_psoc4_sarmux_8\_CYAMUXSIDE_A
-  SARMUX0_sw3                                      -> AMuxNet::\ADC:cy_psoc4_sarmux_8\_CYAMUXSIDE_A
   sarmux_vminus                                    -> \ADC:Net_124\
 }
 Mux Info {
@@ -2434,24 +2445,6 @@ Mux Info {
         p2_1
       }
     }
-    Arm: 2 {
-      Net:   \ADC:mux_bus_plus_2\
-      Outer: SARMUX0_sw2
-      Inner: __open__
-      Path {
-        SARMUX0_sw2
-        p2_2
-      }
-    }
-    Arm: 3 {
-      Net:   \ADC:mux_bus_plus_3\
-      Outer: SARMUX0_sw3
-      Inner: __open__
-      Path {
-        SARMUX0_sw3
-        p2_3
-      }
-    }
   }
   Mux: \ADC:cy_psoc4_sarmux_8\_CYAMUXSIDE_B {
      Mouth: \ADC:Net_124\
@@ -2473,27 +2466,13 @@ Mux Info {
       Path {
       }
     }
-    Arm: 2 {
-      Net:   \ADC:Net_2580\
-      Outer: __open__
-      Inner: __open__
-      Path {
-      }
-    }
-    Arm: 3 {
-      Net:   \ADC:Net_2580\
-      Outer: __open__
-      Inner: __open__
-      Path {
-      }
-    }
   }
 }
-Analog Code Generation phase: Elapsed time ==> 0s.359ms
+Analog Code Generation phase: Elapsed time ==> 0s.312ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Placement">
 <CYPRESSTAG name="Detailed placement messages">
-I2076: Total run-time: 1.5 sec.
+I2076: Total run-time: 1.3 sec.
 
 </CYPRESSTAG>
 <CYPRESSTAG name="PLD Packing">
@@ -2517,20 +2496,20 @@ PLD Packing Summary
 <CYPRESSTAG name="Packed PLD Contents">
 Packed PLD Contents not displayed at this verbose level.</CYPRESSTAG>
 </CYPRESSTAG>
-PLD Packing: Elapsed time ==> 0s.003ms
+PLD Packing: Elapsed time ==> 0s.000ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Partitioning">
 <CYPRESSTAG name="Initial Partitioning Summary">
 Initial Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
 <CYPRESSTAG name="Final Partitioning Summary">
 Final Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
-Partitioning: Elapsed time ==> 0s.064ms
+Partitioning: Elapsed time ==> 0s.062ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Simulated Annealing">
-Annealing: Elapsed time ==> 0s.004ms
+Annealing: Elapsed time ==> 0s.000ms
 <CYPRESSTAG name="Simulated Annealing Results">
 The seed used for moves was 114161200.
-Inital cost was 174, final cost is 174 (0.00% improvement).</CYPRESSTAG>
+Inital cost was 173, final cost is 173 (0.00% improvement).</CYPRESSTAG>
 </CYPRESSTAG>
 <CYPRESSTAG name="Final Placement Summary">
 
@@ -2548,7 +2527,7 @@ Final Placement Summary
 Component Placement Details
 ------------------------------------------------------------
 UDB [UDB=(0,0)] contents:
-LAB@[UDB=(0,0)][LB=0] #macrocells=3, #inputs=11, #pterms=7
+LAB@[UDB=(0,0)][LB=0] #macrocells=3, #inputs=11, #pterms=8
 {
     [McSlotId=0]:     MacroCell: Name=\SPIM_1:BSPIM:load_cond\, Mode=(T-Register) @ [UDB=(0,0)][LB=0][MC=0]
         Total # of inputs        : 9
@@ -2578,19 +2557,24 @@ LAB@[UDB=(0,0)][LB=0] #macrocells=3, #inputs=11, #pterms=7
         {
         }
 
-    [McSlotId=1]:     MacroCell: Name=Net_25, Mode=(D-Register) @ [UDB=(0,0)][LB=0][MC=1]
-        Total # of inputs        : 4
-        Total # of product terms : 2
+    [McSlotId=1]:     MacroCell: Name=\SPIM_1:BSPIM:ld_ident\, Mode=(T-Register) @ [UDB=(0,0)][LB=0][MC=1]
+        Total # of inputs        : 9
+        Total # of product terms : 3
         List of special equations: 
             Clock  = (\SPIM_1:Net_276_digital\) => Global
             Clock Enable: True
-        Main Equation            : 2 pterms
+        Main Equation            : 3 pterms
         (
-              Net_25 * \SPIM_1:BSPIM:state_1\ * \SPIM_1:BSPIM:state_0\
-            + !\SPIM_1:BSPIM:state_2\ * \SPIM_1:BSPIM:state_1\ * 
-              \SPIM_1:BSPIM:state_0\
+              \SPIM_1:BSPIM:state_2\ * !\SPIM_1:BSPIM:state_1\ * 
+              !\SPIM_1:BSPIM:state_0\ * !\SPIM_1:BSPIM:ld_ident\
+            + \SPIM_1:BSPIM:state_2\ * \SPIM_1:BSPIM:state_1\ * 
+              !\SPIM_1:BSPIM:state_0\ * \SPIM_1:BSPIM:ld_ident\
+            + \SPIM_1:BSPIM:state_1\ * !\SPIM_1:BSPIM:state_0\ * 
+              !\SPIM_1:BSPIM:count_4\ * !\SPIM_1:BSPIM:count_3\ * 
+              !\SPIM_1:BSPIM:count_2\ * \SPIM_1:BSPIM:count_1\ * 
+              !\SPIM_1:BSPIM:count_0\ * \SPIM_1:BSPIM:ld_ident\
         );
-        Output = Net_25 (fanout=2)
+        Output = \SPIM_1:BSPIM:ld_ident\ (fanout=4)
         Properties               : 
         {
         }
@@ -2817,24 +2801,20 @@ LAB@[UDB=(0,1)][LB=1] #macrocells=3, #inputs=10, #pterms=8
         {
         }
 
-    [McSlotId=2]:     MacroCell: Name=\SPIM_1:BSPIM:ld_ident\, Mode=(T-Register) @ [UDB=(0,1)][LB=1][MC=2]
-        Total # of inputs        : 9
+    [McSlotId=2]:     MacroCell: Name=\SPIM_1:BSPIM:state_0\, Mode=(T-Register) @ [UDB=(0,1)][LB=1][MC=2]
+        Total # of inputs        : 4
         Total # of product terms : 3
         List of special equations: 
             Clock  = (\SPIM_1:Net_276_digital\) => Global
             Clock Enable: True
         Main Equation            : 3 pterms
         (
-              \SPIM_1:BSPIM:state_2\ * !\SPIM_1:BSPIM:state_1\ * 
-              !\SPIM_1:BSPIM:state_0\ * !\SPIM_1:BSPIM:ld_ident\
-            + \SPIM_1:BSPIM:state_2\ * \SPIM_1:BSPIM:state_1\ * 
-              !\SPIM_1:BSPIM:state_0\ * \SPIM_1:BSPIM:ld_ident\
-            + \SPIM_1:BSPIM:state_1\ * !\SPIM_1:BSPIM:state_0\ * 
-              !\SPIM_1:BSPIM:count_4\ * !\SPIM_1:BSPIM:count_3\ * 
-              !\SPIM_1:BSPIM:count_2\ * \SPIM_1:BSPIM:count_1\ * 
-              !\SPIM_1:BSPIM:count_0\ * \SPIM_1:BSPIM:ld_ident\
+              !\SPIM_1:BSPIM:state_2\ * \SPIM_1:BSPIM:state_1\
+            + \SPIM_1:BSPIM:state_2\ * !\SPIM_1:BSPIM:state_1\
+            + !\SPIM_1:BSPIM:state_1\ * !\SPIM_1:BSPIM:state_0\ * 
+              !\SPIM_1:BSPIM:tx_status_1\
         );
-        Output = \SPIM_1:BSPIM:ld_ident\ (fanout=4)
+        Output = \SPIM_1:BSPIM:state_0\ (fanout=12)
         Properties               : 
         {
         }
@@ -3027,22 +3007,21 @@ controlcell: Name =\EFFECTOR_PWM:PWMUDB:genblk1:ctrlreg\
     Clock Enable: True
 
 UDB [UDB=(1,1)] contents:
-LAB@[UDB=(1,1)][LB=0] #macrocells=3, #inputs=4, #pterms=5
+LAB@[UDB=(1,1)][LB=0] #macrocells=3, #inputs=4, #pterms=4
 {
-    [McSlotId=0]:     MacroCell: Name=\SPIM_1:BSPIM:state_0\, Mode=(T-Register) @ [UDB=(1,1)][LB=0][MC=0]
+    [McSlotId=0]:     MacroCell: Name=Net_25, Mode=(D-Register) @ [UDB=(1,1)][LB=0][MC=0]
         Total # of inputs        : 4
-        Total # of product terms : 3
+        Total # of product terms : 2
         List of special equations: 
             Clock  = (\SPIM_1:Net_276_digital\) => Global
             Clock Enable: True
-        Main Equation            : 3 pterms
+        Main Equation            : 2 pterms
         (
-              !\SPIM_1:BSPIM:state_2\ * \SPIM_1:BSPIM:state_1\
-            + \SPIM_1:BSPIM:state_2\ * !\SPIM_1:BSPIM:state_1\
-            + !\SPIM_1:BSPIM:state_1\ * !\SPIM_1:BSPIM:state_0\ * 
-              !\SPIM_1:BSPIM:tx_status_1\
+              Net_25 * \SPIM_1:BSPIM:state_1\ * \SPIM_1:BSPIM:state_0\
+            + !\SPIM_1:BSPIM:state_2\ * \SPIM_1:BSPIM:state_1\ * 
+              \SPIM_1:BSPIM:state_0\
         );
-        Output = \SPIM_1:BSPIM:state_0\ (fanout=12)
+        Output = Net_25 (fanout=2)
         Properties               : 
         {
         }
@@ -3667,86 +3646,6 @@ Pin : Name = pot_elbow(0)
     {
     }
 
-[IoId=2]: 
-Pin : Name = sens_hygro(0)
-    Attributes:
-        In Group/Port: True
-        In Sync Option: AUTO
-        Out Sync Option: AUTO
-        Interrupt generated: False
-        Interrupt mode: NONE
-        Drive mode: HI_Z_ANALOG
-        VTrip: EITHER
-        Slew: FAST
-        Input Sync needed: False
-        Output Sync needed: False
-        SC shield enabled: False
-        POR State: ANY
-        LCD Mode: COMMON
-        Register Mode: RegComb
-        CaSense Mode: NEITHER
-        Treat as pin: True
-        Is OE Registered: False
-        Uses Analog: True
-        Can contain Digital: False
-        Is SIO: False
-        SIO Output Buf: NONREGULATED
-        SIO Input Buf: SINGLE_ENDED
-        SIO HiFreq: LOW
-        SIO Hyst: DISABLED
-        SIO Vtrip: MULTIPLIER_0_5
-        SIO RefSel: VCC_IO
-        Required Capabilitites: ANALOG
-        Initial Value: 1
-        IO Voltage: 0
-    PORT MAP (
-        pa_out => sens_hygro(0)__PA ,
-        analog_term => \ADC:mux_bus_plus_2\ ,
-        pad => sens_hygro(0)_PAD );
-    Properties:
-    {
-    }
-
-[IoId=3]: 
-Pin : Name = sens_ph(0)
-    Attributes:
-        In Group/Port: True
-        In Sync Option: AUTO
-        Out Sync Option: AUTO
-        Interrupt generated: False
-        Interrupt mode: NONE
-        Drive mode: HI_Z_ANALOG
-        VTrip: EITHER
-        Slew: FAST
-        Input Sync needed: False
-        Output Sync needed: False
-        SC shield enabled: False
-        POR State: ANY
-        LCD Mode: COMMON
-        Register Mode: RegComb
-        CaSense Mode: NEITHER
-        Treat as pin: True
-        Is OE Registered: False
-        Uses Analog: True
-        Can contain Digital: False
-        Is SIO: False
-        SIO Output Buf: NONREGULATED
-        SIO Input Buf: SINGLE_ENDED
-        SIO HiFreq: LOW
-        SIO Hyst: DISABLED
-        SIO Vtrip: MULTIPLIER_0_5
-        SIO RefSel: VCC_IO
-        Required Capabilitites: ANALOG
-        Initial Value: 1
-        IO Voltage: 0
-    PORT MAP (
-        pa_out => sens_ph(0)__PA ,
-        analog_term => \ADC:mux_bus_plus_3\ ,
-        pad => sens_ph(0)_PAD );
-    Properties:
-    {
-    }
-
 [IoId=4]: 
 Pin : Name = effector_A(0)
     Attributes:
@@ -3788,6 +3687,86 @@ Pin : Name = effector_A(0)
     }
 
 Port 3 contains the following IO cells:
+[IoId=0]: 
+Pin : Name = \Arduino_UART:rx(0)\
+    Attributes:
+        In Group/Port: True
+        In Sync Option: NOSYNC
+        Out Sync Option: AUTO
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: HI_Z_DIGITAL
+        VTrip: CMOS
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO RefSel: VCC_IO
+        Required Capabilitites: DIGITAL, SCB_UART_RX
+        Initial Value: 0
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => \Arduino_UART:rx(0)\__PA ,
+        fb => \Arduino_UART:Net_654\ ,
+        pad => \Arduino_UART:rx(0)_PAD\ );
+    Properties:
+    {
+    }
+
+[IoId=1]: 
+Pin : Name = \Arduino_UART:tx(0)\
+    Attributes:
+        In Group/Port: True
+        In Sync Option: NOSYNC
+        Out Sync Option: NOSYNC
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: CMOS_OUT
+        VTrip: CMOS
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO RefSel: VCC_IO
+        Required Capabilitites: DIGITAL, SCB_UART_TX
+        Initial Value: 1
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => \Arduino_UART:tx(0)\__PA ,
+        input => \Arduino_UART:Net_656\ ,
+        pad => \Arduino_UART:tx(0)_PAD\ );
+    Properties:
+    {
+    }
+
 [IoId=4]: 
 Pin : Name = stop_shdr_up(0)
     Attributes:
@@ -3946,7 +3925,7 @@ Pin : Name = stop_elb_dn(0)
 
 Port 4 contains the following IO cells:
 [IoId=0]: 
-Pin : Name = \UART_1:rx(0)\
+Pin : Name = \Wrist_UART:rx(0)\
     Attributes:
         In Group/Port: True
         In Sync Option: NOSYNC
@@ -3978,15 +3957,15 @@ Pin : Name = \UART_1:rx(0)\
         Initial Value: 0
         IO Voltage: 0
     PORT MAP (
-        pa_out => \UART_1:rx(0)\__PA ,
-        fb => \UART_1:Net_654\ ,
-        pad => \UART_1:rx(0)_PAD\ );
+        pa_out => \Wrist_UART:rx(0)\__PA ,
+        fb => \Wrist_UART:Net_654\ ,
+        pad => \Wrist_UART:rx(0)_PAD\ );
     Properties:
     {
     }
 
 [IoId=1]: 
-Pin : Name = \UART_1:tx(0)\
+Pin : Name = \Wrist_UART:tx(0)\
     Attributes:
         In Group/Port: True
         In Sync Option: NOSYNC
@@ -4018,9 +3997,9 @@ Pin : Name = \UART_1:tx(0)\
         Initial Value: 1
         IO Voltage: 0
     PORT MAP (
-        pa_out => \UART_1:tx(0)\__PA ,
-        input => \UART_1:Net_656\ ,
-        pad => \UART_1:tx(0)_PAD\ );
+        pa_out => \Wrist_UART:tx(0)\__PA ,
+        input => \Wrist_UART:Net_656\ ,
+        pad => \Wrist_UART:tx(0)_PAD\ );
     Properties:
     {
     }
@@ -4037,7 +4016,8 @@ Clock group 0:
             imo => ClockBlock_IMO ,
             hfclk => ClockBlock_HFCLK ,
             udb_div_0 => dclk_to_genclk ,
-            ff_div_2 => \UART_1:Net_847_ff2\ ,
+            ff_div_2 => \Wrist_UART:Net_847_ff2\ ,
+            ff_div_3 => \Arduino_UART:Net_847_ff3\ ,
             ff_div_8 => Net_130_ff8 ,
             ff_div_7 => \ADC:Net_1845_ff7\ ,
             ff_div_9 => Net_376_ff9 ,
@@ -4054,22 +4034,44 @@ FSS group 0: empty
 Low Power Comparator group 0: empty
 Serial Communication Block group 0: 
     Scb Block @ [FFB(SCB,0)]: 
-    m0s8scbcell: Name =\UART_1:SCB\
+    m0s8scbcell: Name =\Wrist_UART:SCB\
         PORT MAP (
-            clock => \UART_1:Net_847_ff2\ ,
+            clock => \Wrist_UART:Net_847_ff2\ ,
             interrupt => Net_978 ,
-            rx => \UART_1:Net_654\ ,
-            tx => \UART_1:Net_656\ ,
-            rts => \UART_1:Net_751\ ,
-            mosi_m => \UART_1:Net_660\ ,
-            select_m_3 => \UART_1:ss_3\ ,
-            select_m_2 => \UART_1:ss_2\ ,
-            select_m_1 => \UART_1:ss_1\ ,
-            select_m_0 => \UART_1:ss_0\ ,
-            sclk_m => \UART_1:Net_687\ ,
-            miso_s => \UART_1:Net_703\ ,
-            tx_req => \UART_1:Net_823\ ,
-            rx_req => \UART_1:Net_824\ );
+            rx => \Wrist_UART:Net_654\ ,
+            tx => \Wrist_UART:Net_656\ ,
+            rts => \Wrist_UART:Net_751\ ,
+            mosi_m => \Wrist_UART:Net_660\ ,
+            select_m_3 => \Wrist_UART:ss_3\ ,
+            select_m_2 => \Wrist_UART:ss_2\ ,
+            select_m_1 => \Wrist_UART:ss_1\ ,
+            select_m_0 => \Wrist_UART:ss_0\ ,
+            sclk_m => \Wrist_UART:Net_687\ ,
+            miso_s => \Wrist_UART:Net_703\ ,
+            tx_req => \Wrist_UART:Net_823\ ,
+            rx_req => \Wrist_UART:Net_824\ );
+        Properties:
+        {
+            cy_registers = ""
+            scb_mode = 2
+        }
+    Scb Block @ [FFB(SCB,1)]: 
+    m0s8scbcell: Name =\Arduino_UART:SCB\
+        PORT MAP (
+            clock => \Arduino_UART:Net_847_ff3\ ,
+            interrupt => Net_1315 ,
+            rx => \Arduino_UART:Net_654\ ,
+            tx => \Arduino_UART:Net_656\ ,
+            rts => \Arduino_UART:Net_751\ ,
+            mosi_m => \Arduino_UART:Net_660\ ,
+            select_m_3 => \Arduino_UART:ss_3\ ,
+            select_m_2 => \Arduino_UART:ss_2\ ,
+            select_m_1 => \Arduino_UART:ss_1\ ,
+            select_m_0 => \Arduino_UART:ss_0\ ,
+            sclk_m => \Arduino_UART:Net_687\ ,
+            miso_s => \Arduino_UART:Net_703\ ,
+            tx_req => \Arduino_UART:Net_823\ ,
+            rx_req => \Arduino_UART:Net_824\ );
         Properties:
         {
             cy_registers = ""
@@ -4211,12 +4213,8 @@ Blocks not positioned by the digital component placer:
     PSoC4 SAR Mux @ <No Location>: 
         p4sarmuxcell: Name =\ADC:cy_psoc4_sarmux_8\
             PORT MAP (
-                muxin_plus_3 => \ADC:mux_bus_plus_3\ ,
-                muxin_plus_2 => \ADC:mux_bus_plus_2\ ,
                 muxin_plus_1 => \ADC:mux_bus_plus_1\ ,
                 muxin_plus_0 => \ADC:mux_bus_plus_0\ ,
-                muxin_minus_3 => \ADC:mux_bus_minus_3\ ,
-                muxin_minus_2 => \ADC:mux_bus_minus_2\ ,
                 muxin_minus_1 => \ADC:mux_bus_minus_1\ ,
                 muxin_minus_0 => \ADC:mux_bus_minus_0\ ,
                 cmn_neg => \ADC:Net_2580\ ,
@@ -4225,8 +4223,8 @@ Blocks not positioned by the digital component placer:
             Properties:
             {
                 cy_registers = ""
-                input_mode = "0000"
-                muxin_width = 4
+                input_mode = "00"
+                muxin_width = 2
             }
 </CYPRESSTAG>
 <CYPRESSTAG name="Port Configuration Details">
@@ -4234,65 +4232,65 @@ Blocks not positioned by the digital component placer:
 ------------------------------------------------------------
 Port Configuration report
 ------------------------------------------------------------
-     |     |       | Interrupt |                  |                 | 
-Port | Pin | Fixed |      Type |       Drive Mode |            Name | Connections
------+-----+-------+-----------+------------------+-----------------+-----------------------------
-   0 |   0 |     * |      NONE |     HI_Z_DIGITAL |      WIZ_INT(0) | 
-     |   1 |     * |      NONE |     HI_Z_DIGITAL |      WIZ_RDY(0) | 
-     |   2 |     * |      NONE |         CMOS_OUT |      WIZ_RST(0) | 
-     |   3 |     * |      NONE |         CMOS_OUT |       WIZ_SS(0) | 
-     |   4 |     * |      NONE |         CMOS_OUT |       MOSI_1(0) | In(Net_23)
-     |   5 |     * |      NONE |     HI_Z_DIGITAL |       MISO_1(0) | FB(Net_19)
-     |   6 |     * |      NONE |         CMOS_OUT |       SCLK_1(0) | In(Net_25)
------+-----+-------+-----------+------------------+-----------------+-----------------------------
-   1 |   0 |     * |      NONE |         CMOS_OUT |        elbow(0) | In(Net_659)
-     |   1 |     * |      NONE |         CMOS_OUT |     shoulder(0) | In(Net_801)
-     |   2 |     * |      NONE |         CMOS_OUT |  baseAzimuth(0) | In(Net_647)
-     |   6 |     * |      NONE |         CMOS_OUT |          LED(0) | 
------+-----+-------+-----------+------------------+-----------------+-----------------------------
-   2 |   0 |     * |      NONE |      HI_Z_ANALOG | pot_shoulder(0) | Analog(\ADC:mux_bus_plus_0\)
-     |   1 |     * |      NONE |      HI_Z_ANALOG |    pot_elbow(0) | Analog(\ADC:mux_bus_plus_1\)
-     |   2 |     * |      NONE |      HI_Z_ANALOG |   sens_hygro(0) | Analog(\ADC:mux_bus_plus_2\)
-     |   3 |     * |      NONE |      HI_Z_ANALOG |      sens_ph(0) | Analog(\ADC:mux_bus_plus_3\)
-     |   4 |     * |      NONE |         CMOS_OUT |   effector_A(0) | In(Net_1108)
------+-----+-------+-----------+------------------+-----------------+-----------------------------
-   3 |   4 |     * |      NONE |      RES_PULL_UP | stop_shdr_up(0) | 
-     |   5 |     * |      NONE |      RES_PULL_UP | stop_shdr_dn(0) | 
-     |   6 |     * |      NONE |      RES_PULL_UP |  stop_elb_up(0) | 
-     |   7 |     * |      NONE |      RES_PULL_UP |  stop_elb_dn(0) | 
------+-----+-------+-----------+------------------+-----------------+-----------------------------
-   4 |   0 |     * |      NONE |     HI_Z_DIGITAL |  \UART_1:rx(0)\ | FB(\UART_1:Net_654\)
-     |   1 |     * |      NONE |         CMOS_OUT |  \UART_1:tx(0)\ | In(\UART_1:Net_656\)
---------------------------------------------------------------------------------------------------
+     |     |       | Interrupt |                  |                      | 
+Port | Pin | Fixed |      Type |       Drive Mode |                 Name | Connections
+-----+-----+-------+-----------+------------------+----------------------+-----------------------------
+   0 |   0 |     * |      NONE |     HI_Z_DIGITAL |           WIZ_INT(0) | 
+     |   1 |     * |      NONE |     HI_Z_DIGITAL |           WIZ_RDY(0) | 
+     |   2 |     * |      NONE |         CMOS_OUT |           WIZ_RST(0) | 
+     |   3 |     * |      NONE |         CMOS_OUT |            WIZ_SS(0) | 
+     |   4 |     * |      NONE |         CMOS_OUT |            MOSI_1(0) | In(Net_23)
+     |   5 |     * |      NONE |     HI_Z_DIGITAL |            MISO_1(0) | FB(Net_19)
+     |   6 |     * |      NONE |         CMOS_OUT |            SCLK_1(0) | In(Net_25)
+-----+-----+-------+-----------+------------------+----------------------+-----------------------------
+   1 |   0 |     * |      NONE |         CMOS_OUT |             elbow(0) | In(Net_659)
+     |   1 |     * |      NONE |         CMOS_OUT |          shoulder(0) | In(Net_801)
+     |   2 |     * |      NONE |         CMOS_OUT |       baseAzimuth(0) | In(Net_647)
+     |   6 |     * |      NONE |         CMOS_OUT |               LED(0) | 
+-----+-----+-------+-----------+------------------+----------------------+-----------------------------
+   2 |   0 |     * |      NONE |      HI_Z_ANALOG |      pot_shoulder(0) | Analog(\ADC:mux_bus_plus_0\)
+     |   1 |     * |      NONE |      HI_Z_ANALOG |         pot_elbow(0) | Analog(\ADC:mux_bus_plus_1\)
+     |   4 |     * |      NONE |         CMOS_OUT |        effector_A(0) | In(Net_1108)
+-----+-----+-------+-----------+------------------+----------------------+-----------------------------
+   3 |   0 |     * |      NONE |     HI_Z_DIGITAL | \Arduino_UART:rx(0)\ | FB(\Arduino_UART:Net_654\)
+     |   1 |     * |      NONE |         CMOS_OUT | \Arduino_UART:tx(0)\ | In(\Arduino_UART:Net_656\)
+     |   4 |     * |      NONE |      RES_PULL_UP |      stop_shdr_up(0) | 
+     |   5 |     * |      NONE |      RES_PULL_UP |      stop_shdr_dn(0) | 
+     |   6 |     * |      NONE |      RES_PULL_UP |       stop_elb_up(0) | 
+     |   7 |     * |      NONE |      RES_PULL_UP |       stop_elb_dn(0) | 
+-----+-----+-------+-----------+------------------+----------------------+-----------------------------
+   4 |   0 |     * |      NONE |     HI_Z_DIGITAL |   \Wrist_UART:rx(0)\ | FB(\Wrist_UART:Net_654\)
+     |   1 |     * |      NONE |         CMOS_OUT |   \Wrist_UART:tx(0)\ | In(\Wrist_UART:Net_656\)
+-------------------------------------------------------------------------------------------------------
 </CYPRESSTAG>
 </CYPRESSTAG>
 </CYPRESSTAG>
-Digital component placer commit/Report: Elapsed time ==> 0s.009ms
-Digital Placement phase: Elapsed time ==> 2s.502ms
+Digital component placer commit/Report: Elapsed time ==> 0s.015ms
+Digital Placement phase: Elapsed time ==> 1s.843ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Routing">
 Routing successful.
-Digital Routing phase: Elapsed time ==> 2s.126ms
+Digital Routing phase: Elapsed time ==> 1s.890ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream and API generation">
-Bitstream and API generation phase: Elapsed time ==> 0s.312ms
+Bitstream and API generation phase: Elapsed time ==> 0s.265ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream verification">
-Bitstream verification phase: Elapsed time ==> 0s.062ms
+Bitstream verification phase: Elapsed time ==> 0s.078ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Static timing analysis">
 Timing report is in arm_controller_v2.1_timing.html.
-Static timing analysis phase: Elapsed time ==> 0s.921ms
+Static timing analysis phase: Elapsed time ==> 0s.859ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Data reporting">
 Data reporting phase: Elapsed time ==> 0s.000ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Database update...">
-Design database save phase: Elapsed time ==> 0s.504ms
+Design database save phase: Elapsed time ==> 0s.546ms
 </CYPRESSTAG>
-cydsfit: Elapsed time ==> 8s.414ms
+cydsfit: Elapsed time ==> 7s.328ms
 </CYPRESSTAG>
-Fitter phase: Elapsed time ==> 8s.523ms
-API generation phase: Elapsed time ==> 5s.564ms
-Dependency generation phase: Elapsed time ==> 0s.078ms
+Fitter phase: Elapsed time ==> 7s.437ms
+API generation phase: Elapsed time ==> 3s.500ms
+Dependency generation phase: Elapsed time ==> 0s.046ms
 Cleanup phase: Elapsed time ==> 0s.000ms

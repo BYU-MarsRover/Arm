@@ -40,6 +40,31 @@
 <v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\ADC_IRQ</v>
 <v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\ADC_IRQ\ADC_IRQ.c</v>
 <v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\ADC_IRQ\ADC_IRQ.h</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Arduino_UART</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Arduino_UART\Arduino_UART.c</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Arduino_UART\Arduino_UART.h</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Arduino_UART\Arduino_UART_BOOT.c</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Arduino_UART\Arduino_UART_BOOT.h</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Arduino_UART\Arduino_UART_PINS.h</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Arduino_UART\Arduino_UART_PM.c</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Arduino_UART\Arduino_UART_PVT.h</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Arduino_UART\Arduino_UART_SPI_UART.c</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Arduino_UART\Arduino_UART_SPI_UART.h</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Arduino_UART\Arduino_UART_SPI_UART_INT.c</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Arduino_UART\Arduino_UART_SPI_UART_PVT.h</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Arduino_UART\Arduino_UART_UART.c</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Arduino_UART\Arduino_UART_UART_BOOT.c</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Arduino_UART_rx</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Arduino_UART_rx\Arduino_UART_rx.c</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Arduino_UART_rx\Arduino_UART_rx.h</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Arduino_UART_rx\Arduino_UART_rx_aliases.h</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Arduino_UART_SCBCLK</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Arduino_UART_SCBCLK\Arduino_UART_SCBCLK.c</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Arduino_UART_SCBCLK\Arduino_UART_SCBCLK.h</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Arduino_UART_tx</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Arduino_UART_tx\Arduino_UART_tx.c</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Arduino_UART_tx\Arduino_UART_tx.h</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Arduino_UART_tx\Arduino_UART_tx_aliases.h</v>
 <v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\BA_PWM</v>
 <v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\BA_PWM\BA_PWM.c</v>
 <v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\BA_PWM\BA_PWM.h</v>
@@ -118,14 +143,6 @@
 <v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\SCLK_1\SCLK_1.c</v>
 <v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\SCLK_1\SCLK_1.h</v>
 <v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\SCLK_1\SCLK_1_aliases.h</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\sens_hygro</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\sens_hygro\sens_hygro.c</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\sens_hygro\sens_hygro.h</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\sens_hygro\sens_hygro_aliases.h</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\sens_ph</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\sens_ph\sens_ph.c</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\sens_ph\sens_ph.h</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\sens_ph\sens_ph_aliases.h</v>
 <v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\SHLDR_PWM</v>
 <v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\SHLDR_PWM\SHLDR_PWM.c</v>
 <v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\SHLDR_PWM\SHLDR_PWM.h</v>
@@ -163,31 +180,6 @@
 <v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Timer_1\Timer_1.c</v>
 <v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Timer_1\Timer_1.h</v>
 <v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Timer_1\Timer_1_PM.c</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\UART_1</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\UART_1\UART_1.c</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\UART_1\UART_1.h</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\UART_1\UART_1_BOOT.c</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\UART_1\UART_1_BOOT.h</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\UART_1\UART_1_PINS.h</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\UART_1\UART_1_PM.c</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\UART_1\UART_1_PVT.h</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\UART_1\UART_1_SPI_UART.c</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\UART_1\UART_1_SPI_UART.h</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\UART_1\UART_1_SPI_UART_INT.c</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\UART_1\UART_1_SPI_UART_PVT.h</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\UART_1\UART_1_UART.c</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\UART_1\UART_1_UART_BOOT.c</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\UART_1_rx</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\UART_1_rx\UART_1_rx.c</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\UART_1_rx\UART_1_rx.h</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\UART_1_rx\UART_1_rx_aliases.h</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\UART_1_SCBCLK</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\UART_1_SCBCLK\UART_1_SCBCLK.c</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\UART_1_SCBCLK\UART_1_SCBCLK.h</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\UART_1_tx</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\UART_1_tx\UART_1_tx.c</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\UART_1_tx\UART_1_tx.h</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\UART_1_tx\UART_1_tx_aliases.h</v>
 <v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\WIZ_INT</v>
 <v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\WIZ_INT\WIZ_INT.c</v>
 <v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\WIZ_INT\WIZ_INT.h</v>
@@ -204,6 +196,31 @@
 <v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\WIZ_SS\WIZ_SS.c</v>
 <v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\WIZ_SS\WIZ_SS.h</v>
 <v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\WIZ_SS\WIZ_SS_aliases.h</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Wrist_UART</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Wrist_UART\Wrist_UART.c</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Wrist_UART\Wrist_UART.h</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Wrist_UART\Wrist_UART_BOOT.c</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Wrist_UART\Wrist_UART_BOOT.h</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Wrist_UART\Wrist_UART_PINS.h</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Wrist_UART\Wrist_UART_PM.c</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Wrist_UART\Wrist_UART_PVT.h</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Wrist_UART\Wrist_UART_SPI_UART.c</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Wrist_UART\Wrist_UART_SPI_UART.h</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Wrist_UART\Wrist_UART_SPI_UART_INT.c</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Wrist_UART\Wrist_UART_SPI_UART_PVT.h</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Wrist_UART\Wrist_UART_UART.c</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Wrist_UART\Wrist_UART_UART_BOOT.c</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Wrist_UART_rx</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Wrist_UART_rx\Wrist_UART_rx.c</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Wrist_UART_rx\Wrist_UART_rx.h</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Wrist_UART_rx\Wrist_UART_rx_aliases.h</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Wrist_UART_SCBCLK</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Wrist_UART_SCBCLK\Wrist_UART_SCBCLK.c</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Wrist_UART_SCBCLK\Wrist_UART_SCBCLK.h</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Wrist_UART_tx</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Wrist_UART_tx\Wrist_UART_tx.c</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Wrist_UART_tx\Wrist_UART_tx.h</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Wrist_UART_tx\Wrist_UART_tx_aliases.h</v>
 <v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\cydevice_trm.h</v>
 <v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\cydevicegnu_trm.inc</v>
 <v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\cydeviceiar_trm.inc</v>
@@ -312,39 +329,39 @@
 <v>arm_controller_v2\Programmertest\Generated_Source\PSoC4\project.h</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\cy_boot\CyFlash.c</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\cy_boot\CyFlash.h</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\cy_boot\CyLib.c</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\cy_boot\CyLib.h</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\cy_boot\cypins.h</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\cy_boot\cyPm.c</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\cy_boot\cyPm.h</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\cy_boot\cytypes.h</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\cy_boot\cyutils.c</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\effector_A</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\effector_A\effector_A.c</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\effector_A\effector_A.h</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\effector_A\effector_A_aliases.h</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\EFFECTOR_PWM</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\EFFECTOR_PWM\EFFECTOR_PWM.c</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\EFFECTOR_PWM\EFFECTOR_PWM.h</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\EFFECTOR_PWM\EFFECTOR_PWM_PM.c</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\elbow</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\elbow\elbow.c</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\elbow\elbow.h</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\elbow\elbow_aliases.h</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\ELBW_PWM</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\ELBW_PWM\ELBW_PWM.c</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\ELBW_PWM\ELBW_PWM.h</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\ELBW_PWM\ELBW_PWM_PM.c</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\isr_1</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\isr_1\isr_1.c</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\isr_1\isr_1.h</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\LED</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\LED\LED.c</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\LED\LED.h</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\LED\LED_aliases.h</v>
-<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\MISO_1</v>
+<v>arm_controller_v2</v>
+<v>arm_controller_v2\arm_controller_v2.1</v>
+<v>arm_controller_v2\arm_controller_v2.1\TopDesign</v>
+<v>arm_controller_v2\arm_controller_v2.1\arm_controller_v2.1.cydwr</v>
+<v>arm_controller_v2\arm_controller_v2.1\Header Files</v>
+<v>arm_controller_v2\arm_controller_v2.1\Header Files\main.h</v>
+<v>arm_controller_v2\arm_controller_v2.1\Header Files\spi.h</v>
+<v>arm_controller_v2\arm_controller_v2.1\Header Files\wiznet5500.h</v>
+<v>arm_controller_v2\arm_controller_v2.1\Source Files</v>
+<v>arm_controller_v2\arm_controller_v2.1\Source Files\main.c</v>
+<v>arm_controller_v2\arm_controller_v2.1\Source Files\spi.c</v>
+<v>arm_controller_v2\arm_controller_v2.1\Source Files\wiznet5500.c</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\ADC</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\ADC\ADC.c</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\ADC\ADC.h</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\ADC\ADC_INT.c</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\ADC\ADC_PM.c</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\ADC_intClock</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\ADC_intClock\ADC_intClock.c</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\ADC_intClock\ADC_intClock.h</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\ADC_IRQ</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\ADC_IRQ\ADC_IRQ.c</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\ADC_IRQ\ADC_IRQ.h</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Arduino_UART</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Arduino_UART\Arduino_UART.c</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Arduino_UART\Arduino_UART.h</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Arduino_UART\Arduino_UART_BOOT.c</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Arduino_UART\Arduino_UART_BOOT.h</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Arduino_UART\Arduino_UART_PINS.h</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Arduino_UART\Arduino_UART_PM.c</v>
+<v>arm_controller_v2\arm_controller_v2.1\Generated_Source\PSoC4\Arduino_UART\Arduino_UART_PVT.h</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="arm_controller_v2\arm_controller_v2.1">
@@ -386,6 +403,16 @@
 <v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\ADC_intClock.lst</v>
 <v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\ADC_IRQ.lst</v>
 <v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\ADC_PM.lst</v>
+<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\Arduino_UART.lst</v>
+<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\Arduino_UART_BOOT.lst</v>
+<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\Arduino_UART_PM.lst</v>
+<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\Arduino_UART_rx.lst</v>
+<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\Arduino_UART_SCBCLK.lst</v>
+<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\Arduino_UART_SPI_UART.lst</v>
+<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\Arduino_UART_SPI_UART_INT.lst</v>
+<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\Arduino_UART_tx.lst</v>
+<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\Arduino_UART_UART.lst</v>
+<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\Arduino_UART_UART_BOOT.lst</v>
 <v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\BA_PWM.lst</v>
 <v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\BA_PWM_PM.lst</v>
 <v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\baseAzimuth.lst</v>
@@ -412,8 +439,6 @@
 <v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\pot_elbow.lst</v>
 <v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\pot_shoulder.lst</v>
 <v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\SCLK_1.lst</v>
-<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\sens_hygro.lst</v>
-<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\sens_ph.lst</v>
 <v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\SHLDR_PWM.lst</v>
 <v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\SHLDR_PWM_PM.lst</v>
 <v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\shoulder.lst</v>
@@ -428,21 +453,21 @@
 <v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\stop_shdr_up.lst</v>
 <v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\Timer_1.lst</v>
 <v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\Timer_1_PM.lst</v>
-<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\UART_1.lst</v>
-<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\UART_1_BOOT.lst</v>
-<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\UART_1_PM.lst</v>
-<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\UART_1_rx.lst</v>
-<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\UART_1_SCBCLK.lst</v>
-<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\UART_1_SPI_UART.lst</v>
-<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\UART_1_SPI_UART_INT.lst</v>
-<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\UART_1_tx.lst</v>
-<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\UART_1_UART.lst</v>
-<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\UART_1_UART_BOOT.lst</v>
 <v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\WIZ_INT.lst</v>
 <v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\WIZ_RDY.lst</v>
 <v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\WIZ_RST.lst</v>
 <v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\WIZ_SS.lst</v>
 <v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\wiznet5500.lst</v>
+<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\Wrist_UART.lst</v>
+<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\Wrist_UART_BOOT.lst</v>
+<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\Wrist_UART_PM.lst</v>
+<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\Wrist_UART_rx.lst</v>
+<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\Wrist_UART_SCBCLK.lst</v>
+<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\Wrist_UART_SPI_UART.lst</v>
+<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\Wrist_UART_SPI_UART_INT.lst</v>
+<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\Wrist_UART_tx.lst</v>
+<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\Wrist_UART_UART.lst</v>
+<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\Wrist_UART_UART_BOOT.lst</v>
 <v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.elf</v>
 <v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.hex</v>
 <v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.map</v>
@@ -490,37 +515,6 @@
 <VisibleNodeIds>
 <v>arm_controller_v2</v>
 <v>arm_controller_v2\arm_controller_v2.1</v>
-<v>arm_controller_v2\arm_controller_v2.1\CortexM0</v>
-<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484</v>
-<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug</v>
-<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files</v>
-<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\ADC.lst</v>
-<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\ADC_INT.lst</v>
-<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\ADC_intClock.lst</v>
-<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\ADC_IRQ.lst</v>
-<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\ADC_PM.lst</v>
-<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\BA_PWM.lst</v>
-<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\BA_PWM_PM.lst</v>
-<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\baseAzimuth.lst</v>
-<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\Clock_counter.lst</v>
-<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\Clock_pwm.lst</v>
-<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\Cm0Start.lst</v>
-<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\CyBootAsmGnu.lst</v>
-<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\cyfitter_cfg.lst</v>
-<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\CyFlash.lst</v>
-<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\CyLib.lst</v>
-<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\cymetadata.lst</v>
-<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\cyPm.lst</v>
-<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\cyutils.lst</v>
-<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\effector_A.lst</v>
-<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\EFFECTOR_PWM.lst</v>
-<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\EFFECTOR_PWM_PM.lst</v>
-<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\elbow.lst</v>
-<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\ELBW_PWM.lst</v>
-<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\ELBW_PWM_PM.lst</v>
-<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\isr_1.lst</v>
-<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\main.lst</v>
-<v>arm_controller_v2\arm_controller_v2.1\CortexM0\ARM_GCC_484\Debug\Listing Files\MISO_1.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>

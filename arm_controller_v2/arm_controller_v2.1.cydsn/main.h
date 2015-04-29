@@ -18,16 +18,11 @@
     #define ownIpAddr 4u
     #define dstIpAddr 1u
     #define udpPort 27015u
-
-    //TODO: We need to make sure the bounds checking doesn't break
-    //TODO: re-verify in order to match stop-switch placement
-    //#define ELBOW_UPPER_BOUND 1000     //was 100  // 16 bit values from ADC
+   
+    //Bounds variables for elbow and shoulder
     uint32  ELBOW_UPPER_BOUND = 1000;
-    //#define ELBOW_LOWER_BOUND 100       //was 1000
     uint32  ELBOW_LOWER_BOUND = 100;
-    //#define SHOULDER_UPPER_BOUND 800
     uint32  SHOULDER_UPPER_BOUND = 800;
-    //#define SHOULDER_LOWER_BOUND 280
     uint32  SHOULDER_LOWER_BOUND = 280;
     #define BOUND_OFFSET 20
     
@@ -36,7 +31,7 @@
 
     //TODO: make sure ourbyte scheme matching the newest version for udp format
     //Array indices of specific bytes transmitted from the wiznet
-    #define BA_BYTE_1 10 //change back to 4 and 5
+    #define BA_BYTE_1 10 
     #define BA_BYTE_2 11
     #define SHLDR_BYTE_1 12
     #define SHLDR_BYTE_2 13
@@ -78,7 +73,7 @@
     uint8 SHOULDER_FLAG = 0;
     uint8 BA_FLAG = 0;
     uint8 EFFECTOR_FLAG = 0;
-    uint8 PH_FLAG = 0;
+    uint8 ARD_FLAG = 0;
     
     //error variables to send back to base station
     uint16 dropped_packets = 0;
@@ -97,8 +92,6 @@
     //---------------------------------------------------
     //    Function stubs for the header
     //---------------------------------------------------
-    //void reverse(char s[]);
-    //void itoa(int n, char s[]);
     uint16 CalibrationElbow(uint16 velocity);
     uint16 CalibrationShoulder(uint16 velocity);
     uint16 average(uint16* array, uint8 num_items);
@@ -118,6 +111,7 @@
     uint8 shoulder(uint8 shldr_arr_cspot, uint16* shoulder_array);
     uint8 baseAzimuth(uint8 BA_arr_cspot, uint16* baseAz_array);
     void effector();
+    void arduino();
     void initialize();
     //--------------------------------------------------- END Function Stubs
 #endif

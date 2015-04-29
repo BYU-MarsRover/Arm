@@ -6,7 +6,7 @@
 
 //this ISR will be used to set our timeFlag according to our timer component
 ///set to the time of the longest path for our code
-//TODO: test how long it takes code to run before really implementing this
+//TODO: test how long it takes code to run
 CY_ISR(timer_isr)
 {
     uint32 isr_var = Timer_1_GetInterruptSourceMasked();
@@ -15,35 +15,6 @@ CY_ISR(timer_isr)
 }
 
 //Funtion declarations/definitions
-
-// function to convert int to string
-//void reverse(char s[])
-// {
-//     int i, j;
-//     char c;
-// 
-//     for (i = 0, j = strlen(s)-1; i<j; i++, j--) {
-//         c = s[i];
-//         s[i] = s[j];
-//         s[j] = c;
-//     }
-// }
-///* itoa:  convert n to characters in s */
-// void itoa(int n, char s[])
-// {
-//     int i, sign;
-// 
-//     if ((sign = n) < 0)  /* record sign */
-//         n = -n;          /* make n positive */
-//     i = 0;
-//     do {       /* generate digits in reverse order */
-//         s[i++] = n % 10 + '0';   /* get next digit */
-//     } while ((n /= 10) > 0);     /* delete it */
-//     if (sign < 0)
-//         s[i++] = '-';
-//     s[i] = '\0';
-//     reverse(s);
-// }
 uint16 CalibrationElbow(uint16 velocity)
 {
     uint8 	CYCLES = 3;
@@ -76,7 +47,6 @@ uint16 CalibrationElbow(uint16 velocity)
         else
         {
             ELBW_PWM_WriteCompare(velocity);
-            //LED_Write(1);
         }
         ELBW_PWM_WriteCompare(NEUTRAL);
         LED_Write(1);
@@ -140,7 +110,6 @@ uint16 CalibrationShoulder(uint16 velocity)
         else
         {
             SHLDR_PWM_WriteCompare(velocity);
-            //LED_Write(1);
         }
         SHLDR_PWM_WriteCompare(NEUTRAL);
         LED_Write(1); 
@@ -282,7 +251,7 @@ uint8 pos_to_vel(uint8 cur_pos, uint16* array, uint8 ARRAY_SIZE, uint16 command)
     }
     else
     {
-        //throw error
+        //increment error variable
         cur_pos = maintain_array(cur_pos, ARRAY_SIZE);
     }
     return cur_pos;
@@ -304,9 +273,7 @@ uint16 make_command(int8* info_array, uint8 byte1, uint8 byte2)
 
 uint16 potFeedback(uint32 channel)
 {
-    //TODO: uncomment this section
     uint16 feedback = ADC_GetResult16(channel);
-    //uint16 feedback = 500;
     return feedback;
 }
 
@@ -316,7 +283,6 @@ void send_packet(uint8 heart_beat)
     //necessary feedback variables: system state, dynamixel read write errors, PID errors
     //TODO define system state
     //send packet via serial to wiznet
-    
     if(heart_beat){
         feedback_array[0] = 7;
         feedback_array[1] = 7;
@@ -333,7 +299,6 @@ void send_packet(uint8 heart_beat)
         feedback_array[12] = 7;
         feedback_array[13] = 0xee;
         wiznetWriteUdpFrame(feedback_array, FEEDBACK_ARRAY_SIZE);
-        LED_Write(1);
     }
     else{
         feedback_array[0] = 7;      // ph value
@@ -363,11 +328,6 @@ void send_packet(uint8 heart_beat)
 void fill_data_array()
 {
     wiznetReadUdpFrame(data_array, DATA_ARRAY_SIZE);
-//    uint8 i = 0;
-//    for(i = 0; i < TEST_ARRAY_SIZE; i++)
-//    {
-//        data_array[i] = test_array[i];
-//    }
 }
 
 void ServoGoalPosition( uint8 servoID, uint16 position)
@@ -384,7 +344,7 @@ void ServoGoalPosition( uint8 servoID, uint16 position)
     array[7] = position >> 8;
     array[8] = ~(servoID + 0x05 + 0x1E + array[6] + array[7] + 0x03);
     
-    UART_1_SpiUartPutArray(array, 0x09);  
+    Wrist_UART_SpiUartPutArray(array, 0x09);  
 }
 
 void SetServoTorque( uint8 servoID, uint16 torque)
@@ -401,7 +361,7 @@ void SetServoTorque( uint8 servoID, uint16 torque)
     array[7] = torque >> 8;
     array[8] = ~(servoID + 0x05 + 0x0E + array[6] + array[7] + 0x03);
     
-    UART_1_SpiUartPutArray(array, 0x09);
+    Wrist_UART_SpiUartPutArray(array, 0x09);
     
 }    
 
@@ -419,7 +379,7 @@ void ServoSpeed( uint8 servoID, uint16 speed)
     array[7] = speed >> 8;
     array[8] = ~(servoID + 0x05 + 0x20 + array[6] + array[7] + 0x03);
     
-    UART_1_SpiUartPutArray(array, 0x09);
+    Wrist_UART_SpiUartPutArray(array, 0x09);
     
 }
 
@@ -483,7 +443,7 @@ uint8 wristTilt(uint8 WT_arr_cspot, uint16* WT_array)
             }
             else
             {
-                //throw error
+                //increment error variable
                 ServoGoalPosition(0x02, 1500); //TODO: write a neutral value
             }
             WT_FLAG = 0;
@@ -596,8 +556,8 @@ uint8 wristRotate(uint8 WR_arr_cspot, uint16* WR_array)
             }
             else
             {
-                //throw error
-                //TODO: if we scale change the "neutral" value
+                //increment error variable
+                //TODO: if we scale, change the "neutral" value
                 ServoGoalPosition(0x01, 1500);
             }
             WR_FLAG = 0;
@@ -661,7 +621,6 @@ uint8 elbow(uint8 elbw_arr_cspot, uint16* elbow_array)
     uint16 avg;
     uint16 command;
     
-    //TODO: make sure reading from correct pots
     uint16 feedback = potFeedback(ELBOW_POT); //check the feedback in every tick
     
     switch(elbow_state){ //actions
@@ -777,6 +736,7 @@ uint8 elbow(uint8 elbw_arr_cspot, uint16* elbow_array)
                         }
                         else
                         {
+                            //increment error variable
                             ELBW_PWM_WriteCompare(1500);
                         }
                     }
@@ -849,7 +809,8 @@ uint8 shoulder(uint8 shldr_arr_cspot, uint16* shoulder_array)
     uint8 i;
     uint16 avg;
     uint16 command;
-    uint16 feedback = potFeedback(SHOULDER_POT); //TODO: Make sure reading from thecorrect pots
+    
+    uint16 feedback = potFeedback(SHOULDER_POT);
     
     switch(shoulder_state){ //actions
         case shldr_start:
@@ -895,7 +856,7 @@ uint8 shoulder(uint8 shldr_arr_cspot, uint16* shoulder_array)
                         }
                         else
                         {
-                            //throw error
+                            //increment error variable
                             SHLDR_PWM_WriteCompare(1500);
                         }
                     }
@@ -1054,28 +1015,11 @@ uint8 baseAzimuth(uint8 BA_arr_cspot, uint16* baseAz_array)
 
         case BA_execute:
             command = make_command(data_array, BA_BYTE_1, BA_BYTE_2);
-            
-//            baseAz_array[BA_arr_cspot] = command;
-//            
-//            if(BA_arr_cspot < (BA_ARR_SIZE - 1))
-//            {
-//                BA_arr_cspot++;
-//            }
-//            else
-//            {
-//                BA_arr_cspot = 0;
-//            }
-            
+
             BA_arr_cspot = pos_to_vel(BA_arr_cspot, baseAz_array, BA_ARR_SIZE, command);
             
             avg = average(baseAz_array, BA_ARR_SIZE);
-            
-//            if(avg == 1000 || avg == 2000)
-//            {
-//
-//                temp_val = temp_val*(-1);
-//            }
-            
+
             if(avg <= 2000 && avg >= 1000)
             {
                 BA_PWM_WriteCompare(avg);
@@ -1084,7 +1028,7 @@ uint8 baseAzimuth(uint8 BA_arr_cspot, uint16* baseAz_array)
             {
                 LED_Write(1);
 
-                //throw error
+                //increment error variable
                 BA_PWM_WriteCompare(1500);
             }
             BA_FLAG = 0;
@@ -1098,7 +1042,8 @@ uint8 baseAzimuth(uint8 BA_arr_cspot, uint16* baseAz_array)
             break;
     }
     
-    switch(baseAzimuth_state){ //transitions
+    switch(baseAzimuth_state)
+    { //transitions
         case BA_start:
             baseAzimuth_state = BA_init;
             break;
@@ -1158,7 +1103,7 @@ void effector()
             }
             else
             {
-                //throw error
+                //increment error variable
                 SHLDR_PWM_WriteCompare(1500);
             }
             
@@ -1210,60 +1155,82 @@ void effector()
     }    
 }
 
-enum phSensor_states {ph_start, ph_init, ph_execute, ph_wait} phSensor_state;
-void phSensor()
+enum arduino_states {ard_start, ard_init, ard_wait, ard_read, ard_write} arduino_state;
+void arduino()
 {
-    switch(phSensor_state)
-    { //actions
-        case ph_start:
-            // Do nothing
+    //uint8 video_mux = data_array[ARD_BYTE_1];
+    //uint8 laser = data_array[ARD_BYTE_2];
+    
+    switch(arduino_state) //state actions
+    {
+        case ard_start:
             break;
-
-        case ph_init:           
-           // TODO: Add initialization code. might not need
-           break;
-
-        case ph_execute:
-            // TODO:  Call Marshalls code for phSensor
-            PH_FLAG = 0;
+        
+        case ard_init:
+            //write initial video
+            //write the laser enable
             break;
-            
-        case ph_wait:
+        
+        case ard_wait:
+            break;
+        
+        case ard_read:
+            //for(int i = 0; i < ARD_ARRAY_SIZE; i++)
+            //{
+            //  feedback_array[i] = Arduino_UART_UARTGetChar();
+            //{
+            break;
+        
+        case ard_write:
+            //write laser
+            //write video
+            ARD_FLAG = 0;
             break;
         
         default:
-            phSensor_state = ph_start;
+            arduino_state = ard_start;
             break;
     }
-    
-    switch(phSensor_state)
-    { //transitions
-        case ph_start:
-            phSensor_state = ph_init;
+    switch(arduino_state) //state transitions
+    {
+        case ard_start:
+            arduino_state = ard_init;
             break;
         
-        case ph_init:
-            phSensor_state = ph_wait;
+        case ard_init:
+            arduino_state = ard_wait;
             break;
         
-        case ph_execute:
-            if(PH_FLAG)
-                phSensor_state = ph_execute;
+        case ard_wait:
+            arduino_state = ard_read;
+            break;
+        
+        case ard_read:
+            if(ARD_FLAG)
+            {
+                arduino_state = ard_write;
+            }
             else
-                phSensor_state = ph_wait;
+            {
+                arduino_state = ard_wait;
+            }
             break;
-        
-        case ph_wait:
-            if(PH_FLAG)
-                phSensor_state = ph_execute;
+            
+        case ard_write:
+            if(ARD_FLAG)
+            {
+                arduino_state = ard_write;
+            }
             else
-                phSensor_state = ph_wait; 
+            {
+                arduino_state = ard_wait;
+            }
             break;
             
         default:
-            phSensor_state = ph_start;
+            arduino_state = ard_start;
             break;
-    }    
+    }   
 }
 
 //Initialization function for the program
@@ -1293,16 +1260,13 @@ void initialize()
     shoulder_state = shldr_start;
     elbow_state = elbw_start;
     effector_state = eff_start;
-    
-//    for(int i = 0; i < FEEDBACK_ARRAY_SIZE; i++){
-//        feedback_array[i] = 0;   
-//    }
+    arduino_state = ard_start;
     
     //start all of our components
     SPIM_1_Start();
     Clock_pwm_Start();
     Clock_counter_Start();
-    UART_1_Start();
+    Wrist_UART_Start();
     SHLDR_PWM_Start();
     BA_PWM_Start();
     ELBW_PWM_Start();
@@ -1310,49 +1274,33 @@ void initialize()
     ADC_Start();
     ADC_StartConvert();
     
-    //uint8_t test_byte;
     wiznetInit(ownIpAddr, dstIpAddr, udpPort);
-    //SPI_1_SpiUartWriteTxData(test_byte);
     
     //Initialize the dynamixels
     ServoSpeed(0xFE, 100);
     SetServoTorque(0xFE, 0x03FF);
     
-    LED_Write(1);
     //Initialize our motor drivers
     ELBW_PWM_WriteCompare(1500); 
     SHLDR_PWM_WriteCompare(1500);
     CyDelay(3000);
     LED_Write(0);
     
-    /*-------------call the initial calibration funtion here------------*/
+    //initial calibration funtions for elbow and shoulder pots
     SHOULDER_UPPER_BOUND = CalibrationShoulder(1700);
     SHOULDER_LOWER_BOUND = CalibrationShoulder(1300);
     ELBOW_UPPER_BOUND = CalibrationElbow(1700);
     ELBOW_LOWER_BOUND = CalibrationElbow(1300);
     
-    //helps for generating random arrays
-    //srand((unsigned) time(&t));
-    
+    //ISR stuff
     CyGlobalIntEnable;
     isr_1_StartEx(timer_isr);
-    Timer_1_Start();
-    
-    //UART_TEST_Start();
-    
+    Timer_1_Start();    
 }
-//const char welcome_string[] = "Hello World\n\r";
 int main()
 {  
     //Define variables
-    //for testing
-//    time_t t; 
-//    char time_array[8];
-//    uint8 counter;
-//    int direction = 0;
-    
     //wiznet = 0; //for testing -- see header move from here when establish ISR for wiznet
-    
     uint8 BA_cspot;
     uint16 BA_array[BA_ARR_SIZE];
     uint8 shldr_cspot;
@@ -1364,38 +1312,13 @@ int main()
     uint8 WR_cspot;
     uint16 WR_array[WR_ARR_SIZE];
     
-    //for testing
-//    int increasing = 1;
-//    int first_count;
-//    int second_count;
-//    int temp_code_time;
-//    int code_time = 0;
-    
-    
     uint8 fs_count = 0; //fail safe counter to check the interval between receiving packets
     int16 temp_val = 1500; 
     
     initialize();
-//    uint8 i;
-//    for(i =0; i < strlen(welcome_string); i++)
-//    {
-//        UART_TEST_UartPutChar(welcome_string[i]);
-//    }
 
     for(;;)
-    {
-        //UART_TEST_UartPutChar(31);
-        //first_count = Timer_1_ReadCounter();
-        
-        if(stop_elb_dn_Read())
-        {
-            LED_Write(1);
-        }
-        else
-        {
-            LED_Write(0);
-        }
-        
+    {   
         if(WIZ_INT_Read()==0) //!WIZ_INT_Read()--put wiznet in as condition if use ISR
         {
             wiznetClearInterrupts();
@@ -1407,9 +1330,9 @@ int main()
             SHOULDER_FLAG = 1;
             ELBOW_FLAG = 1;
             EFFECTOR_FLAG = 1;
-            PH_FLAG = 1;
+            ARD_FLAG = 1;
             fs_count = 0;
-            send_packet(1);
+            send_packet(1); //send heartbeat
             //wiznet = 0; //for testing
         }
         else
@@ -1437,97 +1360,14 @@ int main()
             WR_cspot = wristRotate(WR_cspot, WR_array);
             effector();
             feedback_array[1] = (feedback_array[1] + 1);
-            send_packet(0); //send feedback onece every tick
+            send_packet(0); //send feedback once every tick
+            
+        //else{dropped_packets++}
         }
-
-//        else{dropped_packets++}
-//        second_count = Timer_1_ReadCounter();
-//        LED_Write(0);
-//        temp_code_time = second_count - first_count;
-//        if(temp_code_time > code_time)
-//        {
-//            code_time = temp_code_time;
-//            itoa(code_time, time_array);
-//            UART_TEST_UartPutString(time_array);
-//        }
         
         while(!timerFlag){} //this while loop will periodize our code to the time of longest path
         timerFlag = 0;
-    
-        
-/*``````````````````````````````````````````````````````````````````````````*
- * From here to the end of the main function is purely for testing purposes *
- *``````````````````````````````````````````````````````````````````````````*/
-//        counter++;
-//        
-//        if(counter == 50)
-//        {
-//        
-//            if(increasing)
-//            {
-//                temp_val += 100;
-//                if(temp_val == 1000)
-//                {
-//                    increasing = 0;
-//                }
-//            }
-//            else
-//            {
-//                temp_val -= 100;
-//                if(temp_val == -1000)
-//                {
-//                    increasing = 1;   
-//                }
-//            }
-//            
-//            //uint16 feedback1 = ADC_GetResult16(2);
-//            //int16 forward = 1000;
-//            //int16 backward = -1000;
-//            for(int i = 0; i < TEST_ARRAY_SIZE; (i+=2))
-//            {
-//                //int16 random_number = rand()%2001 - 1000;
-//                //test_array[i] = random_number >> 8;
-//                //test_array[i+1] = random_number & 0x00FF;
-//                test_array[i] = temp_val >> 8;
-//                test_array[i+1] = temp_val & 0x00FF;
-//            }
-////            counter = 0;
-//            wiznet = 1;
-    } //<<<<<<----------DONT DELETE THIS BRACE!!!!!!!!!!!! it goes to for loop :)
-//        }
-//    }
-////                if((second_counter%2) == 0)
-////                {
-////                    test_array[i] = ;
-////                }
-//            
-////                if (feedback1 > 500)
-////                {
-////                    test_array[i] = forward >> 8;
-////                    test_array[i+1] = forward & 0x00FF;
-////                }
-////                else if (feedback1 < 500)
-////                {
-////                    test_array[i] = backward >> 8;
-////                    test_array[i+1] = backward & 0x00FF;
-////                }
-////                else
-////                {
-////                    test_array[i] = 0;
-////                    test_array[i+1] = 0;
-////                }
-////                
-////            }
-////            counter = 0;
-////            wiznet = 1;
-////        }
-////        
-//////            //Potential solution to how we will want to send feedback
-//////            feedback_count++;
-//////            if(feedback_count == feedback_interval) //sends feeback to base station every 50th
-//////            {                                        //time through the full set of instructions
-//////                send_feedback();
-//////            }
-} //<<--- END OF MAIN()!!!
+    } 
+} 
 
 /* [] END OF FILE */

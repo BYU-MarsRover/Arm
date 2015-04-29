@@ -87,27 +87,6 @@
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\core_cmInstr.h</File>
           <File BuildType="BUILD" Toolchain="ARM IAR Generic">.\Generated_Source\PSoC4\CyBootAsmIar.s</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\project.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_1.c</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_1.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_1_SPI_UART.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_1_SPI_UART.c</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_1_SPI_UART_INT.c</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_1_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_1_UART.c</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_1_BOOT.c</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_1_UART_BOOT.c</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_1_PINS.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_1_SPI_UART_PVT.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_1_PVT.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_1_BOOT.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_1_SCBCLK.c</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_1_SCBCLK.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_1_tx.c</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_1_tx.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_1_tx_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_1_rx.c</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_1_rx.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\UART_1_rx_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\WIZ_RDY.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\WIZ_RDY.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\WIZ_RDY_aliases.h</File>
@@ -168,12 +147,6 @@
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\SPIM_1_PVT.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\SPIM_1_IntClock.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\SPIM_1_IntClock.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\sens_hygro.c</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\sens_hygro.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\sens_hygro_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\sens_ph.c</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\sens_ph.h</File>
-          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\sens_ph_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\stop_shdr_up.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\stop_shdr_up.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\stop_shdr_up_aliases.h</File>
@@ -192,6 +165,48 @@
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\effector_A.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\effector_A.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\effector_A_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Wrist_UART.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Wrist_UART.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Wrist_UART_SPI_UART.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Wrist_UART_SPI_UART.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Wrist_UART_SPI_UART_INT.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Wrist_UART_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Wrist_UART_UART.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Wrist_UART_BOOT.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Wrist_UART_UART_BOOT.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Wrist_UART_PINS.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Wrist_UART_SPI_UART_PVT.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Wrist_UART_PVT.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Wrist_UART_BOOT.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Arduino_UART.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Arduino_UART.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Arduino_UART_SPI_UART.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Arduino_UART_SPI_UART.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Arduino_UART_SPI_UART_INT.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Arduino_UART_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Arduino_UART_UART.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Arduino_UART_BOOT.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Arduino_UART_UART_BOOT.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Arduino_UART_PINS.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Arduino_UART_SPI_UART_PVT.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Arduino_UART_PVT.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Arduino_UART_BOOT.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Wrist_UART_SCBCLK.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Wrist_UART_SCBCLK.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Wrist_UART_tx.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Wrist_UART_tx.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Wrist_UART_tx_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Wrist_UART_rx.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Wrist_UART_rx.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Wrist_UART_rx_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Arduino_UART_SCBCLK.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Arduino_UART_SCBCLK.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Arduino_UART_tx.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Arduino_UART_tx.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Arduino_UART_tx_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Arduino_UART_rx.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Arduino_UART_rx.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Arduino_UART_rx_aliases.h</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="C:\Users\Samuel\Documents\GitHub\Arm\arm_controller_v2\arm_controller_v2.1.cydsn\Export\ARM_GCC_Generic">
