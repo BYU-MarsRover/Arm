@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccBXJewr.s 			page 1
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccZG6pX7.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccBXJewr.s 			page 1
   30:.\Generated_Source\PSoC4/Channel_2.c **** ********************************************************************************
   31:.\Generated_Source\PSoC4/Channel_2.c **** *
   32:.\Generated_Source\PSoC4/Channel_2.c **** * Summary:
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccBXJewr.s 			page 2
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccZG6pX7.s 			page 2
 
 
   33:.\Generated_Source\PSoC4/Channel_2.c **** *  Assign a new value to the digital port's data output register.  
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccBXJewr.s 			page 1
   66 003c 0F32     		add	r2, r2, #15
   67 003e 1278     		ldrb	r2, [r2]
   68 0040 1A60     		str	r2, [r3]
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccBXJewr.s 			page 3
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccZG6pX7.s 			page 3
 
 
   47:.\Generated_Source\PSoC4/Channel_2.c **** }
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccBXJewr.s 			page 1
   95 0002 82B0     		sub	sp, sp, #8
   96              		.cfi_def_cfa_offset 16
   97 0004 00AF     		add	r7, sp, #0
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccBXJewr.s 			page 4
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccZG6pX7.s 			page 4
 
 
   98              		.cfi_def_cfa_register 7
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccBXJewr.s 			page 1
   93:.\Generated_Source\PSoC4/Channel_2.c **** * Note:
   94:.\Generated_Source\PSoC4/Channel_2.c **** *  Macro Channel_2_ReadPS calls this function. 
   95:.\Generated_Source\PSoC4/Channel_2.c **** *  
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccBXJewr.s 			page 5
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccZG6pX7.s 			page 5
 
 
   96:.\Generated_Source\PSoC4/Channel_2.c **** *******************************************************************************/
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccBXJewr.s 			page 1
  115:.\Generated_Source\PSoC4/Channel_2.c **** *  
  116:.\Generated_Source\PSoC4/Channel_2.c **** *******************************************************************************/
  117:.\Generated_Source\PSoC4/Channel_2.c **** uint8 Channel_2_ReadDataReg(void) 
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccBXJewr.s 			page 6
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccZG6pX7.s 			page 6
 
 
  118:.\Generated_Source\PSoC4/Channel_2.c **** {
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccBXJewr.s 			page 1
  137:.\Generated_Source\PSoC4/Channel_2.c ****     * Return: 
  138:.\Generated_Source\PSoC4/Channel_2.c ****     *  Returns the value of the interrupt status register
  139:.\Generated_Source\PSoC4/Channel_2.c ****     *  
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccBXJewr.s 			page 7
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccZG6pX7.s 			page 7
 
 
  140:.\Generated_Source\PSoC4/Channel_2.c ****     *******************************************************************************/
@@ -418,21 +418,21 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccBXJewr.s 			page 1
  251 0004 0400     		.2byte	0x4
  252 0006 00000000 		.4byte	.Ldebug_abbrev0
  253 000a 04       		.byte	0x4
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccBXJewr.s 			page 8
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccZG6pX7.s 			page 8
 
 
  254 000b 01       		.uleb128 0x1
  255 000c E2000000 		.4byte	.LASF24
  256 0010 01       		.byte	0x1
  257 0011 72000000 		.4byte	.LASF25
- 258 0015 A8010000 		.4byte	.LASF26
+ 258 0015 5E010000 		.4byte	.LASF26
  259 0019 00000000 		.4byte	.Ldebug_ranges0+0
  260 001d 00000000 		.4byte	0
  261 0021 00000000 		.4byte	.Ldebug_line0
  262 0025 02       		.uleb128 0x2
  263 0026 01       		.byte	0x1
  264 0027 06       		.byte	0x6
- 265 0028 28020000 		.4byte	.LASF0
+ 265 0028 1A020000 		.4byte	.LASF0
  266 002c 02       		.uleb128 0x2
  267 002d 01       		.byte	0x1
  268 002e 08       		.byte	0x8
@@ -440,7 +440,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccBXJewr.s 			page 1
  270 0033 02       		.uleb128 0x2
  271 0034 02       		.byte	0x2
  272 0035 05       		.byte	0x5
- 273 0036 0F020000 		.4byte	.LASF2
+ 273 0036 01020000 		.4byte	.LASF2
  274 003a 02       		.uleb128 0x2
  275 003b 02       		.byte	0x2
  276 003c 07       		.byte	0x7
@@ -448,7 +448,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccBXJewr.s 			page 1
  278 0041 02       		.uleb128 0x2
  279 0042 04       		.byte	0x4
  280 0043 05       		.byte	0x5
- 281 0044 1F020000 		.4byte	.LASF4
+ 281 0044 11020000 		.4byte	.LASF4
  282 0048 02       		.uleb128 0x2
  283 0049 04       		.byte	0x4
  284 004a 07       		.byte	0x7
@@ -456,7 +456,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccBXJewr.s 			page 1
  286 004f 02       		.uleb128 0x2
  287 0050 08       		.byte	0x8
  288 0051 05       		.byte	0x5
- 289 0052 88010000 		.4byte	.LASF6
+ 289 0052 E1010000 		.4byte	.LASF6
  290 0056 02       		.uleb128 0x2
  291 0057 08       		.byte	0x8
  292 0058 07       		.byte	0x7
@@ -470,7 +470,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccBXJewr.s 			page 1
  300 0066 07       		.byte	0x7
  301 0067 D5000000 		.4byte	.LASF8
  302 006b 04       		.uleb128 0x4
- 303 006c 19020000 		.4byte	.LASF9
+ 303 006c 0B020000 		.4byte	.LASF9
  304 0070 02       		.byte	0x2
  305 0071 A1       		.byte	0xa1
  306 0072 2C000000 		.4byte	0x2c
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccBXJewr.s 			page 1
  308 0077 B5000000 		.4byte	.LASF10
  309 007b 02       		.byte	0x2
  310 007c A3       		.byte	0xa3
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccBXJewr.s 			page 9
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccZG6pX7.s 			page 9
 
 
  311 007d 48000000 		.4byte	0x48
@@ -493,7 +493,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccBXJewr.s 			page 1
  320 008f 02       		.uleb128 0x2
  321 0090 01       		.byte	0x1
  322 0091 08       		.byte	0x8
- 323 0092 A3010000 		.4byte	.LASF13
+ 323 0092 FC010000 		.4byte	.LASF13
  324 0096 05       		.uleb128 0x5
  325 0097 00000000 		.4byte	.LASF14
  326 009b 02       		.byte	0x2
@@ -537,8 +537,8 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccBXJewr.s 			page 1
  364 00e9 9C       		.byte	0x9c
  365 00ea FD000000 		.4byte	0xfd
  366 00ee 08       		.uleb128 0x8
- 367 00ef 5E010000 		.4byte	.LASF18
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccBXJewr.s 			page 10
+ 367 00ef B7010000 		.4byte	.LASF18
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccZG6pX7.s 			page 10
 
 
  368 00f3 01       		.byte	0x1
@@ -549,7 +549,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccBXJewr.s 			page 1
  373 00fb 77       		.sleb128 -9
  374 00fc 00       		.byte	0
  375 00fd 0A       		.uleb128 0xa
- 376 00fe 79010000 		.4byte	.LASF19
+ 376 00fe D2010000 		.4byte	.LASF19
  377 0102 01       		.byte	0x1
  378 0103 61       		.byte	0x61
  379 0104 6B000000 		.4byte	0x6b
@@ -558,7 +558,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccBXJewr.s 			page 1
  382 0110 01       		.uleb128 0x1
  383 0111 9C       		.byte	0x9c
  384 0112 0A       		.uleb128 0xa
- 385 0113 63010000 		.4byte	.LASF20
+ 385 0113 BC010000 		.4byte	.LASF20
  386 0117 01       		.byte	0x1
  387 0118 75       		.byte	0x75
  388 0119 6B000000 		.4byte	0x6b
@@ -576,7 +576,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccBXJewr.s 			page 1
  400 013a 01       		.uleb128 0x1
  401 013b 9C       		.byte	0x9c
  402 013c 09       		.uleb128 0x9
- 403 013d 96010000 		.4byte	.LASF23
+ 403 013d EF010000 		.4byte	.LASF23
  404 0141 01       		.byte	0x1
  405 0142 8F       		.byte	0x8f
  406 0143 6B000000 		.4byte	0x6b
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccBXJewr.s 			page 1
  422 0008 0E       		.uleb128 0xe
  423 0009 1B       		.uleb128 0x1b
  424 000a 0E       		.uleb128 0xe
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccBXJewr.s 			page 11
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccZG6pX7.s 			page 11
 
 
  425 000b 55       		.uleb128 0x55
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccBXJewr.s 			page 1
  479 0041 00       		.byte	0
  480 0042 00       		.byte	0
  481 0043 06       		.uleb128 0x6
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccBXJewr.s 			page 12
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccZG6pX7.s 			page 12
 
 
  482 0044 35       		.uleb128 0x35
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccBXJewr.s 			page 1
  536 007b 0B       		.uleb128 0xb
  537 007c 49       		.uleb128 0x49
  538 007d 13       		.uleb128 0x13
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccBXJewr.s 			page 13
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccZG6pX7.s 			page 13
 
 
  539 007e 02       		.uleb128 0x2
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccBXJewr.s 			page 1
  593 00b6 00       		.byte	0
  594              		.section	.debug_aranges,"",%progbits
  595 0000 3C000000 		.4byte	0x3c
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccBXJewr.s 			page 14
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccZG6pX7.s 			page 14
 
 
  596 0004 0200     		.2byte	0x2
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccBXJewr.s 			page 1
  639              	.LASF1:
  640 0029 756E7369 		.ascii	"unsigned char\000"
  640      676E6564 
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccBXJewr.s 			page 15
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccZG6pX7.s 			page 15
 
 
  640      20636861 
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccBXJewr.s 			page 1
  662      382E3420 
  662      32303134 
  662      30353236 
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccBXJewr.s 			page 16
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccZG6pX7.s 			page 16
 
 
  663 0115 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m0 -mthumb -g -O"
@@ -911,63 +911,60 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccBXJewr.s 			page 1
  664      74696F6E 
  664      2D736563 
  664      74696F6E 
- 665              	.LASF18:
- 666 015e 6D6F6465 		.ascii	"mode\000"
- 666      00
- 667              	.LASF20:
- 668 0163 4368616E 		.ascii	"Channel_2_ReadDataReg\000"
- 668      6E656C5F 
- 668      325F5265 
- 668      61644461 
- 668      74615265 
- 669              	.LASF19:
- 670 0179 4368616E 		.ascii	"Channel_2_Read\000"
- 670      6E656C5F 
- 670      325F5265 
- 670      616400
- 671              	.LASF6:
- 672 0188 6C6F6E67 		.ascii	"long long int\000"
- 672      206C6F6E 
- 672      6720696E 
- 672      7400
- 673              	.LASF23:
- 674 0196 6D61736B 		.ascii	"maskedStatus\000"
- 674      65645374 
- 674      61747573 
- 674      00
- 675              	.LASF13:
- 676 01a3 63686172 		.ascii	"char\000"
- 676      00
- 677              	.LASF26:
- 678 01a8 433A5C55 		.ascii	"C:\\Users\\Samuel\\Documents\\GitHub\\BYU-MarsRover"
- 678      73657273 
- 678      5C53616D 
- 678      75656C5C 
- 678      446F6375 
- 679 01d6 5C41726D 		.ascii	"\\Arm\\Dynamixel_Servo_Driver\\Dynamixel_Servo_Driv"
- 679      5C44796E 
- 679      616D6978 
- 679      656C5F53 
- 679      6572766F 
- 680 0206 65722E63 		.ascii	"er.cydsn\000"
- 680      7964736E 
- 680      00
- 681              	.LASF2:
- 682 020f 73686F72 		.ascii	"short int\000"
- 682      7420696E 
- 682      7400
- 683              	.LASF9:
- 684 0219 75696E74 		.ascii	"uint8\000"
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccBXJewr.s 			page 17
+ 665              	.LASF26:
+ 666 015e 433A5C55 		.ascii	"C:\\Users\\Samuel\\Documents\\GitHub\\Arm\\Dynamixe"
+ 666      73657273 
+ 666      5C53616D 
+ 666      75656C5C 
+ 666      446F6375 
+ 667 018b 6C5F5365 		.ascii	"l_Servo_Driver\\Dynamixel_Servo_Driver.cydsn\000"
+ 667      72766F5F 
+ 667      44726976 
+ 667      65725C44 
+ 667      796E616D 
+ 668              	.LASF18:
+ 669 01b7 6D6F6465 		.ascii	"mode\000"
+ 669      00
+ 670              	.LASF20:
+ 671 01bc 4368616E 		.ascii	"Channel_2_ReadDataReg\000"
+ 671      6E656C5F 
+ 671      325F5265 
+ 671      61644461 
+ 671      74615265 
+ 672              	.LASF19:
+ 673 01d2 4368616E 		.ascii	"Channel_2_Read\000"
+ 673      6E656C5F 
+ 673      325F5265 
+ 673      616400
+ 674              	.LASF6:
+ 675 01e1 6C6F6E67 		.ascii	"long long int\000"
+ 675      206C6F6E 
+ 675      6720696E 
+ 675      7400
+ 676              	.LASF23:
+ 677 01ef 6D61736B 		.ascii	"maskedStatus\000"
+ 677      65645374 
+ 677      61747573 
+ 677      00
+ 678              	.LASF13:
+ 679 01fc 63686172 		.ascii	"char\000"
+ 679      00
+ 680              	.LASF2:
+ 681 0201 73686F72 		.ascii	"short int\000"
+ 681      7420696E 
+ 681      7400
+ 682              	.LASF9:
+ 683 020b 75696E74 		.ascii	"uint8\000"
+ 683      3800
+ 684              	.LASF4:
+ 685 0211 6C6F6E67 		.ascii	"long int\000"
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccZG6pX7.s 			page 17
 
 
- 684      3800
- 685              	.LASF4:
- 686 021f 6C6F6E67 		.ascii	"long int\000"
- 686      20696E74 
- 686      00
- 687              	.LASF0:
- 688 0228 7369676E 		.ascii	"signed char\000"
- 688      65642063 
- 688      68617200 
- 689              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.4 20140526 (release) [ARM/embedded-4_8-br
+ 685      20696E74 
+ 685      00
+ 686              	.LASF0:
+ 687 021a 7369676E 		.ascii	"signed char\000"
+ 687      65642063 
+ 687      68617200 
+ 688              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.4 20140526 (release) [ARM/embedded-4_8-br

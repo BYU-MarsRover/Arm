@@ -1,6 +1,6 @@
 // ======================================================================
 // Dynamixel_Servo_Driver.v generated from TopDesign.cysch
-// 03/26/2015 at 13:09
+// 05/09/2015 at 17:09
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -562,7 +562,7 @@ module UART_v2_30_3 (
 		  .divisor(0),
 		  .period("2170138888.88889"),
 		  .is_direct(0),
-		  .is_digital(0))
+		  .is_digital(1))
 		IntClock
 		 (.clock_out(Net_9));
 

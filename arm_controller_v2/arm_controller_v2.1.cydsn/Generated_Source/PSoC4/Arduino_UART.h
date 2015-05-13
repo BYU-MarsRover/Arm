@@ -54,7 +54,7 @@
 #endif /* (!Arduino_UART_CY_SCBIP_V1) */
 
 /* Interrupts remove options */
-#define Arduino_UART_REMOVE_SCB_IRQ             (1u)
+#define Arduino_UART_REMOVE_SCB_IRQ             (0u)
 #define Arduino_UART_SCB_IRQ_INTERNAL           (0u == Arduino_UART_REMOVE_SCB_IRQ)
 
 #define Arduino_UART_REMOVE_UART_RX_WAKEUP_IRQ  (1u)

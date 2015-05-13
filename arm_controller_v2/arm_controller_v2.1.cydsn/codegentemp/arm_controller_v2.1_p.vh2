@@ -1,5 +1,5 @@
 -- Project:   arm_controller_v2.1
--- Generated: 04/27/2015 18:26:02
+-- Generated: 05/11/2015 22:40:34
 -- PSoC Creator  3.1 Component Pack 1
 
 ENTITY \arm_controller_v2.1\ IS
@@ -118,8 +118,8 @@ ARCHITECTURE __DEFAULT__ OF \arm_controller_v2.1\ IS
     SIGNAL \Arduino_UART:Net_751\ : bit;
     SIGNAL \Arduino_UART:Net_823\ : bit;
     SIGNAL \Arduino_UART:Net_824\ : bit;
-    SIGNAL \Arduino_UART:Net_847_ff3\ : bit;
-    ATTRIBUTE global_signal OF \Arduino_UART:Net_847_ff3\ : SIGNAL IS true;
+    SIGNAL \Arduino_UART:Net_847_ff2\ : bit;
+    ATTRIBUTE global_signal OF \Arduino_UART:Net_847_ff2\ : SIGNAL IS true;
     SIGNAL \\\Arduino_UART:rx(0)\\__PA\ : bit;
     SIGNAL \Arduino_UART:ss_0\ : bit;
     SIGNAL \Arduino_UART:ss_1\ : bit;
@@ -176,8 +176,8 @@ ARCHITECTURE __DEFAULT__ OF \arm_controller_v2.1\ IS
     SIGNAL \Wrist_UART:Net_751\ : bit;
     SIGNAL \Wrist_UART:Net_823\ : bit;
     SIGNAL \Wrist_UART:Net_824\ : bit;
-    SIGNAL \Wrist_UART:Net_847_ff2\ : bit;
-    ATTRIBUTE global_signal OF \Wrist_UART:Net_847_ff2\ : SIGNAL IS true;
+    SIGNAL \Wrist_UART:Net_847_ff3\ : bit;
+    ATTRIBUTE global_signal OF \Wrist_UART:Net_847_ff3\ : SIGNAL IS true;
     SIGNAL \\\Wrist_UART:rx(0)\\__PA\ : bit;
     SIGNAL \Wrist_UART:ss_0\ : bit;
     SIGNAL \Wrist_UART:ss_1\ : bit;
@@ -679,14 +679,14 @@ BEGIN
             imo => ClockBlock_IMO,
             hfclk => ClockBlock_HFCLK,
             udb_div_0 => dclk_to_genclk,
-            ff_div_2 => \Wrist_UART:Net_847_ff2\,
-            ff_div_3 => \Arduino_UART:Net_847_ff3\,
+            ff_div_2 => \Arduino_UART:Net_847_ff2\,
             ff_div_8 => Net_130_ff8,
             ff_div_7 => \ADC:Net_1845_ff7\,
             ff_div_9 => Net_376_ff9,
             ff_div_10 => Net_376_ff10,
             ff_div_11 => Net_376_ff11,
-            udb_div_1 => dclk_to_genclk_1);
+            udb_div_1 => dclk_to_genclk_1,
+            ff_div_3 => \Wrist_UART:Net_847_ff3\);
 
     ClockGenBlock:m0s8clockgenblockcell
         PORT MAP(
@@ -967,7 +967,7 @@ BEGIN
 
     Net_1108:macrocell
         GENERIC MAP(
-            eqn_main => "(main_0 * !main_1 * !main_2)",
+            eqn_main => "(main_0 * main_1) + (main_0 * main_2)",
             clk_inv => '0')
         PORT MAP(
             q => Net_1108,
@@ -1521,7 +1521,7 @@ BEGIN
             cy_registers => "",
             scb_mode => 2)
         PORT MAP(
-            clock => \Arduino_UART:Net_847_ff3\,
+            clock => \Arduino_UART:Net_847_ff2\,
             interrupt => Net_1315,
             rx => \Arduino_UART:Net_654\,
             tx => \Arduino_UART:Net_656\,
@@ -1540,6 +1540,13 @@ BEGIN
             sclk_s => open,
             tx_req => \Arduino_UART:Net_823\,
             rx_req => \Arduino_UART:Net_824\);
+
+    \Arduino_UART:SCB_IRQ\:interrupt
+        GENERIC MAP(
+            int_type => "10")
+        PORT MAP(
+            interrupt => Net_1315,
+            clock => ClockBlock_HFCLK);
 
     \Arduino_UART:rx(0)\:iocell
         GENERIC MAP(
@@ -1890,7 +1897,7 @@ BEGIN
 
     \EFFECTOR_PWM:PWMUDB:status_0\:macrocell
         GENERIC MAP(
-            eqn_main => "(!main_0 * !main_1 * !main_2)",
+            eqn_main => "(!main_0 * main_1) + (!main_0 * main_2)",
             clk_inv => '0')
         PORT MAP(
             q => \EFFECTOR_PWM:PWMUDB:status_0\,
@@ -2191,7 +2198,7 @@ BEGIN
             cy_registers => "",
             scb_mode => 2)
         PORT MAP(
-            clock => \Wrist_UART:Net_847_ff2\,
+            clock => \Wrist_UART:Net_847_ff3\,
             interrupt => Net_978,
             rx => \Wrist_UART:Net_654\,
             tx => \Wrist_UART:Net_656\,

@@ -77,6 +77,7 @@
 #include <Arduino_UART_SPI_UART_PVT.h>
 #include <Arduino_UART_PVT.h>
 #include <Arduino_UART_BOOT.h>
+#include <Bootloadable_1.h>
 #include <ADC_IRQ.h>
 #include <ADC_intClock.h>
 #include <Wrist_UART_SCBCLK.h>
@@ -88,6 +89,7 @@
 #include <Arduino_UART_SCBCLK.h>
 #include <Arduino_UART_tx.h>
 #include <Arduino_UART_tx_aliases.h>
+#include <Arduino_UART_SCB_IRQ.h>
 #include <Arduino_UART_rx.h>
 #include <Arduino_UART_rx_aliases.h>
 #include <core_cm0_psoc4.h>

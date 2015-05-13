@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 1
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccL4iwKh.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 1
   15:.\Generated_Source\PSoC4/ADC.c **** * the software package with which this file was provided.
   16:.\Generated_Source\PSoC4/ADC.c **** *******************************************************************************/
   17:.\Generated_Source\PSoC4/ADC.c **** 
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 2
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccL4iwKh.s 			page 2
 
 
   18:.\Generated_Source\PSoC4/ADC.c **** #include "ADC.h"
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 1
   48              		.cfi_def_cfa_register 7
   65:.\Generated_Source\PSoC4/ADC.c ****     /* If not Initialized then initialize all required hardware and software */
   66:.\Generated_Source\PSoC4/ADC.c ****     if(ADC_initVar == 0u)
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 3
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccL4iwKh.s 			page 3
 
 
   49              		.loc 1 66 0
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 1
   88:.\Generated_Source\PSoC4/ADC.c **** *  None.
   89:.\Generated_Source\PSoC4/ADC.c **** *
   90:.\Generated_Source\PSoC4/ADC.c **** * Global variables:
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 4
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccL4iwKh.s 			page 4
 
 
   91:.\Generated_Source\PSoC4/ADC.c **** *  The ADC_offset variable is initialized.
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 1
  134:.\Generated_Source\PSoC4/ADC.c ****             #endif /* End ADC_TOTAL_CHANNELS_NUM > 8u */
  135:.\Generated_Source\PSoC4/ADC.c ****         };
  136:.\Generated_Source\PSoC4/ADC.c ****     #endif /* End ADC_TOTAL_CHANNELS_NUM > 1u */
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 5
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccL4iwKh.s 			page 5
 
 
  137:.\Generated_Source\PSoC4/ADC.c **** 
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 1
  153:.\Generated_Source\PSoC4/ADC.c ****     /* Connect Vm to VSSA when even one channel is single-ended or multiple channels configured */
  154:.\Generated_Source\PSoC4/ADC.c ****     #if(ADC_DEFAULT_MUX_SWITCH0 != 0u)
  155:.\Generated_Source\PSoC4/ADC.c ****         ADC_MUX_SWITCH0_REG |= ADC_DEFAULT_MUX_SWITCH0;
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 6
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccL4iwKh.s 			page 6
 
 
  131              		.loc 1 155 0
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 1
  168 007e 7A68     		ldr	r2, [r7, #4]
  169 0080 564B     		ldr	r3, .L16+76
  170 0082 1340     		and	r3, r2
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 7
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccL4iwKh.s 			page 7
 
 
  171 0084 7B60     		str	r3, [r7, #4]
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 1
  196 00aa 4E4A     		ldr	r2, .L16+84
  197 00ac FB68     		ldr	r3, [r7, #12]
  198 00ae D318     		add	r3, r2, r3
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 8
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccL4iwKh.s 			page 8
 
 
  199 00b0 1B78     		ldrb	r3, [r3]
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 1
  224:.\Generated_Source\PSoC4/ADC.c **** 
  225:.\Generated_Source\PSoC4/ADC.c ****             if((ADC_channelsConfig[chNum] & ADC_IS_RANGE_CTRL_EN_MASK) != 0u)
  231              		.loc 1 225 0
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 9
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccL4iwKh.s 			page 9
 
 
  232 00e8 3D4B     		ldr	r3, .L16+80
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 1
  262 011c 8023     		mov	r3, #128
  263 011e 5B00     		lsl	r3, r3, #1
  264 0120 BB60     		str	r3, [r7, #8]
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 10
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccL4iwKh.s 			page 10
 
 
  265 0122 02E0     		b	.L10
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 1
  298 0154 FA68     		ldr	r2, [r7, #12]
  299 0156 5200     		lsl	r2, r2, #1
  300 0158 D152     		strh	r1, [r2, r3]
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 11
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccL4iwKh.s 			page 11
 
 
  301              	.L12:
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 1
  343 019c 40200013 		.word	318775360
  344 01a0 04001A40 		.word	1075445764
  345 01a4 84000080 		.word	-2147483516
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 12
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccL4iwKh.s 			page 12
 
 
  346 01a8 18001A40 		.word	1075445784
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 1
  383              		.cfi_offset 14, -4
  384 0002 00AF     		add	r7, sp, #0
  385              		.cfi_def_cfa_register 7
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 13
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccL4iwKh.s 			page 13
 
 
  297:.\Generated_Source\PSoC4/ADC.c ****     if (0u == (ADC_SAR_CTRL_REG & ADC_ENABLE))
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 1
  315:.\Generated_Source\PSoC4/ADC.c **** /*******************************************************************************
  316:.\Generated_Source\PSoC4/ADC.c **** * Function Name: ADC_Stop
  317:.\Generated_Source\PSoC4/ADC.c **** ********************************************************************************
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 14
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccL4iwKh.s 			page 14
 
 
  318:.\Generated_Source\PSoC4/ADC.c **** *
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 1
  338:.\Generated_Source\PSoC4/ADC.c **** ********************************************************************************
  339:.\Generated_Source\PSoC4/ADC.c **** *
  340:.\Generated_Source\PSoC4/ADC.c **** * Summary:
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 15
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccL4iwKh.s 			page 15
 
 
  341:.\Generated_Source\PSoC4/ADC.c **** *  Description:
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 1
  486              		.code	16
  487              		.thumb_func
  488              		.type	ADC_StopConvert, %function
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 16
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccL4iwKh.s 			page 16
 
 
  489              	ADC_StopConvert:
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 1
  521              		.code	16
  522              		.thumb_func
  523              		.type	ADC_IsEndConversion, %function
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 17
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccL4iwKh.s 			page 17
 
 
  524              	ADC_IsEndConversion:
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 1
  545              	.L34:
  420:.\Generated_Source\PSoC4/ADC.c ****     {
  421:.\Generated_Source\PSoC4/ADC.c ****         do
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 18
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccL4iwKh.s 			page 18
 
 
  422:.\Generated_Source\PSoC4/ADC.c ****         {
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 1
  571 0038 FB68     		ldr	r3, [r7, #12]
  451:.\Generated_Source\PSoC4/ADC.c **** }
  572              		.loc 1 451 0
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 19
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccL4iwKh.s 			page 19
 
 
  573 003a 181C     		mov	r0, r3
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 1
  604              		.loc 1 474 0
  605 0008 7B68     		ldr	r3, [r7, #4]
  606 000a 012B     		cmp	r3, #1
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 20
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccL4iwKh.s 			page 20
 
 
  607 000c 02D9     		bls	.L39
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 1
  644 0040 80011A40 		.word	1075446144
  645              		.cfi_endproc
  646              	.LFE7:
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 21
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccL4iwKh.s 			page 21
 
 
  647              		.size	ADC_GetResult16, .-ADC_GetResult16
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 1
  675 0014 02B0     		add	sp, sp, #8
  676              		@ sp needed
  677 0016 80BD     		pop	{r7, pc}
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 22
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccL4iwKh.s 			page 22
 
 
  678              	.L47:
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 1
  557:.\Generated_Source\PSoC4/ADC.c **** *******************************************************************************/
  558:.\Generated_Source\PSoC4/ADC.c **** void ADC_SetLowLimit(uint32 lowLimit)
  559:.\Generated_Source\PSoC4/ADC.c **** {
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 23
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccL4iwKh.s 			page 23
 
 
  693              		.loc 1 559 0
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 1
  567:.\Generated_Source\PSoC4/ADC.c **** ********************************************************************************
  568:.\Generated_Source\PSoC4/ADC.c **** *
  569:.\Generated_Source\PSoC4/ADC.c **** * Summary:
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 24
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccL4iwKh.s 			page 24
 
 
  570:.\Generated_Source\PSoC4/ADC.c **** *  Sets the low limit parameter for a limit condition.
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 1
  780              		.global	ADC_SetLimitMask
  781              		.code	16
  782              		.thumb_func
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 25
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccL4iwKh.s 			page 25
 
 
  783              		.type	ADC_SetLimitMask, %function
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 1
  814              		.size	ADC_SetLimitMask, .-ADC_SetLimitMask
  815              		.section	.text.ADC_SetSatMask,"ax",%progbits
  816              		.align	2
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 26
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccL4iwKh.s 			page 26
 
 
  817              		.global	ADC_SetSatMask
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 1
  848 0018 28021A40 		.word	1075446312
  849              		.cfi_endproc
  850              	.LFE12:
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 27
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccL4iwKh.s 			page 27
 
 
  851              		.size	ADC_SetSatMask, .-ADC_SetSatMask
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 1
  877 0012 02D9     		bls	.L61
  878              		.loc 1 657 0 is_stmt 0 discriminator 1
  879 0014 0020     		mov	r0, #0
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 28
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccL4iwKh.s 			page 28
 
 
  880 0016 FFF7FEFF 		bl	CyHalt
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 1
  683:.\Generated_Source\PSoC4/ADC.c **** * Global variables:
  684:.\Generated_Source\PSoC4/ADC.c **** *  ADC_CountsPer10Volt:  modified to set the ADC gain in counts
  685:.\Generated_Source\PSoC4/ADC.c **** *   per 10 volt.
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 29
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccL4iwKh.s 			page 29
 
 
  686:.\Generated_Source\PSoC4/ADC.c **** *
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 1
  954              	ADC_CountsTo_mVolts:
  955              	.LFB15:
  695:.\Generated_Source\PSoC4/ADC.c **** 
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 30
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccL4iwKh.s 			page 30
 
 
  696:.\Generated_Source\PSoC4/ADC.c **** 
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 1
  728:.\Generated_Source\PSoC4/ADC.c ****         /* Divide the adcCount when accumulate averaging mode selected */
  729:.\Generated_Source\PSoC4/ADC.c ****         #if(ADC_DEFAULT_AVG_MODE == ADC__ACCUMULATE)
  730:.\Generated_Source\PSoC4/ADC.c ****             if((ADC_channelsConfig[chan] & ADC_AVERAGING_EN) != 0u)
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 31
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccL4iwKh.s 			page 31
 
 
  731:.\Generated_Source\PSoC4/ADC.c ****             {
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 1
  1022 0064 0133     		add	r3, r3, #1
  1023              	.L73:
  1024 0066 5B10     		asr	r3, r3, #1
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 32
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccL4iwKh.s 			page 32
 
 
  1025 0068 5B42     		neg	r3, r3
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 1
  745:.\Generated_Source\PSoC4/ADC.c **** 
  746:.\Generated_Source\PSoC4/ADC.c **** 
  747:.\Generated_Source\PSoC4/ADC.c ****     /*******************************************************************************
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 33
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccL4iwKh.s 			page 33
 
 
  748:.\Generated_Source\PSoC4/ADC.c ****     * Function Name: ADC_CountsTo_uVolts
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 1
  1094              		.loc 1 780 0 is_stmt 0 discriminator 1
  1095 0016 0020     		mov	r0, #0
  1096 0018 FFF7FEFF 		bl	CyHalt
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 34
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccL4iwKh.s 			page 34
 
 
  1097              	.L78:
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 1
  1138 006a 2B1C     		mov	r3, r5
  1139 006c FFF7FEFF 		bl	__aeabi_ldivmod
  1140 0070 031C     		mov	r3, r0
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 35
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccL4iwKh.s 			page 35
 
 
  1141 0072 0C1C     		mov	r4, r1
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 1
  815:.\Generated_Source\PSoC4/ADC.c ****     *  ADC_countsPer10Volt:  used to convert ADC counts to Volts.
  816:.\Generated_Source\PSoC4/ADC.c ****     *  ADC_Offset:  Used as the offset while converting ADC counts
  817:.\Generated_Source\PSoC4/ADC.c ****     *   to mVolts.
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 36
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccL4iwKh.s 			page 36
 
 
  818:.\Generated_Source\PSoC4/ADC.c ****     *
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 1
  1208 0030 1A80     		strh	r2, [r3]
  837:.\Generated_Source\PSoC4/ADC.c **** 
  838:.\Generated_Source\PSoC4/ADC.c ****         volts = ((float32)adcCounts * ADC_10V_COUNTS) / (float32)ADC_countsPer10Volt[chan];
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 37
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccL4iwKh.s 			page 37
 
 
  1209              		.loc 1 838 0
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 1
  1260              		.section	.debug_info,"",%progbits
  1261              	.Ldebug_info0:
  1262 0000 96040000 		.4byte	0x496
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 38
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccL4iwKh.s 			page 38
 
 
  1263 0004 0400     		.2byte	0x4
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 1
  1317 0071 A1       		.byte	0xa1
  1318 0072 2C000000 		.4byte	0x2c
  1319 0076 04       		.uleb128 0x4
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 39
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccL4iwKh.s 			page 39
 
 
  1320 0077 99020000 		.4byte	.LASF10
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 1
  1374 00ea 01       		.byte	0x1
  1375 00eb 3F       		.byte	0x3f
  1376 00ec 00000000 		.4byte	.LFB0
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 40
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccL4iwKh.s 			page 40
 
 
  1377 00f0 24000000 		.4byte	.LFE0-.LFB0
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 1
  1431 015c 0D       		.uleb128 0xd
  1432 015d 6F030000 		.4byte	.LASF26
  1433 0161 01       		.byte	0x1
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 41
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccL4iwKh.s 			page 41
 
 
  1434 0162 2701     		.2byte	0x127
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 1
  1488 01db 74       		.sleb128 -12
  1489 01dc 00       		.byte	0
  1490 01dd 12       		.uleb128 0x12
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 42
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccL4iwKh.s 			page 42
 
 
  1491 01de 95030000 		.4byte	.LASF32
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 1
  1545 0253 E8010000 		.4byte	.LASF40
  1546 0257 01       		.byte	0x1
  1547 0258 2E02     		.2byte	0x22e
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 43
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccL4iwKh.s 			page 43
 
 
  1548 025a 81000000 		.4byte	0x81
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 1
  1602 02cc 81000000 		.4byte	0x81
  1603 02d0 02       		.uleb128 0x2
  1604 02d1 91       		.byte	0x91
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 44
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccL4iwKh.s 			page 44
 
 
  1605 02d2 74       		.sleb128 -12
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 1
  1659 033e 12       		.uleb128 0x12
  1660 033f 48020000 		.4byte	.LASF49
  1661 0343 01       		.byte	0x1
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 45
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccL4iwKh.s 			page 45
 
 
  1662 0344 D102     		.2byte	0x2d1
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 1
  1716 03b7 8C000000 		.4byte	0x8c
  1717 03bb 02       		.uleb128 0x2
  1718 03bc 91       		.byte	0x91
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 46
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccL4iwKh.s 			page 46
 
 
  1719 03bd 62       		.sleb128 -30
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 1
  1773 042b 01       		.byte	0x1
  1774 042c 21       		.byte	0x21
  1775 042d 37040000 		.4byte	0x437
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 47
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccL4iwKh.s 			page 47
 
 
  1776 0431 05       		.uleb128 0x5
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 1
  1830 0004 0E       		.uleb128 0xe
  1831 0005 13       		.uleb128 0x13
  1832 0006 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 48
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccL4iwKh.s 			page 48
 
 
  1833 0007 03       		.uleb128 0x3
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 1
  1887 003d 3B       		.uleb128 0x3b
  1888 003e 05       		.uleb128 0x5
  1889 003f 49       		.uleb128 0x49
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 49
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccL4iwKh.s 			page 49
 
 
  1890 0040 13       		.uleb128 0x13
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 1
  1944 0078 01       		.uleb128 0x1
  1945 0079 13       		.uleb128 0x13
  1946 007a 00       		.byte	0
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 50
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccL4iwKh.s 			page 50
 
 
  1947 007b 00       		.byte	0
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 1
  2001 00b1 11       		.uleb128 0x11
  2002 00b2 01       		.uleb128 0x1
  2003 00b3 12       		.uleb128 0x12
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 51
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccL4iwKh.s 			page 51
 
 
  2004 00b4 06       		.uleb128 0x6
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 1
  2058 00ed 13       		.uleb128 0x13
  2059 00ee 00       		.byte	0
  2060 00ef 00       		.byte	0
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 52
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccL4iwKh.s 			page 52
 
 
  2061 00f0 10       		.uleb128 0x10
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 1
  2115 0127 13       		.uleb128 0x13
  2116 0128 00       		.byte	0
  2117 0129 00       		.byte	0
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 53
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccL4iwKh.s 			page 53
 
 
  2118 012a 13       		.uleb128 0x13
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 1
  2172 0162 0E       		.uleb128 0xe
  2173 0163 3A       		.uleb128 0x3a
  2174 0164 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 54
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccL4iwKh.s 			page 54
 
 
  2175 0165 3B       		.uleb128 0x3b
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 1
  2229 009c 80000000 		.4byte	.LFE17-.LFB17
  2230 00a0 00000000 		.4byte	0
  2231 00a4 00000000 		.4byte	0
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 55
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccL4iwKh.s 			page 55
 
 
  2232              		.section	.debug_ranges,"",%progbits
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 1
  2277      65725F76 
  2277      325C6172 
  2277      6D5F636F 
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 56
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccL4iwKh.s 			page 56
 
 
  2277      6E74726F 
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 1
  2302              	.LASF4:
  2303 00e9 6C6F6E67 		.ascii	"long int\000"
  2303      20696E74 
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 57
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccL4iwKh.s 			page 57
 
 
  2303      00
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 1
  2329      53657453 
  2329      61744D61 
  2329      736B00
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 58
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccL4iwKh.s 			page 58
 
 
  2330              	.LASF55:
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 1
  2356              	.LASF37:
  2357 021c 4144435F 		.ascii	"ADC_SetChanMask\000"
  2357      53657443 
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 59
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccL4iwKh.s 			page 59
 
 
  2357      68616E4D 
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 1
  2379      74643D67 
  2379      6E753939 
  2379      202D6666 
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cclJ2Q1c.s 			page 60
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccL4iwKh.s 			page 60
 
 
  2379      756E6374 

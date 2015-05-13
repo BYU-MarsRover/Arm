@@ -2,7 +2,7 @@
 --	Conversion of arm_controller_v2.1.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Mon Apr 27 18:25:59 2015
+--	Mon May 11 22:40:31 2015
 --
 
 USE cypress.cypress.all;
@@ -904,13 +904,13 @@ TERMINAL \Arduino_UART:tmpSIOVREF__tx_net_0\ : bit;
 SIGNAL \Arduino_UART:tmpINTERRUPT_0__tx_net_0\ : bit;
 SIGNAL \Arduino_UART:Net_754\ : bit;
 SIGNAL \Arduino_UART:Net_767\ : bit;
+SIGNAL Net_1315 : bit;
 SIGNAL \Arduino_UART:tmpOE__rx_net_0\ : bit;
 SIGNAL \Arduino_UART:tmpIO_0__rx_net_0\ : bit;
 TERMINAL \Arduino_UART:tmpSIOVREF__rx_net_0\ : bit;
 SIGNAL \Arduino_UART:tmpINTERRUPT_0__rx_net_0\ : bit;
 SIGNAL \Arduino_UART:Net_739\ : bit;
 SIGNAL \Arduino_UART:Net_747\ : bit;
-SIGNAL Net_1315 : bit;
 SIGNAL \Arduino_UART:Net_751\ : bit;
 SIGNAL \Arduino_UART:Net_660\ : bit;
 SIGNAL \Arduino_UART:ss_3\ : bit;
@@ -1047,13 +1047,16 @@ Net_25D <= ((not \SPIM_1:BSPIM:state_2\ and \SPIM_1:BSPIM:state_1\ and \SPIM_1:B
 \EFFECTOR_PWM:PWMUDB:dith_count_0\\D\ <= ((not \EFFECTOR_PWM:PWMUDB:dith_count_0\ and \EFFECTOR_PWM:PWMUDB:tc_i\)
 	OR (not \EFFECTOR_PWM:PWMUDB:tc_i\ and \EFFECTOR_PWM:PWMUDB:dith_count_0\));
 
-\EFFECTOR_PWM:PWMUDB:cmp1_status\ <= ((not \EFFECTOR_PWM:PWMUDB:prevCompare1\ and not \EFFECTOR_PWM:PWMUDB:cmp1_eq\ and not \EFFECTOR_PWM:PWMUDB:cmp1_less\));
+\EFFECTOR_PWM:PWMUDB:cmp1_status\ <= ((not \EFFECTOR_PWM:PWMUDB:prevCompare1\ and \EFFECTOR_PWM:PWMUDB:cmp1_less\)
+	OR (not \EFFECTOR_PWM:PWMUDB:prevCompare1\ and \EFFECTOR_PWM:PWMUDB:cmp1_eq\));
 
 \EFFECTOR_PWM:PWMUDB:status_2\ <= ((\EFFECTOR_PWM:PWMUDB:runmode_enable\ and \EFFECTOR_PWM:PWMUDB:tc_i\));
 
-\EFFECTOR_PWM:PWMUDB:pwm_i\ <= ((not \EFFECTOR_PWM:PWMUDB:cmp1_eq\ and not \EFFECTOR_PWM:PWMUDB:cmp1_less\ and \EFFECTOR_PWM:PWMUDB:control_7\));
+\EFFECTOR_PWM:PWMUDB:pwm_i\ <= ((\EFFECTOR_PWM:PWMUDB:control_7\ and \EFFECTOR_PWM:PWMUDB:cmp1_less\)
+	OR (\EFFECTOR_PWM:PWMUDB:control_7\ and \EFFECTOR_PWM:PWMUDB:cmp1_eq\));
 
-\EFFECTOR_PWM:PWMUDB:cmp1\ <= ((not \EFFECTOR_PWM:PWMUDB:cmp1_eq\ and not \EFFECTOR_PWM:PWMUDB:cmp1_less\));
+\EFFECTOR_PWM:PWMUDB:cmp1\ <= (\EFFECTOR_PWM:PWMUDB:cmp1_less\
+	OR \EFFECTOR_PWM:PWMUDB:cmp1_eq\);
 
 Clock_counter:cy_clock_v1_0
 	GENERIC MAP(cy_registers=>"",
@@ -2183,7 +2186,7 @@ shoulder:cy_psoc3_pins_v1_10
 		id=>"43ec2fa1-bf22-4b71-9477-b6ca7b97f0b0/81fcee8a-3b8b-4be1-9a5f-a5e2e619a938",
 		source_clock_id=>"",
 		divisor=>0,
-		period=>"723379629.62963",
+		period=>"6500260010.40042",
 		is_direct=>'0',
 		is_digital=>'0')
 	PORT MAP(clock_out=>\Wrist_UART:Net_847\,
@@ -3315,6 +3318,9 @@ effector_A:cy_psoc3_pins_v1_10
 		out_clock_en=>tmpOE__elbow_net_0,
 		out_reset=>zero,
 		interrupt=>\Arduino_UART:tmpINTERRUPT_0__tx_net_0\);
+\Arduino_UART:SCB_IRQ\:cy_isr_v1_0
+	GENERIC MAP(int_type=>"10")
+	PORT MAP(int_signal=>Net_1315);
 \Arduino_UART:rx\:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"9d484733-2ee3-4657-a31a-b072aa2c16be/78e33e5d-45ea-4b75-88d5-73274e8a7ce4",
 		drive_mode=>"001",
