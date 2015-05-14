@@ -17,19 +17,9 @@
 
     //Initializations of global variables
     #define ownIpAddr 4u
-    #define dstIpAddr 130u//147u //<-- This is the only number we need to change when we change the ip config. unless we change our subnet
+    #define dstIpAddr 147u //<-- This is the only number we need to change when we change the ip config. unless we change our subnet
     #define udpPort 27015u
    
-    //Bounds variables for elbow and shoulder
-    uint32  ELBOW_UPPER_BOUND = 1000;
-    uint32  ELBOW_LOWER_BOUND = 100;
-    uint32  SHOULDER_UPPER_BOUND = 800;
-    uint32  SHOULDER_LOWER_BOUND = 280;
-    #define BOUND_OFFSET 20
-    
-    #define SHOULDER_POT 0
-    #define ELBOW_POT 1
-
     //TODO: make sure ourbyte scheme matching the newest version for udp format
     //Array indices of specific bytes transmitted from the wiznet
     #define BA_BYTE_1 10 
@@ -57,13 +47,6 @@
     uint8_t feedback_array[SEND_ARRAY_SIZE];
     uint8_t heartbeat_array[SEND_ARRAY_SIZE];
     uint8 HEARTBEAT_FLAG;
-    
-    //TODO: might need to implement another ISR setting wiznet as a flag
-    uint8 wiznet; //bool indicating wiznet interupt high or low
-
-    //TODO: erase this in final product
-    #define TEST_ARRAY_SIZE 22
-    int8 test_array[TEST_ARRAY_SIZE];
 
     #define ELBW_ARR_SIZE 20
     #define SHLDR_ARR_SIZE 20
@@ -82,9 +65,11 @@
     uint8 BA_FLAG = 0;
     uint8 EFFECTOR_FLAG = 0;
     uint8 ARD_FLAG = 0;
+    
     //these are for feedback path
     uint8 Time_Out_flag = 0;
     uint8 Time_count = 0;
+    
     //error variables to send back to base station
     uint16 dropped_packets = 0;
     uint16 fail_safe_errors = 0;
@@ -102,13 +87,6 @@
     //---------------------------------------------------
     //    Function stubs for the header
     //---------------------------------------------------
-    uint16 CalibrationElbow(uint16 velocity);
-    uint16 CalibrationShoulder(uint16 velocity);
-    uint16 average(uint16* array, uint8 num_items);
-    void maintain_array(uint8* cpos, uint8 SIZE);
-    void check_update(uint16* array, uint8* arr_pos, uint8 size, int change);
-    void pos_to_vel(uint8* cur_pos, uint16* array, uint8 ARRAY_SIZE, uint16 command);
-    
     uint16 simple_pos_to_vel(uint16 new_command, uint16 recent_command);
     uint16 latest_command;
     
@@ -121,23 +99,17 @@
     uint16 make_wristRotate_command(int8* info_array, uint8 byte1, uint8 byte2);
     uint16 make_wristTilt_command(int8* info_array, uint8 byte1, uint8 byte2);
     
-    uint16 potFeedback(uint32 channel);
     void send_packet();
     void fill_data_array();
-//    uint8 wristTilt(uint8 WT_arr_cspot, uint16* WT_array);
-//    uint8 wristRotate(uint8 WR_arr_cspot, uint16* WR_array);
-//    void elbow(uint8* elbw_arr_cspot, uint16* elbow_array);
-//    void shoulder(uint8* shldr_arr_cspot, uint16* shoulder_array);
-//    void baseAzimuth(uint8* BA_arr_cspot, uint16* BA_array);
     
     void wristTilt();
     void wristRotate();
     void elbow();
     void shoulder();
     void baseAzimuth();
-    
     void effector();
     void arduino();
+    
     void initialize();
     //--------------------------------------------------- END Function Stubs
 #endif

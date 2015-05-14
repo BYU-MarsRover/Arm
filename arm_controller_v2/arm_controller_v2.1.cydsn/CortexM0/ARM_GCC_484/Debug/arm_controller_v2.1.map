@@ -24,10 +24,6 @@ Archive member included because of file (symbol)
                               .\CortexM0\ARM_GCC_484\Debug\main.o (WIZ_RST_Write)
 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(WIZ_SS.o)
                               .\CortexM0\ARM_GCC_484\Debug\main.o (WIZ_SS_Write)
-.\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ADC.o)
-                              .\CortexM0\ARM_GCC_484\Debug\main.o (ADC_GetResult16)
-.\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ADC_INT.o)
-                              .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ADC.o) (ADC_ISR)
 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(BA_PWM.o)
                               .\CortexM0\ARM_GCC_484\Debug\main.o (BA_PWM_WriteCompare)
 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ELBW_PWM.o)
@@ -38,14 +34,6 @@ Archive member included because of file (symbol)
                               .\CortexM0\ARM_GCC_484\Debug\wiznet5500.o (SPIM_1_ReadTxStatus)
 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SPIM_1_IntClock.o)
                               .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SPIM_1.o) (SPIM_1_IntClock_Start)
-.\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(stop_shdr_up.o)
-                              .\CortexM0\ARM_GCC_484\Debug\main.o (stop_shdr_up_Read)
-.\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(stop_shdr_dn.o)
-                              .\CortexM0\ARM_GCC_484\Debug\main.o (stop_shdr_dn_Read)
-.\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(stop_elb_up.o)
-                              .\CortexM0\ARM_GCC_484\Debug\main.o (stop_elb_up_Read)
-.\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(stop_elb_dn.o)
-                              .\CortexM0\ARM_GCC_484\Debug\main.o (stop_elb_dn_Read)
 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(EFFECTOR_PWM.o)
                               .\CortexM0\ARM_GCC_484\Debug\main.o (EFFECTOR_PWM_Start)
 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Wrist_UART.o)
@@ -63,29 +51,11 @@ Archive member included because of file (symbol)
 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART.o)
                               .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_SPI_UART_INT.o) (Arduino_UART_customIntrHandler)
 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(_udivsi3.o)
-                              .\CortexM0\ARM_GCC_484\Debug\main.o (__aeabi_uidiv)
+                              .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(CyLib.o) (__aeabi_uidiv)
 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(_divsi3.o)
-                              .\CortexM0\ARM_GCC_484\Debug\main.o (__aeabi_idiv)
+                              .\CortexM0\ARM_GCC_484\Debug\Cm0Start.o (__aeabi_idiv)
 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(_dvmd_tls.o)
                               c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(_udivsi3.o) (__aeabi_idiv0)
-c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(_aeabi_ldivmod.o)
-                              .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ADC.o) (__aeabi_ldivmod)
-c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(_muldi3.o)
-                              .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ADC.o) (__aeabi_lmul)
-c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(bpabi.o)
-                              c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(_aeabi_ldivmod.o) (__gnu_ldivmod_helper)
-c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(divsf3.o)
-                              .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ADC.o) (__aeabi_fdiv)
-c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(mulsf3.o)
-                              .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ADC.o) (__aeabi_fmul)
-c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(floatsisf.o)
-                              .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ADC.o) (__aeabi_i2f)
-c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(_clzsi2.o)
-                              c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(divsf3.o) (__clzsi2)
-c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(_divdi3.o)
-                              c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(bpabi.o) (__divdi3)
-c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(_udivdi3.o)
-                              c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(bpabi.o) (__udivdi3)
 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-errno.o)
                               .\CortexM0\ARM_GCC_484\Debug\Cm0Start.o (__errno)
 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-exit.o)
@@ -171,14 +141,11 @@ Allocating common symbols
 Common symbol       size              file
 
 HEARTBEAT_FLAG      0x1               .\CortexM0\ARM_GCC_484\Debug\main.o
-test_array          0x16              .\CortexM0\ARM_GCC_484\Debug\main.o
 SPIM_1_swStatusTx   0x1               .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SPIM_1.o)
 send_packet_state   0x1               .\CortexM0\ARM_GCC_484\Debug\main.o
 errno               0x4               c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-reent.o)
 heartbeat_array     0xe               .\CortexM0\ARM_GCC_484\Debug\main.o
 baseAzimuth_state   0x1               .\CortexM0\ARM_GCC_484\Debug\main.o
-ADC_countsPer10Volt
-                    0x8               .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ADC.o)
 Arduino_UART_rxBufferTail
                     0x4               .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_SPI_UART.o)
 data_array          0x16              .\CortexM0\ARM_GCC_484\Debug\main.o
@@ -191,7 +158,6 @@ Arduino_UART_rxBufferHead
                     0x4               .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_SPI_UART.o)
 Arduino_UART_rxBufferInternal
                     0xd               .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_SPI_UART.o)
-ADC_offset          0x4               .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ADC.o)
 timerFlag           0x1               .\CortexM0\ARM_GCC_484\Debug\main.o
 latest_WT_command   0x2               .\CortexM0\ARM_GCC_484\Debug\main.o
 elbow_state         0x1               .\CortexM0\ARM_GCC_484\Debug\main.o
@@ -201,7 +167,6 @@ wristRotate_state   0x1               .\CortexM0\ARM_GCC_484\Debug\main.o
 arduino_state       0x1               .\CortexM0\ARM_GCC_484\Debug\main.o
 latest_command      0x2               .\CortexM0\ARM_GCC_484\Debug\main.o
 feedback_array      0xe               .\CortexM0\ARM_GCC_484\Debug\main.o
-wiznet              0x1               .\CortexM0\ARM_GCC_484\Debug\main.o
 
 Discarded input sections
 
@@ -215,19 +180,10 @@ Discarded input sections
  .ARM.extab     0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m/crt0.o
  .ARM.exidx     0x00000000        0x8 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m/crt0.o
  .text          0x00000000        0x0 .\CortexM0\ARM_GCC_484\Debug\main.o
- .text.CalibrationElbow
-                0x00000000      0x184 .\CortexM0\ARM_GCC_484\Debug\main.o
- .text.CalibrationShoulder
-                0x00000000      0x184 .\CortexM0\ARM_GCC_484\Debug\main.o
- .text.average  0x00000000       0x78 .\CortexM0\ARM_GCC_484\Debug\main.o
- .text.maintain_array
-                0x00000000       0x38 .\CortexM0\ARM_GCC_484\Debug\main.o
- .text.check_update
-                0x00000000       0xf0 .\CortexM0\ARM_GCC_484\Debug\main.o
- .text.pos_to_vel
-                0x00000000      0x1b4 .\CortexM0\ARM_GCC_484\Debug\main.o
- .text.potFeedback
-                0x00000000       0x28 .\CortexM0\ARM_GCC_484\Debug\main.o
+ .text.send_packet
+                0x00000000      0x18c .\CortexM0\ARM_GCC_484\Debug\main.o
+ .rodata        0x00000000       0x50 .\CortexM0\ARM_GCC_484\Debug\main.o
+ .text.arduino  0x00000000      0x114 .\CortexM0\ARM_GCC_484\Debug\main.o
  .text          0x00000000        0x0 .\CortexM0\ARM_GCC_484\Debug\spi.o
  .data          0x00000000        0x0 .\CortexM0\ARM_GCC_484\Debug\spi.o
  .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_484\Debug\spi.o
@@ -235,8 +191,12 @@ Discarded input sections
  .data          0x00000000        0x0 .\CortexM0\ARM_GCC_484\Debug\wiznet5500.o
  .text.wiznetClose
                 0x00000000       0x14 .\CortexM0\ARM_GCC_484\Debug\wiznet5500.o
+ .text.wiznetSend
+                0x00000000       0x34 .\CortexM0\ARM_GCC_484\Debug\wiznet5500.o
  .text.wiznetReceive
                 0x00000000       0x34 .\CortexM0\ARM_GCC_484\Debug\wiznet5500.o
+ .text.wiznetWriteUdpFrame
+                0x00000000       0x44 .\CortexM0\ARM_GCC_484\Debug\wiznet5500.o
  .text.wiznetPrintRegisters
                 0x00000000      0x12c .\CortexM0\ARM_GCC_484\Debug\wiznet5500.o
  .text.wiznetRead8b
@@ -550,51 +510,6 @@ Discarded input sections
                 0x00000000       0x1c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(WIZ_SS.o)
  .text.WIZ_SS_ClearInterrupt
                 0x00000000       0x30 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(WIZ_SS.o)
- .text          0x00000000        0x0 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ADC.o)
- .data          0x00000000        0x0 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ADC.o)
- .bss           0x00000000        0x1 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ADC.o)
- .rodata        0x00000000        0xc .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ADC.o)
- .text.ADC_Start
-                0x00000000       0x24 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ADC.o)
- .text.ADC_Init
-                0x00000000      0x1fc .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ADC.o)
- .text.ADC_Enable
-                0x00000000       0x28 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ADC.o)
- .text.ADC_Stop
-                0x00000000       0x18 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ADC.o)
- .text.ADC_StartConvert
-                0x00000000       0x1c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ADC.o)
- .text.ADC_StopConvert
-                0x00000000       0x1c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ADC.o)
- .text.ADC_IsEndConversion
-                0x00000000       0x48 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ADC.o)
- .text.ADC_GetResult16
-                0x00000000       0x44 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ADC.o)
- .text.ADC_SetChanMask
-                0x00000000       0x1c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ADC.o)
- .text.ADC_SetLowLimit
-                0x00000000       0x30 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ADC.o)
- .text.ADC_SetHighLimit
-                0x00000000       0x2c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ADC.o)
- .text.ADC_SetLimitMask
-                0x00000000       0x1c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ADC.o)
- .text.ADC_SetSatMask
-                0x00000000       0x1c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ADC.o)
- .text.ADC_SetOffset
-                0x00000000       0x30 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ADC.o)
- .text.ADC_SetGain
-                0x00000000       0x2c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ADC.o)
- .text.ADC_CountsTo_mVolts
-                0x00000000       0xa4 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ADC.o)
- .text.ADC_CountsTo_uVolts
-                0x00000000       0x98 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ADC.o)
- .text.ADC_CountsTo_Volts
-                0x00000000       0x80 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ADC.o)
- COMMON         0x00000000        0xc .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ADC.o)
- .text          0x00000000        0x0 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ADC_INT.o)
- .data          0x00000000        0x0 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ADC_INT.o)
- .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ADC_INT.o)
- .text.ADC_ISR  0x00000000       0x1c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ADC_INT.o)
  .text          0x00000000        0x0 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(BA_PWM.o)
  .data          0x00000000        0x0 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(BA_PWM.o)
  .text.BA_PWM_Stop
@@ -835,58 +750,6 @@ Discarded input sections
                 0x00000000       0x14 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SPIM_1_IntClock.o)
  .text.SPIM_1_IntClock_GetFractionalDividerRegister
                 0x00000000        0xc .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SPIM_1_IntClock.o)
- .text          0x00000000        0x0 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(stop_shdr_up.o)
- .data          0x00000000        0x0 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(stop_shdr_up.o)
- .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(stop_shdr_up.o)
- .text.stop_shdr_up_Write
-                0x00000000       0x4c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(stop_shdr_up.o)
- .text.stop_shdr_up_SetDriveMode
-                0x00000000       0x30 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(stop_shdr_up.o)
- .text.stop_shdr_up_Read
-                0x00000000       0x1c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(stop_shdr_up.o)
- .text.stop_shdr_up_ReadDataReg
-                0x00000000       0x1c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(stop_shdr_up.o)
- .text.stop_shdr_up_ClearInterrupt
-                0x00000000       0x30 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(stop_shdr_up.o)
- .text          0x00000000        0x0 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(stop_shdr_dn.o)
- .data          0x00000000        0x0 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(stop_shdr_dn.o)
- .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(stop_shdr_dn.o)
- .text.stop_shdr_dn_Write
-                0x00000000       0x4c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(stop_shdr_dn.o)
- .text.stop_shdr_dn_SetDriveMode
-                0x00000000       0x30 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(stop_shdr_dn.o)
- .text.stop_shdr_dn_Read
-                0x00000000       0x1c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(stop_shdr_dn.o)
- .text.stop_shdr_dn_ReadDataReg
-                0x00000000       0x1c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(stop_shdr_dn.o)
- .text.stop_shdr_dn_ClearInterrupt
-                0x00000000       0x30 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(stop_shdr_dn.o)
- .text          0x00000000        0x0 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(stop_elb_up.o)
- .data          0x00000000        0x0 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(stop_elb_up.o)
- .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(stop_elb_up.o)
- .text.stop_elb_up_Write
-                0x00000000       0x4c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(stop_elb_up.o)
- .text.stop_elb_up_SetDriveMode
-                0x00000000       0x30 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(stop_elb_up.o)
- .text.stop_elb_up_Read
-                0x00000000       0x1c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(stop_elb_up.o)
- .text.stop_elb_up_ReadDataReg
-                0x00000000       0x1c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(stop_elb_up.o)
- .text.stop_elb_up_ClearInterrupt
-                0x00000000       0x30 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(stop_elb_up.o)
- .text          0x00000000        0x0 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(stop_elb_dn.o)
- .data          0x00000000        0x0 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(stop_elb_dn.o)
- .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(stop_elb_dn.o)
- .text.stop_elb_dn_Write
-                0x00000000       0x48 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(stop_elb_dn.o)
- .text.stop_elb_dn_SetDriveMode
-                0x00000000       0x30 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(stop_elb_dn.o)
- .text.stop_elb_dn_Read
-                0x00000000       0x1c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(stop_elb_dn.o)
- .text.stop_elb_dn_ReadDataReg
-                0x00000000       0x1c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(stop_elb_dn.o)
- .text.stop_elb_dn_ClearInterrupt
-                0x00000000       0x30 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(stop_elb_dn.o)
  .text          0x00000000        0x0 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(EFFECTOR_PWM.o)
  .data          0x00000000        0x0 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(EFFECTOR_PWM.o)
  .text.EFFECTOR_PWM_Stop
@@ -950,16 +813,25 @@ Discarded input sections
  .text          0x00000000        0x0 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_SPI_UART.o)
  .data          0x00000000        0x0 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_SPI_UART.o)
  .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_SPI_UART.o)
+ .text.Arduino_UART_SpiUartReadRxData
+                0x00000000       0x50 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_SPI_UART.o)
+ .text.Arduino_UART_SpiUartGetRxBufferSize
+                0x00000000       0x40 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_SPI_UART.o)
  .text.Arduino_UART_SpiUartClearRxBuffer
                 0x00000000       0x68 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_SPI_UART.o)
+ .text.Arduino_UART_SpiUartWriteTxData
+                0x00000000       0x2c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_SPI_UART.o)
  .text.Arduino_UART_SpiUartPutArray
                 0x00000000       0x34 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_SPI_UART.o)
  .text.Arduino_UART_SpiUartGetTxBufferSize
                 0x00000000       0x20 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_SPI_UART.o)
  .text.Arduino_UART_SpiUartClearTxBuffer
                 0x00000000       0x2c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_SPI_UART.o)
+ .text.Arduino_UART_SpiUartDisableIntRx
+                0x00000000       0x20 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_SPI_UART.o)
  .text.Arduino_UART_SpiUartDisableIntTx
                 0x00000000       0x20 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_SPI_UART.o)
+ COMMON         0x00000000       0x19 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_SPI_UART.o)
  .text          0x00000000        0x0 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_UART.o)
  .data          0x00000000        0x0 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_UART.o)
  .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_UART.o)
@@ -971,6 +843,8 @@ Discarded input sections
                 0x00000000       0x34 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_UART.o)
  .text.Arduino_UART_UartGetChar
                 0x00000000       0x44 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_UART.o)
+ .text.Arduino_UART_UartGetByte
+                0x00000000       0x68 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_UART.o)
  .text.Arduino_UART_UartPutString
                 0x00000000       0x34 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_UART.o)
  .text.Arduino_UART_UartPutCRLF
@@ -1012,39 +886,6 @@ Discarded input sections
  .text          0x00000000        0x4 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(_dvmd_tls.o)
  .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(_dvmd_tls.o)
  .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(_dvmd_tls.o)
- .text          0x00000000       0x48 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(_aeabi_ldivmod.o)
- .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(_aeabi_ldivmod.o)
- .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(_aeabi_ldivmod.o)
- .text          0x00000000       0x44 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(_muldi3.o)
- .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(_muldi3.o)
- .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(_muldi3.o)
- .text          0x00000000       0x6c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(bpabi.o)
- .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(bpabi.o)
- .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(bpabi.o)
- .text          0x00000000      0x24c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(divsf3.o)
- .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(divsf3.o)
- .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(divsf3.o)
- .rodata        0x00000000       0x40 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(divsf3.o)
- .text          0x00000000      0x254 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(mulsf3.o)
- .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(mulsf3.o)
- .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(mulsf3.o)
- .rodata        0x00000000       0x40 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(mulsf3.o)
- .text          0x00000000       0xb8 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(floatsisf.o)
- .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(floatsisf.o)
- .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(floatsisf.o)
- .text          0x00000000       0x3c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(_clzsi2.o)
- .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(_clzsi2.o)
- .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(_clzsi2.o)
- .text          0x00000000      0x3b8 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(_divdi3.o)
- .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(_divdi3.o)
- .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(_divdi3.o)
- .ARM.extab     0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(_divdi3.o)
- .ARM.exidx     0x00000000        0x8 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(_divdi3.o)
- .text          0x00000000      0x384 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(_udivdi3.o)
- .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(_udivdi3.o)
- .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(_udivdi3.o)
- .ARM.extab     0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(_udivdi3.o)
- .ARM.exidx     0x00000000        0x8 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(_udivdi3.o)
  .text          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-errno.o)
  .data          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-errno.o)
  .bss           0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-errno.o)
@@ -1344,7 +1185,7 @@ END GROUP
                 0x00000080                CY_FLASH_ROW_SIZE = 0x80
                 0x00000001                CY_APPL_NUM = 0x1
                 0x00000040                CY_METADATA_SIZE = 0x40
-                0x200001c8                PROVIDE (__cy_heap_start, _end)
+                0x20000188                PROVIDE (__cy_heap_start, _end)
                 0x00000001                PROVIDE (__cy_region_num, ((__cy_regions_end - __cy_regions) / 0x10))
                 0x20001000                PROVIDE (__cy_stack, (ORIGIN (ram) + 0x1000))
                 0x20000c00                PROVIDE (__cy_heap_end, (__cy_stack - 0x400))
@@ -1357,7 +1198,7 @@ END GROUP
                 0x00004700                appl2_start = (appl1_start + ALIGN ((((0x8000 - appl1_start) - (0x2 * CY_FLASH_ROW_SIZE)) / 0x2), CY_FLASH_ROW_SIZE))
                 0x00000f00                appl_start = (CY_APPL_NUM == 0x1)?appl1_start:appl2_start
 
-.text           0x00000f00     0x2b96
+.text           0x00000f00     0x289a
  CREATE_OBJECT_SYMBOLS
                 0x00000f00                PROVIDE (__cy_interrupt_vector, RomVectors)
  *(.romvectors)
@@ -1389,360 +1230,333 @@ END GROUP
                 0x00001590       0x28 .\CortexM0\ARM_GCC_484\Debug\main.o
                 0x00001590                timer_isr
  .text.simple_pos_to_vel
-                0x000015b8       0xec .\CortexM0\ARM_GCC_484\Debug\main.o
+                0x000015b8      0x154 .\CortexM0\ARM_GCC_484\Debug\main.o
                 0x000015b8                simple_pos_to_vel
  .text.WT_pos_to_vel
-                0x000016a4       0x9c .\CortexM0\ARM_GCC_484\Debug\main.o
-                0x000016a4                WT_pos_to_vel
+                0x0000170c       0xd0 .\CortexM0\ARM_GCC_484\Debug\main.o
+                0x0000170c                WT_pos_to_vel
  .text.WR_pos_to_vel
-                0x00001740       0x90 .\CortexM0\ARM_GCC_484\Debug\main.o
-                0x00001740                WR_pos_to_vel
+                0x000017dc       0xbc .\CortexM0\ARM_GCC_484\Debug\main.o
+                0x000017dc                WR_pos_to_vel
  .text.make_command
-                0x000017d0       0x84 .\CortexM0\ARM_GCC_484\Debug\main.o
-                0x000017d0                make_command
+                0x00001898       0x84 .\CortexM0\ARM_GCC_484\Debug\main.o
+                0x00001898                make_command
  .text.make_wristRotate_command
-                0x00001854       0x78 .\CortexM0\ARM_GCC_484\Debug\main.o
-                0x00001854                make_wristRotate_command
+                0x0000191c       0x78 .\CortexM0\ARM_GCC_484\Debug\main.o
+                0x0000191c                make_wristRotate_command
  .text.make_wristTilt_command
-                0x000018cc       0x74 .\CortexM0\ARM_GCC_484\Debug\main.o
-                0x000018cc                make_wristTilt_command
- .text.send_packet
-                0x00001940      0x18c .\CortexM0\ARM_GCC_484\Debug\main.o
-                0x00001940                send_packet
+                0x00001994       0x74 .\CortexM0\ARM_GCC_484\Debug\main.o
+                0x00001994                make_wristTilt_command
  .text.fill_data_array
-                0x00001acc       0x18 .\CortexM0\ARM_GCC_484\Debug\main.o
-                0x00001acc                fill_data_array
+                0x00001a08       0x18 .\CortexM0\ARM_GCC_484\Debug\main.o
+                0x00001a08                fill_data_array
  .text.wristTilt
-                0x00001ae4       0xfc .\CortexM0\ARM_GCC_484\Debug\main.o
-                0x00001ae4                wristTilt
+                0x00001a20      0x144 .\CortexM0\ARM_GCC_484\Debug\main.o
+                0x00001a20                wristTilt
  .text.wristRotate
-                0x00001be0       0xf8 .\CortexM0\ARM_GCC_484\Debug\main.o
-                0x00001be0                wristRotate
- .text.elbow    0x00001cd8      0x108 .\CortexM0\ARM_GCC_484\Debug\main.o
-                0x00001cd8                elbow
+                0x00001b64      0x138 .\CortexM0\ARM_GCC_484\Debug\main.o
+                0x00001b64                wristRotate
+ .text.elbow    0x00001c9c      0x108 .\CortexM0\ARM_GCC_484\Debug\main.o
+                0x00001c9c                elbow
  .text.shoulder
-                0x00001de0      0x108 .\CortexM0\ARM_GCC_484\Debug\main.o
-                0x00001de0                shoulder
+                0x00001da4      0x108 .\CortexM0\ARM_GCC_484\Debug\main.o
+                0x00001da4                shoulder
  .text.baseAzimuth
-                0x00001ee8      0x130 .\CortexM0\ARM_GCC_484\Debug\main.o
-                0x00001ee8                baseAzimuth
+                0x00001eac      0x144 .\CortexM0\ARM_GCC_484\Debug\main.o
+                0x00001eac                baseAzimuth
  .text.effector
-                0x00002018       0xfc .\CortexM0\ARM_GCC_484\Debug\main.o
-                0x00002018                effector
- .text.arduino  0x00002114      0x114 .\CortexM0\ARM_GCC_484\Debug\main.o
-                0x00002114                arduino
+                0x00001ff0       0xfc .\CortexM0\ARM_GCC_484\Debug\main.o
+                0x00001ff0                effector
  .text.initialize
-                0x00002228      0x114 .\CortexM0\ARM_GCC_484\Debug\main.o
-                0x00002228                initialize
- .text.main     0x0000233c      0x100 .\CortexM0\ARM_GCC_484\Debug\main.o
-                0x0000233c                main
+                0x000020ec      0x114 .\CortexM0\ARM_GCC_484\Debug\main.o
+                0x000020ec                initialize
+ .text.main     0x00002200      0x100 .\CortexM0\ARM_GCC_484\Debug\main.o
+                0x00002200                main
  .text.transferSPI
-                0x0000243c       0x34 .\CortexM0\ARM_GCC_484\Debug\wiznet5500.o
+                0x00002300       0x34 .\CortexM0\ARM_GCC_484\Debug\wiznet5500.o
  .text.wiznetInit
-                0x00002470      0x174 .\CortexM0\ARM_GCC_484\Debug\wiznet5500.o
-                0x00002470                wiznetInit
+                0x00002334      0x174 .\CortexM0\ARM_GCC_484\Debug\wiznet5500.o
+                0x00002334                wiznetInit
  .text.wiznetOpen
-                0x000025e4       0x14 .\CortexM0\ARM_GCC_484\Debug\wiznet5500.o
-                0x000025e4                wiznetOpen
- .text.wiznetSend
-                0x000025f8       0x34 .\CortexM0\ARM_GCC_484\Debug\wiznet5500.o
-                0x000025f8                wiznetSend
+                0x000024a8       0x14 .\CortexM0\ARM_GCC_484\Debug\wiznet5500.o
+                0x000024a8                wiznetOpen
  .text.wiznetClearInterrupts
-                0x0000262c       0x28 .\CortexM0\ARM_GCC_484\Debug\wiznet5500.o
-                0x0000262c                wiznetClearInterrupts
+                0x000024bc       0x28 .\CortexM0\ARM_GCC_484\Debug\wiznet5500.o
+                0x000024bc                wiznetClearInterrupts
  .text.wiznetConfigInterrupts
-                0x00002654       0x40 .\CortexM0\ARM_GCC_484\Debug\wiznet5500.o
-                0x00002654                wiznetConfigInterrupts
+                0x000024e4       0x40 .\CortexM0\ARM_GCC_484\Debug\wiznet5500.o
+                0x000024e4                wiznetConfigInterrupts
  .text.wiznetReadUdpFrame
-                0x00002694       0x58 .\CortexM0\ARM_GCC_484\Debug\wiznet5500.o
-                0x00002694                wiznetReadUdpFrame
- .text.wiznetWriteUdpFrame
-                0x000026ec       0x44 .\CortexM0\ARM_GCC_484\Debug\wiznet5500.o
-                0x000026ec                wiznetWriteUdpFrame
+                0x00002524       0x58 .\CortexM0\ARM_GCC_484\Debug\wiznet5500.o
+                0x00002524                wiznetReadUdpFrame
  .text.wiznetWrite8b
-                0x00002730       0x60 .\CortexM0\ARM_GCC_484\Debug\wiznet5500.o
-                0x00002730                wiznetWrite8b
+                0x0000257c       0x60 .\CortexM0\ARM_GCC_484\Debug\wiznet5500.o
+                0x0000257c                wiznetWrite8b
  .text.wiznetWrite16b
-                0x00002790       0x74 .\CortexM0\ARM_GCC_484\Debug\wiznet5500.o
-                0x00002790                wiznetWrite16b
+                0x000025dc       0x74 .\CortexM0\ARM_GCC_484\Debug\wiznet5500.o
+                0x000025dc                wiznetWrite16b
  .text.wiznetWriteArray
-                0x00002804       0x94 .\CortexM0\ARM_GCC_484\Debug\wiznet5500.o
-                0x00002804                wiznetWriteArray
+                0x00002650       0x94 .\CortexM0\ARM_GCC_484\Debug\wiznet5500.o
+                0x00002650                wiznetWriteArray
  .text.wiznetRead16b
-                0x00002898       0x80 .\CortexM0\ARM_GCC_484\Debug\wiznet5500.o
-                0x00002898                wiznetRead16b
+                0x000026e4       0x80 .\CortexM0\ARM_GCC_484\Debug\wiznet5500.o
+                0x000026e4                wiznetRead16b
  .text.wiznetReadArray
-                0x00002918       0x8c .\CortexM0\ARM_GCC_484\Debug\wiznet5500.o
-                0x00002918                wiznetReadArray
+                0x00002764       0x8c .\CortexM0\ARM_GCC_484\Debug\wiznet5500.o
+                0x00002764                wiznetReadArray
  .text.IntDefaultHandler
-                0x000029a4        0x8 .\CortexM0\ARM_GCC_484\Debug\Cm0Start.o
-                0x000029a4                IntDefaultHandler
- .text.Start_c  0x000029ac       0x98 .\CortexM0\ARM_GCC_484\Debug\Cm0Start.o
-                0x000029ac                Start_c
+                0x000027f0        0x8 .\CortexM0\ARM_GCC_484\Debug\Cm0Start.o
+                0x000027f0                IntDefaultHandler
+ .text.Start_c  0x000027f8       0x98 .\CortexM0\ARM_GCC_484\Debug\Cm0Start.o
+                0x000027f8                Start_c
  .text.initialize_psoc
-                0x00002a44       0x74 .\CortexM0\ARM_GCC_484\Debug\Cm0Start.o
-                0x00002a44                initialize_psoc
+                0x00002890       0x74 .\CortexM0\ARM_GCC_484\Debug\Cm0Start.o
+                0x00002890                initialize_psoc
  .text.CYMEMZERO
-                0x00002ab8       0x20 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(cyfitter_cfg.o)
+                0x00002904       0x20 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(cyfitter_cfg.o)
  .text.CYCONFIGCPYCODE
-                0x00002ad8       0x24 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(cyfitter_cfg.o)
+                0x00002924       0x24 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(cyfitter_cfg.o)
  .text.cfg_write_bytes32
-                0x00002afc       0x80 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(cyfitter_cfg.o)
+                0x00002948       0x80 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(cyfitter_cfg.o)
  .text.AnalogSetDefault
-                0x00002b7c       0x24 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(cyfitter_cfg.o)
+                0x000029c8       0x24 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(cyfitter_cfg.o)
  .text.SetAnalogRoutingPumps
-                0x00002ba0       0x40 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(cyfitter_cfg.o)
-                0x00002ba0                SetAnalogRoutingPumps
+                0x000029ec       0x40 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(cyfitter_cfg.o)
+                0x000029ec                SetAnalogRoutingPumps
  .text.Clock_counter_Start
-                0x00002be0       0x1c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Clock_counter.o)
-                0x00002be0                Clock_counter_Start
+                0x00002a2c       0x1c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Clock_counter.o)
+                0x00002a2c                Clock_counter_Start
  .text.Clock_pwm_Start
-                0x00002bfc       0x1c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Clock_pwm.o)
-                0x00002bfc                Clock_pwm_Start
+                0x00002a48       0x1c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Clock_pwm.o)
+                0x00002a48                Clock_pwm_Start
  .text.isr_1_StartEx
-                0x00002c18       0x24 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(isr_1.o)
-                0x00002c18                isr_1_StartEx
+                0x00002a64       0x24 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(isr_1.o)
+                0x00002a64                isr_1_StartEx
  .text.isr_1_SetVector
-                0x00002c3c       0x1c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(isr_1.o)
-                0x00002c3c                isr_1_SetVector
+                0x00002a88       0x1c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(isr_1.o)
+                0x00002a88                isr_1_SetVector
  .text.isr_1_SetPriority
-                0x00002c58       0x4c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(isr_1.o)
-                0x00002c58                isr_1_SetPriority
+                0x00002aa4       0x4c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(isr_1.o)
+                0x00002aa4                isr_1_SetPriority
  .text.isr_1_Enable
-                0x00002ca4       0x14 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(isr_1.o)
-                0x00002ca4                isr_1_Enable
+                0x00002af0       0x14 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(isr_1.o)
+                0x00002af0                isr_1_Enable
  .text.isr_1_Disable
-                0x00002cb8       0x14 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(isr_1.o)
-                0x00002cb8                isr_1_Disable
+                0x00002b04       0x14 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(isr_1.o)
+                0x00002b04                isr_1_Disable
  .text.LED_Write
-                0x00002ccc       0x4c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(LED.o)
-                0x00002ccc                LED_Write
+                0x00002b18       0x4c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(LED.o)
+                0x00002b18                LED_Write
  .text.Timer_1_Init
-                0x00002d18       0x38 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Timer_1.o)
-                0x00002d18                Timer_1_Init
+                0x00002b64       0x38 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Timer_1.o)
+                0x00002b64                Timer_1_Init
  .text.Timer_1_Enable
-                0x00002d50       0x38 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Timer_1.o)
-                0x00002d50                Timer_1_Enable
+                0x00002b9c       0x38 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Timer_1.o)
+                0x00002b9c                Timer_1_Enable
  .text.Timer_1_Start
-                0x00002d88       0x24 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Timer_1.o)
-                0x00002d88                Timer_1_Start
+                0x00002bd4       0x24 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Timer_1.o)
+                0x00002bd4                Timer_1_Start
  .text.Timer_1_WriteCounter
-                0x00002dac       0x1c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Timer_1.o)
-                0x00002dac                Timer_1_WriteCounter
+                0x00002bf8       0x1c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Timer_1.o)
+                0x00002bf8                Timer_1_WriteCounter
  .text.Timer_1_WritePeriod
-                0x00002dc8       0x1c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Timer_1.o)
-                0x00002dc8                Timer_1_WritePeriod
+                0x00002c14       0x1c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Timer_1.o)
+                0x00002c14                Timer_1_WritePeriod
  .text.Timer_1_TriggerCommand
-                0x00002de4       0x3c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Timer_1.o)
-                0x00002de4                Timer_1_TriggerCommand
+                0x00002c30       0x3c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Timer_1.o)
+                0x00002c30                Timer_1_TriggerCommand
  .text.Timer_1_SetInterruptMode
-                0x00002e20       0x18 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Timer_1.o)
-                0x00002e20                Timer_1_SetInterruptMode
+                0x00002c6c       0x18 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Timer_1.o)
+                0x00002c6c                Timer_1_SetInterruptMode
  .text.Timer_1_GetInterruptSourceMasked
-                0x00002e38       0x14 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Timer_1.o)
-                0x00002e38                Timer_1_GetInterruptSourceMasked
+                0x00002c84       0x14 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Timer_1.o)
+                0x00002c84                Timer_1_GetInterruptSourceMasked
  .text.Timer_1_ClearInterrupt
-                0x00002e4c       0x18 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Timer_1.o)
-                0x00002e4c                Timer_1_ClearInterrupt
- *fill*         0x00002e64        0x4 
- .text          0x00002e68       0x28 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(CyBootAsmGnu.o)
-                0x00002e68                CyDelayCycles
-                0x00002e7c                CyEnterCriticalSection
-                0x00002e84                CyExitCriticalSection
- .text.CyDelay  0x00002e90       0x48 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(CyLib.o)
-                0x00002e90                CyDelay
+                0x00002c98       0x18 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Timer_1.o)
+                0x00002c98                Timer_1_ClearInterrupt
+ .text          0x00002cb0       0x28 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(CyBootAsmGnu.o)
+                0x00002cb0                CyDelayCycles
+                0x00002cc4                CyEnterCriticalSection
+                0x00002ccc                CyExitCriticalSection
+ .text.CyDelay  0x00002cd8       0x48 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(CyLib.o)
+                0x00002cd8                CyDelay
  .text.CyDelayUs
-                0x00002ed8       0x28 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(CyLib.o)
-                0x00002ed8                CyDelayUs
+                0x00002d20       0x28 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(CyLib.o)
+                0x00002d20                CyDelayUs
  .text.WIZ_RDY_Read
-                0x00002f00       0x1c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(WIZ_RDY.o)
-                0x00002f00                WIZ_RDY_Read
+                0x00002d48       0x1c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(WIZ_RDY.o)
+                0x00002d48                WIZ_RDY_Read
  .text.WIZ_INT_Read
-                0x00002f1c       0x1c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(WIZ_INT.o)
-                0x00002f1c                WIZ_INT_Read
+                0x00002d64       0x1c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(WIZ_INT.o)
+                0x00002d64                WIZ_INT_Read
  .text.WIZ_RST_Write
-                0x00002f38       0x4c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(WIZ_RST.o)
-                0x00002f38                WIZ_RST_Write
+                0x00002d80       0x4c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(WIZ_RST.o)
+                0x00002d80                WIZ_RST_Write
  .text.WIZ_SS_Write
-                0x00002f84       0x4c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(WIZ_SS.o)
-                0x00002f84                WIZ_SS_Write
+                0x00002dcc       0x4c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(WIZ_SS.o)
+                0x00002dcc                WIZ_SS_Write
  .text.BA_PWM_Init
-                0x00002fd0       0x5c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(BA_PWM.o)
-                0x00002fd0                BA_PWM_Init
+                0x00002e18       0x5c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(BA_PWM.o)
+                0x00002e18                BA_PWM_Init
  .text.BA_PWM_Enable
-                0x0000302c       0x38 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(BA_PWM.o)
-                0x0000302c                BA_PWM_Enable
+                0x00002e74       0x38 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(BA_PWM.o)
+                0x00002e74                BA_PWM_Enable
  .text.BA_PWM_Start
-                0x00003064       0x24 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(BA_PWM.o)
-                0x00003064                BA_PWM_Start
+                0x00002eac       0x24 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(BA_PWM.o)
+                0x00002eac                BA_PWM_Start
  .text.BA_PWM_WriteCounter
-                0x00003088       0x1c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(BA_PWM.o)
-                0x00003088                BA_PWM_WriteCounter
+                0x00002ed0       0x1c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(BA_PWM.o)
+                0x00002ed0                BA_PWM_WriteCounter
  .text.BA_PWM_WritePeriod
-                0x000030a4       0x1c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(BA_PWM.o)
-                0x000030a4                BA_PWM_WritePeriod
+                0x00002eec       0x1c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(BA_PWM.o)
+                0x00002eec                BA_PWM_WritePeriod
  .text.BA_PWM_WriteCompare
-                0x000030c0       0x1c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(BA_PWM.o)
-                0x000030c0                BA_PWM_WriteCompare
+                0x00002f08       0x1c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(BA_PWM.o)
+                0x00002f08                BA_PWM_WriteCompare
  .text.BA_PWM_TriggerCommand
-                0x000030dc       0x3c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(BA_PWM.o)
-                0x000030dc                BA_PWM_TriggerCommand
+                0x00002f24       0x3c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(BA_PWM.o)
+                0x00002f24                BA_PWM_TriggerCommand
  .text.BA_PWM_SetInterruptMode
-                0x00003118       0x18 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(BA_PWM.o)
-                0x00003118                BA_PWM_SetInterruptMode
+                0x00002f60       0x18 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(BA_PWM.o)
+                0x00002f60                BA_PWM_SetInterruptMode
  .text.ELBW_PWM_Init
-                0x00003130       0x5c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ELBW_PWM.o)
-                0x00003130                ELBW_PWM_Init
+                0x00002f78       0x5c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ELBW_PWM.o)
+                0x00002f78                ELBW_PWM_Init
  .text.ELBW_PWM_Enable
-                0x0000318c       0x38 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ELBW_PWM.o)
-                0x0000318c                ELBW_PWM_Enable
+                0x00002fd4       0x38 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ELBW_PWM.o)
+                0x00002fd4                ELBW_PWM_Enable
  .text.ELBW_PWM_Start
-                0x000031c4       0x24 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ELBW_PWM.o)
-                0x000031c4                ELBW_PWM_Start
+                0x0000300c       0x24 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ELBW_PWM.o)
+                0x0000300c                ELBW_PWM_Start
  .text.ELBW_PWM_WriteCounter
-                0x000031e8       0x1c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ELBW_PWM.o)
-                0x000031e8                ELBW_PWM_WriteCounter
+                0x00003030       0x1c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ELBW_PWM.o)
+                0x00003030                ELBW_PWM_WriteCounter
  .text.ELBW_PWM_WritePeriod
-                0x00003204       0x1c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ELBW_PWM.o)
-                0x00003204                ELBW_PWM_WritePeriod
+                0x0000304c       0x1c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ELBW_PWM.o)
+                0x0000304c                ELBW_PWM_WritePeriod
  .text.ELBW_PWM_WriteCompare
-                0x00003220       0x1c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ELBW_PWM.o)
-                0x00003220                ELBW_PWM_WriteCompare
+                0x00003068       0x1c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ELBW_PWM.o)
+                0x00003068                ELBW_PWM_WriteCompare
  .text.ELBW_PWM_TriggerCommand
-                0x0000323c       0x3c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ELBW_PWM.o)
-                0x0000323c                ELBW_PWM_TriggerCommand
+                0x00003084       0x3c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ELBW_PWM.o)
+                0x00003084                ELBW_PWM_TriggerCommand
  .text.ELBW_PWM_SetInterruptMode
-                0x00003278       0x18 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ELBW_PWM.o)
-                0x00003278                ELBW_PWM_SetInterruptMode
+                0x000030c0       0x18 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ELBW_PWM.o)
+                0x000030c0                ELBW_PWM_SetInterruptMode
  .text.SHLDR_PWM_Init
-                0x00003290       0x5c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SHLDR_PWM.o)
-                0x00003290                SHLDR_PWM_Init
+                0x000030d8       0x5c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SHLDR_PWM.o)
+                0x000030d8                SHLDR_PWM_Init
  .text.SHLDR_PWM_Enable
-                0x000032ec       0x38 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SHLDR_PWM.o)
-                0x000032ec                SHLDR_PWM_Enable
+                0x00003134       0x38 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SHLDR_PWM.o)
+                0x00003134                SHLDR_PWM_Enable
  .text.SHLDR_PWM_Start
-                0x00003324       0x24 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SHLDR_PWM.o)
-                0x00003324                SHLDR_PWM_Start
+                0x0000316c       0x24 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SHLDR_PWM.o)
+                0x0000316c                SHLDR_PWM_Start
  .text.SHLDR_PWM_WriteCounter
-                0x00003348       0x1c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SHLDR_PWM.o)
-                0x00003348                SHLDR_PWM_WriteCounter
+                0x00003190       0x1c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SHLDR_PWM.o)
+                0x00003190                SHLDR_PWM_WriteCounter
  .text.SHLDR_PWM_WritePeriod
-                0x00003364       0x1c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SHLDR_PWM.o)
-                0x00003364                SHLDR_PWM_WritePeriod
+                0x000031ac       0x1c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SHLDR_PWM.o)
+                0x000031ac                SHLDR_PWM_WritePeriod
  .text.SHLDR_PWM_WriteCompare
-                0x00003380       0x1c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SHLDR_PWM.o)
-                0x00003380                SHLDR_PWM_WriteCompare
+                0x000031c8       0x1c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SHLDR_PWM.o)
+                0x000031c8                SHLDR_PWM_WriteCompare
  .text.SHLDR_PWM_TriggerCommand
-                0x0000339c       0x3c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SHLDR_PWM.o)
-                0x0000339c                SHLDR_PWM_TriggerCommand
+                0x000031e4       0x3c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SHLDR_PWM.o)
+                0x000031e4                SHLDR_PWM_TriggerCommand
  .text.SHLDR_PWM_SetInterruptMode
-                0x000033d8       0x18 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SHLDR_PWM.o)
-                0x000033d8                SHLDR_PWM_SetInterruptMode
+                0x00003220       0x18 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SHLDR_PWM.o)
+                0x00003220                SHLDR_PWM_SetInterruptMode
  .text.SPIM_1_Init
-                0x000033f0       0x34 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SPIM_1.o)
-                0x000033f0                SPIM_1_Init
+                0x00003238       0x34 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SPIM_1.o)
+                0x00003238                SPIM_1_Init
  .text.SPIM_1_Enable
-                0x00003424       0x68 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SPIM_1.o)
-                0x00003424                SPIM_1_Enable
+                0x0000326c       0x68 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SPIM_1.o)
+                0x0000326c                SPIM_1_Enable
  .text.SPIM_1_Start
-                0x0000348c       0x24 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SPIM_1.o)
-                0x0000348c                SPIM_1_Start
+                0x000032d4       0x24 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SPIM_1.o)
+                0x000032d4                SPIM_1_Start
  .text.SPIM_1_EnableTxInt
-                0x000034b0        0x8 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SPIM_1.o)
-                0x000034b0                SPIM_1_EnableTxInt
+                0x000032f8        0x8 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SPIM_1.o)
+                0x000032f8                SPIM_1_EnableTxInt
  .text.SPIM_1_EnableRxInt
-                0x000034b8        0x8 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SPIM_1.o)
-                0x000034b8                SPIM_1_EnableRxInt
+                0x00003300        0x8 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SPIM_1.o)
+                0x00003300                SPIM_1_EnableRxInt
  .text.SPIM_1_ReadTxStatus
-                0x000034c0       0x20 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SPIM_1.o)
-                0x000034c0                SPIM_1_ReadTxStatus
+                0x00003308       0x20 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SPIM_1.o)
+                0x00003308                SPIM_1_ReadTxStatus
  .text.SPIM_1_ReadRxStatus
-                0x000034e0       0x20 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SPIM_1.o)
-                0x000034e0                SPIM_1_ReadRxStatus
+                0x00003328       0x20 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SPIM_1.o)
+                0x00003328                SPIM_1_ReadRxStatus
  .text.SPIM_1_WriteTxData
-                0x00003500       0x34 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SPIM_1.o)
-                0x00003500                SPIM_1_WriteTxData
+                0x00003348       0x34 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SPIM_1.o)
+                0x00003348                SPIM_1_WriteTxData
  .text.SPIM_1_ReadRxData
-                0x00003534       0x20 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SPIM_1.o)
-                0x00003534                SPIM_1_ReadRxData
+                0x0000337c       0x20 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SPIM_1.o)
+                0x0000337c                SPIM_1_ReadRxData
  .text.SPIM_1_ClearFIFO
-                0x00003554       0x60 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SPIM_1.o)
-                0x00003554                SPIM_1_ClearFIFO
+                0x0000339c       0x60 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SPIM_1.o)
+                0x0000339c                SPIM_1_ClearFIFO
  .text.SPIM_1_IntClock_Start
-                0x000035b4       0x1c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SPIM_1_IntClock.o)
-                0x000035b4                SPIM_1_IntClock_Start
+                0x000033fc       0x1c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SPIM_1_IntClock.o)
+                0x000033fc                SPIM_1_IntClock_Start
  .text.EFFECTOR_PWM_Start
-                0x000035d0       0x24 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(EFFECTOR_PWM.o)
-                0x000035d0                EFFECTOR_PWM_Start
+                0x00003418       0x24 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(EFFECTOR_PWM.o)
+                0x00003418                EFFECTOR_PWM_Start
  .text.EFFECTOR_PWM_Init
-                0x000035f4       0xa8 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(EFFECTOR_PWM.o)
-                0x000035f4                EFFECTOR_PWM_Init
+                0x0000343c       0xa8 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(EFFECTOR_PWM.o)
+                0x0000343c                EFFECTOR_PWM_Init
  .text.EFFECTOR_PWM_Enable
-                0x0000369c       0x20 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(EFFECTOR_PWM.o)
-                0x0000369c                EFFECTOR_PWM_Enable
+                0x000034e4       0x20 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(EFFECTOR_PWM.o)
+                0x000034e4                EFFECTOR_PWM_Enable
  .text.EFFECTOR_PWM_WriteCounter
-                0x000036bc       0x20 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(EFFECTOR_PWM.o)
-                0x000036bc                EFFECTOR_PWM_WriteCounter
+                0x00003504       0x20 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(EFFECTOR_PWM.o)
+                0x00003504                EFFECTOR_PWM_WriteCounter
  .text.EFFECTOR_PWM_ClearFIFO
-                0x000036dc       0x1c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(EFFECTOR_PWM.o)
-                0x000036dc                EFFECTOR_PWM_ClearFIFO
+                0x00003524       0x1c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(EFFECTOR_PWM.o)
+                0x00003524                EFFECTOR_PWM_ClearFIFO
  .text.EFFECTOR_PWM_WritePeriod
-                0x000036f8       0x20 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(EFFECTOR_PWM.o)
-                0x000036f8                EFFECTOR_PWM_WritePeriod
+                0x00003540       0x20 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(EFFECTOR_PWM.o)
+                0x00003540                EFFECTOR_PWM_WritePeriod
  .text.EFFECTOR_PWM_WriteCompare
-                0x00003718       0x20 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(EFFECTOR_PWM.o)
-                0x00003718                EFFECTOR_PWM_WriteCompare
+                0x00003560       0x20 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(EFFECTOR_PWM.o)
+                0x00003560                EFFECTOR_PWM_WriteCompare
  .text.EFFECTOR_PWM_SetInterruptMode
-                0x00003738       0x20 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(EFFECTOR_PWM.o)
-                0x00003738                EFFECTOR_PWM_SetInterruptMode
+                0x00003580       0x20 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(EFFECTOR_PWM.o)
+                0x00003580                EFFECTOR_PWM_SetInterruptMode
  .text.EFFECTOR_PWM_ReadStatusRegister
-                0x00003758       0x14 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(EFFECTOR_PWM.o)
-                0x00003758                EFFECTOR_PWM_ReadStatusRegister
+                0x000035a0       0x14 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(EFFECTOR_PWM.o)
+                0x000035a0                EFFECTOR_PWM_ReadStatusRegister
  .text.EFFECTOR_PWM_ReadCapture
-                0x0000376c       0x14 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(EFFECTOR_PWM.o)
-                0x0000376c                EFFECTOR_PWM_ReadCapture
+                0x000035b4       0x14 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(EFFECTOR_PWM.o)
+                0x000035b4                EFFECTOR_PWM_ReadCapture
  .text.Wrist_UART_Init
-                0x00003780        0xc .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Wrist_UART.o)
-                0x00003780                Wrist_UART_Init
+                0x000035c8        0xc .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Wrist_UART.o)
+                0x000035c8                Wrist_UART_Init
  .text.Wrist_UART_Enable
-                0x0000378c       0x20 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Wrist_UART.o)
-                0x0000378c                Wrist_UART_Enable
+                0x000035d4       0x20 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Wrist_UART.o)
+                0x000035d4                Wrist_UART_Enable
  .text.Wrist_UART_Start
-                0x000037ac       0x24 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Wrist_UART.o)
-                0x000037ac                Wrist_UART_Start
+                0x000035f4       0x24 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Wrist_UART.o)
+                0x000035f4                Wrist_UART_Start
  .text.Wrist_UART_ScbEnableIntr
-                0x000037d0        0x8 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Wrist_UART.o)
+                0x00003618        0x8 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Wrist_UART.o)
  .text.Wrist_UART_SpiUartWriteTxData
-                0x000037d8       0x2c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Wrist_UART_SPI_UART.o)
-                0x000037d8                Wrist_UART_SpiUartWriteTxData
+                0x00003620       0x2c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Wrist_UART_SPI_UART.o)
+                0x00003620                Wrist_UART_SpiUartWriteTxData
  .text.Wrist_UART_SpiUartPutArray
-                0x00003804       0x34 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Wrist_UART_SPI_UART.o)
-                0x00003804                Wrist_UART_SpiUartPutArray
+                0x0000364c       0x34 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Wrist_UART_SPI_UART.o)
+                0x0000364c                Wrist_UART_SpiUartPutArray
  .text.Wrist_UART_UartInit
-                0x00003838       0xac .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Wrist_UART_UART.o)
-                0x00003838                Wrist_UART_UartInit
- .text.Arduino_UART_SpiUartReadRxData
-                0x000038e4       0x50 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_SPI_UART.o)
-                0x000038e4                Arduino_UART_SpiUartReadRxData
- .text.Arduino_UART_SpiUartGetRxBufferSize
-                0x00003934       0x40 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_SPI_UART.o)
-                0x00003934                Arduino_UART_SpiUartGetRxBufferSize
- .text.Arduino_UART_SpiUartWriteTxData
-                0x00003974       0x2c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_SPI_UART.o)
-                0x00003974                Arduino_UART_SpiUartWriteTxData
- .text.Arduino_UART_SpiUartDisableIntRx
-                0x000039a0       0x20 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_SPI_UART.o)
-                0x000039a0                Arduino_UART_SpiUartDisableIntRx
- .text.Arduino_UART_UartGetByte
-                0x000039c0       0x68 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_UART.o)
-                0x000039c0                Arduino_UART_UartGetByte
+                0x00003680       0xac .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Wrist_UART_UART.o)
+                0x00003680                Wrist_UART_UartInit
  .text.__libc_init_array
-                0x00003a28       0x4c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-init.o)
-                0x00003a28                __libc_init_array
- .text.memcpy   0x00003a74       0x12 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-memcpy-stub.o)
-                0x00003a74                memcpy
- .text.memset   0x00003a86       0x10 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-memset.o)
-                0x00003a86                memset
+                0x0000372c       0x4c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-init.o)
+                0x0000372c                __libc_init_array
+ .text.memcpy   0x00003778       0x12 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-memcpy-stub.o)
+                0x00003778                memcpy
+ .text.memset   0x0000378a       0x10 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-memset.o)
+                0x0000378a                memset
  *(.plt)
  *(.gnu.warning)
  *(.glue_7t)
@@ -1755,77 +1569,75 @@ END GROUP
  *(.ARM.extab* .gnu.linkonce.armextab.*)
  *(.gcc_except_table)
 
-.v4_bx          0x00003a98        0x0
+.v4_bx          0x0000379c        0x0
  .v4_bx         0x00000000        0x0 linker stubs
 
-.iplt           0x00003a98        0x0
+.iplt           0x0000379c        0x0
  .iplt          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtbegin.o
 
 .eh_frame_hdr
  *(.eh_frame_hdr)
 
-.eh_frame       0x00003a98        0x4
+.eh_frame       0x0000379c        0x4
  *(.eh_frame)
- .eh_frame      0x00003a98        0x0 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtbegin.o
- .eh_frame      0x00003a98        0x4 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtend.o
-                0x00003a9c                PROVIDE (__exidx_start, .)
+ .eh_frame      0x0000379c        0x0 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtbegin.o
+ .eh_frame      0x0000379c        0x4 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtend.o
+                0x000037a0                PROVIDE (__exidx_start, .)
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x00003a9c                __exidx_end = .
+                0x000037a0                __exidx_end = .
 
-.rodata         0x00003a9c      0x3ec
+.rodata         0x000037a0      0x370
  *(.rodata .rodata.* .gnu.linkonce.r.*)
- .rodata        0x00003a9c       0x78 .\CortexM0\ARM_GCC_484\Debug\main.o
- .rodata        0x00003b14       0x30 .\CortexM0\ARM_GCC_484\Debug\wiznet5500.o
- .rodata        0x00003b44      0x30c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(cyfitter_cfg.o)
-                0x00003e50                . = ALIGN (0x4)
+ .rodata        0x000037a0       0x30 .\CortexM0\ARM_GCC_484\Debug\wiznet5500.o
+ .rodata        0x000037d0      0x30c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(cyfitter_cfg.o)
+                0x00003adc                . = ALIGN (0x4)
  *(.init)
- .init          0x00003e50        0x4 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crti.o
-                0x00003e50                _init
- .init          0x00003e54        0x8 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtn.o
-                0x00003e5c                . = ALIGN (0x4)
-                0x00003e5c                __preinit_array_start = .
+ .init          0x00003adc        0x4 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crti.o
+                0x00003adc                _init
+ .init          0x00003ae0        0x8 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtn.o
+                0x00003ae8                . = ALIGN (0x4)
+                0x00003ae8                __preinit_array_start = .
  *(.preinit_array)
-                0x00003e5c                __preinit_array_end = .
-                0x00003e5c                . = ALIGN (0x4)
-                0x00003e5c                __init_array_start = .
+                0x00003ae8                __preinit_array_end = .
+                0x00003ae8                . = ALIGN (0x4)
+                0x00003ae8                __init_array_start = .
  *(SORT(.init_array.*))
  *(.init_array)
- .init_array    0x00003e5c        0x4 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtbegin.o
- .init_array    0x00003e60        0x4 .\CortexM0\ARM_GCC_484\Debug\Cm0Start.o
-                0x00003e64                __init_array_end = .
-                0x00003e64                . = ALIGN (0x4)
+ .init_array    0x00003ae8        0x4 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtbegin.o
+ .init_array    0x00003aec        0x4 .\CortexM0\ARM_GCC_484\Debug\Cm0Start.o
+                0x00003af0                __init_array_end = .
+                0x00003af0                . = ALIGN (0x4)
  *(.fini)
- .fini          0x00003e64        0x4 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crti.o
-                0x00003e64                _fini
- .fini          0x00003e68        0x8 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtn.o
-                0x00003e70                . = ALIGN (0x4)
-                0x00003e70                __fini_array_start = .
+ .fini          0x00003af0        0x4 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crti.o
+                0x00003af0                _fini
+ .fini          0x00003af4        0x8 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtn.o
+                0x00003afc                . = ALIGN (0x4)
+                0x00003afc                __fini_array_start = .
  *(.fini_array)
- .fini_array    0x00003e70        0x4 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtbegin.o
+ .fini_array    0x00003afc        0x4 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtbegin.o
  *(SORT(.fini_array.*))
-                0x00003e74                __fini_array_end = .
-                0x00003e74                . = ALIGN (0x4)
+                0x00003b00                __fini_array_end = .
+                0x00003b00                . = ALIGN (0x4)
  *crtbegin.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o) .ctors)
  *(SORT(.ctors.*))
  *crtend.o(.ctors)
-                0x00003e74                . = ALIGN (0x4)
+                0x00003b00                . = ALIGN (0x4)
  *crtbegin.o(.dtors)
  *(EXCLUDE_FILE(*crtend.o) .dtors)
  *(SORT(.dtors.*))
  *crtend.o(.dtors)
-                0x00003e74                . = ALIGN (0x4)
-                0x00003e74                __cy_regions = .
-                0x00003e74        0x4 LONG 0x3e88 __cy_region_init_ram
-                0x00003e78        0x4 LONG 0x200000d0 __cy_region_start_data
-                0x00003e7c        0x4 LONG 0x30 __cy_region_init_size_ram
-                0x00003e80        0x4 LONG 0xc8 __cy_region_zero_size_ram
-                0x00003e84                __cy_regions_end = .
-                0x00003e88                . = ALIGN (0x8)
- *fill*         0x00003e84        0x4 
-                0x00003e88                _etext = .
+                0x00003b00                . = ALIGN (0x4)
+                0x00003b00                __cy_regions = .
+                0x00003b00        0x4 LONG 0x3b10 __cy_region_init_ram
+                0x00003b04        0x4 LONG 0x200000d0 __cy_region_start_data
+                0x00003b08        0x4 LONG 0x20 __cy_region_init_size_ram
+                0x00003b0c        0x4 LONG 0x98 __cy_region_zero_size_ram
+                0x00003b10                __cy_regions_end = .
+                0x00003b10                . = ALIGN (0x8)
+                0x00003b10                _etext = .
 
 .ramvectors     0x20000000       0xc0
                 0x20000000                __cy_region_start_ram = .
@@ -1843,7 +1655,7 @@ END GROUP
  *(.noinit)
  .noinit        0x200000c8        0x4 .\CortexM0\ARM_GCC_484\Debug\Cm0Start.o
 
-.data           0x200000d0       0x30 load address 0x00003e88
+.data           0x200000d0       0x20 load address 0x00003b10
                 0x200000d0                __cy_region_start_data = .
  *(.jcr)
  .jcr           0x200000d0        0x0 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtbegin.o
@@ -1852,110 +1664,99 @@ END GROUP
  *(.got)
  *(.shdata)
  *(.data .data.* .gnu.linkonce.d.*)
- .data          0x200000d4       0x14 .\CortexM0\ARM_GCC_484\Debug\main.o
-                0x200000d4                ELBOW_UPPER_BOUND
-                0x200000d8                ELBOW_LOWER_BOUND
-                0x200000dc                SHOULDER_UPPER_BOUND
-                0x200000e0                SHOULDER_LOWER_BOUND
-                0x200000e4                NEUTRAL
- .data          0x200000e8        0x4 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(cyfitter_cfg.o)
- .data          0x200000ec       0x10 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(CyLib.o)
-                0x200000ec                cydelayFreqHz
-                0x200000f0                cydelayFreqKhz
-                0x200000f4                cydelayFreqMhz
-                0x200000f8                cydelay32kMs
-                0x20000100                . = ALIGN (0x8)
- *fill*         0x200000fc        0x4 
+ .data          0x200000d4        0x2 .\CortexM0\ARM_GCC_484\Debug\main.o
+                0x200000d4                NEUTRAL
+ *fill*         0x200000d6        0x2 
+ .data          0x200000d8        0x4 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(cyfitter_cfg.o)
+ .data          0x200000dc       0x10 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(CyLib.o)
+                0x200000dc                cydelayFreqHz
+                0x200000e0                cydelayFreqKhz
+                0x200000e4                cydelayFreqMhz
+                0x200000e8                cydelay32kMs
+                0x200000f0                . = ALIGN (0x8)
+ *fill*         0x200000ec        0x4 
  *(.ram)
-                0x20000100                _edata = .
+                0x200000f0                _edata = .
 
-.igot.plt       0x20000100        0x0 load address 0x00003eb8
+.igot.plt       0x200000f0        0x0 load address 0x00003b30
  .igot.plt      0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtbegin.o
 
-.bss            0x20000100       0xc8 load address 0x00003eb8
-                0x20000100                PROVIDE (__bss_start__, .)
+.bss            0x200000f0       0x98 load address 0x00003b30
+                0x200000f0                PROVIDE (__bss_start__, .)
  *(.shbss)
  *(.bss .bss.* .gnu.linkonce.b.*)
- .bss           0x20000100       0x1c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtbegin.o
- .bss           0x2000011c       0x1e .\CortexM0\ARM_GCC_484\Debug\main.o
-                0x2000011c                WT_feedback_flag
-                0x2000011d                WR_feedback_flag
-                0x2000011e                WR_feedback
-                0x20000120                WT_FLAG
-                0x20000121                WR_FLAG
-                0x20000122                ELBOW_FLAG
-                0x20000123                SHOULDER_FLAG
-                0x20000124                BA_FLAG
-                0x20000125                EFFECTOR_FLAG
-                0x20000126                ARD_FLAG
-                0x20000127                Time_Out_flag
-                0x20000128                Time_count
-                0x2000012a                dropped_packets
-                0x2000012c                fail_safe_errors
-                0x2000012e                shldr_errors
-                0x20000130                elbw_errors
-                0x20000132                BA_errors
-                0x20000134                WT_errors
-                0x20000136                WR_errors
-                0x20000138                eff_errors
- .bss           0x2000013a        0x4 .\CortexM0\ARM_GCC_484\Debug\wiznet5500.o
- .bss           0x2000013e        0x1 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Timer_1.o)
-                0x2000013e                Timer_1_initVar
- .bss           0x2000013f        0x1 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(BA_PWM.o)
-                0x2000013f                BA_PWM_initVar
- .bss           0x20000140        0x1 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ELBW_PWM.o)
-                0x20000140                ELBW_PWM_initVar
- .bss           0x20000141        0x1 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SHLDR_PWM.o)
-                0x20000141                SHLDR_PWM_initVar
- .bss           0x20000142        0x1 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SPIM_1.o)
-                0x20000142                SPIM_1_initVar
- .bss           0x20000143        0x1 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(EFFECTOR_PWM.o)
-                0x20000143                EFFECTOR_PWM_initVar
- .bss           0x20000144        0x8 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Wrist_UART.o)
-                0x20000144                Wrist_UART_initVar
-                0x20000148                Wrist_UART_customIntrHandler
+ .bss           0x200000f0       0x1c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtbegin.o
+ .bss           0x2000010c       0x1e .\CortexM0\ARM_GCC_484\Debug\main.o
+                0x2000010c                WT_feedback_flag
+                0x2000010d                WR_feedback_flag
+                0x2000010e                WR_feedback
+                0x20000110                WT_FLAG
+                0x20000111                WR_FLAG
+                0x20000112                ELBOW_FLAG
+                0x20000113                SHOULDER_FLAG
+                0x20000114                BA_FLAG
+                0x20000115                EFFECTOR_FLAG
+                0x20000116                ARD_FLAG
+                0x20000117                Time_Out_flag
+                0x20000118                Time_count
+                0x2000011a                dropped_packets
+                0x2000011c                fail_safe_errors
+                0x2000011e                shldr_errors
+                0x20000120                elbw_errors
+                0x20000122                BA_errors
+                0x20000124                WT_errors
+                0x20000126                WR_errors
+                0x20000128                eff_errors
+ .bss           0x2000012a        0x4 .\CortexM0\ARM_GCC_484\Debug\wiznet5500.o
+ .bss           0x2000012e        0x1 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Timer_1.o)
+                0x2000012e                Timer_1_initVar
+ .bss           0x2000012f        0x1 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(BA_PWM.o)
+                0x2000012f                BA_PWM_initVar
+ .bss           0x20000130        0x1 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ELBW_PWM.o)
+                0x20000130                ELBW_PWM_initVar
+ .bss           0x20000131        0x1 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SHLDR_PWM.o)
+                0x20000131                SHLDR_PWM_initVar
+ .bss           0x20000132        0x1 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SPIM_1.o)
+                0x20000132                SPIM_1_initVar
+ .bss           0x20000133        0x1 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(EFFECTOR_PWM.o)
+                0x20000133                EFFECTOR_PWM_initVar
+ .bss           0x20000134        0x8 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Wrist_UART.o)
+                0x20000134                Wrist_UART_initVar
+                0x20000138                Wrist_UART_customIntrHandler
  *(COMMON)
- COMMON         0x2000014c       0x5f .\CortexM0\ARM_GCC_484\Debug\main.o
-                0x2000014c                HEARTBEAT_FLAG
-                0x20000150                test_array
-                0x20000166                send_packet_state
-                0x20000168                heartbeat_array
-                0x20000176                baseAzimuth_state
-                0x20000178                data_array
-                0x2000018e                wristTilt_state
-                0x2000018f                shoulder_state
-                0x20000190                latest_WR_command
-                0x20000192                timerFlag
-                0x20000194                latest_WT_command
-                0x20000196                elbow_state
-                0x20000197                effector_state
-                0x20000198                wristRotate_state
-                0x20000199                arduino_state
-                0x2000019a                latest_command
-                0x2000019c                feedback_array
-                0x200001aa                wiznet
- *fill*         0x200001ab        0x1 
- COMMON         0x200001ac       0x19 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_SPI_UART.o)
-                0x200001ac                Arduino_UART_rxBufferTail
-                0x200001b0                Arduino_UART_rxBufferOverflow
-                0x200001b4                Arduino_UART_rxBufferHead
-                0x200001b8                Arduino_UART_rxBufferInternal
-                0x200001c8                . = ALIGN (0x8)
- *fill*         0x200001c5        0x3 
+ COMMON         0x2000013c       0x46 .\CortexM0\ARM_GCC_484\Debug\main.o
+                0x2000013c                HEARTBEAT_FLAG
+                0x2000013d                send_packet_state
+                0x20000140                heartbeat_array
+                0x2000014e                baseAzimuth_state
+                0x20000150                data_array
+                0x20000166                wristTilt_state
+                0x20000167                shoulder_state
+                0x20000168                latest_WR_command
+                0x2000016a                timerFlag
+                0x2000016c                latest_WT_command
+                0x2000016e                elbow_state
+                0x2000016f                effector_state
+                0x20000170                wristRotate_state
+                0x20000171                arduino_state
+                0x20000172                latest_command
+                0x20000174                feedback_array
+                0x20000188                . = ALIGN (0x8)
+ *fill*         0x20000182        0x6 
  *(.ram.b)
-                0x200001c8                _end = .
-                0x200001c8                __end = .
-                0x200001c8                PROVIDE (end, .)
-                0x200001c8                PROVIDE (__bss_end__, .)
-                0x00003e88                __cy_region_init_ram = LOADADDR (.data)
-                0x00000030                __cy_region_init_size_ram = (_edata - ADDR (.data))
-                0x000000c8                __cy_region_zero_size_ram = (_end - _edata)
+                0x20000188                _end = .
+                0x20000188                __end = .
+                0x20000188                PROVIDE (end, .)
+                0x20000188                PROVIDE (__bss_end__, .)
+                0x00003b10                __cy_region_init_ram = LOADADDR (.data)
+                0x00000020                __cy_region_init_size_ram = (_edata - ADDR (.data))
+                0x00000098                __cy_region_zero_size_ram = (_end - _edata)
 
-.heap           0x200001c8       0x80 load address 0x00003eb8
-                0x200001c8                . = _end
-                0x20000248                . = (. + 0x80)
- *fill*         0x200001c8       0x80 
-                0x20000248                __cy_heap_limit = .
+.heap           0x20000188       0x80 load address 0x00003b30
+                0x20000188                . = _end
+                0x20000208                . = (. + 0x80)
+ *fill*         0x20000188       0x80 
+                0x20000208                __cy_heap_limit = .
 
 .stack          0x20000c00      0x400
                 0x20000c00                __cy_stack_limit = .
@@ -2026,363 +1827,308 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000     0x1240
+.debug_aranges  0x00000000     0x1040
  *(.debug_aranges)
  .debug_aranges
-                0x00000000       0xf8 .\CortexM0\ARM_GCC_484\Debug\main.o
+                0x00000000       0xc0 .\CortexM0\ARM_GCC_484\Debug\main.o
  .debug_aranges
-                0x000000f8       0x18 .\CortexM0\ARM_GCC_484\Debug\spi.o
+                0x000000c0       0x18 .\CortexM0\ARM_GCC_484\Debug\spi.o
  .debug_aranges
-                0x00000110       0xa0 .\CortexM0\ARM_GCC_484\Debug\wiznet5500.o
+                0x000000d8       0xa0 .\CortexM0\ARM_GCC_484\Debug\wiznet5500.o
  .debug_aranges
-                0x000001b0       0x18 .\CortexM0\ARM_GCC_484\Debug\cybootloader.o
+                0x00000178       0x18 .\CortexM0\ARM_GCC_484\Debug\cybootloader.o
  .debug_aranges
-                0x000001c8       0x18 .\CortexM0\ARM_GCC_484\Debug\cymetadata.o
+                0x00000190       0x18 .\CortexM0\ARM_GCC_484\Debug\cymetadata.o
  .debug_aranges
-                0x000001e0       0x48 .\CortexM0\ARM_GCC_484\Debug\Cm0Start.o
+                0x000001a8       0x48 .\CortexM0\ARM_GCC_484\Debug\Cm0Start.o
  .debug_aranges
-                0x00000228       0x60 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(cyfitter_cfg.o)
+                0x000001f0       0x60 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(cyfitter_cfg.o)
  .debug_aranges
-                0x00000288       0x40 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Clock_counter.o)
+                0x00000250       0x40 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Clock_counter.o)
  .debug_aranges
-                0x000002c8       0x40 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Clock_pwm.o)
+                0x00000290       0x40 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Clock_pwm.o)
  .debug_aranges
-                0x00000308       0x80 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(isr_1.o)
+                0x000002d0       0x80 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(isr_1.o)
  .debug_aranges
-                0x00000388       0x40 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(LED.o)
+                0x00000350       0x40 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(LED.o)
  .debug_aranges
-                0x000003c8      0x158 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Timer_1.o)
+                0x00000390      0x158 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Timer_1.o)
  .debug_aranges
-                0x00000520       0x20 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(CyBootAsmGnu.o)
+                0x000004e8       0x20 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(CyBootAsmGnu.o)
  .debug_aranges
-                0x00000540      0x230 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(CyLib.o)
+                0x00000508      0x230 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(CyLib.o)
  .debug_aranges
-                0x00000770       0x40 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(WIZ_RDY.o)
+                0x00000738       0x40 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(WIZ_RDY.o)
  .debug_aranges
-                0x000007b0       0x40 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(WIZ_INT.o)
+                0x00000778       0x40 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(WIZ_INT.o)
  .debug_aranges
-                0x000007f0       0x40 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(WIZ_RST.o)
+                0x000007b8       0x40 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(WIZ_RST.o)
  .debug_aranges
-                0x00000830       0x40 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(WIZ_SS.o)
+                0x000007f8       0x40 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(WIZ_SS.o)
  .debug_aranges
-                0x00000870       0xa8 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ADC.o)
+                0x00000838      0x158 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(BA_PWM.o)
  .debug_aranges
-                0x00000918       0x20 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ADC_INT.o)
+                0x00000990      0x158 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ELBW_PWM.o)
  .debug_aranges
-                0x00000938      0x158 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(BA_PWM.o)
+                0x00000ae8      0x158 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SHLDR_PWM.o)
  .debug_aranges
-                0x00000a90      0x158 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ELBW_PWM.o)
+                0x00000c40       0xd8 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SPIM_1.o)
  .debug_aranges
-                0x00000be8      0x158 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SHLDR_PWM.o)
+                0x00000d18       0x40 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SPIM_1_IntClock.o)
  .debug_aranges
-                0x00000d40       0xd8 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SPIM_1.o)
+                0x00000d58       0x98 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(EFFECTOR_PWM.o)
  .debug_aranges
-                0x00000e18       0x40 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SPIM_1_IntClock.o)
+                0x00000df0       0x68 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Wrist_UART.o)
  .debug_aranges
-                0x00000e58       0x40 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(stop_shdr_up.o)
+                0x00000e58       0x60 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Wrist_UART_SPI_UART.o)
  .debug_aranges
-                0x00000e98       0x40 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(stop_shdr_dn.o)
+                0x00000eb8       0x50 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Wrist_UART_UART.o)
  .debug_aranges
-                0x00000ed8       0x40 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(stop_elb_up.o)
+                0x00000f08       0x60 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_SPI_UART.o)
  .debug_aranges
-                0x00000f18       0x40 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(stop_elb_dn.o)
+                0x00000f68       0x50 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_UART.o)
  .debug_aranges
-                0x00000f58       0x98 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(EFFECTOR_PWM.o)
+                0x00000fb8       0x20 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_SPI_UART_INT.o)
  .debug_aranges
-                0x00000ff0       0x68 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Wrist_UART.o)
- .debug_aranges
-                0x00001058       0x60 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Wrist_UART_SPI_UART.o)
- .debug_aranges
-                0x000010b8       0x50 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Wrist_UART_UART.o)
- .debug_aranges
-                0x00001108       0x60 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_SPI_UART.o)
- .debug_aranges
-                0x00001168       0x50 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_UART.o)
- .debug_aranges
-                0x000011b8       0x20 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_SPI_UART_INT.o)
- .debug_aranges
-                0x000011d8       0x68 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART.o)
+                0x00000fd8       0x68 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART.o)
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x7213
+.debug_info     0x00000000     0x643e
  *(.debug_info .gnu.linkonce.wi.*)
- .debug_info    0x00000000      0xd4e .\CortexM0\ARM_GCC_484\Debug\main.o
- .debug_info    0x00000d4e       0x80 .\CortexM0\ARM_GCC_484\Debug\spi.o
- .debug_info    0x00000dce      0x54a .\CortexM0\ARM_GCC_484\Debug\wiznet5500.o
- .debug_info    0x00001318      0x14d .\CortexM0\ARM_GCC_484\Debug\cybootloader.o
- .debug_info    0x00001465       0xb1 .\CortexM0\ARM_GCC_484\Debug\cymetadata.o
- .debug_info    0x00001516      0x310 .\CortexM0\ARM_GCC_484\Debug\Cm0Start.o
- .debug_info    0x00001826      0x57e .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(cyfitter_cfg.o)
- .debug_info    0x00001da4      0x14d .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Clock_counter.o)
- .debug_info    0x00001ef1      0x14d .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Clock_pwm.o)
- .debug_info    0x0000203e      0x241 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(isr_1.o)
- .debug_info    0x0000227f      0x14c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(LED.o)
- .debug_info    0x000023cb      0x6f0 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Timer_1.o)
- .debug_info    0x00002abb       0xa1 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(CyBootAsmGnu.o)
- .debug_info    0x00002b5c      0xc5b .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(CyLib.o)
- .debug_info    0x000037b7      0x14c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(WIZ_RDY.o)
- .debug_info    0x00003903      0x14c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(WIZ_INT.o)
- .debug_info    0x00003a4f      0x14c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(WIZ_RST.o)
- .debug_info    0x00003b9b      0x14c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(WIZ_SS.o)
- .debug_info    0x00003ce7      0x49a .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ADC.o)
- .debug_info    0x00004181       0xc4 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ADC_INT.o)
- .debug_info    0x00004245      0x6f0 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(BA_PWM.o)
- .debug_info    0x00004935      0x6f0 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ELBW_PWM.o)
- .debug_info    0x00005025      0x6f0 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SHLDR_PWM.o)
- .debug_info    0x00005715      0x3ec .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SPIM_1.o)
- .debug_info    0x00005b01      0x14d .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SPIM_1_IntClock.o)
- .debug_info    0x00005c4e      0x14c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(stop_shdr_up.o)
- .debug_info    0x00005d9a      0x14c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(stop_shdr_dn.o)
- .debug_info    0x00005ee6      0x14c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(stop_elb_up.o)
- .debug_info    0x00006032      0x14c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(stop_elb_dn.o)
- .debug_info    0x0000617e      0x29e .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(EFFECTOR_PWM.o)
- .debug_info    0x0000641c      0x1eb .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Wrist_UART.o)
- .debug_info    0x00006607      0x20d .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Wrist_UART_SPI_UART.o)
- .debug_info    0x00006814      0x1fe .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Wrist_UART_UART.o)
- .debug_info    0x00006a12      0x29e .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_SPI_UART.o)
- .debug_info    0x00006cb0      0x233 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_UART.o)
- .debug_info    0x00006ee3      0x145 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_SPI_UART_INT.o)
- .debug_info    0x00007028      0x1eb .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART.o)
+ .debug_info    0x00000000      0xa07 .\CortexM0\ARM_GCC_484\Debug\main.o
+ .debug_info    0x00000a07       0x80 .\CortexM0\ARM_GCC_484\Debug\spi.o
+ .debug_info    0x00000a87      0x54a .\CortexM0\ARM_GCC_484\Debug\wiznet5500.o
+ .debug_info    0x00000fd1      0x14d .\CortexM0\ARM_GCC_484\Debug\cybootloader.o
+ .debug_info    0x0000111e       0xb1 .\CortexM0\ARM_GCC_484\Debug\cymetadata.o
+ .debug_info    0x000011cf      0x310 .\CortexM0\ARM_GCC_484\Debug\Cm0Start.o
+ .debug_info    0x000014df      0x57e .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(cyfitter_cfg.o)
+ .debug_info    0x00001a5d      0x14d .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Clock_counter.o)
+ .debug_info    0x00001baa      0x14d .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Clock_pwm.o)
+ .debug_info    0x00001cf7      0x241 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(isr_1.o)
+ .debug_info    0x00001f38      0x14c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(LED.o)
+ .debug_info    0x00002084      0x6f0 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Timer_1.o)
+ .debug_info    0x00002774       0xa1 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(CyBootAsmGnu.o)
+ .debug_info    0x00002815      0xc5b .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(CyLib.o)
+ .debug_info    0x00003470      0x14c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(WIZ_RDY.o)
+ .debug_info    0x000035bc      0x14c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(WIZ_INT.o)
+ .debug_info    0x00003708      0x14c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(WIZ_RST.o)
+ .debug_info    0x00003854      0x14c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(WIZ_SS.o)
+ .debug_info    0x000039a0      0x6f0 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(BA_PWM.o)
+ .debug_info    0x00004090      0x6f0 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ELBW_PWM.o)
+ .debug_info    0x00004780      0x6f0 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SHLDR_PWM.o)
+ .debug_info    0x00004e70      0x3ec .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SPIM_1.o)
+ .debug_info    0x0000525c      0x14d .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SPIM_1_IntClock.o)
+ .debug_info    0x000053a9      0x29e .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(EFFECTOR_PWM.o)
+ .debug_info    0x00005647      0x1eb .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Wrist_UART.o)
+ .debug_info    0x00005832      0x20d .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Wrist_UART_SPI_UART.o)
+ .debug_info    0x00005a3f      0x1fe .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Wrist_UART_UART.o)
+ .debug_info    0x00005c3d      0x29e .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_SPI_UART.o)
+ .debug_info    0x00005edb      0x233 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_UART.o)
+ .debug_info    0x0000610e      0x145 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_SPI_UART_INT.o)
+ .debug_info    0x00006253      0x1eb .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART.o)
 
-.debug_abbrev   0x00000000     0x2449
+.debug_abbrev   0x00000000     0x1f33
  *(.debug_abbrev)
- .debug_abbrev  0x00000000      0x1d3 .\CortexM0\ARM_GCC_484\Debug\main.o
- .debug_abbrev  0x000001d3       0x26 .\CortexM0\ARM_GCC_484\Debug\spi.o
- .debug_abbrev  0x000001f9      0x186 .\CortexM0\ARM_GCC_484\Debug\wiznet5500.o
- .debug_abbrev  0x0000037f       0x77 .\CortexM0\ARM_GCC_484\Debug\cybootloader.o
- .debug_abbrev  0x000003f6       0x5d .\CortexM0\ARM_GCC_484\Debug\cymetadata.o
- .debug_abbrev  0x00000453      0x1c5 .\CortexM0\ARM_GCC_484\Debug\Cm0Start.o
- .debug_abbrev  0x00000618      0x1cd .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(cyfitter_cfg.o)
- .debug_abbrev  0x000007e5       0xb5 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Clock_counter.o)
- .debug_abbrev  0x0000089a       0xb5 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Clock_pwm.o)
- .debug_abbrev  0x0000094f      0x168 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(isr_1.o)
- .debug_abbrev  0x00000ab7       0xb7 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(LED.o)
- .debug_abbrev  0x00000b6e      0x109 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Timer_1.o)
- .debug_abbrev  0x00000c77       0x14 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(CyBootAsmGnu.o)
- .debug_abbrev  0x00000c8b      0x207 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(CyLib.o)
- .debug_abbrev  0x00000e92       0xb7 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(WIZ_RDY.o)
- .debug_abbrev  0x00000f49       0xb7 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(WIZ_INT.o)
- .debug_abbrev  0x00001000       0xb7 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(WIZ_RST.o)
- .debug_abbrev  0x000010b7       0xb7 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(WIZ_SS.o)
- .debug_abbrev  0x0000116e      0x170 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ADC.o)
- .debug_abbrev  0x000012de       0x72 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ADC_INT.o)
- .debug_abbrev  0x00001350      0x109 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(BA_PWM.o)
- .debug_abbrev  0x00001459      0x109 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ELBW_PWM.o)
- .debug_abbrev  0x00001562      0x109 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SHLDR_PWM.o)
- .debug_abbrev  0x0000166b      0x163 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SPIM_1.o)
- .debug_abbrev  0x000017ce       0xb5 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SPIM_1_IntClock.o)
- .debug_abbrev  0x00001883       0xb7 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(stop_shdr_up.o)
- .debug_abbrev  0x0000193a       0xb7 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(stop_shdr_dn.o)
- .debug_abbrev  0x000019f1       0xb7 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(stop_elb_up.o)
- .debug_abbrev  0x00001aa8       0xb7 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(stop_elb_dn.o)
- .debug_abbrev  0x00001b5f      0x13b .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(EFFECTOR_PWM.o)
- .debug_abbrev  0x00001c9a      0x122 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Wrist_UART.o)
- .debug_abbrev  0x00001dbc      0x15c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Wrist_UART_SPI_UART.o)
- .debug_abbrev  0x00001f18       0xf9 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Wrist_UART_UART.o)
- .debug_abbrev  0x00002011      0x167 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_SPI_UART.o)
- .debug_abbrev  0x00002178       0xf2 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_UART.o)
- .debug_abbrev  0x0000226a       0xa7 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_SPI_UART_INT.o)
- .debug_abbrev  0x00002311      0x138 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART.o)
+ .debug_abbrev  0x00000000      0x17b .\CortexM0\ARM_GCC_484\Debug\main.o
+ .debug_abbrev  0x0000017b       0x26 .\CortexM0\ARM_GCC_484\Debug\spi.o
+ .debug_abbrev  0x000001a1      0x186 .\CortexM0\ARM_GCC_484\Debug\wiznet5500.o
+ .debug_abbrev  0x00000327       0x77 .\CortexM0\ARM_GCC_484\Debug\cybootloader.o
+ .debug_abbrev  0x0000039e       0x5d .\CortexM0\ARM_GCC_484\Debug\cymetadata.o
+ .debug_abbrev  0x000003fb      0x1c5 .\CortexM0\ARM_GCC_484\Debug\Cm0Start.o
+ .debug_abbrev  0x000005c0      0x1cd .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(cyfitter_cfg.o)
+ .debug_abbrev  0x0000078d       0xb5 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Clock_counter.o)
+ .debug_abbrev  0x00000842       0xb5 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Clock_pwm.o)
+ .debug_abbrev  0x000008f7      0x168 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(isr_1.o)
+ .debug_abbrev  0x00000a5f       0xb7 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(LED.o)
+ .debug_abbrev  0x00000b16      0x109 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Timer_1.o)
+ .debug_abbrev  0x00000c1f       0x14 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(CyBootAsmGnu.o)
+ .debug_abbrev  0x00000c33      0x207 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(CyLib.o)
+ .debug_abbrev  0x00000e3a       0xb7 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(WIZ_RDY.o)
+ .debug_abbrev  0x00000ef1       0xb7 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(WIZ_INT.o)
+ .debug_abbrev  0x00000fa8       0xb7 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(WIZ_RST.o)
+ .debug_abbrev  0x0000105f       0xb7 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(WIZ_SS.o)
+ .debug_abbrev  0x00001116      0x109 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(BA_PWM.o)
+ .debug_abbrev  0x0000121f      0x109 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ELBW_PWM.o)
+ .debug_abbrev  0x00001328      0x109 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SHLDR_PWM.o)
+ .debug_abbrev  0x00001431      0x163 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SPIM_1.o)
+ .debug_abbrev  0x00001594       0xb5 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SPIM_1_IntClock.o)
+ .debug_abbrev  0x00001649      0x13b .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(EFFECTOR_PWM.o)
+ .debug_abbrev  0x00001784      0x122 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Wrist_UART.o)
+ .debug_abbrev  0x000018a6      0x15c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Wrist_UART_SPI_UART.o)
+ .debug_abbrev  0x00001a02       0xf9 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Wrist_UART_UART.o)
+ .debug_abbrev  0x00001afb      0x167 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_SPI_UART.o)
+ .debug_abbrev  0x00001c62       0xf2 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_UART.o)
+ .debug_abbrev  0x00001d54       0xa7 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_SPI_UART_INT.o)
+ .debug_abbrev  0x00001dfb      0x138 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART.o)
 
-.debug_line     0x00000000     0x3c07
+.debug_line     0x00000000     0x3567
  *(.debug_line)
- .debug_line    0x00000000      0x6e7 .\CortexM0\ARM_GCC_484\Debug\main.o
- .debug_line    0x000006e7       0x1d .\CortexM0\ARM_GCC_484\Debug\spi.o
- .debug_line    0x00000704      0x374 .\CortexM0\ARM_GCC_484\Debug\wiznet5500.o
- .debug_line    0x00000a78       0x55 .\CortexM0\ARM_GCC_484\Debug\cybootloader.o
- .debug_line    0x00000acd       0x53 .\CortexM0\ARM_GCC_484\Debug\cymetadata.o
- .debug_line    0x00000b20      0x1bc .\CortexM0\ARM_GCC_484\Debug\Cm0Start.o
- .debug_line    0x00000cdc      0x20c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(cyfitter_cfg.o)
- .debug_line    0x00000ee8       0xb6 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Clock_counter.o)
- .debug_line    0x00000f9e       0xb2 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Clock_pwm.o)
- .debug_line    0x00001050      0x154 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(isr_1.o)
- .debug_line    0x000011a4       0xa9 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(LED.o)
- .debug_line    0x0000124d      0x370 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Timer_1.o)
- .debug_line    0x000015bd       0x69 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(CyBootAsmGnu.o)
- .debug_line    0x00001626      0x703 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(CyLib.o)
- .debug_line    0x00001d29       0xad .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(WIZ_RDY.o)
- .debug_line    0x00001dd6       0xad .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(WIZ_INT.o)
- .debug_line    0x00001e83       0xad .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(WIZ_RST.o)
- .debug_line    0x00001f30       0xac .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(WIZ_SS.o)
- .debug_line    0x00001fdc      0x232 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ADC.o)
- .debug_line    0x0000220e       0x64 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ADC_INT.o)
- .debug_line    0x00002272      0x376 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(BA_PWM.o)
- .debug_line    0x000025e8      0x378 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ELBW_PWM.o)
- .debug_line    0x00002960      0x379 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SHLDR_PWM.o)
- .debug_line    0x00002cd9      0x272 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SPIM_1.o)
- .debug_line    0x00002f4b       0xb8 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SPIM_1_IntClock.o)
- .debug_line    0x00003003       0xb2 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(stop_shdr_up.o)
- .debug_line    0x000030b5       0xb2 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(stop_shdr_dn.o)
- .debug_line    0x00003167       0xb1 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(stop_elb_up.o)
- .debug_line    0x00003218       0xb1 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(stop_elb_dn.o)
- .debug_line    0x000032c9      0x196 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(EFFECTOR_PWM.o)
- .debug_line    0x0000345f      0x125 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Wrist_UART.o)
- .debug_line    0x00003584      0x12b .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Wrist_UART_SPI_UART.o)
- .debug_line    0x000036af      0x107 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Wrist_UART_UART.o)
- .debug_line    0x000037b6      0x138 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_SPI_UART.o)
- .debug_line    0x000038ee      0x12c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_UART.o)
- .debug_line    0x00003a1a       0xc3 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_SPI_UART_INT.o)
- .debug_line    0x00003add      0x12a .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART.o)
+ .debug_line    0x00000000      0x5a3 .\CortexM0\ARM_GCC_484\Debug\main.o
+ .debug_line    0x000005a3       0x1d .\CortexM0\ARM_GCC_484\Debug\spi.o
+ .debug_line    0x000005c0      0x374 .\CortexM0\ARM_GCC_484\Debug\wiznet5500.o
+ .debug_line    0x00000934       0x55 .\CortexM0\ARM_GCC_484\Debug\cybootloader.o
+ .debug_line    0x00000989       0x53 .\CortexM0\ARM_GCC_484\Debug\cymetadata.o
+ .debug_line    0x000009dc      0x1bc .\CortexM0\ARM_GCC_484\Debug\Cm0Start.o
+ .debug_line    0x00000b98      0x20c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(cyfitter_cfg.o)
+ .debug_line    0x00000da4       0xb6 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Clock_counter.o)
+ .debug_line    0x00000e5a       0xb2 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Clock_pwm.o)
+ .debug_line    0x00000f0c      0x154 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(isr_1.o)
+ .debug_line    0x00001060       0xa9 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(LED.o)
+ .debug_line    0x00001109      0x370 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Timer_1.o)
+ .debug_line    0x00001479       0x69 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(CyBootAsmGnu.o)
+ .debug_line    0x000014e2      0x703 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(CyLib.o)
+ .debug_line    0x00001be5       0xad .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(WIZ_RDY.o)
+ .debug_line    0x00001c92       0xad .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(WIZ_INT.o)
+ .debug_line    0x00001d3f       0xad .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(WIZ_RST.o)
+ .debug_line    0x00001dec       0xac .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(WIZ_SS.o)
+ .debug_line    0x00001e98      0x376 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(BA_PWM.o)
+ .debug_line    0x0000220e      0x378 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ELBW_PWM.o)
+ .debug_line    0x00002586      0x379 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SHLDR_PWM.o)
+ .debug_line    0x000028ff      0x272 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SPIM_1.o)
+ .debug_line    0x00002b71       0xb8 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SPIM_1_IntClock.o)
+ .debug_line    0x00002c29      0x196 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(EFFECTOR_PWM.o)
+ .debug_line    0x00002dbf      0x125 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Wrist_UART.o)
+ .debug_line    0x00002ee4      0x12b .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Wrist_UART_SPI_UART.o)
+ .debug_line    0x0000300f      0x107 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Wrist_UART_UART.o)
+ .debug_line    0x00003116      0x138 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_SPI_UART.o)
+ .debug_line    0x0000324e      0x12c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_UART.o)
+ .debug_line    0x0000337a       0xc3 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_SPI_UART_INT.o)
+ .debug_line    0x0000343d      0x12a .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART.o)
 
-.debug_frame    0x00000000     0x4744
+.debug_frame    0x00000000     0x3fac
  *(.debug_frame)
- .debug_frame   0x00000000      0x3a0 .\CortexM0\ARM_GCC_484\Debug\main.o
- .debug_frame   0x000003a0      0x224 .\CortexM0\ARM_GCC_484\Debug\wiznet5500.o
- .debug_frame   0x000005c4       0xc8 .\CortexM0\ARM_GCC_484\Debug\Cm0Start.o
- .debug_frame   0x0000068c      0x128 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(cyfitter_cfg.o)
- .debug_frame   0x000007b4       0xa0 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Clock_counter.o)
- .debug_frame   0x00000854       0xa0 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Clock_pwm.o)
- .debug_frame   0x000008f4      0x190 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(isr_1.o)
- .debug_frame   0x00000a84       0xa8 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(LED.o)
- .debug_frame   0x00000b2c      0x52c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Timer_1.o)
- .debug_frame   0x00001058      0x83c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(CyLib.o)
- .debug_frame   0x00001894       0xa8 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(WIZ_RDY.o)
- .debug_frame   0x0000193c       0xa8 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(WIZ_INT.o)
- .debug_frame   0x000019e4       0xa8 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(WIZ_RST.o)
- .debug_frame   0x00001a8c       0xa8 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(WIZ_SS.o)
- .debug_frame   0x00001b34      0x24c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ADC.o)
- .debug_frame   0x00001d80       0x30 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ADC_INT.o)
- .debug_frame   0x00001db0      0x52c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(BA_PWM.o)
- .debug_frame   0x000022dc      0x52c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ELBW_PWM.o)
- .debug_frame   0x00002808      0x52c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SHLDR_PWM.o)
- .debug_frame   0x00002d34      0x2fc .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SPIM_1.o)
- .debug_frame   0x00003030       0xa0 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SPIM_1_IntClock.o)
- .debug_frame   0x000030d0       0xa8 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(stop_shdr_up.o)
- .debug_frame   0x00003178       0xa8 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(stop_shdr_dn.o)
- .debug_frame   0x00003220       0xa8 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(stop_elb_up.o)
- .debug_frame   0x000032c8       0xa8 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(stop_elb_dn.o)
- .debug_frame   0x00003370      0x1f0 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(EFFECTOR_PWM.o)
- .debug_frame   0x00003560      0x134 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Wrist_UART.o)
- .debug_frame   0x00003694      0x128 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Wrist_UART_SPI_UART.o)
- .debug_frame   0x000037bc       0xec .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Wrist_UART_UART.o)
- .debug_frame   0x000038a8      0x12c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_SPI_UART.o)
- .debug_frame   0x000039d4       0xec .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_UART.o)
- .debug_frame   0x00003ac0       0x30 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_SPI_UART_INT.o)
- .debug_frame   0x00003af0      0x134 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART.o)
- .debug_frame   0x00003c24       0x20 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(_udivsi3.o)
- .debug_frame   0x00003c44       0x20 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(_divsi3.o)
- .debug_frame   0x00003c64       0x30 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(_muldi3.o)
- .debug_frame   0x00003c94       0x50 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(bpabi.o)
- .debug_frame   0x00003ce4       0x3c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(divsf3.o)
- .debug_frame   0x00003d20       0x3c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(mulsf3.o)
- .debug_frame   0x00003d5c       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(floatsisf.o)
- .debug_frame   0x00003d88       0x3c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(_divdi3.o)
- .debug_frame   0x00003dc4       0x3c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(_udivdi3.o)
- .debug_frame   0x00003e00       0x20 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-errno.o)
- .debug_frame   0x00003e20       0x28 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-exit.o)
- .debug_frame   0x00003e48       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-init.o)
- .debug_frame   0x00003e74       0x28 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-memcpy-stub.o)
- .debug_frame   0x00003e9c       0x20 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-memset.o)
- .debug_frame   0x00003ebc       0x50 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-printf.o)
- .debug_frame   0x00003f0c       0x48 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-putchar.o)
- .debug_frame   0x00003f54       0xa0 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-vfprintf.o)
- .debug_frame   0x00003ff4       0x54 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-vfprintf_i.o)
- .debug_frame   0x00004048       0x44 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-wbuf.o)
- .debug_frame   0x0000408c       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-wsetup.o)
- .debug_frame   0x000040b8       0x68 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-fflush.o)
- .debug_frame   0x00004120      0x148 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-findfp.o)
- .debug_frame   0x00004268       0x30 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-fvwrite.o)
- .debug_frame   0x00004298       0x58 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-fwalk.o)
- .debug_frame   0x000042f0       0x30 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-makebuf.o)
- .debug_frame   0x00004320       0x20 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-memchr-stub.o)
- .debug_frame   0x00004340       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-memmove.o)
- .debug_frame   0x0000436c       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-nano-freer.o)
- .debug_frame   0x00004398       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-nano-mallocr.o)
- .debug_frame   0x000043c4       0x30 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-nano-reallocr.o)
- .debug_frame   0x000043f4       0x44 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-putc.o)
- .debug_frame   0x00004438       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-sbrkr.o)
- .debug_frame   0x00004464       0x90 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-stdio.o)
- .debug_frame   0x000044f4       0x20 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-strlen.o)
- .debug_frame   0x00004514       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-writer.o)
- .debug_frame   0x00004540       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-closer.o)
- .debug_frame   0x0000456c       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-fstatr.o)
- .debug_frame   0x00004598       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-isattyr.o)
- .debug_frame   0x000045c4       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-lseekr.o)
- .debug_frame   0x000045f0       0x20 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-nano-msizer.o)
- .debug_frame   0x00004610       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-readr.o)
- .debug_frame   0x0000463c       0x48 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-reent.o)
- .debug_frame   0x00004684       0x20 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libnosys.a(close.o)
- .debug_frame   0x000046a4       0x20 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libnosys.a(fstat.o)
- .debug_frame   0x000046c4       0x20 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libnosys.a(isatty.o)
- .debug_frame   0x000046e4       0x20 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libnosys.a(lseek.o)
- .debug_frame   0x00004704       0x20 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libnosys.a(read.o)
- .debug_frame   0x00004724       0x20 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libnosys.a(write.o)
+ .debug_frame   0x00000000      0x2c0 .\CortexM0\ARM_GCC_484\Debug\main.o
+ .debug_frame   0x000002c0      0x224 .\CortexM0\ARM_GCC_484\Debug\wiznet5500.o
+ .debug_frame   0x000004e4       0xc8 .\CortexM0\ARM_GCC_484\Debug\Cm0Start.o
+ .debug_frame   0x000005ac      0x128 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(cyfitter_cfg.o)
+ .debug_frame   0x000006d4       0xa0 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Clock_counter.o)
+ .debug_frame   0x00000774       0xa0 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Clock_pwm.o)
+ .debug_frame   0x00000814      0x190 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(isr_1.o)
+ .debug_frame   0x000009a4       0xa8 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(LED.o)
+ .debug_frame   0x00000a4c      0x52c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Timer_1.o)
+ .debug_frame   0x00000f78      0x83c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(CyLib.o)
+ .debug_frame   0x000017b4       0xa8 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(WIZ_RDY.o)
+ .debug_frame   0x0000185c       0xa8 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(WIZ_INT.o)
+ .debug_frame   0x00001904       0xa8 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(WIZ_RST.o)
+ .debug_frame   0x000019ac       0xa8 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(WIZ_SS.o)
+ .debug_frame   0x00001a54      0x52c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(BA_PWM.o)
+ .debug_frame   0x00001f80      0x52c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ELBW_PWM.o)
+ .debug_frame   0x000024ac      0x52c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SHLDR_PWM.o)
+ .debug_frame   0x000029d8      0x2fc .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SPIM_1.o)
+ .debug_frame   0x00002cd4       0xa0 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SPIM_1_IntClock.o)
+ .debug_frame   0x00002d74      0x1f0 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(EFFECTOR_PWM.o)
+ .debug_frame   0x00002f64      0x134 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Wrist_UART.o)
+ .debug_frame   0x00003098      0x128 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Wrist_UART_SPI_UART.o)
+ .debug_frame   0x000031c0       0xec .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Wrist_UART_UART.o)
+ .debug_frame   0x000032ac      0x12c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_SPI_UART.o)
+ .debug_frame   0x000033d8       0xec .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_UART.o)
+ .debug_frame   0x000034c4       0x30 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_SPI_UART_INT.o)
+ .debug_frame   0x000034f4      0x134 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART.o)
+ .debug_frame   0x00003628       0x20 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(_udivsi3.o)
+ .debug_frame   0x00003648       0x20 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(_divsi3.o)
+ .debug_frame   0x00003668       0x20 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-errno.o)
+ .debug_frame   0x00003688       0x28 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-exit.o)
+ .debug_frame   0x000036b0       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-init.o)
+ .debug_frame   0x000036dc       0x28 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-memcpy-stub.o)
+ .debug_frame   0x00003704       0x20 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-memset.o)
+ .debug_frame   0x00003724       0x50 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-printf.o)
+ .debug_frame   0x00003774       0x48 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-putchar.o)
+ .debug_frame   0x000037bc       0xa0 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-vfprintf.o)
+ .debug_frame   0x0000385c       0x54 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-vfprintf_i.o)
+ .debug_frame   0x000038b0       0x44 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-wbuf.o)
+ .debug_frame   0x000038f4       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-wsetup.o)
+ .debug_frame   0x00003920       0x68 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-fflush.o)
+ .debug_frame   0x00003988      0x148 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-findfp.o)
+ .debug_frame   0x00003ad0       0x30 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-fvwrite.o)
+ .debug_frame   0x00003b00       0x58 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-fwalk.o)
+ .debug_frame   0x00003b58       0x30 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-makebuf.o)
+ .debug_frame   0x00003b88       0x20 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-memchr-stub.o)
+ .debug_frame   0x00003ba8       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-memmove.o)
+ .debug_frame   0x00003bd4       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-nano-freer.o)
+ .debug_frame   0x00003c00       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-nano-mallocr.o)
+ .debug_frame   0x00003c2c       0x30 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-nano-reallocr.o)
+ .debug_frame   0x00003c5c       0x44 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-putc.o)
+ .debug_frame   0x00003ca0       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-sbrkr.o)
+ .debug_frame   0x00003ccc       0x90 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-stdio.o)
+ .debug_frame   0x00003d5c       0x20 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-strlen.o)
+ .debug_frame   0x00003d7c       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-writer.o)
+ .debug_frame   0x00003da8       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-closer.o)
+ .debug_frame   0x00003dd4       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-fstatr.o)
+ .debug_frame   0x00003e00       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-isattyr.o)
+ .debug_frame   0x00003e2c       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-lseekr.o)
+ .debug_frame   0x00003e58       0x20 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-nano-msizer.o)
+ .debug_frame   0x00003e78       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-readr.o)
+ .debug_frame   0x00003ea4       0x48 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-reent.o)
+ .debug_frame   0x00003eec       0x20 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libnosys.a(close.o)
+ .debug_frame   0x00003f0c       0x20 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libnosys.a(fstat.o)
+ .debug_frame   0x00003f2c       0x20 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libnosys.a(isatty.o)
+ .debug_frame   0x00003f4c       0x20 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libnosys.a(lseek.o)
+ .debug_frame   0x00003f6c       0x20 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libnosys.a(read.o)
+ .debug_frame   0x00003f8c       0x20 c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libnosys.a(write.o)
 
-.debug_str      0x00000000     0x3b29
+.debug_str      0x00000000     0x35a6
  *(.debug_str)
- .debug_str     0x00000000      0x838 .\CortexM0\ARM_GCC_484\Debug\main.o
-                                0x8c6 (size before relaxing)
- .debug_str     0x00000838        0x8 .\CortexM0\ARM_GCC_484\Debug\spi.o
+ .debug_str     0x00000000      0x722 .\CortexM0\ARM_GCC_484\Debug\main.o
+                                0x787 (size before relaxing)
+ .debug_str     0x00000722        0x8 .\CortexM0\ARM_GCC_484\Debug\spi.o
                                 0x17f (size before relaxing)
- .debug_str     0x00000840      0x1e6 .\CortexM0\ARM_GCC_484\Debug\wiznet5500.o
+ .debug_str     0x0000072a      0x1e6 .\CortexM0\ARM_GCC_484\Debug\wiznet5500.o
                                 0x389 (size before relaxing)
- .debug_str     0x00000a26       0x7a .\CortexM0\ARM_GCC_484\Debug\cybootloader.o
+ .debug_str     0x00000910       0x7a .\CortexM0\ARM_GCC_484\Debug\cybootloader.o
                                 0x1f7 (size before relaxing)
- .debug_str     0x00000aa0       0x37 .\CortexM0\ARM_GCC_484\Debug\cymetadata.o
+ .debug_str     0x0000098a       0x37 .\CortexM0\ARM_GCC_484\Debug\cymetadata.o
                                 0x1b4 (size before relaxing)
- .debug_str     0x00000ad7      0x132 .\CortexM0\ARM_GCC_484\Debug\Cm0Start.o
+ .debug_str     0x000009c1      0x139 .\CortexM0\ARM_GCC_484\Debug\Cm0Start.o
                                 0x2d5 (size before relaxing)
- .debug_str     0x00000c09      0x224 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(cyfitter_cfg.o)
+ .debug_str     0x00000afa      0x22b .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(cyfitter_cfg.o)
                                 0x3f2 (size before relaxing)
- .debug_str     0x00000e2d       0xef .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Clock_counter.o)
+ .debug_str     0x00000d25       0xef .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Clock_counter.o)
                                 0x277 (size before relaxing)
- .debug_str     0x00000f1c       0xaf .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Clock_pwm.o)
+ .debug_str     0x00000e14       0xaf .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Clock_pwm.o)
                                 0x25f (size before relaxing)
- .debug_str     0x00000fcb      0x100 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(isr_1.o)
+ .debug_str     0x00000ec3      0x100 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(isr_1.o)
                                 0x2bb (size before relaxing)
- .debug_str     0x000010cb       0x7e .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(LED.o)
+ .debug_str     0x00000fc3       0x7e .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(LED.o)
                                 0x205 (size before relaxing)
- .debug_str     0x00001149      0x439 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Timer_1.o)
+ .debug_str     0x00001041      0x439 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Timer_1.o)
                                 0x5d6 (size before relaxing)
- .debug_str     0x00001582      0x6f7 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(CyLib.o)
+ .debug_str     0x0000147a      0x6f7 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(CyLib.o)
                                 0x8df (size before relaxing)
- .debug_str     0x00001c79       0x7e .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(WIZ_RDY.o)
+ .debug_str     0x00001b71       0x7e .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(WIZ_RDY.o)
                                 0x21d (size before relaxing)
- .debug_str     0x00001cf7       0x7e .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(WIZ_INT.o)
+ .debug_str     0x00001bef       0x7e .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(WIZ_INT.o)
                                 0x21d (size before relaxing)
- .debug_str     0x00001d75       0x7e .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(WIZ_RST.o)
+ .debug_str     0x00001c6d       0x7e .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(WIZ_RST.o)
                                 0x21d (size before relaxing)
- .debug_str     0x00001df3       0x78 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(WIZ_SS.o)
+ .debug_str     0x00001ceb       0x78 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(WIZ_SS.o)
                                 0x217 (size before relaxing)
- .debug_str     0x00001e6b      0x1e0 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ADC.o)
-                                0x3a5 (size before relaxing)
- .debug_str     0x0000204b       0x37 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ADC_INT.o)
-                                0x1bb (size before relaxing)
- .debug_str     0x00002082      0x353 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(BA_PWM.o)
+ .debug_str     0x00001d63      0x353 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(BA_PWM.o)
                                 0x5ac (size before relaxing)
- .debug_str     0x000023d5      0x3a7 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ELBW_PWM.o)
+ .debug_str     0x000020b6      0x3a7 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ELBW_PWM.o)
                                 0x600 (size before relaxing)
- .debug_str     0x0000277c      0x3d1 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SHLDR_PWM.o)
+ .debug_str     0x0000245d      0x3d1 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SHLDR_PWM.o)
                                 0x62a (size before relaxing)
- .debug_str     0x00002b4d      0x256 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SPIM_1.o)
+ .debug_str     0x0000282e      0x256 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SPIM_1.o)
                                 0x3ee (size before relaxing)
- .debug_str     0x00002da3       0xd3 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SPIM_1_IntClock.o)
+ .debug_str     0x00002a84       0xd3 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SPIM_1_IntClock.o)
                                 0x283 (size before relaxing)
- .debug_str     0x00002e76       0x9c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(stop_shdr_up.o)
-                                0x23b (size before relaxing)
- .debug_str     0x00002f12       0x9c .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(stop_shdr_dn.o)
-                                0x23b (size before relaxing)
- .debug_str     0x00002fae       0x96 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(stop_elb_up.o)
-                                0x235 (size before relaxing)
- .debug_str     0x00003044       0x96 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(stop_elb_dn.o)
-                                0x235 (size before relaxing)
- .debug_str     0x000030da      0x207 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(EFFECTOR_PWM.o)
+ .debug_str     0x00002b57      0x207 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(EFFECTOR_PWM.o)
                                 0x3b4 (size before relaxing)
- .debug_str     0x000032e1      0x165 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Wrist_UART.o)
+ .debug_str     0x00002d5e      0x165 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Wrist_UART.o)
                                 0x2fc (size before relaxing)
- .debug_str     0x00003446      0x165 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Wrist_UART_SPI_UART.o)
+ .debug_str     0x00002ec3      0x165 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Wrist_UART_SPI_UART.o)
                                 0x308 (size before relaxing)
- .debug_str     0x000035ab      0x106 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Wrist_UART_UART.o)
+ .debug_str     0x00003028      0x106 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Wrist_UART_UART.o)
                                 0x2ba (size before relaxing)
- .debug_str     0x000036b1      0x1db .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_SPI_UART.o)
+ .debug_str     0x0000312e      0x1db .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_SPI_UART.o)
                                 0x39c (size before relaxing)
- .debug_str     0x0000388c       0xe9 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_UART.o)
+ .debug_str     0x00003309       0xe9 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_UART.o)
                                 0x322 (size before relaxing)
- .debug_str     0x00003975       0x75 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_SPI_UART_INT.o)
+ .debug_str     0x000033f2       0x75 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_SPI_UART_INT.o)
                                 0x284 (size before relaxing)
- .debug_str     0x000039ea      0x13f .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART.o)
+ .debug_str     0x00003467      0x13f .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART.o)
                                 0x316 (size before relaxing)
 
 .debug_loc
@@ -2391,41 +2137,35 @@ END GROUP
 .debug_macinfo
  *(.debug_macinfo)
 
-.debug_ranges   0x00000000      0xfc8
+.debug_ranges   0x00000000      0xe28
  *(.debug_ranges)
- .debug_ranges  0x00000000       0xe8 .\CortexM0\ARM_GCC_484\Debug\main.o
- .debug_ranges  0x000000e8       0x90 .\CortexM0\ARM_GCC_484\Debug\wiznet5500.o
- .debug_ranges  0x00000178       0x38 .\CortexM0\ARM_GCC_484\Debug\Cm0Start.o
- .debug_ranges  0x000001b0       0x50 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(cyfitter_cfg.o)
- .debug_ranges  0x00000200       0x30 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Clock_counter.o)
- .debug_ranges  0x00000230       0x30 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Clock_pwm.o)
- .debug_ranges  0x00000260       0x70 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(isr_1.o)
- .debug_ranges  0x000002d0       0x30 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(LED.o)
- .debug_ranges  0x00000300      0x148 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Timer_1.o)
- .debug_ranges  0x00000448      0x220 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(CyLib.o)
- .debug_ranges  0x00000668       0x30 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(WIZ_RDY.o)
- .debug_ranges  0x00000698       0x30 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(WIZ_INT.o)
- .debug_ranges  0x000006c8       0x30 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(WIZ_RST.o)
- .debug_ranges  0x000006f8       0x30 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(WIZ_SS.o)
- .debug_ranges  0x00000728       0x98 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ADC.o)
- .debug_ranges  0x000007c0       0x10 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ADC_INT.o)
- .debug_ranges  0x000007d0      0x148 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(BA_PWM.o)
- .debug_ranges  0x00000918      0x148 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ELBW_PWM.o)
- .debug_ranges  0x00000a60      0x148 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SHLDR_PWM.o)
- .debug_ranges  0x00000ba8       0xc8 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SPIM_1.o)
- .debug_ranges  0x00000c70       0x30 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SPIM_1_IntClock.o)
- .debug_ranges  0x00000ca0       0x30 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(stop_shdr_up.o)
- .debug_ranges  0x00000cd0       0x30 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(stop_shdr_dn.o)
- .debug_ranges  0x00000d00       0x30 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(stop_elb_up.o)
- .debug_ranges  0x00000d30       0x30 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(stop_elb_dn.o)
- .debug_ranges  0x00000d60       0x88 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(EFFECTOR_PWM.o)
- .debug_ranges  0x00000de8       0x58 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Wrist_UART.o)
- .debug_ranges  0x00000e40       0x50 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Wrist_UART_SPI_UART.o)
- .debug_ranges  0x00000e90       0x40 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Wrist_UART_UART.o)
- .debug_ranges  0x00000ed0       0x50 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_SPI_UART.o)
- .debug_ranges  0x00000f20       0x40 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_UART.o)
- .debug_ranges  0x00000f60       0x10 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_SPI_UART_INT.o)
- .debug_ranges  0x00000f70       0x58 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART.o)
+ .debug_ranges  0x00000000       0xb0 .\CortexM0\ARM_GCC_484\Debug\main.o
+ .debug_ranges  0x000000b0       0x90 .\CortexM0\ARM_GCC_484\Debug\wiznet5500.o
+ .debug_ranges  0x00000140       0x38 .\CortexM0\ARM_GCC_484\Debug\Cm0Start.o
+ .debug_ranges  0x00000178       0x50 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(cyfitter_cfg.o)
+ .debug_ranges  0x000001c8       0x30 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Clock_counter.o)
+ .debug_ranges  0x000001f8       0x30 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Clock_pwm.o)
+ .debug_ranges  0x00000228       0x70 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(isr_1.o)
+ .debug_ranges  0x00000298       0x30 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(LED.o)
+ .debug_ranges  0x000002c8      0x148 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Timer_1.o)
+ .debug_ranges  0x00000410      0x220 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(CyLib.o)
+ .debug_ranges  0x00000630       0x30 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(WIZ_RDY.o)
+ .debug_ranges  0x00000660       0x30 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(WIZ_INT.o)
+ .debug_ranges  0x00000690       0x30 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(WIZ_RST.o)
+ .debug_ranges  0x000006c0       0x30 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(WIZ_SS.o)
+ .debug_ranges  0x000006f0      0x148 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(BA_PWM.o)
+ .debug_ranges  0x00000838      0x148 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ELBW_PWM.o)
+ .debug_ranges  0x00000980      0x148 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SHLDR_PWM.o)
+ .debug_ranges  0x00000ac8       0xc8 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SPIM_1.o)
+ .debug_ranges  0x00000b90       0x30 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SPIM_1_IntClock.o)
+ .debug_ranges  0x00000bc0       0x88 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(EFFECTOR_PWM.o)
+ .debug_ranges  0x00000c48       0x58 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Wrist_UART.o)
+ .debug_ranges  0x00000ca0       0x50 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Wrist_UART_SPI_UART.o)
+ .debug_ranges  0x00000cf0       0x40 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Wrist_UART_UART.o)
+ .debug_ranges  0x00000d30       0x50 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_SPI_UART.o)
+ .debug_ranges  0x00000d80       0x40 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_UART.o)
+ .debug_ranges  0x00000dc0       0x10 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_SPI_UART_INT.o)
+ .debug_ranges  0x00000dd0       0x58 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART.o)
 
 .comment        0x00000000       0x70
  .comment       0x00000000       0x70 .\CortexM0\ARM_GCC_484\Debug\main.o
@@ -2446,17 +2186,11 @@ END GROUP
  .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(WIZ_INT.o)
  .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(WIZ_RST.o)
  .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(WIZ_SS.o)
- .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ADC.o)
- .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ADC_INT.o)
  .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(BA_PWM.o)
  .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ELBW_PWM.o)
  .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SHLDR_PWM.o)
  .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SPIM_1.o)
  .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SPIM_1_IntClock.o)
- .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(stop_shdr_up.o)
- .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(stop_shdr_dn.o)
- .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(stop_elb_up.o)
- .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(stop_elb_dn.o)
  .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(EFFECTOR_PWM.o)
  .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Wrist_UART.o)
  .comment       0x00000000       0x71 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Wrist_UART_SPI_UART.o)
@@ -2527,151 +2261,121 @@ END GROUP
  .ARM.attributes
                 0x00000396       0x31 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(WIZ_SS.o)
  .ARM.attributes
-                0x000003c7       0x31 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ADC.o)
+                0x000003c7       0x31 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(BA_PWM.o)
  .ARM.attributes
-                0x000003f8       0x31 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ADC_INT.o)
+                0x000003f8       0x31 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ELBW_PWM.o)
  .ARM.attributes
-                0x00000429       0x31 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(BA_PWM.o)
+                0x00000429       0x31 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SHLDR_PWM.o)
  .ARM.attributes
-                0x0000045a       0x31 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(ELBW_PWM.o)
+                0x0000045a       0x31 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SPIM_1.o)
  .ARM.attributes
-                0x0000048b       0x31 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SHLDR_PWM.o)
+                0x0000048b       0x31 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SPIM_1_IntClock.o)
  .ARM.attributes
-                0x000004bc       0x31 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SPIM_1.o)
+                0x000004bc       0x31 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(EFFECTOR_PWM.o)
  .ARM.attributes
-                0x000004ed       0x31 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(SPIM_1_IntClock.o)
+                0x000004ed       0x31 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Wrist_UART.o)
  .ARM.attributes
-                0x0000051e       0x31 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(stop_shdr_up.o)
+                0x0000051e       0x31 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Wrist_UART_SPI_UART.o)
  .ARM.attributes
-                0x0000054f       0x31 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(stop_shdr_dn.o)
+                0x0000054f       0x31 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Wrist_UART_UART.o)
  .ARM.attributes
-                0x00000580       0x31 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(stop_elb_up.o)
+                0x00000580       0x31 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_SPI_UART.o)
  .ARM.attributes
-                0x000005b1       0x31 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(stop_elb_dn.o)
+                0x000005b1       0x31 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_UART.o)
  .ARM.attributes
-                0x000005e2       0x31 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(EFFECTOR_PWM.o)
+                0x000005e2       0x31 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_SPI_UART_INT.o)
  .ARM.attributes
-                0x00000613       0x31 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Wrist_UART.o)
+                0x00000613       0x31 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART.o)
  .ARM.attributes
-                0x00000644       0x31 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Wrist_UART_SPI_UART.o)
+                0x00000644       0x1e c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(_udivsi3.o)
  .ARM.attributes
-                0x00000675       0x31 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Wrist_UART_UART.o)
+                0x00000662       0x1e c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(_divsi3.o)
  .ARM.attributes
-                0x000006a6       0x31 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_SPI_UART.o)
+                0x00000680       0x1e c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(_dvmd_tls.o)
  .ARM.attributes
-                0x000006d7       0x31 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_UART.o)
+                0x0000069e       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-errno.o)
  .ARM.attributes
-                0x00000708       0x31 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART_SPI_UART_INT.o)
+                0x000006ca       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-exit.o)
  .ARM.attributes
-                0x00000739       0x31 .\CortexM0\ARM_GCC_484\Debug\arm_controller_v2.1.a(Arduino_UART.o)
+                0x000006f6       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-impure.o)
  .ARM.attributes
-                0x0000076a       0x1e c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(_udivsi3.o)
+                0x00000722       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-init.o)
  .ARM.attributes
-                0x00000788       0x1e c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(_divsi3.o)
+                0x0000074e       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-memcpy-stub.o)
  .ARM.attributes
-                0x000007a6       0x1e c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(_dvmd_tls.o)
+                0x0000077a       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-memset.o)
  .ARM.attributes
-                0x000007c4       0x1e c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(_aeabi_ldivmod.o)
+                0x000007a6       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-printf.o)
  .ARM.attributes
-                0x000007e2       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(_muldi3.o)
+                0x000007d2       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-putchar.o)
  .ARM.attributes
-                0x0000080e       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(bpabi.o)
+                0x000007fe       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-vfprintf.o)
  .ARM.attributes
-                0x0000083a       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(divsf3.o)
+                0x0000082a       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-vfprintf_i.o)
  .ARM.attributes
-                0x00000866       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(mulsf3.o)
+                0x00000856       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-wbuf.o)
  .ARM.attributes
-                0x00000892       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(floatsisf.o)
+                0x00000882       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-wsetup.o)
  .ARM.attributes
-                0x000008be       0x1e c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(_clzsi2.o)
+                0x000008ae       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-fflush.o)
  .ARM.attributes
-                0x000008dc       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(_divdi3.o)
+                0x000008da       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-findfp.o)
  .ARM.attributes
-                0x00000908       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m\libgcc.a(_udivdi3.o)
+                0x00000906       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-fvwrite.o)
  .ARM.attributes
-                0x00000934       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-errno.o)
+                0x00000932       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-fwalk.o)
  .ARM.attributes
-                0x00000960       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-exit.o)
+                0x0000095e       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-makebuf.o)
  .ARM.attributes
-                0x0000098c       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-impure.o)
+                0x0000098a       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-memchr-stub.o)
  .ARM.attributes
-                0x000009b8       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-init.o)
+                0x000009b6       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-memmove.o)
  .ARM.attributes
-                0x000009e4       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-memcpy-stub.o)
+                0x000009e2       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-nano-freer.o)
  .ARM.attributes
-                0x00000a10       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-memset.o)
+                0x00000a0e       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-nano-mallocr.o)
  .ARM.attributes
-                0x00000a3c       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-printf.o)
+                0x00000a3a       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-nano-reallocr.o)
  .ARM.attributes
-                0x00000a68       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-putchar.o)
+                0x00000a66       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-putc.o)
  .ARM.attributes
-                0x00000a94       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-vfprintf.o)
+                0x00000a92       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-sbrkr.o)
  .ARM.attributes
-                0x00000ac0       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-vfprintf_i.o)
+                0x00000abe       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-stdio.o)
  .ARM.attributes
-                0x00000aec       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-wbuf.o)
+                0x00000aea       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-strlen.o)
  .ARM.attributes
-                0x00000b18       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-wsetup.o)
+                0x00000b16       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-writer.o)
  .ARM.attributes
-                0x00000b44       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-fflush.o)
+                0x00000b42       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-closer.o)
  .ARM.attributes
-                0x00000b70       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-findfp.o)
+                0x00000b6e       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-fstatr.o)
  .ARM.attributes
-                0x00000b9c       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-fvwrite.o)
+                0x00000b9a       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-isattyr.o)
  .ARM.attributes
-                0x00000bc8       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-fwalk.o)
+                0x00000bc6       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-lseekr.o)
  .ARM.attributes
-                0x00000bf4       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-makebuf.o)
+                0x00000bf2       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-nano-msizer.o)
  .ARM.attributes
-                0x00000c20       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-memchr-stub.o)
+                0x00000c1e       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-readr.o)
  .ARM.attributes
-                0x00000c4c       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-memmove.o)
+                0x00000c4a       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-reent.o)
  .ARM.attributes
-                0x00000c78       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-nano-freer.o)
+                0x00000c76       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtend.o
  .ARM.attributes
-                0x00000ca4       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-nano-mallocr.o)
+                0x00000ca2       0x1e c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtn.o
  .ARM.attributes
-                0x00000cd0       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-nano-reallocr.o)
+                0x00000cc0       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libnosys.a(close.o)
  .ARM.attributes
-                0x00000cfc       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-putc.o)
+                0x00000cec       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libnosys.a(fstat.o)
  .ARM.attributes
-                0x00000d28       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-sbrkr.o)
+                0x00000d18       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libnosys.a(isatty.o)
  .ARM.attributes
-                0x00000d54       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-stdio.o)
+                0x00000d44       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libnosys.a(lseek.o)
  .ARM.attributes
-                0x00000d80       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-strlen.o)
+                0x00000d70       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libnosys.a(read.o)
  .ARM.attributes
-                0x00000dac       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-writer.o)
- .ARM.attributes
-                0x00000dd8       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-closer.o)
- .ARM.attributes
-                0x00000e04       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-fstatr.o)
- .ARM.attributes
-                0x00000e30       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-isattyr.o)
- .ARM.attributes
-                0x00000e5c       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-lseekr.o)
- .ARM.attributes
-                0x00000e88       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-nano-msizer.o)
- .ARM.attributes
-                0x00000eb4       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-readr.o)
- .ARM.attributes
-                0x00000ee0       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-reent.o)
- .ARM.attributes
-                0x00000f0c       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtend.o
- .ARM.attributes
-                0x00000f38       0x1e c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtn.o
- .ARM.attributes
-                0x00000f56       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libnosys.a(close.o)
- .ARM.attributes
-                0x00000f82       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libnosys.a(fstat.o)
- .ARM.attributes
-                0x00000fae       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libnosys.a(isatty.o)
- .ARM.attributes
-                0x00000fda       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libnosys.a(lseek.o)
- .ARM.attributes
-                0x00001006       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libnosys.a(read.o)
- .ARM.attributes
-                0x00001032       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libnosys.a(write.o)
+                0x00000d9c       0x2c c:/program files (x86)/cypress/psoc creator/3.1/psoc creator/import/gnu_cs/arm/4.8.4/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libnosys.a(write.o)
 
 /DISCARD/
  *(.note.GNU-stack)
