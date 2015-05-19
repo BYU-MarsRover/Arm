@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
   39 000c 1970     		strb	r1, [r3]
   40 000e 3B1D     		add	r3, r7, #4
   41 0010 1A80     		strh	r2, [r3]
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 2
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 2
 
 
   17:.\dynamixel.h ****         uint8 array[9];
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
   86 005a 3B1C     		mov	r3, r7
   87 005c 0C33     		add	r3, r3, #12
   88 005e DA71     		strb	r2, [r3, #7]
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 3
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 3
 
 
   27:.\dynamixel.h ****         array[8] = ~(servoID + 0x05 + 0x1E + array[6] + array[7] + 0x03);
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  136              		.cfi_offset 14, -4
  137 0002 86B0     		sub	sp, sp, #24
  138              		.cfi_def_cfa_offset 32
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 4
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 4
 
 
  139 0004 00AF     		add	r7, sp, #0
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  184 004e 9A71     		strb	r2, [r3, #6]
   43:.\dynamixel.h ****         array[7] = torque >> 8;
  185              		.loc 1 43 0
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 5
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 5
 
 
  186 0050 3B1D     		add	r3, r7, #4
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
   48:.\dynamixel.h **** 
   49:.\dynamixel.h ****     void ServoSpeed( uint8 servoID, uint16 speed)
   50:.\dynamixel.h ****     {
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 6
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 6
 
 
  236              		.loc 1 50 0
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  282 0042 5A71     		strb	r2, [r3, #5]
   59:.\dynamixel.h ****         array[6] = speed;
  283              		.loc 1 59 0
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 7
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 7
 
 
  284 0044 3B1D     		add	r3, r7, #4
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  333              		.global	NEUTRAL
  334              		.data
  335              		.align	1
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 8
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 8
 
 
  336              		.type	NEUTRAL, %object
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  390 0009 00       		.space	1
  391              		.global	ARD_FLAG
  392              		.type	ARD_FLAG, %object
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 9
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 9
 
 
  393              		.size	ARD_FLAG, 1
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  447 001a 0000     		.space	2
  448              		.global	eff_errors
  449              		.align	1
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 10
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 10
 
 
  450              		.type	eff_errors, %object
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  489              		.loc 2 15 0
  490 001c BD46     		mov	sp, r7
  491 001e 02B0     		add	sp, sp, #8
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 11
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 11
 
 
  492              		@ sp needed
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
   25:.\main.c      ****         if(recent_command > 1002)
  537              		.loc 2 25 0 is_stmt 1
  538 0026 3B1D     		add	r3, r7, #4
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 12
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 12
 
 
  539 0028 1A88     		ldrh	r2, [r3]
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
   37:.\main.c      ****         {
   38:.\main.c      ****             cur_command = recent_command - 1;
  580              		.loc 2 38 0
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 13
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 13
 
 
  581 0068 3B1C     		mov	r3, r7
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  622 00a6 264B     		ldr	r3, .L23+20
  623 00a8 9A42     		cmp	r2, r3
  624 00aa 16D9     		bls	.L16
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 14
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 14
 
 
  625              		.loc 2 49 0 is_stmt 0 discriminator 1
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  666 00ea DB00     		lsl	r3, r3, #3
  667 00ec 9A42     		cmp	r2, r3
  668 00ee 11D8     		bhi	.L19
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 15
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 15
 
 
   61:.\main.c      ****     {
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  704              		.loc 2 77 0
  705 0122 181C     		mov	r0, r3
  706 0124 BD46     		mov	sp, r7
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 16
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 16
 
 
  707 0126 04B0     		add	sp, sp, #16
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  755 001a 16D9     		bls	.L26
  756              		.loc 2 83 0 is_stmt 0 discriminator 1
  757 001c BB1D     		add	r3, r7, #6
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 17
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 17
 
 
  758 001e 1A88     		ldrh	r2, [r3]
@@ -966,7 +966,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  760 0022 9A42     		cmp	r2, r3
  761 0024 11D8     		bhi	.L26
   84:.\main.c      ****     {
-  85:.\main.c      ****         if(recent_command > 1026)
+  85:.\main.c      ****         if(recent_command > 1027)
  762              		.loc 2 85 0 is_stmt 1
  763 0026 3B1D     		add	r3, r7, #4
  764 0028 1A88     		ldrh	r2, [r3]
@@ -974,15 +974,15 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  766 002c 9A42     		cmp	r2, r3
  767 002e 06D9     		bls	.L27
   86:.\main.c      ****         {
-  87:.\main.c      ****             cur_command = recent_command - 2;
+  87:.\main.c      ****             cur_command = recent_command - 3;
  768              		.loc 2 87 0
  769 0030 3B1C     		mov	r3, r7
  770 0032 0E33     		add	r3, r3, #14
  771 0034 3A1D     		add	r2, r7, #4
  772 0036 1288     		ldrh	r2, [r2]
- 773 0038 023A     		sub	r2, r2, #2
+ 773 0038 033A     		sub	r2, r2, #3
  774 003a 1A80     		strh	r2, [r3]
-  85:.\main.c      ****         if(recent_command > 1026)
+  85:.\main.c      ****         if(recent_command > 1027)
  775              		.loc 2 85 0
  776 003c 39E0     		b	.L29
  777              	.L27:
@@ -996,7 +996,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  781 0042 8022     		mov	r2, #128
  782 0044 D200     		lsl	r2, r2, #3
  783 0046 1A80     		strh	r2, [r3]
-  85:.\main.c      ****         if(recent_command > 1026)
+  85:.\main.c      ****         if(recent_command > 1027)
  784              		.loc 2 85 0
  785 0048 33E0     		b	.L29
  786              	.L26:
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  799 005e 05D9     		bls	.L30
   95:.\main.c      ****     {
   96:.\main.c      ****         cur_command = recent_command;
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 18
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 18
 
 
  800              		.loc 2 96 0 is_stmt 1
@@ -1046,7 +1046,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  820 0080 9A42     		cmp	r2, r3
  821 0082 11D8     		bhi	.L31
   99:.\main.c      ****     {
- 100:.\main.c      ****         if(recent_command < 3070)
+ 100:.\main.c      ****         if(recent_command < 3069)
  822              		.loc 2 100 0 is_stmt 1
  823 0084 3B1D     		add	r3, r7, #4
  824 0086 1A88     		ldrh	r2, [r3]
@@ -1054,15 +1054,15 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  826 008a 9A42     		cmp	r2, r3
  827 008c 06D8     		bhi	.L32
  101:.\main.c      ****         {
- 102:.\main.c      ****             cur_command = recent_command + 2;
+ 102:.\main.c      ****             cur_command = recent_command + 3;
  828              		.loc 2 102 0
  829 008e 3B1C     		mov	r3, r7
  830 0090 0E33     		add	r3, r3, #14
  831 0092 3A1D     		add	r2, r7, #4
  832 0094 1288     		ldrh	r2, [r2]
- 833 0096 0232     		add	r2, r2, #2
+ 833 0096 0332     		add	r2, r2, #3
  834 0098 1A80     		strh	r2, [r3]
- 100:.\main.c      ****         if(recent_command < 3070)
+ 100:.\main.c      ****         if(recent_command < 3069)
  835              		.loc 2 100 0
  836 009a 0AE0     		b	.L29
  837              	.L32:
@@ -1076,9 +1076,9 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  841 00a0 C022     		mov	r2, #192
  842 00a2 1201     		lsl	r2, r2, #4
  843 00a4 1A80     		strh	r2, [r3]
- 100:.\main.c      ****         if(recent_command < 3070)
+ 100:.\main.c      ****         if(recent_command < 3069)
  844              		.loc 2 100 0
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 19
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 19
 
 
  845 00a6 04E0     		b	.L29
@@ -1114,8 +1114,8 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  866              	.L35:
  867 00c0 FF030000 		.word	1023
  868 00c4 CF070000 		.word	1999
- 869 00c8 02040000 		.word	1026
- 870 00cc FD0B0000 		.word	3069
+ 869 00c8 03040000 		.word	1027
+ 870 00cc FC0B0000 		.word	3068
  871              		.cfi_endproc
  872              	.LFE39:
  873              		.size	WT_pos_to_vel, .-WT_pos_to_vel
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  887              		.cfi_offset 14, -4
  888 0002 84B0     		sub	sp, sp, #16
  889              		.cfi_def_cfa_offset 24
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 20
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 20
 
 
  890 0004 00AF     		add	r7, sp, #0
@@ -1159,20 +1159,20 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  902 0018 9A42     		cmp	r2, r3
  903 001a 0FD8     		bhi	.L38
  122:.\main.c      ****     {
- 123:.\main.c      ****         if(recent_command > 2)
+ 123:.\main.c      ****         if(recent_command > 3)
  904              		.loc 2 123 0
  905 001c 3B1D     		add	r3, r7, #4
  906 001e 1B88     		ldrh	r3, [r3]
- 907 0020 022B     		cmp	r3, #2
+ 907 0020 032B     		cmp	r3, #3
  908 0022 06D9     		bls	.L39
  124:.\main.c      ****         {
- 125:.\main.c      ****             cur_command = recent_command - 2;
+ 125:.\main.c      ****             cur_command = recent_command - 3;
  909              		.loc 2 125 0
  910 0024 3B1C     		mov	r3, r7
  911 0026 0E33     		add	r3, r3, #14
  912 0028 3A1D     		add	r2, r7, #4
  913 002a 1288     		ldrh	r2, [r2]
- 914 002c 023A     		sub	r2, r2, #2
+ 914 002c 033A     		sub	r2, r2, #3
  915 002e 1A80     		strh	r2, [r3]
  916 0030 36E0     		b	.L41
  917              	.L39:
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  930 0044 9A42     		cmp	r2, r3
  931 0046 0AD8     		bhi	.L42
  932              		.loc 2 132 0 is_stmt 0 discriminator 1
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 21
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 21
 
 
  933 0048 BB1D     		add	r3, r7, #6
@@ -1232,7 +1232,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  957 0070 9A42     		cmp	r2, r3
  958 0072 10D8     		bhi	.L43
  137:.\main.c      ****     {
- 138:.\main.c      ****         if(recent_command < 4093)
+ 138:.\main.c      ****         if(recent_command < 4092)
  959              		.loc 2 138 0 is_stmt 1
  960 0074 3B1D     		add	r3, r7, #4
  961 0076 1A88     		ldrh	r2, [r3]
@@ -1240,15 +1240,15 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  963 007a 9A42     		cmp	r2, r3
  964 007c 06D8     		bhi	.L44
  139:.\main.c      ****         {
- 140:.\main.c      ****             cur_command = recent_command + 2;
+ 140:.\main.c      ****             cur_command = recent_command + 3;
  965              		.loc 2 140 0
  966 007e 3B1C     		mov	r3, r7
  967 0080 0E33     		add	r3, r3, #14
  968 0082 3A1D     		add	r2, r7, #4
  969 0084 1288     		ldrh	r2, [r2]
- 970 0086 0232     		add	r2, r2, #2
+ 970 0086 0332     		add	r2, r2, #3
  971 0088 1A80     		strh	r2, [r3]
- 138:.\main.c      ****         if(recent_command < 4093)
+ 138:.\main.c      ****         if(recent_command < 4092)
  972              		.loc 2 138 0
  973 008a 09E0     		b	.L41
  974              	.L44:
@@ -1258,13 +1258,13 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  144:.\main.c      ****             cur_command = 4095;
  975              		.loc 2 144 0
  976 008c 3B1C     		mov	r3, r7
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 22
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 22
 
 
  977 008e 0E33     		add	r3, r3, #14
  978 0090 084A     		ldr	r2, .L47+4
  979 0092 1A80     		strh	r2, [r3]
- 138:.\main.c      ****         if(recent_command < 4093)
+ 138:.\main.c      ****         if(recent_command < 4092)
  980              		.loc 2 138 0
  981 0094 04E0     		b	.L41
  982              	.L43:
@@ -1299,7 +1299,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  1002              	.L47:
  1003 00b0 CF070000 		.word	1999
  1004 00b4 FF0F0000 		.word	4095
- 1005 00b8 FC0F0000 		.word	4092
+ 1005 00b8 FB0F0000 		.word	4091
  1006              		.cfi_endproc
  1007              	.LFE40:
  1008              		.size	WR_pos_to_vel, .-WR_pos_to_vel
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  1018              		.cfi_startproc
  1019 0000 80B5     		push	{r7, lr}
  1020              		.cfi_def_cfa_offset 8
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 23
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 23
 
 
  1021              		.cfi_offset 7, -8
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  1067 0050 1A80     		strh	r2, [r3]
  165:.\main.c      ****     command = (temp3/2) + 1500;
  1068              		.loc 2 165 0
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 24
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 24
 
 
  1069 0052 3B1C     		mov	r3, r7
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  1118 0004 00AF     		add	r7, sp, #0
  1119              		.cfi_def_cfa_register 7
  1120 0006 7860     		str	r0, [r7, #4]
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 25
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 25
 
 
  1121 0008 FB1C     		add	r3, r7, #3
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  1166 005a 8022     		mov	r2, #128
  1167 005c D200     		lsl	r2, r2, #3
  1168 005e 9B18     		add	r3, r3, r2
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 26
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 26
 
 
  1169 0060 9BB2     		uxth	r3, r3
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  1212 0012 1B78     		ldrb	r3, [r3]
  1213 0014 7A68     		ldr	r2, [r7, #4]
  1214 0016 D318     		add	r3, r2, r3
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 27
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 27
 
 
  1215 0018 1B78     		ldrb	r3, [r3]
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  1264              		@ sp needed
  1265 0070 80BD     		pop	{r7, pc}
  1266              		.cfi_endproc
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 28
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 28
 
 
  1267              	.LFE43:
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  211:.\main.c      ****             feedback_array[0] = 7;
  1306              		.loc 2 211 0
  1307 0016 594B     		ldr	r3, .L79+8
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 29
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 29
 
 
  1308 0018 0722     		mov	r2, #7
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  1351 0058 484B     		ldr	r3, .L79+8
  1352 005a 0722     		mov	r2, #7
  1353 005c DA72     		strb	r2, [r3, #11]
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 30
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 30
 
 
  223:.\main.c      ****             feedback_array[12] = 7;
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  1396 009c 0722     		mov	r2, #7
  1397 009e 1A72     		strb	r2, [r3, #8]
  235:.\main.c      ****             heartbeat_array[9] = 7;
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 31
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 31
 
 
  1398              		.loc 2 235 0
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  250:.\main.c      ****             HEARTBEAT_FLAG = 0;
  1438              		.loc 2 250 0
  1439 00de 294B     		ldr	r3, .L79+16
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 32
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 32
 
 
  1440 00e0 0022     		mov	r2, #0
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  265:.\main.c      ****             break;
  1479              		.loc 2 265 0
  1480 0108 32E0     		b	.L58
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 33
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 33
 
 
  1481              	.L70:
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  1517 013a 0322     		mov	r2, #3
  1518 013c 1A70     		strb	r2, [r3]
  1519 013e 12E0     		b	.L76
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 34
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 34
 
 
  1520              	.L75:
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  1557              		@ sp needed
  1558 0172 80BD     		pop	{r7, pc}
  1559              	.L80:
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 35
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 35
 
 
  1560              		.align	2
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  1608              		.thumb_func
  1609              		.type	wristTilt, %function
  1610              	wristTilt:
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 36
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 36
 
 
  1611              	.LFB46:
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  322:.\main.c      ****             break;
  1650              		.loc 2 322 0
  1651 0034 48E0     		b	.L91
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 37
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 37
 
 
  1652              	.L89:
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  1697              	.L92:
  332:.\main.c      ****             }
  333:.\main.c      ****             else
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 38
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 38
 
 
  334:.\main.c      ****             {
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  1735 00c4 00E0     		b	.L91
  1736              	.L106:
  345:.\main.c      ****             break;
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 39
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 39
 
 
  1737              		.loc 2 345 0
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  1776 00fa 0D4B     		ldr	r3, .L107
  1777 00fc 0222     		mov	r2, #2
  1778 00fe 1A70     		strb	r2, [r3]
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 40
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 40
 
 
  365:.\main.c      ****             }
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  1811 0126 1A70     		strb	r2, [r3]
  385:.\main.c      ****             break;
  1812              		.loc 2 385 0
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 41
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 41
 
 
  1813 0128 C046     		mov	r8, r8
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  1856 000e 02DC     		bgt	.L112
  1857 0010 002B     		cmp	r3, #0
  1858 0012 50D0     		beq	.L130
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 42
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 42
 
 
  1859 0014 4BE0     		b	.L110
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  411:.\main.c      ****                 latest_WR_command = WR_pos_to_vel(newest_command,latest_WR_command);
  1899              		.loc 2 411 0
  1900 0058 334B     		ldr	r3, .L132+4
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 43
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 43
 
 
  1901 005a 1B88     		ldrh	r3, [r3]
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  1944              		.loc 2 422 0
  1945 00ac 06E0     		b	.L116
  1946              	.L110:
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 44
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 44
 
 
  423:.\main.c      ****             
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  438:.\main.c      ****             wristRotate_state = rotate_wait;
  1984              		.loc 2 438 0
  1985 00de 114B     		ldr	r3, .L132
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 45
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 45
 
 
  1986 00e0 0322     		mov	r2, #3
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  459:.\main.c      ****                 wristRotate_state = rotate_wait;
  460:.\main.c      ****             }
  461:.\main.c      ****             break;
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 46
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 46
 
 
  2019              		.loc 2 461 0
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  2061              		.loc 2 472 0
  2062              		.cfi_startproc
  2063 0000 90B5     		push	{r4, r7, lr}
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 47
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 47
 
 
  2064              		.cfi_def_cfa_offset 12
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  486:.\main.c      ****             if(command <= 2000 && command >= 1000)
  2105              		.loc 2 486 0
  2106 003e BB1D     		add	r3, r7, #6
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 48
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 48
 
 
  2107 0040 1A88     		ldrh	r2, [r3]
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  504:.\main.c      ****             elbow_state = elbw_start;
  2144              		.loc 2 504 0
  2145 007e 1D4B     		ldr	r3, .L157
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 49
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 49
 
 
  2146 0080 0022     		mov	r2, #0
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  2187              	.L148:
  516:.\main.c      ****         
  517:.\main.c      ****         case elbw_execute:
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 50
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 50
 
 
  518:.\main.c      ****             if(ELBOW_FLAG)
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  2220 00de 054B     		ldr	r3, .L157
  2221 00e0 0322     		mov	r2, #3
  2222 00e2 1A70     		strb	r2, [r3]
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 51
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 51
 
 
  2223              		.loc 2 537 0
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  2266              		.cfi_def_cfa_offset 24
  2267 0004 00AF     		add	r7, sp, #0
  2268              		.cfi_def_cfa_register 7
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 52
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 52
 
 
  549:.\main.c      ****     uint16 command;
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  2309              		.loc 2 562 0 is_stmt 0 discriminator 1
  2310 004a BB1D     		add	r3, r7, #6
  2311 004c 1A88     		ldrh	r2, [r3]
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 53
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 53
 
 
  2312 004e 2C4B     		ldr	r3, .L182+12
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  2347              	.L180:
  553:.\main.c      ****             break;
  2348              		.loc 2 553 0
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 54
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 54
 
 
  2349 0086 C046     		mov	r8, r8
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  2389 00bc 03D0     		beq	.L176
  595:.\main.c      ****             {
  596:.\main.c      ****                 shoulder_state = shldr_execute;
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 55
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 55
 
 
  2390              		.loc 2 596 0
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  616:.\main.c      ****             shoulder_state = shldr_start;
  2423              		.loc 2 616 0
  2424 00e6 034B     		ldr	r3, .L182
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 56
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 56
 
 
  2425 00e8 0022     		mov	r2, #0
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  2467 0006 484B     		ldr	r3, .L207
  2468 0008 1B78     		ldrb	r3, [r3]
  2469 000a 012B     		cmp	r3, #1
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 57
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 57
 
 
  2470 000c 08D0     		beq	.L186
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  2512 0052 1A88     		ldrh	r2, [r3]
  2513 0054 394B     		ldr	r3, .L207+20
  2514 0056 9A42     		cmp	r2, r3
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 58
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 58
 
 
  2515 0058 14D9     		bls	.L192
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  653:.\main.c      ****             BA_FLAG = 0;
  2557              		.loc 2 653 0
  2558 00a8 254B     		ldr	r3, .L207+24
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 59
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 59
 
 
  2559 00aa 0022     		mov	r2, #0
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  2597 00dc 1A70     		strb	r2, [r3]
  668:.\main.c      ****             break;
  2598              		.loc 2 668 0
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 60
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 60
 
 
  2599 00de 1FE0     		b	.L184
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  2632              		.loc 2 688 0
  2633 0108 074B     		ldr	r3, .L207
  2634 010a 0222     		mov	r2, #2
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 61
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 61
 
 
  2635 010c 1A70     		strb	r2, [r3]
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  2676              		.thumb_func
  2677              		.type	effector, %function
  2678              	effector:
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 62
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 62
 
 
  2679              	.LFB51:
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  2717 002e 304B     		ldr	r3, .L232+8
  2718 0030 181C     		mov	r0, r3
  2719 0032 1421     		mov	r1, #20
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 63
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 63
 
 
  2720 0034 1522     		mov	r2, #21
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  734:.\main.c      ****             effector_state = eff_start;
  2757              		.loc 2 734 0
  2758 0072 1D4B     		ldr	r3, .L232
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 64
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 64
 
 
  2759 0074 0022     		mov	r2, #0
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  2800              	.L223:
  746:.\main.c      ****         
  747:.\main.c      ****         case eff_execute:
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 65
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 65
 
 
  748:.\main.c      ****             if(EFFECTOR_FLAG)
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  2833 00d2 054B     		ldr	r3, .L232
  2834 00d4 0322     		mov	r2, #3
  2835 00d6 1A70     		strb	r2, [r3]
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 66
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 66
 
 
  2836              		.loc 2 767 0
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  2880              		.cfi_def_cfa_register 7
  778:.\main.c      ****     uint8 video_mux;
  779:.\main.c      ****     uint8 laser;
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 67
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 67
 
 
  780:.\main.c      ****     uint8 pack_for_rover;
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  2921              		.loc 2 793 0
  2922 0038 3B1C     		mov	r3, r7
  2923 003a 1B78     		ldrb	r3, [r3]
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 68
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 68
 
 
  2924 003c 181C     		mov	r0, r3
@@ -4078,7 +4078,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  812:.\main.c      ****             pack_for_rover = video_mux | laser;
  2958              		.loc 2 812 0
  2959 006c 3B1C     		mov	r3, r7
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 69
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 69
 
 
  2960 006e B91C     		add	r1, r7, #2
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  3001 003c A8000000 		.word	.L246
  3002 0040 B0000000 		.word	.L248
  3003 0044 B8000000 		.word	.L249
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 70
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 70
 
 
  3004 0048 C0000000 		.word	.L250
@@ -4198,7 +4198,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  845:.\main.c      ****                 arduino_state = ard_wait;
  846:.\main.c      ****             }
  847:.\main.c      ****             break;
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 71
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 71
 
 
  3038              		.loc 2 847 0
@@ -4258,7 +4258,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  864:.\main.c      **** }
  3074              		.loc 2 864 0
  3075 00f8 BD46     		mov	sp, r7
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 72
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 72
 
 
  3076 00fa 02B0     		add	sp, sp, #8
@@ -4318,7 +4318,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  874:.\main.c      ****     for(uint8 j=0; j<100; j++)
  3121              		.loc 2 874 0
  3122 001e FB1D     		add	r3, r7, #7
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 73
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 73
 
 
  3123 0020 0022     		mov	r2, #0
@@ -4378,7 +4378,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  3160              		.loc 2 889 0
  3161 0056 264B     		ldr	r3, .L265+8
  3162 0058 0022     		mov	r2, #0
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 74
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 74
 
 
  3163 005a 1A70     		strb	r2, [r3]
@@ -4433,12 +4433,12 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  3192              		.loc 2 909 0
  3193 008e 1C4B     		ldr	r3, .L265+24
  3194 0090 0420     		mov	r0, #4
- 3195 0092 9321     		mov	r1, #147
+ 3195 0092 0121     		mov	r1, #1
  3196 0094 1A1C     		mov	r2, r3
  3197 0096 FFF7FEFF 		bl	wiznetInit
  910:.\main.c      ****     
  911:.\main.c      ****     //Initialize the dynamixels <-- Will do this on the computer
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 75
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 75
 
 
  912:.\main.c      ****     ServoSpeed(0xFE, 100);
@@ -4498,7 +4498,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  3238 00e0 BD46     		mov	sp, r7
  3239 00e2 02B0     		add	sp, sp, #8
  3240              		@ sp needed
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 76
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 76
 
 
  3241 00e4 80BD     		pop	{r7, pc}
@@ -4558,7 +4558,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  3288 0016 FFF7FEFF 		bl	initialize
  3289              	.L274:
  933:.\main.c      **** 
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 77
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 77
 
 
  934:.\main.c      ****     for(;;)
@@ -4618,7 +4618,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  3329              	.L268:
  949:.\main.c      ****             //HEARTBEAT_FLAG = 1;
  950:.\main.c      ****             //send_packet(); //send heartbeat
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 78
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 78
 
 
  951:.\main.c      ****         }
@@ -4678,7 +4678,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  3371 009a 1288     		ldrh	r2, [r2]
  3372 009c D1B2     		uxtb	r1, r2
  3373 009e 164A     		ldr	r2, .L275+28
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 79
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 79
 
 
  3374 00a0 D154     		strb	r1, [r2, r3]
@@ -4738,7 +4738,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  3411              		.loc 2 978 0
  3412 00d8 9FE7     		b	.L274
  3413              	.L276:
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 80
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 80
 
 
  3414 00da C046     		.align	2
@@ -4798,7 +4798,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  3468 0048 8C060000 		.4byte	.LASF3
  3469 004c 02       		.uleb128 0x2
  3470 004d 04       		.byte	0x4
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 81
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 81
 
 
  3471 004e 05       		.byte	0x5
@@ -4858,7 +4858,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  3525 00ba 04       		.byte	0x4
  3526 00bb 03010000 		.4byte	.LASF16
  3527 00bf 02       		.uleb128 0x2
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 82
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 82
 
 
  3528 00c0 08       		.byte	0x8
@@ -4918,7 +4918,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  3582 012a 08       		.uleb128 0x8
  3583 012b 11030000 		.4byte	.LASF31
  3584 012f 01       		.byte	0x1
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 83
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 83
 
 
  3585 0130 02       		.byte	0x2
@@ -4978,7 +4978,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  3639 019c 08       		.uleb128 0x8
  3640 019d 84000000 		.4byte	.LASF46
  3641 01a1 01       		.byte	0x1
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 84
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 84
 
 
  3642 01a2 02       		.byte	0x2
@@ -5038,7 +5038,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  3696 020e D1000000 		.4byte	.LASF61
  3697 0212 04       		.sleb128 4
  3698 0213 00       		.byte	0
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 85
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 85
 
 
  3699 0214 09       		.uleb128 0x9
@@ -5098,7 +5098,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  3753 0280 81000000 		.4byte	0x81
  3754 0284 02       		.uleb128 0x2
  3755 0285 91       		.byte	0x91
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 86
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 86
 
 
  3756 0286 67       		.sleb128 -25
@@ -5158,7 +5158,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  3810 02e9 02       		.byte	0x2
  3811 02ea 0A       		.byte	0xa
  3812 02eb 00000000 		.4byte	.LFB37
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 87
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 87
 
 
  3813 02ef 28000000 		.4byte	.LFE37-.LFB37
@@ -5218,7 +5218,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  3867 035b D0000000 		.4byte	.LFE39-.LFB39
  3868 035f 01       		.uleb128 0x1
  3869 0360 9C       		.byte	0x9c
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 88
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 88
 
 
  3870 0361 90030000 		.4byte	0x390
@@ -5278,7 +5278,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  3924 03ca 02       		.byte	0x2
  3925 03cb 77       		.byte	0x77
  3926 03cc 8C000000 		.4byte	0x8c
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 89
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 89
 
 
  3927 03d0 02       		.uleb128 0x2
@@ -5338,7 +5338,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  3981 0433 0B       		.uleb128 0xb
  3982 0434 A3010000 		.4byte	.LASF84
  3983 0438 02       		.byte	0x2
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 90
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 90
 
 
  3984 0439 9F       		.byte	0x9f
@@ -5398,7 +5398,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  4038 049f AB       		.byte	0xab
  4039 04a0 8C000000 		.4byte	0x8c
  4040 04a4 02       		.uleb128 0x2
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 91
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 91
 
 
  4041 04a5 91       		.byte	0x91
@@ -5458,7 +5458,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  4095 0508 7D010000 		.4byte	.LASF81
  4096 050c 02       		.byte	0x2
  4097 050d B7       		.byte	0xb7
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 92
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 92
 
 
  4098 050e 81000000 		.4byte	0x81
@@ -5518,7 +5518,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  4152 0572 96030000 		.4byte	.LASF92
  4153 0576 02       		.byte	0x2
  4154 0577 3601     		.2byte	0x136
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 93
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 93
 
 
  4155 0579 00000000 		.4byte	.LFB46
@@ -5578,7 +5578,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  4209 05eb 01       		.uleb128 0x1
  4210 05ec 9C       		.byte	0x9c
  4211 05ed 01060000 		.4byte	0x601
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 94
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 94
 
 
  4212 05f1 13       		.uleb128 0x13
@@ -5638,7 +5638,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  4266 065d 5F000000 		.4byte	.LASF97
  4267 0661 02       		.byte	0x2
  4268 0662 BF02     		.2byte	0x2bf
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 95
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 95
 
 
  4269 0664 00000000 		.4byte	.LFB51
@@ -5698,7 +5698,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  4323 06d3 73       		.sleb128 -13
  4324 06d4 14       		.uleb128 0x14
  4325 06d5 44000000 		.4byte	.LBB2
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 96
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 96
 
 
  4326 06d9 26000000 		.4byte	.LBE2-.LBB2
@@ -5758,7 +5758,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  4380 0749 A203     		.2byte	0x3a2
  4381 074b AD000000 		.4byte	0xad
  4382 074f 02       		.uleb128 0x2
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 97
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 97
 
 
  4383 0750 91       		.byte	0x91
@@ -5818,7 +5818,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  4437 07be 11010000 		.4byte	.LASF110
  4438 07c2 06       		.byte	0x6
  4439 07c3 30       		.byte	0x30
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 98
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 98
 
 
  4440 07c4 9C070000 		.4byte	0x79c
@@ -5878,7 +5878,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  4494 0839 06       		.byte	0x6
  4495 083a 3F       		.byte	0x3f
  4496 083b 81000000 		.4byte	0x81
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 99
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 99
 
 
  4497 083f 05       		.uleb128 0x5
@@ -5938,7 +5938,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  4551 08b1 4A       		.byte	0x4a
  4552 08b2 8C000000 		.4byte	0x8c
  4553 08b6 05       		.uleb128 0x5
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 100
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 100
 
 
  4554 08b7 03       		.byte	0x3
@@ -5998,7 +5998,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  4608 0929 8C000000 		.4byte	0x8c
  4609 092d 05       		.uleb128 0x5
  4610 092e 03       		.byte	0x3
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 101
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 101
 
 
  4611 092f 00000000 		.4byte	eff_errors
@@ -6058,7 +6058,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  4665 09a6 05       		.uleb128 0x5
  4666 09a7 03       		.byte	0x3
  4667 09a8 00000000 		.4byte	wristRotate_state
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 102
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 102
 
 
  4668 09ac 18       		.uleb128 0x18
@@ -6118,7 +6118,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  4722 000b 55       		.uleb128 0x55
  4723 000c 17       		.uleb128 0x17
  4724 000d 11       		.uleb128 0x11
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 103
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 103
 
 
  4725 000e 01       		.uleb128 0x1
@@ -6178,7 +6178,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  4779 0044 3A       		.uleb128 0x3a
  4780 0045 0B       		.uleb128 0xb
  4781 0046 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 104
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 104
 
 
  4782 0047 0B       		.uleb128 0xb
@@ -6238,7 +6238,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  4836 007e 0A       		.uleb128 0xa
  4837 007f 05       		.uleb128 0x5
  4838 0080 00       		.byte	0
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 105
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 105
 
 
  4839 0081 03       		.uleb128 0x3
@@ -6298,7 +6298,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  4893 00b7 3B       		.uleb128 0x3b
  4894 00b8 0B       		.uleb128 0xb
  4895 00b9 27       		.uleb128 0x27
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 106
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 106
 
 
  4896 00ba 19       		.uleb128 0x19
@@ -6358,7 +6358,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  4950 00f2 3B       		.uleb128 0x3b
  4951 00f3 05       		.uleb128 0x5
  4952 00f4 11       		.uleb128 0x11
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 107
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 107
 
 
  4953 00f5 01       		.uleb128 0x1
@@ -6418,7 +6418,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  5007 012d 00       		.byte	0
  5008 012e 00       		.byte	0
  5009 012f 15       		.uleb128 0x15
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 108
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 108
 
 
  5010 0130 34       		.uleb128 0x34
@@ -6478,7 +6478,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  5064 0167 00       		.byte	0
  5065 0168 00       		.byte	0
  5066 0169 18       		.uleb128 0x18
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 109
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 109
 
 
  5067 016a 34       		.uleb128 0x34
@@ -6538,7 +6538,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  5121 0084 08010000 		.4byte	.LFE48-.LFB48
  5122 0088 00000000 		.4byte	.LFB49
  5123 008c 08010000 		.4byte	.LFE49-.LFB49
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 110
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 110
 
 
  5124 0090 00000000 		.4byte	.LFB50
@@ -6598,7 +6598,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  5178 00a0 00000000 		.4byte	.LFB54
  5179 00a4 00010000 		.4byte	.LFE54
  5180 00a8 00000000 		.4byte	0
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 111
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 111
 
 
  5181 00ac 00000000 		.4byte	0
@@ -6658,7 +6658,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  5206      73745F63 
  5206      6F6D6D61 
  5206      6E6400
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 112
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 112
 
 
  5207              	.LASF46:
@@ -6718,7 +6718,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  5234 0111 68656172 		.ascii	"heartbeat_array\000"
  5234      74626561 
  5234      745F6172 
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 113
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 113
 
 
  5234      72617900 
@@ -6778,7 +6778,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  5261              	.LASF103:
  5262 01af 696E6974 		.ascii	"initialize\000"
  5262      69616C69 
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 114
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 114
 
 
  5262      7A6500
@@ -6838,7 +6838,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  5288      6E745F63 
  5288      6F6D6D61 
  5288      6E6400
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 115
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 115
 
 
  5289              	.LASF12:
@@ -6898,7 +6898,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  5315              	.LASF75:
  5316 02e8 73696D70 		.ascii	"simple_pos_to_vel\000"
  5316      6C655F70 
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 116
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 116
 
 
  5316      6F735F74 
@@ -6958,7 +6958,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  5341              	.LASF78:
  5342 0389 6D616B65 		.ascii	"make_command\000"
  5342      5F636F6D 
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 117
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 117
 
 
  5342      6D616E64 
@@ -7018,7 +7018,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  5366      6F6E7472 
  5366      6F6C00
  5367              	.LASF21:
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 118
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 118
 
 
  5368 042e 73656E64 		.ascii	"send_init\000"
@@ -7078,7 +7078,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  5391              	.LASF77:
  5392 04c3 57525F70 		.ascii	"WR_pos_to_vel\000"
  5392      6F735F74 
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 119
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 119
 
 
  5392      6F5F7665 
@@ -7138,7 +7138,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  5416      5F617272 
  5416      617900
  5417              	.LASF1:
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 120
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 120
 
 
  5418 0567 756E7369 		.ascii	"unsigned char\000"
@@ -7198,7 +7198,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  5438      74643D67 
  5438      6E753939 
  5438      202D6666 
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 121
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 121
 
 
  5438      756E6374 
@@ -7258,7 +7258,7 @@ ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 1
  5463      414700
  5464              	.LASF58:
  5465 072e 6172645F 		.ascii	"ard_init\000"
-ARM GAS  C:\Users\Samuel\AppData\Local\Temp\ccdQ94hs.s 			page 122
+ARM GAS  C:\Users\Samuel\AppData\Local\Temp\cckMOYTi.s 			page 122
 
 
  5465      696E6974 

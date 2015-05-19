@@ -82,9 +82,9 @@ uint16 WT_pos_to_vel(uint16 new_command, uint16 recent_command)
     
     if(new_command >= 1024 && new_command < 2000)
     {
-        if(recent_command > 1026)
+        if(recent_command > 1027)
         {
-            cur_command = recent_command - 2;
+            cur_command = recent_command - 3;
         }
         else
         {
@@ -97,9 +97,9 @@ uint16 WT_pos_to_vel(uint16 new_command, uint16 recent_command)
     }
     else if(new_command > 2096 && new_command <= 3072)
     {
-        if(recent_command < 3070)
+        if(recent_command < 3069)
         {
-            cur_command = recent_command + 2;
+            cur_command = recent_command + 3;
         }
         else
         {
@@ -120,9 +120,9 @@ uint16 WR_pos_to_vel(uint16 new_command, uint16 recent_command)
     
     if(new_command >= 0 && new_command < 2000)
     {
-        if(recent_command > 2)
+        if(recent_command > 3)
         {
-            cur_command = recent_command - 2;
+            cur_command = recent_command - 3;
         }
         else
         {
@@ -135,9 +135,9 @@ uint16 WR_pos_to_vel(uint16 new_command, uint16 recent_command)
     }
     else if(new_command > 2096 && new_command <= 4095)
     {
-        if(recent_command < 4093)
+        if(recent_command < 4092)
         {
-            cur_command = recent_command + 2;
+            cur_command = recent_command + 3;
         }
         else
         {

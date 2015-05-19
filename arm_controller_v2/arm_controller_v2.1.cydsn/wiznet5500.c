@@ -34,7 +34,7 @@ uint8_t wiznetInit(uint8_t ownIpAddr, uint8_t dstIpAddr, uint16_t dstUdpPort){
 	
 	// Destination IP Address Ending
 	// cmdArray[4] = dstIpAddr; // Gateway should always be 192.168.1.1
-    udpConfig[14] = 10u;
+    udpConfig[14] = 1u;
 	udpConfig[15] = dstIpAddr;
 	udpConfig[16] = dstUdpPort>>8;
 	udpConfig[17] = dstUdpPort&0xFF;

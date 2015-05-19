@@ -17,7 +17,7 @@
 
     //Initializations of global variables
     #define ownIpAddr 4u
-    #define dstIpAddr 147u //<-- This is the only number we need to change when we change the ip config. unless we change our subnet
+    #define dstIpAddr 1u//147u //<-- This is the only number we need to change when we change the ip config. unless we change our subnet
     #define udpPort 27015u
    
     //TODO: make sure ourbyte scheme matching the newest version for udp format
