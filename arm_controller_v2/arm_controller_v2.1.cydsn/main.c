@@ -79,12 +79,13 @@ uint16 simple_pos_to_vel(uint16 new_command, uint16 recent_command)
 uint16 WT_pos_to_vel(uint16 new_command, uint16 recent_command)
 {
     uint16 cur_command;
+    uint16 change = 12;
     
     if(new_command >= 1024 && new_command < 2000)
     {
-        if(recent_command > 1027)
+        if(recent_command > (1024 + change))
         {
-            cur_command = recent_command - 3;
+            cur_command = recent_command - change;
         }
         else
         {
@@ -97,9 +98,9 @@ uint16 WT_pos_to_vel(uint16 new_command, uint16 recent_command)
     }
     else if(new_command > 2096 && new_command <= 3072)
     {
-        if(recent_command < 3069)
+        if(recent_command < (3072 - change))
         {
-            cur_command = recent_command + 3;
+            cur_command = recent_command + change;
         }
         else
         {
@@ -117,12 +118,13 @@ uint16 WT_pos_to_vel(uint16 new_command, uint16 recent_command)
 uint16 WR_pos_to_vel(uint16 new_command, uint16 recent_command)
 {
     uint16 cur_command;
+    uint16 change = 12;
     
     if(new_command >= 0 && new_command < 2000)
     {
-        if(recent_command > 3)
+        if(recent_command > (0+change))
         {
-            cur_command = recent_command - 3;
+            cur_command = recent_command - change;
         }
         else
         {
@@ -135,9 +137,9 @@ uint16 WR_pos_to_vel(uint16 new_command, uint16 recent_command)
     }
     else if(new_command > 2096 && new_command <= 4095)
     {
-        if(recent_command < 4092)
+        if(recent_command < (4095 - change))
         {
-            cur_command = recent_command + 3;
+            cur_command = recent_command + change;
         }
         else
         {
@@ -152,45 +154,45 @@ uint16 WR_pos_to_vel(uint16 new_command, uint16 recent_command)
     return cur_command;
 }
 
-uint16 make_command(int8* info_array, uint8 byte1, uint8 byte2)
+uint16 make_command(uint8* info_array, uint8 byte1, uint8 byte2)
 {
     uint16 command;
-    int16 temp1;
-    int16 temp2;
+    uint16 temp1; //&&&&&&&&&&&&&&&&&&&&& from int16 to uint16 for temp 1 and 2
+    uint16 temp2;
     int16 temp3;
     
     temp1 = (info_array[byte1] << 8) & 0xFF00;
     temp2 = 0x00FF & (info_array[byte2]);
-    temp3 = temp1 | temp2;
-    command = (temp3/2) + 1500;
+    temp3 = (int16)(temp1 | temp2);
+    command = (uint16)((temp3/2) + 1500);
     return command;
 }
 
-uint16 make_wristRotate_command(int8* info_array, uint8 byte1, uint8 byte2)
+uint16 make_wristRotate_command(uint8* info_array, uint8 byte1, uint8 byte2)
 {
     uint16 command;
-    int16 temp1;
-    int16 temp2;
+    uint16 temp1; //&&&&&&&&&&&&&&&&&&&&& from int16 to uint16 for temp 1 and 2
+    uint16 temp2;
     int16 temp3;
     
     temp1 = (info_array[byte1] << 8) & 0xFF00;
     temp2 = 0x00FF & (info_array[byte2]);
-    temp3 = temp1 | temp2;
-    command = (2*temp3) + 2048;
+    temp3 = (int16)(temp1 | temp2);
+    command = (uint16)((2*temp3) + 2048);
     return command;
 }
 
-uint16 make_wristTilt_command(int8* info_array, uint8 byte1, uint8 byte2)
+uint16 make_wristTilt_command(uint8* info_array, uint8 byte1, uint8 byte2)
 {
     uint16 command;
-    int16 temp1;
-    int16 temp2;
+    uint16 temp1; //&&&&&&&&&&&&&&&&&&&&& from int16 to uint16 for temp 1 and 2
+    uint16 temp2;
     int16 temp3;
     
     temp1 = (info_array[byte1] << 8) & 0xFF00;
     temp2 = 0x00FF & (info_array[byte2]);
-    temp3 = temp1 | temp2;
-    command = temp3 + 2048;
+    temp3 = (int16)(temp1 | temp2);
+    command = (uint16)(temp3 + 2048);
     return command;
 }
 
@@ -208,44 +210,52 @@ void send_packet()
             break;
         
         case send_init:
-            feedback_array[0] = 7;
-            feedback_array[1] = 7;
-            feedback_array[2] = 7;
-            feedback_array[3] = 7;
-            feedback_array[4] = 7;
-            feedback_array[5] = 7;
-            feedback_array[6] = 7;
-            feedback_array[7] = 7;
-            feedback_array[8] = 7;
-            feedback_array[9] = 7;
-            feedback_array[10] = 7;
-            feedback_array[11] = 7;
-            feedback_array[12] = 7;
-            feedback_array[13] = 0xee;
+            feedback_array[0] = 0x02; //0x02
+            feedback_array[1] = 0xCA; //0xCA
+            feedback_array[2] = 0;
+            feedback_array[3] = 0;
+            feedback_array[4] = 0;
+            feedback_array[5] = 0;
+            feedback_array[6] = 0;
+            feedback_array[7] = 0;
+            feedback_array[8] = 0;
+            feedback_array[9] = 0;
+            feedback_array[10] = 0;
+            feedback_array[11] = 0;
+            feedback_array[12] = 0;
+            feedback_array[13] = 0;
+            feedback_array[14] = 0;
+            feedback_array[15] = 0;
+            feedback_array[16] = 0;
+            feedback_array[17] = 0;
+            feedback_array[18] = 0;
+            feedback_array[19] = 0;
+            feedback_array[20] = 0;            
+            //feedback_array[13] = 0xee;
             
-            heartbeat_array[0] = 7;
-            heartbeat_array[1] = 7;
+            heartbeat_array[0] = 0x03;
+            heartbeat_array[1] = 0xCA;
             heartbeat_array[2] = 7;
-            heartbeat_array[3] = 7;
-            heartbeat_array[4] = 7;
-            heartbeat_array[5] = 7;
-            heartbeat_array[6] = 7;
-            heartbeat_array[7] = 7;
-            heartbeat_array[8] = 7;
-            heartbeat_array[9] = 7;
-            heartbeat_array[10] = 7;
-            heartbeat_array[11] = 7;
-            heartbeat_array[12] = 7;
-            heartbeat_array[13] = 0xee;
+//            heartbeat_array[3] = 7;
+//            heartbeat_array[4] = 7;
+//            heartbeat_array[5] = 7;
+//            heartbeat_array[6] = 7;
+//            heartbeat_array[7] = 7;
+//            heartbeat_array[8] = 7;
+//            heartbeat_array[9] = 7;
+//            heartbeat_array[10] = 7;
+//            heartbeat_array[11] = 7;
+//            heartbeat_array[12] = 7;
+//            heartbeat_array[13] = 0xee;
             break;
         
         case send_feedback:
-            wiznetWriteUdpFrame(feedback_array, SEND_ARRAY_SIZE);
+            wiznetWriteUdpFrame(feedback_array, FEEDBACK_ARRAY_SIZE);
             wiznetSend();
             break;
         
         case send_heartbeat:
-            wiznetWriteUdpFrame(heartbeat_array, SEND_ARRAY_SIZE);
+            wiznetWriteUdpFrame(heartbeat_array, HEARTBEAT_ARRAY_SIZE);
             wiznetSend();
             HEARTBEAT_FLAG = 0;
             break;
@@ -312,6 +322,7 @@ void wristTilt()
     uint16 newest_command;
     uint16 temp_command;
     
+    
     switch(wristTilt_state){ //actions
         case tilt_start:
             break;
@@ -333,6 +344,7 @@ void wristTilt()
             else
             {
                 //increment error variable
+                WT_errors += 1;
                 LED_Write(1);
                 temp_command = WT_pos_to_vel(2048, latest_WT_command);
                 ServoGoalPosition(0x02, temp_command);
@@ -414,6 +426,7 @@ void wristRotate()
             else
             {
                 //increment error variable
+                WR_errors += 1;
                 LED_Write(1);
                 temp_command = WR_pos_to_vel(2048,latest_WR_command);
                 ServoGoalPosition(0x01, temp_command);
@@ -491,6 +504,7 @@ void elbow()
             else
             {
                 //increment error variable
+                elbw_errors += 1;
                 LED_Write(1);
                 ELBW_PWM_WriteCompare(NEUTRAL);
             }
@@ -567,6 +581,7 @@ void shoulder()
             else
             {
                 //increment error variable
+                shldr_errors += 1;
                 LED_Write(1);
                 SHLDR_PWM_WriteCompare(NEUTRAL);
             }
@@ -646,6 +661,7 @@ void baseAzimuth()
             else
             {
                 LED_Write(1);
+                BA_errors += 1;
                 //increment error variable
                 temp_command = simple_pos_to_vel(1500, latest_command);
                 BA_PWM_WriteCompare(temp_command);
@@ -786,7 +802,7 @@ void arduino()
             break;
         
         case ard_init:
-            video_mux = 0x01;
+            video_mux = 0x10;
             laser = 0x00;
             pack_for_rover = video_mux | laser;
             //write initial video, laser enable
@@ -806,12 +822,12 @@ void arduino()
         case ard_write:
             //write laser
             //write video
-            //video_mux = data_array[ARD_BYTE_1];
-            //laser = data_array[ARD_BYTE_2];
+            video_mux = data_array[ARD_BYTE_1];
+            laser = data_array[ARD_BYTE_2];
             
             pack_for_rover = video_mux | laser;
             
-            Arduino_UART_UartPutChar(pack_for_rover); 
+            Arduino_UART_UartPutChar(pack_for_rover);
             
             //pass exactly what was sent to me by basestation
             ARD_FLAG = 0;
@@ -890,8 +906,8 @@ void initialize()
     shoulder_state = shldr_start;
     elbow_state = elbw_start;
     effector_state = eff_start;
-    //arduino_state = ard_start;
-    //send_packet_state = send_start;
+    arduino_state = ard_start;
+    send_packet_state = send_start;
     
     //start all of our components
     SPIM_1_Start();
@@ -904,12 +920,12 @@ void initialize()
     EFFECTOR_PWM_Start();
     //ADC_Start();
     //ADC_StartConvert();
-    //Arduino_UART_Start();
+    Arduino_UART_Start();
     
     wiznetInit(ownIpAddr, dstIpAddr, udpPort);
     
     //Initialize the dynamixels <-- Will do this on the computer
-    ServoSpeed(0xFE, 100);
+    ServoSpeed(0xFE, 300);
     SetServoTorque(0xFE, 0x03FF);
     
     //Initialize our motor drivers
@@ -928,6 +944,9 @@ int main()
     //Define variables
     uint8 fs_count = 0; //fail safe counter to check the interval between receiving packets
     int16 temp_val = NEUTRAL;
+    uint8 tick_count = 0;
+    uint16 dynamixel_count = 0;
+    uint16 feedback_count = 0;
     
     initialize();
 
@@ -937,17 +956,14 @@ int main()
         {
             wiznetClearInterrupts();
             fill_data_array();
-            //TODO: check addresses? -- set up error checking/reporting logic
             BA_FLAG = 1;
             WR_FLAG = 1;
             WT_FLAG = 1;
             SHOULDER_FLAG = 1;
             ELBOW_FLAG = 1;
             EFFECTOR_FLAG = 1;
-            //ARD_FLAG = 1;
+            ARD_FLAG = 1;
             fs_count = 0;
-            //HEARTBEAT_FLAG = 1;
-            //send_packet(); //send heartbeat
         }
         else
         {
@@ -957,6 +973,7 @@ int main()
         if(fs_count >= 50)
         {
             temp_val = NEUTRAL;
+            fail_safe_errors += 1;
             for(int i = 0; i < DATA_ARRAY_SIZE; (i+=2))
             {
                 data_array[i] = temp_val >> 8;
@@ -970,8 +987,48 @@ int main()
         effector();
         wristTilt();
         wristRotate();
-        //arduino();
-        //send_packet(); //send feedback packet
+        arduino();
+        
+        tick_count += 1;
+        if(tick_count == 100)
+        {
+            tick_count = 0;
+            HEARTBEAT_FLAG = 1;
+        }
+        else
+        {
+            HEARTBEAT_FLAG = 0;
+        }
+        
+        if(dynamixel_count > 1000)
+        {
+            SetServoTorque(0xFE, 0x03FF);
+            dynamixel_count = 0;
+        }
+        
+        feedback_array[14] = fail_safe_errors;
+        feedback_array[15] = shldr_errors;
+        feedback_array[16] = elbw_errors;
+        feedback_array[17] = BA_errors;
+        feedback_array[18] = WT_errors;
+        feedback_array[19] = WR_errors;
+        feedback_array[20] = eff_errors;
+        
+        feedback_count += 1;
+        
+        if(feedback_count > 500)
+        {
+            feedback_count = 0;
+            fail_safe_errors = 0;
+            shldr_errors = 0;
+            elbw_errors = 0;
+            BA_errors = 0;
+            WT_errors = 0;
+            WR_errors = 0;
+            eff_errors = 0;
+        }
+        
+        send_packet(); //send feedback packet
         
         while(!timerFlag){} //this while loop will periodize our code to the time of longest path
         timerFlag = 0;
